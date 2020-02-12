@@ -1,24 +1,29 @@
-// import React from 'react';
-// const Navigation = () => (
-//     <div>
-//         <h1>Navigation</h1>
-//     </div>
-// );
-// export default Navigation;
-
-// Test code for SASS files
 import React from 'react';
+import { Link } from 'react-router-dom';
+import * as ROUTES from '../../constants/routes';
+
+// Styles
 import '../../css/components/_navigation.scss';
-const Navigation = ({ links }) => (
+
+const Navigation = () => (
     <div className="Navigation">
         <ul>
-            {links.map(link => (
-                <li key={link.to}>
-                    <a href={link.to}>{link.label}</a>
-                </li>
-            ))}
+           <li>
+               <Link to={ ROUTES.SIGN_IN }>Sign in</Link>
+           </li>
+           <li>
+               <Link to={ ROUTES.LANDING }>Landing</Link>
+           </li>
+           <li>
+               <Link to={ ROUTES.HOME }>Home</Link>
+           </li>
+           <li>
+               <Link to={ ROUTES.ACCOUNT }>Account</Link>
+           </li>
+           <li>
+               <Link to={ ROUTES.ADMIN }>Admin</Link>
+           </li>
         </ul>
     </div>
 );
 export default Navigation;
-// end SASS test code

@@ -1,26 +1,12 @@
-// import React from 'react';
-// const App = () => (
-//     <div>
-//         <h1>App</h1>
-//     </div>
-// );
-// export default App;
+import React from 'react';
+import { BrowserRouter as Router } from 'react-router-dom';
 
-// Test code for SASS files
-import React, { Component } from 'react';
+// My components
 import Navigation from '../Navigation';
-const LINKS = [
-    { label: 'Website', to: 'https://www.robinwieruch.de/' },
-    { label: 'Twitter', to: 'https://twitter.com/rwieruch' },
-];
-class App extends Component {
-    render() {
-        return (
-            <div>
-                <Navigation links={LINKS} />
-            </div>
-        );
-    }
-}
+
+const App = () => (
+    <Router>
+        <Navigation />
+    </Router>
+);
 export default App;
-// end SASS test code

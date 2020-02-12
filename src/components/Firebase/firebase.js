@@ -1,0 +1,32 @@
+import app from 'firebase/app';
+
+const devConfig = {
+    apiKey: process.env.development.local.REACT_APP_API_KEY,
+    authDomain: process.env.development.local.REACT_APP_AUTH_DOMAIN,
+    databaseURL: process.env.development.local.REACT_APP_DATABASE_URL,
+    projectId: process.env.development.local.REACT_APP_PROJECT_ID,
+    storageBucket: process.env.development.local.REACT_APP_STORAGE_BUCKET,
+    messagingSenderId: process.env.development.local.REACT_APP_MESSAGING_SENDER_ID,
+    appId: process.env.development.local.REACT_APP_APP_ID
+};
+
+const prodConfig = {
+    apiKey: process.env.production.local.REACT_APP_API_KEY,
+    authDomain: process.env.production.local.REACT_APP_AUTH_DOMAIN,
+    databaseURL: process.env.production.local.REACT_APP_DATABASE_URL,
+    projectId: process.env.production.local.REACT_APP_PROJECT_ID,
+    storageBucket: process.env.production.local.REACT_APP_STORAGE_BUCKET,
+    messagingSenderId: process.env.production.local.REACT_APP_MESSAGING_SENDER_ID,
+    appId: process.env.production.local.REACT_APP_APP_ID
+};
+
+const firebaseConfig =
+    process.env.NODE_ENV === 'production' ? prodConfig : devConfig;
+
+class Firebase {
+    constructor() {
+        app.initializeApp(firebaseConfig);
+    }
+}
+
+export default Firebase;

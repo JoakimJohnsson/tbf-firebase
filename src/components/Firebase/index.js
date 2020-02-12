@@ -1,3 +1,4 @@
+// TODO: Might not need this file - delete it
 import React from 'react';
 const Firebase = () => (
     <div>

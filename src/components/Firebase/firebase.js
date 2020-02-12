@@ -20,15 +20,12 @@ const prodConfig = {
     appId: "1:115379456982:web:4d0adc5c1a56b0579b7277"
 };
 
-const firebaseConfig =
-    process.env.NODE_ENV === 'production' ? prodConfig : devConfig;
+let showProductionConfiguration = process.env.NODE_ENV === 'production';
+const firebaseConfig = showProductionConfiguration ? prodConfig : devConfig;
 
 class Firebase {
-
     constructor() {
-
-        console.log("fjfjf: " + firebaseConfig.apiKey);
-
+        console.log("Show production configuration:   " + showProductionConfiguration);
         app.initializeApp(firebaseConfig);
     }
 }

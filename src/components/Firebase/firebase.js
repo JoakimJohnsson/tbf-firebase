@@ -1,30 +1,34 @@
 import app from 'firebase/app';
 
 const devConfig = {
-    apiKey: process.env.development.local.REACT_APP_API_KEY,
-    authDomain: process.env.development.local.REACT_APP_AUTH_DOMAIN,
-    databaseURL: process.env.development.local.REACT_APP_DATABASE_URL,
-    projectId: process.env.development.local.REACT_APP_PROJECT_ID,
-    storageBucket: process.env.development.local.REACT_APP_STORAGE_BUCKET,
-    messagingSenderId: process.env.development.local.REACT_APP_MESSAGING_SENDER_ID,
-    appId: process.env.development.local.REACT_APP_APP_ID
+    apiKey: "AIzaSyDZMDQ2FSK8ju3XLyohdQ4UA_L14O4ltwA",
+    authDomain: "the-baseball-field.firebaseapp.com",
+    databaseURL: "https://the-baseball-field.firebaseio.com",
+    projectId: "the-baseball-field",
+    storageBucket: "the-baseball-field.appspot.com",
+    messagingSenderId: "401723443170",
+    appId: "1:401723443170:web:846935761f64d517fe5bbb"
 };
 
 const prodConfig = {
-    apiKey: process.env.production.local.REACT_APP_API_KEY,
-    authDomain: process.env.production.local.REACT_APP_AUTH_DOMAIN,
-    databaseURL: process.env.production.local.REACT_APP_DATABASE_URL,
-    projectId: process.env.production.local.REACT_APP_PROJECT_ID,
-    storageBucket: process.env.production.local.REACT_APP_STORAGE_BUCKET,
-    messagingSenderId: process.env.production.local.REACT_APP_MESSAGING_SENDER_ID,
-    appId: process.env.production.local.REACT_APP_APP_ID
+    apiKey: "AIzaSyA4yBmSmQ-RLTzroqIYkr9A42VQcl_Zh1Y",
+    authDomain: "thebaseballfield.firebaseapp.com",
+    databaseURL: "https://thebaseballfield.firebaseio.com",
+    projectId: "thebaseballfield",
+    storageBucket: "thebaseballfield.appspot.com",
+    messagingSenderId: "115379456982",
+    appId: "1:115379456982:web:4d0adc5c1a56b0579b7277"
 };
 
 const firebaseConfig =
     process.env.NODE_ENV === 'production' ? prodConfig : devConfig;
 
 class Firebase {
+
     constructor() {
+
+        console.log("fjfjf: " + firebaseConfig.apiKey);
+
         app.initializeApp(firebaseConfig);
     }
 }

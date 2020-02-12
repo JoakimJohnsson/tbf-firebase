@@ -11,7 +11,7 @@ code {
 }
 
 .Navigation {
-  background-color: #222;
+  background-color: #000;
 }
 .Navigation ul {
   list-style: none;
@@ -31,7 +31,7 @@ code {
   color: #ffffff;
 }
 .Navigation a:hover {
-  color: #525dce;
+  color: #00ffff;
 }
 
 /*# sourceMappingURL=index.css.map */

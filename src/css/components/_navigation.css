@@ -1,0 +1,25 @@
+.Navigation {
+  background-color: #222;
+}
+.Navigation ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+.Navigation li {
+  margin: 10px 20px;
+}
+.Navigation a {
+  text-decoration: none;
+}
+.Navigation a,
+.Navigation a:visited {
+  color: #ffffff;
+}
+.Navigation a:hover {
+  color: #525dce;
+}
+
+/*# sourceMappingURL=_navigation.css.map */

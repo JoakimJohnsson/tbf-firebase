@@ -14422,6 +14422,10 @@ template {
   display: none !important;
 }
 
+.tbf-main-nav {
+  background: #000;
+}
+
 .navigation {
   background-color: #000;
 }
@@ -14448,7 +14452,7 @@ template {
 
 .header-tbf-logo__primary {
   fill: #ff88cc;
-  width: 150px;
+  width: 100px;
 }
 @media (min-width: 576px) {
   .header-tbf-logo__primary {

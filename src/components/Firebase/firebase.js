@@ -1,5 +1,6 @@
 import app from 'firebase/app';
 import 'firebase/auth';
+import 'firebase/database';
 
 const devConfig = {
     apiKey: "AIzaSyDZMDQ2FSK8ju3XLyohdQ4UA_L14O4ltwA",
@@ -29,6 +30,7 @@ class Firebase {
         console.log("Show production configuration:   " + showProductionConfiguration);
         app.initializeApp(firebaseConfig);
         this.auth = app.auth();
+        this.db = app.database();
     }
 
     // Auth api
@@ -39,6 +41,10 @@ class Firebase {
     doSignOut = () => this.auth.signOut();
     doPasswordReset = email => this.auth.sendPasswordResetEmail(email);
     doPasswordUpdate = password => this.auth.currentUser.updatePassword(password);
+
+    // User api
+    user = uid => this.db.ref(`users/${uid}`);
+    users = () => this.db.ref('users');
 }
 
 export default Firebase;

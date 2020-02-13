@@ -1,7 +1,7 @@
 @import '../helpers/variables';
 
 .navigation {
-  background-color: $color-bg-primary;
+  background-color: $color-bg__primary;
   ul {
     list-style: none;
     margin: 0;
@@ -20,6 +20,6 @@
     color: #ffffff;
   }
   a:hover {
-    color: $color-primary;
+    color: $color__primary;
   }
 }

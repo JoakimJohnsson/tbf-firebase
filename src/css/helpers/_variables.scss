@@ -1,8 +1,21 @@
 // Colors
-$color-primary: #ff88cc;
 $color-white: #fff;
-$color-bg-primary: #000;
-$color-bg-secondary: #444;
+$color-black: #000;
+$color-vibrant-pink: #ff88cc;
+$color-vibrant-green: #88ffcc;
+// Color variables
+$color__primary: $color-vibrant-pink;
+$color__secondary: $color-vibrant-green;
+$color-bg__primary: $color-black;
+$color-bg__secondary: lighten($color-bg__primary, 50%);
+// Fonts
+$tbf-font__regular: 'Fira Sans', sans-serif;
+$tbf-font__heading: 'Coiny', cursive, sans-serif;
+// Overridden bootstrap
+$font-family-sans-serif: $tbf-font__regular;
+$headings-font-family: $tbf-font__heading;
+$font-family-base: $font-family-sans-serif;
+
 
 
 

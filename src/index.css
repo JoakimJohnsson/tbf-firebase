@@ -14431,27 +14431,27 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 
-.Navigation {
+.navigation {
   background-color: #000;
 }
-.Navigation ul {
+.navigation ul {
   list-style: none;
   margin: 0;
   padding: 0;
   display: flex;
   justify-content: center;
 }
-.Navigation li {
+.navigation li {
   margin: 10px 20px;
 }
-.Navigation a {
+.navigation a {
   text-decoration: none;
 }
-.Navigation a,
-.Navigation a:visited {
+.navigation a,
+.navigation a:visited {
   color: #ffffff;
 }
-.Navigation a:hover {
+.navigation a:hover {
   color: #ff88cc;
 }
 

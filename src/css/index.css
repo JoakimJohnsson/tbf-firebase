@@ -14446,9 +14446,14 @@ template {
   color: #ff88cc;
 }
 
-.tbf-logo {
-  width: 100px;
+.header-tbf-logo__primary {
   fill: #ff88cc;
+  width: 150px;
+}
+@media (min-width: 576px) {
+  .header-tbf-logo__primary {
+    width: 300px;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */

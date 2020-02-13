@@ -5,9 +5,12 @@ import SignOutButton from "../SignOut";
 import '../../css/components/_navigation.scss';
 import AuthUserContext from "../Session/context";
 import TbfLogo from "../Logo";
+import {TbfLogoText} from "../Logo";
 
 const Navigation = () => (
     <div className="navigation">
+        <TbfLogo/>
+        <TbfLogoText/>
         <AuthUserContext.Consumer>
             {authUser => authUser ? <NavigationAuth/> : <NavigationNonAuth/>}
         </AuthUserContext.Consumer>
@@ -15,9 +18,6 @@ const Navigation = () => (
 );
 const NavigationAuth = () => (
     <ul>
-        <li>
-            <TbfLogo/>
-        </li>
         <li>
             <Link to={ROUTES.LANDING}>Landing</Link>
         </li>
@@ -37,9 +37,6 @@ const NavigationAuth = () => (
 );
 const NavigationNonAuth = () => (
     <ul>
-        <li>
-            <TbfLogo/>
-        </li>
         <li>
             <Link to={ROUTES.SIGN_IN}>Sign in</Link>
         </li>

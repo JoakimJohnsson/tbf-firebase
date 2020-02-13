@@ -4,6 +4,7 @@ import * as ROUTES from '../../constants/routes';
 import SignOutButton from "../SignOut";
 import '../../css/components/_navigation.scss';
 import AuthUserContext from "../Session/context";
+import TbfLogo from "../Logo";
 
 const Navigation = () => (
     <div className="navigation">
@@ -14,6 +15,9 @@ const Navigation = () => (
 );
 const NavigationAuth = () => (
     <ul>
+        <li>
+            <TbfLogo/>
+        </li>
         <li>
             <Link to={ROUTES.LANDING}>Landing</Link>
         </li>
@@ -33,6 +37,9 @@ const NavigationAuth = () => (
 );
 const NavigationNonAuth = () => (
     <ul>
+        <li>
+            <TbfLogo/>
+        </li>
         <li>
             <Link to={ROUTES.SIGN_IN}>Sign in</Link>
         </li>

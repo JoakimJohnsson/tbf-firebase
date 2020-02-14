@@ -25,7 +25,6 @@ const Navigation = () => (
 );
 const NavigationAuth = () => (
     <Nav className="ml-auto">
-        <Link className="nav-link" to={ROUTES.START}>Start</Link>
         <Link className="nav-link" to={ROUTES.HOME}>Home</Link>
         <Link className="nav-link" to={ROUTES.ACCOUNT}>Account</Link>
         <Link className="nav-link" to={ROUTES.ADMIN}>Admin</Link>
@@ -34,8 +33,8 @@ const NavigationAuth = () => (
 );
 const NavigationNonAuth = () => (
     <Nav className="ml-auto">
-        <Link className="nav-link" to={ROUTES.SIGN_IN}>Sign in</Link>
         <Link className="nav-link" to={ROUTES.START}>Start</Link>
+        <Link className="nav-link" to={ROUTES.SIGN_UP}>Sign up</Link>
     </Nav>
 );
 

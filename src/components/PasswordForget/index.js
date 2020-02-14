@@ -2,11 +2,13 @@ import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
 import {withFirebase} from "../Firebase";
 import * as ROUTES from '../../constants/routes';
+import {Alert} from "react-bootstrap";
 
 
 const PasswordForgetPage = () => (
     <div>
-        <h1>PasswordForget</h1>
+        <h1>Did You forget your password?</h1>
+        <p>Nevermind, we're here to help. Enter your email here, and we'll send You a new one.</p>
         <PasswordForgetForm/>
     </div>
 );
@@ -45,26 +47,39 @@ class PasswordForgetFormBase extends Component {
 
         return (
             <form onSubmit={this.onSubmit}>
-                <input
-                    name="email"
-                    value={this.state.email}
-                    onChange={this.onChange}
-                    type="text"
-                    placeholder="Email Address"
-                />
-                <button className="btn btn-outline-secondary ml-4" disabled={isInvalid} type="submit">
+                <div className="row">
+                <div className="form-group col-12 col-md-6">
+                    <label htmlFor="passwordForgetEmail">Email</label>
+                    <input
+                        id="passwordForgetEmail"
+                        name="email"
+                        value={this.state.email}
+                        onChange={this.onChange}
+                        type="text"
+                        placeholder="jane@doe.com"
+                        className="form-control"
+                    />
+                </div>
+                </div>
+                <button className="btn btn-secondary d-block mb-4" disabled={isInvalid} type="submit">
                     Reset My Password
                 </button>
-                {error && <p>{error.message}</p>}
+                {error && <Alert variant="danger"><p>{error.message}</p></Alert>}
             </form>
         );
     }
 }
 
 const PasswordForgetLink = () => (
-    <p>
-        <Link to={ROUTES.PASSWORD_FORGET}>Forgot Password?</Link>
-    </p>
+    <div>
+        <h3>Forgot password?</h3>
+        <p>We're here to help. </p>
+        <Link to={ROUTES.PASSWORD_FORGET}>
+            <button className="btn btn-outline-secondary btn-lg mb-4" type="button">
+                Please help me!
+            </button>
+        </Link>
+    </div>
 );
 
 export default PasswordForgetPage;

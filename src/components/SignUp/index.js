@@ -3,10 +3,17 @@ import {Link, withRouter} from 'react-router-dom';
 import {compose} from 'recompose';
 import {withFirebase} from "../Firebase/context";
 import * as ROUTES from '../../constants/routes';
+import {Alert} from "react-bootstrap";
 
 const SignUpPage = () => (
     <div>
-        <h1>SignUp</h1>
+        <h1>Sign up to stream music - completely free</h1>
+        <p className="lead">
+            Listen to free music. All music - one app.
+        </p>
+        <p>
+           Do you like lo-fi music that's not available anywhere else? We sure do.
+        </p>
         <SignUpForm/>
     </div>
 );
@@ -66,77 +73,79 @@ class SignUpFormBase extends Component {
             username === '';
         return (
             <form onSubmit={this.onSubmit}>
-                <div className="form-group">
-                    <label htmlFor="signUpUsername">User name</label>
-                    <input
-                        name="username"
-                        id="signUpUsername"
-                        value={username}
-                        onChange={this.onChange}
-                        type="text"
-                        placeholder="Jane Doe"
-                        className="form-control"
-                    />
-                    <small id="usernameHelp" className="form-text text-muted">We will only use this information to
-                        enhance your experience while using this app. We are fully compliant with GDPR.</small>
+                <div className="row">
+                    <div className="form-group col-12 col-sm-6 col-lg-3">
+                        <label htmlFor="signUpUsername">User name</label>
+                        <input
+                            name="username"
+                            id="signUpUsername"
+                            value={username}
+                            onChange={this.onChange}
+                            type="text"
+                            placeholder="Jane Doe"
+                            className="form-control"
+                        />
+                        <small id="usernameHelp" className="form-text text-muted">We will only use this information to
+                            enhance your experience while using this app. We are fully compliant with GDPR.</small>
+                    </div>
+                    <div className="form-group col-12 col-sm-6 col-lg-3">
+                        <label htmlFor="signUpEmail">Email</label>
+                        <input
+                            name="email"
+                            id="signUpEmail"
+                            value={email}
+                            onChange={this.onChange}
+                            type="text"
+                            placeholder="jane@doe.com"
+                            className="form-control"
+                        />
+                        <small id="emailHelp" className="form-text text-muted">We'll never share your email with anyone
+                            else.</small>
+                    </div>
+                    <div className="form-group col-12 col-sm-6 col-lg-3">
+                        <label htmlFor="passwordOne">Password</label>
+                        <input
+                            name="passwordOne"
+                            id="signUpPasswordOne"
+                            value={passwordOne}
+                            onChange={this.onChange}
+                            type="password"
+                            placeholder="janedoe666"
+                            className="form-control"
+                        />
+                        <small id="passwordHelp" className="form-text text-muted">Please choose password wisely.</small>
+                    </div>
+                    <div className="form-group col-12 col-sm-6 col-lg-3">
+                        <label htmlFor="passwordTwo">Confirm password</label>
+                        <input
+                            name="passwordTwo"
+                            id="signUpPasswordTwo"
+                            value={passwordTwo}
+                            onChange={this.onChange}
+                            type="password"
+                            placeholder="janedoe666"
+                            className="form-control"
+                        />
+                    </div>
                 </div>
-                <div className="form-group">
-                    <label htmlFor="signUpEmail">Email</label>
-                    <input
-                        name="email"
-                        id="signUpEmail"
-                        value={email}
-                        onChange={this.onChange}
-                        type="text"
-                        placeholder="jane@doe.com"
-                        className="form-control"
-                    />
-                    <small id="emailHelp" className="form-text text-muted">We'll never share your email with anyone
-                        else.</small>
-                </div>
-                <div className="form-group">
-                    <label htmlFor="passwordOne">Password</label>
-                    <input
-                        name="passwordOne"
-                        id="signUpPasswordOne"
-                        value={passwordOne}
-                        onChange={this.onChange}
-                        type="password"
-                        placeholder="janedoe666"
-                        className="form-control"
-                    />
-                    <small id="passwordHelp" className="form-text text-muted">Please choose password wisely.</small>
-                </div>
-                <div className="form-group">
-                    <label htmlFor="passwordTwo">Confirm password</label>
-                    <input
-                        name="passwordTwo"
-                        id="signUpPasswordTwo"
-                        value={passwordTwo}
-                        onChange={this.onChange}
-                        type="password"
-                        placeholder="janedoe666"
-                        className="form-control"
-                    />
-                </div>
-                <button className="btn btn-outline-secondary" disabled={isInvalid} type="submit">
+                <button className="btn btn-secondary d-block mb-4" disabled={isInvalid} type="submit">
                     Sign me up!
                 </button>
-                {error && <p>{error.message}</p>}
+                {error && <Alert variant="danger"><p>{error.message}</p></Alert>}
             </form>
         );
     }
 }
 
 const SignUpLink = () => (
-    <div>
+    <div className="mb-4">
         <h2>Dont have an account?</h2>
+        <p>Sign up for free.</p>
         <Link to={ROUTES.SIGN_UP}>
-            <button className="btn btn-secondary btn-lg" type="button">
+            <button className="btn btn-outline-secondary btn-lg" type="button">
                 Sign me up!
             </button>
         </Link>
-
     </div>
 );
 

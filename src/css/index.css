@@ -14438,6 +14438,14 @@ label {
   font-size: 0.875rem;
 }
 
+.alert {
+  display: inline-block;
+}
+.alert p {
+  margin: 0;
+  padding: 0;
+}
+
 .navbar-dark .navbar-toggler {
   border: none;
   padding: 0;

@@ -18,3 +18,11 @@ label {
   font-size: .875rem;
 }
 
+.alert {
+  display: inline-block;
+  p {
+    margin: 0;
+    padding: 0;
+  }
+}
+

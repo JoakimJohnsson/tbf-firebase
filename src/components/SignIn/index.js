@@ -1,19 +1,26 @@
 import React, {Component} from 'react';
 import {withRouter} from 'react-router-dom';
 import {compose} from 'recompose';
-import {SignUpLink} from '../SignUp';
-import {PasswordForgetLink} from '../PasswordForget';
+// import {SignUpLink} from '../SignUp';
+import {Alert} from 'react-bootstrap';
+// import {PasswordForgetLink} from '../PasswordForget';
 import {withFirebase} from "../Firebase";
 import * as ROUTES from '../../constants/routes';
 
-const SignInPage = () => (
-    <div>
-        <h1>Sign in</h1>
-        <SignInForm/>
-        <PasswordForgetLink/>
-        <SignUpLink/>
-    </div>
-);
+// const SignInPage = () => (
+//     <div>
+//         <h1>Sign in</h1>
+//         <SignInForm/>
+//         <div className="row">
+//             <div className="col-12 col-md-6">
+//                 <PasswordForgetLink/>
+//             </div>
+//             <div className="col-12 col-md-6">
+//                 <SignUpLink/>
+//             </div>
+//         </div>
+//     </div>
+// );
 
 const INITIAL_STATE = {
     email: '',
@@ -75,10 +82,10 @@ class SignInFormBase extends Component {
                     />
 
                 </div>
-                <button className="btn btn-outline-secondary" disabled={isInvalid} type="submit">
+                <button className="btn btn-secondary d-block mb-4" disabled={isInvalid} type="submit">
                     Sign In
                 </button>
-                {error && <p>{error.message}</p>}
+                {error && <Alert variant="danger"><p>{error.message}</p></Alert>}
             </form>
         );
     }
@@ -89,5 +96,5 @@ const SignInForm = compose(
     withFirebase,
 )(SignInFormBase);
 
-export default SignInPage;
+// export default SignInPage;
 export {SignInForm};

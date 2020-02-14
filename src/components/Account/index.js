@@ -5,11 +5,14 @@ import PasswordChangeForm from '../PasswordChange';
 import withAuthorization from "../Session/withAuthorization";
 
 const AccountPage = () => (
-    <AuthUserContext.Consumer>
+
+<AuthUserContext.Consumer>
         {authUser => (
             <div className="row">
                 <div className="col-12">
-                    <h1>The account for: {authUser.email}</h1>
+
+                    <h1>The account for: {authUser.uid}</h1>
+                    <h2>E-mail: {authUser.email}</h2>
                     <p className="lead">Some text about the app. Very Nice text. Bacon ipsim and so forth. Some text about the app. Very Nice
                         text. Bacon ipsim and so forth.</p>
                     <p>Some text about the app. Very Nice text. Bacon ipsim and so forth. Some text about the app. Very Nice

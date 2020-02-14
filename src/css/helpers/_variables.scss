@@ -2,6 +2,7 @@
 $color-white: #fff;
 $color-black: #000;
 $color-dark-grey: #151515;
+$color-light-grey: #aaa;
 $color-vibrant-pink: #ff88cc;
 $color-vibrant-green: #88ffcc;
 // Color variables
@@ -26,6 +27,7 @@ $body-color: $color-white;
 // Bootstrap navbar styles
 $navbar-padding-y:                  $spacer / 2;
 $navbar-padding-x:                  $spacer;
+$text-muted: $color-light-grey;
 $navbar-nav-link-padding-x:         .5rem;
 $navbar-toggler-padding-y:          .25rem;
 $navbar-toggler-padding-x:          .75rem;

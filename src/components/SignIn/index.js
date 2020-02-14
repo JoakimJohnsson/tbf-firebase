@@ -28,42 +28,54 @@ class SignInFormBase extends Component {
     }
 
     onSubmit = event => {
-        const { email, password } = this.state;
+        const {email, password} = this.state;
         this.props.firebase
             .doSignInWithEmailAndPassword(email, password)
             .then(() => {
-                this.setState({ ...INITIAL_STATE });
+                this.setState({...INITIAL_STATE});
                 this.props.history.push(ROUTES.ADMIN);
             })
             .catch(error => {
-                this.setState({ error });
+                this.setState({error});
             });
         event.preventDefault();
     };
     onChange = event => {
-        this.setState({ [event.target.name]: event.target.value });
+        this.setState({[event.target.name]: event.target.value});
     };
 
     render() {
         const {email, password, error} = this.state;
         const isInvalid = password === '' || email === '';
         return (
-            <form onSubmit={this.onSubmit}>
-                <input
-                    name="email"
-                    value={email}
-                    onChange={this.onChange}
-                    type="text"
-                    placeholder="Email address"
-                />
-                <input
-                    name="password"
-                    value={password}
-                    onChange={this.onChange}
-                    type="password"
-                    placeholder="Password"
-                />
-                <button className="btn btn-outline-secondary ml-4" disabled={isInvalid} type="submit">
+            <form className="mb-3" onSubmit={this.onSubmit}>
+                <div className="form-group">
+                    <label htmlFor="signInEmail">Email address</label>
+                    <input
+                        name="email"
+                        id="signInEmail"
+                        value={email}
+                        onChange={this.onChange}
+                        type="text"
+                        placeholder="jane@doe.com"
+                        className="form-control"
+                    />
+
+                </div>
+                <div className="form-group">
+                    <label htmlFor="signInPassword">Password</label>
+                    <input
+                        name="password"
+                        id="signInPassword"
+                        value={password}
+                        onChange={this.onChange}
+                        type="password"
+                        placeholder="janedoe666"
+                        className="form-control"
+                    />
+
+                </div>
+                <button className="btn btn-outline-secondary" disabled={isInvalid} type="submit">
                     Sign In
                 </button>
                 {error && <p>{error.message}</p>}
@@ -78,4 +90,4 @@ const SignInForm = compose(
 )(SignInFormBase);
 
 export default SignInPage;
-export { SignInForm };
+export {SignInForm};

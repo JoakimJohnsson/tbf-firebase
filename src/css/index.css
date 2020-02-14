@@ -5,7 +5,6 @@
  * Copyright 2011-2019 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
-@import 'layout/_body.css';
 @import url("https://fonts.googleapis.com/css?family=Coiny|Fira+Sans:300,400,700&display=swap");
 :root {
   --blue: #007bff;
@@ -207,7 +206,7 @@ table {
 caption {
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
-  color: #6c757d;
+  color: #aaa;
   text-align: left;
   caption-side: bottom;
 }
@@ -2133,7 +2132,7 @@ textarea.form-control {
   margin-left: -1.25rem;
 }
 .form-check-input[disabled] ~ .form-check-label, .form-check-input:disabled ~ .form-check-label {
-  color: #6c757d;
+  color: #aaa;
 }
 
 .form-check-label {
@@ -9744,7 +9743,7 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 .text-muted {
-  color: #6c757d !important;
+  color: #aaa !important;
 }
 
 .text-black-50 {
@@ -14275,7 +14274,7 @@ table {
 caption {
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
-  color: #6c757d;
+  color: #aaa;
   text-align: left;
   caption-side: bottom;
 }
@@ -14420,6 +14419,23 @@ template {
 
 [hidden] {
   display: none !important;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+label {
+  font-weight: 100;
+  font-size: 0.875rem;
 }
 
 .navbar-dark .navbar-toggler {

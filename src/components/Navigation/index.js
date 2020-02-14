@@ -23,18 +23,18 @@ const Navigation = () => (
     </Navbar>
 );
 const NavigationAuth = () => (
-    <Nav className="ml-auto" as="ul">
-        <Nav.Link as="li"><Link to={ROUTES.LANDING}>Landing</Link></Nav.Link>
-        <Nav.Link as="li"><Link to={ROUTES.HOME}>Home</Link></Nav.Link>
-        <Nav.Link as="li"><Link to={ROUTES.ACCOUNT}>Account</Link></Nav.Link>
-        <Nav.Link as="li"><Link to={ROUTES.ADMIN}>Admin</Link></Nav.Link>
+    <Nav className="ml-auto">
+        <Nav.Link><Link to={ROUTES.LANDING}>Landing page</Link></Nav.Link>
+        <Nav.Link><Link to={ROUTES.HOME}>Home</Link></Nav.Link>
+        <Nav.Link><Link to={ROUTES.ACCOUNT}>Account</Link></Nav.Link>
+        <Nav.Link><Link to={ROUTES.ADMIN}>Admin</Link></Nav.Link>
         <SignOutButton/>
     </Nav>
 );
 const NavigationNonAuth = () => (
-    <Nav className="ml-auto" as="ul">
-        <Nav.Link as="li"><Link to={ROUTES.SIGN_IN}>Sign in</Link></Nav.Link>
-        <Nav.Link as="li"><Link to={ROUTES.LANDING}>Landing</Link></Nav.Link>
+    <Nav className="ml-auto">
+        <Nav.Link><Link to={ROUTES.SIGN_IN}>Sign in</Link></Nav.Link>
+        <Nav.Link><Link to={ROUTES.LANDING}>Landing page</Link></Nav.Link>
     </Nav>
 );
 

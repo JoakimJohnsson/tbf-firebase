@@ -2,7 +2,7 @@ import React from 'react';
 
 const TbfLogo = () => (
     <>
-        <svg className="header-tbf-logo__primary d-inline-block d-sm-none" xmlns="http://www.w3.org/2000/svg"
+        <svg className="header-tbf-logo-primary d-inline-block d-lg-none" xmlns="http://www.w3.org/2000/svg"
              width="100%"
              height="100%" viewBox="0 0 273.1 67.7">
             <path
@@ -16,7 +16,7 @@ const TbfLogo = () => (
             <path
                 d="M216.4 8.2c3.8 7.9 2.8 18.3-3 31.3 -4.1 9-10 18.4-17.8 28.2 -0.6-2.1-1.3-4.1-2.2-5.8 -2.2-4.6-5.7-8-10.4-10.3 -4.2-1.7-8.3-3.3-12.5-5 -4.7-2.2-8.1-5.5-10.2-9.8 -2.1-4.3-2.3-8.4-0.8-12.6 1.5-4.1 4.4-7.2 8.7-9.3 2.9-1.4 6-2 9.3-1.7 3.5 0.3 6.3 1.7 8.4 4 0.1-7.3 3.1-12.4 9-15.3 3.9-1.9 8-2.3 12.2-1.2C211.4 1.8 214.6 4.3 216.4 8.2z"/>
         </svg>
-        <svg className="header-tbf-logo__primary d-none d-sm-inline-block" xmlns="http://www.w3.org/2000/svg"
+        <svg className="header-tbf-logo-primary d-none d-lg-inline-block" xmlns="http://www.w3.org/2000/svg"
              width="100%" height="100%" viewBox="0 0 406.8 25.7">
             <path
                 d="M293.2 3.1c1.5 3 1.1 6.9-1.2 11.9 -1.5 3.4-3.8 7-6.8 10.7 -0.2-0.8-0.5-1.5-0.8-2.2 -0.8-1.7-2.2-3-4-3.9 -1.6-0.6-3.2-1.3-4.7-1.9 -1.8-0.8-3.1-2.1-3.9-3.7 -0.8-1.6-0.9-3.2-0.3-4.8 0.6-1.6 1.7-2.7 3.3-3.5 1.1-0.5 2.3-0.8 3.5-0.6 1.3 0.1 2.4 0.6 3.2 1.5 0.1-2.8 1.2-4.7 3.4-5.8 1.5-0.7 3-0.9 4.6-0.5C291.3 0.7 292.5 1.6 293.2 3.1z"/>

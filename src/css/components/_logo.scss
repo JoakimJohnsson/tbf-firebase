@@ -1,10 +1,13 @@
 @import '../helpers/variables';
 
-.header-tbf-logo__primary {
-  fill: $color__primary;
-  width: 100px;
+.header-tbf-logo-primary {
+  fill: $color-primary;
+  width: 150px;
   @include media-breakpoint-up(sm) {
-    width: 300px;
+    width: 200px;
+  }
+  @include media-breakpoint-up(lg) {
+    width: 400px;
   }
 }
 

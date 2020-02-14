@@ -1,20 +1,43 @@
 // Colors
 $color-white: #fff;
 $color-black: #000;
+$color-dark-grey: #101010;
 $color-vibrant-pink: #ff88cc;
 $color-vibrant-green: #88ffcc;
 // Color variables
-$color__primary: $color-vibrant-pink;
-$color__secondary: $color-vibrant-green;
-$color-bg__primary: $color-black;
-$color-bg__secondary: lighten($color-bg__primary, 50%);
+$color-primary: $color-vibrant-pink;
+$color-primary__lighten: #ffcfeb;
+$color-secondary: $color-vibrant-green;
+$color-bg-primary: $color-black;
+$color-bg-secondary: lighten($color-bg-primary, 50%);
 // Fonts
 $tbf-font__regular: 'Fira Sans', sans-serif;
 $tbf-font__heading: 'Coiny', cursive, sans-serif;
-// Overridden bootstrap
+// Bootstrap
 $font-family-sans-serif: $tbf-font__regular;
 $headings-font-family: $tbf-font__heading;
 $font-family-base: $font-family-sans-serif;
+$spacer: 1rem;
+$primary: $color-primary;
+$link-hover-color: $color-primary__lighten;
+$body-bg: $color-dark-grey;
+$body-color: $color-white;
+// Bootstrap navbar styles
+$navbar-padding-y:                  $spacer / 2;
+$navbar-padding-x:                  $spacer;
+$navbar-nav-link-padding-x:         .5rem;
+$navbar-toggler-padding-y:          .25rem;
+$navbar-toggler-padding-x:          .75rem;
+$navbar-toggler-font-size:          2rem;
+$navbar-dark-color:                 $color-primary;
+$navbar-dark-hover-color:           $color-primary__lighten;
+$navbar-dark-active-color:          $color-white;
+$navbar-dark-disabled-color:        rgba($color-white, .25);
+$navbar-dark-toggler-icon-bg:       url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'><path stroke='#{$navbar-dark-color}' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>") !default;
+$navbar-dark-toggler-border-color:  rgba($color-white, .1);
+$dark: $color-black;
+$navbar-dark-brand-color:                 $navbar-dark-active-color;
+$navbar-dark-brand-hover-color:           $navbar-dark-active-color;
 
 
 

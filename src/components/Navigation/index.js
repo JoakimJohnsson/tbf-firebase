@@ -9,14 +9,12 @@ import FormControl from 'react-bootstrap/FormControl';
 import Button from 'react-bootstrap/Button';
 import AuthUserContext from "../Session/context";
 import TbfLogo from "../Logo";
-import {TbfLogoText} from "../Logo";
 
 const Navigation = () => (
 
     <Navbar className="tbf-main-nav" expand="lg">
         <Navbar.Brand href="#home">
             <TbfLogo/>
-            <TbfLogoText/>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav"/>
         <Navbar.Collapse id="basic-navbar-nav">

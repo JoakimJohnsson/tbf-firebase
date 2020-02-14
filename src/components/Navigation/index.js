@@ -24,29 +24,18 @@ const Navigation = () => (
     </header>
 );
 const NavigationAuth = () => (
-    // <Nav className="ml-auto">
-    //     <Nav.Link><Link to={ROUTES.START}>Start</Link></Nav.Link>
-    //     <Nav.Link><Link to={ROUTES.HOME}>Home</Link></Nav.Link>
-    //     <Nav.Link><Link to={ROUTES.ACCOUNT}>Account</Link></Nav.Link>
-    //     <Nav.Link><Link to={ROUTES.ADMIN}>Admin</Link></Nav.Link>
-    //     <SignOutButton/>
-    // </Nav>
     <Nav className="ml-auto">
-        <Nav.Link href={ROUTES.START}>Start</Nav.Link>
-        <Nav.Link href={ROUTES.HOME}>Home</Nav.Link>
-        <Nav.Link href={ROUTES.ACCOUNT}>Account</Nav.Link>
-        <Nav.Link href={ROUTES.ADMIN}>Admin</Nav.Link>
+        <Link className="nav-link" to={ROUTES.START}>Start</Link>
+        <Link className="nav-link" to={ROUTES.HOME}>Home</Link>
+        <Link className="nav-link" to={ROUTES.ACCOUNT}>Account</Link>
+        <Link className="nav-link" to={ROUTES.ADMIN}>Admin</Link>
         <SignOutButton/>
     </Nav>
 );
 const NavigationNonAuth = () => (
-    // <Nav className="ml-auto">
-    //     <Nav.Link><Link to={ROUTES.SIGN_IN}>Sign in</Link></Nav.Link>
-    //     <Nav.Link><Link to={ROUTES.START}>Start</Link></Nav.Link>
-    // </Nav>
     <Nav className="ml-auto">
-        <Nav.Link href={ROUTES.SIGN_IN}>Sign in</Nav.Link>
-        <Nav.Link href={ROUTES.START}>Start</Nav.Link>
+        <Link className="nav-link" to={ROUTES.SIGN_IN}>Sign in</Link>
+        <Link className="nav-link" to={ROUTES.START}>Start</Link>
     </Nav>
 );
 

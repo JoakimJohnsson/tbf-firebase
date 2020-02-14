@@ -8,8 +8,8 @@ $color-vibrant-green: #88ffcc;
 $color-primary: $color-vibrant-pink;
 $color-primary__lighten: #ffcfeb;
 $color-secondary: $color-vibrant-green;
-$color-bg-primary: $color-black;
-$color-bg-secondary: lighten($color-bg-primary, 50%);
+$color-bg: $color-black;
+$color-bg__lighten: lighten($color-bg, 50%);
 // Fonts
 $tbf-font__regular: 'Fira Sans', sans-serif;
 $tbf-font__heading: 'Coiny', cursive, sans-serif;
@@ -19,6 +19,7 @@ $headings-font-family: $tbf-font__heading;
 $font-family-base: $font-family-sans-serif;
 $spacer: 1rem;
 $primary: $color-primary;
+$secondary: $color-secondary;
 $link-hover-color: $color-primary__lighten;
 $body-bg: $color-dark-grey;
 $body-color: $color-white;

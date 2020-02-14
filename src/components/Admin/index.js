@@ -35,10 +35,18 @@ class AdminPage extends Component {
     render() {
         const {users, loading} = this.state;
         return (
-            <div>
-                <h1>Hello Admin</h1>
-                {loading && <div>Loading ...</div>}
-                <UserList users={users}/>
+            <div className="row">
+                <div className="col-12">
+                    <h1>Hello Admin</h1>
+                    <p className="lead">Some text about the app. Very Nice text. Bacon ipsim and so forth. Some text
+                        about the app. Very Nice
+                        text. Bacon ipsim and so forth.</p>
+                    <p>Some text about the app. Very Nice text. Bacon ipsim and so forth. Some text about the app. Very
+                        Nice
+                        text. Bacon ipsim and so forth.</p>
+                    {loading && <div>Loading ...</div>}
+                    <UserList users={users}/>
+                </div>
             </div>
         )
     }
@@ -48,15 +56,15 @@ const UserList = ({users}) => (
     <ul>
         {users.map(user => (
             <li key={user.uid}>
-        <span>
-          <strong>ID:</strong> {user.uid}
-        </span>
-                <span>
-          <strong>E-Mail:</strong> {user.email}
-        </span>
-                <span>
-          <strong>Username:</strong> {user.username}
-        </span>
+                <p>
+                    <strong>ID:</strong> {user.uid}
+                </p>
+                <p>
+                    <strong>E-Mail:</strong> {user.email}
+                </p>
+                <p>
+                    <strong>Username:</strong> {user.username}
+                </p>
             </li>
         ))}
     </ul>

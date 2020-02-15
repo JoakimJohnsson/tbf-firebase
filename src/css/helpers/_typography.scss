@@ -9,6 +9,7 @@
 
 // Responsive font sizes
 h1 {
+  margin-bottom: 1.5rem;
   font-size: $font-size-base * 2;
   @include media-breakpoint-up(sm) {
     font-size: $font-size-base * 2.5;
@@ -52,4 +53,8 @@ h5 {
   @include media-breakpoint-up(md) {
     font-size: $font-size-base * 1.5;
   }
+}
+
+p:last-of-type, .lead {
+  margin-bottom: 2rem;
 }

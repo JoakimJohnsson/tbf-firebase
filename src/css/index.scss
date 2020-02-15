@@ -4,7 +4,8 @@
 @import '../../node_modules/bootstrap/scss/bootstrap-grid';
 @import '../../node_modules/bootstrap/scss/variables';
 // Custom
-@import 'layout/_body';
+@import 'layout/body';
+@import 'layout/layout';
 @import 'helpers/typography';
 @import 'helpers/mixins';
 @import 'components/navigation';

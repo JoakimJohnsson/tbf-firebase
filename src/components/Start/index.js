@@ -6,16 +6,16 @@ import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 
 const StartPage = () => (
     <div className="row">
-        <div className="col-12 col-lg-8 pr-0 pr-lg-5">
+        <div className="standard-main-column">
             <h1>The Baseball Field & Friends</h1>
-            <h2 className="p-3 text-center"><FontAwesomeIcon icon="coffee" size="5x" className="text-yellow"/></h2>
-            <p className="lead">Some text about the app. Very Nice text. Bacon ipsim and so forth. Some text about the
-                app. Very Nice text. Bacon ipsim and so forth.</p>
-            <p>Some text about the app. Very Nice text. Bacon ipsim and so forth. Some text about the app. Very Nice
-                text. Bacon ipsim and so forth.</p>
+            <p className="lead">Do You miss all those fine lo-fi tunes of the 90's and early 2000's? Now you'll
+                have the opportunity to stream all the music from such labels as - Vanishing Vanity Music, [U][R][U] and
+                Strandad Sjöbuse Records for free.</p>
+            <p className="standard-box-wrapper__near-dark text-yellow">STATUS 2020-02-15: In development, all accounts
+                will be deleted.</p>
             <SignUpLink/>
         </div>
-        <div className="col-12 col-lg-4">
+        <div className="standard-secondary-column">
             <div className="mb-5 standard-box-wrapper__near-dark">
                 <h2>Sign in</h2>
                 <SignInForm/>

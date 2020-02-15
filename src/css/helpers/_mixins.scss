@@ -1,0 +1,6 @@
+@mixin box-padding-standard {
+  padding: 0;
+  @include media-breakpoint-up(sm) {
+    padding: $font-size-base * 2;
+  }
+}

@@ -9,7 +9,10 @@ const PasswordForgetPage = () => (
     <div>
         <h1>Did You forget your password?</h1>
         <p>Nevermind, we're here to help. Enter your email here, and we'll send You a new one.</p>
-        <PasswordForgetForm/>
+        <div className="standard-box-wrapper__near-dark">
+            <h2>Enter Your email here</h2>
+            <PasswordForgetForm/>
+        </div>
     </div>
 );
 

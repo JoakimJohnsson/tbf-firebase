@@ -16,7 +16,7 @@ const StartPage = () => (
             <SignUpLink/>
         </div>
         <div className="col-12 col-lg-4">
-            <div className="mb-5">
+            <div className="mb-5 standard-box-wrapper__near-dark">
                 <h2>Sign in</h2>
                 <SignInForm/>
                 <PasswordForgetLink/>

@@ -14,7 +14,10 @@ const SignUpPage = () => (
         <p>
            Do you like lo-fi music that's not available anywhere else? We sure do.
         </p>
+        <div className="standard-box-wrapper__near-dark">
+            <h2>Sign up here</h2>
         <SignUpForm/>
+    </div>
     </div>
 );
 const INITIAL_STATE = {

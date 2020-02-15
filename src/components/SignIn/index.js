@@ -1,26 +1,9 @@
 import React, {Component} from 'react';
 import {withRouter} from 'react-router-dom';
 import {compose} from 'recompose';
-// import {SignUpLink} from '../SignUp';
 import {Alert} from 'react-bootstrap';
-// import {PasswordForgetLink} from '../PasswordForget';
 import {withFirebase} from "../Firebase";
 import * as ROUTES from '../../constants/routes';
-
-// const SignInPage = () => (
-//     <div>
-//         <h1>Sign in</h1>
-//         <SignInForm/>
-//         <div className="row">
-//             <div className="col-12 col-md-6">
-//                 <PasswordForgetLink/>
-//             </div>
-//             <div className="col-12 col-md-6">
-//                 <SignUpLink/>
-//             </div>
-//         </div>
-//     </div>
-// );
 
 const INITIAL_STATE = {
     email: '',

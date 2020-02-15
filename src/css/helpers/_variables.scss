@@ -5,10 +5,12 @@ $color-dark-grey: #151515;
 $color-light-grey: #aaa;
 $color-vibrant-pink: #ff88cc;
 $color-vibrant-green: #88ffcc;
+$color-vibrant-yellow: #fffe88;
 // Color variables
 $color-primary: $color-vibrant-pink;
 $color-primary__lighten: #ffcfeb;
 $color-secondary: $color-vibrant-green;
+$color-tertiary: $color-vibrant-yellow;
 $color-bg: $color-black;
 $color-bg__lighten: lighten($color-bg, 50%);
 // Fonts

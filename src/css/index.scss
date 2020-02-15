@@ -2,12 +2,9 @@
 // Bootstrap
 @import '../../node_modules/bootstrap/scss/bootstrap';
 @import '../../node_modules/bootstrap/scss/bootstrap-grid';
-@import '../../node_modules/bootstrap/scss/bootstrap-reboot';
 @import '../../node_modules/bootstrap/scss/variables';
-
 // Custom
 @import 'layout/_body';
 @import 'helpers/typography';
 @import 'components/navigation';
 @import 'components/logo';
-

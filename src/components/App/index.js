@@ -9,6 +9,12 @@ import HomePage from '../Home';
 import AccountPage from '../Account';
 import AdminPage from '../Admin';
 import withAuthentication from "../Session/withAuthentication";
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faAirbnb } from '@fortawesome/free-brands-svg-icons'
+import { faCalendar } from '@fortawesome/free-regular-svg-icons'
+import { faCheckSquare, faCoffee, faSquare, faCheck } from '@fortawesome/free-solid-svg-icons'
+
+library.add(faAirbnb, faCalendar, faSquare, faCheck, faCheckSquare, faCoffee);
 
 const App = () => (
     <Router>

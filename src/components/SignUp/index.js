@@ -134,7 +134,7 @@ class SignUpFormBase extends Component {
                 <button className="btn btn-secondary btn-lg d-block mb-4" disabled={isInvalid} type="submit">
                     Sign me up!
                 </button>
-                {error && <Alert variant="danger"><p>{error.message}</p></Alert>}
+                {error && <Alert variant="danger"><span>{error.message}</span></Alert>}
             </form>
         );
     }

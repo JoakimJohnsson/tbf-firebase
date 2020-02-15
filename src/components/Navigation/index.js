@@ -7,6 +7,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import AuthUserContext from "../Session/context";
 import TbfLogo from "../Logo";
+import {SignInFormInMenu} from "../SignIn";
 
 const Navigation = () => (
     <header>
@@ -35,6 +36,7 @@ const NavigationNonAuth = () => (
     <Nav className="ml-auto">
         <Link className="nav-link" to={ROUTES.START}>Start</Link>
         <Link className="nav-link" to={ROUTES.SIGN_UP}>Sign up</Link>
+        <SignInFormInMenu/>
     </Nav>
 );
 

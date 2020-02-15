@@ -67,7 +67,7 @@ class PasswordForgetFormBase extends Component {
                 <button className="btn btn-secondary d-block mb-4" disabled={isInvalid} type="submit">
                     Send help!
                 </button>
-                {error && <Alert variant="danger"><p>{error.message}</p></Alert>}
+                {error && <Alert variant="danger"><span>{error.message}</span></Alert>}
             </form>
         );
     }

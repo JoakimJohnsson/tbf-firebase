@@ -50,7 +50,6 @@ class SignInFormBase extends Component {
                         placeholder="jane@doe.com"
                         className="form-control"
                     />
-
                 </div>
                 <div className="form-group">
                     <label htmlFor="signInPassword">Password</label>
@@ -63,12 +62,55 @@ class SignInFormBase extends Component {
                         placeholder="janedoe666"
                         className="form-control"
                     />
-
                 </div>
                 <button className="btn btn-secondary d-block mb-4" disabled={isInvalid} type="submit">
                     Sign In
                 </button>
-                {error && <Alert variant="danger"><p>{error.message}</p></Alert>}
+                {error && <Alert variant="danger"><span>{error.message}</span></Alert>}
+            </form>
+        );
+    }
+}
+
+class SignInFormMenu extends SignInFormBase {
+    constructor(props) {
+        super(props);
+        this.state = {...INITIAL_STATE};
+    }
+
+    render() {
+        const {email, password, error} = this.state;
+        const isInvalid = password === '' || email === '';
+        return (
+            <form className="d-lg-none pt-2 border-top mt-2 pt-2" onSubmit={this.onSubmit}>
+                <div className="form-group">
+                    <label htmlFor="signInEmailMenu">Email address</label>
+                    <input
+                        name="email"
+                        id="signInEmailMenu"
+                        value={email}
+                        onChange={this.onChange}
+                        type="text"
+                        placeholder="jane@doe.com"
+                        className="form-control"
+                    />
+                </div>
+                <div className="form-group">
+                    <label htmlFor="signInPasswordMenu">Password</label>
+                    <input
+                        name="password"
+                        id="signInPasswordMenu"
+                        value={password}
+                        onChange={this.onChange}
+                        type="password"
+                        placeholder="janedoe666"
+                        className="form-control"
+                    />
+                </div>
+                <button className="btn btn-secondary" disabled={isInvalid} type="submit">
+                    Sign In
+                </button>
+                {error && <Alert variant="danger"><span>{error.message}</span></Alert>}
             </form>
         );
     }
@@ -78,6 +120,9 @@ const SignInForm = compose(
     withRouter,
     withFirebase,
 )(SignInFormBase);
+const SignInFormInMenu = compose(
+    withRouter,
+    withFirebase,
+)(SignInFormMenu);
 
-// export default SignInPage;
-export {SignInForm};
+export {SignInForm, SignInFormInMenu};

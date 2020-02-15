@@ -26,14 +26,16 @@ $secondary: $color-secondary;
 $link-hover-color: $color-primary__lighten;
 $body-bg: $color-dark-grey;
 $body-color: $color-white;
+$font-size-base: 1rem;
 // Bootstrap navbar styles
+$btn-disabled-opacity:              .30;
 $navbar-padding-y:                  $spacer / 2;
 $navbar-padding-x:                  $spacer;
 $text-muted:                        $color-light-grey;
 $navbar-nav-link-padding-x:         .5rem;
 $navbar-toggler-padding-y:          .25rem;
 $navbar-toggler-padding-x:          .75rem;
-$navbar-toggler-font-size:          2rem;
+$navbar-toggler-font-size:          $font-size-base * 2;
 $navbar-dark-color:                 $color-primary;
 $navbar-dark-hover-color:           $color-primary__lighten;
 $navbar-dark-active-color:          $color-white;

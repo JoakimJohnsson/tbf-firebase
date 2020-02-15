@@ -11,15 +11,16 @@ import AdminPage from '../Admin';
 import withAuthentication from "../Session/withAuthentication";
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faAirbnb } from '@fortawesome/free-brands-svg-icons'
-import { faCalendar } from '@fortawesome/free-regular-svg-icons'
-import { faCheckSquare, faCoffee, faSquare, faCheck } from '@fortawesome/free-solid-svg-icons'
+import { faCopyright } from '@fortawesome/free-regular-svg-icons'
+import { faCoffee } from '@fortawesome/free-solid-svg-icons'
+import Footer from "../Footer";
 
-library.add(faAirbnb, faCalendar, faSquare, faCheck, faCheckSquare, faCoffee);
+library.add(faAirbnb, faCopyright, faCoffee);
 
 const App = () => (
     <Router>
         <Navigation/>
-        <div className="container-fluid p-5">
+        <div className="container-fluid p-3 p-sm-4 p-md-5">
             <Route exact path={ROUTES.START} component={StartPage}/>
             <Route path={ROUTES.SIGN_UP} component={SignUpPage}/>
             <Route path={ROUTES.PASSWORD_FORGET} component={PasswordForgetPage}/>
@@ -27,6 +28,7 @@ const App = () => (
             <Route path={ROUTES.ACCOUNT} component={AccountPage}/>
             <Route path={ROUTES.ADMIN} component={AdminPage}/>
         </div>
+        <Footer/>
     </Router>
 );
 

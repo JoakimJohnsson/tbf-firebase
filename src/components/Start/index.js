@@ -7,7 +7,7 @@ import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 const StartPage = () => (
     <div className="row">
         <div className="col-12 col-lg-8 pr-0 pr-lg-5">
-            <h1>The Baseball Field & Friends <FontAwesomeIcon icon="check-square"/></h1>
+            <h1>The Baseball Field & Friends</h1>
             <h2 className="p-3 text-center"><FontAwesomeIcon icon="coffee" size="5x" className="text-yellow"/></h2>
             <p className="lead">Some text about the app. Very Nice text. Bacon ipsim and so forth. Some text about the
                 app. Very Nice text. Bacon ipsim and so forth.</p>

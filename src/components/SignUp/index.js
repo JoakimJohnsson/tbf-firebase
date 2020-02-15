@@ -128,7 +128,7 @@ class SignUpFormBase extends Component {
                         />
                     </div>
                 </div>
-                <button className="btn btn-secondary d-block mb-4" disabled={isInvalid} type="submit">
+                <button className="btn btn-secondary btn-lg d-block mb-4" disabled={isInvalid} type="submit">
                     Sign me up!
                 </button>
                 {error && <Alert variant="danger"><p>{error.message}</p></Alert>}
@@ -142,7 +142,7 @@ const SignUpLink = () => (
         <h2>Dont have an account?</h2>
         <p>Sign up for free.</p>
         <Link to={ROUTES.SIGN_UP}>
-            <button className="btn btn-outline-secondary btn-lg" type="button">
+            <button className="btn btn-secondary btn-lg" type="button">
                 Sign me up!
             </button>
         </Link>

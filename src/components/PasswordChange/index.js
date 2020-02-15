@@ -36,22 +36,32 @@ class PasswordChangeForm extends Component {
 
         return (
             <form onSubmit={this.onSubmit}>
-                <input
-                    name="passwordOne"
-                    value={passwordOne}
-                    onChange={this.onChange}
-                    type="password"
-                    placeholder="New Password"
-                />
-                <input
-                    name="passwordTwo"
-                    value={passwordTwo}
-                    onChange={this.onChange}
-                    type="password"
-                    placeholder="Confirm New Password"
-                />
-                <button className="btn btn-outline-secondary ml-4" disabled={isInvalid} type="submit">
-                    Reset My Password
+                <div className="row">
+                    <div className="form-group col-12 col-md-6">
+                        <label htmlFor="changePasswordPasswordOne">Enter new password</label>
+                        <input
+                            id="changePasswordPasswordOne"
+                            name="passwordOne"
+                            value={passwordOne}
+                            onChange={this.onChange}
+                            type="password"
+                            placeholder="blamemoe666"
+                            className="form-control"
+                        />
+                        <label htmlFor="changePasswordPasswordTwo">Confirm new password</label>
+                        <input
+                            id="changePasswordPasswordTwo"
+                            name="passwordTwo"
+                            value={passwordTwo}
+                            onChange={this.onChange}
+                            type="password"
+                            placeholder="blamemoe666"
+                            className="form-control"
+                        />
+                    </div>
+                </div>
+                <button className="btn btn-secondary" disabled={isInvalid} type="submit">
+                    Change my password
                 </button>
                 {error && <p>{error.message}</p>}
             </form>

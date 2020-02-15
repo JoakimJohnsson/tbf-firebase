@@ -17,7 +17,9 @@ const AccountPage = () => (
                         text. Bacon ipsim and so forth.</p>
                     <p>Some text about the app. Very Nice text. Bacon ipsim and so forth. Some text about the app. Very Nice
                         text. Bacon ipsim and so forth.</p>
+                    <h3>Have you forgotten your password?</h3>
                     <PasswordForgetForm/>
+                    <h3>Change password here???</h3>
                     <PasswordChangeForm/>
                 </div>
             </div>

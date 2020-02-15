@@ -1,3 +1,4 @@
+@import '../helpers/variables';
 body {
   margin: 0;
   padding: 0;
@@ -15,7 +16,7 @@ code {
 
 label {
   font-weight: 100;
-  font-size: .875rem;
+  font-size: $font-size-base * .875;
 }
 
 .alert {
@@ -24,5 +25,14 @@ label {
     margin: 0;
     padding: 0;
   }
+}
+
+.btn-secondary:disabled {
+  background: transparent;
+  color: $color-secondary;
+}
+
+.small {
+  font-weight: 100;
 }
 

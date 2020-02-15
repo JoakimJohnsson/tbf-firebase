@@ -2423,7 +2423,7 @@ textarea.form-control {
   box-shadow: 0 0 0 0.2rem rgba(255, 136, 204, 0.25);
 }
 .btn.disabled, .btn:disabled {
-  opacity: 0.65;
+  opacity: 0.3;
 }
 a.btn.disabled,
 fieldset:disabled a.btn {
@@ -14123,13 +14123,96 @@ label {
   padding: 0;
 }
 
+.btn-secondary:disabled {
+  background: transparent;
+  color: #88ffcc;
+}
+
+.small {
+  font-weight: 100;
+}
+
 .text-yellow {
   color: #fffe88;
+}
+
+h1 {
+  font-size: 2rem;
+}
+@media (min-width: 576px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+}
+@media (min-width: 768px) {
+  h1 {
+    font-size: 3rem;
+  }
+}
+
+h2 {
+  font-size: 1.75rem;
+}
+@media (min-width: 576px) {
+  h2 {
+    font-size: 2rem;
+  }
+}
+@media (min-width: 768px) {
+  h2 {
+    font-size: 2.5rem;
+  }
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+@media (min-width: 576px) {
+  h3 {
+    font-size: 1.75rem;
+  }
+}
+@media (min-width: 768px) {
+  h3 {
+    font-size: 2rem;
+  }
+}
+
+h4 {
+  font-size: 1.2rem;
+}
+@media (min-width: 576px) {
+  h4 {
+    font-size: 1.5rem;
+  }
+}
+@media (min-width: 768px) {
+  h4 {
+    font-size: 1.75rem;
+  }
+}
+
+h5 {
+  font-size: 1rem;
+}
+@media (min-width: 576px) {
+  h5 {
+    font-size: 1.2rem;
+  }
+}
+@media (min-width: 768px) {
+  h5 {
+    font-size: 1.5rem;
+  }
 }
 
 .navbar-dark .navbar-toggler {
   border: none;
   padding: 0;
+}
+
+footer {
+  background: #000;
 }
 
 .header-tbf-logo-primary {

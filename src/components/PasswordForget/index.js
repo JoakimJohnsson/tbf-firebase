@@ -48,21 +48,21 @@ class PasswordForgetFormBase extends Component {
         return (
             <form onSubmit={this.onSubmit}>
                 <div className="row">
-                <div className="form-group col-12 col-md-6">
-                    <label htmlFor="passwordForgetEmail">Email</label>
-                    <input
-                        id="passwordForgetEmail"
-                        name="email"
-                        value={this.state.email}
-                        onChange={this.onChange}
-                        type="text"
-                        placeholder="jane@doe.com"
-                        className="form-control"
-                    />
-                </div>
+                    <div className="form-group col-12 col-md-6">
+                        <label htmlFor="passwordForgetEmail">Email</label>
+                        <input
+                            id="passwordForgetEmail"
+                            name="email"
+                            value={this.state.email}
+                            onChange={this.onChange}
+                            type="text"
+                            placeholder="jane@doe.com"
+                            className="form-control"
+                        />
+                    </div>
                 </div>
                 <button className="btn btn-secondary d-block mb-4" disabled={isInvalid} type="submit">
-                    Reset My Password
+                    Send help!
                 </button>
                 {error && <Alert variant="danger"><p>{error.message}</p></Alert>}
             </form>
@@ -75,7 +75,7 @@ const PasswordForgetLink = () => (
         <h3>Forgot password?</h3>
         <p>We're here to help. </p>
         <Link to={ROUTES.PASSWORD_FORGET}>
-            <button className="btn btn-outline-secondary btn-lg mb-4" type="button">
+            <button className="btn btn-secondary btn-lg mb-4" type="button">
                 Please help me!
             </button>
         </Link>

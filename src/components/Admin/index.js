@@ -39,9 +39,6 @@ class AdminPage extends Component {
                     <h1>Administration</h1>
                     <TodoComponent todo="Upload artists, records, songs"/>
                     <TodoComponent todo="Roles"/>
-                    <button className="btn btn-secondary ml-0 ml-lg-4" type="button">
-                        Sign out
-                    </button>
                 </div>
                 <div className="standard-secondary-column">
                     <div className="mb-5 standard-box-wrapper__near-dark">

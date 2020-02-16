@@ -14,3 +14,15 @@
     padding-top: .1rem;
   }
 }
+
+.navbar-nav {
+  .nav-link:first-of-type {
+    padding-top: 1.5rem;
+    @include media-breakpoint-up(md) {
+      padding-top: 3rem;
+    }
+    @include media-breakpoint-up(lg) {
+      padding-top: .5rem;
+    }
+  }
+}

@@ -14302,6 +14302,20 @@ footer {
   }
 }
 
+.navbar-nav .nav-link:first-of-type {
+  padding-top: 1.5rem;
+}
+@media (min-width: 768px) {
+  .navbar-nav .nav-link:first-of-type {
+    padding-top: 3rem;
+  }
+}
+@media (min-width: 992px) {
+  .navbar-nav .nav-link:first-of-type {
+    padding-top: 0.5rem;
+  }
+}
+
 .todo-component {
   border-radius: 0.25rem;
   border: 1px solid #fffe88;

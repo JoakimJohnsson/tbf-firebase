@@ -12,15 +12,15 @@ import withAuthentication from "../Session/withAuthentication";
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faAirbnb } from '@fortawesome/free-brands-svg-icons'
 import { faCopyright } from '@fortawesome/free-regular-svg-icons'
-import { faCoffee } from '@fortawesome/free-solid-svg-icons'
+import { faWrench } from '@fortawesome/free-solid-svg-icons'
 import Footer from "../Footer";
 
-library.add(faAirbnb, faCopyright, faCoffee);
+library.add(faAirbnb, faCopyright, faWrench);
 
 const App = () => (
     <Router>
         <Navigation/>
-        <div className="container-fluid p-3 p-sm-4 p-md-5">
+        <div className="container-fluid standard-container">
             <Route exact path={ROUTES.START} component={StartPage}/>
             <Route path={ROUTES.SIGN_UP} component={SignUpPage}/>
             <Route path={ROUTES.PASSWORD_FORGET} component={PasswordForgetPage}/>

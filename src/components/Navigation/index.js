@@ -2,7 +2,6 @@ import React from 'react';
 import * as ROUTES from '../../constants/routes';
 import {Link} from 'react-router-dom';
 import SignOutButton from "../SignOut";
-import '../../css/components/_navigation.scss';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import AuthUserContext from "../Session/context";
@@ -11,7 +10,7 @@ import {SignInFormInMenu} from "../SignIn";
 
 const Navigation = () => (
     <header>
-        <Navbar className="p-5" bg="dark" variant="dark" expand="lg">
+        <Navbar className="standard-container" bg="dark" variant="dark" expand="lg">
             <Navbar.Brand>
                 <Link to={ROUTES.START}><TbfLogo/></Link>
             </Navbar.Brand>

@@ -1,0 +1,11 @@
+@import '../helpers/variables';
+
+.todo-component {
+  .svg-inline--fa {
+    color: $color-tertiary;
+    margin-right: 1rem;
+  }
+  span {
+    text-transform: uppercase;
+  }
+}

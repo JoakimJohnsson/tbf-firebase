@@ -78,9 +78,7 @@ const PasswordForgetLink = () => (
         <h3>Forgot password?</h3>
         <p>We're here to help. </p>
         <Link to={ROUTES.PASSWORD_FORGET}>
-            <button className="btn btn-secondary btn-lg mb-4" type="button">
-                Please help me!
-            </button>
+            Please help me!
         </Link>
     </div>
 );

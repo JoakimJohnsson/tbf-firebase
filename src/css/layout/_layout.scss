@@ -27,3 +27,8 @@
     @include make-col(4);
   }
 }
+
+// Containers
+.standard-container {
+  @include container-padding-standard;
+}

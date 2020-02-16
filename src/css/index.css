@@ -3987,7 +3987,7 @@ input[type=button].btn-block {
 
 .navbar-toggler {
   padding: 0.25rem 0.75rem;
-  font-size: 2rem;
+  font-size: 1.5rem;
   line-height: 1;
   background-color: transparent;
   border: 1px solid transparent;
@@ -14177,6 +14177,20 @@ label {
   }
 }
 
+.standard-container {
+  padding: 1rem;
+}
+@media (min-width: 576px) {
+  .standard-container {
+    padding: 1.5rem;
+  }
+}
+@media (min-width: 768px) {
+  .standard-container {
+    padding: 3rem;
+  }
+}
+
 .text-yellow {
   color: #fffe88;
 }
@@ -14256,13 +14270,38 @@ p:last-of-type, .lead {
   margin-bottom: 2rem;
 }
 
-.navbar-dark .navbar-toggler {
-  border: none;
-  padding: 0;
+.standard-box-wrapper__near-dark a, header a {
+  text-transform: uppercase;
 }
 
 footer {
   background: #000;
+}
+
+.navbar-dark .navbar-toggler {
+  border: none;
+  padding: 0;
+  font-size: 1rem;
+}
+@media (min-width: 576px) {
+  .navbar-dark .navbar-toggler {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .navbar-brand {
+    padding-bottom: 0;
+    padding-top: 0.1rem;
+  }
+}
+
+.todo-component .svg-inline--fa {
+  color: #fffe88;
+  margin-right: 1rem;
+}
+.todo-component span {
+  text-transform: uppercase;
 }
 
 .header-tbf-logo-primary {

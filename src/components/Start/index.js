@@ -2,6 +2,7 @@ import React from 'react';
 import {SignInForm} from "../SignIn";
 import {SignUpLink} from "../SignUp";
 import {PasswordForgetLink} from '../PasswordForget';
+import TodoComponent from "../microComponents";
 
 const StartPage = () => (
     <div className="row">
@@ -10,8 +11,9 @@ const StartPage = () => (
             <p>Do You miss all those fine lo-fi tunes of the 90's and early 2000's? Now you'll
                 have the <a href="www.su.se">En länk här i texten</a> opportunity to stream all the music from such labels as - Vanishing Vanity Music, [U][R][U] and
                 Strandad Sjöbuse Records for free.</p>
-            <p className="standard-box-wrapper__near-dark text-yellow">STATUS 2020-02-15: In development, all accounts
-                will be deleted.</p>
+            <p className="standard-box-wrapper__near-dark text-yellow">
+                <TodoComponent todo="In development, all accounts will be deleted." />
+            </p>
             <SignUpLink/>
         </div>
         <div className="standard-secondary-column">

@@ -14154,7 +14154,7 @@ label {
   width: 100%;
   padding-right: 15px;
   padding-left: 15px;
-  padding-right: 0;
+  padding-right: 15px;
 }
 @media (min-width: 992px) {
   .standard-main-column {
@@ -14281,11 +14281,11 @@ footer {
 .navbar-dark .navbar-toggler {
   border: none;
   padding: 0;
-  font-size: 1rem;
+  font-size: 1.5rem;
 }
 @media (min-width: 576px) {
   .navbar-dark .navbar-toggler {
-    font-size: 1.5rem;
+    font-size: 2rem;
   }
 }
 
@@ -14296,12 +14296,26 @@ footer {
   }
 }
 
+.todo-component {
+  border-radius: 0.25rem;
+  border: 1px solid #fffe88;
+  margin-bottom: 1rem;
+  margin-right: 0.875rem;
+  padding: 0.5rem;
+}
+@media (min-width: 576px) {
+  .todo-component {
+    padding: 1rem;
+  }
+}
 .todo-component .svg-inline--fa {
   color: #fffe88;
   margin-right: 1rem;
 }
-.todo-component span {
-  text-transform: uppercase;
+@media (min-width: 576px) {
+  .todo-component {
+    display: inline-block;
+  }
 }
 
 .header-tbf-logo-primary {

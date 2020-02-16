@@ -4,14 +4,18 @@ import {withFirebase} from "../Firebase";
 import * as ROUTES from '../../constants/routes';
 import {Alert} from "react-bootstrap";
 
-
 const PasswordForgetPage = () => (
-    <div>
-        <h1>Did You forget your password?</h1>
-        <p>Nevermind, we're here to help. Enter your email here, and we'll send You a new one.</p>
-        <div className="standard-box-wrapper__near-dark">
-            <h2>Enter Your email here</h2>
-            <PasswordForgetForm/>
+    <div className="row">
+        <div className="standard-main-column">
+            <h1>Did You forget your password?</h1>
+            <p>Nevermind, we're here to help. Enter your email here, and we'll send You a new one.</p>
+
+        </div>
+        <div className="standard-secondary-column">
+            <div className="standard-box-wrapper__near-dark">
+                <h2>Enter Your email here</h2>
+                <PasswordForgetForm/>
+            </div>
         </div>
     </div>
 );
@@ -51,7 +55,7 @@ class PasswordForgetFormBase extends Component {
         return (
             <form onSubmit={this.onSubmit}>
                 <div className="row">
-                    <div className="form-group col-12 col-md-6">
+                    <div className="form-group col-12">
                         <label htmlFor="passwordForgetEmail">Email</label>
                         <input
                             id="passwordForgetEmail"

@@ -37,7 +37,7 @@ class PasswordChangeForm extends Component {
         return (
             <form onSubmit={this.onSubmit}>
                 <div className="row">
-                    <div className="form-group col-12 col-md-6">
+                    <div className="form-group col-12">
                         <label htmlFor="changePasswordPasswordOne">Enter new password</label>
                         <input
                             id="changePasswordPasswordOne"

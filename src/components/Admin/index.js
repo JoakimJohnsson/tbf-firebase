@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {withFirebase} from '../Firebase';
+import TodoComponent from "../microComponents";
 
 class AdminPage extends Component {
     constructor(props) {
@@ -35,8 +36,8 @@ class AdminPage extends Component {
             <div className="row">
                 <div className="standard-main-column">
                     <h1>Administration</h1>
-                    <p>TODO: Upload artists, records, songs</p>
-                    <p>TODO: Roles</p>
+                    <TodoComponent todo="Upload artists, records, songs" />
+                    <TodoComponent todo="Roles" />
                 </div>
                 <div className="standard-secondary-column">
                     <div className="mb-5 standard-box-wrapper__near-dark">

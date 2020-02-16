@@ -5,6 +5,12 @@
     padding: 2rem;
   }
 }
+@mixin box-padding-mini {
+  padding: .5rem;
+  @include media-breakpoint-up(sm) {
+    padding: 1rem;
+  }
+}
 @mixin container-padding-standard {
   padding: 1rem;
   @include media-breakpoint-up(sm) {

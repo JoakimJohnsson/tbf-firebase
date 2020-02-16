@@ -3,6 +3,7 @@ import AuthUserContext from "../Session/context";
 import {PasswordForgetForm} from '../PasswordForget';
 import PasswordChangeForm from '../PasswordChange';
 import withAuthorization from "../Session/withAuthorization";
+import TodoComponent from "../microComponents";
 
 const AccountPage = () => (
     <AuthUserContext.Consumer>
@@ -13,9 +14,7 @@ const AccountPage = () => (
                     <h1>Your account:</h1>
                     <p>Uid: {authUser.uid}</p>
                     <p>E-mail: {authUser.email}</p>
-                    <p className="text-yellow">TODO: Display current user data</p>
-                    <p className="text-yellow">TODO: Display current user data</p>
-                    <p className="text-yellow">TODO: En TODO-component som tar en input text och renderar fint</p>
+                    <TodoComponent todo="Display current user data" />
                 </div>
                 <div className="standard-secondary-column">
                     <div className="standard-box-wrapper__near-dark">
@@ -24,7 +23,6 @@ const AccountPage = () => (
                         <h3>Change password here???</h3>
                         <PasswordChangeForm/>
                     </div>
-
                 </div>
             </div>
         )}

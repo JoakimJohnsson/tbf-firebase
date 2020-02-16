@@ -14106,6 +14106,12 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+#root {
+  position: relative;
+  min-height: 100vh;
+  padding-bottom: 10rem;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
@@ -14265,6 +14271,10 @@ label {
 }
 
 footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 10rem;
   background: #000;
 }
 

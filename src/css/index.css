@@ -14110,11 +14110,6 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 
-label {
-  font-weight: 100;
-  font-size: 0.875rem;
-}
-
 .alert {
   display: inline-block;
 }
@@ -14225,16 +14220,11 @@ h2 {
 }
 
 h3 {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
 }
 @media (min-width: 576px) {
   h3 {
     font-size: 1.75rem;
-  }
-}
-@media (min-width: 768px) {
-  h3 {
-    font-size: 2rem;
   }
 }
 
@@ -14244,11 +14234,6 @@ h4 {
 @media (min-width: 576px) {
   h4 {
     font-size: 1.5rem;
-  }
-}
-@media (min-width: 768px) {
-  h4 {
-    font-size: 1.75rem;
   }
 }
 
@@ -14268,6 +14253,11 @@ h5 {
 
 p:last-of-type, .lead {
   margin-bottom: 2rem;
+}
+
+label {
+  font-weight: 700;
+  font-size: 0.875rem;
 }
 
 .standard-box-wrapper__near-dark a, header a {

@@ -8,12 +8,13 @@ import {Alert} from "react-bootstrap";
 const SignUpPage = () => (
     <div className="row">
         <div className="standard-main-column">
-            <h1>Sign up to stream music - completely free</h1>
-            <p className="lead">
-                Listen to free music. All music - one app.
+            <h1>Lo-fi 4 Life</h1>
+            <p>
+                This app is completely free to use.
             </p>
             <p>
-                Do you like lo-fi music that's not available anywhere else? We sure do.
+                User information will only be used to enhance your user experience, and will never be forwarded to a
+                third party.
             </p>
         </div>
         <div className="standard-secondary-column">
@@ -107,7 +108,7 @@ class SignUpFormBase extends Component {
                         placeholder="jane@doe.com"
                         className="form-control"
                     />
-                    <small id="emailHelp" className="form-text text-muted">We'll never share your email with anyone
+                    <small id="emailHelp" className="form-text text-muted">We will never share your email with anyone
                         else.</small>
                 </div>
                 <div className="form-group">
@@ -121,7 +122,7 @@ class SignUpFormBase extends Component {
                         placeholder="janedoe666"
                         className="form-control"
                     />
-                    <small id="passwordHelp" className="form-text text-muted">Please choose password wisely.</small>
+                    <small id="passwordHelp" className="form-text text-muted">Please choose your password wisely.</small>
                 </div>
                 <div className="form-group">
                     <label htmlFor="passwordTwo">Confirm password</label>
@@ -147,7 +148,7 @@ class SignUpFormBase extends Component {
 const SignUpLink = () => (
     <div className="mb-4">
         <h2>Dont have an account?</h2>
-        <p>Signing up is free. And will always be free.</p>
+        <p>Signing up is completely free.</p>
         <p>Your information will only be used to enhance Your user experience</p>
         <Link to={ROUTES.SIGN_UP}>
             <button className="btn btn-secondary btn-lg" type="button">

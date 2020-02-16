@@ -55,7 +55,7 @@ class AdminPage extends Component {
 }
 
 const UserList = ({users}) => (
-    <ul>
+    <ul className="list-unstyled">
         {users.map(user => (
             <li key={user.uid}>
                 <p><strong>ID:</strong> {user.uid}</p>

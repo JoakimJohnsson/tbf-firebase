@@ -12,15 +12,17 @@ const AccountPage = () => (
                 <div className="standard-main-column">
 
                     <h1>Your account:</h1>
-                    <p>Uid: {authUser.uid}</p>
-                    <p>E-mail: {authUser.email}</p>
+                    <h2>User id</h2>
+                    <p>{authUser.uid}</p>
+                    <h2>Email</h2>
+                    <p>{authUser.email}</p>
                     <TodoComponent todo="Display current user data" />
                 </div>
                 <div className="standard-secondary-column">
                     <div className="standard-box-wrapper__near-dark">
-                        <h3>Have you forgotten your password?</h3>
+                        <h2>Forgot password</h2>
                         <PasswordForgetForm/>
-                        <h3>Change password here???</h3>
+                        <h2>Change password?</h2>
                         <PasswordChangeForm/>
                     </div>
                 </div>

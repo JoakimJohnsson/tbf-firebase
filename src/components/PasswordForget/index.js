@@ -7,13 +7,13 @@ import {Alert} from "react-bootstrap";
 const PasswordForgetPage = () => (
     <div className="row">
         <div className="standard-main-column">
-            <h1>Did You forget your password?</h1>
-            <p>Nevermind, we're here to help. Enter your email here, and we'll send You a new one.</p>
+            <h1>Did you forget your password?</h1>
+            <p>Nevermind, we're here to help. Enter your email here, and we'll send you a new one.</p>
 
         </div>
         <div className="standard-secondary-column">
             <div className="standard-box-wrapper__near-dark">
-                <h2>Enter Your email here</h2>
+                <h2>Enter your email here</h2>
                 <PasswordForgetForm/>
             </div>
         </div>
@@ -80,7 +80,6 @@ class PasswordForgetFormBase extends Component {
 const PasswordForgetLink = () => (
     <div>
         <h3>Forgot password?</h3>
-        <p>We're here to help. </p>
         <Link to={ROUTES.PASSWORD_FORGET}>
             Please help me!
         </Link>

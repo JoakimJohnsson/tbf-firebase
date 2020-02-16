@@ -26,6 +26,7 @@ class AdminPage extends Component {
             console.log("userlist: " + usersList)
         });
     }
+
     componentWillUnmount() {
         this.props.firebase.users().off();
     }
@@ -36,17 +37,17 @@ class AdminPage extends Component {
             <div className="row">
                 <div className="standard-main-column">
                     <h1>Administration</h1>
-                    <TodoComponent todo="Upload artists, records, songs" />
-                    <TodoComponent todo="Roles" />
+                    <TodoComponent todo="Upload artists, records, songs"/>
+                    <TodoComponent todo="Roles"/>
+                    <button className="btn btn-secondary ml-0 ml-lg-4" type="button">
+                        Sign out
+                    </button>
                 </div>
                 <div className="standard-secondary-column">
                     <div className="mb-5 standard-box-wrapper__near-dark">
                         <h2>Users</h2>
                         {loading && <div>Loading ...</div>}
                         <UserList users={users}/>
-                    </div>
-                    <div>
-
                     </div>
                 </div>
             </div>

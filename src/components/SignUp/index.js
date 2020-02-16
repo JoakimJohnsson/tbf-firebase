@@ -146,7 +146,7 @@ class SignUpFormBase extends Component {
 }
 
 const SignUpLink = () => (
-    <div className="mb-4">
+    <div>
         <h2>Dont have an account?</h2>
         <p>Signing up is completely free.</p>
         <p>Your information will only be used to enhance Your user experience</p>

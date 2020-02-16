@@ -82,7 +82,7 @@ class SignInFormMenu extends SignInFormBase {
         const {email, password, error} = this.state;
         const isInvalid = password === '' || email === '';
         return (
-            <form className="d-lg-none pt-2 border-top mt-2 pt-2" onSubmit={this.onSubmit}>
+            <form className="d-lg-none border-top mt-3 pt-4 pb-3" onSubmit={this.onSubmit}>
                 <div className="form-group">
                     <label htmlFor="signInEmailMenu">Email address</label>
                     <input

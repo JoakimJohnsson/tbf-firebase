@@ -3,13 +3,14 @@ import {Link} from 'react-router-dom';
 import {withFirebase} from "../Firebase";
 import * as ROUTES from '../../constants/routes';
 import {Alert} from "react-bootstrap";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
 const PasswordForgetPage = () => (
     <div className="row">
         <div className="standard-main-column">
             <h1>Did you forget your password?</h1>
             <p>Nevermind, we're here to help. Enter your email here, and we'll send you a new one.</p>
-
+            <p><Link to={ROUTES.START}><FontAwesomeIcon icon={['far', 'arrow-alt-circle-left']} className="mr-2"/>Back to start</Link></p>
         </div>
         <div className="standard-secondary-column">
             <div className="standard-box-wrapper__near-dark">

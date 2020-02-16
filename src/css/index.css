@@ -14192,6 +14192,12 @@ code {
   }
 }
 
+@media (min-width: 992px) {
+  .border-lg-none {
+    border: none !important;
+  }
+}
+
 .text-yellow {
   color: #fffe88;
 }
@@ -14301,11 +14307,12 @@ footer {
   border: 1px solid #fffe88;
   margin-bottom: 1rem;
   margin-right: 0.875rem;
-  padding: 0.5rem;
+  text-align: center;
+  padding: 0.5rem 0.8rem 0.5rem 0.5rem;
 }
 @media (min-width: 576px) {
   .todo-component {
-    padding: 1rem;
+    padding: 1rem 1.5rem 1rem 1rem;
   }
 }
 .todo-component .svg-inline--fa {

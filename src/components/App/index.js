@@ -10,12 +10,12 @@ import AccountPage from '../Account';
 import AdminPage from '../Admin';
 import withAuthentication from "../Session/withAuthentication";
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faAirbnb } from '@fortawesome/free-brands-svg-icons'
-import { faCopyright } from '@fortawesome/free-regular-svg-icons'
+import { faAirbnb, faGoogle } from '@fortawesome/free-brands-svg-icons'
+import { faArrowAltCircleLeft, faCopyright } from '@fortawesome/free-regular-svg-icons'
 import { faWrench } from '@fortawesome/free-solid-svg-icons'
 import Footer from "../Footer";
 
-library.add(faAirbnb, faCopyright, faWrench);
+library.add(faAirbnb, faGoogle, faArrowAltCircleLeft, faCopyright, faWrench);
 
 const App = () => (
     <Router>

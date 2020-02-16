@@ -32,3 +32,9 @@
 .standard-container {
   @include container-padding-standard;
 }
+
+.border-lg-none {
+  @include media-breakpoint-up(lg) {
+    border: none !important;
+  }
+}

@@ -107,7 +107,7 @@ class SignInFormMenu extends SignInFormBase {
                         className="form-control"
                     />
                 </div>
-                <button className="btn btn-secondary" disabled={isInvalid} type="submit">
+                <button className="btn btn-secondary d-block mb-4" disabled={isInvalid} type="submit">
                     Sign In
                 </button>
                 {error && <Alert variant="danger"><span>{error.message}</span></Alert>}

@@ -82,7 +82,7 @@ const PasswordForgetLink = () => (
     <div>
         <h3>Forgot password?</h3>
         <Link to={ROUTES.PASSWORD_FORGET}>
-            Please help me!
+            <p>Please help me!</p>
         </Link>
     </div>
 );

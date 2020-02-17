@@ -4,6 +4,7 @@ import {compose} from 'recompose';
 import {Alert} from 'react-bootstrap';
 import {withFirebase} from "../Firebase";
 import * as ROUTES from '../../constants/routes';
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
 const INITIAL_STATE = {
     email: '',
@@ -77,7 +78,6 @@ class SignInFormMenu extends SignInFormBase {
         super(props);
         this.state = {...INITIAL_STATE};
     }
-
     render() {
         const {email, password, error} = this.state;
         const isInvalid = password === '' || email === '';
@@ -115,6 +115,43 @@ class SignInFormMenu extends SignInFormBase {
         );
     }
 }
+class SignInFacebookBase extends Component {
+    constructor(props) {
+        super(props);
+        this.state = { error: null };
+    }
+    onSubmit = event => {
+        this.props.firebase
+            .doSignInWithFacebook()
+            .then(socialAuthUser => {
+                // Create a user in your Firebase Realtime Database too
+                return this.props.firebase
+                    .user(socialAuthUser.user.uid)
+                    .set({
+                        username: socialAuthUser.additionalUserInfo.profile.name,
+                        email: socialAuthUser.additionalUserInfo.profile.email,
+                        roles: {},
+                    });
+            })
+            .then(socialAuthUser => {
+                this.setState({ error: null });
+                this.props.history.push(ROUTES.HOME);
+            })
+            .catch(error => {
+                this.setState({ error });
+            });
+        event.preventDefault();
+    };
+    render() {
+        const { error } = this.state;
+        return (
+            <form onSubmit={this.onSubmit}>
+                <button className="btn btn-secondary d-block mb-4" type="submit"><FontAwesomeIcon icon={['fab', 'facebook-f']} className="mr-2"/>Sign In with Facebook</button>
+                {error && <Alert variant="danger"><span>{error.message}</span></Alert>}
+            </form>
+        );
+    }
+}
 
 const SignInForm = compose(
     withRouter,
@@ -124,5 +161,8 @@ const SignInFormInMenu = compose(
     withRouter,
     withFirebase,
 )(SignInFormMenu);
-
-export {SignInForm, SignInFormInMenu};
+const SignInFacebook = compose(
+    withRouter,
+    withFirebase,
+)(SignInFacebookBase);
+export {SignInForm, SignInFormInMenu, SignInFacebook};

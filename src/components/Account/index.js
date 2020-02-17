@@ -10,10 +10,11 @@ const AccountPage = () => (
         {authUser => (
             <div className="row">
                 <div className="standard-main-column">
-
                     <h1>Your account:</h1>
                     <h2>User id</h2>
                     <p>{authUser.uid}</p>
+                    <h2>User name</h2>
+                    <p>{authUser.username}</p>
                     <h2>Email</h2>
                     <p>{authUser.email}</p>
                     <TodoComponent todo="Display current user data" />

@@ -1,6 +1,7 @@
 import React from 'react';
 import {SignInForm} from "../SignIn";
 import {SignUpLink} from "../SignUp";
+import {SignInFacebook} from "../SignIn";
 import {PasswordForgetLink} from '../PasswordForget';
 import TodoComponent from "../microComponents";
 
@@ -22,6 +23,7 @@ const StartPage = () => (
                 <h2>Sign in</h2>
                 <SignInForm/>
                 <PasswordForgetLink/>
+                <SignInFacebook />
             </div>
             <div>
 

@@ -146,7 +146,7 @@ class SignInFacebookBase extends Component {
         const { error } = this.state;
         return (
             <form onSubmit={this.onSubmit}>
-                <button className="btn btn-secondary d-block mb-4" type="submit"><FontAwesomeIcon icon={['fab', 'facebook-f']} className="mr-2"/>Sign In with Facebook</button>
+                <button className="btn btn-secondary d-block mb-4" type="submit"><FontAwesomeIcon icon={['fab', 'facebook-f']} className="mr-2"/>Sign up / in with Facebook</button>
                 {error && <Alert variant="danger"><span>{error.message}</span></Alert>}
             </form>
         );

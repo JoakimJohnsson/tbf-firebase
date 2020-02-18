@@ -9,12 +9,12 @@ const PasswordForgetPage = () => (
     <div className="row">
         <div className="standard-main-column">
             <h1>Did you forget your password?</h1>
-            <p>Nevermind, we're here to help. Enter your email here, and we'll send you a new one.</p>
+            <p>Nevermind, we're here to help. Enter your e-mail here, and we'll send you a new one.</p>
             <p><Link to={ROUTES.START}><FontAwesomeIcon icon={['far', 'arrow-alt-circle-left']} className="mr-2"/>Back to start</Link></p>
         </div>
         <div className="standard-secondary-column">
             <div className="standard-box-wrapper__near-dark">
-                <h2>Enter your email here</h2>
+                <h2>Enter your e-mail here</h2>
                 <PasswordForgetForm/>
             </div>
         </div>
@@ -57,7 +57,7 @@ class PasswordForgetFormBase extends Component {
             <form onSubmit={this.onSubmit}>
                 <div className="row">
                     <div className="form-group col-12">
-                        <label htmlFor="passwordForgetEmail">Email</label>
+                        <label htmlFor="passwordForgetEmail">E-mail</label>
                         <input
                             id="passwordForgetEmail"
                             name="email"

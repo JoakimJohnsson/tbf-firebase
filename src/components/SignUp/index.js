@@ -43,7 +43,7 @@ class SignUpFormBase extends Component {
     }
 
     onSubmit = event => {
-        const { username, email, passwordOne, isAdmin } = this.state;
+        const {username, email, passwordOne, isAdmin} = this.state;
         const roles = {};
         if (isAdmin) {
             roles[ROLES.ADMIN] = ROLES.ADMIN;
@@ -63,6 +63,9 @@ class SignUpFormBase extends Component {
                     });
             })
             .then(() => {
+                return this.props.firebase.doSendEmailVerification();
+            })
+            .then(() => {
                 this.setState({...INITIAL_STATE});
                 this.props.history.push(ROUTES.HOME);
             })
@@ -76,7 +79,7 @@ class SignUpFormBase extends Component {
         this.setState({[event.target.name]: event.target.value});
     };
     onChangeCheckbox = event => {
-        this.setState({ [event.target.name]: event.target.checked });
+        this.setState({[event.target.name]: event.target.checked});
     };
 
     render() {
@@ -111,7 +114,7 @@ class SignUpFormBase extends Component {
                         enhance your user experience.</small>
                 </div>
                 <div className="form-group">
-                    <label htmlFor="signUpEmail">Email</label>
+                    <label htmlFor="signUpEmail">E-mail</label>
                     <input
                         name="email"
                         id="signUpEmail"
@@ -121,7 +124,7 @@ class SignUpFormBase extends Component {
                         placeholder="jane@doe.com"
                         className="form-control"
                     />
-                    <small id="emailHelp" className="form-text text-muted">We will never share your email with anyone
+                    <small id="emailHelp" className="form-text text-muted">We will never share your e-mail with anyone
                         else.</small>
                 </div>
                 <div className="form-group">
@@ -135,7 +138,8 @@ class SignUpFormBase extends Component {
                         placeholder="janedoe666"
                         className="form-control"
                     />
-                    <small id="passwordHelp" className="form-text text-muted">Please choose your password wisely.</small>
+                    <small id="passwordHelp" className="form-text text-muted">Please choose your password
+                        wisely.</small>
                 </div>
                 <div className="form-group">
                     <label htmlFor="passwordTwo">Confirm password</label>
@@ -151,15 +155,15 @@ class SignUpFormBase extends Component {
                 </div>
                 {/*We don't want any more admins right now*/}
                 {/*<label>*/}
-                    {/*Admin:*/}
-                    <input
-                        name="isAdmin"
-                        type="hidden"
-                        value={false}
-                        // type="checkbox"
-                        // checked={isAdmin}
-                        // onChange={this.onChangeCheckbox}
-                    />
+                {/*Admin:*/}
+                <input
+                    name="isAdmin"
+                    type="hidden"
+                    value={false}
+                    // type="checkbox"
+                    // checked={isAdmin}
+                    // onChange={this.onChangeCheckbox}
+                />
                 {/*</label>*/}
                 <button className="btn btn-secondary btn-lg d-block mb-4" disabled={isInvalid} type="submit">
                     Sign me up!

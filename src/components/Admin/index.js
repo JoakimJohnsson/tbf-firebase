@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
-import { compose } from 'recompose';
+import {compose} from 'recompose';
 import {withFirebase} from '../Firebase';
-import { withAuthorization } from '../Session';
 import * as ROLES from '../../constants/roles';
 import TodoComponent from "../microComponents";
+import {withAuthorization, withEmailVerification} from '../Session';
 
 class AdminPage extends Component {
     constructor(props) {
@@ -73,6 +73,7 @@ const UserList = ({users}) => (
 const condition = authUser =>
     authUser && !!authUser.roles[ROLES.ADMIN];
 export default compose(
+    withEmailVerification,
     withAuthorization(condition),
     withFirebase,
 )(AdminPage);

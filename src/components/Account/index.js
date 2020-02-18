@@ -1,8 +1,7 @@
 import React from 'react';
-import AuthUserContext from "../Session/context";
-import {PasswordForgetForm} from '../PasswordForget';
 import PasswordChangeForm from '../PasswordChange';
-import withAuthorization from "../Session/withAuthorization";
+import {compose} from 'recompose';
+import {AuthUserContext, withAuthorization, withEmailVerification,} from '../Session';
 import TodoComponent from "../microComponents";
 
 const AccountPage = () => (
@@ -15,15 +14,13 @@ const AccountPage = () => (
                     <p>{authUser.uid}</p>
                     <h2>User name</h2>
                     <p>{authUser.username}</p>
-                    <h2>Email</h2>
+                    <h2>E-mail</h2>
                     <p>{authUser.email}</p>
-                    <TodoComponent todo="Display current user data" />
                 </div>
                 <div className="standard-secondary-column">
                     <div className="standard-box-wrapper__near-dark">
-                        <h2>Forgot password</h2>
-                        <PasswordForgetForm/>
                         <h2>Change password?</h2>
+                        <TodoComponent todo="Confirm current password"/>
                         <PasswordChangeForm/>
                     </div>
                 </div>
@@ -34,4 +31,7 @@ const AccountPage = () => (
 
 const condition = authUser => !!authUser;
 
-export default withAuthorization(condition)(AccountPage);
+export default compose(
+    withEmailVerification,
+    withAuthorization(condition),
+)(AccountPage);

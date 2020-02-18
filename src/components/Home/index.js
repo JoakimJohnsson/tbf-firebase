@@ -6,7 +6,7 @@ const HomePage = () => (
     <div className="row">
         <div className="standard-main-column">
             <h1>Dashboard</h1>
-            <p>Sign up worked like a charm - you are now also signed in.</p>
+            <p>Congratulations - you are now signed in.</p>
             <TodoComponent todo="Dashboard" />
         </div>
     </div>

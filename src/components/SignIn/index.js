@@ -83,7 +83,7 @@ class SignInFormMenu extends SignInFormBase {
         return (
             <form className="d-lg-none border-top mt-3 pt-4 pb-3" onSubmit={this.onSubmit}>
                 <div className="form-group">
-                    <label htmlFor="signInEmailMenu">Email address</label>
+                    <label htmlFor="signInEmailMenu">E-mail address</label>
                     <input
                         name="email"
                         id="signInEmailMenu"

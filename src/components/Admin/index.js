@@ -1,5 +1,8 @@
 import React, {Component} from 'react';
+import { compose } from 'recompose';
 import {withFirebase} from '../Firebase';
+import { withAuthorization } from '../Session';
+import * as ROLES from '../../constants/roles';
 import TodoComponent from "../microComponents";
 
 class AdminPage extends Component {
@@ -37,6 +40,9 @@ class AdminPage extends Component {
             <div className="row">
                 <div className="standard-main-column">
                     <h1>Administration</h1>
+                    <p>
+                        The Admin Page is accessible by every signed in admin user.
+                    </p>
                     <TodoComponent todo="Upload artists, records, songs"/>
                     <TodoComponent todo="Roles"/>
                 </div>
@@ -64,4 +70,9 @@ const UserList = ({users}) => (
     </ul>
 );
 
-export default withFirebase(AdminPage);
+const condition = authUser =>
+    authUser && !!authUser.roles[ROLES.ADMIN];
+export default compose(
+    withAuthorization(condition),
+    withFirebase,
+)(AdminPage);

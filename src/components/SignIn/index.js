@@ -23,7 +23,7 @@ class SignInFormBase extends Component {
             .doSignInWithEmailAndPassword(email, password)
             .then(() => {
                 this.setState({...INITIAL_STATE});
-                this.props.history.push(ROUTES.ADMIN);
+                this.props.history.push(ROUTES.HOME);
             })
             .catch(error => {
                 this.setState({error});
@@ -77,7 +77,6 @@ class SignInFormMenu extends SignInFormBase {
         super(props);
         this.state = {...INITIAL_STATE};
     }
-
     render() {
         const {email, password, error} = this.state;
         const isInvalid = password === '' || email === '';
@@ -124,5 +123,4 @@ const SignInFormInMenu = compose(
     withRouter,
     withFirebase,
 )(SignInFormMenu);
-
 export {SignInForm, SignInFormInMenu};

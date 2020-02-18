@@ -5,6 +5,7 @@ import SignOutButton from "../SignOut";
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import AuthUserContext from "../Session/context";
+import * as ROLES from '../../constants/roles';
 import TbfLogo from "../Logo";
 import {SignInFormInMenu} from "../SignIn";
 
@@ -17,17 +18,21 @@ const Navigation = () => (
             <Navbar.Toggle aria-controls="basic-navbar-nav"/>
             <Navbar.Collapse id="basic-navbar-nav">
                 <AuthUserContext.Consumer>
-                    {authUser => authUser ? <NavigationAuth/> : <NavigationNonAuth/>}
+                    {authUser => authUser ? <NavigationAuth authUser={authUser} /> : <NavigationNonAuth/>}
                 </AuthUserContext.Consumer>
             </Navbar.Collapse>
         </Navbar>
     </header>
 );
-const NavigationAuth = () => (
+const NavigationAuth = ({ authUser }) => (
     <Nav className="ml-auto">
         <Link className="nav-link" to={ROUTES.HOME}>Home</Link>
         <Link className="nav-link" to={ROUTES.ACCOUNT}>Account</Link>
-        <Link className="nav-link" to={ROUTES.ADMIN}>Admin</Link>
+        {!!authUser.roles[ROLES.ADMIN] && (
+            <li>
+                <Link className="nav-link" to={ROUTES.ADMIN}>Admin</Link>
+            </li>
+        )}
         <SignOutButton/>
     </Nav>
 );

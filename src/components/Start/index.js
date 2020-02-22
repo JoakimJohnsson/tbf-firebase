@@ -1,5 +1,6 @@
 import React from 'react';
 import TodoComponent from "../microComponents";
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 
 const StartPage = () => (
     <div className="row">
@@ -15,6 +16,12 @@ const StartPage = () => (
         </div>
         <div className="standard-secondary-column">
             <div className="mb-5 standard-box-wrapper__near-dark">
+
+                {/*TODO: Component with icon and centered text below to use in footer nav*/}
+                <FontAwesomeIcon icon="home" size="2x"/>
+                <FontAwesomeIcon icon="record-vinyl" size="2x"/>
+                <FontAwesomeIcon icon="music" size="2x"/>
+
             </div>
         </div>
     </div>

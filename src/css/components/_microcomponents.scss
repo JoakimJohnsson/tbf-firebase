@@ -5,7 +5,7 @@
   border-radius: .25rem;
   border: 1px solid $color-tertiary;
   margin-bottom: 1rem;
-  margin-right: .875rem;
+  margin-right: 0;
   text-align: center;
   @include box-padding-mini;
   .svg-inline--fa {
@@ -14,5 +14,6 @@
   }
   @include media-breakpoint-up(sm) {
     display: inline-block;
+    margin-right: .875rem;
   }
 }

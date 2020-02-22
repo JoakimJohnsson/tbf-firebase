@@ -14306,7 +14306,7 @@ footer {
   border-radius: 0.25rem;
   border: 1px solid #fffe88;
   margin-bottom: 1rem;
-  margin-right: 0.875rem;
+  margin-right: 0;
   text-align: center;
   padding: 0.5rem 0.8rem 0.5rem 0.5rem;
 }
@@ -14322,6 +14322,7 @@ footer {
 @media (min-width: 576px) {
   .todo-component {
     display: inline-block;
+    margin-right: 0.875rem;
   }
 }
 

@@ -1,11 +1,11 @@
 import React from 'react';
-import TodoComponent from "../microComponents";
+import TodoComponent from "../../../components/MicroComponents";
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 
-const StartPage = () => (
+const RecordsPage = () => (
     <div className="row">
         <div className="standard-main-column">
-            <h1>The Baseball Field & Friends</h1>
+            <h1>Records</h1>
             <p>The music scene in Nyköping has delivered great music since the mid 90's. </p>
             <p>This website, former home of band The Baseball Field and music labels Vanishing Vanity Music and Strandad
                 Sjöbuse Records, now brings you that music in a modern way.</p>
@@ -26,4 +26,4 @@ const StartPage = () => (
         </div>
     </div>
 );
-export default StartPage;
+export default RecordsPage;

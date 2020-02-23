@@ -1,8 +1,8 @@
 import React from 'react';
-import PasswordChangeForm from '../PasswordChange';
+import PasswordChangeForm from '../../../components/PasswordChange';
 import {compose} from 'recompose';
-import {AuthUserContext, withAuthorization, withEmailVerification,} from '../Session';
-import TodoComponent from "../microComponents";
+import {AuthUserContext, withAuthorization, withEmailVerification,} from '../../../components/Session';
+import TodoComponent from "../../../components/MicroComponents";
 
 const AccountPage = () => (
     <AuthUserContext.Consumer>

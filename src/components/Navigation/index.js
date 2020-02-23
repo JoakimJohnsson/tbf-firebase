@@ -38,7 +38,22 @@ const NavigationAuth = ({ authUser }) => (
 const NavigationNonAuth = () => (
     <Nav className="ml-auto">
         <Link className="nav-link" to={ROUTES.START}>Start</Link>
+        <Link className="nav-link" to={ROUTES.ARTISTS}>Artists</Link>
+        <Link className="nav-link" to={ROUTES.RECORDS}>Records</Link>
+        <Link className="nav-link" to={ROUTES.SONGS}>Songs</Link>
+        <Link className="nav-link" to={ROUTES.PLAY}>Play</Link>
+        <Link className="nav-link" to={ROUTES.SEARCH}>Search</Link>
     </Nav>
 );
+// const NavigationFooter = () => (
+//     <Nav className="ml-auto">
+//         <Link className="nav-link" to={ROUTES.START}>Start</Link>
+//         <Link className="nav-link" to={ROUTES.ARTISTS}>Artists</Link>
+//         <Link className="nav-link" to={ROUTES.RECORDS}>Records</Link>
+//         <Link className="nav-link" to={ROUTES.SONGS}>Songs</Link>
+//         <Link className="nav-link" to={ROUTES.PLAY}>Play</Link>
+//         <Link className="nav-link" to={ROUTES.SEARCH}>Search</Link>
+//     </Nav>
+// );
 
 export default Navigation;

@@ -2,9 +2,9 @@ import React from 'react';
 import {NavigationFooter} from "../Navigation";
 
 const Footer = () => (
-    <footer className="container-fluid fixed-bottom">
+    <footer className="container-fluid fixed-bottom d-lg-none">
         <div className="row h-100">
-            <div className="col-12 d-flex align-items-center justify-content-center">
+            <div className="col-12">
                 <NavigationFooter/>
             </div>
         </div>

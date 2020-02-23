@@ -11,7 +11,7 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
 const Navigation = () => (
     <header>
-        <Navbar className="standard-container" bg="dark" variant="dark" expand="lg">
+        <Navbar className="standard-container navbar-header" bg="dark" variant="dark" expand="lg">
             <Navbar.Brand>
                 <Link to={ROUTES.START}><TbfLogo/></Link>
             </Navbar.Brand>
@@ -25,12 +25,12 @@ const Navigation = () => (
     </header>
 );
 const NavigationFooter = () => (
-    <Navbar className="footer" bg="dark" variant="dark" expand="true">
+    <Navbar className="navbar-footer justify-content-center" bg="dark" variant="dark" expand="true">
         <NavLinkComponentFooter link={ROUTES.START} text={"Start"} icon={"home"}/>
         <NavLinkComponentFooter link={ROUTES.ARTISTS} text={"Artists"} icon={"user-astronaut"}/>
         <NavLinkComponentFooter link={ROUTES.RECORDS} text={"Records"} icon={"record-vinyl"}/>
         <NavLinkComponentFooter link={ROUTES.SONGS} text={"Songs"} icon={"music"}/>
-        <NavLinkComponentFooter link={ROUTES.PLAY} text={"Play"} icon={"play-circle"}/>
+        <NavLinkComponentFooter link={ROUTES.SEARCH} text={"Search"} icon={"search"}/>
     </Navbar>
 );
 const NavigationAuth = ({authUser}) => (
@@ -51,7 +51,6 @@ const NavigationNonAuth = () => (
         <NavLinkComponent link={ROUTES.ARTISTS} text={"Artists"}/>
         <NavLinkComponent link={ROUTES.RECORDS} text={"Records"}/>
         <NavLinkComponent link={ROUTES.SONGS} text={"Songs"}/>
-        <NavLinkComponent link={ROUTES.PLAY} text={"Play"}/>
         <NavLinkComponent link={ROUTES.SEARCH} text={"Search"}/>
     </Nav>
 );
@@ -62,7 +61,7 @@ const NavLinkComponent = ({link, text}) => (
 const NavLinkComponentFooter = ({link, text, icon}) => (
     <>
         <Link className="nav-link" to={link}><FontAwesomeIcon icon={icon} size="2x" className="d-block"/>
-            <span className="d-none d-sm-block">{text}</span>
+            <span className="mt-1">{text}</span>
         </Link>
     </>
 );

@@ -1,13 +1,11 @@
 import React from 'react';
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import * as ROUTES from '../../constants/routes';
-import {Link} from "react-router-dom";
+import {NavigationFooter} from "../Navigation";
 
 const Footer = () => (
-    <footer className="container-fluid standard-container">
+    <footer className="container-fluid fixed-bottom">
         <div className="row h-100">
-            <div className="col-12 small d-flex align-items-center justify-content-center">
-                <span><FontAwesomeIcon icon={['far', 'copyright']} /> 2020  <Link to={ROUTES.SIGN_UP}>Joakim Johnsson</Link></span>
+            <div className="col-12 d-flex align-items-center justify-content-center">
+                <NavigationFooter/>
             </div>
         </div>
     </footer>

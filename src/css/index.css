@@ -14258,7 +14258,7 @@ label {
   font-size: 0.875rem;
 }
 
-.standard-box-wrapper__near-dark a, header a {
+.standard-box-wrapper__near-dark a, header a, footer a {
   text-transform: uppercase;
 }
 
@@ -14266,7 +14266,6 @@ footer {
   position: absolute;
   bottom: 0;
   width: 100%;
-  height: 10rem;
   background: #000;
 }
 
@@ -14299,6 +14298,20 @@ footer {
 @media (min-width: 992px) {
   .navbar-nav .nav-link:first-of-type {
     padding-top: 0.5rem;
+  }
+}
+
+nav.footer .nav-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.5rem 0.5rem;
+  font-size: 80%;
+}
+@media (min-width: 576px) {
+  nav.footer .nav-link {
+    padding: 0.5rem 1rem;
+    font-size: 100%;
   }
 }
 

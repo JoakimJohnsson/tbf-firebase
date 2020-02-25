@@ -61,7 +61,7 @@ const NavLinkComponent = ({link, text}) => (
 const NavLinkComponentFooter = ({link, text, icon}) => (
     <>
         <Link className="nav-link" to={link}><FontAwesomeIcon icon={icon} size="2x" className="d-block"/>
-            <span className="mt-1">{text}</span>
+            <span className="mt-1 d-none d-sm-inline-block">{text}</span>
         </Link>
     </>
 );

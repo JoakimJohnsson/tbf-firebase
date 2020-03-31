@@ -46,7 +46,7 @@ class PasswordChangeForm extends Component {
                             onChange={this.onChange}
                             type="password"
                             placeholder="blamemoe666"
-                            className="form-control"
+                            className="form-control mb-2"
                         />
                         <label htmlFor="changePasswordPasswordTwo">Confirm new password</label>
                         <input

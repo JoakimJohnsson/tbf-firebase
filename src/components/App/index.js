@@ -4,7 +4,7 @@ import * as ROUTES from '../../constants/routes'
 import Navigation from '../Navigation';
 import StartPage from '../../pages/unauthorized/Start';
 import SignUpPage from '../SignUp';
-import HomePage from '../../pages/authorized/AdminHome';
+import DashBoardPage from '../../pages/authorized/DashBoard';
 import AccountPage from '../../pages/authorized/Account';
 import AdminPage from '../../pages/authorized/Admin';
 import withAuthentication from "../Session/withAuthentication";
@@ -32,9 +32,9 @@ const App = () => (
             <Route path={ROUTES.SONGS} component={SongsPage}/>
             <Route path={ROUTES.PLAY} component={PlayPage}/>
             <Route path={ROUTES.SEARCH} component={SearchPage}/>
-            <Route path={ROUTES.HOME} component={HomePage}/>
+            <Route path={ROUTES.DASHBOARD} component={DashBoardPage}/>
             <Route path={ROUTES.ACCOUNT} component={AccountPage}/>
-            <Route path={ROUTES.ADMIN} component={AdminPage}/>
+            <Route path={ROUTES.ADMINISTRATION} component={AdminPage}/>
         </div>
         <Footer/>
     </Router>

@@ -3,7 +3,7 @@ import TodoComponent from "../../../components/MicroComponents";
 import {compose} from 'recompose';
 import {withAuthorization, withEmailVerification} from '../../../components/Session';
 
-const AdminHomePage = () => (
+const DashBoardPage = () => (
     <div className="row">
         <div className="standard-main-column">
             <h1>Dashboard</h1>
@@ -18,4 +18,4 @@ const condition = authUser => !!authUser;
 export default compose(
     withEmailVerification,
     withAuthorization(condition),
-)(AdminHomePage);
+)(DashBoardPage);

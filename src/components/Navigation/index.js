@@ -37,9 +37,9 @@ const NavigationAuth = ({authUser}) => (
     <Nav className="ml-auto">
         {!!authUser.roles[ROLES.ADMIN] && (
             <>
+                <NavLinkComponent link={ROUTES.DASHBOARD} text={"Dashboard"}/>
                 <NavLinkComponent link={ROUTES.ACCOUNT} text={"Account"}/>
-                <NavLinkComponent link={ROUTES.HOME} text={"Home"}/>
-                <NavLinkComponent link={ROUTES.ADMIN} text={"Admin"}/>
+                <NavLinkComponent link={ROUTES.ADMINISTRATION} text={"Administration"}/>
             </>
         )}
         <SignOutButton/>

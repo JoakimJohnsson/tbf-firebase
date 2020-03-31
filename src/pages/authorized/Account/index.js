@@ -20,7 +20,6 @@ const AccountPage = () => (
                 <div className="standard-secondary-column">
                     <div className="standard-box-wrapper__near-dark">
                         <h2>Change password?</h2>
-                        <TodoComponent todo="Confirm current password"/>
                         <PasswordChangeForm/>
                     </div>
                 </div>

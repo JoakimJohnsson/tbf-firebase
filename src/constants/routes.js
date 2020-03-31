@@ -1,4 +1,9 @@
 export const START = '/';
+export const ARTISTS = '/artists';
+export const RECORDS = '/records';
+export const SONGS = '/songs';
+export const PLAY = '/play';
+export const SEARCH = '/search';
 export const SIGN_UP = '/sign-up';
 export const HOME = '/home';
 export const ACCOUNT = '/account';

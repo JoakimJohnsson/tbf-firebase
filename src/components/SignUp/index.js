@@ -5,18 +5,16 @@ import {withFirebase} from "../Firebase/context";
 import * as ROUTES from '../../constants/routes';
 import {Alert} from "react-bootstrap";
 import * as ROLES from '../../constants/roles';
+import {SignInForm} from "../SignIn";
+import {PasswordForgetForm} from "../PasswordForget";
 
 const SignUpPage = () => (
     <div className="row">
         <div className="standard-main-column">
-            <h1>Lo-fi 4 Life</h1>
-            <p>
-                This app is completely free to use.
-            </p>
-            <p>
-                User information will only be used to enhance your user experience, and will never be forwarded to a
-                third party.
-            </p>
+            <h1>Sign in</h1>
+                <SignInForm/>
+                <h2>Forgot password?</h2>
+                <PasswordForgetForm/>
         </div>
         <div className="standard-secondary-column">
             <div className="standard-box-wrapper__near-dark">

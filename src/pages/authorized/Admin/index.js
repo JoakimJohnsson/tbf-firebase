@@ -1,11 +1,11 @@
 import React, {Component} from 'react';
 import {Switch, Route, Link} from 'react-router-dom';
 import {compose} from 'recompose';
-import {withFirebase} from '../Firebase';
-import * as ROLES from '../../constants/roles';
-import TodoComponent from "../microComponents";
-import {withAuthorization, withEmailVerification} from '../Session';
-import * as ROUTES from '../../constants/routes';
+import {withFirebase} from '../../../components/Firebase';
+import * as ROLES from '../../../constants/roles';
+import TodoComponent from "../../../components/MicroComponents";
+import {withAuthorization, withEmailVerification} from '../../../components/Session';
+import * as ROUTES from '../../../constants/routes';
 
 const AdminPage = () => (
     <div className="row">

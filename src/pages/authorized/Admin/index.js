@@ -2,8 +2,8 @@ import React, {Component} from 'react';
 import {Switch, Route, Link} from 'react-router-dom';
 import {compose} from 'recompose';
 import {withFirebase} from '../../../components/Firebase';
+import {AdminCard} from '../../../components/MicroComponents';
 import * as ROLES from '../../../constants/roles';
-import TodoComponent from "../../../components/MicroComponents";
 import {withAuthorization, withEmailVerification} from '../../../components/Session';
 import * as ROUTES from '../../../constants/routes';
 
@@ -71,32 +71,7 @@ class UserListBase extends Component {
                 <ul className="list-unstyled row">
                     {users.map(user => (
                         <li key={user.uid} className="col-12 col-sm-6 col-lg-4 mb-3 mb-sm-0">
-
-                            <div className="card h-100">
-                                <div className="card-header">
-                                    <h3 className="text-uppercase m-0 pt-2">{user.username}</h3>
-                                </div>
-                                <div className="card-body">
-                                    <p>
-                                        <strong>ID:</strong> {user.uid}
-                                    </p>
-                                    <p>
-                                        <strong>E-Mail:</strong> {user.email}
-                                    </p>
-                                    <p>
-                                        <Link
-                                            to={{
-                                                pathname: `${ROUTES.ADMINISTRATION}/${user.uid}`,
-                                                state: {user},
-                                            }}
-                                        >
-                                            Details
-                                        </Link>
-                                    </p>
-
-                                </div>
-                            </div>
-
+                            <AdminCard username = {user.username} uid = {user.uid} email = {user.email} user = {user} />
                         </li>
                     ))}
                 </ul>

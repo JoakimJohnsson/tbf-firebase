@@ -1,0 +1,11 @@
+@import '../helpers/variables';
+
+.btn-card-header {
+  background-color: transparent;
+  border-color: $color-black;
+  &:hover,
+  &:focus {
+    background-color: $color-tertiary__lighten;
+    border-color: $color-black;
+  }
+}

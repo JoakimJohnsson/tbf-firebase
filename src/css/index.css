@@ -11088,6 +11088,13 @@ code {
       background: #222;
       margin-bottom: 3rem; } }
 
+.standard-fullwidth-column {
+  position: relative;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  padding-right: 15px; }
+
 .standard-main-column {
   position: relative;
   width: 100%;
@@ -11170,6 +11177,13 @@ footer {
   width: 100%;
   background: #000; }
 
+.btn-card-header {
+  background-color: transparent;
+  border-color: #000; }
+  .btn-card-header:hover, .btn-card-header:focus {
+    background-color: #fffea0;
+    border-color: #000; }
+
 .navbar-dark .navbar-toggler {
   border: none;
   padding: 0;
@@ -11222,6 +11236,11 @@ footer {
     .todo-component {
       display: inline-block;
       margin-right: .875rem; } }
+
+.dashboard-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
 
 .header-tbf-logo-primary {
   fill: #ff88cc;

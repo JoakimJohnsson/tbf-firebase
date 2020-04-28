@@ -13,6 +13,10 @@
 }
 
 // Columns
+.standard-fullwidth-column {
+  @include make-col-ready();
+  padding-right: 15px;
+}
 .standard-main-column {
   @include make-col-ready();
   padding-right: 15px;

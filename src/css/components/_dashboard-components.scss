@@ -1,0 +1,8 @@
+@import '../helpers/variables';
+@import '../helpers/mixins';
+
+.dashboard-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

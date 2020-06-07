@@ -21,7 +21,14 @@ code {
   monospace;
 }
 
+.btn-close-secondary {
+  color: $color-secondary;
+  &:hover,
+  &:focus {
+    color: $color-secondary__lighten;
 
+  }
+}
 
 .alert {
   display: inline-block;

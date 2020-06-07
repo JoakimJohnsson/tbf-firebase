@@ -5397,8 +5397,9 @@ a.close.disabled {
   display: flex;
   flex-direction: column;
   width: 100%;
+  color: #fff;
   pointer-events: auto;
-  background-color: #fff;
+  background-color: #222;
   background-clip: padding-box;
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 0.3rem;
@@ -14115,6 +14116,13 @@ body {
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+.btn-close-secondary {
+  color: #88ffcc;
+}
+.btn-close-secondary:hover, .btn-close-secondary:focus {
+  color: #62ffbc;
 }
 
 .alert {

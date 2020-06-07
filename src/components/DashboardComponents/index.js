@@ -36,8 +36,8 @@ const DashboardModal = (props) => (
                 <div className="modal-content">
                     <div className="modal-header">
                         <h5 className="modal-title" id={`modal-label-${props.index}-${props.node}`}>Add {props.node}</h5>
-                        <button type="button" className="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
+                        <button type="button" className="btn btn-close-secondary" data-dismiss="modal" aria-label="Close">
+                            <FontAwesomeIcon icon="times"/>
                         </button>
                     </div>
                     <div className="modal-body">

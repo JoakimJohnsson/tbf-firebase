@@ -11,6 +11,7 @@ $color-vibrant-yellow: #fffe88;
 $color-primary: $color-vibrant-pink;
 $color-primary__lighten: #ffcfeb;
 $color-secondary: $color-vibrant-green;
+$color-secondary__lighten: #62ffbc;
 $color-tertiary: $color-vibrant-yellow;
 $color-tertiary__lighten: #fffea0;
 $color-bg: $color-black;
@@ -50,6 +51,37 @@ $navbar-dark-brand-hover-color:           $navbar-dark-active-color;
 $card-bg: $color-near-dark-grey;
 $card-cap-bg: $color-tertiary;
 $card-cap-color: $color-black;
+// Modals
+
+// Padding applied to the modal body
+$modal-inner-padding:               1rem;
+
+// Margin between elements in footer, must be lower than or equal to 2 * $modal-inner-padding
+$modal-footer-margin-between:       .5rem;
+
+$modal-dialog-margin:               .5rem;
+$modal-dialog-margin-y-sm-up:       1.75rem;
+
+$modal-content-color:               $color-white;
+$modal-content-bg:                  $color-near-dark-grey;
+$modal-content-border-color:        rgba($color-black, .2);
+//$modal-content-border-width:        $border-width;
+//$modal-content-border-radius:       $border-radius-lg;
+//$modal-content-inner-border-radius: subtract($modal-content-border-radius, $modal-content-border-width);
+$modal-content-box-shadow-xs:       0 .25rem .5rem rgba($color-black, .5);
+$modal-content-box-shadow-sm-up:    0 .5rem 1rem rgba($color-black, .5);
+
+$modal-backdrop-bg:                 $color-black;
+$modal-backdrop-opacity:            .5;
+//$modal-header-border-color:         $border-color;
+//$modal-footer-border-color:         $modal-header-border-color;
+//$modal-header-border-width:         $modal-content-border-width;
+//$modal-footer-border-width:         $modal-header-border-width;
+$modal-header-padding-y:            1rem;
+$modal-header-padding-x:            1rem;
+$modal-header-padding:              $modal-header-padding-y $modal-header-padding-x; // Keep this for backwards compatibility
+
+
 
 
 

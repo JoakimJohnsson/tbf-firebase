@@ -1,5 +1,6 @@
 import React from 'react';
 import DashboardCard from "../../../components/DashboardComponents";
+import * as NODES from '../../../constants/nodes';
 import {compose} from 'recompose';
 import {withAuthorization, withEmailVerification} from '../../../components/Session';
 
@@ -10,12 +11,7 @@ const DashBoardPage = () => (
             <p>Congratulations - you are now signed in.</p>
 
             <div className="row">
-                <DashboardCard header={"People"}/>
-                <DashboardCard header={"Affiliations"}/>
-                <DashboardCard header={"Roles"}/>
-                <DashboardCard header={"Songs"}/>
-                <DashboardCard header={"Artists"}/>
-                <DashboardCard header={"Images"}/>
+                {DashboardCards}
             </div>
         </div>
     </div>
@@ -23,7 +19,12 @@ const DashBoardPage = () => (
 
 const condition = authUser => !!authUser;
 
+const DashboardCards = NODES.NODES_LIST.map((node) =>
+    <DashboardCard node={node}/>
+);
+
 export default compose(
     withEmailVerification,
     withAuthorization(condition),
 )(DashBoardPage);
+export {DashboardCards};

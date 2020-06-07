@@ -19,8 +19,8 @@ const DashBoardPage = () => (
 
 const condition = authUser => !!authUser;
 
-const DashboardCards = NODES.NODES_LIST.map((node) =>
-    <DashboardCard node={node}/>
+const DashboardCards = NODES.NODES_LIST.map((node, index) =>
+    <DashboardCard key={index} node={node} index={index} />
 );
 
 export default compose(

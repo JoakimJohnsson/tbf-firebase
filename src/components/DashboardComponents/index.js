@@ -3,6 +3,13 @@ import React from 'react';
 import * as ROUTES from "../../constants/routes";*/
 import TodoComponent from "../MicroComponents";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import * as NODES from "../../constants/nodes";
+import AddPeopleForm from "./addPeopleForm";
+import AddAffiliationsForm from "./addAffiliationsForm";
+import AddRolesForm from "./addRolesForm";
+import AddSongsForm from "./addSongsForm";
+import AddArtistsForm from "./addArtistsForm";
+import AddImagesForm from "./addImagesForm";
 
 const DashboardCard = (props) => (
     <div className="col-12 col-lg-6 mb-3">
@@ -34,20 +41,35 @@ const DashboardModal = (props) => (
                         </button>
                     </div>
                     <div className="modal-body">
-                        ...
+                        {(() => {
+                            switch (props.node) {
+                                case NODES.PEOPLE:
+                                    return <AddPeopleForm />;
+                                case NODES.AFFILIATIONS:
+                                    return <AddAffiliationsForm />;
+                                case NODES.ROLES:
+                                    return <AddRolesForm />;
+                                case NODES.SONGS:
+                                    return <AddSongsForm />;
+                                case NODES.ARTISTS:
+                                    return <AddArtistsForm />;
+                                case NODES.IMAGES:
+                                    return <AddImagesForm />;
+                                default:
+                                    return <TodoComponent todo="No form found"/>;
+                            }
+                        })()}
                     </div>
                     <div className="modal-footer">
                         <button type="button" className="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button type="button" className="btn btn-primary">Add</button>
                     </div>
                 </div>
             </div>
         </div>
-        <a href="" className="btn btn-secondary btn-card-header" type="button" data-toggle="modal"
+        <button className="btn btn-secondary btn-card-header" data-toggle="modal" aria-label={`Add ${props.node}`}
            data-target={`#modal-${props.index}-${props.node}`}>
-            <span className="mr-2">Add {props.node}</span>
             <FontAwesomeIcon icon="plus"/>
-        </a>
+        </button>
     </>
 );
 export default DashboardCard;

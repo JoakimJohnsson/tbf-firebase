@@ -11,7 +11,7 @@ const INITIAL_STATE = {
     error: null
 };
 
-class AddPeopleForm extends Component {
+class AddPersonsForm extends Component {
     constructor(props) {
         super(props);
         this.state = {...INITIAL_STATE
@@ -19,7 +19,7 @@ class AddPeopleForm extends Component {
     }
 
     onSubmit = event => {
-        this.props.firebase.people().push({
+        this.props.firebase.persons().push({
             firstName: this.state.firstName,
             lastName: this.state.lastName,
             description: this.state.description
@@ -50,10 +50,10 @@ class AddPeopleForm extends Component {
         return (
             <form onSubmit={this.onSubmit}>
                 <div className="form-group">
-                    <label htmlFor="addPeopleFirstName">First name</label>
+                    <label htmlFor="addPersonsFirstName">First name</label>
                     <input
                         name="firstName"
-                        id="addPeopleFirstName"
+                        id="addPersonsFirstName"
                         value={firstName}
                         onChange={this.onChange}
                         type="text"
@@ -62,10 +62,10 @@ class AddPeopleForm extends Component {
                     />
                 </div>
                 <div className="form-group">
-                    <label htmlFor="addPeopleLastName">Last name</label>
+                    <label htmlFor="addPersonsLastName">Last name</label>
                     <input
                         name="lastName"
-                        id="addPeopleLastName"
+                        id="addPersonsLastName"
                         value={lastName}
                         onChange={this.onChange}
                         type="text"
@@ -74,10 +74,10 @@ class AddPeopleForm extends Component {
                     />
                 </div>
                 <div className="form-group">
-                    <label htmlFor="addPeopleDescription">Description</label>
+                    <label htmlFor="addPersonsDescription">Description</label>
                     <textarea
                         name="description"
-                        id="addPeopleDescription"
+                        id="addPersonsDescription"
                         value={description}
                         onChange={this.onChange}
                         rows="3"
@@ -93,9 +93,9 @@ class AddPeopleForm extends Component {
     }
 }
 
-const PeopleForm = compose(
+const PersonsForm = compose(
     withRouter,
     withFirebase,
-)(AddPeopleForm);
+)(AddPersonsForm);
 
-export default PeopleForm;
+export default PersonsForm;

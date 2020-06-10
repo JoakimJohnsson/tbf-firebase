@@ -3,6 +3,7 @@ import DashboardCard from "../../../components/DashboardComponents";
 import * as NODES from '../../../constants/nodes';
 import {compose} from 'recompose';
 import {withAuthorization, withEmailVerification} from '../../../components/Session';
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
 const DashBoardPage = () => (
     <div className="row">
@@ -11,8 +12,11 @@ const DashBoardPage = () => (
             <p>Congratulations - you are now signed in.</p>
 
             <div className="row">
+
                 {DashboardCards}
+
             </div>
+
         </div>
     </div>
 );

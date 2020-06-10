@@ -6,3 +6,13 @@
   justify-content: space-between;
   align-items: center;
 }
+
+.dashboard-list {
+  .list-group-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}

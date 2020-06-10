@@ -3,7 +3,7 @@ $color-white: #fff;
 $color-black: #000;
 $color-dark-grey: #151515;
 $color-near-dark-grey: #222;
-$color-light-grey: #aaa;
+$color-light-grey: #444;
 $color-vibrant-pink: #ff88cc;
 $color-vibrant-green: #88ffcc;
 $color-vibrant-yellow: #fffe88;
@@ -11,11 +11,12 @@ $color-vibrant-yellow: #fffe88;
 $color-primary: $color-vibrant-pink;
 $color-primary__lighten: #ffcfeb;
 $color-secondary: $color-vibrant-green;
-$color-secondary__lighten: #62ffbc;
+$color-secondary__lighten: #b8ffe0;
 $color-tertiary: $color-vibrant-yellow;
 $color-tertiary__lighten: #fffea0;
 $color-bg: $color-black;
 $color-bg__lighten: lighten($color-bg, 50%);
+$color-border: $color-light-grey;
 // Fonts
 $tbf-font__regular: 'Fira Sans', sans-serif;
 $tbf-font__heading: 'Coiny', cursive, sans-serif;
@@ -55,8 +56,6 @@ $card-cap-color: $color-black;
 
 // Padding applied to the modal body
 $modal-inner-padding:               1rem;
-
-// Margin between elements in footer, must be lower than or equal to 2 * $modal-inner-padding
 $modal-footer-margin-between:       .5rem;
 
 $modal-dialog-margin:               .5rem;
@@ -65,21 +64,41 @@ $modal-dialog-margin-y-sm-up:       1.75rem;
 $modal-content-color:               $color-white;
 $modal-content-bg:                  $color-near-dark-grey;
 $modal-content-border-color:        rgba($color-black, .2);
-//$modal-content-border-width:        $border-width;
-//$modal-content-border-radius:       $border-radius-lg;
-//$modal-content-inner-border-radius: subtract($modal-content-border-radius, $modal-content-border-width);
 $modal-content-box-shadow-xs:       0 .25rem .5rem rgba($color-black, .5);
 $modal-content-box-shadow-sm-up:    0 .5rem 1rem rgba($color-black, .5);
 
 $modal-backdrop-bg:                 $color-black;
 $modal-backdrop-opacity:            .5;
-//$modal-header-border-color:         $border-color;
-//$modal-footer-border-color:         $modal-header-border-color;
-//$modal-header-border-width:         $modal-content-border-width;
-//$modal-footer-border-width:         $modal-header-border-width;
 $modal-header-padding-y:            1rem;
 $modal-header-padding-x:            1rem;
 $modal-header-padding:              $modal-header-padding-y $modal-header-padding-x; // Keep this for backwards compatibility
+
+// List group
+
+//$list-group-color:                  null !default;
+$list-group-bg:                     transparent;
+$list-group-border-color:           $color-border;
+//$list-group-border-width:           $border-width !default;
+//$list-group-border-radius:          $border-radius !default;
+
+//$list-group-item-padding-y:         .75rem !default;
+//$list-group-item-padding-x:         1.25rem !default;
+
+//$list-group-hover-bg:               $gray-100 !default;
+//$list-group-active-color:           $component-active-color !default;
+//$list-group-active-bg:              $component-active-bg !default;
+//$list-group-active-border-color:    $list-group-active-bg !default;
+//
+//$list-group-disabled-color:         $gray-600 !default;
+//$list-group-disabled-bg:            $list-group-bg !default;
+//
+//$list-group-action-color:           $gray-700 !default;
+//$list-group-action-hover-color:     $list-group-action-color !default;
+//
+//$list-group-action-active-color:    $body-color !default;
+//$list-group-action-active-bg:       $gray-200 !default;
+
+$gray-300: $color-light-grey;
 
 
 

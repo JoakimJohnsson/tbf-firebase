@@ -4,7 +4,7 @@ import * as ROUTES from "../../constants/routes";*/
 import TodoComponent from "../MicroComponents";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import * as NODES from "../../constants/nodes";
-import AddPeopleForm from "./addPeopleForm";
+import AddPersonsForm from "./addPersonsForm";
 import AddAffiliationsForm from "./addAffiliationsForm";
 import AddRolesForm from "./addRolesForm";
 import AddSongsForm from "./addSongsForm";
@@ -19,9 +19,26 @@ const DashboardCard = (props) => (
                 <DashboardModal node={props.node} index={props.index}/>
             </div>
             <div className="card-body">
-                <p>
-                    <TodoComponent todo="Todo"/>
-                </p>
+                    <DashboardList node={props.node} index={props.index}/>
+            </div>
+            <div className="card-footer align-items-center">
+                <nav aria-label="Page navigation example">
+                    <ul className="pagination justify-content-center">
+                        <li className="page-item disabled">
+                            <a className="page-link" href="#" tabIndex="-1" aria-label="Previous">
+                                <FontAwesomeIcon icon="chevron-left"/>
+                            </a>
+                        </li>
+                        <li className="page-item"><a className="page-link" href="#">1</a></li>
+                        <li className="page-item"><a className="page-link" href="#">2</a></li>
+                        <li className="page-item"><a className="page-link" href="#">3</a></li>
+                        <li className="page-item">
+                            <a className="page-link" href="#" aria-label="Next">
+                                <FontAwesomeIcon icon="chevron-right"/>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
             </div>
         </div>
     </div>
@@ -36,15 +53,15 @@ const DashboardModal = (props) => (
                 <div className="modal-content">
                     <div className="modal-header">
                         <h5 className="modal-title" id={`modal-label-${props.index}-${props.node}`}>Add {props.node}</h5>
-                        <button type="button" className="btn btn-close-secondary" data-dismiss="modal" aria-label="Close">
+                        <button type="button" className="btn btn-fa__secondary" data-dismiss="modal" aria-label="Close">
                             <FontAwesomeIcon icon="times"/>
                         </button>
                     </div>
                     <div className="modal-body">
                         {(() => {
                             switch (props.node) {
-                                case NODES.PEOPLE:
-                                    return <AddPeopleForm />;
+                                case NODES.PERSONS:
+                                    return <AddPersonsForm />;
                                 case NODES.AFFILIATIONS:
                                     return <AddAffiliationsForm />;
                                 case NODES.ROLES:
@@ -72,4 +89,55 @@ const DashboardModal = (props) => (
         </button>
     </>
 );
+
+const DashboardList = (props) => (
+    <ul className="dashboard-list list-group list-group-flush">
+        <li className="list-group-item">
+            Joakim Johnsson
+            <div>
+                <button type="button" className="btn btn-fa__tertiary pr-2 border-right" aria-label="Delete">
+                <FontAwesomeIcon icon="minus"/>
+                </button>
+                <button type="button" className="btn btn-fa__tertiary pl-2" aria-label="Edit">
+                <FontAwesomeIcon icon="pen"/>
+                </button>
+            </div>
+        </li>
+        <li className="list-group-item">
+            Joakim Johnsson
+            <div>
+                <button type="button" className="btn btn-fa__tertiary pr-2 border-right" aria-label="Delete">
+                    <FontAwesomeIcon icon="minus"/>
+                </button>
+                <button type="button" className="btn btn-fa__tertiary pl-2" aria-label="Edit">
+                    <FontAwesomeIcon icon="pen"/>
+                </button>
+            </div>
+        </li>
+        <li className="list-group-item">
+            Joakim Johnsson
+            <div>
+                <button type="button" className="btn btn-fa__tertiary pr-2 border-right" aria-label="Delete">
+                    <FontAwesomeIcon icon="minus"/>
+                </button>
+                <button type="button" className="btn btn-fa__tertiary pl-2" aria-label="Edit">
+                    <FontAwesomeIcon icon="pen"/>
+                </button>
+            </div>
+        </li>
+        <li className="list-group-item">
+            Joakim Johnsson
+            <div>
+                <button type="button" className="btn btn-fa__tertiary pr-2 border-right" aria-label="Delete">
+                    <FontAwesomeIcon icon="minus"/>
+                </button>
+                <button type="button" className="btn btn-fa__tertiary pl-2" aria-label="Edit">
+                    <FontAwesomeIcon icon="pen"/>
+                </button>
+            </div>
+        </li>
+    </ul>
+);
+
+
 export default DashboardCard;

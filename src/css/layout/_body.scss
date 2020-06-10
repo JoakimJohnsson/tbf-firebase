@@ -21,12 +21,38 @@ code {
   monospace;
 }
 
-.btn-close-secondary {
+.btn-fa {
+  color: inherit;
+  border-radius: 0;
+  padding: 0;
+  border: none solid $color-border;
+  &:hover,
+  &:focus {
+    color: inherit;
+  }
+}
+.btn-fa__primary {
+  @extend .btn-fa;
+  color: $color-primary;
+  &:hover,
+  &:focus {
+    color: $color-primary__lighten;
+  }
+}
+.btn-fa__secondary {
+  @extend .btn-fa;
   color: $color-secondary;
   &:hover,
   &:focus {
     color: $color-secondary__lighten;
-
+  }
+}
+.btn-fa__tertiary {
+  @extend .btn-fa;
+  color: $color-tertiary;
+  &:hover,
+  &:focus {
+    color: $color-tertiary__lighten;
   }
 }
 

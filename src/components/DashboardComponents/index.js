@@ -1,16 +1,20 @@
-import React, {Component} from 'react';
+import React from 'react';
 /*import {Link} from "react-router-dom";
-import * as ROUTES from "../../constants/routes";*/
-import {withFirebase} from "../Firebase";
+import * as ROUTES from "../../constants/routes";
+import {withFirebase} from "../Firebase";*/
 import TodoComponent from "../MicroComponents";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import * as NODES from "../../constants/nodes";
 import AddPersonsForm from "./addPersonsForm";
-import AddAffiliationsForm from "./addAffiliationsForm";
 import AddRolesForm from "./addRolesForm";
 import AddSongsForm from "./addSongsForm";
 import AddArtistsForm from "./addArtistsForm";
 import AddImagesForm from "./addImagesForm";
+import Persons from "./persons";
+import Roles from "./roles";
+import Songs from "./songs";
+import Artists from "./artists";
+import Images from "./images";
 
 const DashboardCard = (props) => (
     <div className="col-12 col-lg-6 mb-3">
@@ -63,8 +67,6 @@ const DashboardModal = (props) => (
                             switch (props.node) {
                                 case NODES.PERSONS:
                                     return <AddPersonsForm />;
-                                case NODES.AFFILIATIONS:
-                                    return <AddAffiliationsForm />;
                                 case NODES.ROLES:
                                     return <AddRolesForm />;
                                 case NODES.SONGS:
@@ -97,8 +99,6 @@ const DashboardList = (props) => (
         switch (props.node) {
             case NODES.PERSONS:
                 return <Persons />;
-            case NODES.AFFILIATIONS:
-                return <Affiliations />;
             case NODES.ROLES:
                 return <Roles />;
             case NODES.SONGS:
@@ -108,181 +108,10 @@ const DashboardList = (props) => (
             case NODES.IMAGES:
                 return <Images />;
             default:
-                return <TodoComponent todo="No form found"/>;
+                return <TodoComponent todo="No list found"/>;
         }
     })()}
     </>
 );
-
-class PersonsBase extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            loading: false,
-            persons: [],
-        };
-    }
-    componentDidMount() {
-        this.setState({ loading: true });
-        this.props.firebase.persons().on('value', snapshot => {
-            const personObject = snapshot.val();
-            if (personObject) {
-                const personList = Object.keys(personObject).map(key => ({
-                    ...personObject[key],
-                    uid: key,
-                }));
-            this.setState({
-                persons: personList,
-                loading: false
-            });
-            } else {
-                this.setState({ persons: null, loading: false });
-            }
-        });
-    }
-    componentWillUnmount() {
-        this.props.firebase.persons().off();
-    }
-    render() {
-        const { persons, loading } = this.state;
-        return (
-            <div>
-                {loading && <div>Loading ...</div>}
-                {persons ? (
-                <PersonList persons={persons} />
-                ) : (
-                    <div>There are no persons ...</div>
-                )}
-            </div>
-        );
-    }
-}
-const PersonList = ({ persons }) => (
-    <ul>
-        {persons.map(person => (
-            <PersonItem key={person.uid} person={person}/>
-        ))}
-    </ul>
-);
-const PersonItem = ({ person }) => (
-    <li>
-        <strong>{person.uid}</strong> {person.lastName} {person.firstName}
-    </li>
-);
-
-// class AffiliationsBase extends Component {
-//     constructor(props) {
-//         super(props);
-//         this.state = {
-//             loading: false,
-//             persons: [],
-//         };
-//     }
-//     componentDidMount() {
-//         this.setState({ loading: true });
-//         this.props.firebase.persons().on('value', snapshot => {
-//             const personObject = snapshot.val();
-//             if (personObject) {
-//                 const personList = Object.keys(personObject).map(key => ({
-//                     ...personObject[key],
-//                     uid: key,
-//                 }));
-//                 this.setState({
-//                     persons: personList,
-//                     loading: false
-//                 });
-//             } else {
-//                 this.setState({ persons: null, loading: false });
-//             }
-//         });
-//     }
-//     componentWillUnmount() {
-//         this.props.firebase.persons().off();
-//     }
-//     render() {
-//         const { persons, loading } = this.state;
-//         return (
-//             <div>
-//                 {loading && <div>Loading ...</div>}
-//                 {persons ? (
-//                     <PersonList persons={persons} />
-//                 ) : (
-//                     <div>There are no persons ...</div>
-//                 )}
-//             </div>
-//         );
-//     }
-// }
-// const PersonList = ({ persons }) => (
-//     <ul>
-//         {persons.map(person => (
-//             <PersonItem key={person.uid} person={person}/>
-//         ))}
-//     </ul>
-// );
-// const PersonItem = ({ person }) => (
-//     <li>
-//         <strong>{person.uid}</strong> {person.lastName} {person.firstName}
-//     </li>
-// );
-
-// class RolesBase extends Component {
-//     constructor(props) {
-//         super(props);
-//         this.state = {
-//             loading: false,
-//             persons: [],
-//         };
-//     }
-//     componentDidMount() {
-//         this.setState({ loading: true });
-//         this.props.firebase.persons().on('value', snapshot => {
-//             const personObject = snapshot.val();
-//             if (personObject) {
-//                 const personList = Object.keys(personObject).map(key => ({
-//                     ...personObject[key],
-//                     uid: key,
-//                 }));
-//                 this.setState({
-//                     persons: personList,
-//                     loading: false
-//                 });
-//             } else {
-//                 this.setState({ persons: null, loading: false });
-//             }
-//         });
-//     }
-//     componentWillUnmount() {
-//         this.props.firebase.persons().off();
-//     }
-//     render() {
-//         const { persons, loading } = this.state;
-//         return (
-//             <div>
-//                 {loading && <div>Loading ...</div>}
-//                 {persons ? (
-//                     <PersonList persons={persons} />
-//                 ) : (
-//                     <div>There are no persons ...</div>
-//                 )}
-//             </div>
-//         );
-//     }
-// }
-// const PersonList = ({ persons }) => (
-//     <ul>
-//         {persons.map(person => (
-//             <PersonItem key={person.uid} person={person}/>
-//         ))}
-//     </ul>
-// );
-// const PersonItem = ({ person }) => (
-//     <li>
-//         <strong>{person.uid}</strong> {person.lastName} {person.firstName}
-//     </li>
-// );
-const Persons = withFirebase(PersonsBase);
-// const Affiliations = withFirebase(AffiliationsBase);
-// const Roles = withFirebase(RolesBase);
 
 export default DashboardCard;

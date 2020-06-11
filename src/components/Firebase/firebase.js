@@ -65,6 +65,18 @@ class Firebase {
     // Persons api
     person = uid => this.db.ref(`persons/${uid}`);
     persons = () => this.db.ref('persons');
+    // Roles api
+    role = uid => this.db.ref(`roles/${uid}`);
+    roles = () => this.db.ref('roles');
+    // Artists api
+    artist = uid => this.db.ref(`artists/${uid}`);
+    artists = () => this.db.ref('artists');
+    // Images api
+    image = uid => this.db.ref(`images/${uid}`);
+    images = () => this.db.ref('images');
+    // Songs api
+    song = uid => this.db.ref(`songs/${uid}`);
+    songs = () => this.db.ref('songs');
 }
 
 export default Firebase;

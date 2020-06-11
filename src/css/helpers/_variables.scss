@@ -28,6 +28,7 @@ $spacer: 1rem;
 $primary: $color-primary;
 $secondary: $color-secondary;
 $link-hover-color: $color-primary__lighten;
+$link-color: $primary;
 $body-bg: $color-dark-grey;
 $body-color: $color-white;
 $font-size-base: 1rem;
@@ -74,29 +75,25 @@ $modal-header-padding-x:            1rem;
 $modal-header-padding:              $modal-header-padding-y $modal-header-padding-x; // Keep this for backwards compatibility
 
 // List group
-
-//$list-group-color:                  null !default;
 $list-group-bg:                     transparent;
 $list-group-border-color:           $color-border;
-//$list-group-border-width:           $border-width !default;
-//$list-group-border-radius:          $border-radius !default;
 
-//$list-group-item-padding-y:         .75rem !default;
-//$list-group-item-padding-x:         1.25rem !default;
+// Pagination
+$pagination-color:                  $color-black;
+$pagination-bg:                     transparent;
+$pagination-border-color:           transparent;
 
-//$list-group-hover-bg:               $gray-100 !default;
-//$list-group-active-color:           $component-active-color !default;
-//$list-group-active-bg:              $component-active-bg !default;
-//$list-group-active-border-color:    $list-group-active-bg !default;
-//
-//$list-group-disabled-color:         $gray-600 !default;
-//$list-group-disabled-bg:            $list-group-bg !default;
-//
-//$list-group-action-color:           $gray-700 !default;
-//$list-group-action-hover-color:     $list-group-action-color !default;
-//
-//$list-group-action-active-color:    $body-color !default;
-//$list-group-action-active-bg:       $gray-200 !default;
+$pagination-hover-color:            $color-light-grey;
+$pagination-hover-bg:               $color-tertiary__lighten;
+$pagination-hover-border-color:     $color-light-grey;
+
+$pagination-active-color:           $color-light-grey;
+$pagination-active-bg:              transparent;
+$pagination-active-border-color:    $color-light-grey;
+
+$pagination-disabled-color:         $color-light-grey;
+$pagination-disabled-bg:            transparent;
+$pagination-disabled-border-color:  transparent;
 
 $gray-300: $color-light-grey;
 

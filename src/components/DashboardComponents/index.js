@@ -1,6 +1,7 @@
-import React from 'react';
+import React, {Component} from 'react';
 /*import {Link} from "react-router-dom";
 import * as ROUTES from "../../constants/routes";*/
+import {withFirebase} from "../Firebase";
 import TodoComponent from "../MicroComponents";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import * as NODES from "../../constants/nodes";
@@ -13,8 +14,8 @@ import AddImagesForm from "./addImagesForm";
 
 const DashboardCard = (props) => (
     <div className="col-12 col-lg-6 mb-3">
-        <div className="card h-100 ">
-            <div className="card-header dashboard-card">
+        <div className="card h-100 dashboard-card">
+            <div className="card-header">
                 <h3 className="text-uppercase m-0 pt-2">{props.node}</h3>
                 <DashboardModal node={props.node} index={props.index}/>
             </div>
@@ -29,7 +30,7 @@ const DashboardCard = (props) => (
                                 <FontAwesomeIcon icon="chevron-left"/>
                             </a>
                         </li>
-                        <li className="page-item"><a className="page-link" href="#">1</a></li>
+                        <li className="page-item active"><a className="page-link" href="#">1</a></li>
                         <li className="page-item"><a className="page-link" href="#">2</a></li>
                         <li className="page-item"><a className="page-link" href="#">3</a></li>
                         <li className="page-item">
@@ -91,53 +92,197 @@ const DashboardModal = (props) => (
 );
 
 const DashboardList = (props) => (
-    <ul className="dashboard-list list-group list-group-flush">
-        <li className="list-group-item">
-            Joakim Johnsson
-            <div>
-                <button type="button" className="btn btn-fa__tertiary pr-2 border-right" aria-label="Delete">
-                <FontAwesomeIcon icon="minus"/>
-                </button>
-                <button type="button" className="btn btn-fa__tertiary pl-2" aria-label="Edit">
-                <FontAwesomeIcon icon="pen"/>
-                </button>
-            </div>
-        </li>
-        <li className="list-group-item">
-            Joakim Johnsson
-            <div>
-                <button type="button" className="btn btn-fa__tertiary pr-2 border-right" aria-label="Delete">
-                    <FontAwesomeIcon icon="minus"/>
-                </button>
-                <button type="button" className="btn btn-fa__tertiary pl-2" aria-label="Edit">
-                    <FontAwesomeIcon icon="pen"/>
-                </button>
-            </div>
-        </li>
-        <li className="list-group-item">
-            Joakim Johnsson
-            <div>
-                <button type="button" className="btn btn-fa__tertiary pr-2 border-right" aria-label="Delete">
-                    <FontAwesomeIcon icon="minus"/>
-                </button>
-                <button type="button" className="btn btn-fa__tertiary pl-2" aria-label="Edit">
-                    <FontAwesomeIcon icon="pen"/>
-                </button>
-            </div>
-        </li>
-        <li className="list-group-item">
-            Joakim Johnsson
-            <div>
-                <button type="button" className="btn btn-fa__tertiary pr-2 border-right" aria-label="Delete">
-                    <FontAwesomeIcon icon="minus"/>
-                </button>
-                <button type="button" className="btn btn-fa__tertiary pl-2" aria-label="Edit">
-                    <FontAwesomeIcon icon="pen"/>
-                </button>
-            </div>
-        </li>
-    </ul>
+    <>
+    {(() => {
+        switch (props.node) {
+            case NODES.PERSONS:
+                return <Persons />;
+            case NODES.AFFILIATIONS:
+                return <Affiliations />;
+            case NODES.ROLES:
+                return <Roles />;
+            case NODES.SONGS:
+                return <Songs />;
+            case NODES.ARTISTS:
+                return <Artists />;
+            case NODES.IMAGES:
+                return <Images />;
+            default:
+                return <TodoComponent todo="No form found"/>;
+        }
+    })()}
+    </>
 );
 
+class PersonsBase extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            loading: false,
+            persons: [],
+        };
+    }
+    componentDidMount() {
+        this.setState({ loading: true });
+        this.props.firebase.persons().on('value', snapshot => {
+            const personObject = snapshot.val();
+            if (personObject) {
+                const personList = Object.keys(personObject).map(key => ({
+                    ...personObject[key],
+                    uid: key,
+                }));
+            this.setState({
+                persons: personList,
+                loading: false
+            });
+            } else {
+                this.setState({ persons: null, loading: false });
+            }
+        });
+    }
+    componentWillUnmount() {
+        this.props.firebase.persons().off();
+    }
+    render() {
+        const { persons, loading } = this.state;
+        return (
+            <div>
+                {loading && <div>Loading ...</div>}
+                {persons ? (
+                <PersonList persons={persons} />
+                ) : (
+                    <div>There are no persons ...</div>
+                )}
+            </div>
+        );
+    }
+}
+const PersonList = ({ persons }) => (
+    <ul>
+        {persons.map(person => (
+            <PersonItem key={person.uid} person={person}/>
+        ))}
+    </ul>
+);
+const PersonItem = ({ person }) => (
+    <li>
+        <strong>{person.uid}</strong> {person.lastName} {person.firstName}
+    </li>
+);
+
+// class AffiliationsBase extends Component {
+//     constructor(props) {
+//         super(props);
+//         this.state = {
+//             loading: false,
+//             persons: [],
+//         };
+//     }
+//     componentDidMount() {
+//         this.setState({ loading: true });
+//         this.props.firebase.persons().on('value', snapshot => {
+//             const personObject = snapshot.val();
+//             if (personObject) {
+//                 const personList = Object.keys(personObject).map(key => ({
+//                     ...personObject[key],
+//                     uid: key,
+//                 }));
+//                 this.setState({
+//                     persons: personList,
+//                     loading: false
+//                 });
+//             } else {
+//                 this.setState({ persons: null, loading: false });
+//             }
+//         });
+//     }
+//     componentWillUnmount() {
+//         this.props.firebase.persons().off();
+//     }
+//     render() {
+//         const { persons, loading } = this.state;
+//         return (
+//             <div>
+//                 {loading && <div>Loading ...</div>}
+//                 {persons ? (
+//                     <PersonList persons={persons} />
+//                 ) : (
+//                     <div>There are no persons ...</div>
+//                 )}
+//             </div>
+//         );
+//     }
+// }
+// const PersonList = ({ persons }) => (
+//     <ul>
+//         {persons.map(person => (
+//             <PersonItem key={person.uid} person={person}/>
+//         ))}
+//     </ul>
+// );
+// const PersonItem = ({ person }) => (
+//     <li>
+//         <strong>{person.uid}</strong> {person.lastName} {person.firstName}
+//     </li>
+// );
+
+// class RolesBase extends Component {
+//     constructor(props) {
+//         super(props);
+//         this.state = {
+//             loading: false,
+//             persons: [],
+//         };
+//     }
+//     componentDidMount() {
+//         this.setState({ loading: true });
+//         this.props.firebase.persons().on('value', snapshot => {
+//             const personObject = snapshot.val();
+//             if (personObject) {
+//                 const personList = Object.keys(personObject).map(key => ({
+//                     ...personObject[key],
+//                     uid: key,
+//                 }));
+//                 this.setState({
+//                     persons: personList,
+//                     loading: false
+//                 });
+//             } else {
+//                 this.setState({ persons: null, loading: false });
+//             }
+//         });
+//     }
+//     componentWillUnmount() {
+//         this.props.firebase.persons().off();
+//     }
+//     render() {
+//         const { persons, loading } = this.state;
+//         return (
+//             <div>
+//                 {loading && <div>Loading ...</div>}
+//                 {persons ? (
+//                     <PersonList persons={persons} />
+//                 ) : (
+//                     <div>There are no persons ...</div>
+//                 )}
+//             </div>
+//         );
+//     }
+// }
+// const PersonList = ({ persons }) => (
+//     <ul>
+//         {persons.map(person => (
+//             <PersonItem key={person.uid} person={person}/>
+//         ))}
+//     </ul>
+// );
+// const PersonItem = ({ person }) => (
+//     <li>
+//         <strong>{person.uid}</strong> {person.lastName} {person.firstName}
+//     </li>
+// );
+const Persons = withFirebase(PersonsBase);
+// const Affiliations = withFirebase(AffiliationsBase);
+// const Roles = withFirebase(RolesBase);
 
 export default DashboardCard;

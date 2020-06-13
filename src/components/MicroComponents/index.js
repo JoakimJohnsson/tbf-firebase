@@ -12,6 +12,12 @@ const TodoComponent = (props) => (
     </p>
 );
 
+const LoadingComponent = () => (
+    <div className="loading-component">
+        <FontAwesomeIcon icon="spinner" spin size="2x"/>
+    </div>
+);
+
 const AdminCard = (props) => (
     <div className="card h-100">
         <div className="card-header">
@@ -39,5 +45,5 @@ const AdminCard = (props) => (
 );
 
 export default TodoComponent;
-export {Message, AdminCard};
+export {Message, AdminCard, LoadingComponent};
 

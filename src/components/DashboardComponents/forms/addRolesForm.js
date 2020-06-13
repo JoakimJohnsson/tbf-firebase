@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {withRouter} from 'react-router-dom';
 import {compose} from 'recompose';
-import {withFirebase} from "../Firebase/context";
+import {withFirebase} from "../../Firebase/context";
 import {Alert} from "react-bootstrap";
 
 const INITIAL_STATE = {
@@ -9,7 +9,7 @@ const INITIAL_STATE = {
     error: null
 };
 
-class AddImagesForm extends Component {
+class AddRolesForm extends Component {
     constructor(props) {
         super(props);
         this.state = {...INITIAL_STATE
@@ -17,7 +17,7 @@ class AddImagesForm extends Component {
     }
 
     onSubmit = event => {
-        this.props.firebase.images().push({
+        this.props.firebase.roles().push({
             name: this.state.name
         });
 
@@ -42,14 +42,14 @@ class AddImagesForm extends Component {
         return (
             <form onSubmit={this.onSubmit}>
                 <div className="form-group">
-                    <label htmlFor="addImagesName">Name</label>
+                    <label htmlFor="addRolesName">Name</label>
                     <input
                         name="name"
-                        id="addImagesName"
+                        id="addRolesName"
                         value={name}
                         onChange={this.onChange}
                         type="text"
-                        placeholder="Image name"
+                        placeholder="Singer"
                         className="form-control"
                     />
                 </div>
@@ -62,9 +62,9 @@ class AddImagesForm extends Component {
     }
 }
 
-const ImagesForm = compose(
+const RolesForm = compose(
     withRouter,
     withFirebase,
-)(AddImagesForm);
+)(AddRolesForm);
 
-export default ImagesForm;
+export default RolesForm;

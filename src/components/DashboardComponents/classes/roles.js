@@ -1,5 +1,7 @@
 import React, {Component} from "react";
-import {withFirebase} from "../Firebase";
+import {withFirebase} from "../../Firebase";
+import {LoadingComponent} from "../../MicroComponents";
+import {DashboardListUl} from "../../DashboardComponents";
 
 class RolesBase extends Component {
     constructor(props) {
@@ -34,9 +36,9 @@ class RolesBase extends Component {
         const { roles, loading } = this.state;
         return (
             <div>
-                {loading && <div>Loading ...</div>}
+                {loading && <LoadingComponent />}
                 {roles ? (
-                    <RoleList roles={roles} />
+                    <DashboardListUl list={roles} />
                 ) : (
                     <div>There are no roles ...</div>
                 )}
@@ -44,18 +46,6 @@ class RolesBase extends Component {
         );
     }
 }
-const RoleList = ({ roles }) => (
-    <ul className="list-group list-group-flush">
-        {roles.map(role => (
-            <RoleItem key={role.uid} role={role}/>
-        ))}
-    </ul>
-);
-const RoleItem = ({ role }) => (
-    <li className="list-group-item">
-        {role.name}
-    </li>
-);
 
 const Roles = withFirebase(RolesBase);
 

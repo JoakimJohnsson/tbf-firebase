@@ -1,5 +1,7 @@
 import React, {Component} from "react";
-import {withFirebase} from "../Firebase";
+import {withFirebase} from "../../Firebase";
+import {LoadingComponent} from "../../MicroComponents";
+import {DashboardListUl} from "../../DashboardComponents";
 
 class ImagesBase extends Component {
     constructor(props) {
@@ -34,9 +36,9 @@ class ImagesBase extends Component {
         const { images, loading } = this.state;
         return (
             <div>
-                {loading && <div>Loading ...</div>}
+                {loading && <LoadingComponent />}
                 {images ? (
-                    <ImageList images={images} />
+                    <DashboardListUl list={images} />
                 ) : (
                     <div>There are no images ...</div>
                 )}
@@ -44,18 +46,6 @@ class ImagesBase extends Component {
         );
     }
 }
-const ImageList = ({ images }) => (
-    <ul className="list-group list-group-flush">
-        {images.map(image => (
-            <ImageItem key={image.uid} image={image}/>
-        ))}
-    </ul>
-);
-const ImageItem = ({ image }) => (
-    <li className="list-group-item">
-        {image.name}
-    </li>
-);
 
 const Images = withFirebase(ImagesBase);
 

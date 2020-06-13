@@ -1,5 +1,7 @@
 import React, {Component} from "react";
-import {withFirebase} from "../Firebase";
+import {withFirebase} from "../../Firebase";
+import {LoadingComponent} from "../../MicroComponents";
+import {DashboardListUl} from "../../DashboardComponents";
 
 class PersonsBase extends Component {
     constructor(props) {
@@ -34,9 +36,9 @@ class PersonsBase extends Component {
         const { persons, loading } = this.state;
         return (
             <div>
-                {loading && <div>Loading ...</div>}
+                {loading && <LoadingComponent />}
                 {persons ? (
-                    <PersonList persons={persons} />
+                    <DashboardListUl list={persons} />
                 ) : (
                     <div>There are no persons ...</div>
                 )}
@@ -44,18 +46,6 @@ class PersonsBase extends Component {
         );
     }
 }
-const PersonList = ({ persons }) => (
-    <ul className="list-group list-group-flush">
-        {persons.map(person => (
-            <PersonItem key={person.uid} person={person}/>
-        ))}
-    </ul>
-);
-const PersonItem = ({ person }) => (
-    <li className="list-group-item">
-       {person.firstName} {person.lastName}
-    </li>
-);
 
 const Persons = withFirebase(PersonsBase);
 

@@ -5,16 +5,16 @@ import {withFirebase} from "../Firebase";*/
 import TodoComponent from "../MicroComponents";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import * as NODES from "../../constants/nodes";
-import AddPersonsForm from "./addPersonsForm";
-import AddRolesForm from "./addRolesForm";
-import AddSongsForm from "./addSongsForm";
-import AddArtistsForm from "./addArtistsForm";
-import AddImagesForm from "./addImagesForm";
-import Persons from "./persons";
-import Roles from "./roles";
-import Songs from "./songs";
-import Artists from "./artists";
-import Images from "./images";
+import AddPersonsForm from "./forms/addPersonsForm";
+import AddRolesForm from "./forms/addRolesForm";
+import AddSongsForm from "./forms/addSongsForm";
+import AddArtistsForm from "./forms/addArtistsForm";
+import AddImagesForm from "./forms/addImagesForm";
+import Persons from "./classes/persons";
+import Roles from "./classes/roles";
+import Songs from "./classes/songs";
+import Artists from "./classes/artists";
+import Images from "./classes/images";
 
 const DashboardCard = (props) => (
     <div className="col-12 col-lg-6 mb-3">
@@ -114,4 +114,19 @@ const DashboardList = (props) => (
     </>
 );
 
+const DashboardListUl = ({ list }) => (
+    <ul className="list-group list-group-flush">
+        {list.map(item => (
+            <DashboardListLi key={item.uid} listItem={item}/>
+        ))}
+    </ul>
+);
+
+const DashboardListLi = ({ listItem }) => (
+    <li className="list-group-item">
+        {listItem.name}
+    </li>
+);
+
 export default DashboardCard;
+export {DashboardListUl, DashboardListLi};

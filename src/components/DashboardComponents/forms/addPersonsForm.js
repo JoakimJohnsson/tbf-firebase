@@ -1,10 +1,11 @@
 import React, {Component} from 'react';
 import {withRouter} from 'react-router-dom';
 import {compose} from 'recompose';
-import {withFirebase} from "../Firebase/context";
+import {withFirebase} from "../../Firebase/context";
 import {Alert} from "react-bootstrap";
 
 const INITIAL_STATE = {
+    name: '',
     firstName: '',
     lastName: '',
     description: '',
@@ -20,6 +21,7 @@ class AddPersonsForm extends Component {
 
     onSubmit = event => {
         this.props.firebase.persons().push({
+            name: this.state.firstName + ' ' + this.state.lastName,
             firstName: this.state.firstName,
             lastName: this.state.lastName,
             description: this.state.description

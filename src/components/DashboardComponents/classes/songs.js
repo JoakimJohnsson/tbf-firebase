@@ -1,5 +1,7 @@
 import React, {Component} from "react";
-import {withFirebase} from "../Firebase";
+import {withFirebase} from "../../Firebase";
+import {LoadingComponent} from "../../MicroComponents";
+import {DashboardListUl} from "../../DashboardComponents";
 
 class SongsBase extends Component {
     constructor(props) {
@@ -34,9 +36,9 @@ class SongsBase extends Component {
         const { songs, loading } = this.state;
         return (
             <div>
-                {loading && <div>Loading ...</div>}
+                {loading && <LoadingComponent />}
                 {songs ? (
-                    <SongList songs={songs} />
+                    <DashboardListUl list={songs} />
                 ) : (
                     <div>There are no songs ...</div>
                 )}
@@ -44,18 +46,6 @@ class SongsBase extends Component {
         );
     }
 }
-const SongList = ({ songs }) => (
-    <ul className="list-group list-group-flush">
-        {songs.map(song => (
-            <SongItem key={song.uid} song={song}/>
-        ))}
-    </ul>
-);
-const SongItem = ({ song }) => (
-    <li className="list-group-item">
-        {song.name}
-    </li>
-);
 
 const Songs = withFirebase(SongsBase);
 

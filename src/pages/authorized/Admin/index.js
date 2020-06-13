@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {Switch, Route, Link} from 'react-router-dom';
 import {compose} from 'recompose';
 import {withFirebase} from '../../../components/Firebase';
-import {AdminCard} from '../../../components/MicroComponents';
+import {AdminCard, LoadingComponent} from '../../../components/MicroComponents';
 import * as ROLES from '../../../constants/roles';
 import {withAuthorization, withEmailVerification} from '../../../components/Session';
 import * as ROUTES from '../../../constants/routes';
@@ -67,7 +67,7 @@ class UserListBase extends Component {
         return (
             <div>
                 <h2>Users</h2>
-                {loading && <div>Loading ...</div>}
+                {loading && <LoadingComponent />}
                 <ul className="list-unstyled row">
                     {users.map(user => (
                         <li key={user.uid} className="col-12 col-sm-6 col-lg-4 mb-3 mb-sm-0">
@@ -122,7 +122,7 @@ class UserItemBase extends Component {
         return (
             <div>
                 <h2>User ({this.props.match.params.id})</h2>
-                {loading && <div>Loading ...</div>}
+                {loading && <LoadingComponent />}
 
                 {user && (
                     <div>

@@ -32,13 +32,19 @@ class ArtistsBase extends Component {
     componentWillUnmount() {
         this.props.firebase.artists().off();
     }
+    onRemoveArtist = uid => {
+        this.props.firebase.artist(uid).remove();
+    };
     render() {
         const { artists, loading } = this.state;
         return (
             <div>
                 {loading && <LoadingComponent />}
                 {artists ? (
-                    <DashboardListUl list={artists} />
+                    <DashboardListUl
+                        list={artists}
+                        onRemove={this.onRemoveArtist}
+                    />
                 ) : (
                     <div>There are no artists ...</div>
                 )}

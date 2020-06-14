@@ -44,6 +44,17 @@ const AdminCard = (props) => (
     </div>
 );
 
+const DashboardListItemButton = (props) => (
+    <button
+        type="button"
+        aria-label={`${props.action} ${props.listItem.name}`}
+        className="btn btn-fa__primary"
+        onClick={() => props.onClick(props.listItem.uid)}
+    >
+        <FontAwesomeIcon icon={props.icon} />
+    </button>
+);
+
 export default TodoComponent;
-export {Message, AdminCard, LoadingComponent};
+export {Message, AdminCard, LoadingComponent, DashboardListItemButton};
 

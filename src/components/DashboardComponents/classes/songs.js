@@ -32,13 +32,19 @@ class SongsBase extends Component {
     componentWillUnmount() {
         this.props.firebase.songs().off();
     }
+    onRemoveSong = uid => {
+        this.props.firebase.song(uid).remove();
+    };
     render() {
         const { songs, loading } = this.state;
         return (
             <div>
                 {loading && <LoadingComponent />}
                 {songs ? (
-                    <DashboardListUl list={songs} />
+                    <DashboardListUl
+                        list={songs}
+                        onRemove={this.onRemoveSong}
+                    />
                 ) : (
                     <div>There are no songs ...</div>
                 )}

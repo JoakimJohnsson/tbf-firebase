@@ -32,13 +32,19 @@ class RolesBase extends Component {
     componentWillUnmount() {
         this.props.firebase.roles().off();
     }
+    onRemoveRole = uid => {
+        this.props.firebase.role(uid).remove();
+    };
     render() {
         const { roles, loading } = this.state;
         return (
             <div>
                 {loading && <LoadingComponent />}
                 {roles ? (
-                    <DashboardListUl list={roles} />
+                    <DashboardListUl
+                        list={roles}
+                        onRemove={this.onRemoveRole}
+                    />
                 ) : (
                     <div>There are no roles ...</div>
                 )}

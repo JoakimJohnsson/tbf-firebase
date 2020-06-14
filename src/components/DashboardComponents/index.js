@@ -2,7 +2,7 @@ import React from 'react';
 /*import {Link} from "react-router-dom";
 import * as ROUTES from "../../constants/routes";
 import {withFirebase} from "../Firebase";*/
-import TodoComponent from "../MicroComponents";
+import TodoComponent, {DashboardListItemButton} from "../MicroComponents";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import * as NODES from "../../constants/nodes";
 import AddPersonsForm from "./forms/addPersonsForm";
@@ -30,15 +30,15 @@ const DashboardCard = (props) => (
                 <nav aria-label="Page navigation example">
                     <ul className="pagination justify-content-center">
                         <li className="page-item disabled">
-                            <a className="page-link" href="#" tabIndex="-1" aria-label="Previous">
+                            <a className="page-link" href tabIndex="-1" aria-label="Previous">
                                 <FontAwesomeIcon icon="chevron-left"/>
                             </a>
                         </li>
-                        <li className="page-item active"><a className="page-link" href="#">1</a></li>
-                        <li className="page-item"><a className="page-link" href="#">2</a></li>
-                        <li className="page-item"><a className="page-link" href="#">3</a></li>
+                        <li className="page-item active"><a className="page-link" href>1</a></li>
+                        <li className="page-item"><a className="page-link" href>2</a></li>
+                        <li className="page-item"><a className="page-link" href>3</a></li>
                         <li className="page-item">
-                            <a className="page-link" href="#" aria-label="Next">
+                            <a className="page-link" href aria-label="Next">
                                 <FontAwesomeIcon icon="chevron-right"/>
                             </a>
                         </li>
@@ -114,17 +114,39 @@ const DashboardList = (props) => (
     </>
 );
 
-const DashboardListUl = ({ list }) => (
-    <ul className="list-group list-group-flush">
+const DashboardListUl = ({ list, onRemove }) => (
+    <ul className="dashboard-list list-group list-group-flush">
         {list.map(item => (
-            <DashboardListLi key={item.uid} listItem={item}/>
+            <DashboardListLi
+                key={item.uid}
+                listItem={item}
+                onRemove={onRemove}
+            />
         ))}
     </ul>
 );
 
-const DashboardListLi = ({ listItem }) => (
+const DashboardListLi = ({ listItem, onRemove }) => (
     <li className="list-group-item">
-        {listItem.name}
+        <div>{listItem.name}</div>
+        <div>
+            <span className="mr-2">
+            <DashboardListItemButton
+                onClick={onRemove}
+                listItem={listItem}
+                icon={"times"}
+                action={"Delete"}
+            />
+            </span>
+            <span>
+            <DashboardListItemButton
+                onClick={onRemove}
+                listItem={listItem}
+                icon={"pen"}
+                action={"Edit"}
+            />
+            </span>
+        </div>
     </li>
 );
 

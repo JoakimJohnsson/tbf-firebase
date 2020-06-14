@@ -32,13 +32,24 @@ class PersonsBase extends Component {
     componentWillUnmount() {
         this.props.firebase.persons().off();
     }
+    onRemovePerson = uid => {
+        this.props.firebase.person(uid).remove();
+    };
+
+    // onEditPerson = () => {
+    // ...
+    // };
+
     render() {
         const { persons, loading } = this.state;
         return (
             <div>
                 {loading && <LoadingComponent />}
                 {persons ? (
-                    <DashboardListUl list={persons} />
+                    <DashboardListUl
+                        list={persons}
+                        onRemove={this.onRemovePerson}
+                    />
                 ) : (
                     <div>There are no persons ...</div>
                 )}

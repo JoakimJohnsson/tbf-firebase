@@ -32,13 +32,19 @@ class ImagesBase extends Component {
     componentWillUnmount() {
         this.props.firebase.images().off();
     }
+    onRemoveImage = uid => {
+        this.props.firebase.image(uid).remove();
+    };
     render() {
         const { images, loading } = this.state;
         return (
             <div>
                 {loading && <LoadingComponent />}
                 {images ? (
-                    <DashboardListUl list={images} />
+                    <DashboardListUl
+                        list={images}
+                        onRemove={this.onRemoveImage}
+                    />
                 ) : (
                     <div>There are no images ...</div>
                 )}

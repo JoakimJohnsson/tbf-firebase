@@ -3,6 +3,7 @@ import {withRouter} from 'react-router-dom';
 import {compose} from 'recompose';
 import {withFirebase} from "../../Firebase/context";
 import {Alert} from "react-bootstrap";
+import * as ROUTES from "../../../constants/routes";
 
 const INITIAL_STATE = {
     name: '',
@@ -19,9 +20,11 @@ class AddRolesForm extends Component {
     onSubmit = event => {
         this.props.firebase.roles().push({
             name: this.state.name
-        });
-
-        this.setState({...INITIAL_STATE})
+        })
+            .then(() => {
+                this.setState({...INITIAL_STATE});
+                this.props.history.push(ROUTES.DASHBOARD);
+            })
             .catch(error => {
                 this.setState({error})
             });

@@ -22,7 +22,6 @@ class AddPersonsForm extends Component {
 
     onSubmit = event => {
         this.props.firebase.persons().push({
-            name: this.state.firstName + ' ' + this.state.lastName,
             firstName: this.state.firstName,
             lastName: this.state.lastName,
             description: this.state.description

@@ -12,8 +12,9 @@ class PersonsBase extends Component {
             persons: [],
         };
     }
+
     componentDidMount() {
-        this.setState({ loading: true });
+        this.setState({loading: true});
         this.props.firebase.persons().on('value', snapshot => {
             const personObject = snapshot.val();
             if (personObject) {
@@ -26,30 +27,33 @@ class PersonsBase extends Component {
                     loading: false
                 });
             } else {
-                this.setState({ persons: null, loading: false });
+                this.setState({persons: null, loading: false});
             }
         });
     }
+
     componentWillUnmount() {
         this.props.firebase.persons().off();
     }
+
     onRemovePerson = uid => {
         this.props.firebase.person(uid).remove();
     };
 
-    // onEditPerson = () => {
-    // ...
-    // };
+    onEditPerson = () => {
+        return;
+    };
 
     render() {
-        const { persons, loading } = this.state;
+        const {persons, loading} = this.state;
         return (
             <div>
-                {loading && <LoadingComponent />}
+                {loading && <LoadingComponent/>}
                 {persons ? (
                     <PersonsListUl
                         list={persons}
                         onRemove={this.onRemovePerson}
+                        onEdit={this.onEditPerson}
                     />
                 ) : (
                     <div>There are no persons ...</div>
@@ -60,14 +64,14 @@ class PersonsBase extends Component {
 }
 
 const PersonsDashboardCard = () => (
-    <div className="col-12 col-lg-6 mb-3">
+    <div className="col-12 col-xl-6 mb-3">
         <div className="card h-100 dashboard-card">
             <div className="card-header">
                 <h3 className="text-uppercase m-0 pt-2">Persons</h3>
-                <PersonsDashboardModal />
+                <PersonsDashboardModal/>
             </div>
             <div className="card-body">
-                <Persons />
+                <Persons/>
             </div>
             <div className="card-footer align-items-center">
                 <nav aria-label="Page navigation example">
@@ -106,7 +110,7 @@ const PersonsDashboardModal = () => (
                         </button>
                     </div>
                     <div className="modal-body">
-                        <AddPersonsForm />
+                        <AddPersonsForm/>
                     </div>
                     <div className="modal-footer">
                         <button type="button" className="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -121,41 +125,212 @@ const PersonsDashboardModal = () => (
     </>
 );
 
-const PersonsListUl = ({ list, onRemove }) => (
+const PersonsListUl = ({list, onRemove, onEdit}) => (
     <ul className="dashboard-list list-group list-group-flush">
         {list.map(item => (
-            <PersonsListLi
+            <PersonsListItem
                 key={item.uid}
                 listItem={item}
                 onRemove={onRemove}
+                onEdit={onEdit}
             />
         ))}
     </ul>
 );
 
-const PersonsListLi = ({ listItem, onRemove }) => (
+const PersonsListLi = ({listItem, onRemove, onEdit}) => (
     <li className="list-group-item">
-        <div>{listItem.name}</div>
-        <div>
-            <span className="mr-2">
+        <div className="list-group-header py-3">
+            <div>
+                {listItem.firstName.toUpperCase()} {listItem.lastName.toUpperCase()}
+            </div>
+            <span>
             <DashboardListItemButton
                 onClick={onRemove}
                 listItem={listItem}
                 icon={"times"}
                 action={"Delete"}
             />
-            </span>
-            <span>
+        </span>
+        </div>
+
+        <ul className="dashboard-list list-group list-group-flush">
+            <li className="list-group-item flex-me">
+                First name: {listItem.firstName}
+                <span>
             <DashboardListItemButton
-                onClick={onRemove}
+                onClick={onEdit}
                 listItem={listItem}
                 icon={"pen"}
                 action={"Edit"}
             />
             </span>
+            </li>
+            <li className="list-group-item flex-me">
+                Last name: {listItem.lastName}
+                <span>
+            <DashboardListItemButton
+                onClick={onEdit}
+                listItem={listItem}
+                icon={"pen"}
+                action={"Edit"}
+            />
+            </span>
+            </li>
+            <li className="list-group-item flex-me">
+                Description: {listItem.description}
+                <span>
+            <DashboardListItemButton
+                onClick={onEdit}
+                listItem={listItem}
+                icon={"pen"}
+                action={"Edit"}
+            />
+            </span>
+            </li>
+        </ul>
+        <div>
         </div>
     </li>
 );
+
+class PersonsListItem extends Component {
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            editMode: false,
+            editFirstName: this.props.listItem.firstName,
+            editLastName: this.props.listItem.lastName,
+            editDescription: this.props.listItem.firstName,
+        };
+    }
+
+    onToggleEditMode = () => {
+        this.setState(state => ({
+            editMode: !state.editMode,
+            editFirstName: this.props.listItem.firstName,
+            editLastName: this.props.listItem.lastName,
+            editDescription: this.props.listItem.firstName,
+        }));
+    };
+
+    onChangeEditFirstName = event => {
+        this.setState({editFirstName: event.target.value});
+    };
+    onChangeEditLastName = event => {
+        this.setState({editLastName: event.target.value});
+    };
+    onChangeEditDescription = event => {
+        this.setState({editFirstName: event.target.value});
+    };
+
+    onSaveEditFirstName = () => {
+        this.props.onEditPerson(this.props.listItem, this.state.editFirstName);
+        this.setState({editMode: false});
+    };
+
+    onSaveEditLastName = () => {
+        this.props.onEditPerson(this.props.listItem, this.state.editLastName);
+        this.setState({editMode: false});
+    };
+
+    onSaveEditDescription = () => {
+        this.props.onEditPerson(this.props.listItem, this.state.editDescription);
+        this.setState({editMode: false});
+    };
+
+    // TODO:
+    render() {
+        const {listItem, onRemove} = this.props;
+        const {editMode, onEdit} = this.state;
+
+        return (
+
+            <li className="list-group-item">
+                <div className="list-group-header py-3">
+                    <div>
+                        {listItem.firstName.toUpperCase()} {listItem.lastName.toUpperCase()}
+                    </div>
+                    {!editMode && (
+                        <span>
+                        <DashboardListItemButton
+                            onClick={onRemove}
+                            listItem={listItem}
+                            icon={"times"}
+                            action={"Delete"}
+                        />
+                    </span>
+                    )}
+                </div>
+
+                <ul className="dashboard-list list-group list-group-flush">
+                    <li className="list-group-item flex-me">
+                        First name: {listItem.firstName}
+                        <div>
+                            {editMode ? (
+                                <span>
+                                    <DashboardListItemButton
+                                        onClick={this.onSaveEditFirstName}
+                                        listItem={listItem}
+                                        icon={"save"}
+                                        action={"Save"} />
+                                    <DashboardListItemButton
+                                        onClick={this.onToggleEditMode}
+                                        listItem={listItem}
+                                        icon={"eraser"}
+                                        action={"Reset field"} />
+                                </span> ) : (
+                                        <DashboardListItemButton
+                                            onClick={this.onToggleEditMode}
+                                            listItem={listItem}
+                                            icon={"pen"}
+                                            action={"Edit"}
+                                        />
+                                    )}
+                        </div>
+                    </li>
+                    <li className="list-group-item flex-me">
+                        Last name: {listItem.lastName}
+                        <div>
+                            {editMode ? (
+                                <span>
+                                    <DashboardListItemButton
+                                        onClick={this.onSaveEditLastName}
+                                        listItem={listItem}
+                                        icon={"save"}
+                                        action={"Save"} />
+                                    <DashboardListItemButton
+                                        onClick={this.onToggleEditMode}
+                                        listItem={listItem}
+                                        icon={"eraser"}
+                                        action={"Reset field"} />
+                                </span> ) : (
+                                <DashboardListItemButton
+                                    onClick={this.onToggleEditMode}
+                                    listItem={listItem}
+                                    icon={"pen"}
+                                    action={"Edit"}
+                                />
+                            )}
+                        </div>
+                    </li>
+                    <li className="list-group-item flex-me">
+                        Description: {listItem.description}
+                        <span>
+            <DashboardListItemButton
+                onClick={onEdit}
+                listItem={listItem}
+                icon={"pen"}
+                action={"Edit"}
+            />
+            </span>
+                    </li>
+                </ul>
+            </li>
+        );
+    }
+}
 
 const Persons = withFirebase(PersonsBase);
 

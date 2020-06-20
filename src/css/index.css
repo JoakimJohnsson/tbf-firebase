@@ -11276,12 +11276,20 @@ footer {
 .dashboard-card .pagination {
   font-weight: bold; }
 
-.dashboard-list .list-group-item {
+.dashboard-list .list-group-item.flex-me {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding-left: 0;
   padding-right: 0; }
+.dashboard-list .list-group-header {
+  font-weight: bold;
+  border-bottom: 1px solid;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0 1rem 0;
+  font-size: 1.4rem; }
 
 .header-tbf-logo-primary {
   fill: #ff88cc;

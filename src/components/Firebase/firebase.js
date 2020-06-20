@@ -15,6 +15,7 @@ const firebaseConfig = {
 class Firebase {
     constructor() {
         app.initializeApp(firebaseConfig);
+        this.serverValue = app.database.ServerValue;
         this.auth = app.auth();
         this.db = app.database();
     }
@@ -62,21 +63,9 @@ class Firebase {
     // User api
     user = uid => this.db.ref(`users/${uid}`);
     users = () => this.db.ref('users');
-    // Persons api
-    person = uid => this.db.ref(`persons/${uid}`);
-    persons = () => this.db.ref('persons');
-    // Roles api
-    role = uid => this.db.ref(`roles/${uid}`);
-    roles = () => this.db.ref('roles');
     // Artists api
     artist = uid => this.db.ref(`artists/${uid}`);
     artists = () => this.db.ref('artists');
-    // Images api
-    image = uid => this.db.ref(`images/${uid}`);
-    images = () => this.db.ref('images');
-    // Songs api
-    song = uid => this.db.ref(`songs/${uid}`);
-    songs = () => this.db.ref('songs');
 }
 
 export default Firebase;

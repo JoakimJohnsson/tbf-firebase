@@ -36,6 +36,18 @@ class ArtistsBase extends Component {
     onRemoveArtist = uid => {
         this.props.firebase.artist(uid).remove();
     };
+
+    // onEditMessage
+    onEditArtistName = (artist, name) => {
+        const { uid, ...artistSnapshot } = artist;
+
+        this.props.firebase.artist(artist.uid).set({
+            ...artistSnapshot,
+            name,
+            editedAt: this.props.firebase.serverValue.TIMESTAMP,
+        });
+    };
+
     render() {
         const { artists, loading } = this.state;
         return (
@@ -43,8 +55,10 @@ class ArtistsBase extends Component {
                 {loading && <LoadingComponent />}
                 {artists ? (
                     <ArtistsListUl
-                        list={artists}
-                        onRemove={this.onRemoveArtist}
+                        artistsList={artists}
+                        // onEditMessage={this.onEditMessage}
+                        onEditArtistName={this.onEditArtistName}
+                        onRemoveArtist={this.onRemoveArtist}
                     />
                 ) : (
                     <div>There are no artists ...</div>
@@ -116,41 +130,108 @@ const ArtistsDashboardModal = () => (
     </>
 );
 
-const ArtistsListUl = ({ list, onRemove }) => (
+const ArtistsListUl = ({ artistsList, onEditArtistName, onRemoveArtist }) => (
     <ul className="dashboard-list list-group list-group-flush">
-        {list.map(item => (
+        {artistsList.map(artist => (
             <ArtistsListLi
-                key={item.uid}
-                listItem={item}
-                onRemove={onRemove}
+                key={artist.uid}
+                artist={artist}
+                onEditArtistName={onEditArtistName}
+                onRemoveArtist={onRemoveArtist}
             />
         ))}
     </ul>
 );
 
-const ArtistsListLi = ({ listItem, onRemove }) => (
-    <li className="list-group-item">
-        <div>{listItem.name}</div>
-        <div>
-            <span className="mr-2">
-            <DashboardListItemButton
-                onClick={onRemove}
-                listItem={listItem}
-                icon={"times"}
-                action={"Delete"}
-            />
-            </span>
-            <span>
-            <DashboardListItemButton
-                onClick={onRemove}
-                listItem={listItem}
-                icon={"pen"}
-                action={"Edit"}
-            />
-            </span>
-        </div>
-    </li>
-);
+class ArtistsListLi extends Component {
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            editMode: false,
+            editArtistName: this.props.artist.name,
+        };
+    }
+
+    onToggleEditMode = () => {
+        this.setState(state => ({
+            editMode: !state.editMode,
+            editArtistName: this.props.artist.name,
+        }));
+    };
+
+    onChangeEditArtistName = event => {
+        this.setState({ editArtistName: event.target.value });
+    };
+
+    onSaveEditArtistName = () => {
+        this.props.onEditArtistName(this.props.artist, this.state.editArtistName);
+
+        this.setState({ editMode: false });
+    };
+
+    render() {
+        const { artist, onRemoveArtist } = this.props;
+        const { editMode, editArtistName } = this.state;
+
+        return (
+            <li className="list-group-item">
+
+                {editMode ? (
+                    <input
+                        class="form-control w-75"
+                        type="text"
+                        value={editArtistName}
+                        onChange={this.onChangeEditArtistName}
+                    />
+                ) : (
+                    <div><span className="font-weight-bold">{artist.name.toUpperCase()}</span> {artist.editedAt && <span>(Edited)</span>}</div>
+                )}
+
+                <div>
+                    {!editMode && (
+                        <span className="mr-2">
+                            <DashboardListItemButton
+                                onClick={onRemoveArtist}
+                                listItem={artist}
+                                icon={"times"}
+                                action={"Delete"}
+                            />
+                        </span>
+                    )}
+                    {editMode ? (
+                        <div>
+                            <span className="mr-2">
+                            <DashboardListItemButton
+                            onClick={this.onSaveEditArtistName}
+                            listItem={artist}
+                            icon={"save"}
+                            action={"Save"}
+                            />
+                            </span>
+                            <DashboardListItemButton
+                            onClick={this.onToggleEditMode}
+                            listItem={artist}
+                            icon={"pen"}
+                            action={"Edit"}
+                            />
+                        </div>
+
+                        ) : (
+                    <span>
+                        <DashboardListItemButton
+                            onClick={this.onToggleEditMode}
+                            listItem={artist}
+                            icon={"pen"}
+                            action={"Edit"}
+                        />
+                    </span>
+                        )}
+                </div>
+            </li>
+        );
+    }
+}
 
 const Artists = withFirebase(ArtistsBase);
 

@@ -19,7 +19,8 @@ class AddArtistsForm extends Component {
 
     onSubmit = event => {
         this.props.firebase.artists().push({
-            name: this.state.name
+            name: this.state.name,
+            createdAt: this.props.firebase.serverValue.TIMESTAMP,
         })
             .then(() => {
                 this.setState({...INITIAL_STATE});

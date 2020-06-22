@@ -14,7 +14,9 @@ class ArtistsBase extends Component {
     }
     componentDidMount() {
         this.setState({ loading: true });
-        this.props.firebase.artists().on('value', snapshot => {
+        this.props.firebase
+            .artists()
+            .on('value', snapshot => {
             const artistObject = snapshot.val();
             if (artistObject) {
                 const artistList = Object.keys(artistObject).map(key => ({
@@ -34,10 +36,10 @@ class ArtistsBase extends Component {
         this.props.firebase.artists().off();
     }
     onRemoveArtist = uid => {
+        // TODO: some alert here
         this.props.firebase.artist(uid).remove();
     };
 
-    // onEditMessage
     onEditArtistName = (artist, name) => {
         const { uid, ...artistSnapshot } = artist;
 
@@ -56,7 +58,6 @@ class ArtistsBase extends Component {
                 {artists ? (
                     <ArtistsListUl
                         artistsList={artists}
-                        // onEditMessage={this.onEditMessage}
                         onEditArtistName={this.onEditArtistName}
                         onRemoveArtist={this.onRemoveArtist}
                     />
@@ -175,11 +176,11 @@ class ArtistsListLi extends Component {
         const { editMode, editArtistName } = this.state;
 
         return (
-            <li className="list-group-item">
+            <li className="list-group-item flex-me">
 
                 {editMode ? (
                     <input
-                        class="form-control w-75"
+                        className="form-control w-75"
                         type="text"
                         value={editArtistName}
                         onChange={this.onChangeEditArtistName}

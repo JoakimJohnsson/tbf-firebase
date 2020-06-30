@@ -4296,7 +4296,7 @@ input[type=button].btn-block {
   flex-direction: column;
   min-width: 0;
   word-wrap: break-word;
-  background-color: #222;
+  background-color: #0a0a0a;
   background-clip: border-box;
   border: 1px solid rgba(0, 0, 0, 0.125);
   border-radius: 0.25rem;
@@ -5399,7 +5399,7 @@ a.close.disabled {
   width: 100%;
   color: #fff;
   pointer-events: auto;
-  background-color: #222;
+  background-color: #151515;
   background-clip: padding-box;
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 0.3rem;
@@ -14178,7 +14178,7 @@ code {
 }
 @media (min-width: 576px) {
   .standard-box-wrapper__near-dark {
-    background: #222;
+    background: #0a0a0a;
     margin-bottom: 3rem;
   }
 }

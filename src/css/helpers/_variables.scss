@@ -2,7 +2,7 @@
 $color-white: #fff;
 $color-black: #000;
 $color-dark-grey: #151515;
-$color-near-dark-grey: #222;
+$color-near-black: #0a0a0a;
 $color-light-grey: #444;
 $color-vibrant-pink: #ff88cc;
 $color-vibrant-green: #88ffcc;
@@ -50,7 +50,7 @@ $navbar-dark-toggler-border-color:  rgba($color-white, .1);
 $dark: $color-black;
 $navbar-dark-brand-color:                 $navbar-dark-active-color;
 $navbar-dark-brand-hover-color:           $navbar-dark-active-color;
-$card-bg: $color-near-dark-grey;
+$card-bg: $color-near-black;
 $card-cap-bg: $color-black;
 $card-cap-color: $color-tertiary;
 // Modals
@@ -63,7 +63,7 @@ $modal-dialog-margin:               .5rem;
 $modal-dialog-margin-y-sm-up:       1.75rem;
 
 $modal-content-color:               $color-white;
-$modal-content-bg:                  $color-near-dark-grey;
+$modal-content-bg:                  $color-dark-grey;
 $modal-content-border-color:        rgba($color-black, .2);
 $modal-content-box-shadow-xs:       0 .25rem .5rem rgba($color-black, .5);
 $modal-content-box-shadow-sm-up:    0 .5rem 1rem rgba($color-black, .5);

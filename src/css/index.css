@@ -11201,6 +11201,16 @@ footer {
   width: 100%;
   background: #000; }
 
+.card__dark {
+  box-shadow: 10px 10px 25px #111, -15px -15px 30px #111;
+  border: none; }
+  .card__dark .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+  .card__dark .pagination {
+    font-weight: bold; }
+
 .btn-card-header {
   background-color: #fffe88;
   border-color: #000; }
@@ -11268,16 +11278,6 @@ footer {
   align-items: center;
   height: 100%;
   width: 100%; }
-
-.dashboard-card {
-  box-shadow: 10px 10px 25px #111, -15px -15px 30px #111;
-  border: none; }
-  .dashboard-card .card-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center; }
-  .dashboard-card .pagination {
-    font-weight: bold; }
 
 .dashboard-list .list-group-item {
   display: flex;

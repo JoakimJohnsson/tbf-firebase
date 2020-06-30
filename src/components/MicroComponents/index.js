@@ -19,7 +19,7 @@ const LoadingComponent = () => (
 );
 
 const AdminCard = (props) => (
-    <div className="card h-100">
+    <div className="card card__dark h-100">
         <div className="card-header">
             <h3 className="text-uppercase m-0 pt-2">{props.username}</h3>
         </div>

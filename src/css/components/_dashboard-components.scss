@@ -1,19 +1,6 @@
 @import '../helpers/variables';
 @import '../helpers/mixins';
 
-.dashboard-card {
-  @include box-shadow__dark;
-  border: none;
-  .card-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  .pagination {
-    font-weight: bold;
-  }
-}
-
 .dashboard-list {
   .list-group-item {
     display: flex;

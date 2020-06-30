@@ -51,8 +51,8 @@ $dark: $color-black;
 $navbar-dark-brand-color:                 $navbar-dark-active-color;
 $navbar-dark-brand-hover-color:           $navbar-dark-active-color;
 $card-bg: $color-near-dark-grey;
-$card-cap-bg: $color-tertiary;
-$card-cap-color: $color-black;
+$card-cap-bg: $color-black;
+$card-cap-color: $color-tertiary;
 // Modals
 
 // Padding applied to the modal body
@@ -79,19 +79,19 @@ $list-group-bg:                     transparent;
 $list-group-border-color:           $color-border;
 
 // Pagination
-$pagination-color:                  $color-black;
+$pagination-color:                  $color-tertiary;
 $pagination-bg:                     transparent;
 $pagination-border-color:           transparent;
 
 $pagination-hover-color:            $color-light-grey;
 $pagination-hover-bg:               $color-tertiary__lighten;
-$pagination-hover-border-color:     $color-light-grey;
+$pagination-hover-border-color:     $color-tertiary__lighten;
 
-$pagination-active-color:           $color-light-grey;
+$pagination-active-color:           $color-tertiary__lighten;
 $pagination-active-bg:              transparent;
-$pagination-active-border-color:    $color-light-grey;
+$pagination-active-border-color:    $color-tertiary__lighten;
 
-$pagination-disabled-color:         $color-light-grey;
+$pagination-disabled-color:         $color-tertiary__lighten;
 $pagination-disabled-bg:            transparent;
 $pagination-disabled-border-color:  transparent;
 

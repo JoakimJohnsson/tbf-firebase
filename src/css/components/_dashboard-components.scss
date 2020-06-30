@@ -1,17 +1,6 @@
 @import '../helpers/variables';
 @import '../helpers/mixins';
 
-.dashboard-card {
-  .card-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  .pagination {
-    font-weight: bold;
-  }
-}
-
 .dashboard-list {
   .list-group-item {
     line-height: 3;
@@ -29,7 +18,13 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+<<<<<<< HEAD
     padding: 1rem 0 1rem 0;
     font-size: 1.4rem;
+=======
+    padding-left: 0;
+    padding-right: 0;
+    line-height: 2.4;
+>>>>>>> 638da23f9287d39bcd79d5225423662d11b3c378
   }
 }

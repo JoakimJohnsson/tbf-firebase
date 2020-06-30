@@ -25,7 +25,7 @@ const Navigation = () => (
     </header>
 );
 const NavigationFooter = () => (
-    <Navbar className="navbar-footer justify-content-center" bg="dark" variant="dark" expand="true">
+    <Navbar className="navbar-footer px-2 px-sm-5" bg="dark" variant="dark" expand="true">
         <NavLinkComponentFooter link={ROUTES.START} text={"Start"} icon={"home"}/>
         <NavLinkComponentFooter link={ROUTES.ARTISTS} text={"Artists"} icon={"user-astronaut"}/>
         <NavLinkComponentFooter link={ROUTES.RECORDS} text={"Records"} icon={"record-vinyl"}/>

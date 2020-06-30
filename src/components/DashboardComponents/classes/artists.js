@@ -3,6 +3,7 @@ import {withFirebase} from "../../Firebase";
 import {DashboardListItemButton, LoadingComponent} from "../../MicroComponents";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import AddArtistsForm from "../forms/addArtistsForm";
+import Confirmation from "../../Confirmation";
 
 class ArtistsBase extends Component {
     constructor(props) {
@@ -70,8 +71,13 @@ class ArtistsBase extends Component {
 }
 
 const ArtistsDashboardCard = () => (
+<<<<<<< HEAD
     <div className="col-12 col-xl-6 mb-3">
         <div className="card h-100 dashboard-card">
+=======
+    <div className="col-12 col-lg-6 mb-3">
+        <div className="card h-100 card__dark">
+>>>>>>> 638da23f9287d39bcd79d5225423662d11b3c378
             <div className="card-header">
                 <h3 className="text-uppercase m-0 pt-2">Artists</h3>
                 <ArtistsDashboardModal />
@@ -192,12 +198,20 @@ class ArtistsListLi extends Component {
                 <div>
                     {!editMode && (
                         <span className="mr-2">
-                            <DashboardListItemButton
-                                onClick={onRemoveArtist}
-                                listItem={artist}
-                                icon={"times"}
-                                action={"Delete"}
-                            />
+                            <Confirmation
+                                onConfirm={() => {
+                                    onRemoveArtist(artist.uid)
+                                }}
+                                body="Are you sure you want to delete this?"
+                                confirmText="Confirm Delete"
+                                title="Delete artist">
+                                <button
+                                    type={"button"}
+                                    aria-label={"Delete artist"}
+                                    className={"btn btn-fa__primary"}>
+                                    <FontAwesomeIcon icon={"times"} />
+                                </button>
+                            </Confirmation>
                         </span>
                     )}
                     {editMode ? (

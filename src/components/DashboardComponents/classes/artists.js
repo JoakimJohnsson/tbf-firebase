@@ -71,13 +71,8 @@ class ArtistsBase extends Component {
 }
 
 const ArtistsDashboardCard = () => (
-<<<<<<< HEAD
-    <div className="col-12 col-xl-6 mb-3">
-        <div className="card h-100 dashboard-card">
-=======
     <div className="col-12 col-lg-6 mb-3">
         <div className="card h-100 card__dark">
->>>>>>> 638da23f9287d39bcd79d5225423662d11b3c378
             <div className="card-header">
                 <h3 className="text-uppercase m-0 pt-2">Artists</h3>
                 <ArtistsDashboardModal />

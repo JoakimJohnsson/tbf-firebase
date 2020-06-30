@@ -7,7 +7,7 @@ const DashBoardPage = () => (
     <div className="row">
         <div className="standard-fullwidth-column">
             <h1>Dashboard</h1>
-            <p>Congratulations - you are now signed in.</p>
+            <p>Add, edit and remove content from our <a href={"https://firebase.google.com"}>Firebase Realtime Database</a>.</p>
             <div className="row">
                 <ArtistsDashboardCard />
             </div>

@@ -3458,8 +3458,8 @@ input[type="button"].btn-block {
 .card-header {
   padding: 0.75rem 1.25rem;
   margin-bottom: 0;
-  color: #000;
-  background-color: #fffe88;
+  color: #fffe88;
+  background-color: #000;
   border-bottom: 1px solid rgba(0, 0, 0, 0.125); }
   .card-header:first-child {
     border-radius: calc(0.25rem - 1px) calc(0.25rem - 1px) 0 0; }
@@ -3468,7 +3468,7 @@ input[type="button"].btn-block {
 
 .card-footer {
   padding: 0.75rem 1.25rem;
-  background-color: #fffe88;
+  background-color: #000;
   border-top: 1px solid rgba(0, 0, 0, 0.125); }
   .card-footer:last-child {
     border-radius: 0 0 calc(0.25rem - 1px) calc(0.25rem - 1px); }
@@ -3612,7 +3612,7 @@ input[type="button"].btn-block {
   padding: 0.5rem 0.75rem;
   margin-left: -1px;
   line-height: 1.25;
-  color: #000;
+  color: #fffe88;
   background-color: transparent;
   border: 1px solid transparent; }
   .page-link:hover {
@@ -3620,7 +3620,7 @@ input[type="button"].btn-block {
     color: #444;
     text-decoration: none;
     background-color: #fffea0;
-    border-color: #444; }
+    border-color: #fffea0; }
   .page-link:focus {
     z-index: 3;
     outline: 0;
@@ -3635,11 +3635,11 @@ input[type="button"].btn-block {
   border-bottom-right-radius: 0.25rem; }
 .page-item.active .page-link {
   z-index: 3;
-  color: #444;
+  color: #fffea0;
   background-color: transparent;
-  border-color: #444; }
+  border-color: #fffea0; }
 .page-item.disabled .page-link {
-  color: #444;
+  color: #fffea0;
   pointer-events: none;
   cursor: auto;
   background-color: transparent;
@@ -11202,7 +11202,7 @@ footer {
   background: #000; }
 
 .btn-card-header {
-  background-color: transparent;
+  background-color: #fffe88;
   border-color: #000; }
   .btn-card-header:hover, .btn-card-header:focus {
     background-color: #fffea0;
@@ -11269,19 +11269,23 @@ footer {
   height: 100%;
   width: 100%; }
 
-.dashboard-card .card-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center; }
-.dashboard-card .pagination {
-  font-weight: bold; }
+.dashboard-card {
+  box-shadow: 10px 10px 25px #111, -15px -15px 30px #111;
+  border: none; }
+  .dashboard-card .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+  .dashboard-card .pagination {
+    font-weight: bold; }
 
 .dashboard-list .list-group-item {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding-left: 0;
-  padding-right: 0; }
+  padding-right: 0;
+  line-height: 2.4; }
 
 .header-tbf-logo-primary {
   fill: #ff88cc;

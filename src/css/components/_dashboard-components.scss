@@ -2,6 +2,8 @@
 @import '../helpers/mixins';
 
 .dashboard-card {
+  @include box-shadow__dark;
+  border: none;
   .card-header {
     display: flex;
     justify-content: space-between;
@@ -19,5 +21,6 @@
     align-items: center;
     padding-left: 0;
     padding-right: 0;
+    line-height: 2.4;
   }
 }

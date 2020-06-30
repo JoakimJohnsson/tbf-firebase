@@ -3,6 +3,7 @@ import {withFirebase} from "../../Firebase";
 import {DashboardListItemButton, LoadingComponent} from "../../MicroComponents";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import AddArtistsForm from "../forms/addArtistsForm";
+import Confirmation from "../../Confirmation";
 
 class ArtistsBase extends Component {
     constructor(props) {
@@ -191,12 +192,20 @@ class ArtistsListLi extends Component {
                 <div>
                     {!editMode && (
                         <span className="mr-2">
-                            <DashboardListItemButton
-                                onClick={onRemoveArtist}
-                                listItem={artist}
-                                icon={"times"}
-                                action={"Delete"}
-                            />
+                            <Confirmation
+                                onConfirm={() => {
+                                    onRemoveArtist(artist.uid)
+                                }}
+                                body="Are you sure you want to delete this?"
+                                confirmText="Confirm Delete"
+                                title="Delete artist">
+                                <button
+                                    type={"button"}
+                                    aria-label={"Delete artist"}
+                                    className={"btn btn-fa__primary"}>
+                                    <FontAwesomeIcon icon={"times"} />
+                                </button>
+                            </Confirmation>
                         </span>
                     )}
                     {editMode ? (

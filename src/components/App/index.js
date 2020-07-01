@@ -12,7 +12,7 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 import { faAirbnb, faGoogle, faFacebookF } from '@fortawesome/free-brands-svg-icons'
 import { faArrowAltCircleLeft, faCopyright } from '@fortawesome/free-regular-svg-icons'
 import { faWrench, faHome, faRecordVinyl, faMusic, faSearch, faUserAstronaut, faPlayCircle, faPlus, faTimes, faPen,
-    faMinus, faChevronLeft, faChevronRight, faSpinner, faSave } from '@fortawesome/free-solid-svg-icons'
+    faMinus, faChevronLeft, faChevronRight, faSpinner, faSave, faAngleDoubleDown } from '@fortawesome/free-solid-svg-icons'
 import Footer from "../Footer";
 import ArtistPage from "../../pages/unauthorized/Artists";
 import RecordsPage from "../../pages/unauthorized/Records";
@@ -21,7 +21,8 @@ import PlayPage from "../../pages/unauthorized/Play";
 import SearchPage from "../../pages/unauthorized/Search";
 
 library.add(faAirbnb, faGoogle, faFacebookF, faArrowAltCircleLeft, faCopyright, faWrench, faHome, faRecordVinyl,
-    faMusic, faSearch, faUserAstronaut, faPlayCircle, faPlus, faTimes, faPen, faMinus, faChevronLeft, faChevronRight, faSpinner, faSave);
+    faMusic, faSearch, faUserAstronaut, faPlayCircle, faPlus, faTimes, faPen, faMinus, faChevronLeft, faChevronRight, faSpinner, faSave,
+    faAngleDoubleDown);
 
 const App = () => (
     <Router>

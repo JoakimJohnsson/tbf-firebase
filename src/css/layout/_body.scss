@@ -56,6 +56,16 @@ code {
   }
 }
 
+.btn__tertiary {
+  background-color: $color-tertiary;
+  color: $color-dark-grey;
+  &:hover,
+  &:focus {
+    background-color: $color-tertiary__lighten;
+    color: $color-black;
+  }
+}
+
 .alert {
   display: inline-block;
   p {

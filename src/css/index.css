@@ -14149,6 +14149,15 @@ code {
   color: #fffea0;
 }
 
+.btn__tertiary {
+  background-color: #fffe88;
+  color: #151515;
+}
+.btn__tertiary:hover, .btn__tertiary:focus {
+  background-color: #fffea0;
+  color: #000;
+}
+
 .alert {
   display: inline-block;
 }
@@ -14317,15 +14326,6 @@ footer {
 }
 .card__dark .pagination {
   font-weight: bold;
-}
-
-.btn-card-header {
-  background-color: #fffe88;
-  border-color: #000;
-}
-.btn-card-header:hover, .btn-card-header:focus {
-  background-color: #fffea0;
-  border-color: #000;
 }
 
 .navbar-dark .navbar-toggler {

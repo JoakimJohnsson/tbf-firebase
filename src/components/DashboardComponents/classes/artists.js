@@ -11,36 +11,46 @@ class ArtistsBase extends Component {
         this.state = {
             loading: false,
             artists: [],
+            limit: 2,
         };
     }
     componentDidMount() {
-        this.setState({ loading: true });
+        this.onListenForArtists()
+    }
+    onListenForArtists() {
+        this.setState({loading: true});
         this.props.firebase
             .artists()
+            .orderByChild('name')
+            .limitToLast(this.state.limit)
             .on('value', snapshot => {
-            const artistObject = snapshot.val();
-            if (artistObject) {
-                const artistList = Object.keys(artistObject).map(key => ({
-                    ...artistObject[key],
-                    uid: key,
-                }));
-                this.setState({
-                    artists: artistList,
-                    loading: false
-                });
-            } else {
-                this.setState({ artists: null, loading: false });
-            }
-        });
+                const artistObject = snapshot.val();
+                if (artistObject) {
+                    const artistList = Object.keys(artistObject).map(key => ({
+                        ...artistObject[key],
+                        uid: key,
+                    }));
+                    this.setState({
+                        artists: artistList,
+                        loading: false
+                    });
+                } else {
+                    this.setState({artists: null, loading: false});
+                }
+            });
     }
     componentWillUnmount() {
         this.props.firebase.artists().off();
     }
     onRemoveArtist = uid => {
-        // TODO: some alert here
         this.props.firebase.artist(uid).remove();
     };
-
+    onNextPage = () => {
+        this.setState(
+            state => ({ limit: state.limit + 2 }),
+            this.onListenForArtists,
+        );
+    };
     onEditArtistName = (artist, name) => {
         const { uid, ...artistSnapshot } = artist;
 
@@ -65,6 +75,11 @@ class ArtistsBase extends Component {
                 ) : (
                     <div>There are no artists ...</div>
                 )}
+                {!loading && artists && (
+                    <button className="btn btn-fa__tertiary m-3 d-inline-block w-100" aria-label="Load more artists" type="button" onClick={this.onNextPage}>
+                        <FontAwesomeIcon icon="angle-double-down"/>
+                    </button>
+                )}
             </div>
         );
     }
@@ -79,25 +94,6 @@ const ArtistsDashboardCard = () => (
             </div>
             <div className="card-body">
                 <Artists />
-            </div>
-            <div className="card-footer align-items-center">
-                <nav aria-label="Page navigation example">
-                    <ul className="pagination justify-content-center">
-                        <li className="page-item disabled">
-                            <a className="page-link" href="#/" tabIndex="-1" aria-label="Previous">
-                                <FontAwesomeIcon icon="chevron-left"/>
-                            </a>
-                        </li>
-                        <li className="page-item active"><a className="page-link" href="#/">1</a></li>
-                        <li className="page-item"><a className="page-link" href="#/">2</a></li>
-                        <li className="page-item"><a className="page-link" href="#/">3</a></li>
-                        <li className="page-item">
-                            <a className="page-link" href="#/" aria-label="Next">
-                                <FontAwesomeIcon icon="chevron-right"/>
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
             </div>
         </div>
     </div>
@@ -125,7 +121,7 @@ const ArtistsDashboardModal = () => (
                 </div>
             </div>
         </div>
-        <button className="btn btn-secondary btn-card-header" data-toggle="modal" aria-label="Add Artist"
+        <button className="btn btn__tertiary" data-toggle="modal" aria-label="Add Artist"
                 data-target="#modal-020-artists">
             <FontAwesomeIcon icon="plus"/>
         </button>

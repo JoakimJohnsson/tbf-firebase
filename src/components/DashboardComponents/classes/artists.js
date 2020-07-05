@@ -194,7 +194,7 @@ class ArtistsListLi extends Component {
                                     onRemoveArtist(artist.uid)
                                 }}
                                 body="Are you sure you want to delete this?"
-                                confirmText="Confirm Delete"
+                                confirmText="Confirm delete"
                                 title="Delete artist">
                                 <button
                                     type={"button"}

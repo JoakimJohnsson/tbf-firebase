@@ -1,6 +1,7 @@
 import React from 'react';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
 class Confirmation extends React.Component {
     constructor(props) {
@@ -57,6 +58,9 @@ class Confirmation extends React.Component {
             >
                 <Modal.Header>
                     <Modal.Title>{this.props.title}</Modal.Title>
+                    <button type="button" className="btn btn-fa__secondary" onClick={this.onClose} aria-label="Close">
+                        <FontAwesomeIcon icon="times"/>
+                    </button>
                 </Modal.Header>
                 <Modal.Body>{this.props.body}</Modal.Body>
                 <Modal.Footer>
@@ -64,6 +68,7 @@ class Confirmation extends React.Component {
                     <Button bsstyle={this.props.confirmBSStyle} onClick={this.onConfirm}>
                         {this.props.confirmText}
                     </Button>
+                    <button type="button" className="btn btn-secondary" onClick={this.onClose}>Close</button>
                 </Modal.Footer>
             </Modal>
         );

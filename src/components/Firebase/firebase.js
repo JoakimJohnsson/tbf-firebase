@@ -18,6 +18,7 @@ class Firebase {
         this.serverValue = app.database.ServerValue;
         this.auth = app.auth();
         this.db = app.database();
+        this.storage = app.storage();
     }
 
     // Auth api
@@ -66,6 +67,8 @@ class Firebase {
     // Artists api
     artist = uid => this.db.ref(`artists/${uid}`);
     artists = () => this.db.ref('artists');
+
+    storageRef = () => this.storage.ref();
 }
 
 export default Firebase;

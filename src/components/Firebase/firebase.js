@@ -1,6 +1,7 @@
 import app from 'firebase/app';
 import 'firebase/auth';
 import 'firebase/database';
+import 'firebase/storage';
 
 const firebaseConfig = {
     apiKey: "AIzaSyA4yBmSmQ-RLTzroqIYkr9A42VQcl_Zh1Y",
@@ -67,8 +68,6 @@ class Firebase {
     // Artists api
     artist = uid => this.db.ref(`artists/${uid}`);
     artists = () => this.db.ref('artists');
-
-    storageRef = () => this.storage.ref();
 }
 
 export default Firebase;

@@ -2,6 +2,7 @@ import React from 'react';
 import {compose} from 'recompose';
 import {withAuthorization, withEmailVerification} from '../../../components/Session';
 import ArtistsDashboardCard from "../../../components/DashboardComponents/classes/artists";
+import ImageUploadForm from "../ImageUpload";
 
 const DashBoardPage = () => (
     <div className="row">
@@ -12,6 +13,7 @@ const DashBoardPage = () => (
                 <ArtistsDashboardCard />
             </div>
         </div>
+        <ImageUploadForm />
     </div>
 );
 

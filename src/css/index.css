@@ -14248,6 +14248,10 @@ code {
   }
 }
 
+.progress {
+  height: 5px;
+}
+
 .text-yellow {
   color: #fffe88;
 }

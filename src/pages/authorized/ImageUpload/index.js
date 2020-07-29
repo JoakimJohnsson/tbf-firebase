@@ -3,13 +3,17 @@ import {withFirebase} from "../../../components/Firebase/context";
 import {compose} from "recompose";
 import {withRouter} from "react-router-dom";
 
+const INITIAL_STATE = {
+    image: null,
+    url: '',
+    progress: 0,
+    error: null
+};
+
 class ImageUploadForm extends Component {
     constructor(props) {
         super(props);
-        this.state = {
-            image: null,
-            url: "",
-            progress: 0
+        this.state = {...INITIAL_STATE
         };
     }
 
@@ -50,29 +54,26 @@ class ImageUploadForm extends Component {
     };
     render() {
         return (
-            <div className="center">
-                <br/>
-                <h2 className="green-text">React Firebase Image Uploader</h2>
-                <br/>
-                <br/>
-                <div className="row">
-                    <progress value={this.state.progress} max="100" className="progress" />
+            <div className="">
+                <h2 className="">Add image</h2>
+                <div className="progress mb-3">
+                    <div className="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style={{width:this.state.progress + '%'}} aria-valuenow={this.state.progress}
+                         aria-valuemin="0" aria-valuemax="100">
+                    </div>
                 </div>
-                <br />
-                <br />
-                <br />
-                <div className="file-field input-field">
-                    <div className="btn">
+
+                <div className="">
+                    <div className="">
                         <span>File</span>
                         <input type="file" onChange={this.handleChange} />
                     </div>
-                    <div className="file-path-wrapper">
-                        <input className="file-path validate" type="text" />
+                    <div className="">
+                        <input className="" type="text" />
                     </div>
                 </div>
                 <button
                     onClick={this.handleUpload}
-                    className="waves-effect waves-light btn"
+                    className="btn btn-secondary btn-lg d-block mb-4"
                 >
                     Upload
                 </button>

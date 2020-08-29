@@ -2,6 +2,7 @@ import React from 'react';
 import {compose} from 'recompose';
 import {withAuthorization, withEmailVerification} from '../../../components/Session';
 import ArtistsDashboardCard from "../../../components/DashboardComponents/classes/artists";
+import ImagesDashboardCard from "../../../components/DashboardComponents/classes/images";
 import ImageUploadForm from "../ImageUpload";
 
 const DashBoardPage = () => (
@@ -11,6 +12,7 @@ const DashBoardPage = () => (
             <p>Add, edit and remove content from our <a href={"https://firebase.google.com"}>Firebase Realtime Database</a>.</p>
             <div className="row">
                 <ArtistsDashboardCard />
+                <ImagesDashboardCard />
             </div>
         </div>
         <ImageUploadForm />

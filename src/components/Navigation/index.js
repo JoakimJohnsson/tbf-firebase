@@ -1,26 +1,17 @@
 import React from 'react';
 import * as ROUTES from '../../constants/routes';
 import {Link} from 'react-router-dom';
-import SignOutButton from "../SignOut";
 import Navbar from 'react-bootstrap/Navbar';
-import Nav from 'react-bootstrap/Nav';
-import AuthUserContext from "../Session/context";
-import * as ROLES from '../../constants/roles';
 import TbfLogo from "../Logo";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
 const Navigation = () => (
     <header>
-        <Navbar className="standard-container navbar-header" bg="dark" variant="dark" expand="lg">
+        <Navbar className="standard-container navbar-header justify-content-center" bg="dark" variant="dark"
+                expand="lg">
             <Navbar.Brand>
-                <Link to={ROUTES.START}><TbfLogo/></Link>
+                <h1 className="m-0"><Link to={ROUTES.START}><TbfLogo/></Link></h1>
             </Navbar.Brand>
-            <Navbar.Toggle aria-controls="basic-navbar-nav"/>
-            <Navbar.Collapse id="basic-navbar-nav">
-                <AuthUserContext.Consumer>
-                    {authUser => authUser ? <NavigationAuth authUser={authUser}/> : <NavigationNonAuth/>}
-                </AuthUserContext.Consumer>
-            </Navbar.Collapse>
         </Navbar>
     </header>
 );
@@ -30,34 +21,9 @@ const NavigationFooter = () => (
         <NavLinkComponentFooter link={ROUTES.ARTISTS} text={"Artists"} icon={"user-astronaut"}/>
         <NavLinkComponentFooter link={ROUTES.RECORDS} text={"Records"} icon={"record-vinyl"}/>
         <NavLinkComponentFooter link={ROUTES.SONGS} text={"Songs"} icon={"music"}/>
-        <NavLinkComponentFooter link={ROUTES.SEARCH} text={"Search"} icon={"search"}/>
     </Navbar>
 );
-const NavigationAuth = ({authUser}) => (
-    <Nav className="ml-auto">
-        {!!authUser.roles[ROLES.ADMIN] && (
-            <>
-                <NavLinkComponent link={ROUTES.DASHBOARD} text={"Dashboard"}/>
-                <NavLinkComponent link={ROUTES.ACCOUNT} text={"Account"}/>
-                <NavLinkComponent link={ROUTES.ADMINISTRATION} text={"Administration"}/>
-            </>
-        )}
-        <SignOutButton/>
-    </Nav>
-);
-const NavigationNonAuth = () => (
-    <Nav className="ml-auto">
-        <NavLinkComponent link={ROUTES.START} text={"Start"}/>
-        <NavLinkComponent link={ROUTES.ARTISTS} text={"Artists"}/>
-        <NavLinkComponent link={ROUTES.RECORDS} text={"Records"}/>
-        <NavLinkComponent link={ROUTES.SONGS} text={"Songs"}/>
-        <NavLinkComponent link={ROUTES.SEARCH} text={"Search"}/>
-    </Nav>
-);
 
-const NavLinkComponent = ({link, text}) => (
-    <Link className="nav-link" to={link}>{text}</Link>
-);
 const NavLinkComponentFooter = ({link, text, icon}) => (
     <>
         <Link className="nav-link" to={link}><FontAwesomeIcon icon={icon} size="2x" className="d-block"/>

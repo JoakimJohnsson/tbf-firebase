@@ -11136,7 +11136,7 @@ code {
     .standard-main-column {
       flex: 0 0 66.6666666667%;
       max-width: 66.6666666667%;
-      padding-right: 6rem; } }
+      padding-right: 0; } }
 
 .standard-secondary-column {
   position: relative;
@@ -11245,6 +11245,12 @@ footer {
 
 .navbar-footer {
   justify-content: space-between; }
+  @media (min-width: 768px) {
+    .navbar-footer {
+      justify-content: space-evenly; } }
+  @media (min-width: 1200px) {
+    .navbar-footer {
+      justify-content: center; } }
   .navbar-footer .nav-link {
     display: flex;
     flex-direction: column;
@@ -11257,6 +11263,9 @@ footer {
         font-size: 100%; }
         .navbar-footer .nav-link span {
           font-size: 90%; } }
+    @media (min-width: 1200px) {
+      .navbar-footer .nav-link {
+        padding: .5rem 3rem; } }
 
 .todo-component {
   border-radius: .25rem;

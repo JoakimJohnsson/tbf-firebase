@@ -1,5 +1,5 @@
 import React from 'react';
-import TodoComponent from "../../../components/MicroComponents";
+import TodoComponent from "../../components/MicroComponents";
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 
 const RecordsPage = () => (

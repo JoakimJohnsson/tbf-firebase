@@ -31,6 +31,12 @@
 
 .navbar-footer {
   justify-content: space-between;
+  @include media-breakpoint-up(md) {
+    justify-content: space-evenly;
+  }
+  @include media-breakpoint-up(xl) {
+    justify-content: center;
+  }
   .nav-link {
     display: flex;
     flex-direction: column;
@@ -43,6 +49,9 @@
       span {
         font-size: 90%;
       }
+    }
+    @include media-breakpoint-up(xl) {
+      padding: .5rem 3rem;
     }
   }
 }

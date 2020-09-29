@@ -4,12 +4,9 @@ import './css/index.css';
 import '../node_modules/bootstrap/js/dist/modal';
 import App from './components/App';
 import * as serviceWorker from './serviceWorker';
-import Firebase, {FirebaseContext} from "./components/Firebase";
 
 ReactDOM.render(
-    <FirebaseContext.Provider value={new Firebase()}>
-        <App/>
-    </FirebaseContext.Provider>,
+        <App/>,
     document.getElementById('root')
 );
 

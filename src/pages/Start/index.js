@@ -1,6 +1,15 @@
 import React from 'react';
 import TodoComponent from "../../components/MicroComponents";
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
+import {db} from '../../components/Firebase/firebase';
+
+db.collection("artists").get()
+    .then(function(querySnapshot) {
+    querySnapshot.forEach(function(doc) {
+        // doc.data() is never undefined for query doc snapshots
+        console.log(doc.id, " => ", doc.data());
+    });
+});
 
 const StartPage = () => (
     <div className="row">
@@ -10,6 +19,7 @@ const StartPage = () => (
             <div className="mb-3 standard-box-wrapper__near-dark">
                 <h2>Artists</h2>
                 <p>List of most listened artists</p>
+
                 <TodoComponent todo="StartpageComponent artists"/>
                 <TodoComponent todo="Artist cards"/>
             </div>

@@ -3,6 +3,7 @@ import TodoComponent from "../../components/MicroComponents";
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import firebase from '../../components/Firebase/firebase';
 import ArtistList from "../../components/ArtistList";
+import SongList from "../../components/SongList";
 
 const StartPage = () => (
     <div className="row">
@@ -28,6 +29,7 @@ const StartPage = () => (
             <div className="mb-3 standard-box-wrapper__near-dark">
                 <h2>Songs</h2>
                 <p>List of most listened songs</p>
+                <SongList />
                 <TodoComponent todo="StartpageComponent songs"/>
                 <TodoComponent todo="Song cards"/>
             </div>

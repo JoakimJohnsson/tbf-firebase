@@ -3,6 +3,17 @@ import firebase from "firebase";
 
 // https://www.youtube.com/watch?v=rSgbYCdc4G0&t=1142s
 
+// () => {
+//     // complete function ...
+//     this.props.firebase.storage
+//         .ref("images")
+//         .child(image.name)
+//         .getDownloadURL()
+//         .then(url => {
+//             this.setState({ url });
+//         });
+// }
+
 function FetchSongs() {
     const [songs, setSongs] = useState([]);
 

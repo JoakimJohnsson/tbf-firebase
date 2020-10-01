@@ -1,6 +1,8 @@
 import React, {useState, useEffect} from 'react';
 import firebase from "firebase";
 
+// https://www.youtube.com/watch?v=rSgbYCdc4G0&t=1142s
+
 function FetchArtists() {
     const [artists, setArtists] = useState([]);
 
@@ -15,7 +17,6 @@ function FetchArtists() {
                 }))
                 setArtists(newArtists)
             })
-
     }, []);
 
     return artists;

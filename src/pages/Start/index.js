@@ -4,14 +4,6 @@ import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import firebase from '../../components/Firebase/firebase';
 import ArtistList from "../../components/ArtistList";
 
-firebase.firestore().collection("artists").get()
-    .then(function(querySnapshot) {
-    querySnapshot.forEach(function(doc) {
-        // doc.data() is never undefined for query doc snapshots
-        console.log(doc.id, " => ", doc.data());
-    });
-});
-
 const StartPage = () => (
     <div className="row">
 

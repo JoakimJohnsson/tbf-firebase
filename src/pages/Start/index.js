@@ -1,9 +1,10 @@
 import React from 'react';
 import TodoComponent from "../../components/MicroComponents";
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
-import {db} from '../../components/Firebase/firebase';
+import firebase from '../../components/Firebase/firebase';
+import ArtistList from "../../components/ArtistList";
 
-db.collection("artists").get()
+firebase.firestore().collection("artists").get()
     .then(function(querySnapshot) {
     querySnapshot.forEach(function(doc) {
         // doc.data() is never undefined for query doc snapshots
@@ -19,6 +20,7 @@ const StartPage = () => (
             <div className="mb-3 standard-box-wrapper__near-dark">
                 <h2>Artists</h2>
                 <p>List of most listened artists</p>
+                <ArtistList />
 
                 <TodoComponent todo="StartpageComponent artists"/>
                 <TodoComponent todo="Artist cards"/>

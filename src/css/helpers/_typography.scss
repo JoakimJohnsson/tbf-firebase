@@ -48,3 +48,8 @@ label {
   font-weight: 700;
   font-size: $font-size-base * .875;
 }
+
+.text-truncate__200px {
+  @extend .text-truncate;
+  max-width: 200px;
+}

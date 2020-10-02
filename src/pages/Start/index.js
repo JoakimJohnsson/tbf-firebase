@@ -12,26 +12,18 @@ const StartPage = () => (
 
             <div className="mb-3 standard-box-wrapper__near-dark">
                 <h2>Artists</h2>
-                <p>List of most listened artists</p>
                 <ArtistList />
-
-                <TodoComponent todo="StartpageComponent artists"/>
-                <TodoComponent todo="Artist cards"/>
             </div>
 
             <div className="mb-3 standard-box-wrapper__near-dark">
                 <h2>Records</h2>
-                <p>List of most listened records</p>
                 <TodoComponent todo="StartpageComponent records"/>
                 <TodoComponent todo="Record cards"/>
             </div>
 
             <div className="mb-3 standard-box-wrapper__near-dark">
                 <h2>Songs</h2>
-                <p>List of most listened songs</p>
                 <SongList />
-                <TodoComponent todo="StartpageComponent songs"/>
-                <TodoComponent todo="Song cards"/>
             </div>
         </div>
 

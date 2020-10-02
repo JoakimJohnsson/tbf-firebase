@@ -3,17 +3,6 @@ import firebase from "firebase";
 
 // https://www.youtube.com/watch?v=rSgbYCdc4G0&t=1142s
 
-// () => {
-//     // complete function ...
-//     this.props.firebase.storage
-//         .ref("images")
-//         .child(image.name)
-//         .getDownloadURL()
-//         .then(url => {
-//             this.setState({ url });
-//         });
-// }
-
 function FetchSongs() {
     const [songs, setSongs] = useState([]);
 
@@ -34,23 +23,19 @@ function FetchSongs() {
 }
 
 const SongList = () => {
-
     const songs = FetchSongs();
-
     return (
-
         <ul>
             {songs.map((song) =>
-                <li>
-                    <a href={song.location}>
+                <li key={song.id}>
+                    <a href={song.url}>
                     {song.name}
                     </a>
+                    <p className="text-truncate__200px small m-0">{song.url ? song.url : "No url available"}</p>
                 </li>
             )}
         </ul>
-
     )
-
 };
 
 export default SongList;

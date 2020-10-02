@@ -7541,7 +7541,7 @@ button.bg-dark:focus {
 .text-nowrap {
   white-space: nowrap !important; }
 
-.text-truncate {
+.text-truncate, .text-truncate__200px {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap; }
@@ -11204,6 +11204,9 @@ p:last-of-type, .lead {
 label {
   font-weight: 700;
   font-size: 0.875rem; }
+
+.text-truncate__200px {
+  max-width: 200px; }
 
 footer {
   position: absolute;

@@ -4,6 +4,7 @@ import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import firebase from '../../components/Firebase/firebase';
 import ArtistList from "../../components/ArtistList";
 import SongList from "../../components/SongList";
+import FullRecordList from "../../components/RecordList";
 
 const StartPage = () => (
     <div className="row">
@@ -17,8 +18,7 @@ const StartPage = () => (
 
             <div className="mb-3 standard-box-wrapper__near-dark">
                 <h2>Records</h2>
-                <TodoComponent todo="StartpageComponent records"/>
-                <TodoComponent todo="Record cards"/>
+                <FullRecordList />
             </div>
 
             <div className="mb-3 standard-box-wrapper__near-dark">

@@ -1,57 +1,10 @@
-import React, {useState, useEffect} from 'react';
-import firebase from "firebase";
-
-function FetchArtists() {
-    const [artists, setArtists] = useState([]);
-    useEffect(() => {
-        firebase
-            .firestore()
-            .collection('artists')
-            .onSnapshot((snapshot) => {
-                const newArtists = snapshot.docs.map((doc) => ({
-                    id: doc.id,
-                    ...doc.data()
-                }));
-                setArtists(newArtists)
-            })
-    }, []);
-    return artists;
-}
-
-function FetchMembers(artist) {
-    const [members, setMembers] = useState([]);
-    useEffect(() => {
-        firebase
-            .firestore()
-            .collection('artists')
-            .doc(artist).collection('members')
-            .onSnapshot((snapshot) => {
-                const newMembers = snapshot.docs.map((doc) => ({
-                    id: doc.id,
-                    ...doc.data()
-                }));
-                setMembers(newMembers)
-            })
-    }, []);
-    return members;
-}
-
-function FetchPerson(member) {
-    const [person, setPerson] = useState([]);
-    useEffect(() => {
-        firebase
-            .firestore()
-            .collection('persons')
-            .doc(member)
-            .get().then(function(doc) {
-                setPerson(doc.data());
-        });
-    }, []);
-    return person;
-}
+import React from 'react';
+import FetchAllArtists from "../../api-functions/Artists";
+import FetchMembersByArtist from "../../api-functions/Members";
+import FetchPersonFromMember from "../../api-functions/Persons";
 
 const ArtistList = () => {
-    const artists = FetchArtists();
+    const artists = FetchAllArtists();
     return (
         <ul>
             {artists.map((artist) =>
@@ -65,7 +18,7 @@ const ArtistList = () => {
 };
 
 const MemberList = (props) => {
-    const members = FetchMembers(props.artistId);
+    const members = FetchMembersByArtist(props.artistId);
     return (
         <ul>
             {members.map((member) =>
@@ -78,7 +31,7 @@ const MemberList = (props) => {
 };
 
 const Person = (props) => {
-    const person = FetchPerson(props.memberId)
+    const person = FetchPersonFromMember(props.memberId)
     return <span>{person.firstName} {person.lastName}</span>
 };
 

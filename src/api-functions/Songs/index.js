@@ -12,7 +12,7 @@ function FetchAllSongs() {
                 const newSongs = snapshot.docs.map((doc) => ({
                     id: doc.id,
                     ...doc.data()
-                }))
+                }));
                 setSongs(newSongs)
             })
     }, []);
@@ -37,7 +37,6 @@ function FetchSongsByRecord(record) {
     }, []);
     return songs;
 }
-
 
 export default FetchAllSongs;
 export {FetchSongsByRecord};

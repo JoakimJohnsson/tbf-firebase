@@ -10,7 +10,7 @@ const Navigation = () => (
         <Navbar className="standard-container navbar-header justify-content-center" bg="dark" variant="dark"
                 expand="lg">
             <Navbar.Brand>
-                <h1 className="m-0"><Link to={ROUTES.START}><TbfLogo/></Link></h1>
+                <Link to={ROUTES.START}><TbfLogo/></Link>
             </Navbar.Brand>
         </Navbar>
     </header>

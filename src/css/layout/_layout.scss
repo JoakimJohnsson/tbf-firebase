@@ -11,6 +11,14 @@
     margin-bottom: 3rem;
   }
 }
+.standard-box-wrapper__transparent {
+  @include box-padding-standard;
+  background: none;
+  margin-bottom: 2rem;
+  @include media-breakpoint-up(sm) {
+    margin-bottom: 3rem;
+  }
+}
 
 // Columns
 .standard-fullwidth-column {

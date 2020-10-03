@@ -11119,6 +11119,17 @@ code {
       background: #0a0a0a;
       margin-bottom: 3rem; } }
 
+.standard-box-wrapper__transparent {
+  padding: 0;
+  background: none;
+  margin-bottom: 2rem; }
+  @media (min-width: 576px) {
+    .standard-box-wrapper__transparent {
+      padding: 2rem; } }
+  @media (min-width: 576px) {
+    .standard-box-wrapper__transparent {
+      margin-bottom: 3rem; } }
+
 .standard-fullwidth-column {
   position: relative;
   width: 100%;

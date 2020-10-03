@@ -1,44 +1,28 @@
 import React from 'react';
-import TodoComponent from "../../components/MicroComponents";
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
+import ArtistList from "../../components/ArtistList";
 
 const ArtistPage = () => (
     <div className="row">
         <div className="standard-main-column">
-            <h1>Artists</h1>
-            <p>The music scene in Nyköping has delivered great music since the mid 90's. </p>
-            <p>This website, former home of band The Baseball Field and music labels Vanishing Vanity Music and Strandad
-                Sjöbuse Records, now brings you that music in a modern way.</p>
-            <p>Here is a <a href="/old">link</a> to the old site</p>
-            <h1>Artists</h1>
-            <p>The music scene in Nyköping has delivered great music since the mid 90's. </p>
-            <p>This website, former home of band The Baseball Field and music labels Vanishing Vanity Music and Strandad
-                Sjöbuse Records, now brings you that music in a modern way.</p>
-            <p>Here is a <a href="/old">link</a> to the old site</p>
-            <h1>Artists</h1>
-            <p>The music scene in Nyköping has delivered great music since the mid 90's. </p>
-            <p>This website, former home of band The Baseball Field and music labels Vanishing Vanity Music and Strandad
-                Sjöbuse Records, now brings you that music in a modern way.</p>
-            <p>Here is a <a href="/old">link</a> to the old site</p>
-            <h1>Artists</h1>
-            <p>The music scene in Nyköping has delivered great music since the mid 90's. </p>
-            <p>This website, former home of band The Baseball Field and music labels Vanishing Vanity Music and Strandad
-                Sjöbuse Records, now brings you that music in a modern way.</p>
-            <p>Here is a <a href="/old">link</a> to the old site</p>
-            <TodoComponent todo="In development, all accounts will be deleted."/>
-            <div className="mb-5 standard-box-wrapper__near-dark">
+            <div className="standard-box-wrapper__transparent">
+                <ArtistList/>
+
             </div>
         </div>
+
         <div className="standard-secondary-column">
             <div className="mb-5 standard-box-wrapper__near-dark">
-
-                {/*TODO: Component with icon and centered text below to use in footer nav*/}
-                <FontAwesomeIcon icon="home" size="2x"/>
-                <FontAwesomeIcon icon="record-vinyl" size="2x"/>
-                <FontAwesomeIcon icon="music" size="2x"/>
-
+                <h1>Artists</h1>
+                <p>The music scene in Nyköping has delivered great music since the early 90's. </p>
+                <p>This website, former home of band <b>The Baseball Field</b> and music labels <b>Vanishing Vanity Music</b> and <b>Strandad
+                    Sjöbuse Records</b>, now brings you that good old music in a modern way.</p>
+                <p>Here is a <a href="/old">link</a> to the old site</p>
+                <p className="small">This site - <FontAwesomeIcon icon={['far', 'copyright']} /> 2020 Joakim Johnsson</p>
+                <p className="small">Except where otherwise noted, creative content on this site is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/deed.en_US">Creative Commons Attribution 3.0 Unported License</a>.</p>
             </div>
         </div>
+
     </div>
 );
 export default ArtistPage;

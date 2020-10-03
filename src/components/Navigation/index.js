@@ -3,7 +3,7 @@ import * as ROUTES from '../../constants/routes';
 import {Link} from 'react-router-dom';
 import Navbar from 'react-bootstrap/Navbar';
 import TbfLogo from "../Logo";
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import FooterNavLink from "../linkcomponents/simple/FooterNavLink";
 
 const Navigation = () => (
     <header>
@@ -17,19 +17,12 @@ const Navigation = () => (
 );
 const NavigationFooter = () => (
     <Navbar className="navbar-footer px-2 px-sm-5" bg="dark" variant="dark" expand="true">
-        <NavLinkComponentFooter link={ROUTES.START} text={"Start"} icon={"home"}/>
-        <NavLinkComponentFooter link={ROUTES.ARTISTS} text={"Artists"} icon={"user-astronaut"}/>
-        <NavLinkComponentFooter link={ROUTES.RECORDS} text={"Records"} icon={"record-vinyl"}/>
-        <NavLinkComponentFooter link={ROUTES.SONGS} text={"Songs"} icon={"music"}/>
+        <FooterNavLink link={ROUTES.START} text={"Start"} icon={"home"}/>
+        <FooterNavLink link={ROUTES.ARTISTS} text={"Artists"} icon={"user-astronaut"}/>
+        <FooterNavLink link={ROUTES.RECORDS} text={"Records"} icon={"record-vinyl"}/>
+        <FooterNavLink link={ROUTES.SONGS} text={"Songs"} icon={"music"}/>
     </Navbar>
 );
 
-const NavLinkComponentFooter = ({link, text, icon}) => (
-    <>
-        <Link className="nav-link" to={link}><FontAwesomeIcon icon={icon} size="2x" className="d-block"/>
-            <span className="mt-1 d-none d-sm-inline-block">{text}</span>
-        </Link>
-    </>
-);
 export default Navigation;
 export {NavigationFooter};

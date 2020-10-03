@@ -1,6 +1,7 @@
 import React from 'react';
 import FetchAllArtists from "../../../../api-functions/Artists";
 import MembersByArtistList from "../MembersByArtistList";
+import DynamicLink from "../../../linkcomponents/simple/DynamicLink";
 
 const AllArtistsList = () => {
     const artists = FetchAllArtists();
@@ -8,8 +9,7 @@ const AllArtistsList = () => {
         <ul>
             {artists.map((artist) =>
                 <li key={artist.id}>
-                    {artist.name}
-                    <MembersByArtistList artistId={artist.id}/>
+                    <DynamicLink route="artist" id={artist.id} name={artist.name}/>
                 </li>
             )}
         </ul>

@@ -8,7 +8,7 @@ const MembersByArtistList = (props) => {
         <ul>
             {members.map((member) =>
                 <li key={member.id}>
-                    <Person memberId={member.id}/>
+                    <Person id={member.id}/>
                 </li>
             )}
         </ul>

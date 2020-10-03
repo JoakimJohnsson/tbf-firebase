@@ -1,13 +1,13 @@
 import React, {useState, useEffect} from 'react';
 import firebase from "firebase";
 
-function FetchPersonFromMember(member) {
+function FetchPersonFromId(id) {
     const [person, setPerson] = useState([]);
     useEffect(() => {
         firebase
             .firestore()
             .collection('persons')
-            .doc(member)
+            .doc(id)
             .get().then(function(doc) {
             setPerson(doc.data());
         });
@@ -15,4 +15,4 @@ function FetchPersonFromMember(member) {
     return person;
 }
 
-export default FetchPersonFromMember;
+export default FetchPersonFromId;

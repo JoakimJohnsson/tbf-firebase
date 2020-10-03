@@ -1,8 +1,8 @@
 import React from "react";
-import FetchPersonFromMember from "../../../../api-functions/Persons";
+import FetchPersonFromId from "../../../../api-functions/Persons";
 
 const Person = (props) => {
-    const person = FetchPersonFromMember(props.memberId)
+    const person = FetchPersonFromId(props.id)
     return <span>{person.firstName} {person.lastName}</span>
 };
 

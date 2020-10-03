@@ -1,13 +1,29 @@
 import React from 'react';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
-import ArtistList from "../../components/ArtistList";
+import {Link} from 'react-router-dom';
+import FetchAllArtists from "../../api-functions/Artists";
 
-const ArtistPage = () => (
+const ArtistLinks = () => {
+    const artists = FetchAllArtists();
+    return (
+        <ul>
+            {artists.map((artist) =>
+                <li key={artist.id}>
+                    <Link className="d-block" to={`/artist/${artist.id}`}>
+                        {artist.name}
+                    </Link>
+                </li>
+            )}
+        </ul>
+    )
+};
+
+const ArtistsPage = () => (
+
     <div className="row">
         <div className="standard-main-column">
             <div className="standard-box-wrapper__transparent">
-                <ArtistList/>
-
+                <ArtistLinks/>
             </div>
         </div>
 
@@ -22,7 +38,6 @@ const ArtistPage = () => (
                 <p className="small">Except where otherwise noted, creative content on this site is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/deed.en_US">Creative Commons Attribution 3.0 Unported License</a>.</p>
             </div>
         </div>
-
     </div>
 );
-export default ArtistPage;
+export default ArtistsPage;

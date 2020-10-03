@@ -18,32 +18,6 @@ const LoadingComponent = () => (
     </div>
 );
 
-const AdminCard = (props) => (
-    <div className="card card__dark h-100">
-        <div className="card-header">
-            <h3 className="m-0 pt-2">{props.username}</h3>
-        </div>
-        <div className="card-body">
-            <p>
-                <strong>ID:</strong> {props.uid}
-            </p>
-            <p>
-                <strong>E-Mail:</strong> {props.email}
-            </p>
-            <p>
-                <Link
-                    to={{
-                        pathname: `${ROUTES.ADMINISTRATION}/${props.uid}`,
-                        state: props.user,
-                    }}
-                >
-                    Details
-                </Link>
-            </p>
-        </div>
-    </div>
-);
-
 const DashboardListItemButton = (props) => (
     <button
         type="button"
@@ -56,5 +30,5 @@ const DashboardListItemButton = (props) => (
 );
 
 export default TodoComponent;
-export {Message, AdminCard, LoadingComponent, DashboardListItemButton};
+export {Message, LoadingComponent, DashboardListItemButton};
 

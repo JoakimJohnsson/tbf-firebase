@@ -1,7 +1,7 @@
 import React from "react";
-import FetchAllSongs from "../../api-functions/Songs";
+import FetchAllSongs from "../../../../api-functions/Songs";
 
-const SongList = () => {
+const AllSongsList = () => {
     const songs = FetchAllSongs();
     return (
         <ul>
@@ -17,4 +17,4 @@ const SongList = () => {
     )
 };
 
-export default SongList;
+export default AllSongsList;

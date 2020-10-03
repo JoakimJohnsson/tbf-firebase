@@ -1,9 +1,9 @@
 import React from 'react';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import firebase from '../../components/Firebase/firebase';
-import ArtistList from "../../components/ArtistList";
-import SongList from "../../components/SongList";
-import FullRecordList from "../../components/RecordList";
+import AllArtistsList from "../../components/listcomponents/simple/AllArtistsList";
+import AllSongsList from "../../components/listcomponents/simple/AllSongsList";
+import FullRecordList from "../../components/listcomponents/simple/AllRecordsList";
 
 const StartPage = () => (
     <div className="row">
@@ -12,7 +12,7 @@ const StartPage = () => (
 
             <div className="mb-3 standard-box-wrapper__near-dark">
                 <h2>Artists</h2>
-                <ArtistList />
+                <AllArtistsList />
             </div>
 
             <div className="mb-3 standard-box-wrapper__near-dark">
@@ -22,7 +22,7 @@ const StartPage = () => (
 
             <div className="mb-3 standard-box-wrapper__near-dark">
                 <h2>Songs</h2>
-                <SongList />
+                <AllSongsList />
             </div>
         </div>
 

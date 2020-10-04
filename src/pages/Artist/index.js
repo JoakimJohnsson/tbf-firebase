@@ -12,7 +12,7 @@ const ArtistPage = ({match}) => {
             <div className="standard-main-column order-2 order-lg-1">
                 {artist.name}
             </div>
-            <div className="standard-secondary-column order-1 order-lg-2">
+            <div className="standard-secondary-column order-1 order-lg-2 mb-5">
                 <div className="standard-box-wrapper__near-dark">
                     <h1>{artist.name}</h1>
                     <p>{artist.description}</p>

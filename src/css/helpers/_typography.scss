@@ -1,7 +1,7 @@
 @import 'variables';
 
 // Webfonts
-@import url('https://fonts.googleapis.com/css?family=Secular+One|Fira+Sans:300,400,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Iceland|Creepster|UnifrakturMaguntia|Kelly+Slab|Nova+Flat|Monoton|Bebas+Neue|Bangers|Secular+One|Fira+Sans:300,400,700&display=swap');
 
 .text-yellow {
   color: $color-tertiary;
@@ -49,4 +49,29 @@ label {
 .text-truncate__200px {
   @extend .text-truncate;
   max-width: 200px;
+}
+
+.logo-font-family__1 {
+  font-family: $tbf-font__logo-1;
+}
+.logo-font-family__2 {
+  font-family: $tbf-font__logo-2;
+}
+.logo-font-family__3 {
+  font-family: $tbf-font__logo-3;
+}
+.logo-font-family__4 {
+  font-family: $tbf-font__logo-4;
+}
+.logo-font-family__5 {
+  font-family: $tbf-font__logo-5;
+}
+.logo-font-family__6 {
+  font-family: $tbf-font__logo-6;
+}
+.logo-font-family__7 {
+  font-family: $tbf-font__logo-7;
+}
+.logo-font-family__8 {
+  font-family: $tbf-font__logo-8;
 }

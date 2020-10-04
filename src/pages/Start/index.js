@@ -4,14 +4,16 @@ import AllArtistsList from "../../components/listcomponents/simple/AllArtistsLis
 import AllSongsList from "../../components/listcomponents/simple/AllSongsList";
 import FullRecordList from "../../components/listcomponents/simple/AllRecordsList";
 import {CopyrightInfoComponent} from "../../components/MicroComponents";
+import IconLink from "../../components/linkcomponents/simple/IconNavLink";
+import * as ROUTES from "../../constants/routes";
 
 const StartPage = () => (
     <div className="row">
 
         <div className="standard-main-column">
 
-            <div className="mb-3 standard-box-wrapper__near-dark">
-                <h2>Artists        </h2>
+            <div className="mb-3">
+                <h2 className="d-inline-block">Popular artists</h2> <span className="ml-3"><IconLink link={ROUTES.ARTISTS} text={"See all artists"} icon={"user-astronaut"}/></span>
                 <AllArtistsList />
             </div>
 
@@ -34,7 +36,7 @@ const StartPage = () => (
                     Sjöbuse Records</b>, now brings you that good old music in a modern way.</p>
                 <p>Here is a <a href="/old">link</a> to the old site</p>
 
-                <CopyrightInfoComponent/>
+                <CopyrightInfoComponent />
             </div>
         </div>
 

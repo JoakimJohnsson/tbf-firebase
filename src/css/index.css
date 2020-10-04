@@ -4,7 +4,7 @@
  * Copyright 2011-2019 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
-@import url("https://fonts.googleapis.com/css?family=Secular+One|Fira+Sans:300,400,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Iceland|Creepster|UnifrakturMaguntia|Kelly+Slab|Nova+Flat|Monoton|Bebas+Neue|Bangers|Secular+One|Fira+Sans:300,400,700&display=swap");
 :root {
   --blue: #007bff;
   --indigo: #6610f2;
@@ -11216,6 +11216,30 @@ label {
 .text-truncate__200px {
   max-width: 200px; }
 
+.logo-font-family__1 {
+  font-family: "Bangers", cursive, sans-serif; }
+
+.logo-font-family__2 {
+  font-family: "Bebas Neue", cursive, sans-serif; }
+
+.logo-font-family__3 {
+  font-family: "Monoton", cursive, sans-serif; }
+
+.logo-font-family__4 {
+  font-family: "Nova Flat", cursive, sans-serif; }
+
+.logo-font-family__5 {
+  font-family: "Kelly Slab", cursive, sans-serif; }
+
+.logo-font-family__6 {
+  font-family: "UnifrakturMaguntia", cursive, sans-serif; }
+
+.logo-font-family__7 {
+  font-family: "Creepster", cursive, sans-serif; }
+
+.logo-font-family__8 {
+  font-family: "Iceland", cursive, sans-serif; }
+
 footer {
   position: absolute;
   bottom: 0;
@@ -11231,6 +11255,27 @@ footer {
     align-items: center; }
   .card__dark .pagination {
     font-weight: bold; }
+
+.artist-card__simple {
+  min-height: 190px;
+  font-size: 1.5rem;
+  text-transform: capitalize; }
+  .artist-card__simple a {
+    text-decoration: none;
+    border-radius: 3px;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: #000;
+    height: 100%;
+    width: 100%; }
+    .artist-card__simple a:hover, .artist-card__simple a:focus, .artist-card__simple a:active {
+      background: #0a0a0a; }
+  @media (min-width: 1200px) {
+    .artist-card__simple {
+      font-size: 1.2rem; } }
 
 .navbar-dark .navbar-toggler {
   border: none;

@@ -12,3 +12,29 @@
     font-weight: bold;
   }
 }
+
+.artist-card__simple {
+  min-height: 190px;
+  font-size: 1.5rem;
+  text-transform: capitalize;
+  a {
+    text-decoration: none;
+    border-radius: 3px;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: $color-black;
+    height: 100%;
+    width: 100%;
+    &:hover,
+    &:focus,
+    &:active {
+      background: $color-near-black;
+    }
+  }
+  @include media-breakpoint-up(xl) {
+    font-size: 1.2rem;
+  }
+}

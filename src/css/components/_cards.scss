@@ -34,7 +34,9 @@
     &:hover,
     &:focus,
     &:active {
+      @extend .transition__standard;
       background: $color-near-black;
+      transform: scale(.95);
     }
   }
   @include media-breakpoint-up(xl) {

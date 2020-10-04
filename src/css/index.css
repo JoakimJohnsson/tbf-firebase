@@ -4,7 +4,7 @@
  * Copyright 2011-2019 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
-@import url("https://fonts.googleapis.com/css?family=Playball|Iceland|Creepster|UnifrakturMaguntia|Kelly+Slab|Nova+Flat|Monoton|Bebas+Neue|Bangers|Secular+One|Fira+Sans:300,400,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Staatliches|Special+Elite|Playball|Iceland|Creepster|UnifrakturMaguntia|Kelly+Slab|Nova+Flat|Monoton|Bebas+Neue|Bangers|Secular+One|Fira+Sans:300,400,700&display=swap");
 :root {
   --blue: #007bff;
   --indigo: #6610f2;
@@ -11237,6 +11237,18 @@ label {
 .logo-font-family__9 {
   font-family: "Playball", cursive, sans-serif; }
 
+.logo-font-family__10 {
+  font-family: "Special Elite", cursive, sans-serif; }
+
+.logo-font-family__11 {
+  font-family: "Staatliches", cursive, sans-serif; }
+
+.transition__standard, .artist-card__simple a:hover, .artist-card__simple a:focus, .artist-card__simple a:active {
+  -webkit-transition: all .3s ease-in-out;
+  -moz-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out; }
+
 footer {
   position: absolute;
   bottom: 0;
@@ -11272,7 +11284,8 @@ footer {
       .artist-card__simple a {
         background: #000; } }
     .artist-card__simple a:hover, .artist-card__simple a:focus, .artist-card__simple a:active {
-      background: #0a0a0a; }
+      background: #0a0a0a;
+      transform: scale(0.95); }
   @media (min-width: 1200px) {
     .artist-card__simple {
       font-size: 1.2rem; } }

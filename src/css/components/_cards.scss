@@ -25,9 +25,12 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    background: $color-black;
+    background: transparent;
     height: 100%;
     width: 100%;
+    @include media-breakpoint-up(sm) {
+      background: $color-black;
+    }
     &:hover,
     &:focus,
     &:active {

@@ -5,7 +5,7 @@ import Person from "../../single/Person";
 const MembersByArtistList = (props) => {
     const members = FetchMembersByArtist(props.artistId);
     return (
-        <ul>
+        <ul className="list-unstyled">
             {members.map((member) =>
                 <li key={member.id}>
                     <Person id={member.id}/>

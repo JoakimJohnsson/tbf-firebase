@@ -5,18 +5,14 @@
 .standard-box-wrapper__near-dark {
   @include box-padding-standard;
   background: none;
-  margin-bottom: 2rem;
   @include media-breakpoint-up(sm) {
     background: $color-near-black;
-    margin-bottom: 3rem;
   }
 }
 .standard-box-wrapper__transparent {
   @include box-padding-standard;
   background: none;
-  margin-bottom: 2rem;
   @include media-breakpoint-up(sm) {
-    margin-bottom: 3rem;
   }
 }
 

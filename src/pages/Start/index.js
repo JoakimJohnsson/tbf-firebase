@@ -10,26 +10,29 @@ import * as ROUTES from "../../constants/routes";
 const StartPage = () => (
     <div className="row">
 
-        <div className="standard-main-column">
+        <div className="standard-main-column order-2 order-lg-1">
 
-            <div className="mb-3">
-                <h2 className="d-inline-block">Popular artists</h2> <span className="ml-3"><IconLink link={ROUTES.ARTISTS} text={"See all artists"} icon={"user-astronaut"}/></span>
+            <div className="mb-5">
+                <h2>Popular artists</h2>
                 <AllArtistsList />
+                <IconLink className={"ml-3"} link={ROUTES.ARTISTS} text={"See all artists"} icon={"user-astronaut"}/>
             </div>
 
-            <div className="mb-3 standard-box-wrapper__near-dark">
-                <h2>Records</h2>
+            <div className="mb-5">
+                <h2>Popular records</h2>
                 <FullRecordList />
+                <IconLink className={"ml-3"} link={ROUTES.RECORDS} text={"See all records"} icon={"record-vinyl"}/>
             </div>
 
-            <div className="mb-3 standard-box-wrapper__near-dark">
-                <h2>Songs</h2>
+            <div className="mb-5">
+                <h2>Popular songs</h2>
                 <AllSongsList />
+                <IconLink className={"ml-3"} link={ROUTES.SONGS} text={"See all songs"} icon={"music"}/>
             </div>
         </div>
 
-        <div className="standard-secondary-column">
-            <div className="mb-5 standard-box-wrapper__near-dark">
+        <div className="standard-secondary-column mb-5 order-1 order-lg-2">
+            <div className="standard-box-wrapper__near-dark">
                 <h1>The Baseball Field & Friends</h1>
                 <p>The music scene in Nyköping has delivered great music since the early 90's. </p>
                 <p>This website, former home of band <b>The Baseball Field</b> and music labels <b>Vanishing Vanity Music</b> and <b>Strandad

@@ -12,9 +12,10 @@ import Navigation from '../Navigation';
 import Footer from "../Footer";
 import StartPage from '../../pages/Start';
 import ArtistsPage from "../../pages/Artists";
-import RecordsPage from "../../pages/Records";
-import SongsPage from "../../pages/Songs";
 import ArtistPage from "../../pages/Artist";
+import RecordsPage from "../../pages/Records";
+import RecordPage from "../../pages/Record";
+import SongsPage from "../../pages/Songs";
 
 library.add(faAirbnb, faGoogle, faFacebookF, faArrowAltCircleLeft, faCopyright, faWrench, faHome, faRecordVinyl,
     faMusic, faSearch, faUserAstronaut, faPlayCircle, faPlus, faTimes, faPen, faMinus, faChevronLeft, faChevronRight, faSpinner, faSave,
@@ -28,6 +29,7 @@ const App = () => (
             <Route exact path={ROUTES.ARTISTS} component={ArtistsPage}/>
             <Route path={ROUTES.ARTIST} component={ArtistPage}/>
             <Route exact path={ROUTES.RECORDS} component={RecordsPage}/>
+            <Route path={ROUTES.RECORD} component={RecordPage}/>
             <Route exact path={ROUTES.SONGS} component={SongsPage}/>
         </div>
         <Footer/>

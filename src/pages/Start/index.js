@@ -2,7 +2,7 @@ import React from 'react';
 import firebase from '../../components/Firebase/firebase';
 import AllArtistsList from "../../components/listcomponents/simple/AllArtistsList";
 import AllSongsList from "../../components/listcomponents/simple/AllSongsList";
-import FullRecordList from "../../components/listcomponents/simple/AllRecordsList";
+import AllRecordsList from "../../components/listcomponents/simple/AllRecordsList";
 import {CopyrightInfoComponent} from "../../components/MicroComponents";
 import IconLink from "../../components/linkcomponents/simple/IconNavLink";
 import * as ROUTES from "../../constants/routes";
@@ -20,7 +20,7 @@ const StartPage = () => (
 
             <div className="mb-5">
                 <h2>Popular records</h2>
-                <FullRecordList />
+                <AllRecordsList />
                 <IconLink className={"ml-3"} link={ROUTES.RECORDS} text={"See all records"} icon={"record-vinyl"}/>
             </div>
 

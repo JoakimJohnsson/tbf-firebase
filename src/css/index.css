@@ -11290,6 +11290,15 @@ footer {
     .artist-card__simple {
       font-size: 1.2rem; } }
 
+.song-card__simple {
+  background: #88ffcc;
+  color: #000; }
+  .song-card__simple .label {
+    font-weight: bold;
+    text-transform: uppercase; }
+  .song-card__simple .small {
+    font-weight: normal; }
+
 .navbar-dark .navbar-toggler {
   border: none;
   padding: 0;

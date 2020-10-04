@@ -18,4 +18,19 @@ function FetchAllRecords() {
     return records;
 }
 
+function FetchRecordFromId(id) {
+    const [record, setRecord] = useState([]);
+    useEffect(() => {
+        firebase
+            .firestore()
+            .collection('records')
+            .doc(id)
+            .get().then(function(doc) {
+            setRecord(doc.data());
+        });
+    }, []);
+    return record;
+}
+
 export default FetchAllRecords;
+export {FetchRecordFromId};

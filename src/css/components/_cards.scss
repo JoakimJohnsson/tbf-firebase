@@ -43,3 +43,16 @@
     font-size: 1.2rem;
   }
 }
+
+.song-card__simple {
+  background: $color-secondary;
+  color: $color-black;
+  .label {
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  .small {
+    font-weight: normal;
+  }
+
+}

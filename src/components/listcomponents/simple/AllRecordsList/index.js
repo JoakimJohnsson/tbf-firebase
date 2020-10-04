@@ -1,19 +1,18 @@
 import React from "react";
 import FetchAllRecords from "../../../../api-functions/Records";
-import SongsByRecordList from "../SongsByRecordList";
+import {LoadingComponent} from "../../../MicroComponents";
+import DynamicCard from "../../../cardcomponents/simple/DynamicCard";
 
 const AllRecordsList = () => {
     const records = FetchAllRecords();
-    return (
-        <ul>
+    return records.length ?
+        (<div className="row">
             {records.map((record) =>
-                <li key={record.id}>
-                    {record.name}
-                    <SongsByRecordList recordId={record.id}/>
-                </li>
+                <DynamicCard route="record" id={record.id} name={record.name}/>
             )}
-        </ul>
-    )
+        </div>)
+        :
+        (<LoadingComponent/>)
 };
 
 export default AllRecordsList;

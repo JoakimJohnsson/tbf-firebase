@@ -11277,15 +11277,14 @@ footer {
     align-items: center;
     justify-content: center;
     text-align: center;
-    background: transparent;
     height: 100%;
-    width: 100%; }
-    @media (min-width: 576px) {
-      .artist-card__simple a {
-        background: #000; } }
+    width: 100%;
+    background: #000;
+    color: #fff; }
     .artist-card__simple a:hover, .artist-card__simple a:focus, .artist-card__simple a:active {
       background: #0a0a0a;
-      transform: scale(0.95); }
+      transform: scale(0.95);
+      color: #fff; }
   @media (min-width: 1200px) {
     .artist-card__simple {
       font-size: 1.2rem; } }
@@ -11298,6 +11297,21 @@ footer {
     text-transform: uppercase; }
   .song-card__simple .small {
     font-weight: normal; }
+
+.card-variant__1 a {
+  color: #ff88cc; }
+  .card-variant__1 a:hover, .card-variant__1 a:focus, .card-variant__1 a:active {
+    color: #ffcfeb; }
+
+.card-variant__2 a {
+  color: #88ffcc; }
+  .card-variant__2 a:hover, .card-variant__2 a:focus, .card-variant__2 a:active {
+    color: #b8ffe0; }
+
+.card-variant__3 a {
+  color: #fffe88; }
+  .card-variant__3 a:hover, .card-variant__3 a:focus, .card-variant__3 a:active {
+    color: #fffea0; }
 
 .navbar-dark .navbar-toggler {
   border: none;

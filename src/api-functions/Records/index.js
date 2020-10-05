@@ -18,6 +18,24 @@ function FetchAllRecords() {
     return records;
 }
 
+function FetchRecordsByArtist(artistId) {
+    const [records, setRecords] = useState([]);
+    useEffect(() => {
+        firebase
+            .firestore()
+            .collection('records')
+            .where("artistId", "==", artistId )
+            .onSnapshot((snapshot) => {
+                const newRecords = snapshot.docs.map((doc) => ({
+                    id: doc.id,
+                    ...doc.data()
+                }));
+                setRecords(newRecords)
+            })
+    }, []);
+    return records;
+}
+
 function FetchRecordFromId(id) {
     const [record, setRecord] = useState([]);
     useEffect(() => {
@@ -33,4 +51,4 @@ function FetchRecordFromId(id) {
 }
 
 export default FetchAllRecords;
-export {FetchRecordFromId};
+export {FetchRecordFromId, FetchRecordsByArtist};

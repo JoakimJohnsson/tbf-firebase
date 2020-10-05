@@ -25,18 +25,17 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    background: transparent;
     height: 100%;
     width: 100%;
-    @include media-breakpoint-up(sm) {
-      background: $color-black;
-    }
+    background: $color-black;
+    color: $color-white;
     &:hover,
     &:focus,
     &:active {
       @extend .transition__standard;
       background: $color-near-black;
       transform: scale(.95);
+      color: $color-white;
     }
   }
   @include media-breakpoint-up(xl) {
@@ -54,5 +53,35 @@
   .small {
     font-weight: normal;
   }
+}
 
+.card-variant__1 {
+  a {
+    color: $color-primary;
+    &:hover,
+    &:focus,
+    &:active {
+      color: $color-primary__lighten;
+    }
+  }
+}
+.card-variant__2 {
+  a {
+    color: $color-secondary;
+    &:hover,
+    &:focus,
+    &:active {
+      color: $color-secondary__lighten;
+    }
+  }
+}
+.card-variant__3 {
+  a {
+    color: $color-tertiary;
+    &:hover,
+    &:focus,
+    &:active {
+      color: $color-tertiary__lighten;
+    }
+  }
 }

@@ -1,9 +1,5 @@
 import React from 'react';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
-import {Link} from "react-router-dom";
-import * as ROUTES from "../../constants/routes";
-
-const Message = props => <div>{props.msg}</div>;
 
 const TodoComponent = (props) => (
     <p className="todo-component">
@@ -12,9 +8,12 @@ const TodoComponent = (props) => (
     </p>
 );
 
-const LoadingComponent = () => (
+const LoadingComponent = (props) => (
     <div className="loading-component">
-        <FontAwesomeIcon icon="spinner" spin size="2x"/>
+        <div className="text-center">
+        <p className="mb-3">{props.text || "Loading..."}</p>
+        <p><FontAwesomeIcon icon="spinner" spin size="2x"/></p>
+        </div>
     </div>
 );
 
@@ -40,5 +39,5 @@ const CopyrightInfoComponent = () => (
 );
 
 export default TodoComponent;
-export {Message, LoadingComponent, DashboardListItemButton, CopyrightInfoComponent};
+export {LoadingComponent, DashboardListItemButton, CopyrightInfoComponent};
 

@@ -1,9 +1,9 @@
 import React from 'react';
 import {BrowserRouter as Router, Route} from 'react-router-dom';
-import * as ROUTES from '../../constants/routes'
-import {library} from '@fortawesome/fontawesome-svg-core'
-import {faAirbnb, faGoogle, faFacebookF} from '@fortawesome/free-brands-svg-icons'
-import {faArrowAltCircleLeft, faCopyright} from '@fortawesome/free-regular-svg-icons'
+import * as ROUTES from '../../constants/routes';
+import {library} from '@fortawesome/fontawesome-svg-core';
+import {faAirbnb, faGoogle, faFacebookF} from '@fortawesome/free-brands-svg-icons';
+import {faArrowAltCircleLeft, faCopyright} from '@fortawesome/free-regular-svg-icons';
 import {
     faWrench, faHome, faRecordVinyl, faMusic, faSearch, faUserAstronaut, faPlayCircle, faPlus, faTimes, faPen,
     faMinus, faChevronLeft, faChevronRight, faSpinner, faSave, faAngleDoubleDown

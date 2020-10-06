@@ -6,6 +6,7 @@ import AllRecordsList from "../../components/listcomponents/simple/AllRecordsLis
 import {CopyrightInfoComponent} from "../../components/MicroComponents";
 import IconLink from "../../components/linkcomponents/simple/IconNavLink";
 import * as ROUTES from "../../constants/routes";
+import * as COLUMNS from "../../constants/columns";
 
 const StartPage = () => (
     <div className="row">
@@ -20,7 +21,7 @@ const StartPage = () => (
 
             <div className="mb-5">
                 <h2>Popular records</h2>
-                <AllRecordsList />
+                <AllRecordsList columnClass={COLUMNS.RECORDS_MAIN}/>
                 <IconLink className={"ml-3"} link={ROUTES.RECORDS} text={"See all records"} icon={"record-vinyl"}/>
             </div>
 

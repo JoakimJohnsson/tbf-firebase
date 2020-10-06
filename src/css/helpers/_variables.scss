@@ -7,6 +7,7 @@ $color-light-grey: #444;
 $color-vibrant-pink: #ff88cc;
 $color-vibrant-green: #88ffcc;
 $color-vibrant-yellow: #fffe88;
+$color-vibrant-blue: #88a1ff;
 // Color variables
 $color-primary: $color-vibrant-pink;
 $color-primary__lighten: #ffcfeb;
@@ -14,6 +15,8 @@ $color-secondary: $color-vibrant-green;
 $color-secondary__lighten: #b8ffe0;
 $color-tertiary: $color-vibrant-yellow;
 $color-tertiary__lighten: #fffea0;
+$color-quaternary: $color-vibrant-blue;
+$color-quaternary__lighten: #a0c6ff;
 $color-bg: $color-black;
 $color-bg__lighten: lighten($color-bg, 50%);
 $color-border: $color-light-grey;

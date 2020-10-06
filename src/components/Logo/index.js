@@ -69,9 +69,4 @@ const TbfLogo = () => (
     </>
 );
 
-// const TbfLogoText = () => (
-//
-// );
-
 export default TbfLogo;
-// export {TbfLogoText};

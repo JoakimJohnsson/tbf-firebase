@@ -55,37 +55,6 @@
   }
 }
 
-.card-variant__1 {
-  a {
-    color: $color-primary;
-    &:hover,
-    &:focus,
-    &:active {
-      color: $color-primary__lighten;
-    }
-  }
-}
-.card-variant__2 {
-  a {
-    color: $color-secondary;
-    &:hover,
-    &:focus,
-    &:active {
-      color: $color-secondary__lighten;
-    }
-  }
-}
-.card-variant__3 {
-  a {
-    color: $color-tertiary;
-    &:hover,
-    &:focus,
-    &:active {
-      color: $color-tertiary__lighten;
-    }
-  }
-}
-
 .record-card {
   width: 100%;
   padding-top: 100%;
@@ -120,7 +89,7 @@
     a {
       height: 100%;
       display: flex;
-      justify-content: end;
+      justify-content: flex-end;
       flex-direction: column;
       text-decoration: none;
     }

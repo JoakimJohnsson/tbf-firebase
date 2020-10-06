@@ -11243,6 +11243,26 @@ label {
 .logo-font-family__11 {
   font-family: "Staatliches", cursive, sans-serif; }
 
+.text-color-variant__1 {
+  color: #ff88cc !important; }
+  .text-color-variant__1:hover, .text-color-variant__1:focus, .text-color-variant__1:active {
+    color: #ffcfeb !important; }
+
+.text-color-variant__2 {
+  color: #88ffcc !important; }
+  .text-color-variant__2:hover, .text-color-variant__2:focus, .text-color-variant__2:active {
+    color: #b8ffe0 !important; }
+
+.text-color-variant__3 {
+  color: #fffe88 !important; }
+  .text-color-variant__3:hover, .text-color-variant__3:focus, .text-color-variant__3:active {
+    color: #fffea0 !important; }
+
+.text-color-variant__4 {
+  color: #88a1ff !important; }
+  .text-color-variant__4:hover, .text-color-variant__4:focus, .text-color-variant__4:active {
+    color: #a0c6ff !important; }
+
 .transition__standard, .artist-card__simple a:hover, .artist-card__simple a:focus, .artist-card__simple a:active, .record-card:hover, .record-card:focus, .record-card:active {
   -webkit-transition: all .3s ease-in-out;
   -moz-transition: all .3s ease-in-out;
@@ -11298,21 +11318,6 @@ footer {
   .song-card__simple .small {
     font-weight: normal; }
 
-.card-variant__1 a {
-  color: #ff88cc; }
-  .card-variant__1 a:hover, .card-variant__1 a:focus, .card-variant__1 a:active {
-    color: #ffcfeb; }
-
-.card-variant__2 a {
-  color: #88ffcc; }
-  .card-variant__2 a:hover, .card-variant__2 a:focus, .card-variant__2 a:active {
-    color: #b8ffe0; }
-
-.card-variant__3 a {
-  color: #fffe88; }
-  .card-variant__3 a:hover, .card-variant__3 a:focus, .card-variant__3 a:active {
-    color: #fffea0; }
-
 .record-card {
   width: 100%;
   padding-top: 100%;
@@ -11338,7 +11343,7 @@ footer {
     .record-card .record-card__content a {
       height: 100%;
       display: flex;
-      justify-content: end;
+      justify-content: flex-end;
       flex-direction: column;
       text-decoration: none; }
 

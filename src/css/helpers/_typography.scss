@@ -51,6 +51,7 @@ label {
   max-width: 200px;
 }
 
+// variants
 .logo-font-family__1 {
   font-family: $tbf-font__logo-1;
 }
@@ -83,4 +84,37 @@ label {
 }
 .logo-font-family__11 {
   font-family: $tbf-font__logo-11;
+}
+
+.text-color-variant__1 {
+  color: $color-primary !important;
+  &:hover,
+  &:focus,
+  &:active {
+    color: $color-primary__lighten !important;
+  }
+}
+.text-color-variant__2 {
+  color: $color-secondary !important;
+  &:hover,
+  &:focus,
+  &:active {
+    color: $color-secondary__lighten !important;
+  }
+}
+.text-color-variant__3 {
+  color: $color-tertiary !important;
+  &:hover,
+  &:focus,
+  &:active {
+    color: $color-tertiary__lighten !important;
+  }
+}
+.text-color-variant__4 {
+  color: $color-quaternary !important;
+  &:hover,
+  &:focus,
+  &:active {
+    color: $color-quaternary__lighten !important;
+  }
 }

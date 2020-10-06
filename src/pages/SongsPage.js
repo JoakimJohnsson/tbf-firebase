@@ -1,7 +1,7 @@
 import React from 'react';
-import {CopyrightInfoComponent} from "../../components/MicroComponents";
-import AllSongsList from "../../components/listcomponents/simple/AllSongsList";
-import * as COLUMNS from "../../constants/columns";
+import {CopyrightInfoComponent} from "../components/MicroComponents/MicroComponents";
+import AllSongsList from "../components/listcomponents/simple/AllSongsList";
+import * as COLUMNS from "../constants/columns";
 
 const SongsPage = () => (
 

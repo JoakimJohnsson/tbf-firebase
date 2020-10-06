@@ -1,8 +1,8 @@
 import React from 'react';
-import {CopyrightInfoComponent} from "../../components/MicroComponents";
-import {FetchRecordFromId} from "../../api-functions/Records";
-import SongsByRecordList from "../../components/listcomponents/simple/SongsByRecordList";
-import imgUnavailable from "../../images/image_unavailable.png";
+import {CopyrightInfoComponent} from "../components/MicroComponents/MicroComponents";
+import {FetchRecordFromId} from "../api-functions/records-api";
+import SongsByRecordList from "../components/listcomponents/simple/SongsByRecordList";
+import imgUnavailable from "../images/image_unavailable.png";
 
 const RecordPage = ({match}) => {
     const {params: {id}} = match;

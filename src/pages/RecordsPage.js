@@ -1,7 +1,7 @@
 import React from 'react';
-import {CopyrightInfoComponent} from "../../components/MicroComponents";
-import AllRecordsList from "../../components/listcomponents/simple/AllRecordsList";
-import * as COLUMNS from "../../constants/columns"
+import {CopyrightInfoComponent} from "../components/MicroComponents/MicroComponents";
+import AllRecordsList from "../components/listcomponents/simple/AllRecordsList";
+import * as COLUMNS from "../constants/columns"
 
 const RecordsPage = () => (
     <div className="row no-gutters">

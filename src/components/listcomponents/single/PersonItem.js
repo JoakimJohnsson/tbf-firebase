@@ -1,5 +1,5 @@
 import React from "react";
-import FetchPersonFromId from "../../../../api-functions/Persons";
+import FetchPersonFromId from "../../../api-functions/persons-api";
 
 const Person = (props) => {
     const person = FetchPersonFromId(props.id)

@@ -1,7 +1,7 @@
 import React from "react";
-import FetchAllRecords from "../../../../api-functions/Records";
-import {LoadingComponent} from "../../../MicroComponents";
-import RecordCard from "../../../cardcomponents/RecordCard";
+import FetchAllRecords from "../../../api-functions/records-api";
+import {LoadingComponent} from "../../MicroComponents/MicroComponents";
+import RecordCard from "../../cardcomponents/RecordCard";
 
 const AllRecordsList = (props) => {
     const records = FetchAllRecords();

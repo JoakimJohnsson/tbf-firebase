@@ -1,12 +1,12 @@
 import React from 'react';
-import firebase from '../../components/Firebase/firebase';
-import AllArtistsList from "../../components/listcomponents/simple/AllArtistsList";
-import AllSongsList from "../../components/listcomponents/simple/AllSongsList";
-import AllRecordsList from "../../components/listcomponents/simple/AllRecordsList";
-import {CopyrightInfoComponent} from "../../components/MicroComponents";
-import IconLink from "../../components/linkcomponents/simple/IconNavLink";
-import * as ROUTES from "../../constants/routes";
-import * as COLUMNS from "../../constants/columns";
+import firebase from '../components/Firebase/firebase';
+import AllArtistsList from "../components/listcomponents/simple/AllArtistsList";
+import AllSongsList from "../components/listcomponents/simple/AllSongsList";
+import AllRecordsList from "../components/listcomponents/simple/AllRecordsList";
+import {CopyrightInfoComponent} from "../components/MicroComponents/MicroComponents";
+import IconLink from "../components/linkcomponents/simple/IconNavLink";
+import * as ROUTES from "../constants/routes";
+import * as COLUMNS from "../constants/columns";
 
 const StartPage = () => (
     <div className="row">

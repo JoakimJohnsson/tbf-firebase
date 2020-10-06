@@ -1,5 +1,5 @@
 import React from 'react';
-import {NavigationFooter} from "../Navigation";
+import {NavigationFooter} from "../Navigation/Navigation";
 
 const Footer = () => (
     <footer className="container-fluid fixed-bottom">

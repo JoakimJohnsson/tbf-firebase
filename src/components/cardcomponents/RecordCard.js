@@ -1,7 +1,7 @@
-import React from 'react';
+import React from "react";
 import {Link} from "react-router-dom";
-import imgUnavailable from "../../../images/image_unavailable.png"
-import Artist from "../../listcomponents/single/Artist";
+import imgUnavailable from "../../images/image_unavailable.png";
+import Artist from "../listcomponents/single/ArtistItem";
 
 const RecordCard = (props) => {
     let rand = Math.floor(Math.random() * 4) + 1;

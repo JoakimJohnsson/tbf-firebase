@@ -1,5 +1,5 @@
 import React from 'react';
-import Artist from "../../../listcomponents/single/Artist";
+import Artist from "../../listcomponents/single/ArtistItem";
 
 const SongCard = (props) => {
 

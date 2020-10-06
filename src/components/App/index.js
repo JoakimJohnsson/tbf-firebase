@@ -8,14 +8,14 @@ import {
     faWrench, faHome, faRecordVinyl, faMusic, faSearch, faUserAstronaut, faPlayCircle, faPlus, faTimes, faPen,
     faMinus, faChevronLeft, faChevronRight, faSpinner, faSave, faAngleDoubleDown
 } from '@fortawesome/free-solid-svg-icons';
-import Navigation from '../Navigation';
-import Footer from "../Footer";
-import StartPage from '../../pages/Start';
-import ArtistsPage from "../../pages/Artists";
-import ArtistPage from "../../pages/Artist";
-import RecordsPage from "../../pages/Records";
-import RecordPage from "../../pages/Record";
-import SongsPage from "../../pages/Songs";
+import Navigation from '../Navigation/Navigation';
+import Footer from "../Footer/footer";
+import StartPage from '../../pages/StartPage';
+import ArtistsPage from "../../pages/ArtistsPage";
+import ArtistPage from "../../pages/ArtistPage";
+import RecordsPage from "../../pages/RecordsPage";
+import RecordPage from "../../pages/RecordPage";
+import SongsPage from "../../pages/SongsPage";
 
 library.add(faAirbnb, faGoogle, faFacebookF, faArrowAltCircleLeft, faCopyright, faWrench, faHome, faRecordVinyl,
     faMusic, faSearch, faUserAstronaut, faPlayCircle, faPlus, faTimes, faPen, faMinus, faChevronLeft, faChevronRight, faSpinner, faSave,

@@ -1,7 +1,7 @@
 import React from "react";
-import FetchAllSongs from "../../../../api-functions/Songs";
-import {LoadingComponent} from "../../../MicroComponents";
-import SongCard from "../../../cardcomponents/simple/SongCard";
+import FetchAllSongs from "../../../api-functions/songs-api";
+import {LoadingComponent} from "../../MicroComponents/MicroComponents";
+import SongCard from "../../cardcomponents/simple/SongCard";
 
 const AllSongsList = (props) => {
     const songs = FetchAllSongs();

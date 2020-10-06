@@ -1,5 +1,5 @@
 import React from "react";
-import {FetchSongFromId} from "../../../../api-functions/Songs";
+import {FetchSongFromId} from "../../../api-functions/songs-api";
 
 const Song = (props) => {
     const song = FetchSongFromId(props.id);

@@ -11269,6 +11269,9 @@ label {
   -o-transition: all .3s ease-in-out;
   transition: all .3s ease-in-out; }
 
+img {
+  border: 2px solid #000; }
+
 footer {
   position: absolute;
   bottom: 0;
@@ -11312,7 +11315,7 @@ footer {
 .song-card__simple {
   background: #0a0a0a;
   border-radius: 5px;
-  border: 1px solid #444;
+  border: 2px solid #444;
   color: #fff;
   font-size: 90%; }
   .song-card__simple .label {

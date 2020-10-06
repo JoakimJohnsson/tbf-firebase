@@ -11353,7 +11353,8 @@ footer {
   font-weight: bold; }
 
 .card-sub-title {
-  font-size: 80%; }
+  font-size: 80%;
+  text-transform: capitalize; }
 
 .navbar-dark .navbar-toggler {
   border: none;

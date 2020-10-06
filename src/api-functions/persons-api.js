@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import {useState, useEffect} from 'react';
 import firebase from "firebase";
 
 function FetchPersonFromId(id) {
@@ -11,7 +11,7 @@ function FetchPersonFromId(id) {
             .get().then(function(doc) {
             setPerson(doc.data());
         });
-    }, []);
+    }, [id]);
     return person;
 }
 

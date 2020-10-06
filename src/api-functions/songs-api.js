@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import {useEffect, useState} from "react";
 import firebase from "firebase";
 
 function FetchAllSongs() {
@@ -32,7 +32,7 @@ function FetchSongsByRecord(record) {
                 }));
                 setSongs(newSongs)
             })
-    }, []);
+    }, [record]);
     return songs;
 }
 
@@ -46,7 +46,7 @@ function FetchSongFromId(id) {
             .get().then(function(doc) {
             setSong(doc.data());
         });
-    }, []);
+    }, [id]);
     return song;
 }
 

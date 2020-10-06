@@ -8,6 +8,8 @@ import IconLink from "../components/linkcomponents/simple/IconNavLink";
 import * as ROUTES from "../constants/routes";
 import * as COLUMNS from "../constants/columns";
 
+console.log("WE HAVE FIREBASE", firebase.performance.name);
+
 const StartPage = () => (
     <div className="row">
 

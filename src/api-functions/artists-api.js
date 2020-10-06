@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import {useState, useEffect} from 'react';
 import firebase from "firebase";
 
 function FetchAllArtists() {
@@ -28,7 +28,7 @@ function FetchArtistFromId(id) {
             .get().then(function(doc) {
             setArtist(doc.data());
         });
-    }, []);
+    }, [id]);
     return artist;
 }
 

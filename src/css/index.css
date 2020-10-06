@@ -11174,22 +11174,22 @@ code {
 
 h1 {
   margin-bottom: 1.5rem;
-  font-size: 1.8rem; }
+  font-size: 1.5rem; }
   @media (min-width: 576px) {
     h1 {
-      font-size: 2.3rem; } }
-  @media (min-width: 768px) {
+      font-size: 2rem; } }
+  @media (min-width: 1200px) {
     h1 {
-      font-size: 2.8rem; } }
+      font-size: 2.5rem; } }
 
 h2 {
   font-size: 1.3rem; }
   @media (min-width: 576px) {
     h2 {
       font-size: 1.65rem; } }
-  @media (min-width: 768px) {
+  @media (min-width: 1200px) {
     h2 {
-      font-size: 1.8rem; } }
+      font-size: 2rem; } }
 
 h3 {
   font-size: 1.1rem; }
@@ -11291,7 +11291,7 @@ footer {
   text-transform: capitalize; }
   .artist-card__simple a {
     text-decoration: none;
-    border-radius: 3px;
+    border-radius: 5px;
     padding: 1rem;
     display: flex;
     align-items: center;
@@ -11310,13 +11310,17 @@ footer {
       font-size: 1.2rem; } }
 
 .song-card__simple {
-  background: #88ffcc;
-  color: #000; }
+  background: #0a0a0a;
+  border-radius: 5px;
+  border: 1px solid #444;
+  color: #fff;
+  font-size: 90%; }
   .song-card__simple .label {
     font-weight: bold;
     text-transform: uppercase; }
   .song-card__simple .small {
-    font-weight: normal; }
+    font-weight: normal;
+    text-transform: capitalize; }
 
 .record-card {
   width: 100%;

@@ -3,9 +3,11 @@ import Artist from "../../../listcomponents/single/Artist";
 
 const SongCard = (props) => {
 
+    let rand = Math.floor(Math.random() * 4) + 1;
+
     return (
-        <div className="col-12 col-md-6 p-3" key={props.id}>
-            <div className="song-card__simple p-3">
+        <div className={props.columnClass} key={props.id}>
+            <div className={`song-card__simple p-3 text-color-variant__${rand.toString()}`}>
                 <p className="label mb-1"><Artist id={props.artistId}/></p>
                 <p className="small mb-3">{props.name}</p>
 

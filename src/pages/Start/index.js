@@ -27,7 +27,7 @@ const StartPage = () => (
 
             <div className="mb-5">
                 <h2>Popular songs</h2>
-                <AllSongsList />
+                <AllSongsList columnClass={COLUMNS.SONGS_MAIN}/>
                 <IconLink className={"ml-3"} link={ROUTES.SONGS} text={"See all songs"} icon={"music"}/>
             </div>
         </div>

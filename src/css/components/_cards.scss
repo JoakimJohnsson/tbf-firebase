@@ -19,7 +19,7 @@
   text-transform: capitalize;
   a {
     text-decoration: none;
-    border-radius: 3px;
+    border-radius: 5px;
     padding: 1rem;
     display: flex;
     align-items: center;
@@ -44,14 +44,18 @@
 }
 
 .song-card__simple {
-  background: $color-secondary;
-  color: $color-black;
+  background: $color-near-black;
+  border-radius: 5px;
+  border: 1px solid $color-border;
+  color: $color-white;
+  font-size: 90%;
   .label {
     font-weight: bold;
     text-transform: uppercase;
   }
   .small {
     font-weight: normal;
+    text-transform: capitalize;
   }
 }
 

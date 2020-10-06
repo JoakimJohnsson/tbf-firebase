@@ -8,7 +8,7 @@ const AllRecordsList = (props) => {
     return records.length ?
         (<div className="row">
             {records.map((record) =>
-                <RecordCard route="record" id={record.id} name={record.name} artistId={record.artistId} coverUrl={record.coverUrl} columnClass={props.columnClass}/>
+                <RecordCard route="record" id={record.id} name={record.name} artistId={record.artistId} coverUrl={record.coverUrl} columnClass={props.columnClass} key={record.id}/>
             )}
         </div>)
         :

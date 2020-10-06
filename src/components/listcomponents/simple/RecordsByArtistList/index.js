@@ -1,7 +1,8 @@
 import React from "react";
 import {LoadingComponent} from "../../../MicroComponents";
-import DynamicCard from "../../../cardcomponents/simple/DynamicCard";
 import {FetchRecordsByArtist} from "../../../../api-functions/Records";
+import RecordCard from "../../../cardcomponents/RecordCard";
+import * as COLUMNS from "../../../../constants/columns";
 
 const RecordsByArtistList = (props) => {
     const records = FetchRecordsByArtist(props.artistId);
@@ -9,7 +10,7 @@ const RecordsByArtistList = (props) => {
     return records.length ?
         (<div className="row">
             {records.map((record) =>
-                <DynamicCard route="record" id={record.id} name={record.name}/>
+                <RecordCard route="record" id={record.id} name={record.name} artistId={record.artistId} coverUrl={record.coverUrl} columnClass={COLUMNS.RECORDS_FULLWIDTH} />
             )}
         </div>)
         :

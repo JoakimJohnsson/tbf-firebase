@@ -6,7 +6,7 @@ import Artist from "../../listcomponents/single/Artist";
 const RecordCard = (props) => {
     let rand = Math.floor(Math.random() * 4) + 1;
     return (
-        <div className={`col-12 col-sm-6 col-xl-3 p-3`} key={props.id}>
+        <div className={props.columnClass} key={props.id}>
             <div className={`record-card`}>
                 <img alt={`Cover for ${props.name}`} src={props.coverUrl || imgUnavailable}/>
                 <div className={`record-card__content p-3`}>

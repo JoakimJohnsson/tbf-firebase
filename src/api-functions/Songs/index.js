@@ -3,7 +3,6 @@ import firebase from "firebase";
 
 function FetchAllSongs() {
     const [songs, setSongs] = useState([]);
-
     useEffect(() => {
         firebase
             .firestore()
@@ -16,7 +15,6 @@ function FetchAllSongs() {
                 setSongs(newSongs)
             })
     }, []);
-
     return songs;
 }
 
@@ -38,5 +36,19 @@ function FetchSongsByRecord(record) {
     return songs;
 }
 
+function FetchSongFromId(id) {
+    const [song, setSong] = useState([]);
+    useEffect(() => {
+        firebase
+            .firestore()
+            .collection('songs')
+            .doc(id)
+            .get().then(function(doc) {
+            setSong(doc.data());
+        });
+    }, []);
+    return song;
+}
+
 export default FetchAllSongs;
-export {FetchSongsByRecord};
+export {FetchSongsByRecord, FetchSongFromId};

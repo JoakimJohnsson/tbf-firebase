@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import * as ROUTES from '../../constants/routes';
 import {Link} from 'react-router-dom';
 import Navbar from 'react-bootstrap/Navbar';
@@ -16,7 +16,7 @@ const Navigation = () => (
     </header>
 );
 const NavigationFooter = () => (
-    <Navbar className="navbar-footer px-2 px-sm-5" bg="dark" variant="dark" expand="true">
+    <Navbar className="navbar-footer p-0" bg="dark" variant="dark" expand="true">
         <FooterNavLink link={ROUTES.START} text={"Start"} icon={"home"}/>
         <FooterNavLink link={ROUTES.ARTISTS} text={"Artists"} icon={"user-astronaut"}/>
         <FooterNavLink link={ROUTES.RECORDS} text={"Records"} icon={"record-vinyl"}/>

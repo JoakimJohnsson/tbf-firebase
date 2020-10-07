@@ -1,13 +1,15 @@
 import React from 'react';
-import {CopyrightInfoComponent} from "../components/MicroComponents/MicroComponents";
+import {CopyrightInfoComponent, LoadingComponent} from "../components/MicroComponents/MicroComponents";
 import {FetchRecordFromId} from "../api-functions/records-api";
 import SongsByRecordList from "../components/listcomponents/simple/SongsByRecordList";
 import imgUnavailable from "../images/image_unavailable.png";
+import Artist from "../components/listcomponents/single/ArtistItem";
 
 const RecordPage = ({match}) => {
     const {params: {id}} = match;
     const record = FetchRecordFromId(id);
-    return (
+
+    return record.artistId ? (
         <div className="row">
             <div className="standard-main-column order-2 order-lg-1">
                 <SongsByRecordList recordId={id}/>
@@ -16,12 +18,17 @@ const RecordPage = ({match}) => {
                 <div className="standard-box-wrapper__near-dark">
                     <h1 className="text-capitalize">{record.name}</h1>
 
+                    <Artist id={record.artistId}/>
+
+
                     <img className="w-100 mb-5" alt={`Cover for ${record.name}`} src={record.coverUrl || imgUnavailable}/>
 
                     <CopyrightInfoComponent/>
                 </div>
             </div>
         </div>
-    );
+    )
+        :
+        <LoadingComponent/>;
 };
 export default RecordPage;

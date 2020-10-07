@@ -56,8 +56,5 @@
       background-color: $color-dark-grey;
       color: $color-secondary;
     }
-    @include media-breakpoint-up(xl) {
-      padding: .5rem 3rem;
-    }
   }
 }

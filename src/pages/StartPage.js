@@ -32,6 +32,8 @@ const StartPage = () => (
                 <AllSongsList columnClass={COLUMNS.SONGS_MAIN}/>
                 <IconLink className={"ml-3"} link={ROUTES.SONGS} text={"See all songs"} icon={"music"}/>
             </div>
+
+            <CopyrightInfoComponent className={"d-block d-lg-none"}/>
         </div>
 
         <div className="standard-secondary-column mb-5 order-1 order-lg-2">
@@ -42,7 +44,7 @@ const StartPage = () => (
                     Sjöbuse Records</b>, now brings you that good old music in a modern way.</p>
                 <p>Here is a <a href="/old">link</a> to the old site</p>
 
-                <CopyrightInfoComponent />
+                <CopyrightInfoComponent className={"d-none d-lg-block"}/>
             </div>
         </div>
 

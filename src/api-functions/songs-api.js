@@ -25,6 +25,7 @@ function FetchSongsByRecord(record) {
             .firestore()
             .collection('records')
             .doc(record).collection('songs')
+            .orderBy("index", "asc")
             .onSnapshot((snapshot) => {
                 const newSongs = snapshot.docs.map((doc) => ({
                     id: doc.id,

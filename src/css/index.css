@@ -11363,6 +11363,17 @@ footer {
   font-size: 80%;
   text-transform: capitalize; }
 
+.card-index__round {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 40px;
+  min-height: 40px;
+  border-radius: 50%;
+  background: #444;
+  font-size: 130%;
+  font-weight: bold; }
+
 .navbar-dark .navbar-toggler {
   border: none;
   padding: 0;

@@ -11,7 +11,9 @@ const ArtistPage = ({match}) => {
     return (
         <div className="row">
             <div className="standard-main-column order-2 order-lg-1">
+                <h2>Records</h2>
                 <RecordsByArtistList artistId={id}/>
+                <CopyrightInfoComponent className={"d-block d-lg-none mt-5"}/>
             </div>
             <div className="standard-secondary-column order-1 order-lg-2 mb-5">
                 <div className="standard-box-wrapper__near-dark">
@@ -19,7 +21,7 @@ const ArtistPage = ({match}) => {
                     <p>{artist.description}</p>
                     <h2>Members</h2>
                     <MembersByArtistList artistId={id}/>
-                    <CopyrightInfoComponent/>
+                    <CopyrightInfoComponent className={"d-none d-lg-block"}/>
                 </div>
             </div>
         </div>

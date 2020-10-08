@@ -15,19 +15,19 @@ const StartPage = () => (
 
         <div className="standard-main-column order-2 order-lg-1">
 
-            <div className="mb-5">
+            <div className="standard-main-column__section">
                 <h2>Popular artists</h2>
                 <AllArtistsList />
                 <IconLink className={"ml-3"} link={ROUTES.ARTISTS} text={"See all artists"} icon={"user-astronaut"}/>
             </div>
 
-            <div className="mb-5">
+            <div className="standard-main-column__section">
                 <h2>Popular records</h2>
                 <AllRecordsList columnClass={COLUMNS.RECORDS_MAIN}/>
                 <IconLink className={"ml-3"} link={ROUTES.RECORDS} text={"See all records"} icon={"record-vinyl"}/>
             </div>
 
-            <div className="mb-5">
+            <div className="standard-main-column__section">
                 <h2>Popular songs</h2>
                 <AllSongsList columnClass={COLUMNS.SONGS_MAIN}/>
                 <IconLink className={"ml-3"} link={ROUTES.SONGS} text={"See all songs"} icon={"music"}/>
@@ -36,7 +36,7 @@ const StartPage = () => (
             <CopyrightInfoComponent className={"d-block d-lg-none"}/>
         </div>
 
-        <div className="standard-secondary-column mb-5 order-1 order-lg-2">
+        <div className="standard-secondary-column order-1 order-lg-2">
             <div className="standard-box-wrapper__near-dark">
                 <h1>The Baseball Field & Friends</h1>
                 <p>The music scene in Nyköping has delivered great music since the early 90's. </p>

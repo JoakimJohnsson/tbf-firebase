@@ -15,7 +15,7 @@ const ArtistPage = ({match}) => {
                 <RecordsByArtistList artistId={id}/>
                 <CopyrightInfoComponent className={"d-block d-lg-none mt-5"}/>
             </div>
-            <div className="standard-secondary-column order-1 order-lg-2 mb-5">
+            <div className="standard-secondary-column order-1 order-lg-2">
                 <div className="standard-box-wrapper__near-dark">
                     <h1 className="text-capitalize">{artist.name}</h1>
                     <p>{artist.description}</p>

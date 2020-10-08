@@ -14,8 +14,8 @@
 }
 
 .artist-card__simple {
-  min-height: 110px;
-  font-size: .8rem;
+  min-height: 122px;
+  font-size: .7rem;
   text-transform: capitalize;
   a {
     text-decoration: none;
@@ -38,8 +38,11 @@
       color: $color-white;
     }
   }
+  @media screen and (min-width: 350px) {
+    font-size: .8rem;
+  }
   @include media-breakpoint-up(md) {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
   @include media-breakpoint-up(xl) {
     font-size: 1.2rem;

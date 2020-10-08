@@ -11142,8 +11142,19 @@ code {
       flex: 0 0 66.6666666667%;
       max-width: 66.6666666667%;
       padding-right: 0; } }
+  .standard-main-column .standard-main-column__section {
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #0a0a0a; }
+    @media (min-width: 992px) {
+      .standard-main-column .standard-main-column__section {
+        margin-bottom: 3rem;
+        border-bottom: none; } }
 
 .standard-secondary-column {
+  margin-bottom: 2rem;
+  padding-top: 1rem;
+  border-bottom: 1px solid #0a0a0a;
   position: relative;
   width: 100%;
   padding-right: 15px;
@@ -11151,7 +11162,10 @@ code {
   @media (min-width: 992px) {
     .standard-secondary-column {
       flex: 0 0 33.3333333333%;
-      max-width: 33.3333333333%; } }
+      max-width: 33.3333333333%;
+      border-bottom: none;
+      margin-bottom: 3rem;
+      padding-top: 0; } }
 
 .standard-container {
   padding: 1rem; }
@@ -11183,7 +11197,7 @@ body {
 
 h1 {
   margin-bottom: 1.5rem;
-  font-size: 1.4rem; }
+  font-size: 1.2rem; }
   @media (min-width: 576px) {
     h1 {
       font-size: 2rem; } }
@@ -11192,7 +11206,7 @@ h1 {
       font-size: 2.5rem; } }
 
 h2 {
-  font-size: 1.2rem; }
+  font-size: 1rem; }
   @media (min-width: 576px) {
     h2 {
       font-size: 1.65rem; } }
@@ -11201,7 +11215,7 @@ h2 {
       font-size: 2rem; } }
 
 h3 {
-  font-size: 1rem; }
+  font-size: 0.8rem; }
   @media (min-width: 576px) {
     h3 {
       font-size: 1.3rem; } }
@@ -11298,8 +11312,8 @@ footer {
     font-weight: bold; }
 
 .artist-card__simple {
-  min-height: 110px;
-  font-size: .8rem;
+  min-height: 122px;
+  font-size: .7rem;
   text-transform: capitalize; }
   .artist-card__simple a {
     text-decoration: none;
@@ -11317,9 +11331,12 @@ footer {
       background: #0a0a0a;
       transform: scale(0.95);
       color: #fff; }
+  @media screen and (min-width: 350px) {
+    .artist-card__simple {
+      font-size: .8rem; } }
   @media (min-width: 768px) {
     .artist-card__simple {
-      font-size: 1.2rem; } }
+      font-size: 1rem; } }
   @media (min-width: 1200px) {
     .artist-card__simple {
       font-size: 1.2rem; } }

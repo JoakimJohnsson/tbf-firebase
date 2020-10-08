@@ -18,7 +18,7 @@ const AllArtistsListPaginated = () => {
             .collection("artists")
             .orderBy("numberOfViews", "asc"),
         {
-            limit: 3
+            limit: 4
         }
     );
     return items.length ? (

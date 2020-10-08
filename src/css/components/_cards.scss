@@ -52,7 +52,7 @@
 .song-card__simple {
   background: $color-near-black;
   border-radius: 5px;
-  border: 2px solid $color-border;
+  border: 1px solid $color-border;
   color: $color-white;
   font-size: 90%;
   .label {
@@ -76,7 +76,7 @@
     @extend .transition__standard;
     transform: scale(.95);
     .record-card__content {
-      background-image: linear-gradient(to bottom, transparent 0%, $color-black 100%);
+      background-image: linear-gradient(to bottom, transparent 0%, $color-black__trans 85%);
     }
   }
 
@@ -95,7 +95,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    background-image: linear-gradient(to bottom, transparent 30%, $color-black 100%);
+    background-image: linear-gradient(to bottom, transparent 30%, $color-black__trans 85%);
     a {
       height: 100%;
       display: flex;

@@ -11301,7 +11301,7 @@ label {
   transition: all .3s ease-in-out; }
 
 img {
-  border: 2px solid #000; }
+  border: 1px solid #000; }
 
 footer {
   position: absolute;
@@ -11352,7 +11352,7 @@ footer {
 .song-card__simple {
   background: #0a0a0a;
   border-radius: 5px;
-  border: 2px solid #444;
+  border: 1px solid #444;
   color: #fff;
   font-size: 90%; }
   .song-card__simple .label {
@@ -11369,7 +11369,7 @@ footer {
   .record-card:hover, .record-card:focus, .record-card:active {
     transform: scale(0.95); }
     .record-card:hover .record-card__content, .record-card:focus .record-card__content, .record-card:active .record-card__content {
-      background-image: linear-gradient(to bottom, transparent 0%, #000 100%); }
+      background-image: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.95) 85%); }
   .record-card p {
     margin: 0; }
   .record-card img {
@@ -11383,7 +11383,7 @@ footer {
     position: absolute;
     top: 0;
     left: 0;
-    background-image: linear-gradient(to bottom, transparent 30%, #000 100%); }
+    background-image: linear-gradient(to bottom, transparent 30%, rgba(0, 0, 0, 0.95) 85%); }
     .record-card .record-card__content a {
       height: 100%;
       display: flex;

@@ -11169,12 +11169,21 @@ code {
 .progress {
   height: 5px; }
 
+body {
+  font-size: .8rem; }
+  @media (min-width: 576px) {
+    body {
+      font-size: .9rem; } }
+  @media (min-width: 768px) {
+    body {
+      font-size: 1rem; } }
+
 .text-yellow {
   color: #fffe88; }
 
 h1 {
   margin-bottom: 1.5rem;
-  font-size: 1.5rem; }
+  font-size: 1.4rem; }
   @media (min-width: 576px) {
     h1 {
       font-size: 2rem; } }
@@ -11183,7 +11192,7 @@ h1 {
       font-size: 2.5rem; } }
 
 h2 {
-  font-size: 1.3rem; }
+  font-size: 1.2rem; }
   @media (min-width: 576px) {
     h2 {
       font-size: 1.65rem; } }
@@ -11192,7 +11201,7 @@ h2 {
       font-size: 2rem; } }
 
 h3 {
-  font-size: 1.1rem; }
+  font-size: 1rem; }
   @media (min-width: 576px) {
     h3 {
       font-size: 1.3rem; } }
@@ -11289,8 +11298,8 @@ footer {
     font-weight: bold; }
 
 .artist-card__simple {
-  min-height: 190px;
-  font-size: 1.5rem;
+  min-height: 110px;
+  font-size: .8rem;
   text-transform: capitalize; }
   .artist-card__simple a {
     text-decoration: none;
@@ -11308,6 +11317,9 @@ footer {
       background: #0a0a0a;
       transform: scale(0.95);
       color: #fff; }
+  @media (min-width: 768px) {
+    .artist-card__simple {
+      font-size: 1.2rem; } }
   @media (min-width: 1200px) {
     .artist-card__simple {
       font-size: 1.2rem; } }
@@ -11357,7 +11369,8 @@ footer {
 .card-title {
   color: #fff;
   text-transform: uppercase;
-  font-weight: bold; }
+  font-weight: bold;
+  font-size: 80%; }
 
 .card-sub-title {
   font-size: 80%;
@@ -11419,11 +11432,7 @@ footer {
         .navbar-footer .nav-link span {
           font-size: 90%; } }
     .navbar-footer .nav-link.active {
-      background-color: #151515;
       color: #88ffcc; }
-    @media (min-width: 1200px) {
-      .navbar-footer .nav-link {
-        padding: .5rem 3rem; } }
 
 .todo-component {
   border-radius: .25rem;

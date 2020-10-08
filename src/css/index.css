@@ -11352,9 +11352,24 @@ footer {
 .song-card__simple {
   background: #0a0a0a;
   border-radius: 5px;
-  border: 1px solid #444;
   color: #fff;
-  font-size: 90%; }
+  font-size: 90%;
+  position: relative;
+  height: 150px;
+  overflow: hidden; }
+  .song-card__simple img {
+    width: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0; }
+  .song-card__simple .song-card__content {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8); }
   .song-card__simple .label {
     font-weight: bold;
     text-transform: uppercase; }

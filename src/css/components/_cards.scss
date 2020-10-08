@@ -3,11 +3,13 @@
 .card__dark {
   @include box-shadow__dark;
   border: none;
+
   .card-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
+
   .pagination {
     font-weight: bold;
   }
@@ -17,6 +19,7 @@
   min-height: 122px;
   font-size: .7rem;
   text-transform: capitalize;
+
   a {
     text-decoration: none;
     border-radius: 5px;
@@ -29,6 +32,7 @@
     width: 100%;
     background: $color-black;
     color: $color-white;
+
     &:hover,
     &:focus,
     &:active {
@@ -38,6 +42,7 @@
       color: $color-white;
     }
   }
+
   @media screen and (min-width: 350px) {
     font-size: .8rem;
   }
@@ -52,9 +57,26 @@
 .song-card__simple {
   background: $color-near-black;
   border-radius: 5px;
-  border: 1px solid $color-border;
   color: $color-white;
   font-size: 90%;
+  position: relative;
+  height: 150px;
+  overflow: hidden;
+  img {
+    width: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .song-card__content {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: $color-black__trans-light;
+  }
   .label {
     font-weight: bold;
     text-transform: uppercase;
@@ -75,27 +97,31 @@
   &:active {
     @extend .transition__standard;
     transform: scale(.95);
+
     .record-card__content {
-      background-image: linear-gradient(to bottom, transparent 0%, $color-black__trans 85%);
+      background-image: linear-gradient(to bottom, transparent 0%, $color-black__trans-hard 85%);
     }
   }
 
   p {
     margin: 0;
   }
+
   img {
     width: 100%;
     position: absolute;
     top: 0;
     left: 0;
   }
+
   .record-card__content {
     width: 100%;
     height: 100%;
     position: absolute;
     top: 0;
     left: 0;
-    background-image: linear-gradient(to bottom, transparent 30%, $color-black__trans 85%);
+    background-image: linear-gradient(to bottom, transparent 30%, $color-black__trans-hard 85%);
+
     a {
       height: 100%;
       display: flex;
@@ -112,6 +138,7 @@
   font-weight: bold;
   font-size: 80%;
 }
+
 .card-sub-title {
   font-size: 80%;
   text-transform: capitalize;

@@ -32,5 +32,24 @@ function FetchArtistFromId(id) {
     return artist;
 }
 
+function FetchArtistsWithLimit(limit) {
+    const [Artists, setArtists] = useState([]);
+
+    useEffect(() => {
+        firebase
+            .firestore()
+            .collection('artists')
+            .limit(limit)
+            .onSnapshot((snapshot) => {
+                const newArtists = snapshot.docs.map((doc) => ({
+                    id: doc.id,
+                    ...doc.data()
+                }));
+                setArtists(newArtists)
+            })
+    }, [limit]);
+    return Artists;
+}
+
 export default FetchAllArtists;
-export {FetchArtistFromId};
+export {FetchArtistFromId, FetchArtistsWithLimit};

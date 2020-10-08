@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import * as ROUTES from '../../constants/routes';
 import {Link} from 'react-router-dom';
 import Navbar from 'react-bootstrap/Navbar';

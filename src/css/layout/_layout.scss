@@ -66,3 +66,17 @@
 .progress {
   height: 5px;
 }
+
+// Buttons
+
+.button__load-more {
+  padding: 0;
+  font-size: 150%;
+  color: $color-secondary;
+  width: 100%;
+  &:hover,
+  &:focus,
+  &:active {
+    color: $color-secondary__lighten;
+  }
+}

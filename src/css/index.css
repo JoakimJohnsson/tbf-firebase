@@ -11183,6 +11183,14 @@ code {
 .progress {
   height: 5px; }
 
+.button__load-more {
+  padding: 0;
+  font-size: 150%;
+  color: #88ffcc;
+  width: 100%; }
+  .button__load-more:hover, .button__load-more:focus, .button__load-more:active {
+    color: #b8ffe0; }
+
 body {
   font-size: .8rem; }
   @media (min-width: 576px) {

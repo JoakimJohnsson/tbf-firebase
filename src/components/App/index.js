@@ -5,8 +5,8 @@ import {library} from '@fortawesome/fontawesome-svg-core';
 import {faAirbnb, faGoogle, faFacebookF} from '@fortawesome/free-brands-svg-icons';
 import {faArrowAltCircleLeft, faCopyright} from '@fortawesome/free-regular-svg-icons';
 import {
-    faWrench, faHome, faRecordVinyl, faMusic, faSearch, faUserAstronaut, faPlayCircle, faPlus, faTimes, faPen,
-    faMinus, faChevronLeft, faChevronRight, faSpinner, faSave, faAngleDoubleDown
+    faWrench, faHome, faArrowAltCircleDown, faRecordVinyl, faMusic, faSearch, faUserAstronaut, faPlayCircle, faPlus, faTimes, faPen,
+    faMinus, faChevronLeft, faChevronRight, faChevronDown, faSpinner, faSave, faAngleDoubleDown
 } from '@fortawesome/free-solid-svg-icons';
 import Navigation from '../Navigation/Navigation';
 import Footer from "../Footer/footer";
@@ -17,8 +17,8 @@ import RecordsPage from "../../pages/RecordsPage";
 import RecordPage from "../../pages/RecordPage";
 import SongsPage from "../../pages/SongsPage";
 
-library.add(faAirbnb, faGoogle, faFacebookF, faArrowAltCircleLeft, faCopyright, faWrench, faHome, faRecordVinyl,
-    faMusic, faSearch, faUserAstronaut, faPlayCircle, faPlus, faTimes, faPen, faMinus, faChevronLeft, faChevronRight, faSpinner, faSave,
+library.add(faAirbnb, faGoogle, faFacebookF, faArrowAltCircleLeft, faArrowAltCircleDown , faCopyright, faWrench, faHome, faRecordVinyl,
+    faMusic, faSearch, faUserAstronaut, faPlayCircle, faPlus, faTimes, faPen, faMinus, faChevronLeft, faChevronRight,faChevronDown, faSpinner, faSave,
     faAngleDoubleDown);
 
 const App = () => (

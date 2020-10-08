@@ -8,7 +8,7 @@ const AllArtistsList = () => {
     return artists.length ?
         (<div className="row">
                 {artists.map((artist) =>
-                    <DynamicCard route="artist" id={artist.id} name={artist.name} key={artist.id}/>
+                    <DynamicCard route="artist" id={artist.id} key={artist.id}/>
                 )}
             </div>
         )

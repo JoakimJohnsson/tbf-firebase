@@ -36,7 +36,7 @@
     &:hover,
     &:focus,
     &:active {
-      @extend .transition__standard;
+      transition: $transition-base;
       background: $color-near-black;
       transform: scale(.95);
       color: $color-white;
@@ -56,31 +56,52 @@
 
 .song-card__simple {
   background: $color-near-black;
-  border-radius: 5px;
   color: $color-white;
   font-size: 90%;
-  position: relative;
-  height: 150px;
+  display: flex;
+  align-items: center;
+  max-height: 150px;
   overflow: hidden;
-  img {
-    width: 100%;
-    object-fit: cover;
-    position: absolute;
-    top: 0;
-    left: 0;
+  transition: $transition-base;
+
+  &:hover,
+  &:active,
+  &:focus {
+    transition: $transition-base;
+
+    img {
+      opacity: .9;
+    }
   }
+
+  img {
+    object-fit: cover;
+    width: 33%;
+    opacity: .5;
+    @include media-breakpoint-up(md) {
+      width: 70%;
+    }
+    @include media-breakpoint-up(lg) {
+      width: 33%;
+    }
+    @include media-breakpoint-up(xl) {
+      width: 70%;
+    }
+    @media screen and (min-width: 1600px) {
+      width: 40%;
+    }
+  }
+
   .song-card__content {
     width: 100%;
     height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background: $color-black__trans-light;
   }
+
   .label {
     font-weight: bold;
     text-transform: uppercase;
   }
+
   .small {
     font-weight: normal;
     text-transform: capitalize;
@@ -95,7 +116,7 @@
   &:hover,
   &:focus,
   &:active {
-    @extend .transition__standard;
+    transition: $transition-base;
     transform: scale(.95);
 
     .record-card__content {

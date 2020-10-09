@@ -1,5 +1,5 @@
 import React from 'react';
-import AllArtistsList from "../components/listcomponents/simple/AllArtistsList";
+import AllArtistsList from "../components/lists/AllArtistsList";
 import {CopyrightInfoComponent} from "../components/MicroComponents/MicroComponents";
 
 const ArtistsPage = () => (

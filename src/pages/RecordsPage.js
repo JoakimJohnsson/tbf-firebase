@@ -1,6 +1,6 @@
 import React from 'react';
 import {CopyrightInfoComponent} from "../components/MicroComponents/MicroComponents";
-import AllRecordsList from "../components/listcomponents/simple/AllRecordsList";
+import AllRecordsList from "../components/lists/AllRecordsList";
 import * as COLUMNS from "../constants/cols"
 
 const RecordsPage = () => (

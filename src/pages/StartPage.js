@@ -1,12 +1,12 @@
 import React from 'react';
 import firebase from '../components/Firebase/firebase';
-import AllArtistsListPaginated from "../components/listcomponents/simple/AllArtistsListPaginated";
-import AllSongsListPaginated from "../components/listcomponents/simple/AllSongsListPaginated";
+import AllArtistsListPaginated from "../components/lists/AllArtistsListPaginated";
+import AllSongsListPaginated from "../components/lists/AllSongsListPaginated";
 import {CopyrightInfoComponent} from "../components/MicroComponents/MicroComponents";
-import IconLink from "../components/linkcomponents/simple/IconNavLink";
+import IconLink from "../components/links/IconNavLink";
 import * as ROUTES from "../constants/routes";
 import * as COLUMNS from "../constants/cols";
-import AllRecordsListPaginated from "../components/listcomponents/simple/AllRecordsListPaginated";
+import AllRecordsListPaginated from "../components/lists/AllRecordsListPaginated";
 
 console.log("WE HAVE FIREBASE", firebase.performance.name);
 

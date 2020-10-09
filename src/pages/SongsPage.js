@@ -1,6 +1,6 @@
 import React from 'react';
 import {CopyrightInfoComponent} from "../components/MicroComponents/MicroComponents";
-import AllSongsList from "../components/listcomponents/simple/AllSongsList";
+import AllSongsList from "../components/lists/AllSongsList";
 import * as COLUMNS from "../constants/cols";
 
 const SongsPage = () => (

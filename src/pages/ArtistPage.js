@@ -1,8 +1,8 @@
 import React from 'react';
-import MembersByArtistList from "../components/listcomponents/simple/MembersByArtistList";
+import MembersByArtistList from "../components/lists/MembersByArtistList";
 import {CopyrightInfoComponent} from "../components/MicroComponents/MicroComponents";
 import {FetchArtistFromId} from "../api-functions/artists-api";
-import RecordsByArtistList from "../components/listcomponents/simple/RecordsByArtistList";
+import RecordsByArtistList from "../components/lists/RecordsByArtistList";
 import * as STRINGS from "../constants/strings"
 
 const ArtistPage = ({match}) => {

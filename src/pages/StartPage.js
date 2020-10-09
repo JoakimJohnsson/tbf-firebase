@@ -2,11 +2,11 @@ import React from 'react';
 import firebase from '../components/Firebase/firebase';
 import AllArtistsListPaginated from "../components/listcomponents/simple/AllArtistsListPaginated";
 import AllSongsListPaginated from "../components/listcomponents/simple/AllSongsListPaginated";
-import AllRecordsList from "../components/listcomponents/simple/AllRecordsList";
 import {CopyrightInfoComponent} from "../components/MicroComponents/MicroComponents";
 import IconLink from "../components/linkcomponents/simple/IconNavLink";
 import * as ROUTES from "../constants/routes";
 import * as COLUMNS from "../constants/columns";
+import AllRecordsListPaginated from "../components/listcomponents/simple/AllRecordsListPaginated";
 
 console.log("WE HAVE FIREBASE", firebase.performance.name);
 
@@ -23,7 +23,7 @@ const StartPage = () => (
 
             <div className="standard-main-column__section">
                 <h2>Popular records</h2>
-                <AllRecordsList columnClass={COLUMNS.RECORDS_MAIN}/>
+                <AllRecordsListPaginated columnClass={COLUMNS.RECORDS_MAIN}/>
                 <IconLink className={"ml-3"} link={ROUTES.RECORDS} text={"See all records"} icon={"record-vinyl"}/>
             </div>
 

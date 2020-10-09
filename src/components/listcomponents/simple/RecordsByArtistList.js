@@ -2,7 +2,7 @@ import React from "react";
 import {LoadingComponent} from "../../MicroComponents/MicroComponents";
 import {FetchRecordsByArtist} from "../../../api-functions/records-api";
 import RecordCard from "../../cardcomponents/RecordCard";
-import * as COLUMNS from "../../../constants/columns";
+import * as COLUMNS from "../../../constants/cols";
 
 const RecordsByArtistList = (props) => {
     const records = FetchRecordsByArtist(props.artistId);

@@ -5,7 +5,9 @@
 .standard-box-wrapper__near-dark {
   @include box-padding-standard;
   background: none;
+  border-bottom: 1px solid $color-near-black;
   @include media-breakpoint-up(sm) {
+    border-bottom: none;
     background: $color-near-black;
   }
 }
@@ -41,11 +43,9 @@
 .standard-secondary-column {
   margin-bottom: 2rem;
   padding-top: 1rem;
-  border-bottom: 1px solid $color-near-black;
   @include make-col-ready();
   @include media-breakpoint-up(lg) {
     @include make-col(4);
-    border-bottom: none;
     margin-bottom: 3rem;
     padding-top: 0;
   }

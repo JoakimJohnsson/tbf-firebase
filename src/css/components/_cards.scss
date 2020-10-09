@@ -75,19 +75,22 @@
   }
 
   img {
+    display: none;
+    border: none;
     object-fit: cover;
     width: 33%;
     opacity: .5;
+    @include media-breakpoint-up(sm) {
+      display: block;
+    }
     @include media-breakpoint-up(md) {
-      width: 70%;
+      display: none;
     }
     @include media-breakpoint-up(lg) {
+      display: block;
       width: 33%;
     }
     @include media-breakpoint-up(xl) {
-      width: 70%;
-    }
-    @media screen and (min-width: 1600px) {
       width: 40%;
     }
   }

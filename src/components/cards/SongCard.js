@@ -13,7 +13,7 @@ const SongCard = ({id, columnClass, url, recordId}) => {
     return song.artistId ? (
             <div className={columnClass} key={song.id}>
                 <div className={`song-card__simple mb-2 text-color-variant__${rand.toString()}`}>
-                    <img className="d-none d-sm-block" alt={`Cover for ${song.name}`} src={coverUrl || imgUnavailable}/>
+                    <img alt={`Cover for ${song.name}`} src={coverUrl || imgUnavailable}/>
                     <div className="song-card__content p-3">
                         <p className="label mb-1"><Artist id={song.artistId}/></p>
                         <p className="small mb-3">{song.name}</p>

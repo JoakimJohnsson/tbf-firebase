@@ -16,7 +16,7 @@ const AllArtistsListPaginated = () => {
         firebase
             .firestore()
             .collection("artists")
-            .orderBy("numberOfViews", "asc"),
+            .orderBy("numberOfViews", "desc"),
         {
             limit: 4
         }

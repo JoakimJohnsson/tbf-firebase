@@ -1,7 +1,7 @@
 import React from 'react';
 import firebase from '../components/Firebase/firebase';
 import AllArtistsListPaginated from "../components/listcomponents/simple/AllArtistsListPaginated";
-import AllSongsList from "../components/listcomponents/simple/AllSongsList";
+import AllSongsListPaginated from "../components/listcomponents/simple/AllSongsListPaginated";
 import AllRecordsList from "../components/listcomponents/simple/AllRecordsList";
 import {CopyrightInfoComponent} from "../components/MicroComponents/MicroComponents";
 import IconLink from "../components/linkcomponents/simple/IconNavLink";
@@ -29,7 +29,7 @@ const StartPage = () => (
 
             <div className="standard-main-column__section">
                 <h2>Popular songs</h2>
-                <AllSongsList columnClass={COLUMNS.SONGS_MAIN}/>
+                <AllSongsListPaginated columnClass={COLUMNS.SONGS_MAIN}/>
                 <IconLink className={"ml-3"} link={ROUTES.SONGS} text={"See all songs"} icon={"music"}/>
             </div>
 

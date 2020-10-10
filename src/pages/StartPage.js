@@ -23,7 +23,7 @@ const StartPage = () => (
 
             <div className="standard-main-column__section">
                 <h2>Popular records</h2>
-                <AllRecordsListPaginated columnClass={COLUMNS.RECORDS_MAIN}/>
+                <AllRecordsListPaginated fullWidth={false}/>
                 <IconLink className={"ml-3"} link={ROUTES.RECORDS} text={"See all records"} icon={"record-vinyl"}/>
             </div>
 

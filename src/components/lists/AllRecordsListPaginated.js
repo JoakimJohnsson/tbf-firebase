@@ -5,7 +5,7 @@ import firebase from "firebase";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import RecordCard from "../cards/RecordCard";
 
-const AllRecordsListPaginated = ({columnClass}) => {
+const AllRecordsListPaginated = ({fullWidth}) => {
 
     const {
         loadingMore,
@@ -28,7 +28,7 @@ const AllRecordsListPaginated = ({columnClass}) => {
 
 
 
-                    <RecordCard route="record" id={item.id} name={item.data().name} artistId={item.data().artistId} coverUrl={item.data().coverUrl} columnClass={columnClass} key={item.id}/>
+                    <RecordCard route="record" id={item.id} name={item.data().name} artistId={item.data().artistId} coverUrl={item.data().coverUrl} fullWidth={fullWidth} key={item.id}/>
 
                 ))}
                 {

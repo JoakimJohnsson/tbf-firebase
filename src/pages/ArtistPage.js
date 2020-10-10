@@ -1,14 +1,26 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import MembersByArtistList from "../components/lists/MembersByArtistList";
 import {CopyrightInfoComponent} from "../components/MicroComponents/MicroComponents";
 import {FetchArtistFromId} from "../api-functions/artists-api";
 import RecordsByArtistList from "../components/lists/RecordsByArtistList";
 import * as STRINGS from "../constants/strings"
 import imgUnavailable from "../images/image_unavailable.png";
+import firebase from "firebase";
 
 const ArtistPage = ({match}) => {
     const {params: {id}} = match;
     const artist = FetchArtistFromId(id);
+
+    // Increment number of views
+    const increment = firebase.firestore.FieldValue.increment(1);
+    firebase.firestore().collection("artists").doc(id)
+        .update({numberOfViews: increment}).then(function () {
+        console.log("Document successfully updated!");
+    })
+        .catch(function (error) {
+            // The document probably doesn't exist.
+            console.error("Error updating document: ", error);
+        });
 
     return (
         <div className="row">

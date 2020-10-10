@@ -16,7 +16,7 @@ const AllSongsListPaginated = ({columnClass}) => {
         firebase
             .firestore()
             .collection("songs")
-            .orderBy("numberOfListenings", "desc"),
+            .orderBy("numberOfPlays", "desc"),
         {
             limit: 4
         }

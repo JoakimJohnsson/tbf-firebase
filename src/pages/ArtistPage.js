@@ -4,6 +4,7 @@ import {CopyrightInfoComponent} from "../components/MicroComponents/MicroCompone
 import {FetchArtistFromId} from "../api-functions/artists-api";
 import RecordsByArtistList from "../components/lists/RecordsByArtistList";
 import * as STRINGS from "../constants/strings"
+import imgUnavailable from "../images/image_unavailable.png";
 
 const ArtistPage = ({match}) => {
     const {params: {id}} = match;
@@ -19,7 +20,18 @@ const ArtistPage = ({match}) => {
             <div className="standard-secondary-column order-1 order-lg-2">
                 <div className="standard-box-wrapper__near-dark">
                     <h1 className="text-capitalize">{artist.name}</h1>
-                    <p>{artist.name} {artist.description !== "" ? artist.description : STRINGS.DEFAULT_ARTIST_DESCRIPTION}</p>
+                    <img className="w-100 mb-3" alt={`Artist image for ${artist.name}`} src={artist.imgUrl || imgUnavailable}/>
+                    <p>
+                        {artist.name}
+                        {artist.description !== "" ?
+                            artist.description
+                            :
+                            artist.imgUrl === "" ?
+                                STRINGS.DEFAULT_ARTIST_DESCRIPTION_MISSING_IMAGE
+                                :
+                                STRINGS.DEFAULT_ARTIST_DESCRIPTION}
+
+                    </p>
                     <h2>Members</h2>
                     <MembersByArtistList artistId={id}/>
                     <CopyrightInfoComponent className={"d-none d-lg-block"}/>

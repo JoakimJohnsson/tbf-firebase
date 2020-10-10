@@ -26,11 +26,11 @@ const App = () => (
         <Navigation/>
         <div className="container-fluid standard-container">
             <Route exact path={ROUTES.START} component={StartPage}/>
-            <Route exact path={ROUTES.ARTISTS} component={ArtistsPage}/>
+            <Route path={ROUTES.ARTISTS} component={ArtistsPage}/>
             <Route path={ROUTES.ARTIST} component={ArtistPage}/>
-            <Route exact path={ROUTES.RECORDS} component={RecordsPage}/>
+            <Route path={ROUTES.RECORDS} component={RecordsPage}/>
             <Route path={ROUTES.RECORD} component={RecordPage}/>
-            <Route exact path={ROUTES.SONGS} component={SongsPage}/>
+            <Route path={ROUTES.SONGS} component={SongsPage}/>
         </div>
         <Footer/>
     </Router>

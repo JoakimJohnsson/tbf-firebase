@@ -19,8 +19,10 @@
   min-height: 122px;
   font-size: .7rem;
   text-transform: capitalize;
-
   a {
+    position: relative;
+    top: 0;
+    left: 0;
     text-decoration: none;
     border-radius: 5px;
     padding: 1rem;
@@ -32,7 +34,9 @@
     width: 100%;
     background: $color-black;
     color: $color-white;
-
+    span {
+      z-index: 2;
+    }
     &:hover,
     &:focus,
     &:active {
@@ -40,6 +44,16 @@
       background: $color-near-black;
       transform: scale(.95);
       color: $color-white;
+    }
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      border: none;
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+      opacity: .2;
     }
   }
 

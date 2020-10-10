@@ -24,7 +24,7 @@ const AllArtistsListPaginated = () => {
     return items.length ? (
         <div className="row">
             {items.map(item => (
-                <DynamicCard route="artist" id={item.id} key={item.id}/>
+                <DynamicCard route="artist" id={item.id} key={item.id} imgUrl={item.data().imgUrl} name={item.data().name}/>
             ))}
             {
                 hasMore && !loadingMore &&

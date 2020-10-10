@@ -11318,6 +11318,9 @@ footer {
   font-size: .7rem;
   text-transform: capitalize; }
   .artist-card__simple a {
+    position: relative;
+    top: 0;
+    left: 0;
     text-decoration: none;
     border-radius: 5px;
     padding: 1rem;
@@ -11329,11 +11332,22 @@ footer {
     width: 100%;
     background: #000;
     color: #fff; }
+    .artist-card__simple a span {
+      z-index: 2; }
     .artist-card__simple a:hover, .artist-card__simple a:focus, .artist-card__simple a:active {
       transition: all 0.45s ease-in-out;
       background: #0a0a0a;
       transform: scale(0.95);
       color: #fff; }
+    .artist-card__simple a img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      border: none;
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+      opacity: .2; }
   @media screen and (min-width: 350px) {
     .artist-card__simple {
       font-size: .8rem; } }

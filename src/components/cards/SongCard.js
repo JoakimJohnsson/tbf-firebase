@@ -4,14 +4,15 @@ import {FetchSongFromId} from "../../api-functions/songs-api";
 import {LoadingComponent} from "../MicroComponents/MicroComponents";
 import {FetchRecordFromId} from "../../api-functions/records-api";
 import imgUnavailable from "../../images/image_unavailable.png";
+import * as COLUMNS from "../../constants/cols";
 
-const SongCard = ({id, columnClass, url, recordId}) => {
+const SongCard = ({id, fullWidth, url, recordId}) => {
 
     const song = FetchSongFromId(id);
     const coverUrl = FetchRecordFromId(recordId).coverUrl;
     let rand = Math.floor(Math.random() * 4) + 1;
     return song.artistId ? (
-            <div className={columnClass} key={song.id}>
+            <div className={fullWidth ? COLUMNS.SONGS_FULLWIDTH : COLUMNS.SONGS_MAIN} key={song.id}>
                 <div className={`song-card__simple mb-2 text-color-variant__${rand.toString()}`}>
                     <img alt={`Cover for ${song.name}`} src={coverUrl || imgUnavailable}/>
                     <div className="song-card__content p-3">

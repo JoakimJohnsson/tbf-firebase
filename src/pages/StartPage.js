@@ -5,7 +5,6 @@ import AllSongsListPaginated from "../components/lists/AllSongsListPaginated";
 import {CopyrightInfoComponent} from "../components/MicroComponents/MicroComponents";
 import IconLink from "../components/links/IconNavLink";
 import * as ROUTES from "../constants/routes";
-import * as COLUMNS from "../constants/cols";
 import AllRecordsListPaginated from "../components/lists/AllRecordsListPaginated";
 
 console.log("WE HAVE FIREBASE", firebase.performance.name);
@@ -29,7 +28,7 @@ const StartPage = () => (
 
             <div className="standard-main-column__section">
                 <h2>Popular songs</h2>
-                <AllSongsListPaginated columnClass={COLUMNS.SONGS_MAIN}/>
+                <AllSongsListPaginated fullWidth={false}/>
                 <IconLink className={"ml-3"} link={ROUTES.SONGS} text={"See all songs"} icon={"music"}/>
             </div>
 

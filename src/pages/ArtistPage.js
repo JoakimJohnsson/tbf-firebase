@@ -20,7 +20,7 @@ const ArtistPage = ({match}) => {
             <div className="standard-secondary-column order-1 order-lg-2">
                 <div className="standard-box-wrapper__near-dark">
                     <h1 className="text-capitalize">{artist.name}</h1>
-                    <img className="w-100 mb-3" alt={`Artist image for ${artist.name}`} src={artist.imgUrl || imgUnavailable}/>
+                    <img className="w-100 mb-3 opacity-4" alt={`${artist.name}`} src={artist.imgUrl || imgUnavailable}/>
                     <p>
                         {artist.name}
                         {artist.description !== "" ?

@@ -1,5 +1,18 @@
 @import '../helpers/variables';
 @import '../helpers/mixins';
+// Webfonts
+@import url('https://fonts.googleapis.com/css?family=Staatliches|Special+Elite|Playball|Iceland|Creepster|UnifrakturMaguntia|Kelly+Slab|Nova+Flat|Monoton|Bebas+Neue|Bangers|Secular+One|Fira+Sans:300,400,700&display=swap');
+
+body {
+  font-size: .8rem;
+  @include media-breakpoint-up(sm) {
+    font-size: .9rem;
+  }
+  @include media-breakpoint-up(md) {
+    font-size: 1rem;
+  }
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -21,64 +34,11 @@ code {
   monospace;
 }
 
-.btn-fa {
-  color: inherit;
-  border-radius: 0;
-  padding: 0;
-  border: none;
-  &:hover,
-  &:focus {
-    color: inherit;
-  }
-}
-.btn-fa__primary {
-  @extend .btn-fa;
-  color: $color-primary;
-  &:hover,
-  &:focus {
-    color: $color-primary__lighten;
-  }
-}
-.btn-fa__secondary {
-  @extend .btn-fa;
-  color: $color-secondary;
-  &:hover,
-  &:focus {
-    color: $color-secondary__lighten;
-  }
-}
-.btn-fa__tertiary {
-  @extend .btn-fa;
-  color: $color-tertiary;
-  &:hover,
-  &:focus {
-    color: $color-tertiary__lighten;
-  }
-}
-
-.btn__tertiary {
-  background-color: $color-tertiary;
-  color: $color-dark-grey;
-  &:hover,
-  &:focus {
-    background-color: $color-tertiary__lighten;
-    color: $color-black;
-  }
-}
-
 .alert {
   display: inline-block;
+
   p {
     margin: 0;
     padding: 0;
   }
-}
-
-.btn-secondary:disabled {
-  background: transparent;
-  color: $color-secondary;
-}
-
-.small {
-  font-weight: 100;
 }

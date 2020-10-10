@@ -11050,6 +11050,15 @@ html {
   .mx-xl-auto {
     margin-left: auto !important; } }
 body {
+  font-size: .8rem; }
+  @media (min-width: 576px) {
+    body {
+      font-size: .9rem; } }
+  @media (min-width: 768px) {
+    body {
+      font-size: 1rem; } }
+
+body {
   margin: 0;
   padding: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
@@ -11064,48 +11073,11 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace; }
 
-.btn-fa, .btn-fa__primary, .btn-fa__secondary, .btn-fa__tertiary {
-  color: inherit;
-  border-radius: 0;
-  padding: 0;
-  border: none; }
-  .btn-fa:hover, .btn-fa__primary:hover, .btn-fa__secondary:hover, .btn-fa__tertiary:hover, .btn-fa:focus, .btn-fa__primary:focus, .btn-fa__secondary:focus, .btn-fa__tertiary:focus {
-    color: inherit; }
-
-.btn-fa__primary {
-  color: #ff88cc; }
-  .btn-fa__primary:hover, .btn-fa__primary:focus {
-    color: #ffcfeb; }
-
-.btn-fa__secondary {
-  color: #88ffcc; }
-  .btn-fa__secondary:hover, .btn-fa__secondary:focus {
-    color: #b8ffe0; }
-
-.btn-fa__tertiary {
-  color: #fffe88; }
-  .btn-fa__tertiary:hover, .btn-fa__tertiary:focus {
-    color: #fffea0; }
-
-.btn__tertiary {
-  background-color: #fffe88;
-  color: #151515; }
-  .btn__tertiary:hover, .btn__tertiary:focus {
-    background-color: #fffea0;
-    color: #000; }
-
 .alert {
   display: inline-block; }
   .alert p {
     margin: 0;
     padding: 0; }
-
-.btn-secondary:disabled {
-  background: transparent;
-  color: #88ffcc; }
-
-.small {
-  font-weight: 100; }
 
 .standard-box-wrapper__near-dark {
   padding: 0;
@@ -11183,6 +11155,40 @@ code {
 .progress {
   height: 5px; }
 
+.btn-fa, .btn-fa__primary, .btn-fa__secondary, .btn-fa__tertiary {
+  color: inherit;
+  border-radius: 0;
+  padding: 0;
+  border: none; }
+  .btn-fa:hover, .btn-fa__primary:hover, .btn-fa__secondary:hover, .btn-fa__tertiary:hover, .btn-fa:focus, .btn-fa__primary:focus, .btn-fa__secondary:focus, .btn-fa__tertiary:focus {
+    color: inherit; }
+
+.btn-fa__primary {
+  color: #ff88cc; }
+  .btn-fa__primary:hover, .btn-fa__primary:focus {
+    color: #ffcfeb; }
+
+.btn-fa__secondary {
+  color: #88ffcc; }
+  .btn-fa__secondary:hover, .btn-fa__secondary:focus {
+    color: #b8ffe0; }
+
+.btn-fa__tertiary {
+  color: #fffe88; }
+  .btn-fa__tertiary:hover, .btn-fa__tertiary:focus {
+    color: #fffea0; }
+
+.btn__tertiary {
+  background-color: #fffe88;
+  color: #151515; }
+  .btn__tertiary:hover, .btn__tertiary:focus {
+    background-color: #fffea0;
+    color: #000; }
+
+.btn-secondary:disabled {
+  background: transparent;
+  color: #88ffcc; }
+
 .button__load-more {
   padding: 0;
   font-size: 150%;
@@ -11190,15 +11196,6 @@ code {
   width: 100%; }
   .button__load-more:hover, .button__load-more:focus, .button__load-more:active {
     color: #b8ffe0; }
-
-body {
-  font-size: .8rem; }
-  @media (min-width: 576px) {
-    body {
-      font-size: .9rem; } }
-  @media (min-width: 768px) {
-    body {
-      font-size: 1rem; } }
 
 .text-yellow {
   color: #fffe88; }
@@ -11294,8 +11291,29 @@ label {
   .text-color-variant__4:hover, .text-color-variant__4:focus, .text-color-variant__4:active {
     color: #a0c6ff !important; }
 
+.small {
+  font-weight: 100; }
+
 img {
   border: 1px solid #000; }
+
+.opacity-0 {
+  opacity: 0 !important; }
+
+.opacity-1 {
+  opacity: 0.2 !important; }
+
+.opacity-2 {
+  opacity: 0.4 !important; }
+
+.opacity-3 {
+  opacity: 0.6 !important; }
+
+.opacity-4 {
+  opacity: .8 !important; }
+
+.opacity-5 {
+  opacity: 1 !important; }
 
 footer {
   position: absolute;

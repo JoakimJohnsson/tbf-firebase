@@ -8,11 +8,11 @@ const TodoComponent = (props) => (
     </p>
 );
 
-const LoadingComponent = (props) => (
+const LoadingComponent = ({text, icon, spinning}) => (
     <div className="loading-component">
         <div className="text-center">
-        <p className="mb-3">{props.text || "Loading..."}</p>
-        <p><FontAwesomeIcon icon="spinner" spin size="2x"/></p>
+        <p className="mb-3">{text || "Loading..."}</p>
+        <p><FontAwesomeIcon icon={icon || "spinner"} spin={spinning} size="2x"/></p>
         </div>
     </div>
 );

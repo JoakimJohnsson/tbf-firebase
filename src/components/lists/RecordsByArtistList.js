@@ -14,7 +14,7 @@ const RecordsByArtistList = (props) => {
             )}
         </div>)
         :
-        (<LoadingComponent text="Trying to fetch records..."/>)
+        (<LoadingComponent text="There might not be any records at this time." icon="compact-disc" spinning={true}/>)
 };
 
 export default RecordsByArtistList;

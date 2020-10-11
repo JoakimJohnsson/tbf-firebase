@@ -14,7 +14,7 @@ const MembersByArtistList = (props) => {
             )}
         </ul>)
         :
-        (<LoadingComponent text="Loading members..."/>)
+        (<LoadingComponent text="No members available at this time." icon="users-slash" spinning={false}/>)
 };
 
 export default MembersByArtistList;

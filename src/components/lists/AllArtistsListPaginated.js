@@ -35,7 +35,7 @@ const AllArtistsListPaginated = () => {
         </div>
     )
         :
-        (<LoadingComponent/>)
+        (<LoadingComponent spinning={true}/>)
 };
 
 export default AllArtistsListPaginated;

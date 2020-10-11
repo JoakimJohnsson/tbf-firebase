@@ -13,7 +13,7 @@ const AllRecordsList = ({fullWidth}) => {
             )}
         </div>)
         :
-        (<LoadingComponent/>)
+        (<LoadingComponent spinning={true}/>)
 };
 
 export default AllRecordsList;

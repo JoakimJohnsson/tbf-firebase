@@ -6,7 +6,7 @@ import {faAirbnb, faGoogle, faFacebookF} from '@fortawesome/free-brands-svg-icon
 import {faArrowAltCircleLeft, faCopyright} from '@fortawesome/free-regular-svg-icons';
 import {
     faWrench, faHome, faArrowAltCircleDown, faRecordVinyl, faMusic, faSearch, faUserAstronaut, faPlayCircle, faPlus, faTimes, faPen,
-    faMinus, faChevronLeft, faChevronRight, faChevronDown, faSpinner, faSave, faAngleDoubleDown
+    faMinus, faChevronLeft, faChevronRight, faChevronDown, faSpinner, faSave, faAngleDoubleDown, faCompactDisc, faUsersSlash
 } from '@fortawesome/free-solid-svg-icons';
 import Navigation from '../Navigation/Navigation';
 import Footer from "../Footer/footer";
@@ -19,7 +19,7 @@ import SongsPage from "../../pages/SongsPage";
 
 library.add(faAirbnb, faGoogle, faFacebookF, faArrowAltCircleLeft, faArrowAltCircleDown , faCopyright, faWrench, faHome, faRecordVinyl,
     faMusic, faSearch, faUserAstronaut, faPlayCircle, faPlus, faTimes, faPen, faMinus, faChevronLeft, faChevronRight,faChevronDown, faSpinner, faSave,
-    faAngleDoubleDown);
+    faAngleDoubleDown, faCompactDisc, faUsersSlash);
 
 const App = () => (
     <Router>

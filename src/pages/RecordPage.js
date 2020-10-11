@@ -27,6 +27,6 @@ const RecordPage = ({match}) => {
         </div>
     )
         :
-        <LoadingComponent/>;
+        <LoadingComponent spinning={true}/>;
 };
 export default RecordPage;

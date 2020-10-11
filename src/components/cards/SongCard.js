@@ -30,7 +30,7 @@ const SongCard = ({id, fullWidth, url, recordId}) => {
             </div>
         )
         :
-        <LoadingComponent/>
+        <LoadingComponent spinning={true}/>
 };
 
 export default SongCard;

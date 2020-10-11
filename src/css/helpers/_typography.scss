@@ -82,6 +82,7 @@ label {
 
 .logo-font-family__8 {
   font-family: $tbf-font__logo-8;
+  font-size: 140% !important;
 }
 
 .logo-font-family__9 {
@@ -94,6 +95,27 @@ label {
 
 .logo-font-family__11 {
   font-family: $tbf-font__logo-11;
+}
+
+.logo-font-family__12 {
+  font-family: $tbf-font__logo-12;
+}
+
+.logo-font-family__13 {
+  font-family: $tbf-font__logo-13;
+}
+
+.logo-font-family__14 {
+  font-family: $tbf-font__logo-14;
+}
+
+.logo-font-family__15 {
+  font-family: $tbf-font__logo-15;
+  font-size: 180% !important;
+}
+
+.logo-font-family__16 {
+  font-family: $tbf-font__logo-16;
 }
 
 .text-color-variant__1 {
@@ -133,6 +155,36 @@ label {
   &:focus,
   &:active {
     color: $color-quaternary__lighten !important;
+  }
+}
+
+.text-color-variant__5 {
+  color: $color-vibrant-purple !important;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: lighten($color-vibrant-purple, 10%) !important;
+  }
+}
+
+.text-color-variant__6 {
+  color: $color-vibrant-orange !important;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: lighten($color-vibrant-orange, 10%) !important;
+  }
+}
+
+.text-color-variant__7 {
+  color: $color-vibrant-lime !important;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: lighten($color-vibrant-lime, 90%) !important;
   }
 }
 

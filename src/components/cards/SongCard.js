@@ -10,7 +10,7 @@ const SongCard = ({id, fullWidth, url, recordId}) => {
 
     const song = FetchSongFromId(id);
     const coverUrl = FetchRecordFromId(recordId).coverUrl;
-    let rand = Math.floor(Math.random() * 4) + 1;
+    let rand = Math.floor(Math.random() * 7) + 1;
     return song.artistId ? (
             <div className={fullWidth ? COLUMNS.SONGS_FULLWIDTH : COLUMNS.SONGS_MAIN} key={song.id}>
                 <div className={`song-card__simple mb-2 text-color-variant__${rand.toString()}`}>

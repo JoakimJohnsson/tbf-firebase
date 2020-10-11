@@ -5,7 +5,7 @@ import Artist from "../lists/ArtistItem";
 import * as COLUMNS from "../../constants/cols"
 
 const RecordCard = ({route, id, name, artistId, coverUrl, fullWidth}) => {
-    let rand = Math.floor(Math.random() * 4) + 1;
+    let rand = Math.floor(Math.random() * 7) + 1;
     return (
         <div className={fullWidth ? COLUMNS.RECORDS_FULLWIDTH : COLUMNS.RECORDS_MAIN} key={id}>
             <div className={`record-card`}>

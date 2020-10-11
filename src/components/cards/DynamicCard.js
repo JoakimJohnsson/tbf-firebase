@@ -2,8 +2,8 @@ import React from 'react';
 import {Link} from "react-router-dom";
 
 const DynamicCard = ({id, route, imgUrl, name}) => {
-    let rand = Math.floor(Math.random() * 11) + 1;
-    let rand2 = Math.floor(Math.random() * 4) + 1;
+    let rand = Math.floor(Math.random() * 16) + 1;
+    let rand2 = Math.floor(Math.random() * 7) + 1;
 
     return (
         <div className={`col-6 col-sm-3 artist-card__simple p-3 logo-font-family__${rand.toString()}`} key={id}>

@@ -25,8 +25,10 @@ const ArtistPage = ({match}) => {
     return (
         <div className="row">
             <div className="standard-main-column order-2 order-lg-1">
-                <h2>Records</h2>
-                <RecordsByArtistList artistId={id}/>
+                <div className="standard-main-column__section">
+                    <h2>Records</h2>
+                    <RecordsByArtistList artistId={id}/>
+                </div>
                 <CopyrightInfoComponent className={"d-block d-lg-none mt-5"}/>
             </div>
             <div className="standard-secondary-column order-1 order-lg-2">
@@ -42,7 +44,6 @@ const ArtistPage = ({match}) => {
                                 STRINGS.DEFAULT_ARTIST_DESCRIPTION_MISSING_IMAGE
                                 :
                                 STRINGS.DEFAULT_ARTIST_DESCRIPTION}
-
                     </p>
                     <h2>Members</h2>
                     <MembersByArtistList artistId={id}/>

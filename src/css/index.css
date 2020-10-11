@@ -11289,7 +11289,8 @@ label {
 
 .logo-font-family__15 {
   font-family: "Reenie Beanie", cursive, sans-serif;
-  font-size: 180% !important; }
+  font-size: 180% !important;
+  line-height: 1; }
 
 .logo-font-family__16 {
   font-family: "Graduate", cursive, sans-serif; }
@@ -11374,6 +11375,7 @@ footer {
   font-size: .7rem;
   text-transform: capitalize; }
   .artist-card__simple a {
+    line-height: 1.2;
     position: relative;
     top: 0;
     left: 0;

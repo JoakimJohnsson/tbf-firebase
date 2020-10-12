@@ -37,6 +37,24 @@ function FetchSongsByRecord(record) {
     return songs;
 }
 
+function FetchSongsByArtist(artistId) {
+    const [songs, setSongs] = useState([]);
+    useEffect(() => {
+        firebase
+            .firestore()
+            .collection('songs')
+            .where("artistId", "==", artistId )
+            .onSnapshot((snapshot) => {
+                const newSongs = snapshot.docs.map((doc) => ({
+                    id: doc.id,
+                    ...doc.data()
+                }));
+                setSongs(newSongs)
+            })
+    }, [artistId]);
+    return songs;
+}
+
 function FetchSongFromId(id) {
     const [song, setSong] = useState([]);
     useEffect(() => {
@@ -52,4 +70,4 @@ function FetchSongFromId(id) {
 }
 
 export default FetchAllSongs;
-export {FetchSongsByRecord, FetchSongFromId};
+export {FetchSongsByRecord, FetchSongFromId, FetchSongsByArtist};

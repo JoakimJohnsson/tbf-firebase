@@ -6,7 +6,7 @@ import {FetchRecordFromId} from "../../api-functions/records-api";
 import imgUnavailable from "../../images/image_unavailable.png";
 import * as COLUMNS from "../../constants/cols";
 
-const SongCard = ({id, fullWidth, url, recordId}) => {
+const SongCard = ({id, fullWidth, url, recordId, reverse}) => {
 
     const song = FetchSongFromId(id);
     const coverUrl = FetchRecordFromId(recordId).coverUrl;
@@ -16,8 +16,12 @@ const SongCard = ({id, fullWidth, url, recordId}) => {
                 <div className={`song-card__simple mb-2 text-color-variant__${rand.toString()}`}>
                     <img alt={`Cover for ${song.name}`} src={coverUrl || imgUnavailable}/>
                     <div className="song-card__content p-3">
-                        <p className="label mb-1"><Artist id={song.artistId}/></p>
-                        <p className="small mb-3">{song.name}</p>
+                        <p className="label mb-1">
+                            {reverse ? song.name : <Artist id={song.artistId}/>}
+                        </p>
+                        <p className="small mb-3">
+                            {reverse ? <Artist id={song.artistId}/> : song.name}
+                        </p>
                         <audio controls className="w-100">
                             <source src={song.url} type="audio/mpeg"/>
                             <p>

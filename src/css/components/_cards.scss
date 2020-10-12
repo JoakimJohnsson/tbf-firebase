@@ -94,7 +94,7 @@
     display: none;
     border: none;
     object-fit: cover;
-    width: 33%;
+    width: 40%;
     opacity: .5;
     @include media-breakpoint-up(sm) {
       display: block;
@@ -104,10 +104,13 @@
     }
     @include media-breakpoint-up(lg) {
       display: block;
-      width: 33%;
+      width: 40%;
     }
     @include media-breakpoint-up(xl) {
-      width: 40%;
+      width: 100%;
+    }
+    @media screen and (min-width: 1420px) {
+      width: 50%;
     }
   }
 

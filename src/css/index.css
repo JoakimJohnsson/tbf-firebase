@@ -11434,7 +11434,7 @@ footer {
     display: none;
     border: none;
     object-fit: cover;
-    width: 33%;
+    width: 40%;
     opacity: .5; }
     @media (min-width: 576px) {
       .song-card__simple img {
@@ -11445,10 +11445,13 @@ footer {
     @media (min-width: 992px) {
       .song-card__simple img {
         display: block;
-        width: 33%; } }
+        width: 40%; } }
     @media (min-width: 1200px) {
       .song-card__simple img {
-        width: 40%; } }
+        width: 100%; } }
+    @media screen and (min-width: 1420px) {
+      .song-card__simple img {
+        width: 50%; } }
   .song-card__simple .song-card__content {
     width: 100%;
     height: 100%; }

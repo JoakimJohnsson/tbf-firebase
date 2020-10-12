@@ -24,14 +24,8 @@ const ArtistPage = ({match}) => {
 
     return (
         <div className="row">
-            <div className="standard-main-column order-2 order-lg-1">
-                <div className="standard-main-column__section">
-                    <h2>Records</h2>
-                    <RecordsByArtistList artistId={id}/>
-                </div>
-                <CopyrightInfoComponent className={"d-block d-lg-none mt-5"}/>
-            </div>
-            <div className="standard-secondary-column order-1 order-lg-2">
+
+            <div className="standard-secondary-column">
                 <div className="standard-box-wrapper__near-dark">
                     <h1 className="text-capitalize">{artist.name}</h1>
                     <img className="w-100 mb-3 opacity-4" alt={`${artist.name}`} src={artist.imgUrl || imgUnavailable}/>
@@ -50,6 +44,14 @@ const ArtistPage = ({match}) => {
                     <CopyrightInfoComponent className={"d-none d-lg-block"}/>
                 </div>
             </div>
+            <div className="standard-main-column">
+                <div className="standard-main-column__section">
+                    <h2>Records</h2>
+                    <RecordsByArtistList artistId={id}/>
+                </div>
+                <CopyrightInfoComponent className={"d-block d-lg-none mt-5"}/>
+            </div>
+
         </div>
     );
 };

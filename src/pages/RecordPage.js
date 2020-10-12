@@ -11,14 +11,7 @@ const RecordPage = ({match}) => {
 
     return record.artistId ? (
             <div className="row">
-                <div className="standard-main-column order-2 order-lg-1">
-                    <div className="standard-main-column__section">
-                        <h2>Tracks</h2>
-                        <SongsByRecordList recordId={id}/>
-                    </div>
-                    <CopyrightInfoComponent className={"d-block d-lg-none mt-5"}/>
-                </div>
-                <div className="standard-secondary-column order-1 order-lg-2">
+                <div className="standard-secondary-column">
                     <div className="standard-box-wrapper__near-dark">
                         <h1 className="text-capitalize mb-0">{record.name}</h1>
                         <p className="text-uppercase"><Artist id={record.artistId}/></p>
@@ -27,6 +20,14 @@ const RecordPage = ({match}) => {
                         <CopyrightInfoComponent className={"d-none d-lg-block"}/>
                     </div>
                 </div>
+                <div className="standard-main-column">
+                    <div className="standard-main-column__section">
+                        <h2>Tracks</h2>
+                        <SongsByRecordList recordId={id}/>
+                    </div>
+                    <CopyrightInfoComponent className={"d-block d-lg-none mt-5"}/>
+                </div>
+
             </div>
         )
         :

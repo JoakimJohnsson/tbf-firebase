@@ -11398,6 +11398,7 @@ footer {
       transform: scale(0.95);
       color: #fff; }
     .artist-card__simple a img {
+      border-radius: 5px;
       position: absolute;
       top: 0;
       left: 0;

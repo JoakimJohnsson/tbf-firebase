@@ -4,7 +4,7 @@ import AllRecordsList from "../components/lists/AllRecordsList";
 
 const RecordsPage = () => (
     <div className="row no-gutters">
-        <h1>Records</h1>
+        <h1>All available records</h1>
         <div className="col-12 mb-5">
             <AllRecordsList fullWidth/>
         </div>

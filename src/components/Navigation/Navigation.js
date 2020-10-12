@@ -20,7 +20,7 @@ const NavigationFooter = () => (
         <FooterNavLink link={ROUTES.START} text={"Start"} icon={"home"}/>
         <FooterNavLink link={ROUTES.ARTISTS} text={"Artists"} icon={"user-astronaut"}/>
         <FooterNavLink link={ROUTES.RECORDS} text={"Records"} icon={"compact-disc"}/>
-        <FooterNavLink link={ROUTES.SONGS} text={"Songs"} icon={"music"}/>
+        <FooterNavLink link={ROUTES.TRACKS} text={"Tracks"} icon={"music"}/>
     </Navbar>
 );
 

@@ -5,7 +5,7 @@ import SongCard from "../cards/SongCard";
 const SongsByRecordList = ({recordId}) => {
     const songs = FetchSongsByRecord(recordId);
     return (
-            <div>
+            <div className="row">
                 {songs.map((song) =>
                     <SongCard id={song.id} key={song.id} recordId={recordId}/>
                 )}

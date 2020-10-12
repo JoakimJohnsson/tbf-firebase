@@ -5,8 +5,7 @@ import usePagination from "firestore-pagination-hook";
 import firebase from "firebase";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
-const AllSongsListPaginated = ({columnClass}) => {
-
+const AllSongsListPaginated = ({fullwidth}) => {
     const {
         loadingMore,
         hasMore,
@@ -21,11 +20,10 @@ const AllSongsListPaginated = ({columnClass}) => {
             limit: 4
         }
     );
-
     return items.length ? (
             <div className="row">
                 {items.map(item => (
-                    <SongCard id={item.id} columnClass={columnClass} key={item.id} recordId={item.data().recordId}/>
+                    <SongCard id={item.id} fullWidth={fullwidth} key={item.id} recordId={item.data().recordId}/>
                 ))}
                 {
                     hasMore && !loadingMore &&

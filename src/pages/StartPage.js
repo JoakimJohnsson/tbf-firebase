@@ -11,31 +11,7 @@ console.log("WE HAVE FIREBASE", firebase.performance.name);
 
 const StartPage = () => (
     <div className="row">
-
-        <div className="standard-main-column order-2 order-lg-1">
-
-            <div className="standard-main-column__section">
-                <h2>Popular artists</h2>
-                <AllArtistsListPaginated />
-                <IconLink className={"ml-3"} link={ROUTES.ARTISTS} text={"See all artists"} icon={"user-astronaut"}/>
-            </div>
-
-            <div className="standard-main-column__section">
-                <h2>Popular records</h2>
-                <AllRecordsListPaginated fullWidth={false}/>
-                <IconLink className={"ml-3"} link={ROUTES.RECORDS} text={"See all records"} icon={"record-vinyl"}/>
-            </div>
-
-            <div className="standard-main-column__section">
-                <h2>Popular songs</h2>
-                <AllSongsListPaginated fullWidth={false}/>
-                <IconLink className={"ml-3"} link={ROUTES.SONGS} text={"See all songs"} icon={"music"}/>
-            </div>
-
-            <CopyrightInfoComponent className={"d-block d-lg-none"}/>
-        </div>
-
-        <div className="standard-secondary-column order-1 order-lg-2">
+        <div className="standard-secondary-column">
             <div className="standard-box-wrapper__near-dark">
                 <h1>The Baseball Field & Friends</h1>
                 <p>The music scene in Nyköping has delivered great music since the early 90's. </p>
@@ -46,7 +22,24 @@ const StartPage = () => (
                 <CopyrightInfoComponent className={"d-none d-lg-block"}/>
             </div>
         </div>
-
+        <div className="standard-main-column">
+            <div className="standard-main-column__section">
+                <h2>Popular artists</h2>
+                <AllArtistsListPaginated />
+                <IconLink className={"ml-3"} link={ROUTES.ARTISTS} text={"See all artists"} icon={"user-astronaut"}/>
+            </div>
+            <div className="standard-main-column__section">
+                <h2>Popular records</h2>
+                <AllRecordsListPaginated fullWidth={false}/>
+                <IconLink className={"ml-3"} link={ROUTES.RECORDS} text={"See all records"} icon={"compact-disc"}/>
+            </div>
+            <div className="standard-main-column__section">
+                <h2>Popular songs</h2>
+                <AllSongsListPaginated fullWidth={false}/>
+                <IconLink className={"ml-3"} link={ROUTES.TRACKS} text={"See all songs"} icon={"music"}/>
+            </div>
+            <CopyrightInfoComponent className={"d-block d-lg-none"}/>
+        </div>
     </div>
 );
 export default StartPage;

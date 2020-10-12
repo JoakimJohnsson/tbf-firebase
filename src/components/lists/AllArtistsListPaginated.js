@@ -1,5 +1,5 @@
 import React from 'react';
-import DynamicCard from "../cards/DynamicCard";
+import ArtistCard from "../cards/ArtistCard";
 import {LoadingComponent} from "../MicroComponents/MicroComponents";
 import usePagination from "firestore-pagination-hook";
 import firebase from "firebase";
@@ -24,7 +24,7 @@ const AllArtistsListPaginated = () => {
     return items.length ? (
         <div className="row">
             {items.map(item => (
-                <DynamicCard route="artist" id={item.id} key={item.id} imgUrl={item.data().imgUrl} name={item.data().name}/>
+                <ArtistCard route="artist" id={item.id} key={item.id} imgUrl={item.data().imgUrl} name={item.data().name}/>
             ))}
             {
                 hasMore && !loadingMore &&

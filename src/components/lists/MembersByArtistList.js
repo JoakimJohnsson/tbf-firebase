@@ -3,13 +3,13 @@ import FetchMembersByArtist from "../../api-functions/members-api";
 import Person from "./PersonItem";
 import {LoadingComponent} from "../MicroComponents/MicroComponents";
 
-const MembersByArtistList = (props) => {
-    const members = FetchMembersByArtist(props.artistId);
+const MembersByArtistList = ({artistId}) => {
+    const members = FetchMembersByArtist(artistId);
     return members.length ?
         (<ul className="list-unstyled">
             {members.map((member) =>
                 <li key={member.id}>
-                    <Person id={member.id}/>
+                    <Person id={member.id} artistId={artistId}/>
                 </li>
             )}
         </ul>)

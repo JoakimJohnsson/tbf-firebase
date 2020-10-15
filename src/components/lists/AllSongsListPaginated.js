@@ -20,8 +20,8 @@ const AllSongsListPaginated = ({fullwidth}) => {
             limit: 4
         }
     );
-    return items.length ? (
-            <div className="row">
+    return items.length
+        ? (<div className="row">
                 {items.map(item => (
                     <SongCard id={item.id} fullWidth={fullwidth} key={item.id} recordId={item.data().recordId}/>
                 ))}
@@ -31,10 +31,8 @@ const AllSongsListPaginated = ({fullwidth}) => {
                         <button className="btn button__load-more mb-3" onClick={loadMore}><FontAwesomeIcon icon={"arrow-alt-circle-down"} aria-label="Show more songs"/></button>
                     </div>
                 }
-            </div>
-        )
-        :
-        (<LoadingComponent spinning={true}/>)
+            </div>)
+        : (<LoadingComponent spinning={true}/>)
 };
 
 export default AllSongsListPaginated;

@@ -32,13 +32,11 @@ const ArtistPage = ({match}) => {
                     <img className="w-100 mb-3 opacity-4" alt={`${artist.name}`} src={artist.imgUrl || imgUnavailable}/>
                     <p>
                         {artist.name}
-                        {artist.description !== "" ?
-                            artist.description
-                            :
-                            artist.imgUrl === "" ?
-                                STRINGS.DEFAULT_ARTIST_DESCRIPTION_MISSING_IMAGE
-                                :
-                                STRINGS.DEFAULT_ARTIST_DESCRIPTION}
+                        {artist.description !== ""
+                            ? artist.description
+                            : artist.imgUrl === ""
+                                ? STRINGS.DEFAULT_ARTIST_DESCRIPTION_MISSING_IMAGE
+                                : STRINGS.DEFAULT_ARTIST_DESCRIPTION}
                     </p>
                     <h2>Members</h2>
                     <MembersByArtistList artistId={id}/>

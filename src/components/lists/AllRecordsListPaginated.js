@@ -22,8 +22,8 @@ const AllRecordsListPaginated = ({fullWidth}) => {
         }
     );
 
-    return items.length ? (
-            <div className="row">
+    return items.length
+        ? (<div className="row">
                 {items.map(item => (
 
 
@@ -37,10 +37,8 @@ const AllRecordsListPaginated = ({fullWidth}) => {
                         <button className="btn button__load-more mb-3" onClick={loadMore}><FontAwesomeIcon icon={"arrow-alt-circle-down"} aria-label="Show more songs"/></button>
                     </div>
                 }
-            </div>
-        )
-        :
-        (<LoadingComponent spinning={true}/>)
+            </div>)
+        : (<LoadingComponent spinning={true}/>)
 };
 
 export default AllRecordsListPaginated;

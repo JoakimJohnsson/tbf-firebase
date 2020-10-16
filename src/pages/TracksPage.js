@@ -6,7 +6,7 @@ const TracksPage = () => (
     <div className="row no-gutters">
         <h1>All available tracks</h1>
         <div className="col-12 mb-5">
-            <AllSongsList fullWidth/>
+            <AllSongsList />
         </div>
         <CopyrightInfoComponent/>
     </div>

@@ -3,12 +3,12 @@ import FetchAllSongs from "../../api-functions/songs-api";
 import {LoadingComponent} from "../MicroComponents/MicroComponents";
 import SongCard from "../cards/SongCard";
 
-const AllSongsList = ({fullWidth}) => {
+const AllSongsList = () => {
     const songs = FetchAllSongs();
     return songs.length ?
         (<div className="row">
             {songs.map((song) =>
-                <SongCard id={song.id} fullWidth={fullWidth} key={song.id} recordId={song.recordId}/>
+                <SongCard id={song.id} fullWidth key={song.id} recordId={song.recordId}/>
             )}
         </div>)
         :

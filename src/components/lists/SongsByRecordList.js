@@ -26,7 +26,7 @@ const SongsByRecordListSimple = ({recordId}) => {
                 </li>
             )}
         </ol>)
-        : (<LoadingComponent text="No members available at this time." icon="spinner" spinning={true}/>)
+        : (<LoadingComponent text="No tracks available at this time." icon="spinner" spinning={true}/>)
 };
 
 export default SongsByRecordList;

@@ -7,7 +7,7 @@ const SongsByArtistList = ({artistId}) => {
     return (
             <div className="row">
                 {songs.map((song) =>
-                    <SongCard id={song.id} fullwidth={false} key={song.id} recordId={song.recordId} reverse/>
+                    <SongCard id={song.id} key={song.id} recordId={song.recordId} reverse/>
                 )}
             </div>
     )

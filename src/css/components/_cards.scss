@@ -85,17 +85,13 @@
   .song-card__image {
     height: 75px;
     width: 75px;
-    @include media-breakpoint-up(lg) {
-      height: 50px;
-      width: 50px;
-    }
   }
   .song-card__content {
     display: flex;
     .song-card__content-inner {
       align-items: flex-start;
     }
-    @include media-breakpoint-up(lg) {
+    @include media-breakpoint-up(sm) {
       min-width: 400px;
     }
   }

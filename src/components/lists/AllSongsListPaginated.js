@@ -23,7 +23,7 @@ const AllSongsListPaginated = ({fullwidth}) => {
     return items.length
         ? (<div className="row">
                 {items.map(item => (
-                    <SongCard id={item.id} fullWidth={fullwidth} key={item.id} recordId={item.data().recordId}/>
+                    <SongCard id={item.id} key={item.id} recordId={item.data().recordId} linked/>
                 ))}
                 {
                     hasMore && !loadingMore &&

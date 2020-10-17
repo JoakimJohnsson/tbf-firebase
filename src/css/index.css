@@ -11432,15 +11432,11 @@ footer {
   .song-card .song-card__image {
     height: 75px;
     width: 75px; }
-    @media (min-width: 992px) {
-      .song-card .song-card__image {
-        height: 50px;
-        width: 50px; } }
   .song-card .song-card__content {
     display: flex; }
     .song-card .song-card__content .song-card__content-inner {
       align-items: flex-start; }
-    @media (min-width: 992px) {
+    @media (min-width: 576px) {
       .song-card .song-card__content {
         min-width: 400px; } }
   .song-card .label {

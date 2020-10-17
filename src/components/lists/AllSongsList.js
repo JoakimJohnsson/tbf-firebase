@@ -8,7 +8,7 @@ const AllSongsList = () => {
     return songs.length ?
         (<div className="row">
             {songs.map((song) =>
-                <SongCard id={song.id} fullWidth key={song.id} recordId={song.recordId}/>
+                <SongCard id={song.id} key={song.id} recordId={song.recordId} linked/>
             )}
         </div>)
         :

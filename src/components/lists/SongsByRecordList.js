@@ -1,7 +1,6 @@
 import React from "react";
 import {FetchSongsByRecord} from "../../api-functions/songs-api";
 import SongCard from "../cards/SongCard";
-import Person from "./PersonItem";
 import {LoadingComponent} from "../MicroComponents/MicroComponents";
 import Song from "./SongItem";
 
@@ -10,7 +9,7 @@ const SongsByRecordList = ({recordId}) => {
     return (
             <div className="row">
                 {songs.map((song) =>
-                    <SongCard id={song.id} key={song.id} recordId={recordId} reverse/>
+                    <SongCard id={song.id} key={song.id} recordId={recordId} reverse linked={false}/>
                 )}
             </div>
     )

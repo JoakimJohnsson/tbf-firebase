@@ -35,7 +35,7 @@ const StartPage = () => (
             </div>
             <div className="standard-main-column__section">
                 <h2>Popular songs</h2>
-                <AllSongsListPaginated fullWidth={false}/>
+                <AllSongsListPaginated />
                 <IconLink className={"ml-3"} link={ROUTES.TRACKS} text={"See all songs"} icon={"music"}/>
             </div>
             <CopyrightInfoComponent className={"d-block d-lg-none"}/>

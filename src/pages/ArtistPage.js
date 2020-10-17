@@ -31,7 +31,7 @@ const ArtistPage = ({match}) => {
                     <h1 className="text-capitalize">{artist.name}</h1>
                     <img className="w-100 mb-3 opacity-4" alt={`${artist.name}`} src={artist.imgUrl || imgUnavailable}/>
                     <p>
-                        {artist.name}
+                        <span className="text-capitalize">{artist.name}</span>
                         {artist.description !== ""
                             ? artist.description
                             : artist.imgUrl === ""

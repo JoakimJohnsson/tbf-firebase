@@ -11203,6 +11203,9 @@ code {
   .button__load-more:hover, .button__load-more:focus, .button__load-more:active {
     color: #b8ffe0; }
 
+.list-group {
+  padding-left: 27px; }
+
 .text-yellow {
   color: #fffe88; }
 
@@ -11418,50 +11421,37 @@ footer {
     .artist-card__simple {
       font-size: 1.2rem; } }
 
-.song-card__simple {
+.song-card {
   background: #0a0a0a;
   color: #fff;
-  font-size: 90%;
-  display: flex;
-  align-items: center;
-  max-height: 150px;
-  overflow: hidden;
-  transition: all 0.45s ease-in-out; }
-  .song-card__simple:hover, .song-card__simple:active, .song-card__simple:focus {
+  font-size: 90%; }
+  .song-card:hover, .song-card:active, .song-card:focus {
     transition: all 0.45s ease-in-out; }
-    .song-card__simple:hover img, .song-card__simple:active img, .song-card__simple:focus img {
+    .song-card:hover .song-card__image, .song-card:active .song-card__image, .song-card:focus .song-card__image {
       opacity: .9; }
-  .song-card__simple img {
-    display: none;
-    border: none;
-    object-fit: cover;
-    width: 40%;
-    opacity: .5; }
-    @media (min-width: 576px) {
-      .song-card__simple img {
-        display: block; } }
-    @media (min-width: 768px) {
-      .song-card__simple img {
-        display: none; } }
+  .song-card .song-card__image {
+    height: 75px;
+    width: 75px; }
     @media (min-width: 992px) {
-      .song-card__simple img {
-        display: block;
-        width: 40%; } }
-    @media (min-width: 1200px) {
-      .song-card__simple img {
-        width: 100%; } }
-    @media screen and (min-width: 1420px) {
-      .song-card__simple img {
-        width: 50%; } }
-  .song-card__simple .song-card__content {
-    width: 100%;
-    height: 100%; }
-  .song-card__simple .label {
+      .song-card .song-card__image {
+        height: 50px;
+        width: 50px; } }
+  .song-card .song-card__content {
+    display: flex; }
+    .song-card .song-card__content .song-card__content-inner {
+      align-items: flex-start; }
+    @media (min-width: 992px) {
+      .song-card .song-card__content {
+        min-width: 400px; } }
+  .song-card .label {
     font-weight: bold;
     text-transform: uppercase; }
-  .song-card__simple .small {
+  .song-card .small {
     font-weight: normal;
     text-transform: capitalize; }
+  .song-card .song-card__audio {
+    padding: 0;
+    margin: 0; }
 
 .record-card {
   width: 100%;

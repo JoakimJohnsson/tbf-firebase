@@ -7,6 +7,7 @@ function FetchAllArtists() {
         firebase
             .firestore()
             .collection('artists')
+            .orderBy("name", "asc")
             .onSnapshot((snapshot) => {
                 const newArtists = snapshot.docs.map((doc) => ({
                     id: doc.id,

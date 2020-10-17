@@ -11282,7 +11282,8 @@ label {
   font-family: "Lobster", cursive, sans-serif; }
 
 .logo-font-family__13 {
-  font-family: "Bungee", cursive, sans-serif; }
+  font-family: "Bungee", cursive, sans-serif;
+  font-size: 80% !important; }
 
 .logo-font-family__14 {
   font-family: "Itim", cursive, sans-serif; }

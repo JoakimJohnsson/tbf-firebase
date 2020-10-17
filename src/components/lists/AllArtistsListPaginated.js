@@ -18,13 +18,16 @@ const AllArtistsListPaginated = () => {
             .collection("artists")
             .orderBy("numberOfViews", "desc"),
         {
-            limit: 4
+            limit: 6
         }
     );
     return items.length
         ? (<div className="row">
             {items.map(item => (
-                <ArtistCard route="artist" id={item.id} key={item.id} imgUrl={item.data().imgUrl}
+                <ArtistCard route="artist"
+                            id={item.id}
+                            key={item.id}
+                            imgUrl={item.data().imgUrl}
                             name={item.data().name}/>
             ))}
             {

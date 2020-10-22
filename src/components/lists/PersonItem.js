@@ -16,7 +16,7 @@ function FetchRole(id, artistId) {
             .get().then(function(doc) {
             setRole(doc.data().role);
         });
-    }, [id]);
+    }, [id, artistId]);
     return role;
 }
 

@@ -3,6 +3,7 @@ import {Link} from "react-router-dom";
 import imgUnavailable from "../../images/image_unavailable.png";
 import Artist from "../lists/ArtistItem";
 import * as COLUMNS from "../../constants/cols"
+import SongsByRecordList from "../lists/SongsByRecordList";
 
 const RecordCard = ({route, id, name, artistId, coverUrl, fullWidth}) => {
     let rand = Math.floor(Math.random() * 7) + 1;
@@ -21,4 +22,14 @@ const RecordCard = ({route, id, name, artistId, coverUrl, fullWidth}) => {
     )
 };
 
+const RecordCardWithSongs = ({id, name, artistId}) => {
+    return (
+        <div className="record-card-with-songs col-12">
+            <h2 className="text-uppercase"><Artist id={artistId}/>: <span className="text-capitalize">{name}</span></h2>
+            <SongsByRecordList recordId={id}/>
+        </div>
+    )
+};
+
 export default RecordCard;
+export {RecordCardWithSongs};

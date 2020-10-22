@@ -2,6 +2,8 @@ import React from "react";
 import FetchAllSongs from "../../api-functions/songs-api";
 import {LoadingComponent} from "../MicroComponents/MicroComponents";
 import SongCard from "../cards/SongCard";
+import FetchAllRecords from "../../api-functions/records-api";
+import {RecordCardWithSongs} from "../cards/RecordCard";
 
 const AllSongsList = () => {
     const songs = FetchAllSongs();
@@ -15,4 +17,19 @@ const AllSongsList = () => {
         (<LoadingComponent spinning={true}/>)
 };
 
+const AllSongsListByRecord = () => {
+
+    const records = FetchAllRecords();
+
+    return records.length ?
+        (<div className="row">
+            {records.map((record) =>
+                <RecordCardWithSongs id={record.id} name={record.name} artistId={record.artistId}/>
+            )}
+        </div>)
+        :
+        (<LoadingComponent spinning={true}/>)
+};
+
 export default AllSongsList;
+export {AllSongsListByRecord};

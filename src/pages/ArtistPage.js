@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import MembersByArtistList from "../components/lists/MembersByArtistList";
 import {CopyrightInfoComponent} from "../components/MicroComponents/MicroComponents";
 import {FetchArtistFromId} from "../api-functions/artists-api";

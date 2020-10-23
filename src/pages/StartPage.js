@@ -7,7 +7,7 @@ import IconLink from "../components/links/IconNavLink";
 import * as ROUTES from "../constants/routes";
 import AllRecordsListPaginated from "../components/lists/AllRecordsListPaginated";
 
-console.log("WE HAVE FIREBASE", firebase.performance.name);
+console.log("-- WE HAVE FIREBASE --");
 
 const StartPage = () => (
     <div className="row">

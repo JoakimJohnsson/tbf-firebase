@@ -28,7 +28,8 @@ const AllArtistsListPaginated = () => {
                             id={item.id}
                             key={item.id}
                             imgUrl={item.data().imgUrl}
-                            name={item.data().name}/>
+                            name={item.data().name}
+                            fullWidth={false}/>
             ))}
             {
                 hasMore && !loadingMore &&

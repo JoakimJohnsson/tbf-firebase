@@ -2,7 +2,7 @@ import React from "react";
 import {Link} from "react-router-dom";
 import imgUnavailable from "../../images/image_unavailable.png";
 import Artist from "../lists/ArtistItem";
-import * as COLUMNS from "../../constants/cols"
+import * as COLUMNS from "../../constants/cols";
 import SongsByRecordList from "../lists/SongsByRecordList";
 
 const RecordCard = ({route, id, name, artistId, coverUrl, fullWidth}) => {

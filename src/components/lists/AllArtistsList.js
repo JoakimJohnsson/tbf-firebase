@@ -8,7 +8,7 @@ const AllArtistsList = () => {
     return artists.length ?
         (<div className="row">
                 {artists.map((artist) =>
-                    <ArtistCard route="artist" id={artist.id} key={artist.id} imgUrl={artist.imgUrl} name={artist.name}/>
+                    <ArtistCard route="artist" id={artist.id} key={artist.id} imgUrl={artist.imgUrl} name={artist.name} fullWidth/>
                 )}
             </div>
         )

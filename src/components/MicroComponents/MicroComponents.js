@@ -56,20 +56,20 @@ function renderIcon(format) {
 function renderText(format) {
     switch(format) {
         case 'cd-r':
-            return format;
+            return 'cd-r /';
         case '7" vinyl':
-            return format;
+            return '7" vinyl /';
         case 'digital':
-            return 'digital download';
+            return 'digital download /';
         case 'cassette':
-            return format;
+            return 'cassette /';
         default:
-            return format;
+            return `${format} /`;
     }
 }
 
-const FormatInfoComponent = ({format}) => (
-    <span className="text-capitalize"><FontAwesomeIcon icon={renderIcon(format)} className={"mr-1"}/> {renderText(format)} / </span>
+const FormatInfoComponent = ({format, text}) => (
+    <span className="text-capitalize"><FontAwesomeIcon icon={renderIcon(format)} className={"mr-1"}/> {text ? renderText(format) : ""}</span>
 );
 
 export default TodoComponent;

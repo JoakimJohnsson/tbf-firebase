@@ -25,7 +25,7 @@ const AllRecordsListPaginated = ({fullWidth}) => {
     return items.length
         ? (<div className="row">
                 {items.map(item => (
-                    <RecordCard route="record" id={item.id} name={item.data().name} artistId={item.data().artistId} coverUrl={item.data().coverUrl} fullWidth={fullWidth} key={item.id}/>
+                    <RecordCard route="record" id={item.id} name={item.data().name} artistId={item.data().artistId} coverUrl={item.data().coverUrl} fullWidth={fullWidth} year={item.data().year} format={item.data().format} key={item.id}/>
                 ))}
                 {
                     hasMore && !loadingMore &&

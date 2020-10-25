@@ -4,8 +4,9 @@ import imgUnavailable from "../../images/image_unavailable.png";
 import Artist from "../lists/ArtistItem";
 import * as COLUMNS from "../../constants/cols";
 import SongsByRecordList from "../lists/SongsByRecordList";
+import {FormatInfoComponent} from "../MicroComponents/MicroComponents";
 
-const RecordCard = ({route, id, name, artistId, coverUrl, fullWidth}) => {
+const RecordCard = ({route, id, name, artistId, coverUrl, fullWidth, year, format}) => {
     let rand = Math.floor(Math.random() * 7) + 1;
     return (
         <div className={fullWidth ? COLUMNS.RECORDS_FULLWIDTH : COLUMNS.RECORDS_MAIN} key={id}>
@@ -15,6 +16,7 @@ const RecordCard = ({route, id, name, artistId, coverUrl, fullWidth}) => {
                     <Link to={`/${route}/${id}`}>
                         <p className={`card-title`}><Artist id={artistId}/></p>
                         <p className={`card-sub-title text-color-variant__${rand.toString()}`}>{name}</p>
+                        <p className={`card-sub-title text-color-variant__${rand.toString()}`}><FormatInfoComponent format={format} text={false}/> {year}</p>
                     </Link>
                 </div>
             </div>

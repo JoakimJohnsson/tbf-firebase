@@ -20,7 +20,7 @@ const RecordPage = ({match}) => {
                     <div className="standard-box-wrapper__near-dark">
                         <h1 className="text-capitalize mb-0">{record.name}</h1>
                         <p className="text-uppercase mb-0"><Artist id={record.artistId}/></p>
-                        <p className="small">{record.format ? <FormatInfoComponent format={record.format}/> : ""} {record.year ? `${record.year}` : ""}</p>
+                        <p className="small">{record.format ? <FormatInfoComponent format={record.format} text/> : ""} {record.year ? `${record.year}` : ""}</p>
 
                         <img className="w-100 mb-3 mb-lg-5" alt={`Cover for ${record.name}`}
                              src={record.coverUrl || imgUnavailable}/>

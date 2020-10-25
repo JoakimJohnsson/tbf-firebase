@@ -10,7 +10,7 @@ const RecordsByArtistList = (props) => {
     return records.length ?
         (<div className="row">
             {records.map((record) =>
-                <RecordCard route="record" id={record.id} name={record.name} artistId={record.artistId} coverUrl={record.coverUrl} columnClass={COLUMNS.RECORDS_MAIN} />
+                <RecordCard route="record" id={record.id} name={record.name} artistId={record.artistId} coverUrl={record.coverUrl} key={record.id} year={record.year} format={record.format} columnClass={COLUMNS.RECORDS_MAIN} />
             )}
         </div>)
         :

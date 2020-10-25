@@ -39,6 +39,39 @@ const CopyrightInfoComponent = (props) => (
     </div>
 );
 
+function renderIcon(format) {
+    switch(format) {
+        case 'cd-r':
+            return 'compact-disc';
+        case '7" vinyl':
+            return 'record-vinyl';
+        case 'digital':
+            return 'robot';
+        case 'cassette':
+            return 'vr-cardboard';
+        default:
+            return 'compact-disc';
+    }
+}
+function renderText(format) {
+    switch(format) {
+        case 'cd-r':
+            return format;
+        case '7" vinyl':
+            return format;
+        case 'digital':
+            return 'digital download';
+        case 'cassette':
+            return format;
+        default:
+            return format;
+    }
+}
+
+const FormatInfoComponent = ({format}) => (
+    <span className="text-capitalize"><FontAwesomeIcon icon={renderIcon(format)} className={"mr-1"}/> {renderText(format)} / </span>
+);
+
 export default TodoComponent;
-export {LoadingComponent, DashboardListItemButton, CopyrightInfoComponent};
+export {LoadingComponent, DashboardListItemButton, CopyrightInfoComponent, FormatInfoComponent};
 

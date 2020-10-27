@@ -19,6 +19,25 @@ function FetchAllArtists() {
     return artists;
 }
 
+function FetchAllArtistsWithRecords() {
+    const [artists, setArtists] = useState([]);
+    useEffect(() => {
+        firebase
+            .firestore()
+            .collection('artists')
+            .where('hasRecords', '==', true)
+            .orderBy("name", "asc")
+            .onSnapshot((snapshot) => {
+                const newArtists = snapshot.docs.map((doc) => ({
+                    id: doc.id,
+                    ...doc.data()
+                }));
+                setArtists(newArtists)
+            })
+    }, []);
+    return artists;
+}
+
 function FetchArtistFromId(id) {
     const [artist, setArtist] = useState([]);
     useEffect(() => {
@@ -53,4 +72,4 @@ function FetchArtistsWithLimit(limit) {
 }
 
 export default FetchAllArtists;
-export {FetchArtistFromId, FetchArtistsWithLimit};
+export {FetchArtistFromId, FetchArtistsWithLimit, FetchAllArtistsWithRecords};

@@ -2,7 +2,8 @@
 $color-white: #fff;
 $color-black: #000;
 $color-black__trans-hard: rgba(0, 0, 0, .95);
-$color-black__trans-light: rgba(0, 0, 0, .80);
+$color-black__trans-light: rgba(0, 0, 0, .8);
+$color-black__trans-super-light: rgba(0, 0, 0, .4);
 $color-dark-grey: #151515;
 $color-near-black: #0a0a0a;
 $color-light-grey: #444;
@@ -10,6 +11,7 @@ $color-vibrant-pink: #ff88cc;
 $color-vibrant-green: #88ffcc;
 $color-vibrant-yellow: #fffe88;
 $color-vibrant-blue: #88a1ff;
+
 // Complementary colors
 $color-vibrant-purple: #ce88ff;
 $color-vibrant-orange: #ffb588;
@@ -27,6 +29,7 @@ $color-quaternary__lighten: #a0c6ff;
 $color-bg: $color-black;
 $color-bg__lighten: lighten($color-bg, 50%);
 $color-border: $color-light-grey;
+
 // Fonts
 $tbf-font__regular: 'Fira Sans', sans-serif;
 $tbf-font__heading: 'Secular one', cursive, sans-serif;
@@ -46,6 +49,10 @@ $tbf-font__logo-13: 'Bungee', cursive, sans-serif;
 $tbf-font__logo-14: 'Itim', cursive, sans-serif;
 $tbf-font__logo-15: 'Reenie Beanie', cursive, sans-serif;
 $tbf-font__logo-16: 'Graduate', cursive, sans-serif;
+
+// Text shadow
+$text-shadow__normal: 0 0 8px $color-black;
+
 // Bootstrap
 $font-family-sans-serif: $tbf-font__regular;
 $headings-font-family: $tbf-font__heading;
@@ -58,6 +65,7 @@ $link-color: $primary;
 $body-bg: $color-dark-grey;
 $body-color: $color-white;
 $font-size-base: 1rem;
+
 // Bootstrap navbar styles
 $btn-disabled-opacity:              .30;
 $navbar-padding-y:                  $spacer / 2;
@@ -79,6 +87,7 @@ $navbar-dark-brand-hover-color:           $navbar-dark-active-color;
 $card-bg: $color-near-black;
 $card-cap-bg: $color-black;
 $card-cap-color: $color-tertiary;
+
 // Modals
 
 // Padding applied to the modal body

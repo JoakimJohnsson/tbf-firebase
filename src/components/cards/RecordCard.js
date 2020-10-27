@@ -27,7 +27,7 @@ const RecordCard = ({route, id, name, artistId, coverUrl, fullWidth, year, forma
 const RecordCardWithSongs = ({id, name, artistId}) => {
     return (
         <div className="record-card-with-songs col-12">
-            <h2 className="text-uppercase"><Artist id={artistId}/>: <span className="text-capitalize">{name}</span></h2>
+            <h2 className="section-header"><Artist id={artistId}/>: {name}</h2>
             <SongsByRecordList recordId={id}/>
         </div>
     )

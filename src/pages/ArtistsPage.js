@@ -4,8 +4,8 @@ import {CopyrightInfoComponent} from "../components/MicroComponents/MicroCompone
 
 const ArtistsPage = () => (
     <div className="row no-gutters">
-        <h1>Artists</h1>
-        <div className="col-12 mb-5">
+        <h1 >Artists</h1>
+        <div className="col-12 mb-4">
             <AllArtistsList/>
         </div>
         <CopyrightInfoComponent/>

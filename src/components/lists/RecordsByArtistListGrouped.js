@@ -9,15 +9,16 @@ const RecordsByArtistListGrouped = ({id}) => {
     const records = FetchRecordsByArtist(id);
 
     return records.length ?
-        (<div className="row mb-5">
+        (<div className="row mb-4">
 
             <div className="col-12 w-100>">
-                <h2 className="text-capitalize"><Artist id={id}/></h2>
+                <h2 className="section-header"><Artist id={id}/></h2>
             </div>
 
             {records.map((record) =>
                 <RecordCard route="record" id={record.id} name={record.name} artistId={record.artistId} coverUrl={record.coverUrl} key={record.id} year={record.year} format={record.format} columnClass={COLUMNS.RECORDS_MAIN} />
             )}
+
 
         </div>)
         :

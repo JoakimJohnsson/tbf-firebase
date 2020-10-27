@@ -45,10 +45,10 @@ const ArtistPage = ({match}) => {
             </div>
             <div className="standard-main-column">
                 <div className="standard-main-column__section">
-                    <h2>Records</h2>
+                    <h2 className="section-header">Records</h2>
                     <RecordsByArtistList artistId={id}/>
 
-                    <h2>Tracks</h2>
+                    <h2 className="section-header">Tracks</h2>
                     <SongsByArtistList artistId={id}/>
                 </div>
                 <CopyrightInfoComponent className={"d-block d-lg-none mt-5"}/>

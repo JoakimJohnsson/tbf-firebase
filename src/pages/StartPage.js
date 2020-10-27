@@ -24,17 +24,17 @@ const StartPage = () => (
         </div>
         <div className="standard-main-column">
             <div className="standard-main-column__section">
-                <h2>Popular artists</h2>
+                <h2 className="section-header">Popular artists</h2>
                 <AllArtistsListPaginated />
                 <IconLink className={"ml-3"} link={ROUTES.ARTISTS} text={"See all artists"} icon={"user-astronaut"}/>
             </div>
             <div className="standard-main-column__section">
-                <h2>Popular records</h2>
+                <h2 className="section-header">Popular records</h2>
                 <AllRecordsListPaginated fullWidth={false}/>
                 <IconLink className={"ml-3"} link={ROUTES.RECORDS} text={"See all records"} icon={"compact-disc"}/>
             </div>
             <div className="standard-main-column__section">
-                <h2>Popular songs</h2>
+                <h2 className="section-header">Popular songs</h2>
                 <AllSongsListPaginated />
                 <IconLink className={"ml-3"} link={ROUTES.TRACKS} text={"See all songs"} icon={"music"}/>
             </div>

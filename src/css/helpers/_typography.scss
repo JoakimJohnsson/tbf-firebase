@@ -38,7 +38,7 @@ h4, h5, h6 {
 }
 
 p:last-of-type, .lead {
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
 }
 
 label {
@@ -192,4 +192,10 @@ label {
 
 .small {
   font-weight: 100;
+}
+
+.section-header {
+  text-transform: capitalize;
+  border-bottom: 1px solid $color-border;
+  padding-bottom: .5rem;
 }

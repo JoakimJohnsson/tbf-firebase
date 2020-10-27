@@ -5,9 +5,7 @@
 .standard-box-wrapper__near-dark {
   @include box-padding-standard;
   background: none;
-  border-bottom: 1px solid $color-near-black;
   @include media-breakpoint-up(sm) {
-    border-bottom: none;
     background: $color-near-black;
   }
 }
@@ -34,23 +32,17 @@
   }
 
   .standard-main-column__section {
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
     padding-bottom: 2rem;
-    border-bottom: 1px solid $color-near-black;
-    @include media-breakpoint-up(lg) {
-      margin-bottom: 3rem;
-      border-bottom: none;
-    }
   }
 }
 
 .standard-secondary-column {
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
   padding-top: 1rem;
   @include make-col-ready();
   @include media-breakpoint-up(lg) {
     @include make-col(4);
-    margin-bottom: 3rem;
     padding-top: 0;
   }
 }

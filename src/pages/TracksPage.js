@@ -5,7 +5,7 @@ import {AllSongsListByRecord} from "../components/lists/AllSongsList";
 const TracksPage = () => (
     <div className="row no-gutters">
         <h1>All available tracks</h1>
-        <div className="col-12 mb-5">
+        <div className="col-12 mb-4">
             <AllSongsListByRecord />
         </div>
         <CopyrightInfoComponent/>

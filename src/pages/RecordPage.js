@@ -25,6 +25,7 @@ const RecordPage = ({match}) => {
                         <img className="w-100 mb-3 mb-lg-5" alt={`Cover for ${record.name}`}
                              src={record.coverUrl || imgUnavailable}/>
 
+                        <h2>Description</h2>
                         <p>
                             <span className="text-capitalize">{record.name} </span>
                             {record.description !== ""
@@ -34,6 +35,8 @@ const RecordPage = ({match}) => {
                                     : STRINGS.DEFAULT_RECORD_DESCRIPTION}
                         </p>
 
+                        <h2>Track list</h2>
+
                         <SongsByRecordListSimple recordId={id}/>
 
                         <CopyrightInfoComponent className={"d-none d-lg-block"}/>
@@ -41,7 +44,7 @@ const RecordPage = ({match}) => {
                 </div>
                 <div className="standard-main-column">
                     <div className="standard-main-column__section">
-                        <h2>Tracks</h2>
+                        <h2 className="section-header">Tracks</h2>
                         <SongsByRecordList recordId={id}/>
                     </div>
                     <CopyrightInfoComponent className={"d-block d-lg-none mt-5"}/>

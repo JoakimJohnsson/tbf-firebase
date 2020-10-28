@@ -11158,17 +11158,17 @@ code {
   border-radius: 0;
   padding: 0;
   border: none; }
-  .btn-fa:hover, .btn-fa__primary:hover, .btn-fa__secondary:hover, .btn-fa__tertiary:hover, .btn-fa:focus, .btn-fa__primary:focus, .btn-fa__secondary:focus, .btn-fa__tertiary:focus {
+  .btn-fa:hover, .btn-fa__primary:hover, .btn-fa__secondary:hover, .btn-fa__tertiary:hover, .btn-fa:focus, .btn-fa__primary:focus, .btn-fa__secondary:focus, .btn-fa__tertiary:focus, .btn-fa:active, .btn-fa__primary:active, .btn-fa__secondary:active, .btn-fa__tertiary:active {
     color: inherit; }
 
 .btn-fa__primary {
   color: #ff88cc; }
-  .btn-fa__primary:hover, .btn-fa__primary:focus {
+  .btn-fa__primary:hover, .btn-fa__primary:focus, .btn-fa__primary:active {
     color: #ffcfeb; }
 
 .btn-fa__secondary {
   color: #88ffcc; }
-  .btn-fa__secondary:hover, .btn-fa__secondary:focus {
+  .btn-fa__secondary:hover, .btn-fa__secondary:focus, .btn-fa__secondary:active {
     color: #b8ffe0; }
 
 .btn-fa__tertiary {
@@ -11179,7 +11179,7 @@ code {
 .btn__tertiary {
   background-color: #fffe88;
   color: #151515; }
-  .btn__tertiary:hover, .btn__tertiary:focus {
+  .btn__tertiary:hover, .btn__tertiary:focus, .btn__tertiary:active {
     background-color: #fffea0;
     color: #000; }
 
@@ -11190,10 +11190,15 @@ code {
 .button__load-more {
   padding: 0;
   font-size: 150%;
-  color: #88ffcc;
-  width: 100%; }
+  color: #151515;
+  width: 80%;
+  background: #88ffcc; }
+  @media (min-width: 576px) {
+    .button__load-more {
+      width: 20%; } }
   .button__load-more:hover, .button__load-more:focus, .button__load-more:active {
-    color: #b8ffe0; }
+    background: #b8ffe0;
+    color: #000; }
 
 .list-group {
   padding-left: 27px; }

@@ -29,8 +29,10 @@ const AllRecordsListPaginated = ({fullWidth}) => {
                 ))}
                 {
                     hasMore && !loadingMore &&
-                    <div className="col-12">
-                        <button className="btn button__load-more mb-3" onClick={loadMore}><FontAwesomeIcon icon={"arrow-alt-circle-down"} aria-label="Show more songs"/></button>
+                    <div className="col-12 text-center">
+                        <button className="btn button__load-more mb-3" onClick={loadMore}>
+                            <FontAwesomeIcon icon={"arrow-alt-circle-down"} aria-label="Show more songs"/>
+                        </button>
                     </div>
                 }
             </div>)

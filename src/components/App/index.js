@@ -5,7 +5,7 @@ import {library} from '@fortawesome/fontawesome-svg-core';
 import {faAirbnb, faGoogle, faFacebookF} from '@fortawesome/free-brands-svg-icons';
 import {faArrowAltCircleLeft, faCopyright} from '@fortawesome/free-regular-svg-icons';
 import {
-    faWrench, faHome, faArrowAltCircleDown, faRecordVinyl, faMusic, faSearch, faUserAstronaut, faPlayCircle, faPlus, faTimes, faPen,
+    faWrench, faHome, faArrowAltCircleDown, faArrowAltCircleUp, faRecordVinyl, faMusic, faSearch, faUserAstronaut, faPlayCircle, faPlus, faTimes, faPen,
     faMinus, faChevronLeft, faChevronRight, faChevronDown, faSpinner, faSave, faAngleDoubleDown, faCompactDisc, faUsersSlash, faRobot
 } from '@fortawesome/free-solid-svg-icons';
 import Navigation from '../Navigation/Navigation';
@@ -17,7 +17,7 @@ import RecordsPage from "../../pages/RecordsPage";
 import RecordPage from "../../pages/RecordPage";
 import TracksPage from "../../pages/TracksPage";
 
-library.add(faAirbnb, faGoogle, faFacebookF, faArrowAltCircleLeft, faArrowAltCircleDown , faCopyright, faWrench, faHome, faRecordVinyl,
+library.add(faAirbnb, faGoogle, faFacebookF, faArrowAltCircleLeft, faArrowAltCircleDown,faArrowAltCircleUp, faCopyright, faWrench, faHome, faRecordVinyl,
     faMusic, faSearch, faUserAstronaut, faPlayCircle, faPlus, faTimes, faPen, faMinus, faChevronLeft, faChevronRight,faChevronDown, faSpinner, faSave,
     faAngleDoubleDown, faCompactDisc, faUsersSlash, faRobot);
 

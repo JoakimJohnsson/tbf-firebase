@@ -32,7 +32,7 @@ const RecordPage = ({match}) => {
                                 <button onClick={() => setOpen(!open)} className="btn w-100 button__show-more fs-lg mb-2 d-block d-lg-none"
                                         data-toggle="collapse" aria-expanded="false"
                                         aria-controls={`collapse-${id}-info`}>
-                                    <FontAwesomeIcon icon={"arrow-alt-circle-down"} aria-label="Show record information"/>
+                                    <FontAwesomeIcon icon={ open ? "arrow-alt-circle-up" : "arrow-alt-circle-down"} aria-label="Show record information"/>
                                 </button>
                             </div>
                         </div>

@@ -18,6 +18,10 @@ $color-vibrant-orange: #ffb588;
 $color-vibrant-lime: #acff88;
 $color-super-vibrant-orange: #ff6c4c;
 
+// Gradients
+
+$color-gradient__black: linear-gradient(45deg, $color-dark-grey 25%, lighten($color-dark-grey, 5%) 50%, $color-dark-grey 75%);
+
 // Color variables
 $color-primary: $color-vibrant-pink;
 $color-primary__lighten: #ffcfeb;

@@ -11103,7 +11103,8 @@ html {
       transition: none; } }
 
 body {
-  font-size: .8rem; }
+  font-size: .8rem;
+  background: linear-gradient(45deg, #151515 25%, #222222 50%, #151515 75%); }
   @media (min-width: 576px) {
     body {
       font-size: .9rem; } }

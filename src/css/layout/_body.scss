@@ -11,6 +11,7 @@ body {
   @include media-breakpoint-up(md) {
     font-size: 1rem;
   }
+  background: $color-gradient__black;
 }
 
 body {

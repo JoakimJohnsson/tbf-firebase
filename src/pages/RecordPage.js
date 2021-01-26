@@ -7,7 +7,7 @@ import {
 import {FetchRecordFromId} from "../api-functions/records-api";
 import SongsByRecordList, {SongsByRecordListSimple} from "../components/lists/SongsByRecordList";
 import imgUnavailable from "../images/image_unavailable.png";
-import Artist from "../components/lists/ArtistItem";
+import {ArtistLink} from "../components/lists/ArtistItem";
 import * as STRINGS from "../constants/strings";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {Collapse} from "react-bootstrap";
@@ -24,7 +24,7 @@ const RecordPage = ({match}) => {
                         <div className="d-flex justify-content-between">
                             <div className="mr-3">
                                 <h1 className="text-capitalize mb-0">{record.name}</h1>
-                                <p className="text-uppercase mb-0"><Artist id={record.artistId}/></p>
+                                <p className="text-uppercase mb-0"><ArtistLink id={record.artistId}/></p>
                                 <p className="small m-0">{record.format ?
                                     <FormatInfoComponent format={record.format} text/> : ""} {record.year ? `${record.year}` : ""}</p>
                             </div>

@@ -10,7 +10,7 @@ const SongCard = ({id, url, recordId, reverse, linked}) => {
 
     const song = FetchSongFromId(id);
     const coverUrl = FetchRecordFromId(recordId).coverUrl;
-    let rand = Math.floor(Math.random() * 7) + 1;
+    let rand = Math.floor(Math.random() * 8) + 1;
     return song.artistId ? (
             <div className="col-12 p-3" key={song.id}>
                 <div className={`song-card d-md-flex mb-2 text-color-variant__${rand.toString()}`}>

@@ -136,7 +136,6 @@
   @include media-breakpoint-up(sm) {
     width: 20%;
   }
-
   &:hover,
   &:focus,
   &:active {
@@ -146,15 +145,15 @@
 }
 
 .button__show-more {
-  //padding: 0;
-  font-size: 150%;
+  height: 1.7rem;
+  width: 1.7rem;
+  border-radius: 50%;
+  //font-size: 150%;
   color: $color-dark-grey;
-  //width: 80%;
   background: $color-secondary;
-  @include media-breakpoint-up(sm) {
-    width: 20%;
-  }
-
+  //svg {
+  //  padding: .8rem;
+  //}
   &:hover,
   &:focus,
   &:active {

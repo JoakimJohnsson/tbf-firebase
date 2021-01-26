@@ -7,7 +7,7 @@ import SongsByRecordList from "../lists/SongsByRecordList";
 import {FormatInfoComponent} from "../MicroComponents/MicroComponents";
 
 const RecordCard = ({route, id, name, artistId, coverUrl, fullWidth, year, format}) => {
-    let rand = Math.floor(Math.random() * 7) + 1;
+    let rand = Math.floor(Math.random() * 8) + 1;
     return (
         <div className={fullWidth ? COLUMNS.RECORDS_FULLWIDTH : COLUMNS.RECORDS_MAIN} key={id}>
             <div className={`record-card`}>

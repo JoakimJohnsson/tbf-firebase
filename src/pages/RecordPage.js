@@ -29,10 +29,10 @@ const RecordPage = ({match}) => {
                                     <FormatInfoComponent format={record.format} text/> : ""} {record.year ? `${record.year}` : ""}</p>
                             </div>
                             <div>
-                                <button onClick={() => setOpen(!open)} className="btn w-100 button__show-more fs-lg mb-2 d-block d-lg-none"
+                                <button onClick={() => setOpen(!open)} className="btn button__show-more mb-2 d-flex align-items-center justify-content-center d-lg-none"
                                         data-toggle="collapse" aria-expanded="false"
                                         aria-controls={`collapse-${id}-info`}>
-                                    <FontAwesomeIcon icon={ open ? "arrow-alt-circle-up" : "arrow-alt-circle-down"} aria-label="Show record information"/>
+                                    <FontAwesomeIcon icon={ open ? "chevron-up" : "chevron-down"} aria-label="Show record information"/>
                                 </button>
                             </div>
                         </div>

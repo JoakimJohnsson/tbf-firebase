@@ -11,6 +11,8 @@ import SongsByArtistList from "../components/lists/SongsByArtistList";
 const ArtistPage = ({match}) => {
     const {params: {id}} = match;
     const artist = FetchArtistFromId(id);
+    let rand = Math.floor(Math.random() * 16) + 1;
+    let rand2 = Math.floor(Math.random() * 8) + 1;
 
     // Increment number of views
     const increment = firebase.firestore.FieldValue.increment(1);
@@ -28,7 +30,7 @@ const ArtistPage = ({match}) => {
 
             <div className="standard-secondary-column">
                 <div className="standard-box-wrapper__near-dark">
-                    <h1 className="text-capitalize">{artist.name}</h1>
+                    <h1 className={`logo-font-family__${rand.toString()} text-color-variant__${rand2.toString()}`}>{artist.name}</h1>
                     <img className="w-100 mb-3 opacity-4" alt={`${artist.name}`} src={artist.imgUrl || imgUnavailable}/>
                     <h2>Description</h2>
                     <p>

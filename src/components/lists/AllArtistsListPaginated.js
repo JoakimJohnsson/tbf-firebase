@@ -35,7 +35,7 @@ const AllArtistsListPaginated = () => {
                 hasMore && !loadingMore &&
                 <div className="col-12 text-center">
                     <button className="btn button__load-more mb-3" onClick={loadMore}>
-                        <FontAwesomeIcon icon={"arrow-alt-circle-down"} aria-label="Show more artists"/>
+                        <FontAwesomeIcon icon={"chevron-down"} aria-label="Show more artists"/>
                     </button>
                 </div>
             }

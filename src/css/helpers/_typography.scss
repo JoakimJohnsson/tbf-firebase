@@ -186,7 +186,17 @@ label {
   &:hover,
   &:focus,
   &:active {
-    color: lighten($color-vibrant-lime, 90%) !important;
+    color: lighten($color-vibrant-lime, 10%) !important;
+  }
+}
+
+.text-color-variant__8 {
+  color: $color-super-vibrant-orange !important;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: lighten($color-super-vibrant-orange, 10%) !important;
   }
 }
 

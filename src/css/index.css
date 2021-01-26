@@ -11055,6 +11055,26 @@ html {
   .ml-xl-auto,
   .mx-xl-auto {
     margin-left: auto !important; } }
+.fade {
+  transition: opacity 0.15s linear; }
+  @media (prefers-reduced-motion: reduce) {
+    .fade {
+      transition: none; } }
+  .fade:not(.show) {
+    opacity: 0; }
+
+.collapse:not(.show) {
+  display: none; }
+
+.collapsing {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  transition: height 0.35s ease; }
+  @media (prefers-reduced-motion: reduce) {
+    .collapsing {
+      transition: none; } }
+
 body {
   font-size: .8rem; }
   @media (min-width: 576px) {
@@ -11200,8 +11220,24 @@ code {
     background: #b8ffe0;
     color: #000; }
 
+.button__show-more {
+  font-size: 150%;
+  color: #151515;
+  background: #88ffcc; }
+  @media (min-width: 576px) {
+    .button__show-more {
+      width: 20%; } }
+  .button__show-more:hover, .button__show-more:focus, .button__show-more:active {
+    background: #b8ffe0;
+    color: #000; }
+
 .list-group {
   padding-left: 27px; }
+
+@media (min-width: 992px) {
+  .collapse.dont-collapse-sm {
+    display: block;
+    height: auto !important; } }
 
 .text-yellow {
   color: #fffe88; }
@@ -11338,6 +11374,9 @@ label {
   text-transform: capitalize;
   border-bottom: 1px solid #444;
   padding-bottom: .5rem; }
+
+.fs-lg {
+  font-size: 120%; }
 
 img {
   border: 1px solid #000; }

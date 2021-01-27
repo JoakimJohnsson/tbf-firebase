@@ -28,8 +28,8 @@ const RecordPage = ({match}) => {
                                 <p className="small m-0">{record.format ?
                                     <FormatInfoComponent format={record.format} text/> : ""} {record.year ? `${record.year}` : ""}</p>
                             </div>
-                            <div>
-                                <button onClick={() => setOpen(!open)} className="btn button__show-more mb-2 d-flex align-items-center justify-content-center d-lg-none"
+                            <div className="d-flex align-items-center">
+                                <button onClick={() => setOpen(!open)} className="btn button__show-more d-flex align-items-center justify-content-center d-lg-none"
                                         data-toggle="collapse" aria-expanded="false"
                                         aria-controls={`collapse-${id}-info`}>
                                     <FontAwesomeIcon icon={ open ? "chevron-up" : "chevron-down"} aria-label="Show record information"/>

@@ -5,6 +5,8 @@ import Navbar from 'react-bootstrap/Navbar';
 import TbfLogo from "../Logo/Logo";
 import FooterNavLink from "../links/FooterNavLink";
 
+const showUpload = false;
+
 const Navigation = () => (
     <header>
         <Navbar className="standard-container navbar-header justify-content-center" bg="dark" variant="dark"
@@ -21,6 +23,7 @@ const NavigationFooter = () => (
         <FooterNavLink link={ROUTES.ARTISTS} text={"Artists"} icon={"user-astronaut"}/>
         <FooterNavLink link={ROUTES.RECORDS} text={"Records"} icon={"compact-disc"}/>
         <FooterNavLink link={ROUTES.TRACKS} text={"Tracks"} icon={"music"}/>
+        {showUpload ? <FooterNavLink link={ROUTES.UPLOAD} text={"Upload"} icon={"plus"}/> : false}
     </Navbar>
 );
 

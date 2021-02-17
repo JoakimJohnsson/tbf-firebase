@@ -7,7 +7,7 @@ import IconLink from "../components/links/IconNavLink";
 import * as ROUTES from "../constants/routes";
 import AllRecordsListPaginated from "../components/lists/AllRecordsListPaginated";
 
-console.log("-- WE HAVE FIREBASE --");
+console.log("-- WE HAVE FIREBASE " + firebase.app.name + " --");
 
 const StartPage = () => (
     <div className="row">

@@ -5,6 +5,8 @@ const INITIAL_STATE = {
     songId: '',
     artistId: '',
     recordId: '',
+    name: '',
+    url: '',
     index: 1,
     numberOfPlays: 1,
     error: null
@@ -22,6 +24,8 @@ class UploadSongForm extends Component {
         firebase.firestore().collection('songs').doc(this.state.songId).set({
             artistId: this.state.artistId,
             recordId: this.state.recordId,
+            name: this.state.name,
+            url: this.state.url,
             index: this.state.index,
             numberOfPlays: this.state.numberOfPlays
         })
@@ -44,11 +48,13 @@ class UploadSongForm extends Component {
             songId,
             artistId,
             recordId,
+            name,
+            url,
             index,
             numberOfPlays,
             error,
         } = this.state;
-        const isInvalid = songId === '';
+        const isInvalid = songId === '' || recordId === '' || url === '';
         return (
             <form onSubmit={this.onSubmit}>
                 <div className="mb-3">
@@ -63,6 +69,17 @@ class UploadSongForm extends Component {
                     />
                 </div>
                 <div className="mb-3">
+                    <label htmlFor="name" className="form-label">Name</label>
+                    <input
+                        name="name"
+                        id="name"
+                        value={name}
+                        onChange={this.onChange}
+                        type="text"
+                        className="form-control"
+                    />
+                </div>
+                <div className="mb-3">
                     <label htmlFor="artistId" className="form-label">Artist Id</label>
                     <select
                         id="artistId"
@@ -70,21 +87,32 @@ class UploadSongForm extends Component {
                         className="form-control"
                         value={artistId}
                         onChange={this.onChange}>
-                        <option value="zzz">zzz</option>
+                        <option value="select">-- Select --</option>
                         <option value="the-baseball-field">The Baseball field</option>
+                        <option value="the-bodonis">The Bodonis</option>
                     </select>
                 </div>
                 <div className="mb-3">
                     <label htmlFor="recordId" className="form-label">Record Id</label>
-                    <select
-                        id="recordId"
+                    <input
                         name="recordId"
-                        className="form-control"
+                        id="recordId"
                         value={recordId}
-                        onChange={this.onChange}>
-                        <option value="zzz">zzz</option>
-                        <option value="record-lp">Record lp</option>
-                    </select>
+                        onChange={this.onChange}
+                        type="text"
+                        className="form-control"
+                    />
+                </div>
+                <div className="mb-3">
+                    <label htmlFor="url" className="form-label">URL</label>
+                    <input
+                        name="url"
+                        id="url"
+                        value={url}
+                        onChange={this.onChange}
+                        type="text"
+                        className="form-control"
+                    />
                 </div>
                 <div className="mb-3 d-flex">
                     <div className="mr-3">

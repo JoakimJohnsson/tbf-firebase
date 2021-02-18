@@ -44,7 +44,7 @@ function renderIcon(format) {
             return 'compact-disc';
         case '7" vinyl':
             return 'record-vinyl';
-        case 'digital':
+        case 'online':
             return 'robot';
         case 'cassette':
             return 'vr-cardboard';
@@ -58,8 +58,8 @@ function renderText(format) {
             return 'cd-r /';
         case '7" vinyl':
             return '7" vinyl /';
-        case 'digital':
-            return 'digital download /';
+        case 'online':
+            return 'online /';
         case 'cassette':
             return 'cassette /';
         default:

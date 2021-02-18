@@ -6,8 +6,6 @@ import {LoadingComponent} from "../MicroComponents/MicroComponents";
 const SongsByArtistList = ({artistId}) => {
     const songs = FetchSongsByArtist(artistId);
 
-    console.log("songs ", songs);
-
     return songs.length ?
         (<div className="row">
             {songs.map((song) =>

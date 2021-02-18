@@ -1,6 +1,7 @@
 import React from 'react';
 import {CopyrightInfoComponent} from "../components/MicroComponents/MicroComponents";
 import SongUploadForm from "../components/Forms/SongUploadForm"
+import RecordUploadForm from "../components/Forms/RecordUploadForm";
 
 const UploadPage = () => {
 
@@ -18,6 +19,10 @@ const UploadPage = () => {
                     <h2 className="section-header">Song</h2>
 
                     <SongUploadForm/>
+
+                    <h2 className="section-header">Record</h2>
+
+                    <RecordUploadForm/>
 
                 </div>
                 <CopyrightInfoComponent className={"d-block d-lg-none mt-5"}/>

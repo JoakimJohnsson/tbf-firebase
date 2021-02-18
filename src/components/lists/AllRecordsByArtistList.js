@@ -10,7 +10,7 @@ const AllRecordsByArtistList = () => {
     return artistsWithRecords.length ?
         (<>
             {artistsWithRecords.map((artist) =>
-                <RecordsByArtistListGrouped id={artist.id}/>
+                <RecordsByArtistListGrouped id={artist.id} key={artist.id}/>
             )}
         </>)
         :

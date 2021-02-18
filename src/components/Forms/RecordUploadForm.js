@@ -2,17 +2,19 @@ import React, {Component} from 'react';
 import firebase from "firebase";
 
 const INITIAL_STATE = {
-    songId: '',
-    artistId: '',
     recordId: '',
+    artistId: '',
     name: '',
-    url: '',
-    index: 1,
-    numberOfPlays: 1,
+    description: '',
+    format: '',
+    type: '',
+    year: '',
+    coverUrl: '',
+    numberOfViews: 1,
     error: null
 };
 
-class UploadSongForm extends Component {
+class UploadRecordForm extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -21,25 +23,18 @@ class UploadSongForm extends Component {
     }
 
     onSubmit = event => {
-        firebase.firestore().collection('songs').doc(this.state.songId).set({
+        firebase.firestore().collection('records').doc(this.state.recordId).set({
             artistId: this.state.artistId,
-            recordId: this.state.recordId,
             name: this.state.name,
-            url: this.state.url,
-            index: this.state.index,
-            numberOfPlays: this.state.numberOfPlays
+            description: this.state.description,
+            format: this.state.format,
+            type: this.state.type,
+            year: this.state.year,
+            coverUrl: this.state.coverUrl,
+            numberOfViews: this.state.numberOfViews
         })
             .then(() => {
-                firebase.firestore().collection('records').doc(this.state.recordId).collection('songs').doc(this.state.songId).set({
-                    index: this.state.index,
-                    song: `songs/${this.state.songId},`
-                })
-                    .then(() => {
-                        this.setState({index: this.state.index + 1});
-                    })
-                    .catch(error => {
-                        this.setState({error})
-                    });
+
             })
             .catch(error => {
                 this.setState({error})
@@ -54,24 +49,26 @@ class UploadSongForm extends Component {
 
     render() {
         const {
-            songId,
-            artistId,
             recordId,
+            artistId,
             name,
-            url,
-            index,
-            numberOfPlays,
+            description,
+            format,
+            type,
+            year,
+            coverUrl,
+            numberOfViews,
             error,
         } = this.state;
-        const isInvalid = songId === '' || recordId === '' || url === '';
+        const isInvalid = recordId === '';
         return (
             <form onSubmit={this.onSubmit}>
                 <div className="mb-3">
-                    <label htmlFor="songId" className="form-label">Song Id</label>
+                    <label htmlFor="recordId" className="form-label">Record Id</label>
                     <input
-                        name="songId"
-                        id="songId"
-                        value={songId}
+                        name="recordId"
+                        id="recordId"
+                        value={recordId}
                         onChange={this.onChange}
                         type="text"
                         className="form-control"
@@ -89,6 +86,50 @@ class UploadSongForm extends Component {
                     />
                 </div>
                 <div className="mb-3">
+                    <label htmlFor="description" className="form-label">Description</label>
+                    <input
+                        name="description"
+                        id="description"
+                        value={description}
+                        onChange={this.onChange}
+                        type="text"
+                        className="form-control"
+                    />
+                </div>
+                <div className="mb-3">
+                    <label htmlFor="format" className="form-label">Format</label>
+                    <input
+                        name="format"
+                        id="format"
+                        value={format}
+                        onChange={this.onChange}
+                        type="text"
+                        className="form-control"
+                    />
+                </div>
+                <div className="mb-3">
+                    <label htmlFor="type" className="form-label">Type</label>
+                    <input
+                        name="type"
+                        id="type"
+                        value={type}
+                        onChange={this.onChange}
+                        type="text"
+                        className="form-control"
+                    />
+                </div>
+                <div className="mb-3">
+                    <label htmlFor="year" className="form-label">Year</label>
+                    <input
+                        name="year"
+                        id="year"
+                        value={year}
+                        onChange={this.onChange}
+                        type="text"
+                        className="form-control"
+                    />
+                </div>
+                <div className="mb-3">
                     <label htmlFor="artistId" className="form-label">Artist Id</label>
                     <select
                         id="artistId"
@@ -100,51 +141,26 @@ class UploadSongForm extends Component {
                         <option value="the-baseball-field">The Baseball field</option>
                         <option value="the-bodonis">The Bodonis</option>
                         <option value="music-ninja">Music / Ninja</option>
-
                     </select>
                 </div>
                 <div className="mb-3">
-                    <label htmlFor="recordId" className="form-label">Record Id</label>
+                    <label htmlFor="coverUrl" className="form-label">Cover URL</label>
                     <input
-                        name="recordId"
-                        id="recordId"
-                        value={recordId}
-                        onChange={this.onChange}
-                        type="text"
-                        className="form-control"
-                    />
-                </div>
-                <div className="mb-3">
-                    <label htmlFor="url" className="form-label">URL</label>
-                    <input
-                        name="url"
-                        id="url"
-                        value={url}
+                        name="coverUrl"
+                        id="coverUrl"
+                        value={coverUrl}
                         onChange={this.onChange}
                         type="text"
                         className="form-control"
                     />
                 </div>
                 <div className="mb-3 d-flex">
-                    <div className="mr-3">
-                        <label htmlFor="index" className="form-label">Index</label>
-                        <input
-                            name="index"
-                            id="index"
-                            value={index}
-                            onChange={this.onChange}
-                            type="number"
-                            min="1"
-                            max="35"
-                            className="form-control"
-                        />
-                    </div>
                     <div>
-                        <label htmlFor="numberOfPlays" className="form-label">Number of plays</label>
+                        <label htmlFor="numberOfViews" className="form-label">Number of views</label>
                         <input
-                            name="numberOfPlays"
-                            id="numberOfPlays"
-                            value={numberOfPlays}
+                            name="numberOfViews"
+                            id="numberOfViews"
+                            value={numberOfViews}
                             onChange={this.onChange}
                             type="number"
                             min="1"
@@ -165,4 +181,4 @@ class UploadSongForm extends Component {
     }
 }
 
-export default UploadSongForm;
+export default UploadRecordForm;

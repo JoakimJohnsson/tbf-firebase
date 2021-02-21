@@ -5,7 +5,6 @@ import Artist from "../lists/ArtistItem";
 import * as COLUMNS from "../../constants/cols";
 import SongsByRecordList from "../lists/SongsByRecordList";
 import {FormatInfoComponent} from "../MicroComponents/MicroComponents";
-import {FetchArtistFromId} from "../../api-functions/artists-api";
 import {FetchRecordFromId} from "../../api-functions/records-api";
 
 const RecordCard = ({route, id, name, artistId, coverUrl, fullWidth, year, format}) => {

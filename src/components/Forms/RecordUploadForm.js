@@ -140,7 +140,10 @@ class UploadRecordForm extends Component {
                         <option value="select">-- Select --</option>
                         <option value="the-baseball-field">The Baseball field</option>
                         <option value="the-bodonis">The Bodonis</option>
+                        <option value="fredrik-svensson">Fredrik Svensson</option>
+                        <option value="mc-bomb">MC Bomb</option>
                         <option value="music-ninja">Music / Ninja</option>
+                        <option value="olle">Olle</option>
                     </select>
                 </div>
                 <div className="mb-3">

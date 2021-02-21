@@ -5,6 +5,8 @@ import Artist from "../lists/ArtistItem";
 import * as COLUMNS from "../../constants/cols";
 import SongsByRecordList from "../lists/SongsByRecordList";
 import {FormatInfoComponent} from "../MicroComponents/MicroComponents";
+import {FetchArtistFromId} from "../../api-functions/artists-api";
+import {FetchRecordFromId} from "../../api-functions/records-api";
 
 const RecordCard = ({route, id, name, artistId, coverUrl, fullWidth, year, format}) => {
     let rand = Math.floor(Math.random() * 8) + 1;
@@ -24,6 +26,15 @@ const RecordCard = ({route, id, name, artistId, coverUrl, fullWidth, year, forma
     )
 };
 
+const RecordLink = (props) => {
+    const record = FetchRecordFromId(props.id);
+    return <>
+        <Link to={`/record/${props.id}`}>
+            <span>{record.name}</span>
+        </Link>
+    </>
+};
+
 const RecordCardWithSongs = ({id, name, artistId}) => {
     return (
         <div className="record-card-with-songs col-12">
@@ -34,4 +45,4 @@ const RecordCardWithSongs = ({id, name, artistId}) => {
 };
 
 export default RecordCard;
-export {RecordCardWithSongs};
+export {RecordCardWithSongs, RecordLink};

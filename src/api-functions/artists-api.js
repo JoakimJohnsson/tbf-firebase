@@ -52,6 +52,34 @@ function FetchArtistFromId(id) {
     return artist;
 }
 
+function FetchLastUpdatedArtistId() {
+    const [artistId, setArtistId] = useState([]);
+    useEffect(() => {
+        firebase
+            .firestore()
+            .collection('stats')
+            .doc('lastUpdatedArtist')
+            .get().then(function(doc) {
+            setArtistId(doc.data().artistId);
+        });
+    }, []);
+    return artistId;
+}
+
+function FetchLastUpdatedArtistTimestamp() {
+    const [timestamp, setTimestamp] = useState([]);
+    useEffect(() => {
+        firebase
+            .firestore()
+            .collection('stats')
+            .doc('lastUpdatedArtist')
+            .get().then(function(doc) {
+            setTimestamp(doc.data().date);
+        });
+    }, []);
+    return timestamp;
+}
+
 function FetchArtistsWithLimit(limit) {
     const [Artists, setArtists] = useState([]);
 
@@ -72,4 +100,4 @@ function FetchArtistsWithLimit(limit) {
 }
 
 export default FetchAllArtists;
-export {FetchArtistFromId, FetchArtistsWithLimit, FetchAllArtistsWithRecords};
+export {FetchArtistFromId, FetchArtistsWithLimit, FetchAllArtistsWithRecords, FetchLastUpdatedArtistId, FetchLastUpdatedArtistTimestamp};

@@ -40,6 +40,18 @@ class UploadRecordForm extends Component {
                 })
                     .then(() => {
 
+                        // Increment number of records
+                        const increment = firebase.firestore.FieldValue.increment(1);
+                        firebase.firestore().collection("stats").doc('counters')
+                            .update({recordCounter: increment}).then(function () {
+                            console.log("Document successfully updated!");
+                        })
+                            .catch(function (error) {
+                                // The document probably doesn't exist.
+                                console.error("Error updating document: ", error);
+                            });
+
+
                     })
                     .catch(error => {
                         this.setState({error})

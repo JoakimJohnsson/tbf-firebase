@@ -35,6 +35,18 @@ class UploadSongForm extends Component {
                     song: `songs/${this.state.songId},`
                 })
                     .then(() => {
+
+                        // Increment number of songs
+                        const increment = firebase.firestore.FieldValue.increment(1);
+                        firebase.firestore().collection("stats").doc('counters')
+                            .update({songCounter: increment}).then(function () {
+                            console.log("Document successfully updated!");
+                        })
+                            .catch(function (error) {
+                                // The document probably doesn't exist.
+                                console.error("Error updating document: ", error);
+                            });
+
                         this.setState({index: this.state.index + 1});
                     })
                     .catch(error => {

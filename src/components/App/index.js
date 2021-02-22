@@ -6,7 +6,7 @@ import {faAirbnb, faGoogle, faFacebookF} from '@fortawesome/free-brands-svg-icon
 import {faArrowAltCircleLeft, faCopyright} from '@fortawesome/free-regular-svg-icons';
 import {
     faWrench, faHome, faArrowAltCircleDown, faArrowDown, faArrowUp, faArrowAltCircleUp, faRecordVinyl, faMusic, faSearch, faUserAstronaut, faPlayCircle, faPlus, faTimes, faPen,
-    faMinus, faChevronLeft, faChevronRight, faChevronDown, faChevronUp, faSpinner, faSave, faAngleDoubleDown, faCompactDisc, faUsersSlash, faRobot
+    faMinus, faChevronLeft, faChevronRight, faChevronDown, faChevronUp, faSpinner, faSave, faAngleDoubleDown, faCompactDisc, faUsersSlash, faRobot, faVrCardboard
 } from '@fortawesome/free-solid-svg-icons';
 import Navigation from '../Navigation/Navigation';
 import Footer from "../Footer/footer";
@@ -20,7 +20,7 @@ import UploadPage from "../../pages/UploadPage";
 
 library.add(faAirbnb, faGoogle, faFacebookF, faArrowAltCircleLeft, faArrowAltCircleDown, faArrowDown, faArrowUp, faArrowAltCircleUp, faCopyright, faWrench, faHome, faRecordVinyl,
     faMusic, faSearch, faUserAstronaut, faPlayCircle, faPlus, faTimes, faPen, faMinus, faChevronLeft, faChevronRight, faChevronDown, faChevronUp, faSpinner, faSave,
-    faAngleDoubleDown, faCompactDisc, faUsersSlash, faRobot);
+    faAngleDoubleDown, faCompactDisc, faUsersSlash, faRobot, faVrCardboard);
 
 const App = () => (
     <Router>

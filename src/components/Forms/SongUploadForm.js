@@ -103,9 +103,7 @@ class UploadSongForm extends Component {
                         <option value="mc-bomb">MC Bomb</option>
                         <option value="music-ninja">Music / Ninja</option>
                         <option value="olle">Olle</option>
-
-
-
+                        <option value="satans-galjonsfigurer">Satans Galjonsfigurer</option>
                     </select>
                 </div>
                 <div className="mb-3">

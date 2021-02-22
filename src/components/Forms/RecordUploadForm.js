@@ -34,12 +34,20 @@ class UploadRecordForm extends Component {
             numberOfViews: this.state.numberOfViews
         })
             .then(() => {
+                firebase.firestore().collection('stats').doc('lastAddedRecord').set({
+                    recordId: this.state.recordId,
+                    date: firebase.firestore.FieldValue.serverTimestamp()
+                })
+                    .then(() => {
 
+                    })
+                    .catch(error => {
+                        this.setState({error})
+                    });
             })
             .catch(error => {
                 this.setState({error})
             });
-
         event.preventDefault();
     };
 
@@ -144,6 +152,7 @@ class UploadRecordForm extends Component {
                         <option value="mc-bomb">MC Bomb</option>
                         <option value="music-ninja">Music / Ninja</option>
                         <option value="olle">Olle</option>
+                        <option value="satans-galjonsfigurer">Satans Galjonsfigurer</option>
                     </select>
                 </div>
                 <div className="mb-3">

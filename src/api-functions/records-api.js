@@ -39,7 +39,7 @@ function FetchLastAddedRecordTimestamp() {
         firebase
             .firestore()
             .collection('stats')
-            .doc('lastUpdatedArtist')
+            .doc('lastAddedRecord')
             .get().then(function(doc) {
             setTimestamp(doc.data().date);
         });

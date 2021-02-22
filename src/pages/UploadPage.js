@@ -3,7 +3,6 @@ import {CopyrightInfoComponent} from "../components/MicroComponents/MicroCompone
 import SongUploadForm from "../components/Forms/SongUploadForm"
 import RecordUploadForm from "../components/Forms/RecordUploadForm";
 import LastUpdatedArtistForm from "../components/Forms/LastUpdatedArtistForm";
-import LastAddedRecordForm from "../components/Forms/LastAddedRecordForm";
 
 const UploadPage = () => {
 
@@ -19,17 +18,13 @@ const UploadPage = () => {
             <div className="standard-main-column">
                 <div className="standard-main-column__section">
                     <h2 className="section-header">Song</h2>
-
                     <SongUploadForm/>
 
                     <h2 className="section-header">Record</h2>
-
                     <RecordUploadForm/>
 
-                    <h2 className="section-header">Latest updated</h2>
-
+                    <h2 className="section-header">Last updated artist</h2>
                     <LastUpdatedArtistForm/>
-                    <LastAddedRecordForm/>
 
                 </div>
                 <CopyrightInfoComponent className={"d-block d-lg-none mt-5"}/>

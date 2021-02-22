@@ -42,8 +42,8 @@ const StartPage = () => {
                 <div className="standard-main-column__section">
                     <h2 className="section-header">Popular artists</h2>
 
-                    <div className="small">Last updated artist: <ArtistLink
-                        id={latestUpdatedArtistId}/> ({latestUpdatedArtistDate.toLocaleDateString()}).</div>
+                    <p className="small m-0">Last updated artist: <ArtistLink
+                        id={latestUpdatedArtistId}/> ({latestUpdatedArtistDate.toLocaleDateString()}).</p>
 
                     <AllArtistsListPaginated/>
                     <IconLink className={"ml-3"} link={ROUTES.ARTISTS} text={"See all artists"} icon={"user-astronaut"}/>
@@ -51,15 +51,15 @@ const StartPage = () => {
                 <div className="standard-main-column__section">
                     <h2 className="section-header">Popular records</h2>
 
-                    <div className="small">Last added record: <RecordLink
-                        id={latestAddedRecordId}/> ({latestAddedRecordDate.toLocaleDateString()}). Total number of records: {counters.recordCounter}</div>
+                    <p className="small m-0">Last added record: <RecordLink
+                        id={latestAddedRecordId}/> ({latestAddedRecordDate.toLocaleDateString()}). Total number of records: {counters.recordCounter}</p>
 
                     <AllRecordsListPaginated fullWidth={false}/>
                     <IconLink className={"ml-3"} link={ROUTES.RECORDS} text={"See all records"} icon={"compact-disc"}/>
                 </div>
                 <div className="standard-main-column__section">
                     <h2 className="section-header">Popular songs</h2>
-                    <div className="small">Total number of songs: {counters.songCounter}</div>
+                    <p className="small m-0">Total number of songs: {counters.songCounter}</p>
 
                     <AllSongsListPaginated/>
                     <IconLink className={"ml-3"} link={ROUTES.TRACKS} text={"See all songs"} icon={"music"}/>

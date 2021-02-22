@@ -4,6 +4,13 @@
   color: $color-tertiary;
 }
 
+p a {
+  color: $color-tertiary;
+  &:hover {
+    color: $color-tertiary__lighten;
+  }
+}
+
 // Responsive font sizes
 h1 {
   margin-bottom: 1.5rem;
@@ -201,7 +208,8 @@ label {
 }
 
 .small {
-  font-weight: 100;
+  font-weight: 300;
+  font-size: 85%;
 }
 
 .section-header {

@@ -39,7 +39,6 @@ class UploadRecordForm extends Component {
                     date: firebase.firestore.FieldValue.serverTimestamp()
                 })
                     .then(() => {
-
                         // Increment number of records
                         const increment = firebase.firestore.FieldValue.increment(1);
                         firebase.firestore().collection("stats").doc('counters')
@@ -50,8 +49,6 @@ class UploadRecordForm extends Component {
                                 // The document probably doesn't exist.
                                 console.error("Error updating document: ", error);
                             });
-
-
                     })
                     .catch(error => {
                         this.setState({error})
@@ -62,7 +59,6 @@ class UploadRecordForm extends Component {
             });
         event.preventDefault();
     };
-
     onChange = event => {
         this.setState({[event.target.name]: event.target.value});
     };

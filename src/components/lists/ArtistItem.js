@@ -11,7 +11,7 @@ const ArtistLink = (props) => {
     const artist = FetchArtistFromId(props.id);
     return <>
         <Link to={`/artist/${props.id}`}>
-            <span>{artist.name}</span>
+            <span className="text-uppercase">{artist.name}</span>
         </Link>
         </>
 };

@@ -8,9 +8,9 @@ import {FetchRecordFromId} from "../api-functions/records-api";
 import SongsByRecordList, {SongsByRecordListSimple} from "../components/lists/SongsByRecordList";
 import imgUnavailable from "../images/image_unavailable.png";
 import {ArtistLink} from "../components/lists/ArtistItem";
-import * as STRINGS from "../constants/strings";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {Collapse} from "react-bootstrap";
+import DefaultArtistDescription from "../components/defaultDescriptions/DefaultArtistDescription";
 
 const RecordPage = ({match}) => {
     const {params: {id}} = match;
@@ -43,12 +43,9 @@ const RecordPage = ({match}) => {
                                      src={record.coverUrl || imgUnavailable}/>
                                 <h2>Description</h2>
                                 <p>
-                                    <span className="text-capitalize">{record.name} </span>
                                     {record.description !== ""
                                         ? record.description
-                                        : record.coverUrl === ""
-                                            ? STRINGS.DEFAULT_RECORD_DESCRIPTION_MISSING_IMAGE
-                                            : STRINGS.DEFAULT_RECORD_DESCRIPTION}
+                                        : <DefaultArtistDescription record={record}/>}
                                 </p>
                                 <h2>Track list</h2>
                                 <SongsByRecordListSimple recordId={id}/>

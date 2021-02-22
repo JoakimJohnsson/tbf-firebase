@@ -11270,6 +11270,11 @@ code {
 .text-yellow {
   color: #fffe88; }
 
+p a {
+  color: #fffe88; }
+  p a:hover {
+    color: #fffea0; }
+
 h1 {
   margin-bottom: 1.5rem;
   font-size: 1.2rem; }
@@ -11401,7 +11406,8 @@ label {
     color: #ff967f !important; }
 
 .small {
-  font-weight: 100; }
+  font-weight: 300;
+  font-size: 85%; }
 
 .section-header {
   text-transform: capitalize;

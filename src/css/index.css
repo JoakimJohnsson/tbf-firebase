@@ -11283,7 +11283,7 @@ h1 {
       font-size: 2rem; } }
   @media (min-width: 1200px) {
     h1 {
-      font-size: 2.5rem; } }
+      font-size: 2.2rem; } }
 
 h2 {
   font-size: 1rem; }
@@ -11367,43 +11367,67 @@ label {
 
 .text-color-variant__1 {
   color: #ff88cc !important; }
-  .text-color-variant__1:hover, .text-color-variant__1:focus, .text-color-variant__1:active {
-    color: #ffcfeb !important; }
+  .text-color-variant__1 a {
+    color: #ffb588 !important; }
+    .text-color-variant__1 a:hover, .text-color-variant__1 a:focus, .text-color-variant__1 a:active {
+      color: #ffcfeb !important;
+      text-decoration: none; }
 
 .text-color-variant__2 {
   color: #88ffcc !important; }
-  .text-color-variant__2:hover, .text-color-variant__2:focus, .text-color-variant__2:active {
-    color: #b8ffe0 !important; }
+  .text-color-variant__2 a {
+    color: #88ffcc !important; }
+    .text-color-variant__2 a:hover, .text-color-variant__2 a:focus, .text-color-variant__2 a:active {
+      color: #b8ffe0 !important;
+      text-decoration: none; }
 
 .text-color-variant__3 {
   color: #fffe88 !important; }
-  .text-color-variant__3:hover, .text-color-variant__3:focus, .text-color-variant__3:active {
-    color: #fffea0 !important; }
+  .text-color-variant__3 a {
+    color: #fffe88 !important; }
+    .text-color-variant__3 a:hover, .text-color-variant__3 a:focus, .text-color-variant__3 a:active {
+      color: #fffea0 !important;
+      text-decoration: none; }
 
 .text-color-variant__4 {
   color: #88a1ff !important; }
-  .text-color-variant__4:hover, .text-color-variant__4:focus, .text-color-variant__4:active {
-    color: #a0c6ff !important; }
+  .text-color-variant__4 a {
+    color: #88a1ff !important; }
+    .text-color-variant__4 a:hover, .text-color-variant__4 a:focus, .text-color-variant__4 a:active {
+      color: #a0c6ff !important;
+      text-decoration: none; }
 
 .text-color-variant__5 {
   color: #ce88ff !important; }
-  .text-color-variant__5:hover, .text-color-variant__5:focus, .text-color-variant__5:active {
-    color: #e3bbff !important; }
+  .text-color-variant__5 a {
+    color: #ce88ff !important; }
+    .text-color-variant__5 a:hover, .text-color-variant__5 a:focus, .text-color-variant__5 a:active {
+      color: #e3bbff !important;
+      text-decoration: none; }
 
 .text-color-variant__6 {
   color: #ffb588 !important; }
-  .text-color-variant__6:hover, .text-color-variant__6:focus, .text-color-variant__6:active {
-    color: #ffd5bb !important; }
+  .text-color-variant__6 a {
+    color: #ffb588 !important; }
+    .text-color-variant__6 a:hover, .text-color-variant__6 a:focus, .text-color-variant__6 a:active {
+      color: #ffd5bb !important;
+      text-decoration: none; }
 
 .text-color-variant__7 {
   color: #acff88 !important; }
-  .text-color-variant__7:hover, .text-color-variant__7:focus, .text-color-variant__7:active {
-    color: #d0ffbb !important; }
+  .text-color-variant__7 a {
+    color: #acff88 !important; }
+    .text-color-variant__7 a:hover, .text-color-variant__7 a:focus, .text-color-variant__7 a:active {
+      color: #d0ffbb !important;
+      text-decoration: none; }
 
 .text-color-variant__8 {
   color: #ff6c4c !important; }
-  .text-color-variant__8:hover, .text-color-variant__8:focus, .text-color-variant__8:active {
-    color: #ff967f !important; }
+  .text-color-variant__8 a {
+    color: #ff6c4c !important; }
+    .text-color-variant__8 a:hover, .text-color-variant__8 a:focus, .text-color-variant__8 a:active {
+      color: #ff967f !important;
+      text-decoration: none; }
 
 .small {
   font-weight: 300;

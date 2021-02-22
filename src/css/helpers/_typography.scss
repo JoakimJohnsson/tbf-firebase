@@ -6,6 +6,7 @@
 
 p a {
   color: $color-tertiary;
+
   &:hover {
     color: $color-tertiary__lighten;
   }
@@ -19,7 +20,7 @@ h1 {
     font-size: $font-size-base * 2;
   }
   @include media-breakpoint-up(xl) {
-    font-size: $font-size-base * 2.5;
+    font-size: $font-size-base * 2.2;
   }
 }
 
@@ -130,80 +131,121 @@ label {
 .text-color-variant__1 {
   color: $color-primary !important;
 
-  &:hover,
-  &:focus,
-  &:active {
-    color: $color-primary__lighten !important;
+  a {
+    color: $color-vibrant-orange !important;
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: $color-primary__lighten !important;
+      text-decoration: none;
+    }
   }
 }
 
 .text-color-variant__2 {
   color: $color-secondary !important;
 
-  &:hover,
-  &:focus,
-  &:active {
-    color: $color-secondary__lighten !important;
+  a {
+    color: $color-secondary !important;
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: $color-secondary__lighten !important;
+      text-decoration: none;
+    }
   }
 }
 
 .text-color-variant__3 {
   color: $color-tertiary !important;
 
-  &:hover,
-  &:focus,
-  &:active {
-    color: $color-tertiary__lighten !important;
+  a {
+    color: $color-tertiary !important;
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: $color-tertiary__lighten !important;
+      text-decoration: none;
+    }
   }
 }
 
 .text-color-variant__4 {
   color: $color-quaternary !important;
 
-  &:hover,
-  &:focus,
-  &:active {
-    color: $color-quaternary__lighten !important;
+  a {
+    color: $color-quaternary !important;
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: $color-quaternary__lighten !important;
+      text-decoration: none;
+    }
   }
 }
 
 .text-color-variant__5 {
   color: $color-vibrant-purple !important;
 
-  &:hover,
-  &:focus,
-  &:active {
-    color: lighten($color-vibrant-purple, 10%) !important;
+  a {
+    color: $color-vibrant-purple !important;
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: lighten($color-vibrant-purple, 10%) !important;
+      text-decoration: none;
+
+    }
   }
 }
 
 .text-color-variant__6 {
   color: $color-vibrant-orange !important;
 
-  &:hover,
-  &:focus,
-  &:active {
-    color: lighten($color-vibrant-orange, 10%) !important;
+  a {
+    color: $color-vibrant-orange !important;
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: lighten($color-vibrant-orange, 10%) !important;
+      text-decoration: none;
+    }
   }
 }
 
 .text-color-variant__7 {
   color: $color-vibrant-lime !important;
 
-  &:hover,
-  &:focus,
-  &:active {
-    color: lighten($color-vibrant-lime, 10%) !important;
+  a {
+    color: $color-vibrant-lime !important;
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: lighten($color-vibrant-lime, 10%) !important;
+      text-decoration: none;
+    }
   }
 }
 
 .text-color-variant__8 {
   color: $color-super-vibrant-orange !important;
 
-  &:hover,
-  &:focus,
-  &:active {
-    color: lighten($color-super-vibrant-orange, 10%) !important;
+  a {
+    color: $color-super-vibrant-orange !important;
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: lighten($color-super-vibrant-orange, 10%) !important;
+      text-decoration: none;
+    }
   }
 }
 

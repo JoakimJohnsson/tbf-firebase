@@ -3,16 +3,18 @@ import {LoadingComponent} from "../MicroComponents/MicroComponents";
 import {FetchRecordsByArtist} from "../../api-functions/records-api";
 import RecordCard from "../cards/RecordCard";
 import * as COLUMNS from "../../constants/cols";
-import Artist from "./ArtistItem";
+import {ArtistLink} from "./ArtistItem";
 
 const RecordsByArtistListGrouped = ({id}) => {
     const records = FetchRecordsByArtist(id);
+    let rand = Math.floor(Math.random() * 16) + 1;
+    let rand2 = Math.floor(Math.random() * 8) + 1;
 
     return records.length ?
         (<div className="row mb-4">
 
             <div className="col-12 w-100>">
-                <h2 className="section-header"><Artist id={id}/></h2>
+                <h2 className={`section-header logo-font-family__${rand.toString()} text-color-variant__${rand2.toString()}`}><ArtistLink id={id}/></h2>
             </div>
 
             {records.map((record) =>

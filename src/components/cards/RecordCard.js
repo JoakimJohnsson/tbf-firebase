@@ -1,7 +1,7 @@
 import React from "react";
 import {Link} from "react-router-dom";
 import imgUnavailable from "../../images/image_unavailable.png";
-import Artist from "../lists/ArtistItem";
+import Artist, {ArtistLink} from "../lists/ArtistItem";
 import * as COLUMNS from "../../constants/cols";
 import SongsByRecordList from "../lists/SongsByRecordList";
 import {FormatInfoComponent} from "../MicroComponents/MicroComponents";
@@ -35,9 +35,13 @@ const RecordLink = (props) => {
 };
 
 const RecordCardWithSongs = ({id, name, artistId}) => {
+    let rand = Math.floor(Math.random() * 16) + 1;
+    let rand2 = Math.floor(Math.random() * 8) + 1;
+
     return (
         <div className="record-card-with-songs col-12">
-            <h2 className="section-header"><Artist id={artistId}/>: {name}</h2>
+            <h2 className={`section-header logo-font-family__${rand.toString()}`}><span className={`text-color-variant__${rand2.toString()}`}><ArtistLink id={artistId}/></span></h2>
+            <p>{name}</p>
             <SongsByRecordList recordId={id}/>
         </div>
     )

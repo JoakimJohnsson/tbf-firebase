@@ -14,7 +14,7 @@ const AllSongsList = () => {
             )}
         </div>)
         :
-        (<LoadingComponent spinning={true}/>)
+        (<LoadingComponent />)
 };
 
 const AllSongsListByRecord = () => {
@@ -28,7 +28,7 @@ const AllSongsListByRecord = () => {
             )}
         </div>)
         :
-        (<LoadingComponent spinning={true}/>)
+        (<LoadingComponent />)
 };
 
 export default AllSongsList;

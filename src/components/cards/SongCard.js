@@ -47,7 +47,7 @@ const SongCard = ({id, url, recordId, reverse, linked}) => {
             </div>
         )
         :
-        <LoadingComponent spinning={true}/>
+        <LoadingComponent />
 };
 
 export default SongCard;

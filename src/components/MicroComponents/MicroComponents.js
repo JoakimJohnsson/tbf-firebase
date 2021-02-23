@@ -8,25 +8,27 @@ const TodoComponent = (props) => (
     </p>
 );
 
-const LoadingComponent = ({text, icon, spinning}) => (
+const LoadingComponentStandard = ({text, icon, spinning}) => (
     <div className="loading-component">
         <div className="text-center">
-        <p className="mb-3">{text || "Loading..."}</p>
-        <p><FontAwesomeIcon icon={icon || "spinner"} spin={spinning} size="2x"/></p>
+            <p className="mb-3">{text || "Loading..."}</p>
+            <p><FontAwesomeIcon icon={icon || "spinner"} spin={spinning} size="2x"/></p>
         </div>
     </div>
 );
 
-const DashboardListItemButton = (props) => (
-    <button
-        type="button"
-        aria-label={`${props.action} ${props.listItem.name}`}
-        className="btn btn-fa__primary ml-2"
-        onClick={() => props.onClick()}
-    >
-        <FontAwesomeIcon icon={props.icon} />
-    </button>
-);
+const LoadingComponent = () => {
+    let rand2 = Math.floor(Math.random() * 8) + 1;
+    return (
+        <div className="w-100 h-100 p-3">
+            <div className={`loading-component opacity-1 mb-3 bg-color-variant__${rand2.toString()}`}>
+                <div className="sr-only">
+                    Loading components
+                </div>
+            </div>
+        </div>
+    )
+};
 
 const CopyrightInfoComponent = (props) => (
     <div className={props.className}>
@@ -72,5 +74,5 @@ const FormatInfoComponent = ({format, text}) => (
 );
 
 export default TodoComponent;
-export {LoadingComponent, DashboardListItemButton, CopyrightInfoComponent, FormatInfoComponent};
+export {LoadingComponent, LoadingComponentStandard, CopyrightInfoComponent, FormatInfoComponent};
 

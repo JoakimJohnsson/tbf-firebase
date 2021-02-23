@@ -33,7 +33,7 @@ const SongCardDynamic = ({id}) => {
             </div>
         )
         :
-        <LoadingComponent spinning={true}/>
+        <LoadingComponent />
 };
 
 export default SongCardDynamic;

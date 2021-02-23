@@ -1,7 +1,7 @@
 import React from "react";
 import FetchMembersByArtist from "../../api-functions/members-api";
 import Person from "./PersonItem";
-import {LoadingComponent} from "../MicroComponents/MicroComponents";
+import {LoadingComponentStandard} from "../MicroComponents/MicroComponents";
 
 const MembersByArtistList = ({artistId}) => {
     const members = FetchMembersByArtist(artistId);
@@ -14,7 +14,7 @@ const MembersByArtistList = ({artistId}) => {
             )}
         </ul>)
         :
-        (<LoadingComponent text="No members available at this time." icon="users-slash" spinning={false}/>)
+        (<LoadingComponentStandard text="No members available at this time." icon="users-slash" spinning={false}/>)
 };
 
 export default MembersByArtistList;

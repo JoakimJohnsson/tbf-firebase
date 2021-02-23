@@ -1,5 +1,5 @@
 import React from "react";
-import {LoadingComponent} from "../MicroComponents/MicroComponents";
+import {LoadingComponentStandard} from "../MicroComponents/MicroComponents";
 import {FetchRecordsByArtist} from "../../api-functions/records-api";
 import RecordCard from "../cards/RecordCard";
 import * as COLUMNS from "../../constants/cols";
@@ -14,7 +14,7 @@ const RecordsByArtistList = ({artistId}) => {
             )}
         </div>)
         :
-        (<LoadingComponent text="There might not be any records at this time." icon="compact-disc" spinning={true}/>)
+        (<LoadingComponentStandard text="There might not be any records at this time." icon="compact-disc" spinning={true}/>)
 };
 
 export default RecordsByArtistList;

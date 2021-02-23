@@ -13,7 +13,7 @@ const SongsByArtistList = ({artistId}) => {
             )}
         </div>)
         :
-        (<LoadingComponent spinning={true}/>)
+        (<LoadingComponent />)
 };
 
 export default SongsByArtistList;

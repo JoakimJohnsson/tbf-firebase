@@ -36,7 +36,7 @@ const AllRecordsListPaginated = ({fullWidth}) => {
                     </div>
                 }
             </div>)
-        : (<LoadingComponent spinning={true}/>)
+        : (<LoadingComponent />)
 };
 
 export default AllRecordsListPaginated;

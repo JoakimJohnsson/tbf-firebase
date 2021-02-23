@@ -13,7 +13,7 @@ const AllArtistsList = () => {
             </div>
         )
         :
-        (<LoadingComponent spinning={true}/>)
+        (<LoadingComponent />)
 };
 
 export default AllArtistsList;

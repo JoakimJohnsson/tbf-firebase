@@ -34,7 +34,7 @@ const AllSongsListPaginated = ({fullwidth}) => {
                     </div>
                 }
             </div>)
-        : (<LoadingComponent spinning={true}/>)
+        : (<LoadingComponent />)
 };
 
 export default AllSongsListPaginated;

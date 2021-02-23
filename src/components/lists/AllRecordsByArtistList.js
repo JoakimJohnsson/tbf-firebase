@@ -14,7 +14,7 @@ const AllRecordsByArtistList = () => {
             )}
         </>)
         :
-        (<LoadingComponent spinning={true}/>)
+        (<LoadingComponent />)
 };
 
 export default AllRecordsByArtistList;

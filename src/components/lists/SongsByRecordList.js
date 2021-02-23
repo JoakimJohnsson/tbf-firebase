@@ -1,7 +1,7 @@
 import React from "react";
 import {FetchSongsByRecord} from "../../api-functions/songs-api";
 import SongCard from "../cards/SongCard";
-import {LoadingComponent} from "../MicroComponents/MicroComponents";
+import {LoadingComponentStandard} from "../MicroComponents/MicroComponents";
 import Song, {SongOnClick} from "./SongItem";
 
 const SongsByRecordList = ({recordId}) => {
@@ -26,7 +26,7 @@ const SongsByRecordListSimple = ({recordId}) => {
                 </li>
             )}
         </ol>)
-        : (<LoadingComponent text="No tracks available at this time." icon="spinner" spinning={true}/>)
+        : (<LoadingComponentStandard text="No tracks available at this time." icon="spinner" spinning={true}/>)
 };
 
 const SongsByRecordListSimpleDynamic = ({recordId, currentSong, setCurrentSongOnClick}) => {
@@ -40,7 +40,7 @@ const SongsByRecordListSimpleDynamic = ({recordId, currentSong, setCurrentSongOn
                     </li>
                 )}
             </ul>)
-        : (<LoadingComponent text="No tracks available at this time." icon="spinner" spinning={true}/>)
+        : (<LoadingComponentStandard text="No tracks available at this time." icon="spinner" spinning={true}/>)
 };
 
 export default SongsByRecordList;

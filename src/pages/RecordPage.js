@@ -5,7 +5,7 @@ import {
     LoadingComponent
 } from "../components/MicroComponents/MicroComponents";
 import {FetchRecordFromId} from "../api-functions/records-api";
-import SongsByRecordList, {SongsByRecordListSimple, SongsByRecordListSimpleDynamic} from "../components/lists/SongsByRecordList";
+import {SongsByRecordListSimple, SongsByRecordListSimpleDynamic} from "../components/lists/SongsByRecordList";
 import imgUnavailable from "../images/image_unavailable.png";
 import {ArtistLink} from "../components/lists/ArtistItem";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";

@@ -18,6 +18,24 @@ const Artist = (props) => {
         )
 };
 
+const ArtistPlaceHolder = () => {
+    let rand = Math.floor(Math.random() * 4) + 2;
+    let rand2 = Math.floor(Math.random() * 6) + 2;
+    let firstName = [];
+    for (let i = 0; i < rand; i++) {
+        firstName.push(<span key={i}>&#9632;</span>)
+    }
+    let lastName = [];
+    for (let i = 0; i < rand2; i++) {
+        lastName.push(<span key={i}>&#9632;</span>)
+    }
+    return (
+        <>
+            <>{firstName}</> <>{lastName}</>
+        </>
+    )
+};
+
 const ArtistLink = (props) => {
     const artist = FetchArtistFromId(props.id);
     return artist.name ? (
@@ -28,10 +46,7 @@ const ArtistLink = (props) => {
         </>
     ) :
         (
-            <>
-                Artist
-            </>
-
+            <ArtistPlaceHolder/>
         )
 };
 

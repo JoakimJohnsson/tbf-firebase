@@ -21,7 +21,7 @@ const SongsByRecordListSimple = ({recordId}) => {
         ? (
         <ol className="list-group mb-3 mb-sm-0 mb-lg-3">
             {songs.map((song) =>
-                <li className="" key={song.index}>
+                <li key={song.index}>
                     <Song id={song.id}/>
                 </li>
             )}
@@ -35,7 +35,7 @@ const SongsByRecordListSimpleDynamic = ({recordId, currentSong, setCurrentSongOn
         ? (
             <ul className="list-unstyled mb-3 mb-sm-0 mb-lg-3">
                 {songs.map((song) =>
-                    <li className="" key={song.index}>
+                    <li className="mb-1" key={song.index}>
                         <SongOnClick id={song.id} setCurrentSong={setCurrentSongOnClick} currentSong={currentSong}/>
                     </li>
                 )}

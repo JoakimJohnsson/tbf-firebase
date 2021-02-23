@@ -11,7 +11,7 @@ const SongCardDynamic = ({id}) => {
             <div className="col-12 py-3 px-0" key={song.id}>
                 <div className={`song-card d-md-flex mb-2 text-color-variant__${rand.toString()}`}>
                     <div className="song-card__content p-3">
-                        <div className="song-card__content-inner d-flex justify-content-center flex-column pl-3 w-100 ">
+                        <div className="song-card__content-inner d-flex justify-content-center flex-column w-100 ">
                             <p className="label mb-0">
                                 <Artist id={song.artistId}/>
                             </p>

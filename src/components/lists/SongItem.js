@@ -13,9 +13,7 @@ const Song = ({id}) => {
 
 const SongOnClick = ({id, setCurrentSong, currentSong}) => {
     const song = FetchSongFromId(id);
-
     const [activeSongId, setActiveSongId] = useState("");
-
 
     return (
             <button className={activeSongId === currentSong ? "button__song-picker active" : "button__song-picker"}

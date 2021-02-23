@@ -23,11 +23,11 @@ const ArtistPlaceHolder = () => {
     let rand2 = Math.floor(Math.random() * 6) + 2;
     let firstName = [];
     for (let i = 0; i < rand; i++) {
-        firstName.push(<span key={i}>&#9632;</span>)
+        firstName.push(<span className="opacity-1" key={i}>&#9632;</span>)
     }
     let lastName = [];
     for (let i = 0; i < rand2; i++) {
-        lastName.push(<span key={i}>&#9632;</span>)
+        lastName.push(<span className="opacity-1" key={i}>&#9632;</span>)
     }
     return (
         <>

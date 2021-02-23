@@ -8,17 +8,18 @@ import * as ROUTES from "../constants/routes";
 import AllRecordsListPaginated from "../components/lists/AllRecordsListPaginated";
 import {FetchLastUpdatedArtistTimestamp, FetchLastUpdatedArtistId, FetchCounters} from "../api-functions/artists-api";
 import {ArtistLink} from "../components/lists/ArtistItem";
-import {FetchLastAddedRecordId, FetchLastAddedRecordTimestamp} from "../api-functions/records-api";
+import {FetchLastAddedRecordArtistId, FetchLastAddedRecordId, FetchLastAddedRecordTimestamp} from "../api-functions/records-api";
 import {RecordLink} from "../components/cards/RecordCard";
 
 console.log("-- WE HAVE FIREBASE " + firebase.app.name + " --");
 
 const StartPage = () => {
 
-    const latestUpdatedArtistId = FetchLastUpdatedArtistId();
-    const latestUpdatedArtistDate = new Date(FetchLastUpdatedArtistTimestamp().seconds * 1000);
-    const latestAddedRecordId = FetchLastAddedRecordId();
-    const latestAddedRecordDate = new Date(FetchLastAddedRecordTimestamp().seconds * 1000);
+    const lastUpdatedArtistId = FetchLastUpdatedArtistId();
+    const lastUpdatedArtistDate = new Date(FetchLastUpdatedArtistTimestamp().seconds * 1000);
+    const lastAddedRecordId = FetchLastAddedRecordId();
+    const lastAddedRecordArtistId = FetchLastAddedRecordArtistId();
+    const lastAddedRecordDate = new Date(FetchLastAddedRecordTimestamp().seconds * 1000);
 
     let counters = FetchCounters();
     let countersAreFetched;
@@ -26,7 +27,7 @@ const StartPage = () => {
     counters.recordCounter && counters.songCounter ?
         countersAreFetched = true : countersAreFetched = false;
 
-    return latestUpdatedArtistId.length && latestAddedRecordId.length && countersAreFetched ?
+    return lastUpdatedArtistId.length && lastAddedRecordId.length && lastAddedRecordArtistId.length && countersAreFetched ?
         (<div className="row">
             <div className="standard-secondary-column">
                 <div className="standard-box-wrapper__near-dark">
@@ -43,7 +44,7 @@ const StartPage = () => {
                     <h2 className="section-header">Popular artists</h2>
 
                     <p className="small m-0">Last updated artist: <ArtistLink
-                        id={latestUpdatedArtistId}/> ({latestUpdatedArtistDate.toLocaleDateString()}).</p>
+                        id={lastUpdatedArtistId}/> ({lastUpdatedArtistDate.toLocaleDateString()}).</p>
 
                     <AllArtistsListPaginated/>
                     <IconLink className={"ml-3"} link={ROUTES.ARTISTS} text={"See all artists"} icon={"user-astronaut"}/>
@@ -52,7 +53,7 @@ const StartPage = () => {
                     <h2 className="section-header">Popular records</h2>
 
                     <p className="small m-0">Last added record: <RecordLink
-                        id={latestAddedRecordId}/> ({latestAddedRecordDate.toLocaleDateString()}). Total number of records: {counters.recordCounter}</p>
+                        id={lastAddedRecordId}/> by <ArtistLink id={lastAddedRecordArtistId}/>  ({lastAddedRecordDate.toLocaleDateString()}). Total number of records: {counters.recordCounter}</p>
 
                     <AllRecordsListPaginated fullWidth={false}/>
                     <IconLink className={"ml-3"} link={ROUTES.RECORDS} text={"See all records"} icon={"compact-disc"}/>

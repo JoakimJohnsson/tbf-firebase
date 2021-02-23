@@ -36,6 +36,7 @@ class UploadRecordForm extends Component {
             .then(() => {
                 firebase.firestore().collection('stats').doc('lastAddedRecord').set({
                     recordId: this.state.recordId,
+                    artistId: this.state.artistId,
                     date: firebase.firestore.FieldValue.serverTimestamp()
                 })
                     .then(() => {
@@ -154,6 +155,7 @@ class UploadRecordForm extends Component {
                         value={artistId}
                         onChange={this.onChange}>
                         <option value="select">-- Select --</option>
+                        <option value="15th-22">15th 22</option>
                         <option value="the-baseball-field">The Baseball field</option>
                         <option value="the-bodonis">The Bodonis</option>
                         <option value="fredrik-svensson">Fredrik Svensson</option>
@@ -191,7 +193,7 @@ class UploadRecordForm extends Component {
                 </div>
 
                 <div className="text-end">
-                    <button className="btn btn__neu btn-primary mb-3" disabled={isInvalid} type="submit">
+                    <button className="btn btn-secondary mb-3" disabled={isInvalid} type="submit">
                         Submit
                     </button>
                 </div>

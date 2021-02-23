@@ -20,12 +20,10 @@ class LastUpdatedArtistForm extends Component {
             date: firebase.firestore.FieldValue.serverTimestamp()
         })
             .then(() => {
-
             })
             .catch(error => {
                 this.setState({error})
             });
-
         event.preventDefault();
     };
 
@@ -41,8 +39,6 @@ class LastUpdatedArtistForm extends Component {
 
         return (
             <form onSubmit={this.onSubmit}>
-
-
                 <div className="mb-3">
                     <label htmlFor="artistId" className="form-label">Artist Id</label>
                     <select
@@ -52,6 +48,7 @@ class LastUpdatedArtistForm extends Component {
                         value={artistId}
                         onChange={this.onChange}>
                         <option value="select">-- Select --</option>
+                        <option value="15th-22">15th 22</option>
                         <option value="the-baseball-field">The Baseball field</option>
                         <option value="the-bodonis">The Bodonis</option>
                         <option value="fredrik-svensson">Fredrik Svensson</option>
@@ -62,7 +59,7 @@ class LastUpdatedArtistForm extends Component {
                     </select>
                 </div>
                 <div className="text-end">
-                    <button className="btn btn__neu btn-primary mb-3" type="submit">
+                    <button className="btn btn-secondary mb-3" type="submit">
                         Submit
                     </button>
                 </div>

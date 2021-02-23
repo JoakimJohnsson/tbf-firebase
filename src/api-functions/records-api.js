@@ -32,6 +32,19 @@ function FetchLastAddedRecordId() {
     }, []);
     return recordId;
 }
+function FetchLastAddedRecordArtistId() {
+    const [artistId, setArtistId] = useState([]);
+    useEffect(() => {
+        firebase
+            .firestore()
+            .collection('stats')
+            .doc('lastAddedRecord')
+            .get().then(function(doc) {
+            setArtistId(doc.data().artistId);
+        });
+    }, []);
+    return artistId;
+}
 
 function FetchLastAddedRecordTimestamp() {
     const [timestamp, setTimestamp] = useState([]);
@@ -80,4 +93,4 @@ function FetchRecordFromId(id) {
 }
 
 export default FetchAllRecords;
-export {FetchRecordFromId, FetchRecordsByArtist, FetchLastAddedRecordId, FetchLastAddedRecordTimestamp};
+export {FetchRecordFromId, FetchRecordsByArtist, FetchLastAddedRecordId, FetchLastAddedRecordTimestamp, FetchLastAddedRecordArtistId};

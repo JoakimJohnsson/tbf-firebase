@@ -143,17 +143,33 @@
   height: 1.7rem;
   width: 1.7rem;
   border-radius: 50%;
-  //font-size: 150%;
   color: $color-dark-grey;
   background: $color-secondary;
-  //svg {
-  //  padding: .8rem;
-  //}
   &:hover,
   &:focus,
   &:active {
     background: $color-secondary__lighten;
     color: $color-black;
+  }
+}
+
+.button__song-picker {
+  @extend .btn;
+  @extend .btn-fa__tertiary;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: .5rem;
+  width: 100%;
+
+  &:hover,
+  &:focus,
+  &:active,
+  &.active {
+    background: $color-near-black;
+  }
+  &.active {
+    color: $color-secondary;
   }
 }
 

@@ -2,9 +2,9 @@ import React from "react";
 import {FetchSongsByRecord} from "../../api-functions/songs-api";
 import SongCard from "../cards/SongCard";
 import {LoadingComponent} from "../MicroComponents/MicroComponents";
-import Song, {SongOnClick} from "./SongItem";
+import Song from "./SongItem";
 
-const SongsByRecordList = ({recordId}) => {
+const SongsByRecordListDynamic = ({recordId}) => {
     const songs = FetchSongsByRecord(recordId);
     return (
             <div className="row">
@@ -29,19 +29,5 @@ const SongsByRecordListSimple = ({recordId}) => {
         : (<LoadingComponent text="No tracks available at this time." icon="spinner" spinning={true}/>)
 };
 
-const SongsByRecordListSimpleDynamic = ({recordId, currentSong, setCurrentSongOnClick}) => {
-    const songs = FetchSongsByRecord(recordId);
-    return songs.length
-        ? (
-            <ul className="list-unstyled mb-3 mb-sm-0 mb-lg-3">
-                {songs.map((song) =>
-                    <li className="" key={song.index}>
-                        <SongOnClick id={song.id} setCurrentSong={setCurrentSongOnClick} currentSong={currentSong}/>
-                    </li>
-                )}
-            </ul>)
-        : (<LoadingComponent text="No tracks available at this time." icon="spinner" spinning={true}/>)
-};
-
-export default SongsByRecordList;
-export {SongsByRecordListSimple, SongsByRecordListSimpleDynamic};
+export default SongsByRecordListDynamic;
+export {SongsByRecordListSimple};

@@ -1894,7 +1894,7 @@ textarea.form-control {
     .form-inline .custom-control-label {
       margin-bottom: 0; } }
 
-.btn {
+.btn, .button__song-picker {
   display: inline-block;
   font-weight: 400;
   color: #fff;
@@ -1909,21 +1909,22 @@ textarea.form-control {
   border-radius: 0.25rem;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; }
   @media (prefers-reduced-motion: reduce) {
-    .btn {
+    .btn, .button__song-picker {
       transition: none; } }
-  .btn:hover {
+  .btn:hover, .button__song-picker:hover {
     color: #fff;
     text-decoration: none; }
-  .btn:focus, .btn.focus {
+  .btn:focus, .button__song-picker:focus, .btn.focus, .focus.button__song-picker {
     outline: 0;
     box-shadow: 0 0 0 0.2rem rgba(255, 136, 204, 0.25); }
-  .btn.disabled, .btn:disabled {
+  .btn.disabled, .disabled.button__song-picker, .btn:disabled, .button__song-picker:disabled {
     opacity: 0.3; }
-  .btn:not(:disabled):not(.disabled) {
+  .btn:not(:disabled):not(.disabled), .button__song-picker:not(:disabled):not(.disabled) {
     cursor: pointer; }
 
-a.btn.disabled,
-fieldset:disabled a.btn {
+a.btn.disabled, a.disabled.button__song-picker,
+fieldset:disabled a.btn,
+fieldset:disabled a.button__song-picker {
   pointer-events: none; }
 
 .btn-primary {
@@ -2283,13 +2284,13 @@ fieldset:disabled a.btn {
     color: #6c757d;
     pointer-events: none; }
 
-.btn-lg, .btn-group-lg > .btn {
+.btn-lg, .btn-group-lg > .btn, .btn-group-lg > .button__song-picker {
   padding: 0.5rem 1rem;
   font-size: 1.25rem;
   line-height: 1.5;
   border-radius: 0.3rem; }
 
-.btn-sm, .btn-group-sm > .btn {
+.btn-sm, .btn-group-sm > .btn, .btn-group-sm > .button__song-picker {
   padding: 0.25rem 0.5rem;
   font-size: 0.875rem;
   line-height: 1.5;
@@ -2523,17 +2524,22 @@ input[type="button"].btn-block {
   position: relative;
   display: inline-flex;
   vertical-align: middle; }
-  .btn-group > .btn,
-  .btn-group-vertical > .btn {
+  .btn-group > .btn, .btn-group > .button__song-picker,
+  .btn-group-vertical > .btn,
+  .btn-group-vertical > .button__song-picker {
     position: relative;
     flex: 1 1 auto; }
-    .btn-group > .btn:hover,
-    .btn-group-vertical > .btn:hover {
+    .btn-group > .btn:hover, .btn-group > .button__song-picker:hover,
+    .btn-group-vertical > .btn:hover,
+    .btn-group-vertical > .button__song-picker:hover {
       z-index: 1; }
-    .btn-group > .btn:focus, .btn-group > .btn:active, .btn-group > .btn.active,
+    .btn-group > .btn:focus, .btn-group > .button__song-picker:focus, .btn-group > .btn:active, .btn-group > .button__song-picker:active, .btn-group > .btn.active, .btn-group > .active.button__song-picker,
     .btn-group-vertical > .btn:focus,
+    .btn-group-vertical > .button__song-picker:focus,
     .btn-group-vertical > .btn:active,
-    .btn-group-vertical > .btn.active {
+    .btn-group-vertical > .button__song-picker:active,
+    .btn-group-vertical > .btn.active,
+    .btn-group-vertical > .active.button__song-picker {
       z-index: 1; }
 
 .btn-toolbar {
@@ -2543,15 +2549,17 @@ input[type="button"].btn-block {
   .btn-toolbar .input-group {
     width: auto; }
 
-.btn-group > .btn:not(:first-child),
+.btn-group > .btn:not(:first-child), .btn-group > .button__song-picker:not(:first-child),
 .btn-group > .btn-group:not(:first-child) {
   margin-left: -1px; }
-.btn-group > .btn:not(:last-child):not(.dropdown-toggle),
-.btn-group > .btn-group:not(:last-child) > .btn {
+.btn-group > .btn:not(:last-child):not(.dropdown-toggle), .btn-group > .button__song-picker:not(:last-child):not(.dropdown-toggle),
+.btn-group > .btn-group:not(:last-child) > .btn,
+.btn-group > .btn-group:not(:last-child) > .button__song-picker {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0; }
-.btn-group > .btn:not(:first-child),
-.btn-group > .btn-group:not(:first-child) > .btn {
+.btn-group > .btn:not(:first-child), .btn-group > .button__song-picker:not(:first-child),
+.btn-group > .btn-group:not(:first-child) > .btn,
+.btn-group > .btn-group:not(:first-child) > .button__song-picker {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0; }
 
@@ -2563,11 +2571,11 @@ input[type="button"].btn-block {
   .dropleft .dropdown-toggle-split::before {
     margin-right: 0; }
 
-.btn-sm + .dropdown-toggle-split, .btn-group-sm > .btn + .dropdown-toggle-split {
+.btn-sm + .dropdown-toggle-split, .btn-group-sm > .btn + .dropdown-toggle-split, .btn-group-sm > .button__song-picker + .dropdown-toggle-split {
   padding-right: 0.375rem;
   padding-left: 0.375rem; }
 
-.btn-lg + .dropdown-toggle-split, .btn-group-lg > .btn + .dropdown-toggle-split {
+.btn-lg + .dropdown-toggle-split, .btn-group-lg > .btn + .dropdown-toggle-split, .btn-group-lg > .button__song-picker + .dropdown-toggle-split {
   padding-right: 0.75rem;
   padding-left: 0.75rem; }
 
@@ -2575,28 +2583,34 @@ input[type="button"].btn-block {
   flex-direction: column;
   align-items: flex-start;
   justify-content: center; }
-  .btn-group-vertical > .btn,
+  .btn-group-vertical > .btn, .btn-group-vertical > .button__song-picker,
   .btn-group-vertical > .btn-group {
     width: 100%; }
-  .btn-group-vertical > .btn:not(:first-child),
+  .btn-group-vertical > .btn:not(:first-child), .btn-group-vertical > .button__song-picker:not(:first-child),
   .btn-group-vertical > .btn-group:not(:first-child) {
     margin-top: -1px; }
-  .btn-group-vertical > .btn:not(:last-child):not(.dropdown-toggle),
-  .btn-group-vertical > .btn-group:not(:last-child) > .btn {
+  .btn-group-vertical > .btn:not(:last-child):not(.dropdown-toggle), .btn-group-vertical > .button__song-picker:not(:last-child):not(.dropdown-toggle),
+  .btn-group-vertical > .btn-group:not(:last-child) > .btn,
+  .btn-group-vertical > .btn-group:not(:last-child) > .button__song-picker {
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0; }
-  .btn-group-vertical > .btn:not(:first-child),
-  .btn-group-vertical > .btn-group:not(:first-child) > .btn {
+  .btn-group-vertical > .btn:not(:first-child), .btn-group-vertical > .button__song-picker:not(:first-child),
+  .btn-group-vertical > .btn-group:not(:first-child) > .btn,
+  .btn-group-vertical > .btn-group:not(:first-child) > .button__song-picker {
     border-top-left-radius: 0;
     border-top-right-radius: 0; }
 
-.btn-group-toggle > .btn,
-.btn-group-toggle > .btn-group > .btn {
+.btn-group-toggle > .btn, .btn-group-toggle > .button__song-picker,
+.btn-group-toggle > .btn-group > .btn,
+.btn-group-toggle > .btn-group > .button__song-picker {
   margin-bottom: 0; }
-  .btn-group-toggle > .btn input[type="radio"],
+  .btn-group-toggle > .btn input[type="radio"], .btn-group-toggle > .button__song-picker input[type="radio"],
   .btn-group-toggle > .btn input[type="checkbox"],
+  .btn-group-toggle > .button__song-picker input[type="checkbox"],
   .btn-group-toggle > .btn-group > .btn input[type="radio"],
-  .btn-group-toggle > .btn-group > .btn input[type="checkbox"] {
+  .btn-group-toggle > .btn-group > .button__song-picker input[type="radio"],
+  .btn-group-toggle > .btn-group > .btn input[type="checkbox"],
+  .btn-group-toggle > .btn-group > .button__song-picker input[type="checkbox"] {
     position: absolute;
     clip: rect(0, 0, 0, 0);
     pointer-events: none; }
@@ -2659,21 +2673,30 @@ input[type="button"].btn-block {
 .input-group-prepend,
 .input-group-append {
   display: flex; }
-  .input-group-prepend .btn,
-  .input-group-append .btn {
+  .input-group-prepend .btn, .input-group-prepend .button__song-picker,
+  .input-group-append .btn,
+  .input-group-append .button__song-picker {
     position: relative;
     z-index: 2; }
-    .input-group-prepend .btn:focus,
-    .input-group-append .btn:focus {
+    .input-group-prepend .btn:focus, .input-group-prepend .button__song-picker:focus,
+    .input-group-append .btn:focus,
+    .input-group-append .button__song-picker:focus {
       z-index: 3; }
-  .input-group-prepend .btn + .btn,
+  .input-group-prepend .btn + .btn, .input-group-prepend .button__song-picker + .btn, .input-group-prepend .btn + .button__song-picker, .input-group-prepend .button__song-picker + .button__song-picker,
   .input-group-prepend .btn + .input-group-text,
+  .input-group-prepend .button__song-picker + .input-group-text,
   .input-group-prepend .input-group-text + .input-group-text,
   .input-group-prepend .input-group-text + .btn,
+  .input-group-prepend .input-group-text + .button__song-picker,
   .input-group-append .btn + .btn,
+  .input-group-append .button__song-picker + .btn,
+  .input-group-append .btn + .button__song-picker,
+  .input-group-append .button__song-picker + .button__song-picker,
   .input-group-append .btn + .input-group-text,
+  .input-group-append .button__song-picker + .input-group-text,
   .input-group-append .input-group-text + .input-group-text,
-  .input-group-append .input-group-text + .btn {
+  .input-group-append .input-group-text + .btn,
+  .input-group-append .input-group-text + .button__song-picker {
     margin-left: -1px; }
 
 .input-group-prepend {
@@ -2709,7 +2732,9 @@ input[type="button"].btn-block {
 .input-group-lg > .input-group-prepend > .input-group-text,
 .input-group-lg > .input-group-append > .input-group-text,
 .input-group-lg > .input-group-prepend > .btn,
-.input-group-lg > .input-group-append > .btn {
+.input-group-lg > .input-group-prepend > .button__song-picker,
+.input-group-lg > .input-group-append > .btn,
+.input-group-lg > .input-group-append > .button__song-picker {
   padding: 0.5rem 1rem;
   font-size: 1.25rem;
   line-height: 1.5;
@@ -2724,7 +2749,9 @@ input[type="button"].btn-block {
 .input-group-sm > .input-group-prepend > .input-group-text,
 .input-group-sm > .input-group-append > .input-group-text,
 .input-group-sm > .input-group-prepend > .btn,
-.input-group-sm > .input-group-append > .btn {
+.input-group-sm > .input-group-prepend > .button__song-picker,
+.input-group-sm > .input-group-append > .btn,
+.input-group-sm > .input-group-append > .button__song-picker {
   padding: 0.25rem 0.5rem;
   font-size: 0.875rem;
   line-height: 1.5;
@@ -2734,22 +2761,27 @@ input[type="button"].btn-block {
 .input-group-sm > .custom-select {
   padding-right: 1.75rem; }
 
-.input-group > .input-group-prepend > .btn,
+.input-group > .input-group-prepend > .btn, .input-group > .input-group-prepend > .button__song-picker,
 .input-group > .input-group-prepend > .input-group-text,
 .input-group:not(.has-validation) > .input-group-append:not(:last-child) > .btn,
+.input-group:not(.has-validation) > .input-group-append:not(:last-child) > .button__song-picker,
 .input-group:not(.has-validation) > .input-group-append:not(:last-child) > .input-group-text,
 .input-group.has-validation > .input-group-append:nth-last-child(n + 3) > .btn,
+.input-group.has-validation > .input-group-append:nth-last-child(n + 3) > .button__song-picker,
 .input-group.has-validation > .input-group-append:nth-last-child(n + 3) > .input-group-text,
 .input-group > .input-group-append:last-child > .btn:not(:last-child):not(.dropdown-toggle),
+.input-group > .input-group-append:last-child > .button__song-picker:not(:last-child):not(.dropdown-toggle),
 .input-group > .input-group-append:last-child > .input-group-text:not(:last-child) {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0; }
 
-.input-group > .input-group-append > .btn,
+.input-group > .input-group-append > .btn, .input-group > .input-group-append > .button__song-picker,
 .input-group > .input-group-append > .input-group-text,
 .input-group > .input-group-prepend:not(:first-child) > .btn,
+.input-group > .input-group-prepend:not(:first-child) > .button__song-picker,
 .input-group > .input-group-prepend:not(:first-child) > .input-group-text,
 .input-group > .input-group-prepend:first-child > .btn:not(:first-child),
+.input-group > .input-group-prepend:first-child > .button__song-picker:not(:first-child),
 .input-group > .input-group-prepend:first-child > .input-group-text:not(:first-child) {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0; }
@@ -3716,7 +3748,7 @@ input[type="button"].btn-block {
   .badge:empty {
     display: none; }
 
-.btn .badge {
+.btn .badge, .button__song-picker .badge {
   position: relative;
   top: -1px; }
 
@@ -7758,7 +7790,7 @@ a.text-dark:hover, a.text-dark:focus {
     text-shadow: none !important;
     box-shadow: none !important; }
 
-  a:not(.btn) {
+  a:not(.btn):not(.button__song-picker) {
     text-decoration: underline; }
 
   abbr[title]::after {
@@ -11202,12 +11234,12 @@ code {
 .progress {
   height: 5px; }
 
-.btn-fa, .btn-fa__primary, .btn-fa__secondary, .btn-fa__tertiary {
+.btn-fa, .btn-fa__primary, .btn-fa__secondary, .btn-fa__tertiary, .button__song-picker {
   color: inherit;
   border-radius: 0;
   padding: 0;
   border: none; }
-  .btn-fa:hover, .btn-fa__primary:hover, .btn-fa__secondary:hover, .btn-fa__tertiary:hover, .btn-fa:focus, .btn-fa__primary:focus, .btn-fa__secondary:focus, .btn-fa__tertiary:focus, .btn-fa:active, .btn-fa__primary:active, .btn-fa__secondary:active, .btn-fa__tertiary:active {
+  .btn-fa:hover, .btn-fa__primary:hover, .btn-fa__secondary:hover, .btn-fa__tertiary:hover, .button__song-picker:hover, .btn-fa:focus, .btn-fa__primary:focus, .btn-fa__secondary:focus, .btn-fa__tertiary:focus, .button__song-picker:focus, .btn-fa:active, .btn-fa__primary:active, .btn-fa__secondary:active, .btn-fa__tertiary:active, .button__song-picker:active {
     color: inherit; }
 
 .btn-fa__primary {
@@ -11220,9 +11252,9 @@ code {
   .btn-fa__secondary:hover, .btn-fa__secondary:focus, .btn-fa__secondary:active {
     color: #b8ffe0; }
 
-.btn-fa__tertiary {
+.btn-fa__tertiary, .button__song-picker {
   color: #fffe88; }
-  .btn-fa__tertiary:hover, .btn-fa__tertiary:focus {
+  .btn-fa__tertiary:hover, .button__song-picker:hover, .btn-fa__tertiary:focus, .button__song-picker:focus {
     color: #fffea0; }
 
 .btn__tertiary {
@@ -11254,6 +11286,17 @@ code {
   .button__show-more:hover, .button__show-more:focus, .button__show-more:active {
     background: #b8ffe0;
     color: #000; }
+
+.button__song-picker {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: .5rem;
+  width: 100%; }
+  .button__song-picker:hover, .button__song-picker:focus, .button__song-picker:active, .button__song-picker.active {
+    background: #0a0a0a; }
+  .button__song-picker.active {
+    color: #88ffcc; }
 
 .list-group {
   padding-left: 27px; }

@@ -1,7 +1,7 @@
 import React from 'react';
 import FetchAllArtists from "../../api-functions/artists-api";
 import ArtistCard from "../cards/ArtistCard";
-import {LoadingComponent} from "../MicroComponents/MicroComponents";
+import {LoadingComponentStandard} from "../MicroComponents/MicroComponents";
 
 const AllArtistsList = () => {
     const artists = FetchAllArtists();
@@ -13,7 +13,7 @@ const AllArtistsList = () => {
             </div>
         )
         :
-        (<LoadingComponent />)
+        (<LoadingComponentStandard spinning={true}/>)
 };
 
 export default AllArtistsList;

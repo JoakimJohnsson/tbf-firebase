@@ -1,6 +1,6 @@
 import React from "react";
 import FetchAllSongs from "../../api-functions/songs-api";
-import {LoadingComponent} from "../MicroComponents/MicroComponents";
+import {LoadingComponent, LoadingComponentStandard} from "../MicroComponents/MicroComponents";
 import SongCard from "../cards/SongCard";
 import FetchAllRecords from "../../api-functions/records-api";
 import {RecordCardWithSongs} from "../cards/RecordCard";
@@ -28,7 +28,7 @@ const AllSongsListByRecord = () => {
             )}
         </div>)
         :
-        (<LoadingComponent />)
+        (<LoadingComponentStandard spinning={true} />)
 };
 
 export default AllSongsList;

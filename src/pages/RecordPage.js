@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import {
     CopyrightInfoComponent,
     FormatInfoComponent,
-    LoadingComponent
+    LoadingComponentStandard
 } from "../components/MicroComponents/MicroComponents";
 import {FetchRecordFromId} from "../api-functions/records-api";
 import {SongsByRecordListSimple, SongsByRecordListSimpleDynamic} from "../components/lists/SongsByRecordList";
@@ -75,6 +75,6 @@ const RecordPage = ({match}) => {
             </div>
         )
         :
-        <LoadingComponent />;
+        <LoadingComponentStandard spinning={true} />;
 };
 export default RecordPage;

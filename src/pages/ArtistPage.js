@@ -27,7 +27,6 @@ const ArtistPage = ({match}) => {
 
     return (
         <div className="row">
-
             <div className="standard-secondary-column">
                 <div className="standard-box-wrapper__near-dark">
                     <h1 className={`logo-font-family__${rand.toString()} text-uppercase text-color-variant__${rand2.toString()}`}>{artist.name}</h1>

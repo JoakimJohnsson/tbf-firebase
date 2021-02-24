@@ -2,7 +2,7 @@ import React from 'react';
 import firebase from '../components/Firebase/firebase';
 import AllArtistsListPaginated from "../components/lists/AllArtistsListPaginated";
 import AllSongsListPaginated from "../components/lists/AllSongsListPaginated";
-import {CopyrightInfoComponent, LoadingComponent} from "../components/MicroComponents/MicroComponents";
+import {CopyrightInfoComponent, LoadingComponentStandard} from "../components/MicroComponents/MicroComponents";
 import IconLink from "../components/links/IconNavLink";
 import * as ROUTES from "../constants/routes";
 import AllRecordsListPaginated from "../components/lists/AllRecordsListPaginated";
@@ -73,6 +73,6 @@ const StartPage = () => {
             </div>
         </div>)
         :
-        (<LoadingComponent />)
+        (<LoadingComponentStandard spinning={true} />)
 };
 export default StartPage;

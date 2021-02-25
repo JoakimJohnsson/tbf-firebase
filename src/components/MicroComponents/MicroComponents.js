@@ -73,6 +73,13 @@ const FormatInfoComponent = ({format, text}) => (
     <span className="text-capitalize"><FontAwesomeIcon icon={renderIcon(format)} className={"mr-1"}/> {text ? renderText(format) : ""}</span>
 );
 
+const Debugger = ({logThis}) => {
+    console.log("LOG THIS: " + logThis)
+    return (
+        <></>
+    )
+}
+
 export default TodoComponent;
-export {LoadingComponent, LoadingComponentStandard, CopyrightInfoComponent, FormatInfoComponent};
+export {LoadingComponent, LoadingComponentStandard, CopyrightInfoComponent, FormatInfoComponent, Debugger};
 

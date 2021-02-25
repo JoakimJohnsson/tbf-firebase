@@ -11,11 +11,12 @@ const Song = ({id}) => {
     )
 };
 
-const SongOnClick = ({id, setCurrentSong, currentSong}) => {
+const ClickableTrackListItem = ({id, setCurrentSong, currentSong}) => {
     const song = FetchSongFromId(id);
     const [activeSongId, setActiveSongId] = useState("");
 
     return (
+        <li className="mb-1">
             <button className={activeSongId === currentSong ? "button__song-picker active" : "button__song-picker"}
                     onClick={() => {
                         setCurrentSong(id)
@@ -24,8 +25,9 @@ const SongOnClick = ({id, setCurrentSong, currentSong}) => {
                 <span className="text-capitalize text-left mr-3">{song.name}</span>
                 <FontAwesomeIcon icon={"play-circle"}/>
             </button>
+        </li>
     )
 };
 
 export default Song;
-export {SongOnClick};
+export {ClickableTrackListItem};

@@ -5,7 +5,7 @@ import {
     LoadingComponentStandard
 } from "../components/MicroComponents/MicroComponents";
 import {FetchRecordFromId} from "../api-functions/records-api";
-import {SongsByRecordListSimple, SongsByRecordListSimpleDynamic} from "../components/lists/SongsByRecordList";
+import {SongsByRecordListSimple, SongsByRecordListPlayTracks} from "../components/lists/SongsByRecordList";
 import imgUnavailable from "../images/image_unavailable.png";
 import {ArtistLink} from "../components/lists/ArtistItem";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
@@ -65,7 +65,7 @@ const RecordPage = ({match}) => {
                     <div className="standard-main-column__section">
                         <h2 className="section-header">Tracks</h2>
 
-                        <SongsByRecordListSimpleDynamic recordId={id} currentSong={currentSong} setCurrentSongOnClick={setCurrentSongOnClick}/>
+                        <SongsByRecordListPlayTracks recordId={id} currentSong={currentSong} setCurrentSongOnClick={setCurrentSongOnClick}/>
                         {currentSong ? <SongCardDynamic id={currentSong} key={currentSong}/> : false}
 
                     </div>

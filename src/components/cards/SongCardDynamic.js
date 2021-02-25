@@ -21,9 +21,9 @@ const SongCardDynamicContent = ({id}) => {
     return song.artistId ? (
             <>
                 <div className="song-card-dynamic">
-                    <div className="p-3 text-center"><span className="d-inline-block song-card-dynamic__info px-3 py-1 border"><Artist id={song.artistId}/>: {song.name}</span></div>
-                    <div className="px-3 pb-3">
-                        <audio controls autoPlay={false} className="w-100">
+                    <div className="p-3 text-center"><span className="song-card-dynamic__info px-3 py-1"><Artist id={song.artistId}/>: {song.name}</span></div>
+                    <div className="px-3 px-md-5 pb-3 text-center">
+                        <audio controls autoPlay={true}>
                             <source src={song.url} type="audio/mpeg"/>
                             <p>
                                 Your browser doesn't support HTML5 audio.

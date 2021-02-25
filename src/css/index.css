@@ -11398,9 +11398,9 @@ label {
 .text-color-variant__1 {
   color: #ff88cc !important; }
   .text-color-variant__1 a {
-    color: #ffb588 !important; }
+    color: #ff88cc !important; }
     .text-color-variant__1 a:hover, .text-color-variant__1 a:focus, .text-color-variant__1 a:active {
-      color: #ffcfeb !important;
+      color: #ffbbe2;
       text-decoration: none; }
 
 .text-color-variant__2 {
@@ -11408,7 +11408,7 @@ label {
   .text-color-variant__2 a {
     color: #88ffcc !important; }
     .text-color-variant__2 a:hover, .text-color-variant__2 a:focus, .text-color-variant__2 a:active {
-      color: #b8ffe0 !important;
+      color: #bbffe2;
       text-decoration: none; }
 
 .text-color-variant__3 {
@@ -11416,7 +11416,7 @@ label {
   .text-color-variant__3 a {
     color: #fffe88 !important; }
     .text-color-variant__3 a:hover, .text-color-variant__3 a:focus, .text-color-variant__3 a:active {
-      color: #fffea0 !important;
+      color: #fffebb;
       text-decoration: none; }
 
 .text-color-variant__4 {
@@ -11424,7 +11424,7 @@ label {
   .text-color-variant__4 a {
     color: #88a1ff !important; }
     .text-color-variant__4 a:hover, .text-color-variant__4 a:focus, .text-color-variant__4 a:active {
-      color: #a0c6ff !important;
+      color: #bbc9ff;
       text-decoration: none; }
 
 .text-color-variant__5 {
@@ -11432,7 +11432,7 @@ label {
   .text-color-variant__5 a {
     color: #ce88ff !important; }
     .text-color-variant__5 a:hover, .text-color-variant__5 a:focus, .text-color-variant__5 a:active {
-      color: #e3bbff !important;
+      color: #e3bbff;
       text-decoration: none; }
 
 .text-color-variant__6 {
@@ -11440,7 +11440,7 @@ label {
   .text-color-variant__6 a {
     color: #ffb588 !important; }
     .text-color-variant__6 a:hover, .text-color-variant__6 a:focus, .text-color-variant__6 a:active {
-      color: #ffd5bb !important;
+      color: #ffd5bb;
       text-decoration: none; }
 
 .text-color-variant__7 {
@@ -11448,7 +11448,7 @@ label {
   .text-color-variant__7 a {
     color: #acff88 !important; }
     .text-color-variant__7 a:hover, .text-color-variant__7 a:focus, .text-color-variant__7 a:active {
-      color: #d0ffbb !important;
+      color: #d0ffbb;
       text-decoration: none; }
 
 .text-color-variant__8 {
@@ -11456,7 +11456,7 @@ label {
   .text-color-variant__8 a {
     color: #ff6c4c !important; }
     .text-color-variant__8 a:hover, .text-color-variant__8 a:focus, .text-color-variant__8 a:active {
-      color: #ff967f !important;
+      color: #ff967f;
       text-decoration: none; }
 
 .small {
@@ -11564,9 +11564,19 @@ footer {
   z-index: 2;
   background: #0a0a0a; }
   .song-card-dynamic__wrapper .song-card-dynamic audio {
+    width: 100%;
     background: #0a0a0a; }
+    @media (min-width: 992px) {
+      .song-card-dynamic__wrapper .song-card-dynamic audio {
+        width: 80%; } }
+    @media (min-width: 1200px) {
+      .song-card-dynamic__wrapper .song-card-dynamic audio {
+        width: 50%; } }
   .song-card-dynamic__wrapper .song-card-dynamic__info {
-    border-radius: 25px; }
+    text-transform: capitalize;
+    display: inline-block;
+    border-radius: 25px;
+    border: 1px solid #444; }
 
 .song-card {
   background: #0a0a0a;

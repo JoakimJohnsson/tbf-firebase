@@ -79,12 +79,21 @@
   background: $color-near-black;
   .song-card-dynamic {
     audio {
+      width: 100%;
       background: $color-near-black;
+      @include media-breakpoint-up(lg) {
+        width: 80%;
+      }
+      @include media-breakpoint-up(xl) {
+        width: 50%;
+      }
     }
   }
   .song-card-dynamic__info {
+    text-transform: capitalize;
+    display: inline-block;
     border-radius: 25px;
-
+    border: 1px solid $color-border;
   }
 }
 .song-card {

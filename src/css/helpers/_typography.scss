@@ -128,187 +128,39 @@ label {
   font-family: $tbf-font__logo-16;
 }
 
-.bg-color-variant__1 {
-  background-color: $color-primary !important;
-}
+// Color variants
+$color-variants: $color-primary, $color-secondary, $color-tertiary, $color-quaternary, $color-vibrant-purple, $color-vibrant-orange, $color-vibrant-lime, $color-super-vibrant-orange;
 
-.bg-color-variant__2 {
-  background-color: $color-secondary !important;
-}
-
-.bg-color-variant__3 {
-  background-color: $color-tertiary !important;
-}
-
-.bg-color-variant__4 {
-  background-color: $color-quaternary !important;
-}
-
-.bg-color-variant__5 {
-  background-color: $color-vibrant-purple !important;
-}
-
-.bg-color-variant__6 {
-  background-color: $color-vibrant-orange !important;
-}
-
-.bg-color-variant__7 {
-  background-color: $color-vibrant-lime !important;
-}
-
-.bg-color-variant__8 {
-  background-color: $color-super-vibrant-orange !important;
-}
-
-.border-color-variant__1 {
-  border: 1px solid $color-primary !important;
-}
-
-.border-color-variant__2 {
-  border: 1px solid $color-secondary !important;
-}
-
-.border-color-variant__3 {
-  border: 1px solid $color-tertiary !important;
-}
-
-.border-color-variant__4 {
-  border: 1px solid $color-quaternary !important;
-}
-
-.border-color-variant__5 {
-  border: 1px solid $color-vibrant-purple !important;
-}
-
-.border-color-variant__6 {
-  border: 1px solid $color-vibrant-orange !important;
-}
-
-.border-color-variant__7 {
-  border: 1px solid $color-vibrant-lime !important;
-}
-
-.border-color-variant__8 {
-  border: 1px solid $color-super-vibrant-orange !important;
-}
-
-.text-color-variant__1 {
-  color: $color-primary !important;
-
-  a {
-    color: $color-vibrant-orange !important;
-
-    &:hover,
-    &:focus,
-    &:active {
-      color: $color-primary__lighten !important;
-      text-decoration: none;
-    }
+// Background color
+@for $i from 1 through length($color-variants) {
+  $c: nth($color-variants, $i);
+  .bg-color-variant__#{$i} {
+    background-color: $c !important;
   }
 }
 
-.text-color-variant__2 {
-  color: $color-secondary !important;
-
-  a {
-    color: $color-secondary !important;
-
-    &:hover,
-    &:focus,
-    &:active {
-      color: $color-secondary__lighten !important;
-      text-decoration: none;
-    }
+// Border-color
+@for $i from 1 through length($color-variants) {
+  $c: nth($color-variants, $i);
+  .border-color-variant__#{$i} {
+    border: 1px solid $c !important;
   }
 }
 
-.text-color-variant__3 {
-  color: $color-tertiary !important;
+// Text color
+@for $i from 1 through length($color-variants) {
+  $c: nth($color-variants, $i);
+  .text-color-variant__#{$i} {
+    color: $c !important;
+    a {
+      color: $c !important;
 
-  a {
-    color: $color-tertiary !important;
-
-    &:hover,
-    &:focus,
-    &:active {
-      color: $color-tertiary__lighten !important;
-      text-decoration: none;
-    }
-  }
-}
-
-.text-color-variant__4 {
-  color: $color-quaternary !important;
-
-  a {
-    color: $color-quaternary !important;
-
-    &:hover,
-    &:focus,
-    &:active {
-      color: $color-quaternary__lighten !important;
-      text-decoration: none;
-    }
-  }
-}
-
-.text-color-variant__5 {
-  color: $color-vibrant-purple !important;
-
-  a {
-    color: $color-vibrant-purple !important;
-
-    &:hover,
-    &:focus,
-    &:active {
-      color: lighten($color-vibrant-purple, 10%) !important;
-      text-decoration: none;
-
-    }
-  }
-}
-
-.text-color-variant__6 {
-  color: $color-vibrant-orange !important;
-
-  a {
-    color: $color-vibrant-orange !important;
-
-    &:hover,
-    &:focus,
-    &:active {
-      color: lighten($color-vibrant-orange, 10%) !important;
-      text-decoration: none;
-    }
-  }
-}
-
-.text-color-variant__7 {
-  color: $color-vibrant-lime !important;
-
-  a {
-    color: $color-vibrant-lime !important;
-
-    &:hover,
-    &:focus,
-    &:active {
-      color: lighten($color-vibrant-lime, 10%) !important;
-      text-decoration: none;
-    }
-  }
-}
-
-.text-color-variant__8 {
-  color: $color-super-vibrant-orange !important;
-
-  a {
-    color: $color-super-vibrant-orange !important;
-
-    &:hover,
-    &:focus,
-    &:active {
-      color: lighten($color-super-vibrant-orange, 10%) !important;
-      text-decoration: none;
+      &:hover,
+      &:focus,
+      &:active {
+        color: lighten($c, 10%);
+        text-decoration: none;
+      }
     }
   }
 }

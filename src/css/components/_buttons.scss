@@ -90,23 +90,3 @@
     color: $color-black;
   }
 }
-
-.button__song-picker {
-  @extend .btn;
-  @extend .btn-fa__tertiary;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: .5rem;
-  width: 100%;
-
-  &:hover,
-  &:focus,
-  &:active,
-  &.active {
-    background: $color-near-black;
-  }
-  &.active {
-    color: $color-secondary;
-  }
-}

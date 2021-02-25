@@ -16,15 +16,28 @@ const ClickableTrackListItem = ({id, setCurrentSong, currentSong}) => {
     const [activeSongId, setActiveSongId] = useState("");
 
     return (
-        <li className="mb-1">
-            <button className={activeSongId === currentSong ? "button__song-picker active" : "button__song-picker"}
+        <li className={activeSongId === currentSong ? "play-tracks__li active" : "play-tracks__li"}>
+
+            <p className="text-capitalize text-left p-2 mr-3 mb-0 flex-grow-1" onClick={() => {
+                setCurrentSong(id)
+                setActiveSongId(id)
+            }}>{song.name}</p>
+            <div className="d-flex align-items-center justify-content-end">
+            <button className="play-tracks__button play mr-3"
                     onClick={() => {
                         setCurrentSong(id)
                         setActiveSongId(id)
                     }}>
-                <span className="text-capitalize text-left mr-3">{song.name}</span>
+                <span className="text-uppercase small mr-2 d-none d-sm-inline">PLAY</span>
                 <FontAwesomeIcon icon={"play-circle"}/>
             </button>
+            <a className="play-tracks__button download" href={song.url} download={song.name}
+                   >
+                <span className="text-uppercase small mr-2 d-none d-sm-inline">Download</span>
+                <FontAwesomeIcon icon={"arrow-alt-circle-down"}/>
+            </a>
+            </div>
+
         </li>
     )
 };

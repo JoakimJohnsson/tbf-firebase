@@ -33,7 +33,7 @@ const SongsByRecordListPlayTracks = ({recordId, currentSong, setCurrentSongOnCli
     const songs = FetchSongsByRecord(recordId);
     return songs.length
         ? (
-            <ul className="list__play-tracks mb-3 mb-sm-0 mb-lg-3">
+            <ul className="play-tracks__list mb-3 mb-sm-0 mb-lg-3">
                 {songs.map((song) =>
                     <ClickableTrackListItem key={song.index} id={song.id} setCurrentSong={setCurrentSongOnClick} currentSong={currentSong}/>
                 )}

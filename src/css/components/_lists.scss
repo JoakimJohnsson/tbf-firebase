@@ -7,7 +7,44 @@
   padding-left: 27px;
 }
 
-.list__play-tracks {
+.play-tracks__list {
   @extend .list-unstyled;
 
+  .play-tracks__li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: .25rem;
+    //padding: .5rem;
+    p {
+      cursor: pointer;
+    }
+    &:hover,
+    &:focus,
+    &:active,
+    &.active {
+      background: $color-dark-grey;
+    }
+    &.active {
+      background: $color-near-black;
+      color: $color-secondary;
+      .play-tracks__button.play {
+        color: $color-secondary;
+      }
+    }
+    .svg-inline--fa {
+      font-size: 1.5rem;
+    }
+    .play-tracks__button {
+      display: flex;
+      align-items: center;
+      @extend .btn;
+      @extend .btn-fa__tertiary;
+      &:hover,
+      &:focus,
+      &:active {
+        color: $color-secondary;
+      }
+    }
+  }
 }

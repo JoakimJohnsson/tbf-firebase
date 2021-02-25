@@ -67,7 +67,6 @@ const RecordPage = ({match}) => {
 
                         <SongsByRecordListPlayTracks recordId={id} currentSong={currentSong} setCurrentSongOnClick={setCurrentSongOnClick}/>
                         {currentSong ? <SongCardDynamic id={currentSong} key={currentSong}/> : false}
-
                     </div>
                     <CopyrightInfoComponent className={"d-block d-lg-none mt-5"}/>
                 </div>

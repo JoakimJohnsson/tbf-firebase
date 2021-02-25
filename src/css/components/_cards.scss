@@ -70,6 +70,19 @@
   }
 }
 
+.song-card-dynamic__wrapper {
+  position: fixed;
+  width: 100vw;
+  left: 0;
+  bottom: 85px;
+  z-index: 2;
+  background: $color-near-black;
+  .song-card-dynamic {
+    audio {
+      background: $color-near-black;
+    }
+  }
+}
 .song-card {
   background: $color-near-black;
   color: $color-white;

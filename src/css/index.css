@@ -11469,6 +11469,7 @@ img {
   opacity: 1 !important; }
 
 footer {
+  height: 85px;
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -11530,6 +11531,16 @@ footer {
   @media (min-width: 1200px) {
     .artist-card__simple {
       font-size: 1.2rem; } }
+
+.song-card-dynamic__wrapper {
+  position: fixed;
+  width: 100vw;
+  left: 0;
+  bottom: 85px;
+  z-index: 2;
+  background: #0a0a0a; }
+  .song-card-dynamic__wrapper .song-card-dynamic audio {
+    background: #0a0a0a; }
 
 .song-card {
   background: #0a0a0a;

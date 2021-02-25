@@ -11371,6 +11371,30 @@ label {
 .bg-color-variant__8 {
   background-color: #ff6c4c !important; }
 
+.border-color-variant__1 {
+  border: 1px solid #ff88cc !important; }
+
+.border-color-variant__2 {
+  border: 1px solid #88ffcc !important; }
+
+.border-color-variant__3 {
+  border: 1px solid #fffe88 !important; }
+
+.border-color-variant__4 {
+  border: 1px solid #88a1ff !important; }
+
+.border-color-variant__5 {
+  border: 1px solid #ce88ff !important; }
+
+.border-color-variant__6 {
+  border: 1px solid #ffb588 !important; }
+
+.border-color-variant__7 {
+  border: 1px solid #acff88 !important; }
+
+.border-color-variant__8 {
+  border: 1px solid #ff6c4c !important; }
+
 .text-color-variant__1 {
   color: #ff88cc !important; }
   .text-color-variant__1 a {
@@ -11541,6 +11565,8 @@ footer {
   background: #0a0a0a; }
   .song-card-dynamic__wrapper .song-card-dynamic audio {
     background: #0a0a0a; }
+  .song-card-dynamic__wrapper .song-card-dynamic__info {
+    border-radius: 25px; }
 
 .song-card {
   background: #0a0a0a;

@@ -22,7 +22,7 @@ const ClickableTrackListItem = ({id, setCurrentSong, currentSong}) => {
                 setCurrentSong(id)
                 setActiveSongId(id)
             }}>{song.name}</p>
-            <div className="d-flex align-items-center justify-content-end">
+            <div className="d-flex align-items-center justify-content-end p-2">
             <button className="play-tracks__button play mr-3"
                     onClick={() => {
                         setCurrentSong(id)

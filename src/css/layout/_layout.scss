@@ -24,6 +24,7 @@
 }
 
 .standard-main-column {
+  padding-bottom: 3rem;
   @include make-col-ready();
   padding-right: 15px;
   @include media-breakpoint-up(lg) {

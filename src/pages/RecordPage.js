@@ -22,6 +22,9 @@ const RecordPage = ({match}) => {
     const setCurrentSongOnClick = (songId) => {
         setCurrentSong(songId);
     }
+    const destroyCurrentSong = () => {
+        setCurrentSong(null);
+    }
 
     return record.artistId ? (
             <div className="row">
@@ -65,8 +68,8 @@ const RecordPage = ({match}) => {
                     <div className="standard-main-column__section">
                         <h2 className="section-header">Tracks</h2>
 
-                        <SongsByRecordListPlayTracks recordId={id} currentSong={currentSong} setCurrentSongOnClick={setCurrentSongOnClick}/>
-                        {currentSong ? <SongCardDynamic id={currentSong} key={currentSong}/> : false}
+                        <SongsByRecordListPlayTracks recordId={id} currentSong={currentSong} setCurrentSongOnClick={setCurrentSongOnClick} />
+                        {currentSong ? <SongCardDynamic id={currentSong} key={currentSong} destroyCurrentSong={destroyCurrentSong}/> : false}
                     </div>
                     <CopyrightInfoComponent className={"d-block d-lg-none mt-5"}/>
                 </div>

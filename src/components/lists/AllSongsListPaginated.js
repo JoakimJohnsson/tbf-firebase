@@ -1,11 +1,19 @@
-import React from "react";
+import React, {useState} from "react";
 import {LoadingComponent} from "../MicroComponents/MicroComponents";
-import SongCard from "../cards/SongCard";
 import usePagination from "firestore-pagination-hook";
 import firebase from "firebase";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {ClickableTrackListItem} from "./SongItem";
+import SongCardDynamic from "../cards/SongCardDynamic";
 
 const AllSongsListPaginated = ({fullwidth}) => {
+    const [currentSong, setCurrentSong] = useState(null);
+    const setCurrentSongOnClick = (songId) => {
+        setCurrentSong(songId);
+    }
+    const destroyCurrentSong = () => {
+        setCurrentSong(null);
+    }
     const {
         loadingMore,
         hasMore,
@@ -22,19 +30,25 @@ const AllSongsListPaginated = ({fullwidth}) => {
     );
     return items.length
         ? (<div className="row">
-                {items.map(item => (
-                    <SongCard id={item.id} key={item.id} recordId={item.data().recordId} linked/>
-                ))}
-                {
-                    hasMore && !loadingMore &&
-                    <div className="col-12 text-center">
-                        <button className="btn button__load-more mb-3" onClick={loadMore}>
-                            <FontAwesomeIcon icon={"chevron-down"} aria-label="Show more songs"/>
-                        </button>
-                    </div>
-                }
-            </div>)
-        : (<LoadingComponent />)
+                <div className="col-12 p-3">
+                    <ul className="play-tracks__list mb-3 mb-sm-0 mb-lg-3">
+                    {items.map(item => (
+                        <ClickableTrackListItem key={item.index} id={item.id} setCurrentSong={setCurrentSongOnClick} currentSong={currentSong}/>
+                    ))}
+                    {
+                        hasMore && !loadingMore &&
+                        <div className="col-12 text-center">
+                            <button className="btn button__load-more mb-3" onClick={loadMore}>
+                                <FontAwesomeIcon icon={"chevron-down"} aria-label="Show more songs"/>
+                            </button>
+                        </div>
+                    }
+                    </ul>
+                    {currentSong ? <SongCardDynamic id={currentSong} key={currentSong} destroyCurrentSong={destroyCurrentSong}/> : false}
+                </div>
+            </div>
+        )
+        : (<LoadingComponent/>)
 };
 
 export default AllSongsListPaginated;

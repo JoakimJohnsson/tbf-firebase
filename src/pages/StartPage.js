@@ -37,7 +37,7 @@ const StartPage = () => {
                         Sjöbuse Records</b>, now brings you that good old music in a modern way.</p>
                     <h2>Extra content</h2>
                     <h3>Links</h3>
-                    <p><a href="/old">The old TBF/VVM site</a></p>
+                    <p><a href="https://thebaseballfield.se/old/">The old TBF/VVM site</a></p>
                     <h3>Video</h3>
                     <p>T.B.A</p>
                     <CopyrightInfoComponent className={"d-none d-lg-block"}/>
@@ -63,11 +63,11 @@ const StartPage = () => {
                     <IconLink className={"ml-3"} link={ROUTES.RECORDS} text={"See all records"} icon={"compact-disc"}/>
                 </div>
                 <div className="standard-main-column__section">
-                    <h2 className="section-header">Popular songs</h2>
-                    <p className="small m-0">Total number of songs: {counters.songCounter}</p>
+                    <h2 className="section-header">Popular tracks</h2>
+                    <p className="small m-0">Total number of tracks: {counters.songCounter}</p>
 
                     <AllSongsListPaginated/>
-                    <IconLink className={"ml-3"} link={ROUTES.TRACKS} text={"See all songs"} icon={"music"}/>
+                    <IconLink className={"ml-3"} link={ROUTES.TRACKS} text={"See all tracks"} icon={"music"}/>
                 </div>
                 <CopyrightInfoComponent className={"d-block d-lg-none"}/>
             </div>

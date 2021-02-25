@@ -11,10 +11,7 @@ const Artist = (props) => {
         </>
     ) :
         (
-            <>
-                Artist
-            </>
-
+            <ArtistPlaceHolder/>
         )
 };
 

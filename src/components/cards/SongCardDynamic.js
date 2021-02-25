@@ -23,7 +23,7 @@ const SongCardDynamicContent = ({id}) => {
             <>
                 <div className={`song-card-dynamic text-color-variant__${rand.toString()}`}>
                     <div className="p-3 small"><span className="text-uppercase font-weight-bold"><Artist id={song.artistId}/></span>: {song.name}</div>
-                    <div>
+                    <div className="px-3 pb-3">
                         <audio controls autoPlay={true} className="w-100">
                             <source src={song.url} type="audio/mpeg"/>
                             <p>

@@ -29,7 +29,7 @@ const AllRecordsListPaginated = ({fullWidth}) => {
                 ))}
                 {
                     hasMore && !loadingMore &&
-                    <div className="col-12 text-center">
+                    <div className="col-12 text-center pt-3">
                         <button className="btn button__load-more mb-3" onClick={loadMore}>
                             <FontAwesomeIcon icon={"chevron-down"} aria-label="Show more songs"/>
                         </button>

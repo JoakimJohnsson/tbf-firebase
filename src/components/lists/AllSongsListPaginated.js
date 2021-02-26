@@ -3,7 +3,7 @@ import {LoadingComponent} from "../MicroComponents/MicroComponents";
 import usePagination from "firestore-pagination-hook";
 import firebase from "firebase";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {ClickableTrackListItem} from "./SongItem";
+import {ClickableTrackListItemWithImage} from "./SongItem";
 import SongCardDynamic from "../cards/SongCardDynamic";
 
 const AllSongsListPaginated = ({fullwidth}) => {
@@ -33,11 +33,11 @@ const AllSongsListPaginated = ({fullwidth}) => {
                 <div className="col-12 p-3">
                     <ul className="play-tracks__list mb-3 mb-sm-0 mb-lg-3">
                     {items.map(item => (
-                        <ClickableTrackListItem key={item.index} id={item.id} setCurrentSong={setCurrentSongOnClick} currentSong={currentSong}/>
+                        <ClickableTrackListItemWithImage key={item.index} id={item.id} setCurrentSong={setCurrentSongOnClick} currentSong={currentSong}/>
                     ))}
                     {
                         hasMore && !loadingMore &&
-                        <div className="col-12 text-center">
+                        <div className="col-12 text-center pt-3">
                             <button className="btn button__load-more mb-3" onClick={loadMore}>
                                 <FontAwesomeIcon icon={"chevron-down"} aria-label="Show more songs"/>
                             </button>

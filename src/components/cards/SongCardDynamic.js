@@ -1,5 +1,5 @@
 import React from 'react';
-import Artist from "../lists/ArtistItem";
+import {ArtistLinkAndSongName} from "../lists/ArtistItem";
 import {FetchSongFromId} from "../../api-functions/songs-api";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
@@ -24,7 +24,7 @@ const SongCardDynamicContent = ({id, destroySong}) => {
             <>
                 <div className="song-card-dynamic">
                     <div className="p-3 text-center">
-                        <span className="song-card-dynamic__info px-3 py-1 mr-2"><Artist id={song.artistId}/>: {song.name}</span>
+                        <span className="song-card-dynamic__info px-3 py-1 mr-2"><ArtistLinkAndSongName id={song.artistId} songName={song.name}/></span>
                         <button className="btn btn-fa__primary" aria-label="Close song"
                                 onClick={() => {
                                     destroySong()

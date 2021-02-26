@@ -46,5 +46,32 @@
         color: $color-secondary;
       }
     }
+    .play-tracks__text {
+      text-transform: capitalize;
+      font-size: 85%;
+      text-align: left;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 1;
+      overflow: hidden;
+      @include media-breakpoint-up(sm) {
+        font-size: 100%;
+      }
+
+    }
+    .play-tracks__button-text {
+      @extend .small;
+      display: none;
+      margin-right: .5rem;
+      text-transform: uppercase;
+      @include media-breakpoint-up(lg) {
+
+        display: inline;
+      }
+    }
+    .play-tracks__image {
+      width: 50px;
+      min-width: 50px;
+    }
   }
 }

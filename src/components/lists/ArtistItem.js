@@ -15,6 +15,20 @@ const Artist = (props) => {
         )
 };
 
+const ArtistLinkAndSongName = (props) => {
+    const artist = FetchArtistFromId(props.id);
+    return artist.name ? (
+            <>
+                <Link to={`/artist/${props.id}`}>
+                    <span className="text-uppercase">{artist.name}</span>
+                </Link> - {props.songName}
+            </>
+        ) :
+        (
+            <ArtistPlaceHolder/>
+        )
+};
+
 const ArtistPlaceHolder = () => {
     let rand = Math.floor(Math.random() * 4) + 2;
     let rand2 = Math.floor(Math.random() * 6) + 2;
@@ -47,5 +61,5 @@ const ArtistLink = (props) => {
         )
 };
 
-export {ArtistLink};
+export {ArtistLink, ArtistLinkAndSongName};
 export default Artist;

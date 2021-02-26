@@ -20,7 +20,7 @@ const ClickableTrackListItem = ({id, setCurrentSong, currentSong}) => {
     return (
         <li className={activeSongId === currentSong ? "play-tracks__li active" : "play-tracks__li"}>
 
-            <p className="play-tracks__text mr-3 mb-0 flex-grow-1" onClick={() => {
+            <p className="play-tracks__text pl-2 mr-3 mb-0 flex-grow-1" onClick={() => {
                 setCurrentSong(id)
                 setActiveSongId(id)
             }}>{song.name}</p>

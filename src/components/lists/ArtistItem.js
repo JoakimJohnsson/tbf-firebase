@@ -15,7 +15,7 @@ const Artist = (props) => {
         )
 };
 
-const ArtistLinkAndSongName = (props) => {
+const ArtistLinkAndTrackName = (props) => {
     const artist = FetchArtistFromId(props.id);
     return artist.name ? (
             <>
@@ -61,5 +61,5 @@ const ArtistLink = (props) => {
         )
 };
 
-export {ArtistLink, ArtistLinkAndSongName};
+export {ArtistLink, ArtistLinkAndTrackName};
 export default Artist;

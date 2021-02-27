@@ -13,21 +13,21 @@ const Song = ({id}) => {
     )
 };
 
-const ClickableTrackListItem = ({id, setCurrentSong, currentSong}) => {
+const ClickableTrackListItem = ({id, setCurrentTrack, currentTrack}) => {
     const song = FetchSongFromId(id);
     const [activeSongId, setActiveSongId] = useState("");
 
     return (
-        <li className={activeSongId === currentSong ? "play-tracks__li active" : "play-tracks__li"}>
+        <li className={activeSongId === currentTrack ? "play-tracks__li active" : "play-tracks__li"}>
 
             <p className="play-tracks__text pl-2 mr-3 mb-0 flex-grow-1" onClick={() => {
-                setCurrentSong(id)
+                setCurrentTrack(id)
                 setActiveSongId(id)
             }}>{song.name}</p>
             <div className="d-flex align-items-center justify-content-end p-2">
                 <button className="play-tracks__button play mr-3"
                         onClick={() => {
-                            setCurrentSong(id)
+                            setCurrentTrack(id)
                             setActiveSongId(id)
                         }}>
                     <span className="play-tracks__button-text">PLAY</span>
@@ -44,23 +44,23 @@ const ClickableTrackListItem = ({id, setCurrentSong, currentSong}) => {
     )
 };
 
-const ClickableTrackListItemWithImage = ({id, setCurrentSong, currentSong}) => {
+const ClickableTrackListItemWithImage = ({id, setCurrentTrack, currentTrack}) => {
     const song = FetchSongFromId(id);
     const [activeSongId, setActiveSongId] = useState("");
 
     return (
-        <li className={activeSongId === currentSong ? "play-tracks__li active" : "play-tracks__li"}>
+        <li className={activeSongId === currentTrack ? "play-tracks__li active" : "play-tracks__li"}>
 
             <TrackListImage song={song}/>
 
             <p className="play-tracks__text mr-3 mb-0 flex-grow-1" onClick={() => {
-                setCurrentSong(id)
+                setCurrentTrack(id)
                 setActiveSongId(id)
             }}>{song.name}</p>
             <div className="d-flex align-items-center justify-content-end p-2">
                 <button className="play-tracks__button play mr-3"
                         onClick={() => {
-                            setCurrentSong(id)
+                            setCurrentTrack(id)
                             setActiveSongId(id)
                         }}>
                     <span className="play-tracks__button-text">PLAY</span>

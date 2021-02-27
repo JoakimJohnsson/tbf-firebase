@@ -29,13 +29,13 @@ const SongsByRecordListSimple = ({recordId}) => {
         : (<LoadingComponentStandard text="No tracks available at this time." icon="spinner" spinning={true}/>)
 };
 
-const SongsByRecordListPlayTracks = ({recordId, currentSong, setCurrentSongOnClick}) => {
+const SongsByRecordListPlayTracks = ({recordId, currentTrack, setCurrentTrackOnClick}) => {
     const songs = FetchSongsByRecord(recordId);
     return songs.length
         ? (
             <ul className="play-tracks__list mb-3 mb-sm-0 mb-lg-3">
                 {songs.map((song) =>
-                    <ClickableTrackListItem key={song.index} id={song.id} setCurrentSong={setCurrentSongOnClick} currentSong={currentSong}/>
+                    <ClickableTrackListItem key={song.index} id={song.id} setCurrentTrack={setCurrentTrackOnClick} currentTrack={currentTrack}/>
                 )}
             </ul>)
         : (<LoadingComponentStandard text="No tracks available at this time." icon="spinner" spinning={true}/>)

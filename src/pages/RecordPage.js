@@ -11,19 +11,19 @@ import {ArtistLink} from "../components/lists/ArtistItem";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {Collapse} from "react-bootstrap";
 import DefaultArtistDescription from "../components/defaultDescriptions/DefaultArtistDescription";
-import SongCardDynamic from "../components/cards/SongCardDynamic";
+import TrackPlayer from "../components/cards/TrackPlayer";
 
 const RecordPage = ({match}) => {
     const {params: {id}} = match;
     const record = FetchRecordFromId(id);
     const [open, setOpen] = useState(false);
-    const [currentSong, setCurrentSong] = useState(null);
+    const [currentTrack, setCurrentTrack] = useState(null);
 
-    const setCurrentSongOnClick = (songId) => {
-        setCurrentSong(songId);
+    const setCurrentTrackOnClick = (songId) => {
+        setCurrentTrack(songId);
     }
-    const destroyCurrentSong = () => {
-        setCurrentSong(null);
+    const destroyCurrentTrack = () => {
+        setCurrentTrack(null);
     }
 
     return record.artistId ? (
@@ -68,8 +68,8 @@ const RecordPage = ({match}) => {
                     <div className="standard-main-column__section">
                         <h2 className="section-header">Tracks</h2>
 
-                        <SongsByRecordListPlayTracks recordId={id} currentSong={currentSong} setCurrentSongOnClick={setCurrentSongOnClick} />
-                        {currentSong ? <SongCardDynamic id={currentSong} key={currentSong} destroyCurrentSong={destroyCurrentSong}/> : false}
+                        <SongsByRecordListPlayTracks recordId={id} currentTrack={currentTrack} setCurrentTrackOnClick={setCurrentTrackOnClick} />
+                        {currentTrack ? <TrackPlayer id={currentTrack} key={currentTrack} destroyCurrentTrack={destroyCurrentTrack}/> : false}
                     </div>
                     <CopyrightInfoComponent className={"d-block d-lg-none mt-5"}/>
                 </div>

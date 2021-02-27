@@ -4,15 +4,15 @@ import usePagination from "firestore-pagination-hook";
 import firebase from "firebase";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {ClickableTrackListItemWithImage} from "./SongItem";
-import SongCardDynamic from "../cards/SongCardDynamic";
+import TrackPlayer from "../cards/TrackPlayer";
 
-const AllSongsListPaginated = ({fullwidth}) => {
-    const [currentSong, setCurrentSong] = useState(null);
-    const setCurrentSongOnClick = (songId) => {
-        setCurrentSong(songId);
+const AllTracksPaginated = ({fullwidth}) => {
+    const [currentTrack, setCurrentTrack] = useState(null);
+    const setCurrentTrackOnClick = (songId) => {
+        setCurrentTrack(songId);
     }
-    const destroyCurrentSong = () => {
-        setCurrentSong(null);
+    const destroyCurrentTrack = () => {
+        setCurrentTrack(null);
     }
     const {
         loadingMore,
@@ -33,7 +33,7 @@ const AllSongsListPaginated = ({fullwidth}) => {
                 <div className="col-12 p-3">
                     <ul className="play-tracks__list mb-3 mb-sm-0 mb-lg-3">
                     {items.map(item => (
-                        <ClickableTrackListItemWithImage key={item.index} id={item.id} setCurrentSong={setCurrentSongOnClick} currentSong={currentSong}/>
+                        <ClickableTrackListItemWithImage key={item.index} id={item.id} setCurrentTrack={setCurrentTrackOnClick} currentTrack={currentTrack}/>
                     ))}
                     {
                         hasMore && !loadingMore &&
@@ -44,11 +44,11 @@ const AllSongsListPaginated = ({fullwidth}) => {
                         </div>
                     }
                     </ul>
-                    {currentSong ? <SongCardDynamic id={currentSong} key={currentSong} destroyCurrentSong={destroyCurrentSong}/> : false}
+                    {currentTrack ? <TrackPlayer id={currentTrack} key={currentTrack} destroyCurrentTrack={destroyCurrentTrack}/> : false}
                 </div>
             </div>
         )
         : (<LoadingComponent/>)
 };
 
-export default AllSongsListPaginated;
+export default AllTracksPaginated;

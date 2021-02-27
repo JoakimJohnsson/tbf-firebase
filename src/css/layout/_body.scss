@@ -15,6 +15,10 @@ body {
   background-color: $color-black;
 }
 
+html {
+  -webkit-tap-highlight-color: transparent;
+}
+
 body {
   margin: 0;
   padding: 0;

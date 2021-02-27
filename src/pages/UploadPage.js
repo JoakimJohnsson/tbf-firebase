@@ -1,6 +1,6 @@
 import React from 'react';
 import {CopyrightInfoComponent} from "../components/MicroComponents/MicroComponents";
-import SongUploadForm from "../components/Forms/SongUploadForm"
+import SongUploadForm from "../components/Forms/TrackUploadForm"
 import RecordUploadForm from "../components/Forms/RecordUploadForm";
 import LastUpdatedArtistForm from "../components/Forms/LastUpdatedArtistForm";
 

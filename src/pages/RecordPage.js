@@ -5,7 +5,7 @@ import {
     LoadingComponentStandard
 } from "../components/MicroComponents/MicroComponents";
 import {FetchRecordFromId} from "../api-functions/records-api";
-import {SongsByRecordListSimple, SongsByRecordListPlayTracks} from "../components/lists/SongsByRecordList";
+import {SongsByRecordListSimple, TracksByRecordWithPlayer} from "../components/lists/TracksByRecordList";
 import imgUnavailable from "../images/image_unavailable.png";
 import {ArtistLink} from "../components/lists/ArtistItem";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
@@ -68,7 +68,7 @@ const RecordPage = ({match}) => {
                     <div className="standard-main-column__section">
                         <h2 className="section-header">Tracks</h2>
 
-                        <SongsByRecordListPlayTracks recordId={id} currentTrack={currentTrack} setCurrentTrackOnClick={setCurrentTrackOnClick} />
+                        <TracksByRecordWithPlayer recordId={id} currentTrack={currentTrack} setCurrentTrackOnClick={setCurrentTrackOnClick} />
                         {currentTrack ? <TrackPlayer id={currentTrack} key={currentTrack} destroyCurrentTrack={destroyCurrentTrack}/> : false}
                     </div>
                     <CopyrightInfoComponent className={"d-block d-lg-none mt-5"}/>

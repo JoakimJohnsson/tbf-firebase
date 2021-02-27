@@ -350,7 +350,7 @@ hr {
 
 small,
 .small,
-.play-tracks__list .play-tracks__li .play-tracks__button-text {
+.tracks-player__list .tracks-player_li .tracks-player__button-text {
   font-size: 80%;
   font-weight: 400; }
 
@@ -359,7 +359,7 @@ mark,
   padding: 0.2em;
   background-color: #fcf8e3; }
 
-.list-unstyled, .play-tracks__list {
+.list-unstyled, .tracks-player__list {
   padding-left: 0;
   list-style: none; }
 
@@ -1895,7 +1895,7 @@ textarea.form-control {
     .form-inline .custom-control-label {
       margin-bottom: 0; } }
 
-.btn, .play-tracks__list .play-tracks__li .play-tracks__button {
+.btn, .tracks-player__list .tracks-player_li .tracks-player__button {
   display: inline-block;
   font-weight: 400;
   color: #fff;
@@ -1910,23 +1910,23 @@ textarea.form-control {
   border-radius: 0.25rem;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; }
   @media (prefers-reduced-motion: reduce) {
-    .btn, .play-tracks__list .play-tracks__li .play-tracks__button {
+    .btn, .tracks-player__list .tracks-player_li .tracks-player__button {
       transition: none; } }
-  .btn:hover, .play-tracks__list .play-tracks__li .play-tracks__button:hover {
+  .btn:hover, .tracks-player__list .tracks-player_li .tracks-player__button:hover {
     color: #fff;
     text-decoration: none; }
-  .btn:focus, .play-tracks__list .play-tracks__li .play-tracks__button:focus, .btn.focus, .play-tracks__list .play-tracks__li .focus.play-tracks__button {
+  .btn:focus, .tracks-player__list .tracks-player_li .tracks-player__button:focus, .btn.focus, .tracks-player__list .tracks-player_li .focus.tracks-player__button {
     outline: 0;
     box-shadow: 0 0 0 0.2rem rgba(255, 136, 204, 0.25); }
-  .btn.disabled, .play-tracks__list .play-tracks__li .disabled.play-tracks__button, .btn:disabled, .play-tracks__list .play-tracks__li .play-tracks__button:disabled {
+  .btn.disabled, .tracks-player__list .tracks-player_li .disabled.tracks-player__button, .btn:disabled, .tracks-player__list .tracks-player_li .tracks-player__button:disabled {
     opacity: 0.3; }
-  .btn:not(:disabled):not(.disabled), .play-tracks__list .play-tracks__li .play-tracks__button:not(:disabled):not(.disabled) {
+  .btn:not(:disabled):not(.disabled), .tracks-player__list .tracks-player_li .tracks-player__button:not(:disabled):not(.disabled) {
     cursor: pointer; }
 
-a.btn.disabled, .play-tracks__list .play-tracks__li a.disabled.play-tracks__button,
+a.btn.disabled, .tracks-player__list .tracks-player_li a.disabled.tracks-player__button,
 fieldset:disabled a.btn,
-fieldset:disabled .play-tracks__list .play-tracks__li a.play-tracks__button,
-.play-tracks__list .play-tracks__li fieldset:disabled a.play-tracks__button {
+fieldset:disabled .tracks-player__list .tracks-player_li a.tracks-player__button,
+.tracks-player__list .tracks-player_li fieldset:disabled a.tracks-player__button {
   pointer-events: none; }
 
 .btn-primary {
@@ -2286,13 +2286,13 @@ fieldset:disabled .play-tracks__list .play-tracks__li a.play-tracks__button,
     color: #6c757d;
     pointer-events: none; }
 
-.btn-lg, .btn-group-lg > .btn, .play-tracks__list .play-tracks__li .btn-group-lg > .play-tracks__button {
+.btn-lg, .btn-group-lg > .btn, .tracks-player__list .tracks-player_li .btn-group-lg > .tracks-player__button {
   padding: 0.5rem 1rem;
   font-size: 1.25rem;
   line-height: 1.5;
   border-radius: 0.3rem; }
 
-.btn-sm, .btn-group-sm > .btn, .play-tracks__list .play-tracks__li .btn-group-sm > .play-tracks__button {
+.btn-sm, .btn-group-sm > .btn, .tracks-player__list .tracks-player_li .btn-group-sm > .tracks-player__button {
   padding: 0.25rem 0.5rem;
   font-size: 0.875rem;
   line-height: 1.5;
@@ -2526,22 +2526,22 @@ input[type="button"].btn-block {
   position: relative;
   display: inline-flex;
   vertical-align: middle; }
-  .btn-group > .btn, .play-tracks__list .play-tracks__li .btn-group > .play-tracks__button,
+  .btn-group > .btn, .tracks-player__list .tracks-player_li .btn-group > .tracks-player__button,
   .btn-group-vertical > .btn,
-  .play-tracks__list .play-tracks__li .btn-group-vertical > .play-tracks__button {
+  .tracks-player__list .tracks-player_li .btn-group-vertical > .tracks-player__button {
     position: relative;
     flex: 1 1 auto; }
-    .btn-group > .btn:hover, .play-tracks__list .play-tracks__li .btn-group > .play-tracks__button:hover,
+    .btn-group > .btn:hover, .tracks-player__list .tracks-player_li .btn-group > .tracks-player__button:hover,
     .btn-group-vertical > .btn:hover,
-    .play-tracks__list .play-tracks__li .btn-group-vertical > .play-tracks__button:hover {
+    .tracks-player__list .tracks-player_li .btn-group-vertical > .tracks-player__button:hover {
       z-index: 1; }
-    .btn-group > .btn:focus, .play-tracks__list .play-tracks__li .btn-group > .play-tracks__button:focus, .btn-group > .btn:active, .play-tracks__list .play-tracks__li .btn-group > .play-tracks__button:active, .btn-group > .btn.active, .play-tracks__list .play-tracks__li .btn-group > .active.play-tracks__button,
+    .btn-group > .btn:focus, .tracks-player__list .tracks-player_li .btn-group > .tracks-player__button:focus, .btn-group > .btn:active, .tracks-player__list .tracks-player_li .btn-group > .tracks-player__button:active, .btn-group > .btn.active, .tracks-player__list .tracks-player_li .btn-group > .active.tracks-player__button,
     .btn-group-vertical > .btn:focus,
-    .play-tracks__list .play-tracks__li .btn-group-vertical > .play-tracks__button:focus,
+    .tracks-player__list .tracks-player_li .btn-group-vertical > .tracks-player__button:focus,
     .btn-group-vertical > .btn:active,
-    .play-tracks__list .play-tracks__li .btn-group-vertical > .play-tracks__button:active,
+    .tracks-player__list .tracks-player_li .btn-group-vertical > .tracks-player__button:active,
     .btn-group-vertical > .btn.active,
-    .play-tracks__list .play-tracks__li .btn-group-vertical > .active.play-tracks__button {
+    .tracks-player__list .tracks-player_li .btn-group-vertical > .active.tracks-player__button {
       z-index: 1; }
 
 .btn-toolbar {
@@ -2551,17 +2551,17 @@ input[type="button"].btn-block {
   .btn-toolbar .input-group {
     width: auto; }
 
-.btn-group > .btn:not(:first-child), .play-tracks__list .play-tracks__li .btn-group > .play-tracks__button:not(:first-child),
+.btn-group > .btn:not(:first-child), .tracks-player__list .tracks-player_li .btn-group > .tracks-player__button:not(:first-child),
 .btn-group > .btn-group:not(:first-child) {
   margin-left: -1px; }
-.btn-group > .btn:not(:last-child):not(.dropdown-toggle), .play-tracks__list .play-tracks__li .btn-group > .play-tracks__button:not(:last-child):not(.dropdown-toggle),
+.btn-group > .btn:not(:last-child):not(.dropdown-toggle), .tracks-player__list .tracks-player_li .btn-group > .tracks-player__button:not(:last-child):not(.dropdown-toggle),
 .btn-group > .btn-group:not(:last-child) > .btn,
-.play-tracks__list .play-tracks__li .btn-group > .btn-group:not(:last-child) > .play-tracks__button {
+.tracks-player__list .tracks-player_li .btn-group > .btn-group:not(:last-child) > .tracks-player__button {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0; }
-.btn-group > .btn:not(:first-child), .play-tracks__list .play-tracks__li .btn-group > .play-tracks__button:not(:first-child),
+.btn-group > .btn:not(:first-child), .tracks-player__list .tracks-player_li .btn-group > .tracks-player__button:not(:first-child),
 .btn-group > .btn-group:not(:first-child) > .btn,
-.play-tracks__list .play-tracks__li .btn-group > .btn-group:not(:first-child) > .play-tracks__button {
+.tracks-player__list .tracks-player_li .btn-group > .btn-group:not(:first-child) > .tracks-player__button {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0; }
 
@@ -2573,11 +2573,11 @@ input[type="button"].btn-block {
   .dropleft .dropdown-toggle-split::before {
     margin-right: 0; }
 
-.btn-sm + .dropdown-toggle-split, .btn-group-sm > .btn + .dropdown-toggle-split, .play-tracks__list .play-tracks__li .btn-group-sm > .play-tracks__button + .dropdown-toggle-split {
+.btn-sm + .dropdown-toggle-split, .btn-group-sm > .btn + .dropdown-toggle-split, .tracks-player__list .tracks-player_li .btn-group-sm > .tracks-player__button + .dropdown-toggle-split {
   padding-right: 0.375rem;
   padding-left: 0.375rem; }
 
-.btn-lg + .dropdown-toggle-split, .btn-group-lg > .btn + .dropdown-toggle-split, .play-tracks__list .play-tracks__li .btn-group-lg > .play-tracks__button + .dropdown-toggle-split {
+.btn-lg + .dropdown-toggle-split, .btn-group-lg > .btn + .dropdown-toggle-split, .tracks-player__list .tracks-player_li .btn-group-lg > .tracks-player__button + .dropdown-toggle-split {
   padding-right: 0.75rem;
   padding-left: 0.75rem; }
 
@@ -2585,34 +2585,34 @@ input[type="button"].btn-block {
   flex-direction: column;
   align-items: flex-start;
   justify-content: center; }
-  .btn-group-vertical > .btn, .play-tracks__list .play-tracks__li .btn-group-vertical > .play-tracks__button,
+  .btn-group-vertical > .btn, .tracks-player__list .tracks-player_li .btn-group-vertical > .tracks-player__button,
   .btn-group-vertical > .btn-group {
     width: 100%; }
-  .btn-group-vertical > .btn:not(:first-child), .play-tracks__list .play-tracks__li .btn-group-vertical > .play-tracks__button:not(:first-child),
+  .btn-group-vertical > .btn:not(:first-child), .tracks-player__list .tracks-player_li .btn-group-vertical > .tracks-player__button:not(:first-child),
   .btn-group-vertical > .btn-group:not(:first-child) {
     margin-top: -1px; }
-  .btn-group-vertical > .btn:not(:last-child):not(.dropdown-toggle), .play-tracks__list .play-tracks__li .btn-group-vertical > .play-tracks__button:not(:last-child):not(.dropdown-toggle),
+  .btn-group-vertical > .btn:not(:last-child):not(.dropdown-toggle), .tracks-player__list .tracks-player_li .btn-group-vertical > .tracks-player__button:not(:last-child):not(.dropdown-toggle),
   .btn-group-vertical > .btn-group:not(:last-child) > .btn,
-  .play-tracks__list .play-tracks__li .btn-group-vertical > .btn-group:not(:last-child) > .play-tracks__button {
+  .tracks-player__list .tracks-player_li .btn-group-vertical > .btn-group:not(:last-child) > .tracks-player__button {
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0; }
-  .btn-group-vertical > .btn:not(:first-child), .play-tracks__list .play-tracks__li .btn-group-vertical > .play-tracks__button:not(:first-child),
+  .btn-group-vertical > .btn:not(:first-child), .tracks-player__list .tracks-player_li .btn-group-vertical > .tracks-player__button:not(:first-child),
   .btn-group-vertical > .btn-group:not(:first-child) > .btn,
-  .play-tracks__list .play-tracks__li .btn-group-vertical > .btn-group:not(:first-child) > .play-tracks__button {
+  .tracks-player__list .tracks-player_li .btn-group-vertical > .btn-group:not(:first-child) > .tracks-player__button {
     border-top-left-radius: 0;
     border-top-right-radius: 0; }
 
-.btn-group-toggle > .btn, .play-tracks__list .play-tracks__li .btn-group-toggle > .play-tracks__button,
+.btn-group-toggle > .btn, .tracks-player__list .tracks-player_li .btn-group-toggle > .tracks-player__button,
 .btn-group-toggle > .btn-group > .btn,
-.play-tracks__list .play-tracks__li .btn-group-toggle > .btn-group > .play-tracks__button {
+.tracks-player__list .tracks-player_li .btn-group-toggle > .btn-group > .tracks-player__button {
   margin-bottom: 0; }
-  .btn-group-toggle > .btn input[type="radio"], .play-tracks__list .play-tracks__li .btn-group-toggle > .play-tracks__button input[type="radio"],
+  .btn-group-toggle > .btn input[type="radio"], .tracks-player__list .tracks-player_li .btn-group-toggle > .tracks-player__button input[type="radio"],
   .btn-group-toggle > .btn input[type="checkbox"],
-  .play-tracks__list .play-tracks__li .btn-group-toggle > .play-tracks__button input[type="checkbox"],
+  .tracks-player__list .tracks-player_li .btn-group-toggle > .tracks-player__button input[type="checkbox"],
   .btn-group-toggle > .btn-group > .btn input[type="radio"],
-  .play-tracks__list .play-tracks__li .btn-group-toggle > .btn-group > .play-tracks__button input[type="radio"],
+  .tracks-player__list .tracks-player_li .btn-group-toggle > .btn-group > .tracks-player__button input[type="radio"],
   .btn-group-toggle > .btn-group > .btn input[type="checkbox"],
-  .play-tracks__list .play-tracks__li .btn-group-toggle > .btn-group > .play-tracks__button input[type="checkbox"] {
+  .tracks-player__list .tracks-player_li .btn-group-toggle > .btn-group > .tracks-player__button input[type="checkbox"] {
     position: absolute;
     clip: rect(0, 0, 0, 0);
     pointer-events: none; }
@@ -2675,39 +2675,39 @@ input[type="button"].btn-block {
 .input-group-prepend,
 .input-group-append {
   display: flex; }
-  .input-group-prepend .btn, .input-group-prepend .play-tracks__list .play-tracks__li .play-tracks__button, .play-tracks__list .play-tracks__li .input-group-prepend .play-tracks__button,
+  .input-group-prepend .btn, .input-group-prepend .tracks-player__list .tracks-player_li .tracks-player__button, .tracks-player__list .tracks-player_li .input-group-prepend .tracks-player__button,
   .input-group-append .btn,
-  .input-group-append .play-tracks__list .play-tracks__li .play-tracks__button,
-  .play-tracks__list .play-tracks__li .input-group-append .play-tracks__button {
+  .input-group-append .tracks-player__list .tracks-player_li .tracks-player__button,
+  .tracks-player__list .tracks-player_li .input-group-append .tracks-player__button {
     position: relative;
     z-index: 2; }
-    .input-group-prepend .btn:focus, .input-group-prepend .play-tracks__list .play-tracks__li .play-tracks__button:focus, .play-tracks__list .play-tracks__li .input-group-prepend .play-tracks__button:focus,
+    .input-group-prepend .btn:focus, .input-group-prepend .tracks-player__list .tracks-player_li .tracks-player__button:focus, .tracks-player__list .tracks-player_li .input-group-prepend .tracks-player__button:focus,
     .input-group-append .btn:focus,
-    .input-group-append .play-tracks__list .play-tracks__li .play-tracks__button:focus,
-    .play-tracks__list .play-tracks__li .input-group-append .play-tracks__button:focus {
+    .input-group-append .tracks-player__list .tracks-player_li .tracks-player__button:focus,
+    .tracks-player__list .tracks-player_li .input-group-append .tracks-player__button:focus {
       z-index: 3; }
-  .input-group-prepend .btn + .btn, .input-group-prepend .play-tracks__list .play-tracks__li .play-tracks__button + .btn, .play-tracks__list .play-tracks__li .input-group-prepend .play-tracks__button + .btn, .input-group-prepend .play-tracks__list .play-tracks__li .btn + .play-tracks__button, .play-tracks__list .play-tracks__li .input-group-prepend .btn + .play-tracks__button, .input-group-prepend .play-tracks__list .play-tracks__li .play-tracks__button + .play-tracks__button, .play-tracks__list .play-tracks__li .input-group-prepend .play-tracks__button + .play-tracks__button,
+  .input-group-prepend .btn + .btn, .input-group-prepend .tracks-player__list .tracks-player_li .tracks-player__button + .btn, .tracks-player__list .tracks-player_li .input-group-prepend .tracks-player__button + .btn, .input-group-prepend .tracks-player__list .tracks-player_li .btn + .tracks-player__button, .tracks-player__list .tracks-player_li .input-group-prepend .btn + .tracks-player__button, .input-group-prepend .tracks-player__list .tracks-player_li .tracks-player__button + .tracks-player__button, .tracks-player__list .tracks-player_li .input-group-prepend .tracks-player__button + .tracks-player__button,
   .input-group-prepend .btn + .input-group-text,
-  .input-group-prepend .play-tracks__list .play-tracks__li .play-tracks__button + .input-group-text,
-  .play-tracks__list .play-tracks__li .input-group-prepend .play-tracks__button + .input-group-text,
+  .input-group-prepend .tracks-player__list .tracks-player_li .tracks-player__button + .input-group-text,
+  .tracks-player__list .tracks-player_li .input-group-prepend .tracks-player__button + .input-group-text,
   .input-group-prepend .input-group-text + .input-group-text,
   .input-group-prepend .input-group-text + .btn,
-  .input-group-prepend .play-tracks__list .play-tracks__li .input-group-text + .play-tracks__button,
-  .play-tracks__list .play-tracks__li .input-group-prepend .input-group-text + .play-tracks__button,
+  .input-group-prepend .tracks-player__list .tracks-player_li .input-group-text + .tracks-player__button,
+  .tracks-player__list .tracks-player_li .input-group-prepend .input-group-text + .tracks-player__button,
   .input-group-append .btn + .btn,
-  .input-group-append .play-tracks__list .play-tracks__li .play-tracks__button + .btn,
-  .play-tracks__list .play-tracks__li .input-group-append .play-tracks__button + .btn,
-  .input-group-append .play-tracks__list .play-tracks__li .btn + .play-tracks__button,
-  .play-tracks__list .play-tracks__li .input-group-append .btn + .play-tracks__button,
-  .input-group-append .play-tracks__list .play-tracks__li .play-tracks__button + .play-tracks__button,
-  .play-tracks__list .play-tracks__li .input-group-append .play-tracks__button + .play-tracks__button,
+  .input-group-append .tracks-player__list .tracks-player_li .tracks-player__button + .btn,
+  .tracks-player__list .tracks-player_li .input-group-append .tracks-player__button + .btn,
+  .input-group-append .tracks-player__list .tracks-player_li .btn + .tracks-player__button,
+  .tracks-player__list .tracks-player_li .input-group-append .btn + .tracks-player__button,
+  .input-group-append .tracks-player__list .tracks-player_li .tracks-player__button + .tracks-player__button,
+  .tracks-player__list .tracks-player_li .input-group-append .tracks-player__button + .tracks-player__button,
   .input-group-append .btn + .input-group-text,
-  .input-group-append .play-tracks__list .play-tracks__li .play-tracks__button + .input-group-text,
-  .play-tracks__list .play-tracks__li .input-group-append .play-tracks__button + .input-group-text,
+  .input-group-append .tracks-player__list .tracks-player_li .tracks-player__button + .input-group-text,
+  .tracks-player__list .tracks-player_li .input-group-append .tracks-player__button + .input-group-text,
   .input-group-append .input-group-text + .input-group-text,
   .input-group-append .input-group-text + .btn,
-  .input-group-append .play-tracks__list .play-tracks__li .input-group-text + .play-tracks__button,
-  .play-tracks__list .play-tracks__li .input-group-append .input-group-text + .play-tracks__button {
+  .input-group-append .tracks-player__list .tracks-player_li .input-group-text + .tracks-player__button,
+  .tracks-player__list .tracks-player_li .input-group-append .input-group-text + .tracks-player__button {
     margin-left: -1px; }
 
 .input-group-prepend {
@@ -2743,9 +2743,9 @@ input[type="button"].btn-block {
 .input-group-lg > .input-group-prepend > .input-group-text,
 .input-group-lg > .input-group-append > .input-group-text,
 .input-group-lg > .input-group-prepend > .btn,
-.play-tracks__list .play-tracks__li .input-group-lg > .input-group-prepend > .play-tracks__button,
+.tracks-player__list .tracks-player_li .input-group-lg > .input-group-prepend > .tracks-player__button,
 .input-group-lg > .input-group-append > .btn,
-.play-tracks__list .play-tracks__li .input-group-lg > .input-group-append > .play-tracks__button {
+.tracks-player__list .tracks-player_li .input-group-lg > .input-group-append > .tracks-player__button {
   padding: 0.5rem 1rem;
   font-size: 1.25rem;
   line-height: 1.5;
@@ -2760,9 +2760,9 @@ input[type="button"].btn-block {
 .input-group-sm > .input-group-prepend > .input-group-text,
 .input-group-sm > .input-group-append > .input-group-text,
 .input-group-sm > .input-group-prepend > .btn,
-.play-tracks__list .play-tracks__li .input-group-sm > .input-group-prepend > .play-tracks__button,
+.tracks-player__list .tracks-player_li .input-group-sm > .input-group-prepend > .tracks-player__button,
 .input-group-sm > .input-group-append > .btn,
-.play-tracks__list .play-tracks__li .input-group-sm > .input-group-append > .play-tracks__button {
+.tracks-player__list .tracks-player_li .input-group-sm > .input-group-append > .tracks-player__button {
   padding: 0.25rem 0.5rem;
   font-size: 0.875rem;
   line-height: 1.5;
@@ -2772,27 +2772,27 @@ input[type="button"].btn-block {
 .input-group-sm > .custom-select {
   padding-right: 1.75rem; }
 
-.input-group > .input-group-prepend > .btn, .play-tracks__list .play-tracks__li .input-group > .input-group-prepend > .play-tracks__button,
+.input-group > .input-group-prepend > .btn, .tracks-player__list .tracks-player_li .input-group > .input-group-prepend > .tracks-player__button,
 .input-group > .input-group-prepend > .input-group-text,
 .input-group:not(.has-validation) > .input-group-append:not(:last-child) > .btn,
-.play-tracks__list .play-tracks__li .input-group:not(.has-validation) > .input-group-append:not(:last-child) > .play-tracks__button,
+.tracks-player__list .tracks-player_li .input-group:not(.has-validation) > .input-group-append:not(:last-child) > .tracks-player__button,
 .input-group:not(.has-validation) > .input-group-append:not(:last-child) > .input-group-text,
 .input-group.has-validation > .input-group-append:nth-last-child(n + 3) > .btn,
-.play-tracks__list .play-tracks__li .input-group.has-validation > .input-group-append:nth-last-child(n + 3) > .play-tracks__button,
+.tracks-player__list .tracks-player_li .input-group.has-validation > .input-group-append:nth-last-child(n + 3) > .tracks-player__button,
 .input-group.has-validation > .input-group-append:nth-last-child(n + 3) > .input-group-text,
 .input-group > .input-group-append:last-child > .btn:not(:last-child):not(.dropdown-toggle),
-.play-tracks__list .play-tracks__li .input-group > .input-group-append:last-child > .play-tracks__button:not(:last-child):not(.dropdown-toggle),
+.tracks-player__list .tracks-player_li .input-group > .input-group-append:last-child > .tracks-player__button:not(:last-child):not(.dropdown-toggle),
 .input-group > .input-group-append:last-child > .input-group-text:not(:last-child) {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0; }
 
-.input-group > .input-group-append > .btn, .play-tracks__list .play-tracks__li .input-group > .input-group-append > .play-tracks__button,
+.input-group > .input-group-append > .btn, .tracks-player__list .tracks-player_li .input-group > .input-group-append > .tracks-player__button,
 .input-group > .input-group-append > .input-group-text,
 .input-group > .input-group-prepend:not(:first-child) > .btn,
-.play-tracks__list .play-tracks__li .input-group > .input-group-prepend:not(:first-child) > .play-tracks__button,
+.tracks-player__list .tracks-player_li .input-group > .input-group-prepend:not(:first-child) > .tracks-player__button,
 .input-group > .input-group-prepend:not(:first-child) > .input-group-text,
 .input-group > .input-group-prepend:first-child > .btn:not(:first-child),
-.play-tracks__list .play-tracks__li .input-group > .input-group-prepend:first-child > .play-tracks__button:not(:first-child),
+.tracks-player__list .tracks-player_li .input-group > .input-group-prepend:first-child > .tracks-player__button:not(:first-child),
 .input-group > .input-group-prepend:first-child > .input-group-text:not(:first-child) {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0; }
@@ -3759,7 +3759,7 @@ input[type="button"].btn-block {
   .badge:empty {
     display: none; }
 
-.btn .badge, .play-tracks__list .play-tracks__li .play-tracks__button .badge {
+.btn .badge, .tracks-player__list .tracks-player_li .tracks-player__button .badge {
   position: relative;
   top: -1px; }
 
@@ -11461,7 +11461,7 @@ label {
       color: #ff967f;
       text-decoration: none; }
 
-.small, .play-tracks__list .play-tracks__li .play-tracks__button-text {
+.small, .tracks-player__list .tracks-player_li .tracks-player__button-text {
   font-weight: 300;
   font-size: 85%; }
 
@@ -11602,7 +11602,7 @@ footer {
   .song-card .label {
     font-weight: bold;
     text-transform: uppercase; }
-  .song-card .small, .song-card .play-tracks__list .play-tracks__li .play-tracks__button-text, .play-tracks__list .play-tracks__li .song-card .play-tracks__button-text {
+  .song-card .small, .song-card .tracks-player__list .tracks-player_li .tracks-player__button-text, .tracks-player__list .tracks-player_li .song-card .tracks-player__button-text {
     font-weight: normal;
     text-transform: capitalize; }
   .song-card .song-card__audio {
@@ -11666,12 +11666,12 @@ footer {
   .record-card-with-songs:last-of-type {
     margin-bottom: 0; }
 
-.btn-fa, .btn-fa__primary, .btn-fa__secondary, .btn-fa__tertiary, .play-tracks__list .play-tracks__li .play-tracks__button {
+.btn-fa, .btn-fa__primary, .btn-fa__secondary, .btn-fa__tertiary, .tracks-player__list .tracks-player_li .tracks-player__button {
   color: inherit;
   border-radius: 0;
   padding: 0;
   border: none; }
-  .btn-fa:hover, .btn-fa__primary:hover, .btn-fa__secondary:hover, .btn-fa__tertiary:hover, .play-tracks__list .play-tracks__li .play-tracks__button:hover, .btn-fa:focus, .btn-fa__primary:focus, .btn-fa__secondary:focus, .btn-fa__tertiary:focus, .play-tracks__list .play-tracks__li .play-tracks__button:focus, .btn-fa:active, .btn-fa__primary:active, .btn-fa__secondary:active, .btn-fa__tertiary:active, .play-tracks__list .play-tracks__li .play-tracks__button:active {
+  .btn-fa:hover, .btn-fa__primary:hover, .btn-fa__secondary:hover, .btn-fa__tertiary:hover, .tracks-player__list .tracks-player_li .tracks-player__button:hover, .btn-fa:focus, .btn-fa__primary:focus, .btn-fa__secondary:focus, .btn-fa__tertiary:focus, .tracks-player__list .tracks-player_li .tracks-player__button:focus, .btn-fa:active, .btn-fa__primary:active, .btn-fa__secondary:active, .btn-fa__tertiary:active, .tracks-player__list .tracks-player_li .tracks-player__button:active {
     color: inherit; }
 
 .btn-fa__primary {
@@ -11684,9 +11684,9 @@ footer {
   .btn-fa__secondary:hover, .btn-fa__secondary:focus, .btn-fa__secondary:active {
     color: #b8ffe0; }
 
-.btn-fa__tertiary, .play-tracks__list .play-tracks__li .play-tracks__button {
+.btn-fa__tertiary, .tracks-player__list .tracks-player_li .tracks-player__button {
   color: #fffe88; }
-  .btn-fa__tertiary:hover, .play-tracks__list .play-tracks__li .play-tracks__button:hover, .btn-fa__tertiary:focus, .play-tracks__list .play-tracks__li .play-tracks__button:focus {
+  .btn-fa__tertiary:hover, .tracks-player__list .tracks-player_li .tracks-player__button:hover, .btn-fa__tertiary:focus, .tracks-player__list .tracks-player_li .tracks-player__button:focus {
     color: #fffea0; }
 
 .btn__tertiary {
@@ -11722,28 +11722,28 @@ footer {
 .list-group {
   padding-left: 27px; }
 
-.play-tracks__list .play-tracks__li {
+.tracks-player__list .tracks-player_li {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-bottom: .25rem; }
-  .play-tracks__list .play-tracks__li p {
+  .tracks-player__list .tracks-player_li p {
     cursor: pointer; }
-  .play-tracks__list .play-tracks__li:hover, .play-tracks__list .play-tracks__li:focus, .play-tracks__list .play-tracks__li:active, .play-tracks__list .play-tracks__li.active {
+  .tracks-player__list .tracks-player_li:hover, .tracks-player__list .tracks-player_li:focus, .tracks-player__list .tracks-player_li:active, .tracks-player__list .tracks-player_li.active {
     background: #151515; }
-  .play-tracks__list .play-tracks__li.active {
+  .tracks-player__list .tracks-player_li.active {
     background: #0a0a0a;
     color: #88ffcc; }
-    .play-tracks__list .play-tracks__li.active .play-tracks__button.play {
+    .tracks-player__list .tracks-player_li.active .tracks-player__button.play {
       color: #88ffcc; }
-  .play-tracks__list .play-tracks__li .svg-inline--fa {
+  .tracks-player__list .tracks-player_li .svg-inline--fa {
     font-size: 1.5rem; }
-  .play-tracks__list .play-tracks__li .play-tracks__button {
+  .tracks-player__list .tracks-player_li .tracks-player__button {
     display: flex;
     align-items: center; }
-    .play-tracks__list .play-tracks__li .play-tracks__button:hover, .play-tracks__list .play-tracks__li .play-tracks__button:focus, .play-tracks__list .play-tracks__li .play-tracks__button:active {
+    .tracks-player__list .tracks-player_li .tracks-player__button:hover, .tracks-player__list .tracks-player_li .tracks-player__button:focus, .tracks-player__list .tracks-player_li .tracks-player__button:active {
       color: #88ffcc; }
-  .play-tracks__list .play-tracks__li .play-tracks__text {
+  .tracks-player__list .tracks-player_li .tracks-player__text {
     text-transform: capitalize;
     font-size: 85%;
     text-align: left;
@@ -11752,16 +11752,16 @@ footer {
     -webkit-line-clamp: 1;
     overflow: hidden; }
     @media (min-width: 576px) {
-      .play-tracks__list .play-tracks__li .play-tracks__text {
+      .tracks-player__list .tracks-player_li .tracks-player__text {
         font-size: 100%; } }
-  .play-tracks__list .play-tracks__li .play-tracks__button-text {
+  .tracks-player__list .tracks-player_li .tracks-player__button-text {
     display: none;
     margin-right: .5rem;
     text-transform: uppercase; }
     @media (min-width: 992px) {
-      .play-tracks__list .play-tracks__li .play-tracks__button-text {
+      .tracks-player__list .tracks-player_li .tracks-player__button-text {
         display: inline; } }
-  .play-tracks__list .play-tracks__li .play-tracks__image {
+  .tracks-player__list .tracks-player_li .tracks-player__image {
     width: 50px;
     min-width: 50px; }
 

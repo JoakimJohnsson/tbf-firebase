@@ -7,15 +7,14 @@
   padding-left: 27px;
 }
 
-.play-tracks__list {
+.tracks-player__list {
   @extend .list-unstyled;
 
-  .play-tracks__li {
+  .tracks-player_li {
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin-bottom: .25rem;
-    //padding: .5rem;
     p {
       cursor: pointer;
     }
@@ -28,14 +27,14 @@
     &.active {
       background: $color-near-black;
       color: $color-secondary;
-      .play-tracks__button.play {
+      .tracks-player__button.play {
         color: $color-secondary;
       }
     }
     .svg-inline--fa {
       font-size: 1.5rem;
     }
-    .play-tracks__button {
+    .tracks-player__button {
       display: flex;
       align-items: center;
       @extend .btn;
@@ -46,7 +45,7 @@
         color: $color-secondary;
       }
     }
-    .play-tracks__text {
+    .tracks-player__text {
       text-transform: capitalize;
       font-size: 85%;
       text-align: left;
@@ -59,7 +58,7 @@
       }
 
     }
-    .play-tracks__button-text {
+    .tracks-player__button-text {
       @extend .small;
       display: none;
       margin-right: .5rem;
@@ -69,7 +68,7 @@
         display: inline;
       }
     }
-    .play-tracks__image {
+    .tracks-player__image {
       width: 50px;
       min-width: 50px;
     }

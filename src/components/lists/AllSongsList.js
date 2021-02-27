@@ -1,7 +1,7 @@
 import React from "react";
-import FetchAllSongs from "../../api-functions/songs-api";
+import FetchAllSongs from "../../api-functions/tracks-api";
 import {LoadingComponent, LoadingComponentStandard} from "../MicroComponents/MicroComponents";
-import SongCard from "../cards/SongCard";
+import TrackCard from "../cards/TrackCard";
 import FetchAllRecords from "../../api-functions/records-api";
 import {RecordCardWithSongs} from "../cards/RecordCard";
 
@@ -10,7 +10,7 @@ const AllSongsList = () => {
     return songs.length ?
         (<div className="row">
             {songs.map((song) =>
-                <SongCard id={song.id} key={song.id} recordId={song.recordId} linked/>
+                <TrackCard id={song.id} key={song.id} recordId={song.recordId} linked/>
             )}
         </div>)
         :

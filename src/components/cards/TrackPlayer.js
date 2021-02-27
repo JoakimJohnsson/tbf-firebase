@@ -1,6 +1,6 @@
 import React from 'react';
 import {ArtistLinkAndTrackName} from "../lists/ArtistItem";
-import {FetchSongFromId} from "../../api-functions/songs-api";
+import {FetchSongFromId} from "../../api-functions/tracks-api";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
 const TrackPlayer = ({id, destroyCurrentTrack}) => {

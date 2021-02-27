@@ -3,10 +3,10 @@ import {LoadingComponent} from "../MicroComponents/MicroComponents";
 import usePagination from "firestore-pagination-hook";
 import firebase from "firebase";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {ClickableTrackListItemWithImage} from "./SongItem";
+import {TracksPlayerListItemWithImage} from "./TrackItem";
 import TrackPlayer from "../cards/TrackPlayer";
 
-const AllTracksPaginated = ({fullwidth}) => {
+const AllTracksPaginated = () => {
     const [currentTrack, setCurrentTrack] = useState(null);
     const setCurrentTrackOnClick = (songId) => {
         setCurrentTrack(songId);
@@ -31,9 +31,9 @@ const AllTracksPaginated = ({fullwidth}) => {
     return items.length
         ? (<div className="row">
                 <div className="col-12 p-3">
-                    <ul className="play-tracks__list mb-3 mb-sm-0 mb-lg-3">
+                    <ul className="tracks-player__list mb-3 mb-sm-0 mb-lg-3">
                     {items.map(item => (
-                        <ClickableTrackListItemWithImage key={item.index} id={item.id} setCurrentTrack={setCurrentTrackOnClick} currentTrack={currentTrack}/>
+                        <TracksPlayerListItemWithImage key={item.index} id={item.id} setCurrentTrack={setCurrentTrackOnClick} currentTrack={currentTrack}/>
                     ))}
                     {
                         hasMore && !loadingMore &&

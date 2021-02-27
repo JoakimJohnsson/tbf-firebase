@@ -6,7 +6,7 @@ import RecordsByArtistList from "../components/lists/RecordsByArtistList";
 import * as STRINGS from "../constants/strings"
 import imgUnavailable from "../images/image_unavailable.png";
 import firebase from "firebase";
-import SongsByArtistList from "../components/lists/SongsByArtistList";
+import TracksByArtistList from "../components/lists/TracksByArtistList";
 
 const ArtistPage = ({match}) => {
     const {params: {id}} = match;
@@ -51,7 +51,7 @@ const ArtistPage = ({match}) => {
                     <RecordsByArtistList artistId={id}/>
 
                     <h2 className="section-header">Tracks</h2>
-                    <SongsByArtistList artistId={id}/>
+                    <TracksByArtistList artistId={id}/>
                 </div>
                 <CopyrightInfoComponent className={"d-block d-lg-none mt-5"}/>
             </div>

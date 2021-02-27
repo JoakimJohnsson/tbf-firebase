@@ -1,12 +1,12 @@
 import React from 'react';
 import Artist from "../lists/ArtistItem";
-import {FetchSongFromId} from "../../api-functions/songs-api";
+import {FetchSongFromId} from "../../api-functions/tracks-api";
 import {LoadingComponent} from "../MicroComponents/MicroComponents";
 import {FetchRecordFromId} from "../../api-functions/records-api";
 import imgUnavailable from "../../images/image_unavailable.png";
 import {Link} from "react-router-dom";
 
-const SongCard = ({id, url, recordId, reverse, linked}) => {
+const TrackCard = ({id, url, recordId, reverse, linked}) => {
 
     const song = FetchSongFromId(id);
     const coverUrl = FetchRecordFromId(recordId).coverUrl;
@@ -50,4 +50,4 @@ const SongCard = ({id, url, recordId, reverse, linked}) => {
         <LoadingComponent />
 };
 
-export default SongCard;
+export default TrackCard;

@@ -2,7 +2,7 @@ import React from "react";
 import {FetchSongsByRecord} from "../../api-functions/tracks-api";
 import TrackCard from "../cards/TrackCard";
 import {LoadingStandard} from "../MicroComponents/MicroComponents";
-import Track, {TracksPlayerListItem} from "./TrackItem";
+import Track, {TracksPlayerListItem} from "../api-components/TrackComponents";
 
 const TracksByRecordList = ({recordId}) => {
     const songs = FetchSongsByRecord(recordId);

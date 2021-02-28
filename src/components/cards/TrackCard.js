@@ -1,5 +1,5 @@
 import React from 'react';
-import Artist from "../lists/ArtistItem";
+import Artist from "../api-components/ArtistComponents";
 import {FetchSongFromId} from "../../api-functions/tracks-api";
 import {LoadingLazyBackground} from "../MicroComponents/MicroComponents";
 import {FetchRecordFromId} from "../../api-functions/records-api";

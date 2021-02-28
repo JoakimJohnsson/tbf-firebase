@@ -1,5 +1,5 @@
 import React from 'react';
-import {ArtistLinkAndTrackName} from "../lists/ArtistItem";
+import {ArtistLinkAndTrackName} from "../api-components/ArtistComponents";
 import {FetchSongFromId} from "../../api-functions/tracks-api";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 

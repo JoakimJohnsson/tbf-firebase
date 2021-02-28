@@ -1,6 +1,6 @@
 import React from "react";
 import FetchMembersByArtist from "../../api-functions/members-api";
-import Person from "./PersonItem";
+import Person from "../api-components/PersonComponents";
 import {LoadingStandard} from "../MicroComponents/MicroComponents";
 
 const MembersByArtistList = ({artistId}) => {

@@ -7,7 +7,7 @@ import {
 import {FetchRecordFromId} from "../api-functions/records-api";
 import {SongsByRecordListSimple, TracksByRecordWithPlayer} from "../components/lists/TracksByRecordList";
 import imgUnavailable from "../images/image_unavailable.png";
-import {ArtistLink} from "../components/lists/ArtistItem";
+import {ArtistLink} from "../components/api-components/ArtistComponents";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {Collapse} from "react-bootstrap";
 import DefaultArtistDescription from "../components/defaultDescriptions/DefaultArtistDescription";

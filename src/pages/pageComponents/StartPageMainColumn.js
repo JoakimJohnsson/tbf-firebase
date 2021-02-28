@@ -1,6 +1,6 @@
 import React from "react";
 import {CopyrightInformation} from "../../components/MicroComponents/MicroComponents";
-import {ArtistLink} from "../../components/lists/ArtistItem";
+import {ArtistLink} from "../../components/api-components/ArtistComponents";
 import AllArtistsListPaginated from "../../components/lists/AllArtistsListPaginated";
 import IconLink from "../../components/links/IconNavLink";
 import * as ROUTES from "../../constants/routes";

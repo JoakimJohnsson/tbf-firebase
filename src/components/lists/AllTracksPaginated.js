@@ -3,7 +3,7 @@ import {LoadingLazyBackground} from "../MicroComponents/MicroComponents";
 import usePagination from "firestore-pagination-hook";
 import firebase from "firebase";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {TracksPlayerListItemWithImage} from "./TrackItem";
+import {TracksPlayerListItemWithImage} from "../api-components/TrackComponents";
 import TrackPlayer from "../cards/TrackPlayer";
 
 const AllTracksPaginated = () => {

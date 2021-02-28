@@ -1,7 +1,7 @@
 import React from "react";
 import {Link} from "react-router-dom";
 import imgUnavailable from "../../images/image_unavailable.png";
-import Artist, {ArtistLink} from "../lists/ArtistItem";
+import Artist, {ArtistLink} from "../api-components/ArtistComponents";
 import * as COLUMNS from "../../constants/cols";
 import TracksByRecordList from "../lists/TracksByRecordList";
 import {FormatInformation} from "../MicroComponents/MicroComponents";

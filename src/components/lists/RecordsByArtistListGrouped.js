@@ -3,7 +3,7 @@ import {LoadingStandard} from "../MicroComponents/MicroComponents";
 import {FetchRecordsByArtist} from "../../api-functions/records-api";
 import RecordCard from "../cards/RecordCard";
 import * as COLUMNS from "../../constants/cols";
-import {ArtistLink} from "./ArtistItem";
+import {ArtistLink} from "../api-components/ArtistComponents";
 
 const RecordsByArtistListGrouped = ({id}) => {
     const records = FetchRecordsByArtist(id);

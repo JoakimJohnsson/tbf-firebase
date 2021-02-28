@@ -1,6 +1,6 @@
 import React from 'react';
-import AllArtists from "../components/lists/AllArtists";
-import {CopyrightInformation} from "../components/MicroComponents/MicroComponents";
+import AllArtists from "../lists/AllArtists";
+import {CopyrightInformation} from "../MicroComponents/MicroComponents";
 
 const ArtistsPage = () => (
     <div className="row no-gutters">

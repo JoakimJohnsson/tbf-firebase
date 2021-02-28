@@ -1,10 +1,10 @@
 import React from 'react';
-import firebase from '../components/Firebase/firebase';
-import {LoadingStandard} from "../components/MicroComponents/MicroComponents";
-import {FetchLastUpdatedArtistTimestamp, FetchLastUpdatedArtistId, FetchCounters} from "../api-functions/artists-api";
-import {FetchLastAddedRecordArtistId, FetchLastAddedRecordId, FetchLastAddedRecordTimestamp} from "../api-functions/records-api";
-import StartPageSecondaryColumn from "../components/pageComponents/StartPageSecondaryColumn";
-import StartPageMainColumn from "../components/pageComponents/StartPageMainColumn";
+import firebase from '../Firebase/firebase';
+import {LoadingStandard} from "../MicroComponents/MicroComponents";
+import {FetchLastUpdatedArtistTimestamp, FetchLastUpdatedArtistId, FetchCounters} from "../../api-functions/artists-api";
+import {FetchLastAddedRecordArtistId, FetchLastAddedRecordId, FetchLastAddedRecordTimestamp} from "../../api-functions/records-api";
+import StartPageSecondaryColumn from "./pagesComponents/StartPageSecondaryColumn";
+import StartPageMainColumn from "./pagesComponents/StartPageMainColumn";
 
 console.log("-- WE HAVE FIREBASE " + firebase.app.name + " --");
 

@@ -1,12 +1,12 @@
 import React from 'react';
-import MembersByArtist from "../components/lists/MembersByArtist";
-import {CopyrightInformation} from "../components/MicroComponents/MicroComponents";
-import {FetchArtistFromId} from "../api-functions/artists-api";
-import RecordsByArtist from "../components/lists/RecordsByArtist";
-import * as STRINGS from "../constants/strings"
-import imgUnavailable from "../images/image_unavailable.png";
+import MembersByArtist from "../lists/MembersByArtist";
+import {CopyrightInformation} from "../MicroComponents/MicroComponents";
+import {FetchArtistFromId} from "../../api-functions/artists-api";
+import RecordsByArtist from "../lists/RecordsByArtist";
+import * as STRINGS from "../../constants/strings"
+import imgUnavailable from "../../images/image_unavailable.png";
 import firebase from "firebase";
-import TracksByArtist from "../components/lists/TracksByArtist";
+import TracksByArtist from "../lists/TracksByArtist";
 
 const ArtistPage = ({match}) => {
     const {params: {id}} = match;

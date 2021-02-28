@@ -3,15 +3,15 @@ import {
     CopyrightInformation,
     FormatInformation,
     LoadingStandard
-} from "../components/MicroComponents/MicroComponents";
-import {FetchRecordFromId} from "../api-functions/records-api";
-import {SongsByRecordListSimple, TracksByRecordWithPlayer} from "../components/lists/TracksByRecord";
-import imgUnavailable from "../images/image_unavailable.png";
-import {ArtistLink} from "../components/apiComponents/ArtistComponents";
+} from "../MicroComponents/MicroComponents";
+import {FetchRecordFromId} from "../../api-functions/records-api";
+import {SongsByRecordListSimple, TracksByRecordWithPlayer} from "../lists/TracksByRecord";
+import imgUnavailable from "../../images/image_unavailable.png";
+import {ArtistLink} from "../apiComponents/ArtistComponents";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {Collapse} from "react-bootstrap";
-import DefaultArtistDescription from "../components/DefaultDescriptions/DefaultDescriptions";
-import TrackPlayer from "../components/cards/TrackPlayer";
+import DefaultArtistDescription from "../DefaultDescriptions/DefaultDescriptions";
+import TrackPlayer from "../cards/TrackPlayer";
 
 const RecordPage = ({match}) => {
     const {params: {id}} = match;

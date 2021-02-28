@@ -5,7 +5,7 @@ import firebase from "firebase";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import RecordCard from "../cards/RecordCard";
 
-const AllRecordsListPaginated = ({fullWidth}) => {
+const AllRecordsPaginated = ({fullWidth}) => {
 
     const {
         loadingMore,
@@ -39,4 +39,4 @@ const AllRecordsListPaginated = ({fullWidth}) => {
         : (<LoadingLazyBackground />)
 };
 
-export default AllRecordsListPaginated;
+export default AllRecordsPaginated;

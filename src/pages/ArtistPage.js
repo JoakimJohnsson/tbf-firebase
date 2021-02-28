@@ -1,12 +1,12 @@
 import React from 'react';
-import MembersByArtistList from "../components/lists/MembersByArtistList";
+import MembersByArtist from "../components/lists/MembersByArtist";
 import {CopyrightInformation} from "../components/MicroComponents/MicroComponents";
 import {FetchArtistFromId} from "../api-functions/artists-api";
-import RecordsByArtistList from "../components/lists/RecordsByArtistList";
+import RecordsByArtist from "../components/lists/RecordsByArtist";
 import * as STRINGS from "../constants/strings"
 import imgUnavailable from "../images/image_unavailable.png";
 import firebase from "firebase";
-import TracksByArtistList from "../components/lists/TracksByArtistList";
+import TracksByArtist from "../components/lists/TracksByArtist";
 
 const ArtistPage = ({match}) => {
     const {params: {id}} = match;
@@ -41,17 +41,17 @@ const ArtistPage = ({match}) => {
                                 : STRINGS.DEFAULT_ARTIST_DESCRIPTION}
                     </p>
                     <h2>Members</h2>
-                    <MembersByArtistList artistId={id}/>
+                    <MembersByArtist artistId={id}/>
                     <CopyrightInformation className={"d-none d-lg-block"}/>
                 </div>
             </div>
             <div className="standard-main-column">
                 <div className="standard-main-column__section">
                     <h2 className="section-header">Records</h2>
-                    <RecordsByArtistList artistId={id}/>
+                    <RecordsByArtist artistId={id}/>
 
                     <h2 className="section-header">Tracks</h2>
-                    <TracksByArtistList artistId={id}/>
+                    <TracksByArtist artistId={id}/>
                 </div>
                 <CopyrightInformation className={"d-block d-lg-none mt-5"}/>
             </div>

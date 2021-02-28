@@ -1,6 +1,6 @@
 import React from 'react';
 import {ArtistLinkAndTrackName} from "../api-components/ArtistComponents";
-import {FetchSongFromId} from "../../api-functions/tracks-api";
+import {FetchTrackFromId} from "../../api-functions/tracks-api";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
 const TrackPlayer = ({id, destroyCurrentTrack}) => {
@@ -17,7 +17,7 @@ const TrackPlayer = ({id, destroyCurrentTrack}) => {
 };
 
 const TrackPlayerContent = ({id, destroyTrack}) => {
-    const song = FetchSongFromId(id);
+    const song = FetchTrackFromId(id);
     return song.artistId ? (
             <>
                 <div className="song-card-dynamic">

@@ -1,6 +1,6 @@
 import React from 'react';
 import {CopyrightInformation} from "../components/MicroComponents/MicroComponents";
-import AllRecordsByArtistList from "../components/lists/AllRecordsByArtistList";
+import AllRecordsByArtist from "../components/lists/AllRecordsByArtist";
 
 const RecordsPage = () => (
     <div className="row no-gutters">
@@ -8,7 +8,7 @@ const RecordsPage = () => (
             <h1 className="mb-3">Records</h1>
         </div>
         <div className="col-12 mb-4">
-            <AllRecordsByArtistList fullWidth/>
+            <AllRecordsByArtist fullWidth/>
         </div>
         <div className="col-12">
             <CopyrightInformation/>

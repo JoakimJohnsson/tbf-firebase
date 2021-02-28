@@ -3,7 +3,7 @@ import {Link} from "react-router-dom";
 import imgUnavailable from "../../images/image_unavailable.png";
 import Artist, {ArtistLink} from "../api-components/ArtistComponents";
 import * as COLUMNS from "../../constants/cols";
-import TracksByRecordList from "../lists/TracksByRecordList";
+import TracksByRecord from "../lists/TracksByRecord";
 import {FormatInformation} from "../MicroComponents/MicroComponents";
 import {FetchRecordFromId} from "../../api-functions/records-api";
 
@@ -42,7 +42,7 @@ const RecordCardWithSongs = ({id, name, artistId}) => {
         <div className="record-card-with-songs col-12">
             <h2 className={`section-header logo-font-family__${rand.toString()}`}><div className={`d-inline text-color-variant__${rand2.toString()}`}><ArtistLink id={artistId}/></div></h2>
             <p>{name}</p>
-            <TracksByRecordList recordId={id}/>
+            <TracksByRecord recordId={id}/>
         </div>
     )
 };

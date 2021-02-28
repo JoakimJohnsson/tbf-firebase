@@ -5,12 +5,12 @@ import {
     LoadingStandard
 } from "../components/MicroComponents/MicroComponents";
 import {FetchRecordFromId} from "../api-functions/records-api";
-import {SongsByRecordListSimple, TracksByRecordWithPlayer} from "../components/lists/TracksByRecordList";
+import {SongsByRecordListSimple, TracksByRecordWithPlayer} from "../components/lists/TracksByRecord";
 import imgUnavailable from "../images/image_unavailable.png";
 import {ArtistLink} from "../components/api-components/ArtistComponents";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {Collapse} from "react-bootstrap";
-import DefaultArtistDescription from "../components/defaultDescriptions/DefaultArtistDescription";
+import DefaultArtistDescription from "../components/DefaultDescriptions/DefaultDescriptions";
 import TrackPlayer from "../components/cards/TrackPlayer";
 
 const RecordPage = ({match}) => {

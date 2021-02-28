@@ -1,11 +1,11 @@
 import React, {useState} from "react";
-import {FetchSongFromId} from "../../api-functions/tracks-api";
+import {FetchTrackFromId} from "../../api-functions/tracks-api";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {FetchRecordFromId} from "../../api-functions/records-api";
 import imgUnavailable from "../../images/image_unavailable.png";
 
 const Track = ({id}) => {
-    const song = FetchSongFromId(id);
+    const song = FetchTrackFromId(id);
     return (
         <div className="song-item mb-1">
             <span className="text-capitalize">{song.name}</span>
@@ -14,7 +14,7 @@ const Track = ({id}) => {
 };
 
 const TracksPlayerListItem = ({id, setCurrentTrack, currentTrack}) => {
-    const song = FetchSongFromId(id);
+    const song = FetchTrackFromId(id);
     const [activeSongId, setActiveSongId] = useState("");
 
     return (
@@ -45,7 +45,7 @@ const TracksPlayerListItem = ({id, setCurrentTrack, currentTrack}) => {
 };
 
 const TracksPlayerListItemWithImage = ({id, setCurrentTrack, currentTrack}) => {
-    const track = FetchSongFromId(id);
+    const track = FetchTrackFromId(id);
     const [activeSongId, setActiveSongId] = useState("");
 
     return (

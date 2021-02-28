@@ -1,11 +1,11 @@
 import React from "react";
-import {FetchSongsByRecord} from "../../api-functions/tracks-api";
+import {FetchTracksByRecord} from "../../api-functions/tracks-api";
 import TrackCard from "../cards/TrackCard";
 import {LoadingStandard} from "../MicroComponents/MicroComponents";
 import Track, {TracksPlayerListItem} from "../api-components/TrackComponents";
 
-const TracksByRecordList = ({recordId}) => {
-    const songs = FetchSongsByRecord(recordId);
+const TracksByRecord = ({recordId}) => {
+    const songs = FetchTracksByRecord(recordId);
     return (
         <div className="row">
             {songs.map((song) =>
@@ -16,7 +16,7 @@ const TracksByRecordList = ({recordId}) => {
 };
 
 const SongsByRecordListSimple = ({recordId}) => {
-    const songs = FetchSongsByRecord(recordId);
+    const songs = FetchTracksByRecord(recordId);
     return songs.length
         ? (
             <ol className="list-group mb-3 mb-sm-0 mb-lg-3">
@@ -30,7 +30,7 @@ const SongsByRecordListSimple = ({recordId}) => {
 };
 
 const TracksByRecordWithPlayer = ({recordId, currentTrack, setCurrentTrackOnClick}) => {
-    const songs = FetchSongsByRecord(recordId);
+    const songs = FetchTracksByRecord(recordId);
     return songs.length
         ? (
             <ul className="tracks-player__list mb-3 mb-sm-0 mb-lg-3">
@@ -41,5 +41,5 @@ const TracksByRecordWithPlayer = ({recordId, currentTrack, setCurrentTrackOnClic
         : (<LoadingStandard text="No tracks available at this time." icon="spinner" spinning={true}/>)
 };
 
-export default TracksByRecordList;
+export default TracksByRecord;
 export {SongsByRecordListSimple, TracksByRecordWithPlayer};

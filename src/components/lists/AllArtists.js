@@ -3,7 +3,7 @@ import FetchAllArtists from "../../api-functions/artists-api";
 import ArtistCard from "../cards/ArtistCard";
 import {LoadingStandard} from "../MicroComponents/MicroComponents";
 
-const AllArtistsList = () => {
+const AllArtists = () => {
     const artists = FetchAllArtists();
     return artists.length ?
         (<div className="row">
@@ -16,4 +16,4 @@ const AllArtistsList = () => {
         (<LoadingStandard spinning={true}/>)
 };
 
-export default AllArtistsList;
+export default AllArtists;

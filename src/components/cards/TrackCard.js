@@ -1,6 +1,6 @@
 import React from 'react';
 import Artist from "../api-components/ArtistComponents";
-import {FetchSongFromId} from "../../api-functions/tracks-api";
+import {FetchTrackFromId} from "../../api-functions/tracks-api";
 import {LoadingLazyBackground} from "../MicroComponents/MicroComponents";
 import {FetchRecordFromId} from "../../api-functions/records-api";
 import imgUnavailable from "../../images/image_unavailable.png";
@@ -8,7 +8,7 @@ import {Link} from "react-router-dom";
 
 const TrackCard = ({id, url, recordId, reverse, linked}) => {
 
-    const song = FetchSongFromId(id);
+    const song = FetchTrackFromId(id);
     const coverUrl = FetchRecordFromId(recordId).coverUrl;
     let rand = Math.floor(Math.random() * 8) + 1;
     return song.artistId ? (

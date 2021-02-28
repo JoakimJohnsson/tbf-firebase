@@ -1,5 +1,5 @@
 import React from "react";
-import {CopyrightInformation} from "../../components/MicroComponents/MicroComponents";
+import {CopyrightInformation} from "../MicroComponents/MicroComponents";
 
 const StartPageSecondaryColumn = () => {
     return (

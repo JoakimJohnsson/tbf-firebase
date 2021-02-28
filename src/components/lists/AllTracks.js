@@ -1,12 +1,12 @@
 import React from "react";
-import FetchAllSongs from "../../api-functions/tracks-api";
+import FetchAllTracks from "../../api-functions/tracks-api";
 import {LoadingLazyBackground, LoadingStandard} from "../MicroComponents/MicroComponents";
 import TrackCard from "../cards/TrackCard";
 import FetchAllRecords from "../../api-functions/records-api";
 import {RecordCardWithSongs} from "../cards/RecordCard";
 
-const AllSongsList = () => {
-    const songs = FetchAllSongs();
+const AllTracks = () => {
+    const songs = FetchAllTracks();
     return songs.length ?
         (<div className="row">
             {songs.map((song) =>
@@ -31,5 +31,5 @@ const AllSongsListByRecord = () => {
         (<LoadingStandard spinning={true} />)
 };
 
-export default AllSongsList;
+export default AllTracks;
 export {AllSongsListByRecord};

@@ -1,25 +1,25 @@
 import {useEffect, useState} from "react";
 import firebase from "firebase";
 
-function FetchAllSongs() {
-    const [songs, setSongs] = useState([]);
+function FetchAllTracks() {
+    const [tracks, setTracks] = useState([]);
     useEffect(() => {
         firebase
             .firestore()
             .collection('songs')
             .onSnapshot((snapshot) => {
-                const newSongs = snapshot.docs.map((doc) => ({
+                const newTracks = snapshot.docs.map((doc) => ({
                     id: doc.id,
                     ...doc.data()
                 }));
-                setSongs(newSongs)
+                setTracks(newTracks)
             })
     }, []);
-    return songs;
+    return tracks;
 }
 
-function FetchSongsByRecord(record) {
-    const [songs, setSongs] = useState([]);
+function FetchTracksByRecord(record) {
+    const [tracks, setTracks] = useState([]);
     useEffect(() => {
         firebase
             .firestore()
@@ -27,47 +27,47 @@ function FetchSongsByRecord(record) {
             .doc(record).collection('songs')
             .orderBy("index", "asc")
             .onSnapshot((snapshot) => {
-                const newSongs = snapshot.docs.map((doc) => ({
+                const newTracks = snapshot.docs.map((doc) => ({
                     id: doc.id,
                     ...doc.data()
                 }));
-                setSongs(newSongs)
+                setTracks(newTracks)
             })
     }, [record]);
-    return songs;
+    return tracks;
 }
 
-function FetchSongsByArtist(artistId) {
-    const [songs, setSongs] = useState([]);
+function FetchTracksByArtist(artistId) {
+    const [tracks, setTracks] = useState([]);
     useEffect(() => {
         firebase
             .firestore()
             .collection('songs')
             .where("artistId", "==", artistId )
             .onSnapshot((snapshot) => {
-                const newSongs = snapshot.docs.map((doc) => ({
+                const newTracks = snapshot.docs.map((doc) => ({
                     id: doc.id,
                     ...doc.data()
                 }));
-                setSongs(newSongs)
+                setTracks(newTracks)
             })
     }, [artistId]);
-    return songs;
+    return tracks;
 }
 
-function FetchSongFromId(id) {
-    const [song, setSong] = useState([]);
+function FetchTrackFromId(id) {
+    const [track, setTrack] = useState([]);
     useEffect(() => {
         firebase
             .firestore()
             .collection('songs')
             .doc(id)
             .get().then(function(doc) {
-            setSong(doc.data());
+            setTrack(doc.data());
         });
     }, [id]);
-    return song;
+    return track;
 }
 
-export default FetchAllSongs;
-export {FetchSongsByRecord, FetchSongFromId, FetchSongsByArtist};
+export default FetchAllTracks;
+export {FetchTracksByRecord, FetchTrackFromId, FetchTracksByArtist};

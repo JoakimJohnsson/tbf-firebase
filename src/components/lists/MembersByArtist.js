@@ -3,7 +3,7 @@ import FetchMembersByArtist from "../../api-functions/members-api";
 import Person from "../api-components/PersonComponents";
 import {LoadingStandard} from "../MicroComponents/MicroComponents";
 
-const MembersByArtistList = ({artistId}) => {
+const MembersByArtist = ({artistId}) => {
     const members = FetchMembersByArtist(artistId);
     return members.length ?
         (<ul className="list-unstyled">
@@ -17,4 +17,4 @@ const MembersByArtistList = ({artistId}) => {
         (<LoadingStandard text="No members available at this time." icon="users-slash" spinning={false}/>)
 };
 
-export default MembersByArtistList;
+export default MembersByArtist;

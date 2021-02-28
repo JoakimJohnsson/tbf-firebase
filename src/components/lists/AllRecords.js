@@ -3,7 +3,7 @@ import FetchAllRecords from "../../api-functions/records-api";
 import {LoadingLazyBackground} from "../MicroComponents/MicroComponents";
 import RecordCard from "../cards/RecordCard";
 
-const AllRecordsList = ({fullWidth}) => {
+const AllRecords = ({fullWidth}) => {
 
     const records = FetchAllRecords();
     return records.length ?
@@ -16,4 +16,4 @@ const AllRecordsList = ({fullWidth}) => {
         (<LoadingLazyBackground />)
 };
 
-export default AllRecordsList;
+export default AllRecords;

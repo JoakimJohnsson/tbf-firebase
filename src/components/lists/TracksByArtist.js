@@ -1,10 +1,10 @@
 import React from "react";
-import {FetchSongsByArtist} from "../../api-functions/tracks-api";
+import {FetchTracksByArtist} from "../../api-functions/tracks-api";
 import TrackCard from "../cards/TrackCard";
 import {LoadingStandard} from "../MicroComponents/MicroComponents";
 
-const TracksByArtistList = ({artistId}) => {
-    const songs = FetchSongsByArtist(artistId);
+const TracksByArtist = ({artistId}) => {
+    const songs = FetchTracksByArtist(artistId);
 
     return songs.length ?
         (<div className="row">
@@ -16,4 +16,4 @@ const TracksByArtistList = ({artistId}) => {
         (<LoadingStandard spinning={true} text={"No tracks available"} />)
 };
 
-export default TracksByArtistList;
+export default TracksByArtist;

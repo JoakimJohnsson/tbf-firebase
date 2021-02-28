@@ -1,5 +1,5 @@
 import React from 'react';
-import AllArtistsList from "../components/lists/AllArtistsList";
+import AllArtists from "../components/lists/AllArtists";
 import {CopyrightInformation} from "../components/MicroComponents/MicroComponents";
 
 const ArtistsPage = () => (
@@ -8,7 +8,7 @@ const ArtistsPage = () => (
             <h1 className="mb-0 mb-sm-3">Artists</h1>
         </div>
         <div className="col-12 mb-4">
-            <AllArtistsList/>
+            <AllArtists/>
         </div>
         <div className="col-12">
             <CopyrightInformation/>

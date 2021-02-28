@@ -1,12 +1,12 @@
 import React from "react";
-import {CopyrightInformation} from "../../components/MicroComponents/MicroComponents";
-import {ArtistLink} from "../../components/api-components/ArtistComponents";
-import AllArtistsListPaginated from "../../components/lists/AllArtistsListPaginated";
-import IconLink from "../../components/links/IconNavLink";
+import {CopyrightInformation} from "../MicroComponents/MicroComponents";
+import {ArtistLink} from "../api-components/ArtistComponents";
+import AllArtistsPaginated from "../lists/AllArtistsPaginated";
+import IconLink from "../links/IconNavLink";
 import * as ROUTES from "../../constants/routes";
-import {RecordLink} from "../../components/cards/RecordCard";
-import AllRecordsListPaginated from "../../components/lists/AllRecordsListPaginated";
-import AllTracksPaginated from "../../components/lists/AllTracksPaginated";
+import {RecordLink} from "../cards/RecordCard";
+import AllRecordsPaginated from "../lists/AllRecordsPaginated";
+import AllTracksPaginated from "../lists/AllTracksPaginated";
 
 const StartPageMainColumn = ({
                                  lastUpdatedArtistId,
@@ -24,7 +24,7 @@ const StartPageMainColumn = ({
                     Last updated artist:
                     <ArtistLink id={lastUpdatedArtistId}/> ({lastUpdatedArtistDate.toLocaleDateString()}).
                 </p>
-                <AllArtistsListPaginated/>
+                <AllArtistsPaginated/>
                 <IconLink className={"ml-3"} link={ROUTES.ARTISTS} text={"See all artists"} icon={"user-astronaut"}/>
             </div>
             <div className="standard-main-column__section">
@@ -35,7 +35,7 @@ const StartPageMainColumn = ({
                     <ArtistLink id={lastAddedRecordArtistId}/> ({lastAddedRecordDate.toLocaleDateString()}).
                     Total number of records: {counters.recordCounter}
                 </p>
-                <AllRecordsListPaginated fullWidth={false}/>
+                <AllRecordsPaginated fullWidth={false}/>
                 <IconLink className={"ml-3"} link={ROUTES.RECORDS} text={"See all records"} icon={"compact-disc"}/>
             </div>
             <div className="standard-main-column__section">

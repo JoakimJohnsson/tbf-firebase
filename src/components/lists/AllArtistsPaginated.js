@@ -5,7 +5,7 @@ import usePagination from "firestore-pagination-hook";
 import firebase from "firebase";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
-const AllArtistsListPaginated = () => {
+const AllArtistsPaginated = () => {
 
     const {
         loadingMore,
@@ -43,4 +43,4 @@ const AllArtistsListPaginated = () => {
         : (<LoadingStandard spinning={true} />)
 };
 
-export default AllArtistsListPaginated;
+export default AllArtistsPaginated;

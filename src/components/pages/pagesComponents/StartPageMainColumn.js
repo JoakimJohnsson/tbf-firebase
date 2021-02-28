@@ -49,4 +49,4 @@ const StartPageMainColumn = ({
     )
 }
 
-export default StartPageMainColumn
+export default StartPageMainColumn;

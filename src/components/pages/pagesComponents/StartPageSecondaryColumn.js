@@ -20,4 +20,4 @@ const StartPageSecondaryColumn = () => {
     )
 }
 
-export default StartPageSecondaryColumn
+export default StartPageSecondaryColumn;

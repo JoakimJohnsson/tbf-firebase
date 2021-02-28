@@ -3,7 +3,7 @@ import {LoadingLazyBackground} from "../MicroComponents/MicroComponents";
 import usePagination from "firestore-pagination-hook";
 import firebase from "firebase";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {TracksPlayerListItemWithImage} from "../api-components/TrackComponents";
+import {TracksPlayerListItemWithImage} from "../apiComponents/TrackComponents";
 import TrackPlayer from "../cards/TrackPlayer";
 
 const AllTracksPaginated = () => {
@@ -28,8 +28,8 @@ const AllTracksPaginated = () => {
             limit: 4
         }
     );
-    return items.length
-        ? (<div className="row">
+    return items.length ?
+        (<div className="row">
                 <div className="col-12 p-3">
                     <ul className="tracks-player__list mb-3 mb-sm-0 mb-lg-3">
                     {items.map(item => (

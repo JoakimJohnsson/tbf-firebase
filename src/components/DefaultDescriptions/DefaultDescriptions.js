@@ -1,5 +1,5 @@
 import React from 'react';
-import {ArtistLink} from "../api-components/ArtistComponents";
+import {ArtistLink} from "../apiComponents/ArtistComponents";
 
 const DefaultRecordDescription = (props) => {
     return (

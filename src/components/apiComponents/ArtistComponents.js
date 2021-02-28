@@ -5,28 +5,22 @@ import {Link} from "react-router-dom";
 const Artist = (props) => {
     const artist = FetchArtistFromId(props.id);
 
-    return artist.name ? (
-        <>
-            {artist.name}
-        </>
-    ) :
-        (
-            <ArtistPlaceHolder/>
-        )
+    return artist.name ?
+        (<>{artist.name}</>)
+        :
+        (<ArtistPlaceHolder/>)
 };
 
 const ArtistLinkAndTrackName = (props) => {
     const artist = FetchArtistFromId(props.id);
-    return artist.name ? (
-            <>
-                <Link to={`/artist/${props.id}`}>
-                    <span className="text-uppercase">{artist.name}</span>
-                </Link> - {props.songName}
-            </>
-        ) :
-        (
-            <ArtistPlaceHolder/>
-        )
+    return artist.name ?
+        (<>
+            <Link to={`/artist/${props.id}`}>
+                <span className="text-uppercase">{artist.name}</span>
+            </Link> - {props.songName}
+        </>)
+        :
+        (<ArtistPlaceHolder/>)
 };
 
 const ArtistPlaceHolder = () => {
@@ -42,23 +36,22 @@ const ArtistPlaceHolder = () => {
     }
     return (
         <>
-            <>{firstName}</> <>{lastName}</>
+            <>{firstName}</>
+            <>{lastName}</>
         </>
     )
 };
 
 const ArtistLink = (props) => {
     const artist = FetchArtistFromId(props.id);
-    return artist.name ? (
-        <>
+    return artist.name ?
+        (<>
             <Link to={`/artist/${props.id}`}>
                 <span className="text-uppercase">{artist.name}</span>
             </Link>
-        </>
-    ) :
-        (
-            <ArtistPlaceHolder/>
-        )
+        </>)
+        :
+        (<ArtistPlaceHolder/>)
 };
 
 export {ArtistLink, ArtistLinkAndTrackName};

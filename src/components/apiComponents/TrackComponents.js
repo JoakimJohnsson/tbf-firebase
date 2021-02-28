@@ -19,7 +19,6 @@ const TracksPlayerListItem = ({id, setCurrentTrack, currentTrack}) => {
 
     return (
         <li className={activeSongId === currentTrack ? "tracks-player_li active" : "tracks-player_li"}>
-
             <p className="tracks-player__text pl-2 mr-3 mb-0 flex-grow-1" onClick={() => {
                 setCurrentTrack(id)
                 setActiveSongId(id)
@@ -39,7 +38,6 @@ const TracksPlayerListItem = ({id, setCurrentTrack, currentTrack}) => {
                     <FontAwesomeIcon icon={"arrow-alt-circle-down"}/>
                 </a>
             </div>
-
         </li>
     )
 };
@@ -82,9 +80,8 @@ const TracksPlayerImage = ({track}) => {
     if (track.recordId) {
         coverUrl = FetchRecordFromId(track.recordId).coverUrl;
     }
-    return coverUrl !== "" ? (
-            <img className="tracks-player__image mr-2" alt={`Cover for ${track.name}`} src={coverUrl || imgUnavailable}/>
-        )
+    return coverUrl !== "" ?
+        <img className="tracks-player__image mr-2" alt={`Cover for ${track.name}`} src={coverUrl || imgUnavailable}/>
         :
         <img className="tracks-player__image mr-2" alt={`Cover for ${track.name}`} src={imgUnavailable}/>
 }

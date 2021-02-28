@@ -9,7 +9,7 @@ import {
     faMinus, faChevronLeft, faChevronRight, faChevronDown, faChevronUp, faSpinner, faSave, faAngleDoubleDown, faCompactDisc, faUsersSlash, faRobot, faVrCardboard
 } from '@fortawesome/free-solid-svg-icons';
 import Navigation from '../Navigation/Navigation';
-import Footer from "../Footer/footer";
+import Footer from "../Footer/Footer";
 import StartPage from '../../pages/StartPage';
 import ArtistsPage from "../../pages/ArtistsPage";
 import ArtistPage from "../../pages/ArtistPage";

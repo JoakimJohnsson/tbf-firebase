@@ -34,11 +34,13 @@ const ArtistPage = ({match}) => {
                     <h2>Description</h2>
                     <p>
                         <span className="text-capitalize">{artist.name} </span>
-                        {artist.description !== ""
-                            ? artist.description
-                            : artist.imgUrl === ""
-                                ? STRINGS.DEFAULT_ARTIST_DESCRIPTION_MISSING_IMAGE
-                                : STRINGS.DEFAULT_ARTIST_DESCRIPTION}
+                        {artist.description !== "" ?
+                            artist.description
+                            :
+                            artist.imgUrl === "" ?
+                                STRINGS.DEFAULT_ARTIST_DESCRIPTION_MISSING_IMAGE
+                                :
+                                STRINGS.DEFAULT_ARTIST_DESCRIPTION}
                     </p>
                     <h2>Members</h2>
                     <MembersByArtist artistId={id}/>

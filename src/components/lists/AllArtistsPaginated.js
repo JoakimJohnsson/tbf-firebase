@@ -21,8 +21,8 @@ const AllArtistsPaginated = () => {
             limit: 6
         }
     );
-    return items.length
-        ? (<div className="row">
+    return items.length ?
+        (<div className="row">
             {items.map(item => (
                 <ArtistCard route="artist"
                             id={item.id}
@@ -40,7 +40,8 @@ const AllArtistsPaginated = () => {
                 </div>
             }
         </div>)
-        : (<LoadingStandard spinning={true} />)
+        :
+        (<LoadingStandard spinning={true}/>)
 };
 
 export default AllArtistsPaginated;

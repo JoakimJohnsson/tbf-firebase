@@ -1,6 +1,6 @@
 import React from 'react';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import {formatInformationRenderIcon, formatInformationRenderText} from "./MicroComponentsHelper";
+import {formatInformationRenderIcon, formatInformationRenderText} from "./microComponentsHelper";
 
 const Debugger = ({logThis}) => {
     console.log("LOG THIS: " + logThis)
@@ -43,7 +43,12 @@ const CopyrightInformation = (props) => (
 );
 
 const FormatInformation = ({format, text}) => (
-    <span className="text-capitalize"><FontAwesomeIcon icon={formatInformationRenderIcon(format)} className={"mr-1"}/> {text ? formatInformationRenderText(format) : ""}</span>
+    <span className="text-capitalize"><FontAwesomeIcon icon={formatInformationRenderIcon(format)} className={"mr-1"}/>
+    {text ?
+        formatInformationRenderText(format)
+        :
+        ""}
+    </span>
 );
 
 export default Debugger;

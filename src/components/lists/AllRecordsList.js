@@ -1,6 +1,6 @@
 import React from "react";
 import FetchAllRecords from "../../api-functions/records-api";
-import {LoadingComponent} from "../MicroComponents/MicroComponents";
+import {LoadingLazyBackground} from "../MicroComponents/MicroComponents";
 import RecordCard from "../cards/RecordCard";
 
 const AllRecordsList = ({fullWidth}) => {
@@ -13,7 +13,7 @@ const AllRecordsList = ({fullWidth}) => {
             )}
         </div>)
         :
-        (<LoadingComponent />)
+        (<LoadingLazyBackground />)
 };
 
 export default AllRecordsList;

@@ -1,5 +1,5 @@
 import React from "react";
-import {CopyrightInfoComponent} from "../../components/MicroComponents/MicroComponents";
+import {CopyrightInformation} from "../../components/MicroComponents/MicroComponents";
 import {ArtistLink} from "../../components/lists/ArtistItem";
 import AllArtistsListPaginated from "../../components/lists/AllArtistsListPaginated";
 import IconLink from "../../components/links/IconNavLink";
@@ -44,7 +44,7 @@ const StartPageMainColumn = ({
                 <AllTracksPaginated/>
                 <IconLink className={"ml-3"} link={ROUTES.TRACKS} text={"See all tracks"} icon={"music"}/>
             </div>
-            <CopyrightInfoComponent className={"d-block d-lg-none"}/>
+            <CopyrightInformation className={"d-block d-lg-none"}/>
         </div>
     )
 }

@@ -1,5 +1,5 @@
 import React from "react";
-import {LoadingComponentStandard} from "../MicroComponents/MicroComponents";
+import {LoadingStandard} from "../MicroComponents/MicroComponents";
 import {FetchAllArtistsWithRecords} from "../../api-functions/artists-api";
 import RecordsByArtistListGrouped from "./RecordsByArtistListGrouped";
 
@@ -14,7 +14,7 @@ const AllRecordsByArtistList = () => {
             )}
         </>)
         :
-        (<LoadingComponentStandard spinning={true} />)
+        (<LoadingStandard spinning={true} />)
 };
 
 export default AllRecordsByArtistList;

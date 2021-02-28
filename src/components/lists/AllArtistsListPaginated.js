@@ -1,6 +1,6 @@
 import React from 'react';
 import ArtistCard from "../cards/ArtistCard";
-import {LoadingComponentStandard} from "../MicroComponents/MicroComponents";
+import {LoadingStandard} from "../MicroComponents/MicroComponents";
 import usePagination from "firestore-pagination-hook";
 import firebase from "firebase";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
@@ -40,7 +40,7 @@ const AllArtistsListPaginated = () => {
                 </div>
             }
         </div>)
-        : (<LoadingComponentStandard spinning={true} />)
+        : (<LoadingStandard spinning={true} />)
 };
 
 export default AllArtistsListPaginated;

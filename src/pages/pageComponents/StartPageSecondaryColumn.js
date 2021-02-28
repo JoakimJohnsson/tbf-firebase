@@ -1,5 +1,5 @@
 import React from "react";
-import {CopyrightInfoComponent} from "../../components/MicroComponents/MicroComponents";
+import {CopyrightInformation} from "../../components/MicroComponents/MicroComponents";
 
 const StartPageSecondaryColumn = () => {
     return (
@@ -14,7 +14,7 @@ const StartPageSecondaryColumn = () => {
                 <p><a href="https://thebaseballfield.se/old/">The old TBF/VVM site</a></p>
                 <h3>Video</h3>
                 <p>T.B.A</p>
-                <CopyrightInfoComponent className={"d-none d-lg-block"}/>
+                <CopyrightInformation className={"d-none d-lg-block"}/>
             </div>
         </div>
     )

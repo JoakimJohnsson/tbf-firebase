@@ -1,5 +1,5 @@
 import React from 'react';
-import {CopyrightInfoComponent} from "../components/MicroComponents/MicroComponents";
+import {CopyrightInformation} from "../components/MicroComponents/MicroComponents";
 import SongUploadForm from "../components/Forms/TrackUploadForm"
 import RecordUploadForm from "../components/Forms/RecordUploadForm";
 import LastUpdatedArtistForm from "../components/Forms/LastUpdatedArtistForm";
@@ -12,7 +12,7 @@ const UploadPage = () => {
             <div className="standard-secondary-column">
                 <div className="standard-box-wrapper__near-dark">
                     <h1>Upload</h1>
-                    <CopyrightInfoComponent className={"d-none d-lg-block"}/>
+                    <CopyrightInformation className={"d-none d-lg-block"}/>
                 </div>
             </div>
             <div className="standard-main-column">
@@ -27,7 +27,7 @@ const UploadPage = () => {
                     <LastUpdatedArtistForm/>
 
                 </div>
-                <CopyrightInfoComponent className={"d-block d-lg-none mt-5"}/>
+                <CopyrightInformation className={"d-block d-lg-none mt-5"}/>
             </div>
 
         </div>

@@ -1,5 +1,5 @@
 import React from "react";
-import {LoadingComponent} from "../MicroComponents/MicroComponents";
+import {LoadingLazyBackground} from "../MicroComponents/MicroComponents";
 import usePagination from "firestore-pagination-hook";
 import firebase from "firebase";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
@@ -36,7 +36,7 @@ const AllRecordsListPaginated = ({fullWidth}) => {
                     </div>
                 }
             </div>)
-        : (<LoadingComponent />)
+        : (<LoadingLazyBackground />)
 };
 
 export default AllRecordsListPaginated;

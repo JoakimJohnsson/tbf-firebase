@@ -1,6 +1,6 @@
 import React from "react";
 import FetchAllSongs from "../../api-functions/tracks-api";
-import {LoadingComponent, LoadingComponentStandard} from "../MicroComponents/MicroComponents";
+import {LoadingLazyBackground, LoadingStandard} from "../MicroComponents/MicroComponents";
 import TrackCard from "../cards/TrackCard";
 import FetchAllRecords from "../../api-functions/records-api";
 import {RecordCardWithSongs} from "../cards/RecordCard";
@@ -14,7 +14,7 @@ const AllSongsList = () => {
             )}
         </div>)
         :
-        (<LoadingComponent />)
+        (<LoadingLazyBackground />)
 };
 
 const AllSongsListByRecord = () => {
@@ -28,7 +28,7 @@ const AllSongsListByRecord = () => {
             )}
         </div>)
         :
-        (<LoadingComponentStandard spinning={true} />)
+        (<LoadingStandard spinning={true} />)
 };
 
 export default AllSongsList;

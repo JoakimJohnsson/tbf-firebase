@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import {LoadingComponent} from "../MicroComponents/MicroComponents";
+import {LoadingLazyBackground} from "../MicroComponents/MicroComponents";
 import usePagination from "firestore-pagination-hook";
 import firebase from "firebase";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
@@ -48,7 +48,7 @@ const AllTracksPaginated = () => {
                 </div>
             </div>
         )
-        : (<LoadingComponent/>)
+        : (<LoadingLazyBackground/>)
 };
 
 export default AllTracksPaginated;

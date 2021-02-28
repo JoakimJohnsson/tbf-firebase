@@ -1,7 +1,7 @@
 import React from 'react';
 import Artist from "../lists/ArtistItem";
 import {FetchSongFromId} from "../../api-functions/tracks-api";
-import {LoadingComponent} from "../MicroComponents/MicroComponents";
+import {LoadingLazyBackground} from "../MicroComponents/MicroComponents";
 import {FetchRecordFromId} from "../../api-functions/records-api";
 import imgUnavailable from "../../images/image_unavailable.png";
 import {Link} from "react-router-dom";
@@ -47,7 +47,7 @@ const TrackCard = ({id, url, recordId, reverse, linked}) => {
             </div>
         )
         :
-        <LoadingComponent />
+        <LoadingLazyBackground />
 };
 
 export default TrackCard;

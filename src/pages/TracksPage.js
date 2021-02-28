@@ -1,5 +1,5 @@
 import React from 'react';
-import {CopyrightInfoComponent} from "../components/MicroComponents/MicroComponents";
+import {CopyrightInformation} from "../components/MicroComponents/MicroComponents";
 import {AllSongsListByRecord} from "../components/lists/AllSongsList";
 
 const TracksPage = () => (
@@ -11,7 +11,7 @@ const TracksPage = () => (
             <AllSongsListByRecord/>
         </div>
         <div className="col-12">
-            <CopyrightInfoComponent/>
+            <CopyrightInformation/>
         </div>
     </div>
 );

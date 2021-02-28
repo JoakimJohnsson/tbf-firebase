@@ -1,6 +1,6 @@
 import React from 'react';
 import MembersByArtistList from "../components/lists/MembersByArtistList";
-import {CopyrightInfoComponent} from "../components/MicroComponents/MicroComponents";
+import {CopyrightInformation} from "../components/MicroComponents/MicroComponents";
 import {FetchArtistFromId} from "../api-functions/artists-api";
 import RecordsByArtistList from "../components/lists/RecordsByArtistList";
 import * as STRINGS from "../constants/strings"
@@ -42,7 +42,7 @@ const ArtistPage = ({match}) => {
                     </p>
                     <h2>Members</h2>
                     <MembersByArtistList artistId={id}/>
-                    <CopyrightInfoComponent className={"d-none d-lg-block"}/>
+                    <CopyrightInformation className={"d-none d-lg-block"}/>
                 </div>
             </div>
             <div className="standard-main-column">
@@ -53,7 +53,7 @@ const ArtistPage = ({match}) => {
                     <h2 className="section-header">Tracks</h2>
                     <TracksByArtistList artistId={id}/>
                 </div>
-                <CopyrightInfoComponent className={"d-block d-lg-none mt-5"}/>
+                <CopyrightInformation className={"d-block d-lg-none mt-5"}/>
             </div>
 
         </div>

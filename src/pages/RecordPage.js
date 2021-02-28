@@ -1,8 +1,8 @@
 import React, {useState} from 'react';
 import {
-    CopyrightInfoComponent,
-    FormatInfoComponent,
-    LoadingComponentStandard
+    CopyrightInformation,
+    FormatInformation,
+    LoadingStandard
 } from "../components/MicroComponents/MicroComponents";
 import {FetchRecordFromId} from "../api-functions/records-api";
 import {SongsByRecordListSimple, TracksByRecordWithPlayer} from "../components/lists/TracksByRecordList";
@@ -35,7 +35,7 @@ const RecordPage = ({match}) => {
                                 <h1 className="text-capitalize mb-0">{record.name}</h1>
                                 <p className="text-uppercase mb-0"><ArtistLink id={record.artistId}/></p>
                                 <p className="small m-0">{record.format ?
-                                    <FormatInfoComponent format={record.format} text/> : ""} {record.year ? `${record.year}` : ""}</p>
+                                    <FormatInformation format={record.format} text/> : ""} {record.year ? `${record.year}` : ""}</p>
                             </div>
                             <div className="d-flex align-items-center">
                                 <button onClick={() => setOpen(!open)} className="btn button__show-more d-flex align-items-center justify-content-center d-lg-none"
@@ -58,7 +58,7 @@ const RecordPage = ({match}) => {
                                 </p>
                                 <h2>Track list</h2>
                                 <SongsByRecordListSimple recordId={id}/>
-                                <CopyrightInfoComponent className={"d-none d-lg-block"}/>
+                                <CopyrightInformation className={"d-none d-lg-block"}/>
                             </div>
                         </Collapse>
 
@@ -71,12 +71,12 @@ const RecordPage = ({match}) => {
                         <TracksByRecordWithPlayer recordId={id} currentTrack={currentTrack} setCurrentTrackOnClick={setCurrentTrackOnClick} />
                         {currentTrack ? <TrackPlayer id={currentTrack} key={currentTrack} destroyCurrentTrack={destroyCurrentTrack}/> : false}
                     </div>
-                    <CopyrightInfoComponent className={"d-block d-lg-none mt-5"}/>
+                    <CopyrightInformation className={"d-block d-lg-none mt-5"}/>
                 </div>
 
             </div>
         )
         :
-        <LoadingComponentStandard spinning={true} />;
+        <LoadingStandard spinning={true} />;
 };
 export default RecordPage;

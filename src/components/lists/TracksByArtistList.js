@@ -1,7 +1,7 @@
 import React from "react";
 import {FetchSongsByArtist} from "../../api-functions/tracks-api";
 import TrackCard from "../cards/TrackCard";
-import {LoadingComponentStandard} from "../MicroComponents/MicroComponents";
+import {LoadingStandard} from "../MicroComponents/MicroComponents";
 
 const TracksByArtistList = ({artistId}) => {
     const songs = FetchSongsByArtist(artistId);
@@ -13,7 +13,7 @@ const TracksByArtistList = ({artistId}) => {
             )}
         </div>)
         :
-        (<LoadingComponentStandard spinning={true} text={"No tracks available"} />)
+        (<LoadingStandard spinning={true} text={"No tracks available"} />)
 };
 
 export default TracksByArtistList;

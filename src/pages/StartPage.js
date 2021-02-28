@@ -1,6 +1,6 @@
 import React from 'react';
 import firebase from '../components/Firebase/firebase';
-import {LoadingComponentStandard} from "../components/MicroComponents/MicroComponents";
+import {LoadingStandard} from "../components/MicroComponents/MicroComponents";
 import {FetchLastUpdatedArtistTimestamp, FetchLastUpdatedArtistId, FetchCounters} from "../api-functions/artists-api";
 import {FetchLastAddedRecordArtistId, FetchLastAddedRecordId, FetchLastAddedRecordTimestamp} from "../api-functions/records-api";
 import StartPageSecondaryColumn from "./pageComponents/StartPageSecondaryColumn";
@@ -34,6 +34,6 @@ const StartPage = () => {
             />
         </div>)
         :
-        (<LoadingComponentStandard spinning={true}/>)
+        (<LoadingStandard spinning={true}/>)
 };
 export default StartPage;

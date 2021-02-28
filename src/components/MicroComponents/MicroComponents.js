@@ -1,23 +1,25 @@
 import React from 'react';
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import {formatInformationRenderIcon, formatInformationRenderText} from "./MicroComponentsHelper";
 
-const TodoComponent = (props) => (
-    <p className="todo-component">
-        <FontAwesomeIcon icon="wrench" spin/>
-        <span>{props.todo}</span>
-    </p>
-);
+const Debugger = ({logThis}) => {
+    console.log("LOG THIS: " + logThis)
+    return (
+        <></>
+    )
+}
 
-const LoadingComponentStandard = ({text, icon, spinning}) => (
+const LoadingStandard = ({text, icon, spinning}) => (
     <div className="loading-component">
         <div className="text-center">
             <p className="mb-3">{text || "Loading..."}</p>
             <p><FontAwesomeIcon icon={icon || "spinner"} spin={spinning} size="2x"/></p>
         </div>
+
     </div>
 );
 
-const LoadingComponent = () => {
+const LoadingLazyBackground = () => {
     let rand2 = Math.floor(Math.random() * 8) + 1;
     return (
         <div className="w-100 h-100 p-3">
@@ -30,7 +32,7 @@ const LoadingComponent = () => {
     )
 };
 
-const CopyrightInfoComponent = (props) => (
+const CopyrightInformation = (props) => (
     <div className={props.className}>
         <p className="small">Site content <FontAwesomeIcon icon={['far', 'copyright']}/> 2020 Joakim Johnsson</p>
         <p className="small">Except where otherwise noted, creative content on this site is licensed under
@@ -40,46 +42,10 @@ const CopyrightInfoComponent = (props) => (
     </div>
 );
 
-function renderIcon(format) {
-    switch(format) {
-        case 'cd-r':
-            return 'compact-disc';
-        case '7" vinyl':
-            return 'record-vinyl';
-        case 'online':
-            return 'robot';
-        case 'cassette':
-            return 'vr-cardboard';
-        default:
-            return 'compact-disc';
-    }
-}
-function renderText(format) {
-    switch(format) {
-        case 'cd-r':
-            return 'cd-r /';
-        case '7" vinyl':
-            return '7" vinyl /';
-        case 'online':
-            return 'online /';
-        case 'cassette':
-            return 'cassette /';
-        default:
-            return `${format} /`;
-    }
-}
-
-const FormatInfoComponent = ({format, text}) => (
-    <span className="text-capitalize"><FontAwesomeIcon icon={renderIcon(format)} className={"mr-1"}/> {text ? renderText(format) : ""}</span>
+const FormatInformation = ({format, text}) => (
+    <span className="text-capitalize"><FontAwesomeIcon icon={formatInformationRenderIcon(format)} className={"mr-1"}/> {text ? formatInformationRenderText(format) : ""}</span>
 );
 
-const Debugger = ({logThis}) => {
-    console.log("LOG THIS: " + logThis)
-    return (
-        <></>
-    )
-}
-
-export default TodoComponent;
-export {LoadingComponent, LoadingComponentStandard, CopyrightInfoComponent, FormatInfoComponent, Debugger};
+export default Debugger;
+export {LoadingLazyBackground, LoadingStandard, CopyrightInformation, FormatInformation};
 

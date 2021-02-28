@@ -4,7 +4,7 @@ import imgUnavailable from "../../images/image_unavailable.png";
 import Artist, {ArtistLink} from "../lists/ArtistItem";
 import * as COLUMNS from "../../constants/cols";
 import TracksByRecordList from "../lists/TracksByRecordList";
-import {FormatInfoComponent} from "../MicroComponents/MicroComponents";
+import {FormatInformation} from "../MicroComponents/MicroComponents";
 import {FetchRecordFromId} from "../../api-functions/records-api";
 
 const RecordCard = ({route, id, name, artistId, coverUrl, fullWidth, year, format}) => {
@@ -17,7 +17,7 @@ const RecordCard = ({route, id, name, artistId, coverUrl, fullWidth, year, forma
                     <Link to={`/${route}/${id}`}>
                         <p className={`card-title`}><Artist id={artistId}/></p>
                         <p className={`card-sub-title text-color-variant__${rand.toString()}`}>{name}</p>
-                        <p className={`card-sub-title text-color-variant__${rand.toString()}`}><FormatInfoComponent format={format} text={false}/> {year}</p>
+                        <p className={`card-sub-title text-color-variant__${rand.toString()}`}><FormatInformation format={format} text={false}/> {year}</p>
                     </Link>
                 </div>
             </div>

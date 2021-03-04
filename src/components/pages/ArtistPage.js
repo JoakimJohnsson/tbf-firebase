@@ -23,7 +23,6 @@ const ArtistPage = ({match}) => {
 
     return (
         <div className="row">
-
             <ArtistPageSecondaryColumn id={id} artist={artist} rand={rand} rand2={rand2}/>
             <ArtistPageMainColumn id={id}/>
         </div>

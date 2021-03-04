@@ -5,11 +5,11 @@ import {LoadingStandard} from "../MicroComponents/MicroComponents";
 import Track, {TracksPlayerListItem} from "../apiComponents/TrackComponents";
 
 const TracksByRecord = ({recordId}) => {
-    const songs = FetchTracksByRecord(recordId);
+    const tracks = FetchTracksByRecord(recordId);
     return (
         <div className="row">
-            {songs.map((song) =>
-                <TrackCard id={song.id} key={song.id} recordId={recordId} reverse linked={false}/>
+            {tracks.map((track) =>
+                <TrackCard id={track.id} key={track.id} recordId={recordId} reverse linked={false}/>
             )}
         </div>
     )

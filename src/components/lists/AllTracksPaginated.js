@@ -30,7 +30,7 @@ const AllTracksPaginated = () => {
     );
     return items.length ?
         (<div className="row">
-                <div className="col-12 p-3">
+                <div className="col-12 px-3 pt-3">
                     <ul className="tracks-player__list mb-3 mb-sm-0 mb-lg-3">
                     {items.map(item => (
                         <TracksPlayerListItemWithImage key={item.index} id={item.id} setCurrentTrack={setCurrentTrackOnClick} currentTrack={currentTrack}/>

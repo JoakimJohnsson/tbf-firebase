@@ -5,7 +5,7 @@ import {ArtistLink} from "../../apiComponents/ArtistComponents";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {Collapse} from "react-bootstrap";
 import DefaultArtistDescription from "../../DefaultDescriptions/DefaultDescriptions";
-import {SongsByRecordListSimple} from "../../lists/TracksByRecord";
+import SongsByRecordListSimple from "../../lists/TracksByRecord";
 
 const RecordPageSecondaryColumn = ({id, record}) => {
     const [open, setOpen] = useState(false);

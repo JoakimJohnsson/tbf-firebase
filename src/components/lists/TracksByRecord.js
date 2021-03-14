@@ -1,18 +1,17 @@
 import React from "react";
 import {FetchTracksByRecord} from "../../api-functions/tracks-api";
-import TrackCard from "../cards/TrackCard";
 import {LoadingStandard} from "../MicroComponents/MicroComponents";
-import Track, {TracksPlayerListItem} from "../apiComponents/TrackComponents";
+import Track, {TracksPlayerListItem, TracksPlayerListItemWithImage} from "../apiComponents/TrackComponents";
 
-const TracksByRecord = ({recordId}) => {
+const TracksByRecord = ({recordId, currentTrack, setCurrentTrackOnClick}) => {
     const tracks = FetchTracksByRecord(recordId);
-    return (
-        <div className="row">
+    return tracks.length ? (<ul className="tracks-player__list mb-3 mb-sm-0 mb-lg-3">
             {tracks.map((track) =>
-                <TrackCard id={track.id} key={track.id} recordId={recordId} reverse linked={false}/>
+                <TracksPlayerListItem key={track.index} id={track.id} setCurrentTrack={setCurrentTrackOnClick} currentTrack={currentTrack}/>
             )}
-        </div>
-    )
+        </ul>)
+        :
+        (<LoadingStandard text="No tracks available at this time." icon="spinner" spinning={true}/>)
 };
 
 const SongsByRecordListSimple = ({recordId}) => {
@@ -30,16 +29,28 @@ const SongsByRecordListSimple = ({recordId}) => {
 };
 
 const TracksByRecordWithPlayer = ({recordId, currentTrack, setCurrentTrackOnClick}) => {
-    const songs = FetchTracksByRecord(recordId);
-    return songs.length ?
+    const tracks = FetchTracksByRecord(recordId);
+    return tracks.length ?
         (<ul className="tracks-player__list mb-3 mb-sm-0 mb-lg-3">
-            {songs.map((song) =>
-                <TracksPlayerListItem key={song.index} id={song.id} setCurrentTrack={setCurrentTrackOnClick} currentTrack={currentTrack}/>
+            {tracks.map((track) =>
+                <TracksPlayerListItem key={track.index} id={track.id} setCurrentTrack={setCurrentTrackOnClick} currentTrack={currentTrack}/>
             )}
         </ul>)
         :
         (<LoadingStandard text="No tracks available at this time." icon="spinner" spinning={true}/>)
 };
 
-export default TracksByRecord;
-export {SongsByRecordListSimple, TracksByRecordWithPlayer};
+const TracksByRecordWithPlayerWithImage = ({recordId, currentTrack, setCurrentTrackOnClick}) => {
+    const tracks = FetchTracksByRecord(recordId);
+    return tracks.length ?
+        (<ul className="tracks-player__list mb-3 mb-sm-0 mb-lg-3">
+            {tracks.map((track) =>
+                <TracksPlayerListItemWithImage key={track.index} id={track.id} setCurrentTrack={setCurrentTrackOnClick} currentTrack={currentTrack}/>
+            )}
+        </ul>)
+        :
+        (<LoadingStandard text="No tracks available at this time." icon="spinner" spinning={true}/>)
+};
+
+export default SongsByRecordListSimple;
+export {TracksByRecordWithPlayer, TracksByRecordWithPlayerWithImage};

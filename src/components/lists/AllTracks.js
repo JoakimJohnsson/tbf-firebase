@@ -3,7 +3,7 @@ import FetchAllTracks from "../../api-functions/tracks-api";
 import {LoadingLazyBackground, LoadingStandard} from "../MicroComponents/MicroComponents";
 import TrackCard from "../cards/TrackCard";
 import FetchAllRecords from "../../api-functions/records-api";
-import {RecordCardWithSongs} from "../cards/RecordCard";
+import {RecordCardWithSongsWithImage} from "../cards/RecordCard";
 
 const AllTracks = () => {
     const songs = FetchAllTracks();
@@ -17,14 +17,14 @@ const AllTracks = () => {
         (<LoadingLazyBackground />)
 };
 
-const AllSongsListByRecord = () => {
+const AllTracksListByRecord = () => {
 
     const records = FetchAllRecords();
 
     return records.length ?
         (<div className="row">
             {records.map((record) =>
-                <RecordCardWithSongs id={record.id} name={record.name} artistId={record.artistId}/>
+                <RecordCardWithSongsWithImage id={record.id} name={record.name} artistId={record.artistId}/>
             )}
         </div>)
         :
@@ -32,4 +32,4 @@ const AllSongsListByRecord = () => {
 };
 
 export default AllTracks;
-export {AllSongsListByRecord};
+export {AllTracksListByRecord};

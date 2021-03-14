@@ -1,11 +1,12 @@
-import React from "react";
+import React, {useState} from "react";
 import {Link} from "react-router-dom";
 import imgUnavailable from "../../images/image_unavailable.png";
 import Artist, {ArtistLink} from "../apiComponents/ArtistComponents";
 import * as COLUMNS from "../../constants/cols";
-import TracksByRecord from "../lists/TracksByRecord";
+import {TracksByRecordWithPlayerWithImage} from "../lists/TracksByRecord";
 import {FormatInformation} from "../MicroComponents/MicroComponents";
 import {FetchRecordFromId} from "../../api-functions/records-api";
+import TrackPlayer from "./TrackPlayer";
 
 const RecordCard = ({route, id, name, artistId, coverUrl, fullWidth, year, format}) => {
     let rand = Math.floor(Math.random() * 8) + 1;
@@ -34,18 +35,26 @@ const RecordLink = (props) => {
     </>
 };
 
-const RecordCardWithSongs = ({id, name, artistId}) => {
+const RecordCardWithSongsWithImage = ({id, name, artistId}) => {
     let rand = Math.floor(Math.random() * 16) + 1;
     let rand2 = Math.floor(Math.random() * 8) + 1;
+    const [currentTrack, setCurrentTrack] = useState(null);
+    const setCurrentTrackOnClick = (songId) => {
+        setCurrentTrack(songId);
+    }
+    const destroyCurrentTrack = () => {
+        setCurrentTrack(null);
+    }
 
     return (
         <div className="record-card-with-songs col-12">
             <h2 className={`section-header logo-font-family__${rand.toString()}`}><div className={`d-inline text-color-variant__${rand2.toString()}`}><ArtistLink id={artistId}/></div></h2>
             <p>{name}</p>
-            <TracksByRecord recordId={id}/>
+            <TracksByRecordWithPlayerWithImage recordId={id} currentTrack={currentTrack} setCurrentTrackOnClick={setCurrentTrackOnClick}/>
+            {currentTrack ? <TrackPlayer id={currentTrack} key={currentTrack} destroyCurrentTrack={destroyCurrentTrack}/> : false}
         </div>
     )
 };
 
 export default RecordCard;
-export {RecordCardWithSongs, RecordLink};
+export {RecordCardWithSongsWithImage, RecordLink};

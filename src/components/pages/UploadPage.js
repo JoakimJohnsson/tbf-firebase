@@ -1,8 +1,8 @@
 import React from 'react';
-import {CopyrightInformation} from "../MicroComponents/MicroComponents";
-import SongUploadForm from "../Forms/TrackUploadForm"
-import RecordUploadForm from "../Forms/RecordUploadForm";
-import LastUpdatedArtistForm from "../Forms/LastUpdatedArtistForm";
+import CopyrightInformation from "../microComponents/CopyrightInformation";
+import SongUploadForm from "../forms/TrackUploadForm"
+import RecordUploadForm from "../forms/RecordUploadForm";
+import LastUpdatedArtistForm from "../forms/LastUpdatedArtistForm";
 
 const UploadPage = () => {
 

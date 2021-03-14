@@ -1,5 +1,5 @@
 import React from "react";
-import {LoadingStandard} from "../MicroComponents/MicroComponents";
+import {LoadingStandard} from "../microComponents/MicroComponents";
 import {FetchRecordsByArtist} from "../../api-functions/records-api";
 import RecordCard from "../cards/RecordCard";
 import * as COLUMNS from "../../constants/cols";

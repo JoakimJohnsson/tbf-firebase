@@ -1,6 +1,6 @@
 import React from 'react';
 import ArtistCard from "../cards/ArtistCard";
-import {LoadingStandard} from "../MicroComponents/MicroComponents";
+import {LoadingStandard} from "../microComponents/MicroComponents";
 import usePagination from "firestore-pagination-hook";
 import firebase from "firebase";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";

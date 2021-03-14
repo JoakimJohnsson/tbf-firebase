@@ -1,5 +1,5 @@
 import React from 'react';
-import {CopyrightInformation} from "../MicroComponents/MicroComponents";
+import CopyrightInformation from "../microComponents/CopyrightInformation";
 import {AllTracksListByRecord} from "../lists/AllTracks";
 
 const TracksPage = () => (

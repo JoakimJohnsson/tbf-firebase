@@ -4,10 +4,10 @@ import firebase from "firebase";
 import imgUnavailable from "../../images/image_unavailable.png";
 import * as STRINGS from "../../constants/strings";
 import MembersByArtist from "../lists/MembersByArtist";
-import {CopyrightInformation} from "../MicroComponents/MicroComponents";
 import RecordsByArtist from "../lists/RecordsByArtist";
 import {TracksByArtistWithPlayer} from "../lists/TracksByArtist";
 import TrackPlayer from "../cards/TrackPlayer";
+import CopyrightInformation from "../microComponents/CopyrightInformation";
 
 const ArtistPage = ({match}) => {
     const {params: {id}} = match;

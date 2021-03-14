@@ -1,6 +1,6 @@
 import React from 'react';
 import firebase from '../Firebase/firebase';
-import {CopyrightInformation, LoadingStandard} from "../MicroComponents/MicroComponents";
+import {LoadingStandard} from "../microComponents/MicroComponents";
 import {FetchLastUpdatedArtistTimestamp, FetchLastUpdatedArtistId, FetchCounters} from "../../api-functions/artists-api";
 import {FetchLastAddedRecordArtistId, FetchLastAddedRecordId, FetchLastAddedRecordTimestamp} from "../../api-functions/records-api";
 import {ArtistLink} from "../apiComponents/ArtistComponents";
@@ -10,6 +10,7 @@ import * as ROUTES from "../../constants/routes";
 import {RecordLink} from "../cards/RecordCard";
 import AllRecordsPaginated from "../lists/AllRecordsPaginated";
 import AllTracksPaginated from "../lists/AllTracksPaginated";
+import CopyrightInformation from "../microComponents/CopyrightInformation";
 
 console.log("-- WE HAVE FIREBASE " + firebase.app.name + " --");
 

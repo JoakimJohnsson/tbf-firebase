@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {CopyrightInformation, FormatInformation, LoadingStandard} from "../MicroComponents/MicroComponents";
+import {FormatInformation, LoadingStandard} from "../microComponents/MicroComponents";
 import {FetchRecordFromId} from "../../api-functions/records-api";
 import {ArtistLink} from "../apiComponents/ArtistComponents";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
@@ -8,6 +8,7 @@ import imgUnavailable from "../../images/image_unavailable.png";
 import DefaultArtistDescription from "../DefaultDescriptions/DefaultDescriptions";
 import SongsByRecordListSimple, {TracksByRecordWithPlayer} from "../lists/TracksByRecord";
 import TrackPlayer from "../cards/TrackPlayer";
+import CopyrightInformation from "../microComponents/CopyrightInformation";
 
 const RecordPage = ({match}) => {
     const {params: {id}} = match;

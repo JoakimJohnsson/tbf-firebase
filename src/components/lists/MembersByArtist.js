@@ -1,7 +1,7 @@
 import React from "react";
 import FetchMembersByArtist from "../../api-functions/members-api";
 import Person from "../apiComponents/PersonComponents";
-import {LoadingStandard} from "../MicroComponents/MicroComponents";
+import {LoadingStandard} from "../microComponents/MicroComponents";
 
 const MembersByArtist = ({artistId}) => {
     const members = FetchMembersByArtist(artistId);

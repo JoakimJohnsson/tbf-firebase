@@ -3,17 +3,6 @@ import {FetchTracksByRecord} from "../../api-functions/tracks-api";
 import {LoadingStandard} from "../MicroComponents/MicroComponents";
 import Track, {TracksPlayerListItem, TracksPlayerListItemWithImage} from "../apiComponents/TrackComponents";
 
-const TracksByRecord = ({recordId, currentTrack, setCurrentTrackOnClick}) => {
-    const tracks = FetchTracksByRecord(recordId);
-    return tracks.length ? (<ul className="tracks-player__list mb-3 mb-sm-0 mb-lg-3">
-            {tracks.map((track) =>
-                <TracksPlayerListItem key={track.index} id={track.id} setCurrentTrack={setCurrentTrackOnClick} currentTrack={currentTrack}/>
-            )}
-        </ul>)
-        :
-        (<LoadingStandard text="No tracks available at this time." icon="spinner" spinning={true}/>)
-};
-
 const SongsByRecordListSimple = ({recordId}) => {
     const songs = FetchTracksByRecord(recordId);
     return songs.length ?

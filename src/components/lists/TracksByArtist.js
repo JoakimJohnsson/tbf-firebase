@@ -20,7 +20,7 @@ const TracksByArtist = ({artistId}) => {
 const TracksByArtistWithPlayer = ({artistId, currentTrack, setCurrentTrackOnClick}) => {
     const tracks = FetchTracksByArtist(artistId);
     return tracks.length ?
-        (<ul className="tracks-player__list mb-3 mb-sm-0 mb-lg-3">
+        (<ul className="tracks-player__list">
             {tracks.map((track) =>
                 <TracksPlayerListItemWithImage key={track.index} id={track.id} setCurrentTrack={setCurrentTrackOnClick} currentTrack={currentTrack}/>
             )}

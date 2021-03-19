@@ -3,7 +3,7 @@ import ArtistCard from "../cards/ArtistCard";
 import LoadingStandard from "../microComponents/LoadingStandard";
 import usePagination from "firestore-pagination-hook";
 import firebase from "firebase";
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import LoadMoreButton from "../microComponents/LoadMoreButton";
 
 const AllArtistsPaginated = () => {
 
@@ -33,11 +33,7 @@ const AllArtistsPaginated = () => {
             ))}
             {
                 hasMore && !loadingMore &&
-                <div className="col-12 text-center pt-3">
-                    <button className="btn button__load-more mb-3" onClick={loadMore}>
-                        <FontAwesomeIcon icon={"chevron-down"} aria-label="Show more artists"/>
-                    </button>
-                </div>
+                <LoadMoreButton loadMore={loadMore}/>
             }
         </div>)
         :

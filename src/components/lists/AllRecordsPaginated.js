@@ -2,8 +2,8 @@ import React from "react";
 import LoadingLazyBackground from "../microComponents/LoadingLazyBackground";
 import usePagination from "firestore-pagination-hook";
 import firebase from "firebase";
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import RecordCard from "../cards/RecordCard";
+import LoadMoreButton from "../microComponents/LoadMoreButton";
 
 const AllRecordsPaginated = ({fullWidth}) => {
 
@@ -30,11 +30,7 @@ const AllRecordsPaginated = ({fullWidth}) => {
             ))}
             {
                 hasMore && !loadingMore &&
-                <div className="col-12 text-center pt-3">
-                    <button className="btn button__load-more mb-3" onClick={loadMore}>
-                        <FontAwesomeIcon icon={"chevron-down"} aria-label="Show more songs"/>
-                    </button>
-                </div>
+                <LoadMoreButton loadMore={loadMore}/>
             }
         </div>)
         :

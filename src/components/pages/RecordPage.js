@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {FormatInformation} from "../microComponents/MicroComponents";
+import FormatInformation from "../microComponents/FormatInformation";
 import LoadingStandard from "../microComponents/LoadingStandard";
 import {FetchRecordFromId} from "../../api-functions/records-api";
 import {ArtistLink} from "../apiComponents/ArtistComponents";

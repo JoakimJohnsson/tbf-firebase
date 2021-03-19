@@ -11,4 +11,4 @@ const FormatInformation = ({format, text}) => (
     </span>
 );
 
-export {FormatInformation};
+export default FormatInformation;

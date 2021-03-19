@@ -4,7 +4,7 @@ import imgUnavailable from "../../images/image_unavailable.png";
 import Artist, {ArtistLink} from "../apiComponents/ArtistComponents";
 import * as COLUMNS from "../../constants/cols";
 import {TracksByRecordWithPlayerWithImage} from "../lists/TracksByRecord";
-import {FormatInformation} from "../microComponents/MicroComponents";
+import FormatInformation from "../microComponents/FormatInformation";
 import {FetchRecordFromId} from "../../api-functions/records-api";
 import TrackPlayer from "./TrackPlayer";
 

@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import {LoadingLazyBackground} from "../microComponents/MicroComponents";
+import LoadingLazyBackground from "../microComponents/LoadingLazyBackground";
 import usePagination from "firestore-pagination-hook";
 import firebase from "firebase";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";

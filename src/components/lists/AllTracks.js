@@ -1,6 +1,6 @@
 import React from "react";
 import FetchAllTracks from "../../api-functions/tracks-api";
-import {LoadingLazyBackground} from "../microComponents/MicroComponents";
+import LoadingLazyBackground from "../microComponents/LoadingLazyBackground";
 import LoadingStandard from "../microComponents/LoadingStandard";
 import TrackCard from "../cards/TrackCard";
 import FetchAllRecords from "../../api-functions/records-api";

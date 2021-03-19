@@ -1,6 +1,6 @@
 import React from 'react';
 import firebase from '../Firebase/firebase';
-import {LoadingStandard} from "../microComponents/MicroComponents";
+import LoadingStandard from "../microComponents/LoadingStandard";
 import {FetchLastUpdatedArtistTimestamp, FetchLastUpdatedArtistId, FetchCounters} from "../../api-functions/artists-api";
 import {FetchLastAddedRecordArtistId, FetchLastAddedRecordId, FetchLastAddedRecordTimestamp} from "../../api-functions/records-api";
 import {ArtistLink} from "../apiComponents/ArtistComponents";

@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
-import {FormatInformation, LoadingStandard} from "../microComponents/MicroComponents";
+import {FormatInformation} from "../microComponents/MicroComponents";
+import LoadingStandard from "../microComponents/LoadingStandard";
 import {FetchRecordFromId} from "../../api-functions/records-api";
 import {ArtistLink} from "../apiComponents/ArtistComponents";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";

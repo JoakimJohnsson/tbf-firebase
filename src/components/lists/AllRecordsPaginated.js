@@ -5,7 +5,7 @@ import firebase from "firebase";
 import RecordCard from "../cards/RecordCard";
 import LoadMoreButton from "../microComponents/LoadMoreButton";
 
-const AllRecordsPaginated = ({fullWidth}) => {
+const AllRecordsPaginated = () => {
 
     const {
         loadingMore,
@@ -26,7 +26,7 @@ const AllRecordsPaginated = ({fullWidth}) => {
         (<div className="row">
             {items.map(item => (
                 <RecordCard route="record" id={item.id} name={item.data().name} artistId={item.data().artistId} coverUrl={item.data().coverUrl}
-                            fullWidth={fullWidth} year={item.data().year} format={item.data().format} key={item.id}/>
+                            fullWidth={false} year={item.data().year} format={item.data().format} key={item.id}/>
             ))}
             {
                 hasMore && !loadingMore &&

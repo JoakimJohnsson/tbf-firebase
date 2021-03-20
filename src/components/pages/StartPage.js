@@ -5,7 +5,7 @@ import {FetchLastUpdatedArtistTimestamp, FetchLastUpdatedArtistId, FetchCounters
 import {FetchLastAddedRecordArtistId, FetchLastAddedRecordId, FetchLastAddedRecordTimestamp} from "../../api-functions/records-api";
 import {ArtistLink} from "../apiComponents/ArtistComponents";
 import AllArtistsPaginated from "../lists/AllArtistsPaginated";
-import IconLink from "../links/IconNavLink";
+import IconLink from "../microComponents/IconNavLink";
 import * as ROUTES from "../../constants/routes";
 import {RecordLink} from "../cards/RecordCard";
 import AllRecordsPaginated from "../lists/AllRecordsPaginated";
@@ -55,9 +55,10 @@ const StartPage = () => {
                 <div className="standard-main-column__section">
                     <h2 className="section-header">Popular records</h2>
                     <p className="small m-0">
-                        Last added record: <RecordLink id={lastAddedRecordId}/> by <ArtistLink id={lastAddedRecordArtistId}/> ({lastAddedRecordDate.toLocaleDateString()}). Total number of records: {counters.recordCounter}
+                        Last added record: <RecordLink id={lastAddedRecordId}/> by <ArtistLink
+                        id={lastAddedRecordArtistId}/> ({lastAddedRecordDate.toLocaleDateString()}). Total number of records: {counters.recordCounter}
                     </p>
-                    <AllRecordsPaginated fullWidth={false}/>
+                    <AllRecordsPaginated/>
                     <IconLink className={"ml-3"} link={ROUTES.RECORDS} text={"See all records"} icon={"compact-disc"}/>
                 </div>
                 <div className="standard-main-column__section">

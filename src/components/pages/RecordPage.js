@@ -6,10 +6,10 @@ import {ArtistLink} from "../apiComponents/ArtistComponents";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {Collapse} from "react-bootstrap";
 import imgUnavailable from "../../images/image_unavailable.png";
-import DefaultArtistDescription from "../DefaultDescriptions/DefaultDescriptions";
 import SongsByRecordListSimple, {TracksByRecordWithPlayer} from "../lists/TracksByRecord";
 import TrackPlayer from "../cards/TrackPlayer";
 import CopyrightInformation from "../microComponents/CopyrightInformation";
+import RecordDescription from "../microComponents/RecordDescription";
 
 const RecordPage = ({match}) => {
     const {params: {id}} = match;
@@ -50,13 +50,9 @@ const RecordPage = ({match}) => {
                         <div id={`collapse-${id}-info`}>
                             <img className="w-100 my-3 mb-lg-5" alt={`Cover for ${record.name}`}
                                  src={record.coverUrl || imgUnavailable}/>
-                            <h2>Description</h2>
-                            <p>
-                                {record.description !== "" ?
-                                    record.description
-                                    :
-                                    <DefaultArtistDescription record={record}/>}
-                            </p>
+
+                            <RecordDescription record={record}/>
+
                             <h2>Track list</h2>
                             <SongsByRecordListSimple recordId={id}/>
                             <CopyrightInformation className={"d-none d-lg-block"}/>

@@ -1,11 +1,11 @@
 import React from 'react';
-import {NavigationFooter} from "../Navigation/Navigation";
+import FooterNavigation from "../Navigation/FooterNavigation";
 
 const Footer = () => (
     <footer className="container-fluid fixed-bottom">
         <div className="row h-100">
             <div className="col-12">
-                <NavigationFooter/>
+                <FooterNavigation/>
             </div>
         </div>
     </footer>

@@ -1,23 +1,11 @@
 import React from 'react';
 import * as ROUTES from '../../constants/routes';
-import {Link} from 'react-router-dom';
 import Navbar from 'react-bootstrap/Navbar';
-import TbfLogo from "../Logo/Logo";
-import FooterNavLink from "../microComponents/FooterNavLink";
+import FooterNavLink from "./FooterNavLink";
 
 const showUpload = false;
 
-const Navigation = () => (
-    <header>
-        <Navbar className="standard-container navbar-header justify-content-center" bg="dark" variant="dark"
-                expand="lg">
-            <Navbar.Brand>
-                <Link to={ROUTES.START}><TbfLogo/></Link>
-            </Navbar.Brand>
-        </Navbar>
-    </header>
-);
-const NavigationFooter = () => (
+const FooterNavigation = () => (
     <Navbar className="navbar-footer p-0" bg="dark" variant="dark" expand="true">
         <FooterNavLink link={ROUTES.START} text={"Start"} icon={"home"}/>
         <FooterNavLink link={ROUTES.ARTISTS} text={"Artists"} icon={"user-astronaut"}/>
@@ -27,5 +15,4 @@ const NavigationFooter = () => (
     </Navbar>
 );
 
-export default Navigation;
-export {NavigationFooter};
+export default FooterNavigation;

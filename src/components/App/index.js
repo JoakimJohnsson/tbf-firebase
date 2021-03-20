@@ -8,7 +8,7 @@ import {
     faWrench, faDownload, faHome, faArrowAltCircleDown, faArrowDown, faArrowUp, faArrowAltCircleUp, faRecordVinyl, faMusic, faSearch, faUserAstronaut, faPlayCircle, faPlus, faTimes, faPen,
     faMinus, faChevronLeft, faChevronRight, faChevronDown, faChevronUp, faSpinner, faSave, faAngleDoubleDown, faCompactDisc, faUsersSlash, faRobot, faVrCardboard
 } from '@fortawesome/free-solid-svg-icons';
-import Navigation from '../Navigation/Navigation';
+import HeaderNavigation from '../Navigation/HeaderNavigation';
 import Footer from "../Footer/Footer";
 import StartPage from '../pages/StartPage';
 import ArtistsPage from "../pages/ArtistsPage";
@@ -24,7 +24,7 @@ library.add(faAirbnb, faDownload, faGoogle, faFacebookF, faArrowAltCircleLeft, f
 
 const App = () => (
     <Router>
-        <Navigation/>
+        <HeaderNavigation/>
         <div className="container-fluid standard-container">
             <Route exact path={ROUTES.START} component={StartPage}/>
             <Route path={ROUTES.ARTISTS} component={ArtistsPage}/>

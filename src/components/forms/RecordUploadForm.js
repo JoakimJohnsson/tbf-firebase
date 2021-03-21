@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import firebase from "firebase";
+import UploadArtistSelect from "../microComponents/UploadArtistSelect";
 
 const INITIAL_STATE = {
     recordId: '',
@@ -148,22 +149,7 @@ class UploadRecordForm extends Component {
                 </div>
                 <div className="mb-3">
                     <label htmlFor="artistId" className="form-label">Artist Id</label>
-                    <select
-                        id="artistId"
-                        name="artistId"
-                        className="form-control"
-                        value={artistId}
-                        onChange={this.onChange}>
-                        <option value="select">-- Select --</option>
-                        <option value="15th-22">15th 22</option>
-                        <option value="the-baseball-field">The Baseball field</option>
-                        <option value="the-bodonis">The Bodonis</option>
-                        <option value="fredrik-svensson">Fredrik Svensson</option>
-                        <option value="mc-bomb">MC Bomb</option>
-                        <option value="music-ninja">Music / Ninja</option>
-                        <option value="olle">Olle</option>
-                        <option value="satans-galjonsfigurer">Satans Galjonsfigurer</option>
-                    </select>
+                    <UploadArtistSelect artistId={artistId} onChange={this.onChange}/>
                 </div>
                 <div className="mb-3">
                     <label htmlFor="coverUrl" className="form-label">Cover URL</label>

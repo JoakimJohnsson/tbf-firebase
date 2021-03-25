@@ -18,7 +18,7 @@ const AllRecordsPaginated = () => {
             .collection("records")
             .orderBy("numberOfViews", "desc"),
         {
-            limit: 4
+            limit: 6
         }
     );
 

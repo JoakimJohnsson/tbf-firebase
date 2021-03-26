@@ -3,6 +3,8 @@ import {FetchTrackFromId} from "../../api-functions/tracks-api";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {FetchRecordFromId} from "../../api-functions/records-api";
 import imgUnavailable from "../../images/image_unavailable.png";
+import {ArtistLink} from "./ArtistComponents";
+import LoadingStandard from "../microComponents/LoadingStandard";
 
 const Track = ({id}) => {
     const track = FetchTrackFromId(id);
@@ -46,7 +48,7 @@ const TracksPlayerListItemWithImage = ({id, setCurrentTrack, currentTrack}) => {
     const track = FetchTrackFromId(id);
     const [activeTrackId, setActiveTrackId] = useState("");
 
-    return (
+    return track.artistId ? (
         <li className={activeTrackId === currentTrack ? "tracks-player_li active" : "tracks-player_li"}>
 
             <TracksPlayerImage track={track}/>
@@ -54,7 +56,7 @@ const TracksPlayerListItemWithImage = ({id, setCurrentTrack, currentTrack}) => {
             <p className="tracks-player__text mr-3 mb-0 flex-grow-1" onClick={() => {
                 setCurrentTrack(id)
                 setActiveTrackId(id)
-            }}>{track.name}</p>
+            }}><ArtistLink id={track.artistId} className={"text-uppercase d-none d-sm-inline"}/><span className="d-none d-sm-inline"> -</span> {track.name}</p>
             <div className="d-flex align-items-center justify-content-end p-2">
                 <button className="tracks-player__button play mr-3"
                         onClick={() => {
@@ -73,6 +75,8 @@ const TracksPlayerListItemWithImage = ({id, setCurrentTrack, currentTrack}) => {
 
         </li>
     )
+        :
+        (<LoadingStandard/>)
 };
 
 const TracksPlayerImage = ({track}) => {

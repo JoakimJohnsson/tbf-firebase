@@ -1,7 +1,7 @@
 import React from "react";
 import {FetchTracksByRecord} from "../../api-functions/tracks-api";
 import LoadingStandard from "../microComponents/LoadingStandard";
-import Track, {TracksPlayerListItem, TracksPlayerListItemWithImage} from "../apiComponents/TrackComponents";
+import Track, {TracksPlayerListItemWithImage} from "../apiComponents/TrackComponents";
 
 const SongsByRecordListSimple = ({recordId}) => {
     const songs = FetchTracksByRecord(recordId);
@@ -22,7 +22,7 @@ const TracksByRecordWithPlayer = ({recordId, currentTrack, setCurrentTrackOnClic
     return tracks.length ?
         (<ul className="tracks-player__list">
             {tracks.map((track) =>
-                <TracksPlayerListItem key={track.index} id={track.id} setCurrentTrack={setCurrentTrackOnClick} currentTrack={currentTrack}/>
+                <TracksPlayerListItemWithImage key={track.index} id={track.id} setCurrentTrack={setCurrentTrackOnClick} currentTrack={currentTrack}/>
             )}
         </ul>)
         :

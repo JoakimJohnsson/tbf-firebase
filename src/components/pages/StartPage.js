@@ -47,7 +47,7 @@ const StartPage = () => {
                 <div className="standard-main-column__section">
                     <h2 className="section-header">Popular artists</h2>
                     <p className="small m-0">
-                        Last updated artist: <ArtistLink id={lastUpdatedArtistId}/> ({lastUpdatedArtistDate.toLocaleDateString()}).
+                        Last updated artist: <ArtistLink id={lastUpdatedArtistId} className={"text-uppercase"}/> ({lastUpdatedArtistDate.toLocaleDateString()}).
                     </p>
                     <AllArtistsPaginated/>
                     <IconLink className={"ml-3"} link={ROUTES.ARTISTS} text={"See all artists"} icon={"user-astronaut"}/>
@@ -56,7 +56,7 @@ const StartPage = () => {
                     <h2 className="section-header">Popular records</h2>
                     <p className="small m-0">
                         Last added record: <RecordLink id={lastAddedRecordId}/> by <ArtistLink
-                        id={lastAddedRecordArtistId}/> ({lastAddedRecordDate.toLocaleDateString()}). Total number of records: {counters.recordCounter}
+                        id={lastAddedRecordArtistId} className={"text-uppercase"}/> ({lastAddedRecordDate.toLocaleDateString()}). Total number of records: {counters.recordCounter}
                     </p>
                     <AllRecordsPaginated/>
                     <IconLink className={"ml-3"} link={ROUTES.RECORDS} text={"See all records"} icon={"compact-disc"}/>

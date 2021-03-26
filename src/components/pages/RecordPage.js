@@ -30,7 +30,7 @@ const RecordPage = ({match}) => {
                     <div className="d-flex justify-content-between">
                         <div className="mr-3">
                             <h1 className="text-capitalize mb-0">{record.name}</h1>
-                            <p className="text-uppercase mb-0"><ArtistLink id={record.artistId}/></p>
+                            <p className="text-uppercase mb-0"><ArtistLink id={record.artistId} className={"text-uppercase"}/></p>
                             <p className="small m-0">
                                 {record.format ? <FormatInformation format={record.format} text/> : ""}
                                 {record.year ? `${record.year}` : ""}

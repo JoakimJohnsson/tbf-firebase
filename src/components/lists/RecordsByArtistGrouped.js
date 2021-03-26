@@ -14,7 +14,7 @@ const RecordsByArtistGrouped = ({id}) => {
         (<div className="row mb-4">
 
             <div className="col-12 w-100>">
-                <h2 className={`section-header logo-font-family__${rand.toString()} text-color-variant__${rand2.toString()}`}><ArtistLink id={id}/></h2>
+                <h2 className={`section-header logo-font-family__${rand.toString()} text-color-variant__${rand2.toString()}`}><ArtistLink id={id} className={"text-uppercase"}/></h2>
             </div>
 
             {records.map((record) =>

@@ -48,7 +48,7 @@ const RecordCardWithSongsWithImage = ({id, name, artistId}) => {
 
     return (
         <div className="record-card-with-songs col-12">
-            <h2 className={`section-header logo-font-family__${rand.toString()}`}><div className={`d-inline text-color-variant__${rand2.toString()}`}><ArtistLink id={artistId}/>: </div><span className="small">{name}</span></h2>
+            <h2 className={`section-header logo-font-family__${rand.toString()}`}><div className={`d-inline text-color-variant__${rand2.toString()}`}><ArtistLink id={artistId} className={"text-uppercase"}/>: </div><span className="small">{name}</span></h2>
             <TracksByRecordWithPlayerWithImage recordId={id} currentTrack={currentTrack} setCurrentTrackOnClick={setCurrentTrackOnClick}/>
             {currentTrack ? <TrackPlayer id={currentTrack} key={currentTrack} destroyCurrentTrack={destroyCurrentTrack}/> : false}
         </div>

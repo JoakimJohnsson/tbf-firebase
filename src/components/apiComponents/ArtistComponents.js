@@ -47,7 +47,7 @@ const ArtistLink = (props) => {
     return artist.name ?
         (<>
             <Link to={`/artist/${props.id}`}>
-                <span className="text-uppercase">{artist.name}</span>
+                <span className={props.className}>{artist.name}</span>
             </Link>
         </>)
         :

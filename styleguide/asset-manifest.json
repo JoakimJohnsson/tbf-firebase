@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.js": "/build/main.4987fa9b.js",
+    "runtime-main.js": "/build/bundle.ec2e049c.js",
+    "build/2.53461e3c.js": "/build/2.53461e3c.js",
+    "build/2.53461e3c.js.LICENSE.txt": "/build/2.53461e3c.js.LICENSE.txt",
+    "index.html": "/index.html",
+    "precache-manifest.478c0ed4890bbf8a67811555e3f7a183.js": "/precache-manifest.478c0ed4890bbf8a67811555e3f7a183.js",
+    "service-worker.js": "/service-worker.js",
+    "static/media/image_unavailable.png": "/static/media/image_unavailable.8844f6df.png"
+  },
+  "entrypoints": [
+    "build/bundle.ec2e049c.js",
+    "build/2.53461e3c.js",
+    "build/main.4987fa9b.js"
+  ]
+}

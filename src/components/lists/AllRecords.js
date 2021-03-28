@@ -1,6 +1,6 @@
 import React from "react";
 import FetchAllRecords from "../../api-functions/records-api";
-import {LoadingLazyBackground} from "../microComponents/FormatInformation";
+import LoadingLazyBackground from "../microComponents/Loading/LoadingLazyBackground";
 import RecordCard from "../cards/RecordCard";
 
 const AllRecords = ({fullWidth}) => {

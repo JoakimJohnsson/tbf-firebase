@@ -7,7 +7,7 @@ import RecordsByArtist from "../lists/RecordsByArtist";
 import {TracksByArtistWithPlayer} from "../lists/TracksByArtist";
 import TrackPlayer from "../cards/TrackPlayer";
 import CopyrightInformation from "../microComponents/CopyrightInformation";
-import ArtistDescription from "../microComponents/ArtistDescription";
+import ArtistDescription from "../microComponents/Descriptions/ArtistDescription";
 
 const ArtistPage = ({match}) => {
     const {params: {id}} = match;

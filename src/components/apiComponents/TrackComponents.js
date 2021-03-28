@@ -4,7 +4,7 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {FetchRecordFromId} from "../../api-functions/records-api";
 import imgUnavailable from "../../images/image_unavailable.png";
 import {ArtistLink} from "./ArtistComponents";
-import LoadingStandard from "../microComponents/LoadingStandard";
+import LoadingStandard from "../microComponents/Loading/LoadingStandard";
 
 const Track = ({id}) => {
     const track = FetchTrackFromId(id);

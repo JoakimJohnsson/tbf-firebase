@@ -1,5 +1,5 @@
 import React from "react";
-import LoadingStandard from "../microComponents/LoadingStandard";
+import LoadingStandard from "../microComponents/Loading/LoadingStandard";
 import {FetchAllArtistsWithRecords} from "../../api-functions/artists-api";
 import RecordsByArtistGrouped from "./RecordsByArtistGrouped";
 

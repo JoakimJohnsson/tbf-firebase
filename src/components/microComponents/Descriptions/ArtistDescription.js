@@ -1,5 +1,5 @@
 import React from 'react';
-import * as STRINGS from "../../constants/strings";
+import * as STRINGS from "../../../constants/strings";
 
 const ArtistDescription = ({artist}) => (
     <>

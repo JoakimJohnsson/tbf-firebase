@@ -1,10 +1,10 @@
 import React, {useState} from "react";
-import LoadingLazyBackground from "../microComponents/LoadingLazyBackground";
+import LoadingLazyBackground from "../microComponents/Loading/LoadingLazyBackground";
 import usePagination from "firestore-pagination-hook";
 import firebase from "firebase";
 import {TracksPlayerListItemWithImage} from "../apiComponents/TrackComponents";
 import TrackPlayer from "../cards/TrackPlayer";
-import LoadMoreButton from "../microComponents/LoadMoreButton";
+import LoadMoreButton from "../microComponents/Buttons/LoadMoreButton";
 
 const AllTracksPaginated = () => {
     const [currentTrack, setCurrentTrack] = useState(null);

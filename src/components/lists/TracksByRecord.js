@@ -1,6 +1,6 @@
 import React from "react";
 import {FetchTracksByRecord} from "../../api-functions/tracks-api";
-import LoadingStandard from "../microComponents/LoadingStandard";
+import LoadingStandard from "../microComponents/Loading/LoadingStandard";
 import Track, {TracksPlayerListItemWithImage} from "../apiComponents/TrackComponents";
 
 const SongsByRecordListSimple = ({recordId}) => {

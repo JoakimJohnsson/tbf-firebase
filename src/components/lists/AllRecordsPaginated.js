@@ -1,9 +1,9 @@
 import React from "react";
-import LoadingLazyBackground from "../microComponents/LoadingLazyBackground";
+import LoadingLazyBackground from "../microComponents/Loading/LoadingLazyBackground";
 import usePagination from "firestore-pagination-hook";
 import firebase from "firebase";
 import RecordCard from "../cards/RecordCard";
-import LoadMoreButton from "../microComponents/LoadMoreButton";
+import LoadMoreButton from "../microComponents/Buttons/LoadMoreButton";
 
 const AllRecordsPaginated = () => {
 

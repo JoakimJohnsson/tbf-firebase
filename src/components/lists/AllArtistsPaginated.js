@@ -1,9 +1,9 @@
 import React from 'react';
 import ArtistCard from "../cards/ArtistCard";
-import LoadingStandard from "../microComponents/LoadingStandard";
+import LoadingStandard from "../microComponents/Loading/LoadingStandard";
 import usePagination from "firestore-pagination-hook";
 import firebase from "firebase";
-import LoadMoreButton from "../microComponents/LoadMoreButton";
+import LoadMoreButton from "../microComponents/Buttons/LoadMoreButton";
 
 const AllArtistsPaginated = () => {
 

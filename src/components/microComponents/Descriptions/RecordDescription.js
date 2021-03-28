@@ -1,5 +1,5 @@
 import React from 'react';
-import DefaultArtistDescription from "../DefaultDescriptions/DefaultDescriptions";
+import DefaultArtistDescription from "../../DefaultDescriptions/DefaultDescriptions";
 
 const RecordDescription = ({record}) => (
     <>

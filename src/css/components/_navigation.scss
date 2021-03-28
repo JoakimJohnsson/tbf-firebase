@@ -31,18 +31,30 @@
 
 .navbar-footer {
   justify-content: space-between;
+  height: 100%;
+  @include media-breakpoint-up(md) {
+    justify-content: space-evenly;
+  }
+  @include media-breakpoint-up(xl) {
+    justify-content: center;
+  }
   .nav-link {
+    min-width: 50px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: .5rem .8rem;
+    padding: 1rem .8rem;
     font-size: 80%;
     @include media-breakpoint-up(sm) {
-      padding: .5rem 1rem;
+      min-width: 100px;
+      padding: .8rem 1rem;
       font-size: 100%;
       span {
         font-size: 90%;
       }
+    }
+    &.active {
+      color: $color-secondary;
     }
   }
 }

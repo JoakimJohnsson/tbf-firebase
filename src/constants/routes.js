@@ -1,12 +1,8 @@
 export const START = '/';
 export const ARTISTS = '/artists';
+export const ARTIST = '/artist/:id';
 export const RECORDS = '/records';
-export const SONGS = '/songs';
-export const PLAY = '/play';
+export const RECORD = '/record/:id';
+export const TRACKS = '/tracks';
 export const SEARCH = '/search';
-export const SIGN_UP = '/sign-up';
-export const DASHBOARD = '/dashboard';
-export const ACCOUNT = '/account';
-export const ADMINISTRATION = '/administration';
-export const PASSWORD_FORGET = '/pw-forget';
-export const ADMIN_DETAILS = '/administration/:id';
+export const UPLOAD = '/upload';

@@ -38,6 +38,7 @@ const StartPage = () => {
                     <h2>Extra content</h2>
                     <h3>Links</h3>
                     <p><a href="https://thebaseballfield.se/old/">The old TBF/VVM site</a></p>
+                    <p><a href="https://thebaseballfield.se/styleguide/">TBF and Friends styleguide</a></p>
                     <h3>Video</h3>
                     <p>T.B.A</p>
                     <CopyrightInformation className={"d-none d-lg-block"}/>

@@ -5,7 +5,7 @@ import {FetchLastUpdatedArtistTimestamp, FetchLastUpdatedArtistId, FetchCounters
 import {FetchLastAddedRecordArtistId, FetchLastAddedRecordId, FetchLastAddedRecordTimestamp} from "../../api-functions/records-api";
 import {ArtistLink} from "../apiComponents/ArtistComponents";
 import AllArtistsPaginated from "../lists/AllArtistsPaginated";
-import IconLink from "../microComponents/IconLink";
+import IconLink from "../microComponents/Links/IconLink";
 import * as ROUTES from "../../constants/routes";
 import {RecordLink} from "../cards/RecordCard";
 import AllRecordsPaginated from "../lists/AllRecordsPaginated";

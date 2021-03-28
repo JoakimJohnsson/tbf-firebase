@@ -70,7 +70,7 @@
   }
 }
 
-.song-card-dynamic__wrapper {
+.track-card-dynamic__wrapper {
   position: fixed;
   width: 100vw;
   left: 0;
@@ -78,7 +78,7 @@
   z-index: 1040;
   min-height: 90px;
   background: $color-near-black;
-  .song-card-dynamic {
+  .track-card-dynamic {
     audio {
       width: 100%;
       background: $color-near-black;
@@ -90,14 +90,14 @@
       }
     }
   }
-  .song-card-dynamic__info {
+  .track-card-dynamic__info {
     text-transform: capitalize;
     display: inline-block;
     border-radius: 25px;
     border: 1px solid $color-border;
   }
 }
-.song-card {
+.track-card {
   background: $color-near-black;
   color: $color-white;
   font-size: 90%;
@@ -105,17 +105,17 @@
   &:active,
   &:focus {
     transition: $transition-base;
-    .song-card__image {
+    .track-card__image {
       opacity: .9;
     }
   }
-  .song-card__image {
+  .track-card__image {
     height: 75px;
     width: 75px;
   }
-  .song-card__content {
+  .track-card__content {
     display: flex;
-    .song-card__content-inner {
+    .track-card__content-inner {
       align-items: flex-start;
     }
     @include media-breakpoint-up(sm) {
@@ -130,7 +130,7 @@
     font-weight: normal;
     text-transform: capitalize;
   }
-  .song-card__audio {
+  .track-card__audio {
     padding: 0;
     margin: 0;
   }
@@ -206,7 +206,7 @@
   font-weight: bold;
 }
 
-.record-card-with-songs {
+.record-card-with-tracks {
   margin-bottom: 1.5rem;
   &:last-of-type {
     margin-bottom: 0;

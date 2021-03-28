@@ -6,7 +6,7 @@ import {ArtistLink} from "../apiComponents/ArtistComponents";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {Collapse} from "react-bootstrap";
 import imgUnavailable from "../../images/image_unavailable.png";
-import SongsByRecordListSimple, {TracksByRecordWithPlayer} from "../lists/TracksByRecord";
+import TracksByRecordListSimple, {TracksByRecordWithPlayer} from "../lists/TracksByRecord";
 import TrackPlayer from "../cards/TrackPlayer";
 import CopyrightInformation from "../microComponents/CopyrightInformation";
 import RecordDescription from "../microComponents/Descriptions/RecordDescription";
@@ -54,7 +54,7 @@ const RecordPage = ({match}) => {
                             <RecordDescription record={record}/>
 
                             <h2>Track list</h2>
-                            <SongsByRecordListSimple recordId={id}/>
+                            <TracksByRecordListSimple recordId={id}/>
                             <CopyrightInformation className={"d-none d-lg-block"}/>
                         </div>
                     </Collapse>

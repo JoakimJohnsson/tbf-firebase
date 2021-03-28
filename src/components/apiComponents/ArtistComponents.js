@@ -17,7 +17,7 @@ const ArtistLinkAndTrackName = (props) => {
         (<>
             <Link to={`/artist/${props.id}`}>
                 <span className="text-uppercase">{artist.name}</span>
-            </Link> - {props.songName}
+            </Link> - {props.trackName}
         </>)
         :
         (<ArtistPlaceHolder/>)

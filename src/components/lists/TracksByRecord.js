@@ -3,13 +3,13 @@ import {FetchTracksByRecord} from "../../api-functions/tracks-api";
 import LoadingStandard from "../microComponents/Loading/LoadingStandard";
 import Track, {TracksPlayerListItemWithImage} from "../apiComponents/TrackComponents";
 
-const SongsByRecordListSimple = ({recordId}) => {
-    const songs = FetchTracksByRecord(recordId);
-    return songs.length ?
+const TracksByRecordListSimple = ({recordId}) => {
+    const tracks = FetchTracksByRecord(recordId);
+    return tracks.length ?
         (<ol className="list-group mb-3 mb-sm-0 mb-lg-3">
-            {songs.map((song) =>
-                <li key={song.index}>
-                    <Track id={song.id}/>
+            {tracks.map((track) =>
+                <li key={track.index}>
+                    <Track id={track.id}/>
                 </li>
             )}
         </ol>)
@@ -41,5 +41,5 @@ const TracksByRecordWithPlayerWithImage = ({recordId, currentTrack, setCurrentTr
         (<LoadingStandard text="No tracks available at this time." icon="spinner" spinning={true}/>)
 };
 
-export default SongsByRecordListSimple;
+export default TracksByRecordListSimple;
 export {TracksByRecordWithPlayer, TracksByRecordWithPlayerWithImage};

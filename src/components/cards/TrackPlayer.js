@@ -5,7 +5,7 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
 const TrackPlayer = ({id, destroyCurrentTrack}) => {
     return (
-        <div className="song-card-dynamic__wrapper">
+        <div className="track-card-dynamic__wrapper">
             {id ?
                 <TrackPlayerContent id={id} destroyTrack={destroyCurrentTrack}/>
                 :
@@ -18,9 +18,9 @@ const TrackPlayer = ({id, destroyCurrentTrack}) => {
 const TrackPlayerContent = ({id, destroyTrack}) => {
     const song = FetchTrackFromId(id);
     return song.artistId ?
-        (<div className="song-card-dynamic">
+        (<div className="track-card-dynamic">
             <div className="p-3 text-center">
-                <span className="song-card-dynamic__info px-3 py-1 mr-2"><ArtistLinkAndTrackName id={song.artistId} songName={song.name}/></span>
+                <span className="track-card-dynamic__info px-3 py-1 mr-2"><ArtistLinkAndTrackName id={song.artistId} trackName={song.name}/></span>
                 <button className="btn btn-fa__primary" aria-label="Close song"
                         onClick={() => {
                             destroyTrack()

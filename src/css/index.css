@@ -12939,7 +12939,7 @@ footer {
     .artist-card__simple {
       font-size: 1.2rem; } }
 
-.song-card-dynamic__wrapper {
+.track-card-dynamic__wrapper {
   position: fixed;
   width: 100vw;
   left: 0;
@@ -12947,46 +12947,46 @@ footer {
   z-index: 1040;
   min-height: 90px;
   background: #0a0a0a; }
-  .song-card-dynamic__wrapper .song-card-dynamic audio {
+  .track-card-dynamic__wrapper .track-card-dynamic audio {
     width: 100%;
     background: #0a0a0a; }
     @media (min-width: 992px) {
-      .song-card-dynamic__wrapper .song-card-dynamic audio {
+      .track-card-dynamic__wrapper .track-card-dynamic audio {
         width: 80%; } }
     @media (min-width: 1200px) {
-      .song-card-dynamic__wrapper .song-card-dynamic audio {
+      .track-card-dynamic__wrapper .track-card-dynamic audio {
         width: 50%; } }
-  .song-card-dynamic__wrapper .song-card-dynamic__info {
+  .track-card-dynamic__wrapper .track-card-dynamic__info {
     text-transform: capitalize;
     display: inline-block;
     border-radius: 25px;
     border: 1px solid #444; }
 
-.song-card {
+.track-card {
   background: #0a0a0a;
   color: #fff;
   font-size: 90%; }
-  .song-card:hover, .song-card:active, .song-card:focus {
+  .track-card:hover, .track-card:active, .track-card:focus {
     transition: all 0.45s ease-in-out; }
-    .song-card:hover .song-card__image, .song-card:active .song-card__image, .song-card:focus .song-card__image {
+    .track-card:hover .track-card__image, .track-card:active .track-card__image, .track-card:focus .track-card__image {
       opacity: .9; }
-  .song-card .song-card__image {
+  .track-card .track-card__image {
     height: 75px;
     width: 75px; }
-  .song-card .song-card__content {
+  .track-card .track-card__content {
     display: flex; }
-    .song-card .song-card__content .song-card__content-inner {
+    .track-card .track-card__content .track-card__content-inner {
       align-items: flex-start; }
     @media (min-width: 576px) {
-      .song-card .song-card__content {
+      .track-card .track-card__content {
         min-width: 400px; } }
-  .song-card .label {
+  .track-card .label {
     font-weight: bold;
     text-transform: uppercase; }
-  .song-card .small, .song-card .tracks-player__list .tracks-player_li .tracks-player__button-text, .tracks-player__list .tracks-player_li .song-card .tracks-player__button-text {
+  .track-card .small, .track-card .tracks-player__list .tracks-player_li .tracks-player__button-text, .tracks-player__list .tracks-player_li .track-card .tracks-player__button-text {
     font-weight: normal;
     text-transform: capitalize; }
-  .song-card .song-card__audio {
+  .track-card .track-card__audio {
     padding: 0;
     margin: 0; }
 
@@ -13042,9 +13042,9 @@ footer {
   font-size: 130%;
   font-weight: bold; }
 
-.record-card-with-songs {
+.record-card-with-tracks {
   margin-bottom: 1.5rem; }
-  .record-card-with-songs:last-of-type {
+  .record-card-with-tracks:last-of-type {
     margin-bottom: 0; }
 
 .btn-fa, .btn-fa__primary, .btn-fa__secondary, .btn-fa__tertiary, .tracks-player__list .tracks-player_li .tracks-player__button {

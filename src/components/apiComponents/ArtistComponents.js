@@ -20,7 +20,7 @@ const ArtistLinkAndTrackName = (props) => {
             </Link> - {props.trackName}
         </>)
         :
-        (<ArtistPlaceHolder/>)
+        (<ArtistAndTrackNamePlaceHolder/>)
 };
 
 const ArtistPlaceHolder = () => {
@@ -38,6 +38,32 @@ const ArtistPlaceHolder = () => {
         <>
             <>{firstName}</>
             <>{lastName}</>
+        </>
+    )
+};
+
+const ArtistAndTrackNamePlaceHolder = () => {
+    let rand = Math.floor(Math.random() * 4) + 2;
+    let rand2 = Math.floor(Math.random() * 6) + 2;
+    let rand3 = Math.floor(Math.random() * 8) + 2;
+
+    let firstName = [];
+    for (let i = 0; i < rand; i++) {
+        firstName.push(<span className="opacity-1" key={i}>&#9632;</span>)
+    }
+    let lastName = [];
+    for (let i = 0; i < rand2; i++) {
+        lastName.push(<span className="opacity-1" key={i}>&#9632;</span>)
+    }
+    let trackName = [];
+    for (let i = 0; i < rand3; i++) {
+        trackName.push(<span className="opacity-1" key={i}>&#9632;</span>)
+    }
+    return (
+        <>
+            <>{firstName}</>
+            <>{lastName}</>
+            <> : {trackName}</>
         </>
     )
 };

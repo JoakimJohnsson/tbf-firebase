@@ -9,7 +9,7 @@ const Artist = (props) => {
     return artist.name ?
         (<>{artist.name}</>)
         :
-        (<><LazyPlaceholder charNumber={5}/> <LazyPlaceholder charNumber={8}/></>)
+        (<><LazyPlaceholder charCount={5}/> <LazyPlaceholder charCount={8}/></>)
 };
 
 const ArtistLinkAndTrackName = (props) => {
@@ -21,7 +21,7 @@ const ArtistLinkAndTrackName = (props) => {
             </Link> - {props.trackName}
         </>)
         :
-        (<><LazyPlaceholder charNumber={5}/> <LazyPlaceholder charNumber={8}/> : <LazyPlaceholder charNumber={3}/> <LazyPlaceholder charNumber={5}/> <LazyPlaceholder charNumber={3}/></>)
+        (<><LazyPlaceholder charCount={5}/> <LazyPlaceholder charCount={8}/> : <LazyPlaceholder charCount={3}/> <LazyPlaceholder charCount={5}/> <LazyPlaceholder charCount={3}/></>)
 };
 
 const ArtistLink = (props) => {
@@ -33,7 +33,7 @@ const ArtistLink = (props) => {
             </Link>
         </>)
         :
-        (<><LazyPlaceholder charNumber={5}/> <LazyPlaceholder charNumber={8}/></>)
+        (<><LazyPlaceholder charCount={5}/> <LazyPlaceholder charCount={8}/></>)
 };
 
 export {ArtistLink, ArtistLinkAndTrackName};

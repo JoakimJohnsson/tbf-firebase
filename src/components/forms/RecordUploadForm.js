@@ -15,7 +15,7 @@ const INITIAL_STATE = {
     error: null
 };
 
-class UploadRecordForm extends Component {
+class RecordUploadForm extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -189,4 +189,4 @@ class UploadRecordForm extends Component {
     }
 }
 
-export default UploadRecordForm;
+export default RecordUploadForm;

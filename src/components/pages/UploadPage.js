@@ -1,6 +1,6 @@
 import React from 'react';
 import CopyrightInformation from "../microComponents/CopyrightInformation";
-import SongUploadForm from "../forms/TrackUploadForm"
+import TrackUploadForm from "../forms/TrackUploadForm"
 import RecordUploadForm from "../forms/RecordUploadForm";
 import LastUpdatedArtistForm from "../forms/LastUpdatedArtistForm";
 
@@ -17,8 +17,8 @@ const UploadPage = () => {
             </div>
             <div className="standard-main-column">
                 <div className="standard-main-column__section">
-                    <h2 className="section-header">Song</h2>
-                    <SongUploadForm/>
+                    <h2 className="section-header">Track</h2>
+                    <TrackUploadForm/>
 
                     <h2 className="section-header">Record</h2>
                     <RecordUploadForm/>

@@ -9,7 +9,7 @@ import LoadingStandard from "../microComponents/Loading/LoadingStandard";
 const Track = ({id}) => {
     const track = FetchTrackFromId(id);
     return (
-        <div className="song-item mb-1">
+        <div className="mb-1">
             <span className="text-capitalize">{track.name}</span>
         </div>
     )

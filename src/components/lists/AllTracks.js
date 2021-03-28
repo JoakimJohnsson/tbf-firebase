@@ -7,11 +7,11 @@ import FetchAllRecords from "../../api-functions/records-api";
 import {RecordCardWithSongsWithImage} from "../cards/RecordCard";
 
 const AllTracks = () => {
-    const songs = FetchAllTracks();
-    return songs.length ?
+    const tracks = FetchAllTracks();
+    return tracks.length ?
         (<div className="row">
-            {songs.map((song) =>
-                <TrackCard id={song.id} key={song.id} recordId={song.recordId} linked/>
+            {tracks.map((track) =>
+                <TrackCard id={track.id} key={track.id} recordId={track.recordId} linked/>
             )}
         </div>)
         :

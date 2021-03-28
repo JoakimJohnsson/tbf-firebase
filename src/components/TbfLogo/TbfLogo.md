@@ -1,0 +1,5 @@
+TbfLogo example:
+
+```js
+<TbfLogo/>
+```

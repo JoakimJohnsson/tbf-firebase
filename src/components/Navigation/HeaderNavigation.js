@@ -2,7 +2,7 @@ import React from 'react';
 import * as ROUTES from '../../constants/routes';
 import {Link} from 'react-router-dom';
 import Navbar from 'react-bootstrap/Navbar';
-import TbfLogo from "../Logo/Logo";
+import TbfLogo from "../TbfLogo/TbfLogo";
 
 const HeaderNavigation = () => (
     <header>

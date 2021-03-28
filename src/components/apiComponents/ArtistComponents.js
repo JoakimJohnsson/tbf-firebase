@@ -1,7 +1,7 @@
 import React from "react";
 import {FetchArtistFromId} from "../../api-functions/artists-api";
 import {Link} from "react-router-dom";
-import LazyPlaceholder from "../microComponents/LazyPlaceholder";
+import LazyTextPlaceholder from "../microComponents/LazyTextPlaceholder";
 
 const Artist = (props) => {
     const artist = FetchArtistFromId(props.id);
@@ -9,7 +9,7 @@ const Artist = (props) => {
     return artist.name ?
         (<>{artist.name}</>)
         :
-        (<><LazyPlaceholder charCount={5}/> <LazyPlaceholder charCount={8}/></>)
+        (<><LazyTextPlaceholder charCount={5}/> <LazyTextPlaceholder charCount={8}/></>)
 };
 
 const ArtistLinkAndTrackName = (props) => {
@@ -21,7 +21,7 @@ const ArtistLinkAndTrackName = (props) => {
             </Link> - {props.trackName}
         </>)
         :
-        (<><LazyPlaceholder charCount={5}/> <LazyPlaceholder charCount={8}/> : <LazyPlaceholder charCount={3}/> <LazyPlaceholder charCount={5}/> <LazyPlaceholder charCount={3}/></>)
+        (<><LazyTextPlaceholder charCount={5}/> <LazyTextPlaceholder charCount={8}/> : <LazyTextPlaceholder charCount={3}/> <LazyTextPlaceholder charCount={5}/> <LazyTextPlaceholder charCount={3}/></>)
 };
 
 const ArtistLink = (props) => {
@@ -33,7 +33,7 @@ const ArtistLink = (props) => {
             </Link>
         </>)
         :
-        (<><LazyPlaceholder charCount={5}/> <LazyPlaceholder charCount={8}/></>)
+        (<><LazyTextPlaceholder charCount={5}/> <LazyTextPlaceholder charCount={8}/></>)
 };
 
 export {ArtistLink, ArtistLinkAndTrackName};

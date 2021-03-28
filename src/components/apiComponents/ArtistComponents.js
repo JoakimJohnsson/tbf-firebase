@@ -1,6 +1,7 @@
 import React from "react";
 import {FetchArtistFromId} from "../../api-functions/artists-api";
 import {Link} from "react-router-dom";
+import LazyPlaceholder from "../microComponents/LazyPlaceholder";
 
 const Artist = (props) => {
     const artist = FetchArtistFromId(props.id);
@@ -8,7 +9,7 @@ const Artist = (props) => {
     return artist.name ?
         (<>{artist.name}</>)
         :
-        (<ArtistPlaceHolder/>)
+        (<><LazyPlaceholder charNumber={5}/> <LazyPlaceholder charNumber={8}/></>)
 };
 
 const ArtistLinkAndTrackName = (props) => {
@@ -20,52 +21,7 @@ const ArtistLinkAndTrackName = (props) => {
             </Link> - {props.trackName}
         </>)
         :
-        (<ArtistAndTrackNamePlaceHolder/>)
-};
-
-const ArtistPlaceHolder = () => {
-    let rand = Math.floor(Math.random() * 4) + 2;
-    let rand2 = Math.floor(Math.random() * 6) + 2;
-    let firstName = [];
-    for (let i = 0; i < rand; i++) {
-        firstName.push(<span className="opacity-1" key={i}>&#9632;</span>)
-    }
-    let lastName = [];
-    for (let i = 0; i < rand2; i++) {
-        lastName.push(<span className="opacity-1" key={i}>&#9632;</span>)
-    }
-    return (
-        <>
-            <>{firstName}</>
-            <>{lastName}</>
-        </>
-    )
-};
-
-const ArtistAndTrackNamePlaceHolder = () => {
-    let rand = Math.floor(Math.random() * 4) + 2;
-    let rand2 = Math.floor(Math.random() * 6) + 2;
-    let rand3 = Math.floor(Math.random() * 8) + 2;
-
-    let firstName = [];
-    for (let i = 0; i < rand; i++) {
-        firstName.push(<span className="opacity-1" key={i}>&#9632;</span>)
-    }
-    let lastName = [];
-    for (let i = 0; i < rand2; i++) {
-        lastName.push(<span className="opacity-1" key={i}>&#9632;</span>)
-    }
-    let trackName = [];
-    for (let i = 0; i < rand3; i++) {
-        trackName.push(<span className="opacity-1" key={i}>&#9632;</span>)
-    }
-    return (
-        <>
-            <>{firstName}</>
-            <>{lastName}</>
-            <> : {trackName}</>
-        </>
-    )
+        (<><LazyPlaceholder charNumber={5}/> <LazyPlaceholder charNumber={8}/> : <LazyPlaceholder charNumber={3}/> <LazyPlaceholder charNumber={5}/> <LazyPlaceholder charNumber={3}/></>)
 };
 
 const ArtistLink = (props) => {
@@ -77,7 +33,7 @@ const ArtistLink = (props) => {
             </Link>
         </>)
         :
-        (<ArtistPlaceHolder/>)
+        (<><LazyPlaceholder charNumber={5}/> <LazyPlaceholder charNumber={8}/></>)
 };
 
 export {ArtistLink, ArtistLinkAndTrackName};

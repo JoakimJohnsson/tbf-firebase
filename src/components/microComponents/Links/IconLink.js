@@ -4,7 +4,7 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import PropTypes from "prop-types";
 
 /**
- * A link paired with a fontawesome icon..
+ * A link paired with a fontawesome icon. Used as navigation link on page.
  */
 
 const IconLink = ({className, link, text, icon}) => (
@@ -15,7 +15,7 @@ IconLink.defaultProps = {
     className: "",
     link: "#",
     text: "I am an astronaut!",
-    icon: "user-astronaut"
+    icon: "home"
 }
 
 IconLink.propTypes = {

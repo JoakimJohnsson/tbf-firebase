@@ -13,6 +13,7 @@ module.exports = {
                     components: () => [
                         './src/components/TbfLogo/TbfLogo.js',
                         './src/components/microComponents/Links/IconLink.js',
+                        './src/components/Navigation/FooterNavLink.js',
                     ],
                     exampleMode: 'collapse', // 'hide' | 'collapse' | 'expand'
                     usageMode: 'collapse', // 'hide' | 'collapse' | 'expand'

@@ -1,20 +1,21 @@
 const path = require('path')
 module.exports = {
     title: 'TBF & Friends React styleguide',
-    tocMode: 'collapse',
+    tocMode: 'expand',
     sections: [
         {
             name: 'Documentation',
             content: 'docs/Documentation.md',
             sections: [
                 {
-                    name: 'Graphic elements',
-                    content: 'docs/Graphics.md',
+                    name: 'Navigation elements',
+                    content: 'docs/Navigation.md',
                     components: () => [
                         './src/components/TbfLogo/TbfLogo.js',
+                        './src/components/microComponents/Links/IconLink.js',
                     ],
                     exampleMode: 'collapse', // 'hide' | 'collapse' | 'expand'
-                    usageMode: 'expand', // 'hide' | 'collapse' | 'expand'
+                    usageMode: 'collapse', // 'hide' | 'collapse' | 'expand'
                 },
                 {
                     name: 'Buttons',
@@ -23,7 +24,7 @@ module.exports = {
                         './src/components/microComponents/Buttons/LoadMoreButton.js',
                     ],
                     exampleMode: 'collapse', // 'hide' | 'collapse' | 'expand'
-                    usageMode: 'expand', // 'hide' | 'collapse' | 'expand'
+                    usageMode: 'collapse', // 'hide' | 'collapse' | 'expand'
                 },
                 {
                     name: 'Cards',

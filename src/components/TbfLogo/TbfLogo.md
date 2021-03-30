@@ -1,5 +1,3 @@
-TbfLogo example:
-
 ```js
 <TbfLogo/>
 ```

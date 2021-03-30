@@ -1,7 +1,7 @@
 import React from 'react';
 
 /**
- * A responsive logotype in SVG format.
+ * A responsive logotype in SVG format. Used in header.
  */
 
 const TbfLogo = () => (

@@ -1,2 +1,2 @@
-Ghraphic elements, such as **buttons** and **logos**.
+Ghraphic elements, such as **buttons**.
 ___

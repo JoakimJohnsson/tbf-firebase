@@ -1,6 +1,6 @@
 const path = require('path')
 module.exports = {
-    title: 'TBF & Friends React styleguide',
+    title: 'TBF & Friends react styleguide',
     tocMode: 'expand',
     sections: [
         {

@@ -2,36 +2,38 @@ const path = require('path')
 module.exports = {
     title: 'TBF & Friends React styleguide',
     tocMode: 'collapse',
-    // sections: [
-    //     {
-    //         name: 'Documentation',
-    //         content: 'docs/Documentation.md',
-    //         sections: [
-    //             {
-    //                 name: 'Graphic elements',
-    //                 components: () => [
-    //                     './src/components/TbfLogo/TbfLogo.js',
-    //                 ],
-    //                 exampleMode: 'collapse', // 'hide' | 'collapse' | 'expand'
-    //                 usageMode: 'collapse', // 'hide' | 'collapse' | 'expand'
-    //             },
-    //             {
-    //                 name: 'Buttons',
-    //                 components: () => [
-    //                     './src/components/microComponents/Buttons/LoadMoreButton.js',
-    //                 ],
-    //                 exampleMode: 'collapse', // 'hide' | 'collapse' | 'expand'
-    //                 usageMode: 'collapse', // 'hide' | 'collapse' | 'expand'
-    //             },
-    //             {
-    //                 name: 'Cards',
-    //                 components: () => ['./src/components/Placeholder/Placeholder.js'],
-    //                 exampleMode: 'collapse', // 'hide' | 'collapse' | 'expand'
-    //                 usageMode: 'collapse', // 'hide' | 'collapse' | 'expand'
-    //             },
-    //         ],
-    //     },
-    // ],
+    sections: [
+        {
+            name: 'Documentation',
+            content: 'docs/Documentation.md',
+            sections: [
+                {
+                    name: 'Graphic elements',
+                    content: 'docs/Graphics.md',
+                    components: () => [
+                        './src/components/TbfLogo/TbfLogo.js',
+                    ],
+                    exampleMode: 'collapse', // 'hide' | 'collapse' | 'expand'
+                    usageMode: 'expand', // 'hide' | 'collapse' | 'expand'
+                },
+                {
+                    name: 'Buttons',
+                    content: 'docs/Buttons.md',
+                    components: () => [
+                        './src/components/microComponents/Buttons/LoadMoreButton.js',
+                    ],
+                    exampleMode: 'collapse', // 'hide' | 'collapse' | 'expand'
+                    usageMode: 'expand', // 'hide' | 'collapse' | 'expand'
+                },
+                {
+                    name: 'Cards',
+                    components: () => ['./src/components/Placeholder/Placeholder.js'],
+                    exampleMode: 'collapse', // 'hide' | 'collapse' | 'expand'
+                    usageMode: 'collapse', // 'hide' | 'collapse' | 'expand'
+                },
+            ],
+        },
+    ],
     ribbon: {
         // Link to open on the ribbon click (required)
         url: 'https://www.thebaseballfield.se/',
@@ -43,6 +45,8 @@ module.exports = {
     ],
     exampleMode: "expand",
     ignore: [
+        '**/components/Firebase/firebase.js',
+        '**/components/microComponents/microComponentsHelper.js',
         '**/components/pages/ArtistPage.js',
         '**/components/pages/ArtistsPage.js',
         '**/components/pages/RecordPage.js',
@@ -61,7 +65,7 @@ module.exports = {
             border: '#444',
             name: '#acff88',
             type: '#ff6c4c',
-            error: '#750606',
+            error: '#ff0000',
             baseBackground: '#151515',
             codeBackground: '#fff',
             sidebarBackground: '#000',

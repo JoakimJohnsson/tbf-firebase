@@ -1,5 +1,5 @@
 LazyTextPlaceholder example:
 
 ```js
-<LazyTextPlaceholder charCount="5" /> <LazyTextPlaceholder charCount="7" />
+<LazyTextPlaceholder charCount={3} /> <LazyTextPlaceholder charCount={5} />
 ```

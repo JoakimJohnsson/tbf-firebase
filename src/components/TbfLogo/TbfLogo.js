@@ -1,5 +1,9 @@
 import React from 'react';
 
+/**
+ * A responsive logotype in SVG format.
+ */
+
 const TbfLogo = () => (
     <>
         <svg className="header-tbf-logo-primary d-inline-block d-lg-none" xmlns="http://www.w3.org/2000/svg"

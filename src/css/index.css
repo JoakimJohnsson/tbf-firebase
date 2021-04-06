@@ -13185,22 +13185,23 @@ footer {
   @media (min-width: 1200px) {
     .navbar-footer {
       justify-content: center; } }
-  .navbar-footer .nav-link {
-    min-width: 50px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 1rem .8rem;
-    font-size: 80%; }
-    @media (min-width: 576px) {
-      .navbar-footer .nav-link {
-        min-width: 100px;
-        padding: .8rem 1rem;
-        font-size: 100%; }
-        .navbar-footer .nav-link span {
-          font-size: 90%; } }
-    .navbar-footer .nav-link.active {
-      color: #88ffcc; }
+
+.footer__nav-link-cmp {
+  min-width: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem .8rem;
+  font-size: 80%; }
+  @media (min-width: 576px) {
+    .footer__nav-link-cmp {
+      min-width: 100px;
+      padding: .8rem 1rem;
+      font-size: 100%; }
+      .footer__nav-link-cmp span {
+        font-size: 90%; } }
+  .footer__nav-link-cmp.active {
+    color: #88ffcc; }
 
 .todo-component {
   border-radius: .25rem;

@@ -4,11 +4,11 @@ import {NavLink} from "react-router-dom";
 import PropTypes from "prop-types";
 
 /**
- * A link paired with a fontawesome icon. Used in footer navigation. Displayed here within a Navbar.
+ * A link paired with a fontawesome icon. Used in footer navigation.
  */
 
 const FooterNavLink = ({link, text, icon}) => (
-    <NavLink exact activeClassName="active" className="nav-link" to={link}><FontAwesomeIcon icon={icon} size="2x" className="d-block"/>
+    <NavLink exact activeClassName="active" className="footer__nav-link-cmp nav-link" to={link}><FontAwesomeIcon icon={icon} size="2x" className="d-block"/>
         <span className="mt-1">{text}</span>
     </NavLink>
 );

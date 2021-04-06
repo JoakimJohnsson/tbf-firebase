@@ -19,7 +19,7 @@ IconLink.defaultProps = {
 }
 
 IconLink.propTypes = {
-    /** Css classes. */
+    /** Css classes. Mainly for margin and padding. Uses normal link and text styles. */
     className: PropTypes.string,
     /** A route. */
     link: PropTypes.string,

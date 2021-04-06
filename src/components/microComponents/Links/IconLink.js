@@ -15,7 +15,7 @@ IconLink.defaultProps = {
     className: "",
     link: "#",
     text: "I am an astronaut!",
-    icon: "home"
+    icon: "user-astronaut"
 }
 
 IconLink.propTypes = {

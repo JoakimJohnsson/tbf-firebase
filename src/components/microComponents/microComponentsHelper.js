@@ -34,10 +34,10 @@ function randomizer(count, addOn) {
     return Math.floor(Math.random() * count) + addOn;
 }
 function colorRandomizer() {
-    return Math.floor(Math.random() * 16) + 1;
+    return randomizer(16, 1);
 }
 function fontRandomizer() {
-    return Math.floor(Math.random() * 8) + 1;
+    return randomizer(8, 1);
 }
 
 export {formatInformationRenderIcon, formatInformationRenderText, randomizer, colorRandomizer, fontRandomizer}

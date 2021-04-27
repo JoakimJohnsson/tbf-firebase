@@ -17,8 +17,8 @@ const RecordCard = ({route, id, name, artistId, coverUrl, fullWidth, year, forma
                 <div className={`record-card__content p-3`}>
                     <Link to={`/${route}/${id}`}>
                         <p className={`card-title`}><Artist id={artistId}/></p>
-                        <p className={`card-sub-title text-color-variant__${fontRandomizer().toString()}`}>{name}</p>
-                        <p className={`card-sub-title text-color-variant__${fontRandomizer().toString()}`}><FormatInformation format={format} text={false}/> {year}</p>
+                        <p className={`card-sub-title text-color-variant__${colorRandomizer().toString()}`}>{name}</p>
+                        <p className={`card-sub-title text-color-variant__${colorRandomizer().toString()}`}><FormatInformation format={format} text={false}/> {year}</p>
                     </Link>
                 </div>
             </div>

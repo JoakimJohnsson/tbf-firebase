@@ -1,13 +1,14 @@
 import React from 'react';
 import PropTypes from "prop-types";
 import {CHARACTER_PLACEHOLDER} from "../../constants/strings";
+import {randomizer} from "./microComponentsHelper";
 
 /**
  * A placeholder for words. Uses a randomized number to generate dynamic character placeholders.
  */
 
 const LazyTextPlaceholder = ({charCount}) => {
-    let rand = Math.floor(Math.random() * charCount) + 3;
+    let rand = randomizer(charCount, 3);
     let placeholder = [];
     for (let i = 0; i < rand; i++) {
         placeholder.push(<span className="opacity-1" key={i}>{CHARACTER_PLACEHOLDER}</span>)

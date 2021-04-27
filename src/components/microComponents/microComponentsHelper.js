@@ -29,4 +29,15 @@ function formatInformationRenderText(format) {
     }
 }
 
-export {formatInformationRenderIcon, formatInformationRenderText}
+// Randomizer
+function randomizer(count, addOn) {
+    return Math.floor(Math.random() * count) + addOn;
+}
+function colorRandomizer() {
+    return Math.floor(Math.random() * 16) + 1;
+}
+function fontRandomizer() {
+    return Math.floor(Math.random() * 8) + 1;
+}
+
+export {formatInformationRenderIcon, formatInformationRenderText, randomizer, colorRandomizer, fontRandomizer}

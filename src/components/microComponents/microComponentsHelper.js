@@ -15,6 +15,8 @@ function formatInformationRenderIcon(format) {
 }
 
 function formatInformationRenderText(format) {
+    const UNKNOWN_FORMAT = 'unknown';
+    if(!format) format = UNKNOWN_FORMAT;
     switch (format) {
         case 'cd-r':
             return 'cd-r /';

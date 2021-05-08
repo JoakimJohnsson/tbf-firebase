@@ -27,7 +27,6 @@ const TrackPlayerContent = () => {
                 <button className="btn btn-fa__primary" aria-label="Close song"
                         onClick={() => {
                             setTrackState({
-                                activeTrack: null,
                                 currentTrack: null
                             })
                         }}>

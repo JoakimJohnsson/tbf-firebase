@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 
 const initialState = {
-    activeTrack: null,
     currentTrack: null
 }
 

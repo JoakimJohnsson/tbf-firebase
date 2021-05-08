@@ -21,7 +21,6 @@ const TracksPlayerListItemWithImage = ({id}) => {
     const track = FetchTrackFromId(id);
     const updateState = () => {
         setTrackState({
-            activeTrack: id,
             currentTrack: id
         })
     }

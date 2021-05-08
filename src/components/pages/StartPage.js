@@ -1,8 +1,8 @@
 import React from 'react';
 import firebase from '../Firebase/firebase';
 import LoadingStandard from "../microComponents/Loading/LoadingStandard";
-import {FetchLastUpdatedArtistTimestamp, FetchLastUpdatedArtistId, FetchCounters} from "../../api-functions/artists-api";
-import {FetchLastAddedRecordArtistId, FetchLastAddedRecordId, FetchLastAddedRecordTimestamp} from "../../api-functions/records-api";
+import {FetchLastUpdatedArtistTimestamp, FetchLastUpdatedArtistId, FetchCounters,
+    FetchLastAddedRecordArtistId, FetchLastAddedRecordId, FetchLastAddedRecordTimestamp} from "../../api-functions/api";
 import {ArtistLink} from "../apiComponents/ArtistComponents";
 import AllArtistsPaginated from "../lists/AllArtistsPaginated";
 import IconLink from "../microComponents/Links/IconLink";
@@ -32,9 +32,9 @@ const StartPage = () => {
             <div className="standard-secondary-column">
                 <div className="standard-box-wrapper__near-dark mb-5">
                     <h1>The Baseball Field & Friends</h1>
-                    <p>The music scene in Nyköping has delivered great music since the early 90's. </p>
+                    <p>The music scene in Nyk&ouml;ping has delivered great music since the early 90's. </p>
                     <p>This website, former home of band <b>The Baseball Field</b> and music labels <b>Vanishing Vanity Music</b> and <b>Strandad
-                        Sjöbuse Records</b>, now brings you that good old music in a modern way.</p>
+                        Sj&ouml;buse Records</b>, now brings you that good old music in a modern way.</p>
                     <h2>Extra content</h2>
                     <h3>Links</h3>
                     <p><a href="https://thebaseballfield.se/old/">The old TBF/VVM site</a></p>

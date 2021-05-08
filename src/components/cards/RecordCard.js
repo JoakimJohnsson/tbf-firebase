@@ -5,7 +5,7 @@ import Artist, {ArtistLink} from "../apiComponents/ArtistComponents";
 import * as COLUMNS from "../../constants/cols";
 import {TracksByRecordWithPlayerWithImage} from "../lists/TracksByRecord";
 import FormatInformation from "../microComponents/FormatInformation";
-import {FetchRecordFromId} from "../../api-functions/records-api";
+import {FetchRecordFromId} from "../../api-functions/api";
 import {colorRandomizer, fontRandomizer} from "../microComponents/microComponentsHelper";
 
 const RecordCard = ({route, id, name, artistId, coverUrl, fullWidth, year, format}) => {

@@ -1,5 +1,5 @@
 import React, {useContext} from 'react';
-import {FetchArtistFromId} from "../../api-functions/artists-api";
+import {FetchArtistFromId} from "../../api-functions/api";
 import firebase from "firebase";
 import imgUnavailable from "../../images/image_unavailable.png";
 import MembersByArtist from "../lists/MembersByArtist";

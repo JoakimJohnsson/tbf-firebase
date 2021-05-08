@@ -1,5 +1,5 @@
 import React from "react";
-import FetchMembersByArtist from "../../api-functions/members-api";
+import {FetchMembersByArtist} from "../../api-functions/api";
 import Person from "../apiComponents/PersonComponents";
 import LoadingStandard from "../microComponents/Loading/LoadingStandard";
 

@@ -1,5 +1,5 @@
 import React from "react";
-import {FetchTracksByArtist} from "../../api-functions/tracks-api";
+import {FetchTracksByArtist} from "../../api-functions/api";
 import TrackCard from "../cards/TrackCard";
 import LoadingStandard from "../microComponents/Loading/LoadingStandard";
 import {TracksPlayerListItemWithImage} from "../apiComponents/TrackComponents";

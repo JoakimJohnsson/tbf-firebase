@@ -1,6 +1,6 @@
 import React from "react";
 import LoadingStandard from "../microComponents/Loading/LoadingStandard";
-import FetchAllRecords from "../../api-functions/records-api";
+import {FetchAllRecords} from "../../api-functions/api";
 import {RecordCardWithSongsWithImage} from "../cards/RecordCard";
 
 const AllTracksListByRecord = () => {

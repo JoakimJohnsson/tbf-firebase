@@ -1,7 +1,6 @@
 import React, {useContext} from "react";
-import {FetchTrackFromId} from "../../api-functions/tracks-api";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {FetchRecordFromId} from "../../api-functions/records-api";
+import {FetchRecordFromId, FetchTrackFromId} from "../../api-functions/api";
 import imgUnavailable from "../../images/image_unavailable.png";
 import {ArtistLink} from "./ArtistComponents";
 import LoadingStandard from "../microComponents/Loading/LoadingStandard";

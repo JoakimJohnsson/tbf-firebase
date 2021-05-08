@@ -1,7 +1,7 @@
 import React, {useContext, useState} from 'react';
 import FormatInformation from "../microComponents/FormatInformation";
 import LoadingStandard from "../microComponents/Loading/LoadingStandard";
-import {FetchRecordFromId} from "../../api-functions/records-api";
+import {FetchRecordFromId} from "../../api-functions/api";
 import {ArtistLink} from "../apiComponents/ArtistComponents";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {Collapse} from "react-bootstrap";

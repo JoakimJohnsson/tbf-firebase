@@ -1,6 +1,6 @@
 import React from "react";
 import LoadingStandard from "../microComponents/Loading/LoadingStandard";
-import {FetchRecordsByArtist} from "../../api-functions/records-api";
+import {FetchRecordsByArtist} from "../../api-functions/api";
 import RecordCard from "../cards/RecordCard";
 import * as COLUMNS from "../../constants/cols";
 import {ArtistLink} from "../apiComponents/ArtistComponents";

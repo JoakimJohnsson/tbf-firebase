@@ -1,5 +1,5 @@
 import React from "react";
-import FetchAllRecords from "../../api-functions/records-api";
+import {FetchAllRecords} from "../../api-functions/api";
 import LoadingLazyBackground from "../microComponents/Loading/LoadingLazyBackground";
 import RecordCard from "../cards/RecordCard";
 

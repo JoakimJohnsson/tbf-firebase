@@ -1,8 +1,7 @@
 import React from 'react';
 import Artist from "../apiComponents/ArtistComponents";
-import {FetchTrackFromId} from "../../api-functions/tracks-api";
 import LoadingLazyBackground from "../microComponents/Loading/LoadingLazyBackground";
-import {FetchRecordFromId} from "../../api-functions/records-api";
+import {FetchRecordFromId, FetchTrackFromId} from "../../api-functions/api";
 import imgUnavailable from "../../images/image_unavailable.png";
 import {Link} from "react-router-dom";
 import {colorRandomizer} from "../microComponents/microComponentsHelper";

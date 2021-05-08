@@ -1,5 +1,5 @@
 import React from "react";
-import {FetchArtistFromId} from "../../api-functions/artists-api";
+import {FetchArtistFromId} from "../../api-functions/api";
 import {Link} from "react-router-dom";
 import LazyTextPlaceholder from "../microComponents/LazyTextPlaceholder";
 

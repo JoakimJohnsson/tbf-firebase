@@ -1,6 +1,6 @@
 import React, {useContext} from 'react';
 import {ArtistLinkAndTrackName} from "../apiComponents/ArtistComponents";
-import {FetchTrackFromId} from "../../api-functions/tracks-api";
+import {FetchTrackFromId} from "../../api-functions/api";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {Context} from "../MusicStore/MusicStore";
 

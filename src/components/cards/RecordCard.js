@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useContext} from "react";
 import {Link} from "react-router-dom";
 import imgUnavailable from "../../images/image_unavailable.png";
 import Artist, {ArtistLink} from "../apiComponents/ArtistComponents";
@@ -8,6 +8,7 @@ import FormatInformation from "../microComponents/FormatInformation";
 import {FetchRecordFromId} from "../../api-functions/records-api";
 import TrackPlayer from "./TrackPlayer";
 import {colorRandomizer, fontRandomizer} from "../microComponents/microComponentsHelper";
+import {Context} from "../MusicStore/MusicStore";
 
 const RecordCard = ({route, id, name, artistId, coverUrl, fullWidth, year, format}) => {
     return (
@@ -36,19 +37,12 @@ const RecordLink = (props) => {
 };
 
 const RecordCardWithSongsWithImage = ({id, name, artistId}) => {
-    const [currentTrack, setCurrentTrack] = useState(null);
-    const setCurrentTrackOnClick = (songId) => {
-        setCurrentTrack(songId);
-    }
-    const destroyCurrentTrack = () => {
-        setCurrentTrack(null);
-    }
-
+    const [trackState] = useContext(Context);
     return (
         <div className="record-card-with-tracks col-12">
             <h2 className={`section-header logo-font-family__${fontRandomizer().toString()}`}><div className={`d-inline text-color-variant__${colorRandomizer().toString()}`}><ArtistLink id={artistId} className={"text-uppercase"}/>: </div><span className="small">{name}</span></h2>
-            <TracksByRecordWithPlayerWithImage recordId={id} currentTrack={currentTrack} setCurrentTrackOnClick={setCurrentTrackOnClick}/>
-            {currentTrack ? <TrackPlayer id={currentTrack} key={currentTrack} destroyCurrentTrack={destroyCurrentTrack}/> : false}
+            <TracksByRecordWithPlayerWithImage recordId={id} />
+            {trackState.currentTrack ? <TrackPlayer id={trackState.currentTrack} key={trackState.currentTrack} /> : false}
         </div>
     )
 };

@@ -25,7 +25,7 @@ const AllTracksListByRecord = () => {
     return records.length ?
         (<div className="row">
             {records.map((record) =>
-                <RecordCardWithSongsWithImage id={record.id} name={record.name} artistId={record.artistId}/>
+                <RecordCardWithSongsWithImage id={record.id} key={record.id} name={record.name} artistId={record.artistId}/>
             )}
         </div>)
         :

@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useContext} from 'react';
 import {FetchArtistFromId} from "../../api-functions/artists-api";
 import firebase from "firebase";
 import imgUnavailable from "../../images/image_unavailable.png";
@@ -9,17 +9,12 @@ import TrackPlayer from "../cards/TrackPlayer";
 import CopyrightInformation from "../microComponents/CopyrightInformation";
 import ArtistDescription from "../microComponents/Descriptions/ArtistDescription";
 import {fontRandomizer, colorRandomizer} from "../microComponents/microComponentsHelper";
+import {Context} from "../MusicStore/MusicStore";
 
 const ArtistPage = ({match}) => {
+    const [trackState] = useContext(Context);
     const {params: {id}} = match;
     const artist = FetchArtistFromId(id);
-    const [currentTrack, setCurrentTrack] = useState(null);
-    const setCurrentTrackOnClick = (songId) => {
-        setCurrentTrack(songId);
-    }
-    const destroyCurrentTrack = () => {
-        setCurrentTrack(null);
-    }
 
     // Increment number of views
     const increment = firebase.firestore.FieldValue.increment(1);
@@ -50,8 +45,8 @@ const ArtistPage = ({match}) => {
                     <h2 className="section-header">Records</h2>
                     <RecordsByArtist artistId={id}/>
                     <h2 className="section-header">Tracks</h2>
-                    <TracksByArtistWithPlayer artistId={id} currentTrack={currentTrack} setCurrentTrackOnClick={setCurrentTrackOnClick}/>
-                    {currentTrack ? <TrackPlayer id={currentTrack} key={currentTrack} destroyCurrentTrack={destroyCurrentTrack}/> : false}
+                    <TracksByArtistWithPlayer artistId={id}/>
+                    {trackState.currentTrack ? <TrackPlayer id={trackState.currentTrack} key={trackState.currentTrack} /> : false}
                 </div>
                 <CopyrightInformation className={"d-block d-lg-none mt-5"}/>
             </div>

@@ -71,17 +71,11 @@
 }
 
 .track-card-dynamic__wrapper {
-  position: fixed;
-  width: 100vw;
-  left: 0;
-  bottom: 0;
-  z-index: 1040;
+  width: 100%;
   min-height: 90px;
-  background: $color-near-black;
   .track-card-dynamic {
     audio {
       width: 100%;
-      background: $color-near-black;
       @include media-breakpoint-up(lg) {
         width: 80%;
       }

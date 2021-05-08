@@ -48,22 +48,24 @@ library.add(faAirbnb, faDownload, faGoogle, faFacebookF, faArrowAltCircleLeft, f
     faMusic, faSearch, faUserAstronaut, faPlayCircle, faPlus, faTimes, faPen, faMinus, faChevronLeft, faChevronRight, faChevronDown, faChevronUp, faSpinner, faSave,
     faAngleDoubleDown, faCompactDisc, faUsersSlash, faRobot, faVrCardboard);
 
-const App = () => (
-    <MusicStore>
-        <Router>
-            <HeaderNavigation/>
-            <div className="container-fluid standard-container">
-                <Route exact path={ROUTES.START} component={StartPage}/>
-                <Route path={ROUTES.ARTISTS} component={ArtistsPage}/>
-                <Route path={ROUTES.ARTIST} component={ArtistPage}/>
-                <Route path={ROUTES.RECORDS} component={RecordsPage}/>
-                <Route path={ROUTES.RECORD} component={RecordPage}/>
-                <Route path={ROUTES.TRACKS} component={TracksPage}/>
-                <Route path={ROUTES.UPLOAD} component={UploadPage}/>
-            </div>
-            <Footer/>
-        </Router>
-    </MusicStore>
-);
+const App = () => {
+    return (
+        <MusicStore>
+            <Router>
+                <HeaderNavigation/>
+                <div className="container-fluid standard-container">
+                    <Route exact path={ROUTES.START} component={StartPage}/>
+                    <Route path={ROUTES.ARTISTS} component={ArtistsPage}/>
+                    <Route path={ROUTES.ARTIST} component={ArtistPage}/>
+                    <Route path={ROUTES.RECORDS} component={RecordsPage}/>
+                    <Route path={ROUTES.RECORD} component={RecordPage}/>
+                    <Route path={ROUTES.TRACKS} component={TracksPage}/>
+                    <Route path={ROUTES.UPLOAD} component={UploadPage}/>
+                </div>
+                <Footer/>
+            </Router>
+        </MusicStore>
+    )
+};
 
 export default App;

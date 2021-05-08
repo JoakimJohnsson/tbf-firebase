@@ -1,4 +1,4 @@
-import React, {useContext, useState} from 'react';
+import React, {useState} from 'react';
 import FormatInformation from "../microComponents/FormatInformation";
 import LoadingStandard from "../microComponents/Loading/LoadingStandard";
 import {FetchRecordFromId} from "../../api-functions/api";
@@ -7,13 +7,10 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {Collapse} from "react-bootstrap";
 import imgUnavailable from "../../images/image_unavailable.png";
 import TracksByRecordListSimple, {TracksByRecordWithPlayer} from "../lists/TracksByRecord";
-import TrackPlayer from "../cards/TrackPlayer";
 import CopyrightInformation from "../microComponents/CopyrightInformation";
 import RecordDescription from "../microComponents/Descriptions/RecordDescription";
-import {Context} from "../MusicStore/MusicStore";
 
 const RecordPage = ({match}) => {
-    const [trackState] = useContext(Context);
     const {params: {id}} = match;
     const record = FetchRecordFromId(id);
     const [open, setOpen] = useState(false);
@@ -59,9 +56,7 @@ const RecordPage = ({match}) => {
             <div className="standard-main-column">
                 <div className="standard-main-column__section">
                     <h2 className="section-header">Tracks</h2>
-
                     <TracksByRecordWithPlayer recordId={id} />
-                    {trackState.currentTrack ? <TrackPlayer id={trackState.currentTrack} key={trackState.currentTrack} /> : false}
                 </div>
                 <CopyrightInformation className={"d-block d-lg-none mt-5"}/>
             </div>

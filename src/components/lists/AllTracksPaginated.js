@@ -1,14 +1,11 @@
-import React, {useContext} from "react";
+import React from "react";
 import LoadingLazyBackground from "../microComponents/Loading/LoadingLazyBackground";
 import usePagination from "firestore-pagination-hook";
 import firebase from "firebase";
 import {TracksPlayerListItemWithImage} from "../apiComponents/TrackComponents";
-import TrackPlayer from "../cards/TrackPlayer";
 import LoadMoreButton from "../microComponents/Buttons/LoadMoreButton";
-import {Context} from "../MusicStore/MusicStore";
 
 const AllTracksPaginated = () => {
-    const [trackState] = useContext(Context);
     const {
         loadingMore,
         hasMore,
@@ -37,7 +34,6 @@ const AllTracksPaginated = () => {
                         </div>
                     }
                     </ul>
-                    {trackState.currentTrack ? <TrackPlayer id={trackState.currentTrack} key={trackState.currentTrack} /> : false}
                 </div>
             </div>
         )

@@ -12912,7 +12912,6 @@ img {
   opacity: 1 !important; }
 
 footer {
-  height: 85px;
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -12976,16 +12975,10 @@ footer {
       font-size: 1.2rem; } }
 
 .track-card-dynamic__wrapper {
-  position: fixed;
-  width: 100vw;
-  left: 0;
-  bottom: 0;
-  z-index: 1040;
-  min-height: 90px;
-  background: #0a0a0a; }
+  width: 100%;
+  min-height: 90px; }
   .track-card-dynamic__wrapper .track-card-dynamic audio {
-    width: 100%;
-    background: #0a0a0a; }
+    width: 100%; }
     @media (min-width: 992px) {
       .track-card-dynamic__wrapper .track-card-dynamic audio {
         width: 80%; } }

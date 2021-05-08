@@ -1,4 +1,6 @@
 // Format information
+import React from "react";
+
 function formatInformationRenderIcon(format) {
     switch (format) {
         case 'cd-r':
@@ -42,4 +44,14 @@ function fontRandomizer() {
     return randomizer(8, 1);
 }
 
-export {formatInformationRenderIcon, formatInformationRenderText, randomizer, colorRandomizer, fontRandomizer}
+const Debugger = ({logThis}) => {
+    console.log("DEBUGGER - LOG")
+    console.log("-------")
+    console.log(logThis)
+    console.log("-------")
+    return (
+        <></>
+    )
+}
+
+export {formatInformationRenderIcon, formatInformationRenderText, randomizer, colorRandomizer, fontRandomizer, Debugger}

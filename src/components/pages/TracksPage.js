@@ -1,6 +1,6 @@
 import React, {useContext} from 'react';
 import CopyrightInformation from "../microComponents/CopyrightInformation";
-import {AllTracksListByRecord} from "../lists/AllTracks";
+import AllTracksListByRecord from "../lists/AllTracks";
 import TrackPlayer from "../cards/TrackPlayer";
 import {Context} from "../MusicStore/MusicStore";
 

@@ -1,4 +1,4 @@
-import React, {useContext} from "react";
+import React from "react";
 import {Link} from "react-router-dom";
 import imgUnavailable from "../../images/image_unavailable.png";
 import Artist, {ArtistLink} from "../apiComponents/ArtistComponents";
@@ -6,9 +6,7 @@ import * as COLUMNS from "../../constants/cols";
 import {TracksByRecordWithPlayerWithImage} from "../lists/TracksByRecord";
 import FormatInformation from "../microComponents/FormatInformation";
 import {FetchRecordFromId} from "../../api-functions/records-api";
-import TrackPlayer from "./TrackPlayer";
 import {colorRandomizer, fontRandomizer} from "../microComponents/microComponentsHelper";
-import {Context} from "../MusicStore/MusicStore";
 
 const RecordCard = ({route, id, name, artistId, coverUrl, fullWidth, year, format}) => {
     return (
@@ -19,7 +17,9 @@ const RecordCard = ({route, id, name, artistId, coverUrl, fullWidth, year, forma
                     <Link to={`/${route}/${id}`}>
                         <p className={`card-title`}><Artist id={artistId}/></p>
                         <p className={`card-sub-title text-color-variant__${colorRandomizer().toString()}`}>{name}</p>
-                        <p className={`card-sub-title text-color-variant__${colorRandomizer().toString()}`}><FormatInformation format={format} text={false}/> {year}</p>
+                        <p className={`card-sub-title text-color-variant__${colorRandomizer().toString()}`}><FormatInformation format={format}
+                                                                                                                               text={false}/> {year}
+                        </p>
                     </Link>
                 </div>
             </div>
@@ -37,12 +37,14 @@ const RecordLink = (props) => {
 };
 
 const RecordCardWithSongsWithImage = ({id, name, artistId}) => {
-    const [trackState] = useContext(Context);
     return (
         <div className="record-card-with-tracks col-12">
-            <h2 className={`section-header logo-font-family__${fontRandomizer().toString()}`}><div className={`d-inline text-color-variant__${colorRandomizer().toString()}`}><ArtistLink id={artistId} className={"text-uppercase"}/>: </div><span className="small">{name}</span></h2>
-            <TracksByRecordWithPlayerWithImage recordId={id} />
-            {trackState.currentTrack ? <TrackPlayer id={trackState.currentTrack} key={trackState.currentTrack} /> : false}
+            <h2 className={`section-header logo-font-family__${fontRandomizer().toString()}`}>
+                <div className={`d-inline text-color-variant__${colorRandomizer().toString()}`}><ArtistLink id={artistId}
+                                                                                                            className={"text-uppercase"}/>:
+                </div>
+                <span className="small">{name}</span></h2>
+            <TracksByRecordWithPlayerWithImage recordId={id}/>
         </div>
     )
 };

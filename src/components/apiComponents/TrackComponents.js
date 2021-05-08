@@ -17,41 +17,38 @@ const Track = ({id}) => {
 };
 
 const TracksPlayerListItemWithImage = ({id}) => {
-
     const [trackState, setTrackState] = useContext(Context)
     const track = FetchTrackFromId(id);
+    const updateState = () => {
+        setTrackState({
+            activeTrack: id,
+            currentTrack: id
+        })
+    }
 
     return track.artistId ? (
-        <li className={id === trackState.currentTrack ? "tracks-player_li active" : "tracks-player_li"}>
-
-            <TracksPlayerImage track={track}/>
-
-            <p className="tracks-player__text mr-3 mb-0 flex-grow-1" onClick={() => {
-                setTrackState({
-                    activeTrack: id,
-                    currentTrack: id
-                })
-            }}><ArtistLink id={track.artistId} className={"text-uppercase d-none d-sm-inline"}/><span className="d-none d-sm-inline"> -</span> {track.name}</p>
-            <div className="d-flex align-items-center justify-content-end p-2">
-                <button className="tracks-player__button play mr-3"
-                        onClick={() => {
-                            setTrackState({
-                                activeTrack: id,
-                                currentTrack: id
-                            })
-                        }}>
-                    <span className="tracks-player__button-text">PLAY</span>
-                    <FontAwesomeIcon icon={"play-circle"}/>
-                </button>
-                <a className="tracks-player__button download" href={track.url} download={track.name}
-                >
-                    <span className="tracks-player__button-text">Download</span>
-                    <FontAwesomeIcon icon={"arrow-alt-circle-down"}/>
-                </a>
-            </div>
-
-        </li>
-    )
+            <li className={id === trackState.currentTrack ? "tracks-player_li active" : "tracks-player_li"}>
+                <TracksPlayerImage track={track}/>
+                <p className="tracks-player__text mr-3 mb-0 flex-grow-1"
+                   onClick={() => {
+                       updateState()
+                   }}><ArtistLink id={track.artistId} className={"text-uppercase d-none d-sm-inline"}/><span
+                    className="d-none d-sm-inline"> -</span> {track.name}</p>
+                <div className="d-flex align-items-center justify-content-end p-2">
+                    <button className="tracks-player__button play mr-3"
+                            onClick={() => {
+                                updateState()
+                            }}>
+                        <span className="tracks-player__button-text">PLAY</span>
+                        <FontAwesomeIcon icon={"play-circle"}/>
+                    </button>
+                    <a className="tracks-player__button download" href={track.url} download={track.name}>
+                        <span className="tracks-player__button-text">Download</span>
+                        <FontAwesomeIcon icon={"arrow-alt-circle-down"}/>
+                    </a>
+                </div>
+            </li>
+        )
         :
         (<LoadingStandard/>)
 };

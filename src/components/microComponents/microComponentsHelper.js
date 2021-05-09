@@ -33,6 +33,15 @@ function formatInformationRenderText(format) {
     }
 }
 
+// Prepare filter text to allow for å, ä and ö
+function prepareFilterText(filter) {
+    return filter
+        .toLowerCase()
+        .replace('ö', 'o')
+        .replace('ä', 'a')
+        .replace('å', 'a')
+}
+
 // Randomizer
 function randomizer(count, addOn) {
     return Math.floor(Math.random() * count) + addOn;
@@ -54,4 +63,4 @@ const Debugger = ({logThis}) => {
     )
 }
 
-export {formatInformationRenderIcon, formatInformationRenderText, randomizer, colorRandomizer, fontRandomizer, Debugger}
+export {formatInformationRenderIcon, formatInformationRenderText, prepareFilterText, randomizer, colorRandomizer, fontRandomizer, Debugger}

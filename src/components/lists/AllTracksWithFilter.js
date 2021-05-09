@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import LoadingStandard from "../microComponents/Loading/LoadingStandard";
 import {FetchAllTracks} from "../../api-functions/api";
 import {TracksPlayerListItemWithImage} from "../apiComponents/TrackComponents";
-import {Debugger} from "../microComponents/microComponentsHelper";
+import {Debugger, prepareFilterText} from "../microComponents/microComponentsHelper";
 
 const AllTracksWithFilter = () => {
     const [filter, setFilter] = useState('');
@@ -25,7 +25,7 @@ const AllTracksWithFilter = () => {
                         <ul className="tracks-player__list">
                             <Debugger logThis={tracks}/>
                             {tracks.filter(track => track.name.toLowerCase().includes(filter.toLowerCase()) ||
-                            track.artistId.toLowerCase().includes(filter.toLowerCase()))
+                            track.artistId.toLowerCase().includes(prepareFilterText(filter)) || filter === '')
                                 .map(track =>
                                 <TracksPlayerListItemWithImage key={track.id} id={track.id}/>
                             )}

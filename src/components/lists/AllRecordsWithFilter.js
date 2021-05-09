@@ -2,6 +2,7 @@ import React, {useState} from "react";
 import {FetchAllRecords} from "../../api-functions/api";
 import LoadingLazyBackground from "../microComponents/Loading/LoadingLazyBackground";
 import RecordCard from "../cards/RecordCard";
+import {prepareFilterText} from "../microComponents/microComponentsHelper";
 
 const AllRecordsWithFilter = ({fullWidth}) => {
     const [filter, setFilter] = useState('');
@@ -21,7 +22,7 @@ const AllRecordsWithFilter = ({fullWidth}) => {
                 </div>
                 <div className="row">
                     {records.filter(record => record.name.toLowerCase().includes(filter.toLowerCase()) ||
-                        record.artistId.toLowerCase().includes(filter.toLowerCase()) || filter === '')
+                        record.artistId.toLowerCase().includes(prepareFilterText(filter)) || filter === '')
                         .map(record =>
                         <RecordCard route="record" id={record.id} name={record.name} artistId={record.artistId} coverUrl={record.coverUrl}
                                     fullWidth={fullWidth} year={record.year} format={record.format} key={record.id}/>

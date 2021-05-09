@@ -73,6 +73,9 @@
 .track-card-dynamic__wrapper {
   width: 100%;
   min-height: 90px;
+  background: $color-black__trans-light;
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
   .track-card-dynamic {
     audio {
       width: 100%;
@@ -89,6 +92,7 @@
     display: inline-block;
     border-radius: 25px;
     border: 1px solid $color-border;
+    background: $color-near-black;
   }
 }
 .track-card {

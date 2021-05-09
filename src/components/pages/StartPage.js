@@ -1,8 +1,10 @@
 import React from 'react';
 import firebase from '../Firebase/firebase';
 import LoadingStandard from "../microComponents/Loading/LoadingStandard";
-import {FetchLastUpdatedArtistTimestamp, FetchLastUpdatedArtistId, FetchCounters,
-    FetchLastAddedRecordArtistId, FetchLastAddedRecordId, FetchLastAddedRecordTimestamp} from "../../api-functions/api";
+import {
+    FetchLastUpdatedArtistTimestamp, FetchLastUpdatedArtistId, FetchCounters,
+    FetchLastAddedRecordArtistId, FetchLastAddedRecordId, FetchLastAddedRecordTimestamp
+} from "../../api-functions/api";
 import {ArtistLink} from "../apiComponents/ArtistComponents";
 import AllArtistsPaginated from "../lists/AllArtistsPaginated";
 import IconLink from "../microComponents/Links/IconLink";
@@ -21,6 +23,7 @@ const StartPage = () => {
     const lastAddedRecordId = FetchLastAddedRecordId();
     const lastAddedRecordArtistId = FetchLastAddedRecordArtistId();
     const lastAddedRecordDate = new Date(FetchLastAddedRecordTimestamp().seconds * 1000);
+    const package_json = require('../../../package.json');
 
     let counters = FetchCounters();
     let countersAreFetched;
@@ -38,9 +41,28 @@ const StartPage = () => {
                     <h2>Extra content</h2>
                     <h3>Links</h3>
                     <p><a href="https://thebaseballfield.se/old/">The old TBF/VVM site</a></p>
-                    <p><a href="https://thebaseballfield.se/styleguide/">TBF & Friends react styleguide</a></p>
                     <h3>Video</h3>
                     <p>T.B.A</p>
+                    <h3>Documentation</h3>
+
+                    <div className="list-group-item list-group-item-warning flex-column align-items-start mb-2">
+                        <div className="d-flex w-100 justify-content-between mb-2">
+                            <h4 className="mb-1">Changelog</h4>
+                            <small>v. {package_json.version}</small>
+                        </div>
+                        <ol className="small">
+                        <li className="mb-1">Added global state for audio player. You are now able to listen to music while surfing the site.</li>
+                        <li className="mb-1">This enabled me to solve a bug on the Tracks page where multiple tracks were playing at the same time when you chose a new track from another record.</li>
+                        <li className="mb-1">The audio player also got a visual upgrade.</li>
+                        <li className="mb-1">Implemented a Styleguidist styleguide for component documentation.</li>
+                        <li className="mb-1">Behind the scenes, testing for the site is now powered by Jest.</li>
+                        </ol>
+                        <small>{lastUpdatedArtistDate.toLocaleDateString()}</small>
+                    </div>
+
+                    <p><a href="https://thebaseballfield.se/styleguide/">TBF & Friends react styleguide</a></p>
+
+
                     <CopyrightInformation className={"d-none d-lg-block"}/>
                 </div>
             </div>
@@ -48,7 +70,8 @@ const StartPage = () => {
                 <div className="standard-main-column__section">
                     <h2 className="section-header">Popular artists</h2>
                     <p className="small m-0">
-                        Last updated artist: <ArtistLink id={lastUpdatedArtistId} className={"text-uppercase"}/> ({lastUpdatedArtistDate.toLocaleDateString()}).
+                        Last updated artist: <ArtistLink id={lastUpdatedArtistId}
+                                                         className={"text-uppercase"}/> ({lastUpdatedArtistDate.toLocaleDateString()}).
                     </p>
                     <AllArtistsPaginated/>
                     <IconLink className={"ml-3"} link={ROUTES.ARTISTS} text={"See all artists"} icon={"user-astronaut"}/>
@@ -57,7 +80,8 @@ const StartPage = () => {
                     <h2 className="section-header">Popular records</h2>
                     <p className="small m-0">
                         Last added record: <RecordLink id={lastAddedRecordId}/> by <ArtistLink
-                        id={lastAddedRecordArtistId} className={"text-uppercase"}/> ({lastAddedRecordDate.toLocaleDateString()}). Total number of records: {counters.recordCounter}
+                        id={lastAddedRecordArtistId} className={"text-uppercase"}/> ({lastAddedRecordDate.toLocaleDateString()}). Total number of
+                        records: {counters.recordCounter}
                     </p>
                     <AllRecordsPaginated/>
                     <IconLink className={"ml-3"} link={ROUTES.RECORDS} text={"See all records"} icon={"compact-disc"}/>

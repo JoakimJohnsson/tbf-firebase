@@ -5,14 +5,14 @@ import FooterNavLink from "./FooterNavLink";
 import {Context} from "../MusicStore/MusicStore";
 import TrackPlayer from "../cards/TrackPlayer";
 
-const showUpload = false;
+const showUpload = true;
 
 const FooterNavigation = () => {
     const [trackState] = useContext(Context);
     return (
-        <Navbar className="navbar-footer p-0 d-flex flex-column" bg="dark" variant="dark" expand="true">
+        <Navbar className="navbar-footer p-0 d-flex flex-column" variant="dark" expand="true">
             {trackState.currentTrack ? <TrackPlayer id={trackState.currentTrack} key={trackState.currentTrack}/> : false}
-            <div className="d-flex flex-row">
+            <div className="d-flex flex-row w-100 justify-content-center bg-dark">
                 <FooterNavLink link={ROUTES.START} text={"Start"} icon={"home"}/>
                 <FooterNavLink link={ROUTES.ARTISTS} text={"Artists"} icon={"user-astronaut"}/>
                 <FooterNavLink link={ROUTES.RECORDS} text={"Records"} icon={"compact-disc"}/>

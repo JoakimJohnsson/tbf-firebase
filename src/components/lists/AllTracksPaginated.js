@@ -25,7 +25,7 @@ const AllTracksPaginated = () => {
                 <div className="col-12 px-3 pt-3">
                     <ul className="tracks-player__list">
                     {items.map(item => (
-                        <TracksPlayerListItemWithImage key={item.index} id={item.id} />
+                        <TracksPlayerListItemWithImage key={item.id} id={item.id} />
                     ))}
                     {
                         hasMore && !loadingMore &&

@@ -40,10 +40,10 @@ const RecordCardWithSongsWithImage = ({id, name, artistId}) => {
     return (
         <div className="record-card-with-tracks col-12">
             <h2 className={`section-header logo-font-family__${fontRandomizer().toString()}`}>
-                <div className={`d-inline text-color-variant__${colorRandomizer().toString()}`}><ArtistLink id={artistId}
-                                                                                                            className={"text-uppercase"}/>:
+                <div className={`d-inline text-color-variant__${colorRandomizer().toString()}`}>
+                    <ArtistLink id={artistId} className={"text-capitalize"}/>:
                 </div>
-                <span className="small">{name}</span></h2>
+                <span className="small"> {name}</span></h2>
             <TracksByRecordWithPlayerWithImage recordId={id}/>
         </div>
     )

@@ -278,6 +278,25 @@ export {FetchAllRecords, FetchRecordsByArtist, FetchRecordFromId};
 
 // TRACKS
 
+// Fetch all tracks
+function FetchAllTracks() {
+    const [tracks, setTracks] = useState([]);
+    useEffect(() => {
+        firebase
+            .firestore()
+            .collection('songs')
+            .orderBy('artistId', 'asc')
+            .onSnapshot((snapshot) => {
+                const newTracks = snapshot.docs.map((doc) => ({
+                    id: doc.id,
+                    ...doc.data()
+                }));
+                setTracks(newTracks)
+            })
+    }, []);
+    return tracks;
+}
+
 // Fetch tracks by record
 function FetchTracksByRecord(record) {
     const [tracks, setTracks] = useState([]);
@@ -332,4 +351,4 @@ function FetchTrackFromId(id) {
     return track;
 }
 
-export {FetchTracksByRecord, FetchTracksByArtist, FetchTrackFromId};
+export {FetchAllTracks, FetchTracksByRecord, FetchTracksByArtist, FetchTrackFromId};

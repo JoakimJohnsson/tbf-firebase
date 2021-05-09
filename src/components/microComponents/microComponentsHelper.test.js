@@ -1,4 +1,4 @@
-const { randomizer, colorRandomizer, fontRandomizer, formatInformationRenderIcon, formatInformationRenderText } = require("./microComponentsHelper")
+const { randomizer, colorRandomizer, fontRandomizer, formatInformationRenderIcon, formatInformationRenderText } = require("./microComponentsHelper");
 const STRING_FORMAT = '7" vinyl';
 const STRING_EXPECTED_ICON = 'record-vinyl';
 const STRING_EXPECTED_TEXT = '7" vinyl /';

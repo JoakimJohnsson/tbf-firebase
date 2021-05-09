@@ -5,7 +5,7 @@ import FooterNavLink from "./FooterNavLink";
 import {Context} from "../MusicStore/MusicStore";
 import TrackPlayer from "../cards/TrackPlayer";
 
-const showUpload = true;
+export const showUpload = false;
 
 const FooterNavigation = () => {
     const [trackState] = useContext(Context);

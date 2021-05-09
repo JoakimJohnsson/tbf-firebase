@@ -7,6 +7,7 @@ import {faAirbnb, faGoogle, faFacebookF} from '@fortawesome/free-brands-svg-icon
 import {faArrowAltCircleLeft, faCopyright} from '@fortawesome/free-regular-svg-icons';
 import {
     faWrench,
+    faFilter,
     faDownload,
     faHome,
     faArrowAltCircleDown,
@@ -44,7 +45,7 @@ import RecordPage from "../pages/RecordPage";
 import TracksPage from "../pages/TracksPage";
 import UploadPage from "../pages/UploadPage";
 
-library.add(faAirbnb, faDownload, faGoogle, faFacebookF, faArrowAltCircleLeft, faArrowAltCircleDown, faArrowDown, faArrowUp, faArrowAltCircleUp, faCopyright, faWrench, faHome, faRecordVinyl,
+library.add(faAirbnb, faFilter, faDownload, faGoogle, faFacebookF, faArrowAltCircleLeft, faArrowAltCircleDown, faArrowDown, faArrowUp, faArrowAltCircleUp, faCopyright, faWrench, faHome, faRecordVinyl,
     faMusic, faSearch, faUserAstronaut, faPlayCircle, faPlus, faTimes, faPen, faMinus, faChevronLeft, faChevronRight, faChevronDown, faChevronUp, faSpinner, faSave,
     faAngleDoubleDown, faCompactDisc, faUsersSlash, faRobot, faVrCardboard);
 

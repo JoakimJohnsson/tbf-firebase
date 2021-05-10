@@ -40,6 +40,7 @@ function prepareFilterText(filter) {
         .replace('ö', 'o')
         .replace('ä', 'a')
         .replace('å', 'a')
+        .replace('-', ' ')
 }
 
 // Randomizer

@@ -17,7 +17,7 @@ const AllTracksWithFilter = () => {
                     <div className="col-12 px-3 pt-3">
                         <ul className="tracks-player__list">
                             {tracks.filter(track => track.name.toLowerCase().includes(filter.toLowerCase()) ||
-                                track.artistId.toLowerCase().includes(prepareFilterText(filter)) || filter === '')
+                                prepareFilterText(track.artistId).includes(prepareFilterText(filter)) || filter === '')
                                 .map(track =>
                                     <TracksPlayerListItemWithImage key={track.id} id={track.id}/>
                                 )}

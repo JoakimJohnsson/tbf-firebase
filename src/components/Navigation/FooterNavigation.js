@@ -17,19 +17,19 @@ const FooterNavigation = () => {
     setGlobalTrackList(FetchAllTracks());
 
     return globalTrackList.length ? (
-        <Navbar className="navbar-footer p-0 d-flex flex-column" variant="dark" expand="true">
-            {trackState.currentTrack ? <TrackPlayer id={trackState.currentTrack} key={trackState.currentTrack}/> : false}
-            <div className="d-flex flex-row w-100 justify-content-center bg-dark">
-                <FooterNavLink link={ROUTES.START} text={"Start"} icon={"home"}/>
-                <FooterNavLink link={ROUTES.ARTISTS} text={"Artists"} icon={"user-astronaut"}/>
-                <FooterNavLink link={ROUTES.RECORDS} text={"Records"} icon={"compact-disc"}/>
-                <FooterNavLink link={ROUTES.TRACKS} text={"Tracks"} icon={"music"}/>
-                {showUpload ? <FooterNavLink link={ROUTES.UPLOAD} text={"Upload"} icon={"plus"}/> : false}
-            </div>
-        </Navbar>
-    )
+            <Navbar className="navbar-footer p-0 d-flex flex-column" variant="dark" expand="true">
+                {trackState.currentTrack ? <TrackPlayer id={trackState.currentTrack} key={trackState.currentTrack}/> : false}
+                <div className="d-flex flex-row w-100 justify-content-center bg-dark">
+                    <FooterNavLink link={ROUTES.START} text={"Start"} icon={"home"}/>
+                    <FooterNavLink link={ROUTES.ARTISTS} text={"Artists"} icon={"user-astronaut"}/>
+                    <FooterNavLink link={ROUTES.RECORDS} text={"Records"} icon={"compact-disc"}/>
+                    <FooterNavLink link={ROUTES.TRACKS} text={"Tracks"} icon={"music"}/>
+                    {showUpload ? <FooterNavLink link={ROUTES.UPLOAD} text={"Upload"} icon={"plus"}/> : false}
+                </div>
+            </Navbar>
+        )
         :
-        <LoadingStandard />
+        <LoadingStandard/>
 };
 
 export default FooterNavigation;

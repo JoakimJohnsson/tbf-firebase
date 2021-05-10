@@ -22,7 +22,7 @@ const TracksByArtistWithPlayer = ({artistId, currentTrack, setCurrentTrackOnClic
     return tracks.length ?
         (<ul className="tracks-player__list">
             {tracks.map((track) =>
-                <TracksPlayerListItemWithImage key={track.index} id={track.id} setCurrentTrack={setCurrentTrackOnClick} currentTrack={currentTrack}/>
+                <TracksPlayerListItemWithImage key={track.id} id={track.id} setCurrentTrack={setCurrentTrackOnClick} currentTrack={currentTrack}/>
             )}
         </ul>)
         :

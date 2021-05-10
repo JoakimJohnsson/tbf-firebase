@@ -15,7 +15,7 @@ const AllRecordsWithFilter = ({fullWidth}) => {
                 <FilterInput filter={filter} setFilter={setFilter} placeHolder={"Filter by artist, record or year"}/>
                 <div className="row">
                     {records.filter(record => record.name.toLowerCase().includes(filter.toLowerCase()) ||
-                        record.artistId.toLowerCase().includes(prepareFilterText(filter)) ||
+                        prepareFilterText(record.artistId).includes(prepareFilterText(filter)) ||
                         record.year.toString().toLowerCase().includes(prepareFilterText(filter)) || filter === '')
                         .map(record =>
                             <RecordCard route="record" id={record.id} name={record.name} artistId={record.artistId} coverUrl={record.coverUrl}

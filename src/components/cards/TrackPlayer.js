@@ -33,8 +33,21 @@ const TrackPlayerContent = () => {
     return track && track.artistId ?
         (<div className="track-card-dynamic">
             <div className="p-3 text-center">
+                <div className="track-card-dynamic__info px-3 py-1 mr-2">
+                    <ArtistLinkAndTrackName id={track.artistId} trackName={track.name}/>
+                    <button className="btn btn-fa__primary py-1 pl-3" aria-label="Close song"
+                            onClick={() => {
+                                setTrackState({
+                                    currentTrack: null
+                                })
+                            }}>
+                        <FontAwesomeIcon icon={"times"}/>
+                    </button>
+                </div>
 
-                <button className="btn btn-fa__primary mr-3" aria-label="Previous Song"
+            </div>
+            <div className="text-center">
+                <button className="btn btn-fa__primary mx-4 p-2" aria-label="Previous Song"
                         onClick={() => {
                             setTrackState({
                                 currentTrack: globalTrackList[trackIndex - 1].id
@@ -42,10 +55,7 @@ const TrackPlayerContent = () => {
                         }}>
                     <FontAwesomeIcon icon={"chevron-left"} size={"2x"}/>
                 </button>
-
-                <span className="track-card-dynamic__info px-3 py-1 mr-2"><ArtistLinkAndTrackName id={track.artistId} trackName={track.name}/></span>
-
-                <button className="btn btn-fa__primary mx-3" aria-label="Next Song"
+                <button className="btn btn-fa__primary mx-4 p-2" aria-label="Next Song"
                         onClick={() => {
                             setTrackState({
                                 currentTrack: globalTrackList[trackIndex + 1].id
@@ -53,19 +63,8 @@ const TrackPlayerContent = () => {
                         }}>
                     <FontAwesomeIcon icon={"chevron-right"} size={"2x"}/>
                 </button>
-
-                <button className="btn btn-fa__primary" aria-label="Close song"
-                        onClick={() => {
-                            setTrackState({
-                                currentTrack: null
-                            })
-                        }}>
-                    <FontAwesomeIcon icon={"times"}/>
-                </button>
-
-
-
             </div>
+
             <div className="px-3 px-md-5 pb-3 text-center">
                 <audio controls autoPlay={true}>
                     <source src={track.url} type="audio/mpeg"/>

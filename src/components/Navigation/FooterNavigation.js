@@ -4,12 +4,19 @@ import Navbar from 'react-bootstrap/Navbar';
 import FooterNavLink from "./FooterNavLink";
 import {Context} from "../MusicStore/MusicStore";
 import TrackPlayer from "../cards/TrackPlayer";
+import {GlobalTrackContext} from "../MusicStore/GlobalTrackStore";
+import {FetchAllTracks} from "../../api-functions/api";
+import LoadingStandard from "../microComponents/Loading/LoadingStandard";
 
 export const showUpload = false;
 
 const FooterNavigation = () => {
     const [trackState] = useContext(Context);
-    return (
+    const [globalTrackList, setGlobalTrackList] = useContext(GlobalTrackContext);
+
+    setGlobalTrackList(FetchAllTracks());
+
+    return globalTrackList.length ? (
         <Navbar className="navbar-footer p-0 d-flex flex-column" variant="dark" expand="true">
             {trackState.currentTrack ? <TrackPlayer id={trackState.currentTrack} key={trackState.currentTrack}/> : false}
             <div className="d-flex flex-row w-100 justify-content-center bg-dark">
@@ -21,6 +28,8 @@ const FooterNavigation = () => {
             </div>
         </Navbar>
     )
+        :
+        <LoadingStandard />
 };
 
 export default FooterNavigation;

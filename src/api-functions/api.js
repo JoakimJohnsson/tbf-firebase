@@ -1,5 +1,7 @@
-import {useState, useEffect} from 'react';
+import {useState, useEffect, useContext} from 'react';
 import firebase from "firebase";
+import {Context} from "../components/MusicStore/MusicStore";
+import {GlobalTrackContext} from "../components/MusicStore/GlobalTrackStore";
 
 // ARTISTS
 
@@ -336,19 +338,11 @@ function FetchTracksByArtist(artistId) {
     return tracks;
 }
 
-// Fetch track from id
+// Fetch global track list track from id
 function FetchTrackFromId(id) {
-    const [track, setTrack] = useState([]);
-    useEffect(() => {
-        firebase
-            .firestore()
-            .collection('songs')
-            .doc(id)
-            .get().then(function (doc) {
-            setTrack(doc.data());
-        });
-    }, [id]);
-    return track;
+    let globalTrackList = useContext(GlobalTrackContext);
+    globalTrackList = globalTrackList[0];
+    return globalTrackList.find(e => e.id === id);
 }
 
 export {FetchAllTracks, FetchTracksByRecord, FetchTracksByArtist, FetchTrackFromId};

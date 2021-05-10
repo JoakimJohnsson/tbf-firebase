@@ -20,7 +20,7 @@ const TrackPlayer = () => {
 const TrackPlayerContent = () => {
     const [trackState, setTrackState] = useContext(Context);
     const track = FetchTrackFromId(trackState.currentTrack);
-    return track.artistId ?
+    return track && track.artistId ?
         (<div className="track-card-dynamic">
             <div className="p-3 text-center">
                 <span className="track-card-dynamic__info px-3 py-1 mr-2"><ArtistLinkAndTrackName id={track.artistId} trackName={track.name}/></span>

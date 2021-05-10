@@ -1,5 +1,4 @@
 import React from 'react';
-import MusicStore from "../MusicStore/MusicStore";
 import {BrowserRouter as Router, Route} from 'react-router-dom';
 import * as ROUTES from '../../constants/routes';
 import {library} from '@fortawesome/fontawesome-svg-core';
@@ -44,6 +43,8 @@ import RecordsPage from "../pages/RecordsPage";
 import RecordPage from "../pages/RecordPage";
 import TracksPage from "../pages/TracksPage";
 import UploadPage from "../pages/UploadPage";
+import MusicStore from "../MusicStore/MusicStore";
+import GlobalTrackStore from "../MusicStore/GlobalTrackStore";
 
 library.add(faAirbnb, faFilter, faDownload, faGoogle, faFacebookF, faArrowAltCircleLeft, faArrowAltCircleDown, faArrowDown, faArrowUp, faArrowAltCircleUp, faCopyright, faWrench, faHome, faRecordVinyl,
     faMusic, faSearch, faUserAstronaut, faPlayCircle, faPlus, faTimes, faPen, faMinus, faChevronLeft, faChevronRight, faChevronDown, faChevronUp, faSpinner, faSave,
@@ -52,19 +53,21 @@ library.add(faAirbnb, faFilter, faDownload, faGoogle, faFacebookF, faArrowAltCir
 const App = () => {
     return (
         <MusicStore>
-            <Router>
-                <HeaderNavigation/>
-                <div className="container-fluid standard-container">
-                    <Route exact path={ROUTES.START} component={StartPage}/>
-                    <Route path={ROUTES.ARTISTS} component={ArtistsPage}/>
-                    <Route path={ROUTES.ARTIST} component={ArtistPage}/>
-                    <Route path={ROUTES.RECORDS} component={RecordsPage}/>
-                    <Route path={ROUTES.RECORD} component={RecordPage}/>
-                    <Route path={ROUTES.TRACKS} component={TracksPage}/>
-                    <Route path={ROUTES.UPLOAD} component={UploadPage}/>
-                </div>
-                <Footer/>
-            </Router>
+            <GlobalTrackStore>
+                <Router>
+                    <HeaderNavigation/>
+                    <div className="container-fluid standard-container">
+                        <Route exact path={ROUTES.START} component={StartPage}/>
+                        <Route path={ROUTES.ARTISTS} component={ArtistsPage}/>
+                        <Route path={ROUTES.ARTIST} component={ArtistPage}/>
+                        <Route path={ROUTES.RECORDS} component={RecordsPage}/>
+                        <Route path={ROUTES.RECORD} component={RecordPage}/>
+                        <Route path={ROUTES.TRACKS} component={TracksPage}/>
+                        <Route path={ROUTES.UPLOAD} component={UploadPage}/>
+                    </div>
+                    <Footer/>
+                </Router>
+            </GlobalTrackStore>
         </MusicStore>
     )
 };

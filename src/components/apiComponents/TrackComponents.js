@@ -24,7 +24,7 @@ const TracksPlayerListItemWithImage = ({id}) => {
         })
     }
 
-    return track.artistId ? (
+    return track && track.artistId ? (
             <li className={id === trackState.currentTrack ? "tracks-player_li active" : "tracks-player_li"}>
                 <TracksPlayerImage track={track}/>
                 <p className="tracks-player__text mr-3 mb-0 flex-grow-1"

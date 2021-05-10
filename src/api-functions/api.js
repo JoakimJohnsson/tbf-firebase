@@ -1,6 +1,5 @@
 import {useState, useEffect, useContext} from 'react';
 import firebase from "firebase";
-import {Context} from "../components/MusicStore/MusicStore";
 import {GlobalTrackContext} from "../components/MusicStore/GlobalTrackStore";
 
 // ARTISTS

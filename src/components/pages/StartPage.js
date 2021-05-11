@@ -32,7 +32,7 @@ const StartPage = () => {
 
     return lastUpdatedArtistId.length && lastAddedRecordId.length && lastAddedRecordArtistId.length && countersAreFetched ?
         (<div className="row">
-            <div className="standard-secondary-column">
+            <div className="start-page-secondary-column">
                 <div className="standard-box-wrapper__near-dark mb-5">
                     <h1>The Baseball Field & Friends</h1>
                     <p>The music scene in Nyk&ouml;ping has delivered great music since the early 90's. </p>
@@ -67,7 +67,7 @@ const StartPage = () => {
                     <CopyrightInformation className={"d-none d-lg-block"}/>
                 </div>
             </div>
-            <div className="standard-main-column">
+            <div className="start-page-main-column">
                 <div className="standard-main-column__section">
                     <h2 className="section-header">Popular artists</h2>
                     <p className="small m-0">

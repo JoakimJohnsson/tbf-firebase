@@ -54,7 +54,7 @@ const TracksPlayerListItemWithImage = ({id}) => {
             </li>
         )
         :
-        (<LoadingStandard/>)
+        (<LoadingStandard spinning={true}/>)
 };
 
 const TracksPlayerImage = ({track}) => {

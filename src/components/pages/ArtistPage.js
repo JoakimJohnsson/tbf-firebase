@@ -4,7 +4,6 @@ import firebase from "firebase";
 import imgUnavailable from "../../images/image_unavailable.png";
 import MembersByArtist from "../lists/MembersByArtist";
 import RecordsByArtist from "../lists/RecordsByArtist";
-import {TracksByArtistWithPlayer} from "../lists/TracksByArtist";
 import CopyrightInformation from "../microComponents/CopyrightInformation";
 import ArtistDescription from "../microComponents/Descriptions/ArtistDescription";
 import {fontRandomizer, colorRandomizer} from "../microComponents/microComponentsHelper";

@@ -28,15 +28,15 @@ const TrackPlayerContent = () => {
     let trackIndex = globalTrackList.indexOf(globalTrackList.find(e => e.id === track.id));
 
     const playAudio = () => {
-        const tbfAudioPlayer = document.getElementsByClassName("tbf-audio-player")[0];
+        const tbfAudioPlayer = document.getElementById("tbf-audio-player");
         tbfAudioPlayer.play();
-        setPlaying(true)
+        setPlaying(true);
     }
 
     const pauseAudio = () => {
-        const tbfAudioPlayer = document.getElementsByClassName("tbf-audio-player")[0];
+        const tbfAudioPlayer = document.getElementById("tbf-audio-player");
         tbfAudioPlayer.pause();
-        setPlaying(false)
+        setPlaying(false);
     }
 
     const loadPreviousTrack = () => {
@@ -76,42 +76,44 @@ const TrackPlayerContent = () => {
                         onClick={() => {
                             loadPreviousTrack();
                         }}>
-                    <FontAwesomeIcon icon={"step-backward"} size={"2x"}/>
+                    <FontAwesomeIcon icon={"step-backward"} size={"1x"}/>
                 </button>
 
                 {playing ?
 
-                    <button className="btn btn-fa__primary mx-4 p-2" aria-label="Next Song"
+                    <button className="btn btn-fa__tertiary mx-4 p-2" aria-label="Next Song"
                             onClick={pauseAudio}>
-                        <FontAwesomeIcon icon={"pause"} size={"2x"}/>
+                        <FontAwesomeIcon icon={"pause"} size={"1x"}/>
                     </button>
 
                     :
-                    <button className="btn btn-fa__primary mx-4 p-2" aria-label="Next Song"
+                    <button className="btn btn-fa__secondary mx-4 p-2" aria-label="Next Song"
                             onClick={playAudio}>
-                        <FontAwesomeIcon icon={"play"} size={"2x"}/>
+                        <FontAwesomeIcon icon={"play"} size={"1x"}/>
                     </button>
                 }
                 <button className="btn btn-fa__primary mx-4 p-2" aria-label="Next Song"
                         onClick={() => {
                             loadNextTrack();
                         }}>
-                    <FontAwesomeIcon icon={"step-forward"} size={"2x"}/>
+                    <FontAwesomeIcon icon={"step-forward"} size={"1x"}/>
                 </button>
-
-
+                <div className="d-flex justify-content-center">
+                    <div className="progress w-75">
+                        <div className={playing ? "progress-bar bg-secondary w-100" : "progress-bar bg-success w-100"} role="progressbar"
+                             aria-valuenow="25" aria-valuemin="0"
+                             aria-valuemax="100"></div>
+                    </div>
+                </div>
             </div>
-
             <div className="px-3 px-md-5 pb-3 text-center">
-                <audio className="tbf-audio-player" autoPlay={true}>
+                <audio id="tbf-audio-player" autoPlay={true}>
                     <source src={track.url} type="audio/mpeg"/>
                     <p>
                         Your browser doesn't support HTML5 audio.
                     </p>
                 </audio>
             </div>
-
-
         </div>)
         :
         ""

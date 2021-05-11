@@ -32,7 +32,7 @@ const FooterNavigation = () => {
             </Navbar>
         )
         :
-        <LoadingStandard/>
+        <LoadingStandard spinning={true}/>
 };
 
 export default FooterNavigation;

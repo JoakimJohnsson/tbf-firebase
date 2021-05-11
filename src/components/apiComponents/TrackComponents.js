@@ -27,11 +27,17 @@ const TracksPlayerListItemWithImage = ({id}) => {
     return track && track.artistId ? (
             <li className={id === trackState.currentTrack ? "tracks-player_li active" : "tracks-player_li"}>
                 <TracksPlayerImage track={track}/>
-                <p className="tracks-player__text mr-3 mb-0 flex-grow-1"
-                   onClick={() => {
-                       updateState()
-                   }}><ArtistLink id={track.artistId} className={"text-uppercase d-none d-sm-inline"}/><span
-                    className="d-none d-sm-inline"> -</span> {track.name}</p>
+                <div className="tracks-player__text mr-3 mb-0 flex-grow-1"
+                     onClick={() => {
+                         updateState()
+                     }}>
+
+                    <p className="d-flex flex-column justify-content-center m-0 flex-md-row justify-content-md-start">
+                        <ArtistLink id={track.artistId} className={"text-uppercase"}/>
+                        <span className="d-none d-md-inline"> &nbsp; - &nbsp;</span> <span>{track.name}</span>
+                    </p>
+                </div>
+
                 <div className="d-flex align-items-center justify-content-end p-2">
                     <button className="tracks-player__button play mr-3"
                             onClick={() => {

@@ -8,6 +8,7 @@ import {TracksByArtistWithPlayer} from "../lists/TracksByArtist";
 import CopyrightInformation from "../microComponents/CopyrightInformation";
 import ArtistDescription from "../microComponents/Descriptions/ArtistDescription";
 import {fontRandomizer, colorRandomizer} from "../microComponents/microComponentsHelper";
+import TracksByArtistPaginated from "../lists/TracksByArtistPaginated";
 
 const ArtistPage = ({match}) => {
     const {params: {id}} = match;
@@ -42,7 +43,7 @@ const ArtistPage = ({match}) => {
                     <h2 className="section-header">Records</h2>
                     <RecordsByArtist artistId={id}/>
                     <h2 className="section-header">Tracks</h2>
-                    <TracksByArtistWithPlayer artistId={id}/>
+                    <TracksByArtistPaginated artistId={id}/>
                 </div>
                 <CopyrightInformation className={"d-block d-lg-none mt-5"}/>
             </div>

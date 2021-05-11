@@ -286,7 +286,7 @@ function FetchAllTracks() {
         firebase
             .firestore()
             .collection('songs')
-            .orderBy('artistId', 'asc')
+            .orderBy('recordId', 'asc')
             .onSnapshot((snapshot) => {
                 const newTracks = snapshot.docs.map((doc) => ({
                     id: doc.id,

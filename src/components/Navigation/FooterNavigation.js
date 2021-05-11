@@ -1,4 +1,4 @@
-import React, {useContext} from 'react';
+import React, {useContext, useEffect} from 'react';
 import * as ROUTES from '../../constants/routes';
 import Navbar from 'react-bootstrap/Navbar';
 import FooterNavLink from "./FooterNavLink";
@@ -13,8 +13,11 @@ export const showUpload = false;
 const FooterNavigation = () => {
     const [trackState] = useContext(Context);
     const [globalTrackList, setGlobalTrackList] = useContext(GlobalTrackContext);
+    const tracks = FetchAllTracks();
 
-    setGlobalTrackList(FetchAllTracks());
+    useEffect(() => {
+        setGlobalTrackList(tracks);
+    });
 
     return globalTrackList.length ? (
             <Navbar className="navbar-footer p-0 d-flex flex-column" variant="dark" expand="true">

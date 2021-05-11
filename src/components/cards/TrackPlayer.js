@@ -1,4 +1,4 @@
-import React, {useContext} from 'react';
+import React, {useContext, useState} from 'react';
 import {ArtistLinkAndTrackName} from "../apiComponents/ArtistComponents";
 import {FetchTrackFromId} from "../../api-functions/api";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
@@ -10,7 +10,7 @@ const TrackPlayer = () => {
     return (
         <div className="track-card-dynamic__wrapper">
             {trackState.currentTrack ?
-                <TrackPlayerContent />
+                <TrackPlayerContent/>
                 :
                 ""
             }
@@ -20,15 +20,40 @@ const TrackPlayer = () => {
 
 const TrackPlayerContent = () => {
     const [trackState, setTrackState] = useContext(Context);
+    const [playing, setPlaying] = useState(true);
     const track = FetchTrackFromId(trackState.currentTrack);
-
     let globalTrackList = useContext(GlobalTrackContext);
     globalTrackList = globalTrackList[0];
-
+    let listLength = globalTrackList.length;
     let trackIndex = globalTrackList.indexOf(globalTrackList.find(e => e.id === track.id));
 
-    console.log("trackIndex");
-    console.log(trackIndex);
+    const playAudio = () => {
+        const tbfAudioPlayer = document.getElementsByClassName("tbf-audio-player")[0];
+        tbfAudioPlayer.play();
+        setPlaying(true)
+    }
+
+    const pauseAudio = () => {
+        const tbfAudioPlayer = document.getElementsByClassName("tbf-audio-player")[0];
+        tbfAudioPlayer.pause();
+        setPlaying(false)
+    }
+
+    const loadPreviousTrack = () => {
+        if (trackIndex > 0) {
+            setTrackState({
+                currentTrack: globalTrackList[trackIndex - 1].id
+            })
+        }
+    }
+
+    const loadNextTrack = () => {
+        if (trackIndex < listLength - 1) {
+            setTrackState({
+                currentTrack: globalTrackList[trackIndex + 1].id
+            })
+        }
+    }
 
     return track && track.artistId ?
         (<div className="track-card-dynamic">
@@ -49,30 +74,44 @@ const TrackPlayerContent = () => {
             <div className="text-center">
                 <button className="btn btn-fa__primary mx-4 p-2" aria-label="Previous Song"
                         onClick={() => {
-                            setTrackState({
-                                currentTrack: globalTrackList[trackIndex - 1].id
-                            })
+                            loadPreviousTrack();
                         }}>
-                    <FontAwesomeIcon icon={"chevron-left"} size={"2x"}/>
+                    <FontAwesomeIcon icon={"step-backward"} size={"2x"}/>
                 </button>
+
+                {playing ?
+
+                    <button className="btn btn-fa__primary mx-4 p-2" aria-label="Next Song"
+                            onClick={pauseAudio}>
+                        <FontAwesomeIcon icon={"pause"} size={"2x"}/>
+                    </button>
+
+                    :
+                    <button className="btn btn-fa__primary mx-4 p-2" aria-label="Next Song"
+                            onClick={playAudio}>
+                        <FontAwesomeIcon icon={"play"} size={"2x"}/>
+                    </button>
+                }
                 <button className="btn btn-fa__primary mx-4 p-2" aria-label="Next Song"
                         onClick={() => {
-                            setTrackState({
-                                currentTrack: globalTrackList[trackIndex + 1].id
-                            })
+                            loadNextTrack();
                         }}>
-                    <FontAwesomeIcon icon={"chevron-right"} size={"2x"}/>
+                    <FontAwesomeIcon icon={"step-forward"} size={"2x"}/>
                 </button>
+
+
             </div>
 
             <div className="px-3 px-md-5 pb-3 text-center">
-                <audio controls autoPlay={true}>
+                <audio className="tbf-audio-player" autoPlay={true}>
                     <source src={track.url} type="audio/mpeg"/>
                     <p>
                         Your browser doesn't support HTML5 audio.
                     </p>
                 </audio>
             </div>
+
+
         </div>)
         :
         ""

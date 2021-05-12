@@ -82,7 +82,6 @@ const AudioPlayer = ({ track }) => {
 
     useEffect(() => {
         if (isPlaying) {
-            console.log("isPlaying", isPlaying);
             audioRef.current.play();
             startTimer();
         } else {
@@ -93,9 +92,6 @@ const AudioPlayer = ({ track }) => {
     // Handles cleanup and setup when changing tracks
     useEffect(() => {
         audioRef.current.pause();
-
-        console.log("Im here now ");
-
         audioRef.current = new Audio(track.url);
         setTrackProgress(audioRef.current.currentTime);
 

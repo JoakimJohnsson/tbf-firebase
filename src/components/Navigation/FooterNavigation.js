@@ -3,7 +3,7 @@ import * as ROUTES from '../../constants/routes';
 import Navbar from 'react-bootstrap/Navbar';
 import FooterNavLink from "./FooterNavLink";
 import {Context} from "../MusicStore/MusicStore";
-import TrackPlayer from "../cards/TrackPlayer";
+import TrackPlayer from "../TrackPlayer/TrackPlayer";
 import {GlobalTrackContext} from "../MusicStore/GlobalTrackStore";
 import {FetchAllTracks} from "../../api-functions/api";
 import LoadingStandard from "../microComponents/Loading/LoadingStandard";

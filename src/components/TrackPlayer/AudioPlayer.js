@@ -66,7 +66,6 @@ const AudioPlayer = ({ track }) => {
             setTrackState({
                 currentTrack: globalTrackList[trackIndex - 1].id
             })
-            console.log("TrackState: ", trackState);
         }
 
     };
@@ -76,12 +75,12 @@ const AudioPlayer = ({ track }) => {
             setTrackState({
                 currentTrack: globalTrackList[trackIndex + 1].id
             })
-            console.log("TrackState: ", trackState);
         }
     };
 
     useEffect(() => {
         if (isPlaying) {
+            console.log("TrackState: ", trackState.currentTrack);
             audioRef.current.play();
             startTimer();
         } else {

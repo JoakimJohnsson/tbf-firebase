@@ -8,8 +8,14 @@ const STRING_UNEXPECTED_TEXT = 'Poo foo yoo /';
 const STRING_UNKNOWN = 'unknown /';
 
 // Format information render icon tests
-test('Render icon - Format string: "' + STRING_FORMAT + '" returns icon string: "' + STRING_EXPECTED_ICON + '".', () => {
-    expect(formatInformationRenderIcon(STRING_FORMAT)).toBe(STRING_EXPECTED_ICON);
+test('Render icon - Format string: 7" vinyl returns icon string: record-vinyl.', () => {
+    // Arrange
+    const testString = '7" vinyl';
+    const expectedString = 'record-vinyl';
+    // Act
+    const result = formatInformationRenderIcon(testString);
+    // Assert
+    expect(result).toBe(expectedString);
 });
 test('Render icon - Missing format returns default icon string: "' + STRING_ICON_DEFAULT + '".', () => {
     expect(formatInformationRenderIcon()).toBe(STRING_ICON_DEFAULT);

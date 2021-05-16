@@ -2,7 +2,7 @@ import React, {useContext} from "react";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {FetchRecordFromId, FetchTrackFromId} from "../../api-functions/api";
 import imgUnavailable from "../../images/image_unavailable.png";
-import {ArtistLink} from "./ArtistComponents";
+import Artist from "./ArtistComponents";
 import LoadingStandard from "../microComponents/Loading/LoadingStandard";
 import {Context} from "../MusicStore/MusicStore";
 
@@ -31,9 +31,8 @@ const TracksPlayerListItemWithImage = ({id}) => {
                      onClick={() => {
                          updateState()
                      }}>
-
                     <p className="d-flex flex-column justify-content-center m-0 flex-md-row justify-content-md-start">
-                        <ArtistLink id={track.artistId} className={"text-uppercase"}/>
+                        <span className="text-uppercase"><Artist id={track.artistId} /></span>
                         <span className="d-none d-md-inline"> &nbsp; - &nbsp;</span> <span>{track.name}</span>
                     </p>
                 </div>

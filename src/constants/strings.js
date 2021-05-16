@@ -9,7 +9,7 @@ export const FORMAT = {
         ICON: 'compact-disc'
     },
     2: {
-        FORMAT: '7\" vinyl',
+        FORMAT: '7" vinyl',
         ICON: 'record-vinyl'
     },
     3: {

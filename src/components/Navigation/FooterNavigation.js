@@ -1,7 +1,7 @@
 import React, {useContext, useEffect} from 'react';
 import * as ROUTES from '../../constants/routes';
 import Navbar from 'react-bootstrap/Navbar';
-import FooterNavLink from "./FooterNavLink";
+import FooterNavLink, {FooterNavLinkButton} from "./FooterNavLink";
 import {Context} from "../MusicStore/MusicStore";
 import TrackPlayer from "../TrackPlayer/TrackPlayer";
 import {GlobalTrackContext} from "../MusicStore/GlobalTrackStore";
@@ -11,9 +11,15 @@ import LoadingStandard from "../microComponents/Loading/LoadingStandard";
 export const showUpload = false;
 
 const FooterNavigation = () => {
-    const [trackState] = useContext(Context);
+    const [trackState, setTrackState] = useContext(Context);
     const [globalTrackList, setGlobalTrackList] = useContext(GlobalTrackContext);
     const tracks = FetchAllTracks();
+
+    const updateState = () => {
+        setTrackState({
+            currentTrack: 35
+        })
+    }
 
     useEffect(() => {
         setGlobalTrackList(tracks);
@@ -27,6 +33,7 @@ const FooterNavigation = () => {
                     <FooterNavLink link={ROUTES.ARTISTS} text={"Artists"} icon={"user-astronaut"}/>
                     <FooterNavLink link={ROUTES.RECORDS} text={"Records"} icon={"compact-disc"}/>
                     <FooterNavLink link={ROUTES.TRACKS} text={"Tracks"} icon={"music"}/>
+                    <FooterNavLinkButton text={"Randomize"} icon={"random"} onClick={updateState}/>
                     {showUpload ? <FooterNavLink link={ROUTES.UPLOAD} text={"Upload"} icon={"plus"}/> : false}
                 </div>
             </Navbar>

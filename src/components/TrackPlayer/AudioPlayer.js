@@ -5,7 +5,7 @@ import {GlobalTrackContext} from "../MusicStore/GlobalTrackStore";
 
 const AudioPlayer = ({ track }) => {
     // State
-    const [trackState, setTrackState] = useContext(Context);
+    const setTrackState = useContext(Context)[1];
     const [trackProgress, setTrackProgress] = useState(0);
     const [isPlaying, setIsPlaying] = useState(false);
 
@@ -88,7 +88,6 @@ const AudioPlayer = ({ track }) => {
 
     useEffect(() => {
         if (isPlaying) {
-            console.log("TrackState: ", trackState.currentTrack);
             audioRef.current.play();
             startTimer();
         } else {

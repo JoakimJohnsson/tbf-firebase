@@ -13313,7 +13313,7 @@ footer {
       justify-content: center; } }
 
 .footer__nav-link-cmp {
-  min-width: 50px;
+  width: 75px;
   display: flex;
   flex-direction: column;
   align-items: center;

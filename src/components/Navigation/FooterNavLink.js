@@ -4,13 +4,15 @@ import {NavLink} from "react-router-dom";
 import PropTypes from "prop-types";
 import {Context} from "../MusicStore/MusicStore";
 import {GlobalTrackContext} from "../MusicStore/GlobalTrackStore";
+import {randomizer} from "../microComponents/microComponentsHelper";
 
 /**
  * A link paired with a fontawesome icon. Used in footer navigation.
  */
 
 const FooterNavLink = ({link, text, icon}) => (
-    <NavLink exact activeClassName="active" className="footer__nav-link-cmp nav-link" to={link}><FontAwesomeIcon icon={icon} size="2x" className="d-block"/>
+    <NavLink exact activeClassName="active" className="footer__nav-link-cmp nav-link" to={link}>
+        <FontAwesomeIcon icon={icon} size="2x" className="d-block"/>
         <span className="mt-1 text-center">{text}</span>
     </NavLink>
 );
@@ -18,21 +20,20 @@ const FooterNavLink = ({link, text, icon}) => (
 const FooterNavLinkButton = ({text, icon}) => {
     const setTrackState = useContext(Context)[1];
     const globalTrackList = useContext(GlobalTrackContext)[0];
-
     let listLength = globalTrackList.length;
-    let randTrack = Math.floor(Math.random() * listLength -1)
-
+    let randTrack = randomizer(listLength, 0);
     const updateState = () => {
         setTrackState({
             currentTrack: globalTrackList[randTrack].id
         })
     }
-
     return (
-    <button onClick={updateState} className="btn btn-fa__primary footer__nav-link-cmp nav-link"><FontAwesomeIcon icon={icon} size="2x" className="d-block"/>
-        <span className="mt-1 text-center">{text}</span>
-    </button>
-)};
+        <button onClick={updateState} className="btn btn-fa__primary footer__nav-link-cmp nav-link">
+            <FontAwesomeIcon icon={icon} size="2x" className="d-block"/>
+            <span className="mt-1 text-center">{text}</span>
+        </button>
+    )
+};
 
 FooterNavLink.defaultProps = {
     link: "#",

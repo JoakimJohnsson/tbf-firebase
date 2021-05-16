@@ -38,7 +38,7 @@ import {
     faStepBackward,
     faPlay,
     faRandom,
-    faPause
+    faPause, faPauseCircle
 } from '@fortawesome/free-solid-svg-icons';
 import HeaderNavigation from '../Navigation/HeaderNavigation';
 import Footer from "../Footer/Footer";
@@ -53,7 +53,7 @@ import MusicStore from "../MusicStore/MusicStore";
 import GlobalTrackStore from "../MusicStore/GlobalTrackStore";
 
 library.add(faAirbnb, faStepForward, faTape, faRandom, faStepBackward, faFilter, faDownload, faGoogle, faFacebookF, faArrowAltCircleLeft, faArrowAltCircleDown, faArrowDown, faArrowUp, faArrowAltCircleUp, faCopyright, faWrench, faHome, faRecordVinyl,
-    faMusic, faSearch, faUserAstronaut, faPlayCircle, faPlay, faPause, faPlus, faTimes, faPen, faMinus, faChevronLeft, faChevronRight, faChevronDown, faChevronUp, faSpinner, faSave,
+    faMusic, faSearch, faUserAstronaut, faPlayCircle, faPlay, faPause, faPauseCircle, faPlus, faTimes, faPen, faMinus, faChevronLeft, faChevronRight, faChevronDown, faChevronUp, faSpinner, faSave,
     faAngleDoubleDown, faCompactDisc, faUsersSlash, faRobot, faVrCardboard);
 
 const App = () => {

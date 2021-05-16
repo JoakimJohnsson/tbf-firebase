@@ -10,7 +10,7 @@ const AudioControls = ({
     <div className="audio-controls">
         <button
             type="button"
-            className="btn btn-fa__primary mx-4 p-2"
+            className="btn btn-fa__primary mx-2 p-2"
             aria-label="Previous"
             onClick={onPrevClick}
         >
@@ -23,7 +23,7 @@ const AudioControls = ({
                 onClick={() => onPlayPauseClick(false)}
                 aria-label="Pause"
             >
-                <FontAwesomeIcon icon={"pause"} size={"1x"}/>
+                <FontAwesomeIcon icon={"pause-circle"} size={"2x"}/>
             </button>
         ) : (
             <button
@@ -32,12 +32,12 @@ const AudioControls = ({
                 onClick={() => onPlayPauseClick(true)}
                 aria-label="Play"
             >
-                <FontAwesomeIcon icon={"play"} size={"1x"}/>
+                <FontAwesomeIcon icon={"play-circle"} size={"2x"}/>
             </button>
         )}
         <button
             type="button"
-            className="btn btn-fa__primary mx-4 p-2"
+            className="btn btn-fa__primary mx-2 p-2"
             aria-label="Next"
             onClick={onNextClick}
         >

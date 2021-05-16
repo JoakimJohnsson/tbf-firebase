@@ -5,23 +5,23 @@ export const CHARACTER_PLACEHOLDER = '\u25A0';
 // Formats & icons
 export const FORMAT = {
     1: {
-        FORMAT: 'cd-r',
+        TEXT: 'cd-r',
         ICON: 'compact-disc'
     },
     2: {
-        FORMAT: '7" vinyl',
+        TEXT: '7" vinyl',
         ICON: 'record-vinyl'
     },
     3: {
-        FORMAT: 'online',
+        TEXT: 'online',
         ICON: 'robot'
     },
     4: {
-        FORMAT: 'cassette',
+        TEXT: 'cassette',
         ICON: 'tape'
     },
     5: {
-        FORMAT: 'unknown',
+        TEXT: 'unknown',
         ICON: 'compact-disc'
     }
 }

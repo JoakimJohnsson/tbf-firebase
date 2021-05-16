@@ -4,13 +4,13 @@ import {FORMAT} from "../../constants/strings";
 
 function formatInformationRenderIcon(format) {
     switch (format) {
-        case FORMAT[1].FORMAT:
+        case FORMAT[1].TEXT:
             return FORMAT[1].ICON;
-        case FORMAT[2].FORMAT:
+        case FORMAT[2].TEXT:
             return FORMAT[2].ICON;
-        case FORMAT[3].FORMAT:
+        case FORMAT[3].TEXT:
             return FORMAT[3].ICON;
-        case FORMAT[4].FORMAT:
+        case FORMAT[4].TEXT:
             return FORMAT[4].ICON;
         default:
             return FORMAT[1].ICON;
@@ -18,16 +18,16 @@ function formatInformationRenderIcon(format) {
 }
 
 function formatInformationRenderText(format) {
-    if(!format) format = FORMAT[5].FORMAT;;
+    if(!format) format = FORMAT[5].TEXT;;
     switch (format) {
-        case FORMAT[1].FORMAT:
-            return FORMAT[1].FORMAT + ' /';
-        case FORMAT[2].FORMAT:
-            return FORMAT[2].FORMAT + ' /';
-        case FORMAT[3].FORMAT:
-            return FORMAT[3].FORMAT + ' /';
-        case FORMAT[4].FORMAT:
-            return FORMAT[4].FORMAT + ' /';
+        case FORMAT[1].TEXT:
+            return FORMAT[1].TEXT + ' /';
+        case FORMAT[2].TEXT:
+            return FORMAT[2].TEXT + ' /';
+        case FORMAT[3].TEXT:
+            return FORMAT[3].TEXT + ' /';
+        case FORMAT[4].TEXT:
+            return FORMAT[4].TEXT + ' /';
         default:
             return `${format} /`;
     }

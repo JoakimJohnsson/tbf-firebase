@@ -1,32 +1,43 @@
 const { randomizer, colorRandomizer, fontRandomizer, formatInformationRenderIcon, formatInformationRenderText } = require("./microComponentsHelper");
-const STRING_FORMAT = '7" vinyl';
-const STRING_EXPECTED_ICON = 'record-vinyl';
-const STRING_EXPECTED_TEXT = '7" vinyl /';
-const STRING_ICON_DEFAULT = 'compact-disc';
+const {FORMAT} = require("../../constants/strings");
 const STRING_UNEXPECTED = 'Poo foo yoo';
 const STRING_UNEXPECTED_TEXT = 'Poo foo yoo /';
 const STRING_UNKNOWN = 'unknown /';
 
 // Format information render icon tests
-test('Render icon - Format string: 7" vinyl returns icon string: record-vinyl.', () => {
+test('Render icon - Format string: FORMAT[X].FORMAT returns icon string: FORMAT[X].ICON', () => {
     // Arrange
-    const testString = '7" vinyl';
-    const expectedString = 'record-vinyl';
-    // Act
-    const result = formatInformationRenderIcon(testString);
-    // Assert
-    expect(result).toBe(expectedString);
+    const numberOfFormatsToTest = 4;
+    let counter = 1;
+    while (counter < numberOfFormatsToTest) {
+        // Act
+        const result = formatInformationRenderIcon(FORMAT[counter].FORMAT)
+        // Assert
+        expect(result).toBe(FORMAT[counter].ICON);
+        counter++;
+    }
 });
-test('Render icon - Missing format returns default icon string: "' + STRING_ICON_DEFAULT + '".', () => {
-    expect(formatInformationRenderIcon()).toBe(STRING_ICON_DEFAULT);
+test('Render icon - Missing format returns default icon string: "' + FORMAT[1].ICON + '".', () => {
+    expect(formatInformationRenderIcon()).toBe(FORMAT[1].ICON);
 });
 test('Render icon - Unexpected format returns default icon string.', () => {
-    expect(formatInformationRenderIcon(STRING_UNEXPECTED)).toBe(STRING_ICON_DEFAULT);
+    expect(formatInformationRenderIcon(STRING_UNEXPECTED_TEXT)).toBe(FORMAT[1].ICON);
 });
 
 // Format information render text tests
-test('Render text - Format string: "' + STRING_FORMAT + '" returns text string: "' + STRING_EXPECTED_TEXT + '".', () => {
-    expect(formatInformationRenderText(STRING_FORMAT)).toBe(STRING_EXPECTED_TEXT);
+test('Render text - Format string: FORMAT[X].FORMAT returns text string: FORMAT[X].FORMAT.', () => {
+
+    // Arrange
+    const numberOfFormatsToTest = 4;
+    let counter = 1;
+    while (counter < numberOfFormatsToTest) {
+        // Act
+        const result = formatInformationRenderText(FORMAT[counter].FORMAT);
+        // Assert
+        expect(result).toBe(FORMAT[counter].FORMAT + ' /');
+        counter++;
+    }
+
 });
 test('Render text - Missing format returns text string: "' + STRING_UNKNOWN + '".', () => {
     expect(formatInformationRenderText()).toBe(STRING_UNKNOWN);

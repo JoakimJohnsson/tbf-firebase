@@ -1,33 +1,33 @@
 // Format information
 import React from "react";
+import {FORMAT} from "../../constants/strings";
 
 function formatInformationRenderIcon(format) {
     switch (format) {
-        case 'cd-r':
-            return 'compact-disc';
-        case '7" vinyl':
-            return 'record-vinyl';
-        case 'online':
-            return 'robot';
-        case 'cassette':
-            return 'vr-cardboard';
+        case FORMAT[1].FORMAT:
+            return FORMAT[1].ICON;
+        case FORMAT[2].FORMAT:
+            return FORMAT[2].ICON;
+        case FORMAT[3].FORMAT:
+            return FORMAT[3].ICON;
+        case FORMAT[4].FORMAT:
+            return FORMAT[4].ICON;
         default:
-            return 'compact-disc';
+            return FORMAT[1].ICON;
     }
 }
 
 function formatInformationRenderText(format) {
-    const UNKNOWN_FORMAT = 'unknown';
-    if(!format) format = UNKNOWN_FORMAT;
+    if(!format) format = FORMAT[5].FORMAT;;
     switch (format) {
-        case 'cd-r':
-            return 'cd-r /';
-        case '7" vinyl':
-            return '7" vinyl /';
-        case 'online':
-            return 'online /';
-        case 'cassette':
-            return 'cassette /';
+        case FORMAT[1].FORMAT:
+            return FORMAT[1].FORMAT + ' /';
+        case FORMAT[2].FORMAT:
+            return FORMAT[2].FORMAT + ' /';
+        case FORMAT[3].FORMAT:
+            return FORMAT[3].FORMAT + ' /';
+        case FORMAT[4].FORMAT:
+            return FORMAT[4].FORMAT + ' /';
         default:
             return `${format} /`;
     }

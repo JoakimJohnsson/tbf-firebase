@@ -16,6 +16,7 @@ import {
     faRecordVinyl,
     faMusic,
     faSearch,
+    faTape,
     faUserAstronaut,
     faPlayCircle,
     faPlus,
@@ -50,7 +51,7 @@ import UploadPage from "../pages/UploadPage";
 import MusicStore from "../MusicStore/MusicStore";
 import GlobalTrackStore from "../MusicStore/GlobalTrackStore";
 
-library.add(faAirbnb, faStepForward, faStepBackward, faFilter, faDownload, faGoogle, faFacebookF, faArrowAltCircleLeft, faArrowAltCircleDown, faArrowDown, faArrowUp, faArrowAltCircleUp, faCopyright, faWrench, faHome, faRecordVinyl,
+library.add(faAirbnb, faStepForward, faTape, faStepBackward, faFilter, faDownload, faGoogle, faFacebookF, faArrowAltCircleLeft, faArrowAltCircleDown, faArrowDown, faArrowUp, faArrowAltCircleUp, faCopyright, faWrench, faHome, faRecordVinyl,
     faMusic, faSearch, faUserAstronaut, faPlayCircle, faPlay, faPause, faPlus, faTimes, faPen, faMinus, faChevronLeft, faChevronRight, faChevronDown, faChevronUp, faSpinner, faSave,
     faAngleDoubleDown, faCompactDisc, faUsersSlash, faRobot, faVrCardboard);
 

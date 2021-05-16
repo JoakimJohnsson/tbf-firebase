@@ -33,6 +33,14 @@ const AudioPlayer = ({ track }) => {
     -webkit-gradient(linear, 0% 0%, 100% 0%, color-stop(${currentPercentage}, ${progressStartColor}), color-stop(${currentPercentage}, ${progressStopColor}))
   `;
 
+    function formatTime(seconds) {
+        let minutes = Math.floor(seconds / 60);
+        minutes = (minutes >= 10) ? minutes : "0" + minutes;
+        seconds = Math.floor(seconds % 60);
+        seconds = (seconds >= 10) ? seconds : "0" + seconds;
+        return minutes + ":" + seconds;
+    }
+
     const startTimer = () => {
         // Clear any timers already running
         clearInterval(intervalRef.current);
@@ -115,13 +123,14 @@ const AudioPlayer = ({ track }) => {
     return (
         <div className="track-card__audio">
             <div className="track-info">
-
                 <AudioControls
                     isPlaying={isPlaying}
                     onPrevClick={toPrevTrack}
                     onNextClick={toNextTrack}
                     onPlayPauseClick={setIsPlaying}
                 />
+            <div className="d-flex align-items-center justify-content-center">
+                <span className="small p-3">{duration && audioRef.current.currentTime ? formatTime(audioRef.current.currentTime) : "00:00"}</span>
                 <input
                     type="range"
                     value={trackProgress}
@@ -134,6 +143,9 @@ const AudioPlayer = ({ track }) => {
                     onKeyUp={onScrubEnd}
                     style={{ background: trackStyling }}
                 />
+
+                <span className="small p-3">{duration && audioRef.current.currentTime ? formatTime(duration) : "00:00"}</span>
+            </div>
             </div>
         </div>
     );

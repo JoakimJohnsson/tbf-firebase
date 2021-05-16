@@ -13076,7 +13076,6 @@ footer {
   .track-card-dynamic__wrapper input[type=range] {
     height: 5px;
     width: 75%;
-    margin-bottom: 2rem;
     border-radius: 8px;
     transition: background 0.2s ease;
     cursor: pointer; }

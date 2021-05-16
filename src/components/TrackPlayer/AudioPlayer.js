@@ -2,6 +2,7 @@ import React, {useState, useEffect, useRef, useContext} from "react";
 import AudioControls from "./AudioControls";
 import {Context} from "../MusicStore/MusicStore";
 import {GlobalTrackContext} from "../MusicStore/GlobalTrackStore";
+import {formatTime} from "../microComponents/microComponentsHelper";
 
 const AudioPlayer = ({ track }) => {
     // State
@@ -32,14 +33,6 @@ const AudioPlayer = ({ track }) => {
     const trackStyling = `
     -webkit-gradient(linear, 0% 0%, 100% 0%, color-stop(${currentPercentage}, ${progressStartColor}), color-stop(${currentPercentage}, ${progressStopColor}))
   `;
-
-    function formatTime(seconds) {
-        let minutes = Math.floor(seconds / 60);
-        minutes = (minutes >= 10) ? minutes : "0" + minutes;
-        seconds = Math.floor(seconds % 60);
-        seconds = (seconds >= 10) ? seconds : "0" + seconds;
-        return minutes + ":" + seconds;
-    }
 
     const startTimer = () => {
         // Clear any timers already running

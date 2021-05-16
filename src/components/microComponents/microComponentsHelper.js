@@ -18,7 +18,9 @@ function formatInformationRenderIcon(format) {
 }
 
 function formatInformationRenderText(format) {
-    if(!format) format = FORMAT[5].TEXT;;
+    if(!format) {
+        format = FORMAT[5].TEXT;
+    }
     switch (format) {
         case FORMAT[1].TEXT:
             return FORMAT[1].TEXT + ' /';
@@ -54,6 +56,15 @@ function fontRandomizer() {
     return randomizer(8, 1);
 }
 
+// Format time display
+function formatTime(seconds) {
+    let minutes = Math.floor(seconds / 60);
+    minutes = (minutes >= 10) ? minutes : "0" + minutes;
+    seconds = Math.floor(seconds % 60);
+    seconds = (seconds >= 10) ? seconds : "0" + seconds;
+    return minutes + ":" + seconds;
+}
+
 const Debugger = ({logThis}) => {
     console.log("DEBUGGER - LOG")
     console.log("-------")
@@ -64,4 +75,4 @@ const Debugger = ({logThis}) => {
     )
 }
 
-export {formatInformationRenderIcon, formatInformationRenderText, prepareFilterText, randomizer, colorRandomizer, fontRandomizer, Debugger}
+export {formatInformationRenderIcon, formatInformationRenderText, prepareFilterText, randomizer, colorRandomizer, fontRandomizer, formatTime, Debugger}

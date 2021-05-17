@@ -13070,9 +13070,7 @@ footer {
   .track-card-dynamic__wrapper .track-card-dynamic__info {
     text-transform: capitalize;
     display: inline-block;
-    border-radius: 25px;
-    border: 1px solid #444;
-    background: #0a0a0a; }
+    width: 100%; }
   .track-card-dynamic__wrapper input[type=range] {
     height: 5px;
     width: 75%;
@@ -13321,7 +13319,7 @@ footer {
   font-size: 80%; }
   @media (min-width: 576px) {
     .footer__nav-link-cmp {
-      min-width: 100px;
+      min-width: 85px;
       padding: .8rem 1rem;
       font-size: 100%; }
       .footer__nav-link-cmp span {

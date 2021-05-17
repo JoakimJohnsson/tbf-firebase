@@ -33,7 +33,7 @@ const FooterNavigation = () => {
                     <FooterNavLink link={ROUTES.ARTISTS} text={"Artists"} icon={"user-astronaut"}/>
                     <FooterNavLink link={ROUTES.RECORDS} text={"Records"} icon={"compact-disc"}/>
                     <FooterNavLink link={ROUTES.TRACKS} text={"Tracks"} icon={"music"}/>
-                    <FooterNavLinkButton text={"Randomize"} icon={"random"} onClick={updateState}/>
+                    <FooterNavLinkButton text={"Shuffle"} icon={"random"} onClick={updateState}/>
                     {showUpload ? <FooterNavLink link={ROUTES.UPLOAD} text={"Upload"} icon={"plus"}/> : false}
                 </div>
             </Navbar>

@@ -90,9 +90,7 @@
   .track-card-dynamic__info {
     text-transform: capitalize;
     display: inline-block;
-    border-radius: 25px;
-    border: 1px solid $color-border;
-    background: $color-near-black;
+    width: 100%;
   }
   input[type=range] {
     height: 5px;

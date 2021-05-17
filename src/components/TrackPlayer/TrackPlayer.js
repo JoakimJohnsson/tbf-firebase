@@ -26,7 +26,7 @@ const TrackPlayerContent = () => {
         (
             <div className="track-card-dynamic">
             <div className="p-3 text-center">
-                <div className="track-card-dynamic__info px-3 py-1 mr-2">
+                <div className="track-card-dynamic__info px-3 py-1">
                     <ArtistLinkAndTrackName id={track.artistId} trackName={track.name}/>
                     <button className="btn btn-fa__primary py-1 pl-3" aria-label="Close song"
                             onClick={() => {
@@ -34,7 +34,7 @@ const TrackPlayerContent = () => {
                                     currentTrack: null
                                 })
                             }}>
-                        <FontAwesomeIcon icon={"times"}/>
+                        <FontAwesomeIcon icon={"times"} />
                     </button>
                 </div>
 

@@ -1,4 +1,4 @@
-import React, {useState, useEffect, useRef, useContext} from "react";
+import React, {useState, useEffect, useRef, useContext, useCallback} from "react";
 import AudioControls from "./AudioControls";
 import {Context} from "../MusicStore/MusicStore";
 import {GlobalTrackContext} from "../MusicStore/GlobalTrackStore";
@@ -31,10 +31,26 @@ const AudioPlayer = ({ track }) => {
     const progressStopColor = isPlaying ? "#88ffcc" : "#fffe88";
 
     const trackStyling = `
-    -webkit-gradient(linear, 0% 0%, 100% 0%, color-stop(${currentPercentage}, ${progressStartColor}), color-stop(${currentPercentage}, ${progressStopColor}))
-  `;
+    -webkit-gradient(linear, 0% 0%, 100% 0%, color-stop(${currentPercentage}, ${progressStartColor}), color-stop(${currentPercentage}, ${progressStopColor}))`;
 
-    const startTimer = () => {
+    const toPrevTrack = () => {
+        if (trackIndex > 0) {
+            setTrackState({
+                currentTrack: globalTrackList[trackIndex - 1].id
+            })
+        }
+
+    };
+
+    const toNextTrack = useCallback(() => {
+        if (trackIndex < listLength - 1) {
+            setTrackState({
+                currentTrack: globalTrackList[trackIndex + 1].id
+            })
+        }
+    }, [setTrackState, globalTrackList, listLength, trackIndex]);
+
+    const startTimer = useCallback(() => {
         // Clear any timers already running
         clearInterval(intervalRef.current);
 
@@ -45,7 +61,7 @@ const AudioPlayer = ({ track }) => {
                 setTrackProgress(audioRef.current.currentTime);
             }
         }, [1000]);
-    };
+    }, [toNextTrack]);
 
     const onScrub = (value) => {
         // Clear any timers already running
@@ -62,23 +78,6 @@ const AudioPlayer = ({ track }) => {
         startTimer();
     };
 
-    const toPrevTrack = () => {
-        if (trackIndex > 0) {
-            setTrackState({
-                currentTrack: globalTrackList[trackIndex - 1].id
-            })
-        }
-
-    };
-
-    const toNextTrack = () => {
-        if (trackIndex < listLength - 1) {
-            setTrackState({
-                currentTrack: globalTrackList[trackIndex + 1].id
-            })
-        }
-    };
-
     useEffect(() => {
         if (isPlaying) {
             audioRef.current.play();
@@ -86,7 +85,7 @@ const AudioPlayer = ({ track }) => {
         } else {
             audioRef.current.pause();
         }
-    }, [isPlaying]);
+    }, [isPlaying, startTimer]);
 
     // Handles cleanup and setup when changing tracks
     useEffect(() => {
@@ -102,7 +101,7 @@ const AudioPlayer = ({ track }) => {
             // Set the isReady ref as true for the next pass
             isReady.current = true;
         }
-    }, [trackIndex, track.url]);
+    }, [trackIndex, track.url, startTimer]);
 
     useEffect(() => {
         // Pause and clean up on unmount

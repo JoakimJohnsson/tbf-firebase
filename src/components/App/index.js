@@ -38,7 +38,7 @@ import {
     faStepBackward,
     faPlay,
     faRandom,
-    faPause, faPauseCircle, faTimesCircle
+    faPause, faPauseCircle, faTimesCircle, faBookDead, faSitemap
 } from '@fortawesome/free-solid-svg-icons';
 import HeaderNavigation from '../Navigation/HeaderNavigation';
 import Footer from "../Footer/Footer";
@@ -53,7 +53,7 @@ import MusicStore from "../MusicStore/MusicStore";
 import GlobalTrackStore from "../MusicStore/GlobalTrackStore";
 import {showUpload} from "../Navigation/FooterNavigation";
 
-library.add(faAirbnb, faStepForward, faTape, faRandom, faStepBackward, faFilter, faDownload, faGoogle, faFacebookF, faArrowAltCircleLeft, faArrowAltCircleDown, faArrowDown, faArrowUp, faArrowAltCircleUp, faCopyright, faWrench, faHome, faRecordVinyl,
+library.add(faAirbnb, faSitemap, faBookDead, faStepForward, faTape, faRandom, faStepBackward, faFilter, faDownload, faGoogle, faFacebookF, faArrowAltCircleLeft, faArrowAltCircleDown, faArrowDown, faArrowUp, faArrowAltCircleUp, faCopyright, faWrench, faHome, faRecordVinyl,
     faMusic, faSearch, faUserAstronaut, faPlayCircle, faPlay, faPause, faPauseCircle, faPlus, faTimes, faTimesCircle, faPen, faMinus, faChevronLeft, faChevronRight, faChevronDown, faChevronUp, faSpinner, faSave,
     faAngleDoubleDown, faCompactDisc, faUsersSlash, faRobot, faVrCardboard);
 

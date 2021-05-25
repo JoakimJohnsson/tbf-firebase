@@ -40,12 +40,11 @@ const StartPage = () => {
                         Sj&ouml;buse Records</b>, now brings you that good old music in a modern way.</p>
                     <h2>Extra content</h2>
                     <h3>Links</h3>
-                    <p><a href="https://thebaseballfield.se/old/">The old TBF/VVM site</a></p>
+                    <p><IconLink link={"https://thebaseballfield.se/old/"} text={"The old TBF/VVM site"} icon={"sitemap"}/></p>
                     <h3>Video</h3>
                     <p>T.B.A</p>
                     <h3>Documentation</h3>
-
-                    <div className="list-group-item list-group-item-warning flex-column align-items-start mb-2">
+                    <div className="list-group-item list-group-item-warning flex-column align-items-start mb-3">
                         <div className="d-flex w-100 justify-content-between mb-2">
                             <h4 className="mb-1">Changelog</h4>
                             <small>v. {package_json.version}</small>
@@ -60,10 +59,7 @@ const StartPage = () => {
                         </ol>
                         <small>{lastUpdatedArtistDate.toLocaleDateString()}</small>
                     </div>
-
-                    <p><a href="https://thebaseballfield.se/styleguide/">TBF & Friends react styleguide</a></p>
-
-
+                    <p><IconLink link={"https://thebaseballfield.se/styleguide/"} text={"TBF & Friends react styleguide"} icon={"book-dead"}/></p>
                     <CopyrightInformation className={"d-none d-lg-block"}/>
                 </div>
             </div>

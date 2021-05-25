@@ -51,6 +51,7 @@ import TracksPage from "../pages/TracksPage";
 import UploadPage from "../pages/UploadPage";
 import MusicStore from "../MusicStore/MusicStore";
 import GlobalTrackStore from "../MusicStore/GlobalTrackStore";
+import {showUpload} from "../Navigation/FooterNavigation";
 
 library.add(faAirbnb, faStepForward, faTape, faRandom, faStepBackward, faFilter, faDownload, faGoogle, faFacebookF, faArrowAltCircleLeft, faArrowAltCircleDown, faArrowDown, faArrowUp, faArrowAltCircleUp, faCopyright, faWrench, faHome, faRecordVinyl,
     faMusic, faSearch, faUserAstronaut, faPlayCircle, faPlay, faPause, faPauseCircle, faPlus, faTimes, faTimesCircle, faPen, faMinus, faChevronLeft, faChevronRight, faChevronDown, faChevronUp, faSpinner, faSave,
@@ -69,7 +70,7 @@ const App = () => {
                         <Route path={ROUTES.RECORDS} component={RecordsPage}/>
                         <Route path={ROUTES.RECORD} component={RecordPage}/>
                         <Route path={ROUTES.TRACKS} component={TracksPage}/>
-                        <Route path={ROUTES.UPLOAD} component={UploadPage}/>
+                        {showUpload ? <Route path={ROUTES.UPLOAD} component={UploadPage}/> : false}
                     </div>
                     <Footer/>
                 </Router>

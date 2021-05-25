@@ -12744,6 +12744,9 @@ input[type=range]::-ms-thumb {
     display: block;
     height: auto !important; } }
 
+.sticky-top.top-1 {
+  top: 1rem; }
+
 .text-yellow {
   color: #fffe88; }
 

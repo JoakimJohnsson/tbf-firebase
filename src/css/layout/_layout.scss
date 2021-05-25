@@ -95,3 +95,10 @@
     height: auto !important;
   }
 }
+
+// Sticky top positioning
+.sticky-top {
+  &.top-1 {
+    top: 1rem;
+  }
+}

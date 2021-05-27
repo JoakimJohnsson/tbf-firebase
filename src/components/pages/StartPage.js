@@ -50,6 +50,17 @@ const StartPage = () => {
                             <small>v. {package_json.version}</small>
                         </div>
                         <ol className="small">
+                            <li className="mb-1">Add option to minimize the audio player.</li>
+                            <li className="mb-1">Show record cover in audio player.</li>
+                            <li className="mb-1">Minor visual improvements.</li>
+                        </ol>
+                        <small>{lastUpdatedArtistDate.toLocaleDateString()}</small>
+                    </div>
+                    <div className="list-group-item list-group-item-info flex-column align-items-start mb-3">
+                        <div className="d-flex w-100 justify-content-between mb-2">
+                            <h4 className="mb-1">Previous changes</h4>
+                        </div>
+                        <ol className="small">
                         <li className="mb-1">Added global state for audio player. You are now able to listen to music while surfing the site.</li>
                         <li className="mb-1">This enabled me to solve a bug on the <strong>Tracks</strong> page where multiple tracks were playing at the same time when you chose a new track from another record.</li>
                         <li className="mb-1">The audio player also got a visual upgrade.</li>
@@ -57,7 +68,6 @@ const StartPage = () => {
                         <li className="mb-1">Behind the scenes, testing for the site is now powered by <strong>Jest</strong>.</li>
                         <li className="mb-1">Added filtering to <strong>Artists</strong>, <strong>Records</strong> and <strong>Tracks</strong> pages.</li>
                         </ol>
-                        <small>{lastUpdatedArtistDate.toLocaleDateString()}</small>
                     </div>
                     <p><IconLink link={"https://thebaseballfield.se/styleguide/"} text={"TBF & Friends react styleguide"} icon={"book-dead"}/></p>
                     <CopyrightInformation className={"d-none d-lg-block"}/>

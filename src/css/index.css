@@ -12994,6 +12994,12 @@ img {
 .opacity-5 {
   opacity: 1 !important; }
 
+.border-radius-top-left {
+  border-radius: 15px 0 0 0; }
+
+.border-radius-top-right {
+  border-radius: 0 15px 0 0; }
+
 footer {
   position: absolute;
   bottom: 0;
@@ -13056,37 +13062,40 @@ footer {
     .artist-card__simple {
       font-size: 1.2rem; } }
 
-.track-card-dynamic__wrapper {
+.track-card-dynamic {
   width: 100%;
-  min-height: 90px;
   background: rgba(0, 0, 0, 0.87);
   -webkit-backdrop-filter: blur(5px);
   backdrop-filter: blur(5px); }
-  .track-card-dynamic__wrapper .track-card-dynamic audio {
+  .track-card-dynamic audio {
     width: 100%; }
     @media (min-width: 992px) {
-      .track-card-dynamic__wrapper .track-card-dynamic audio {
+      .track-card-dynamic audio {
         width: 80%; } }
     @media (min-width: 1200px) {
-      .track-card-dynamic__wrapper .track-card-dynamic audio {
+      .track-card-dynamic audio {
         width: 50%; } }
-  .track-card-dynamic__wrapper .track-card-dynamic__info {
+  .track-card-dynamic .track-card-dynamic__info {
     text-transform: capitalize;
     display: inline-block;
     width: 100%; }
-  .track-card-dynamic__wrapper input[type=range] {
+  .track-card-dynamic .track-card-dynamic__image {
+    width: 100%; }
+  .track-card-dynamic input[type=range] {
     height: 5px;
     width: 75%;
     border-radius: 8px;
     transition: background 0.2s ease;
     cursor: pointer; }
-    .track-card-dynamic__wrapper input[type=range].is-playing {
+    .track-card-dynamic input[type=range].is-playing {
       background: #88ffcc; }
-    .track-card-dynamic__wrapper input[type=range].is-paused {
+    .track-card-dynamic input[type=range].is-paused {
       background: #fffe88; }
     @media (min-width: 768px) {
-      .track-card-dynamic__wrapper input[type=range] {
+      .track-card-dynamic input[type=range] {
         width: 50%; } }
+  .track-card-dynamic .minimized {
+    height: 0; }
 
 .track-card {
   background: #0a0a0a;
@@ -13175,7 +13184,6 @@ footer {
 
 .btn-fa, .btn-fa__primary, .btn-fa__secondary, .btn-fa__tertiary, .tracks-player__list .tracks-player_li .tracks-player__button {
   color: inherit;
-  border-radius: 0;
   padding: 0;
   border: none; }
   .btn-fa:hover, .btn-fa__primary:hover, .btn-fa__secondary:hover, .btn-fa__tertiary:hover, .tracks-player__list .tracks-player_li .tracks-player__button:hover, .btn-fa:focus, .btn-fa__primary:focus, .btn-fa__secondary:focus, .btn-fa__tertiary:focus, .tracks-player__list .tracks-player_li .tracks-player__button:focus, .btn-fa:active, .btn-fa__primary:active, .btn-fa__secondary:active, .btn-fa__tertiary:active, .tracks-player__list .tracks-player_li .tracks-player__button:active {

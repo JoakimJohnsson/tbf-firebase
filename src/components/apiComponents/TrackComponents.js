@@ -26,7 +26,7 @@ const TracksPlayerListItemWithImage = ({id}) => {
 
     return track && track.artistId ? (
             <li className={id === trackState.currentTrack ? "tracks-player_li active" : "tracks-player_li"}>
-                <TracksPlayerImage track={track}/>
+                <TracksPlayerImage track={track} className={"mr-2"}/>
                 <div className="tracks-player__text mr-3 mb-0 flex-grow-1"
                      onClick={() => {
                          updateState()
@@ -56,16 +56,16 @@ const TracksPlayerListItemWithImage = ({id}) => {
         (<LoadingStandard spinning={true}/>)
 };
 
-const TracksPlayerImage = ({track}) => {
+const TracksPlayerImage = ({track, className}) => {
     let coverUrl = "";
     if (track.recordId) {
         coverUrl = FetchRecordFromId(track.recordId).coverUrl;
     }
     return coverUrl !== "" ?
-        <img className="tracks-player__image mr-2" alt={`Cover for ${track.name}`} src={coverUrl || imgUnavailable}/>
+        <img className={`tracks-player__image ${className}`} alt={`Cover for ${track.name}`} src={coverUrl || imgUnavailable}/>
         :
-        <img className="tracks-player__image mr-2" alt={`Cover for ${track.name}`} src={imgUnavailable}/>
+        <img className={`tracks-player__image ${className}`} alt={`Cover for ${track.name}`} src={imgUnavailable}/>
 }
 
 export default Track;
-export {TracksPlayerListItemWithImage};
+export {TracksPlayerListItemWithImage, TracksPlayerImage};

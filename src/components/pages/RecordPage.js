@@ -1,13 +1,12 @@
 import React, {useState} from 'react';
 import FormatInformation from "../microComponents/FormatInformation";
 import LoadingStandard from "../microComponents/Loading/LoadingStandard";
-import {FetchRecordFromId} from "../../api-functions/records-api";
+import {FetchRecordFromId} from "../../api-functions/api";
 import {ArtistLink} from "../apiComponents/ArtistComponents";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {Collapse} from "react-bootstrap";
 import imgUnavailable from "../../images/image_unavailable.png";
 import TracksByRecordListSimple, {TracksByRecordWithPlayer} from "../lists/TracksByRecord";
-import TrackPlayer from "../cards/TrackPlayer";
 import CopyrightInformation from "../microComponents/CopyrightInformation";
 import RecordDescription from "../microComponents/Descriptions/RecordDescription";
 
@@ -15,13 +14,6 @@ const RecordPage = ({match}) => {
     const {params: {id}} = match;
     const record = FetchRecordFromId(id);
     const [open, setOpen] = useState(false);
-    const [currentTrack, setCurrentTrack] = useState(null);
-    const setCurrentTrackOnClick = (songId) => {
-        setCurrentTrack(songId);
-    }
-    const destroyCurrentTrack = () => {
-        setCurrentTrack(null);
-    }
 
     return record.artistId ?
         (<div className="row">
@@ -64,9 +56,7 @@ const RecordPage = ({match}) => {
             <div className="standard-main-column">
                 <div className="standard-main-column__section">
                     <h2 className="section-header">Tracks</h2>
-
-                    <TracksByRecordWithPlayer recordId={id} currentTrack={currentTrack} setCurrentTrackOnClick={setCurrentTrackOnClick}/>
-                    {currentTrack ? <TrackPlayer id={currentTrack} key={currentTrack} destroyCurrentTrack={destroyCurrentTrack}/> : false}
+                    <TracksByRecordWithPlayer recordId={id} />
                 </div>
                 <CopyrightInformation className={"d-block d-lg-none mt-5"}/>
             </div>

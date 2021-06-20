@@ -21,6 +21,7 @@ class LastUpdatedArtistForm extends Component {
             date: firebase.firestore.FieldValue.serverTimestamp()
         })
             .then(() => {
+                console.log("Uploading...");
             })
             .catch(error => {
                 this.setState({error})

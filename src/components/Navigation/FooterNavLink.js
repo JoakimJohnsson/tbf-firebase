@@ -1,17 +1,39 @@
-import React from "react";
+import React, {useContext} from "react";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {NavLink} from "react-router-dom";
 import PropTypes from "prop-types";
+import {Context} from "../MusicStore/MusicStore";
+import {GlobalTrackContext} from "../MusicStore/GlobalTrackStore";
+import {randomizer} from "../microComponents/microComponentsHelper";
 
 /**
- * A link paired with a fontawesome icon. Used in footer navigation. Displayed here within a Navbar.
+ * A link paired with a fontawesome icon. Used in footer navigation.
  */
 
 const FooterNavLink = ({link, text, icon}) => (
-    <NavLink exact activeClassName="active" className="nav-link" to={link}><FontAwesomeIcon icon={icon} size="2x" className="d-block"/>
-        <span className="mt-1">{text}</span>
+    <NavLink exact activeClassName="active" className="footer__nav-link-cmp nav-link" to={link}>
+        <FontAwesomeIcon icon={icon} size="2x" className="d-block"/>
+        <span className="mt-1 text-center">{text}</span>
     </NavLink>
 );
+
+const FooterNavLinkButton = ({text, icon}) => {
+    const setTrackState = useContext(Context)[1];
+    const globalTrackList = useContext(GlobalTrackContext)[0];
+    let listLength = globalTrackList.length;
+    let randTrack = randomizer(listLength, 0);
+    const updateState = () => {
+        setTrackState({
+            currentTrack: globalTrackList[randTrack].id
+        })
+    }
+    return (
+        <button onClick={updateState} className="btn btn-fa__primary footer__nav-link-cmp nav-link">
+            <FontAwesomeIcon icon={icon} size="2x" className="d-block"/>
+            <span className="mt-1 text-center">{text}</span>
+        </button>
+    )
+};
 
 FooterNavLink.defaultProps = {
     link: "#",
@@ -29,3 +51,4 @@ FooterNavLink.propTypes = {
 }
 
 export default FooterNavLink;
+export {FooterNavLinkButton}

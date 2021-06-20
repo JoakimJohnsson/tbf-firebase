@@ -1,19 +1,18 @@
 import React from 'react';
 import Artist from "../apiComponents/ArtistComponents";
-import {FetchTrackFromId} from "../../api-functions/tracks-api";
 import LoadingLazyBackground from "../microComponents/Loading/LoadingLazyBackground";
-import {FetchRecordFromId} from "../../api-functions/records-api";
+import {FetchRecordFromId, FetchTrackFromId} from "../../api-functions/api";
 import imgUnavailable from "../../images/image_unavailable.png";
 import {Link} from "react-router-dom";
+import {colorRandomizer} from "../microComponents/microComponentsHelper";
 
 const TrackCard = ({id, url, recordId, reverse, linked}) => {
 
     const track = FetchTrackFromId(id);
     const coverUrl = FetchRecordFromId(recordId).coverUrl;
-    let rand = Math.floor(Math.random() * 8) + 1;
     return track.artistId ?
         (<div className="col-12 p-3" key={track.id}>
-            <div className={`track-card d-md-flex mb-2 text-color-variant__${rand.toString()}`}>
+            <div className={`track-card d-md-flex mb-2 text-color-variant__${colorRandomizer().toString()}`}>
 
                 <div className="track-card__content p-3">
                     {linked ?

@@ -6,10 +6,6 @@ import {faHome, faCompactDisc, faMusic} from '@fortawesome/free-solid-svg-icons'
 library.add(faHome, faCompactDisc, faMusic);
 
 <Router>
-    <Navbar className="navbar-footer p-0" bg="dark" variant="dark" expand="true">
-        <FooterNavLink link="#" text={"Start"} icon={"home"}/>
-        <FooterNavLink link="#" text={"Records"} icon={"compact-disc"}/>
-        <FooterNavLink link="#" text={"Tracks"} icon={"music"}/>
-    </Navbar>
+    <FooterNavLink link="#" text={"Start"} icon={"home"}/>
 </Router>
 ```

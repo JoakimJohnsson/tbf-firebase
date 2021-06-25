@@ -1,5 +1,5 @@
 import React from "react";
-import {FetchTracksByRecord} from "../../api-functions/tracks-api";
+import {FetchTracksByRecord} from "../../api-functions/api";
 import LoadingStandard from "../microComponents/Loading/LoadingStandard";
 import Track, {TracksPlayerListItemWithImage} from "../apiComponents/TrackComponents";
 
@@ -17,24 +17,24 @@ const TracksByRecordListSimple = ({recordId}) => {
         (<LoadingStandard text="No tracks available at this time." icon="spinner" spinning={true}/>)
 };
 
-const TracksByRecordWithPlayer = ({recordId, currentTrack, setCurrentTrackOnClick}) => {
+const TracksByRecordWithPlayer = ({recordId}) => {
     const tracks = FetchTracksByRecord(recordId);
     return tracks.length ?
         (<ul className="tracks-player__list">
             {tracks.map((track) =>
-                <TracksPlayerListItemWithImage key={track.index} id={track.id} setCurrentTrack={setCurrentTrackOnClick} currentTrack={currentTrack}/>
+                <TracksPlayerListItemWithImage key={track.index} id={track.id} />
             )}
         </ul>)
         :
         (<LoadingStandard text="No tracks available at this time." icon="spinner" spinning={true}/>)
 };
 
-const TracksByRecordWithPlayerWithImage = ({recordId, currentTrack, setCurrentTrackOnClick}) => {
+const TracksByRecordWithPlayerWithImage = ({recordId}) => {
     const tracks = FetchTracksByRecord(recordId);
     return tracks.length ?
         (<ul className="tracks-player__list">
             {tracks.map((track) =>
-                <TracksPlayerListItemWithImage key={track.index} id={track.id} setCurrentTrack={setCurrentTrackOnClick} currentTrack={currentTrack}/>
+                <TracksPlayerListItemWithImage key={track.id} id={track.id}/>
             )}
         </ul>)
         :

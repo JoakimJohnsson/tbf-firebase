@@ -1,6 +1,7 @@
 @import '../helpers/variables';
 
-.header-tbf-logo-primary {
+// TbfLogo component
+.header__logo-cmp {
   fill: $color-primary;
   width: 150px;
   @include media-breakpoint-up(sm) {

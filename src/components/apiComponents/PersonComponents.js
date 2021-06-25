@@ -1,5 +1,5 @@
 import React from "react";
-import FetchPersonFromId, {FetchRole} from "../../api-functions/persons-api";
+import {FetchPersonFromId, FetchRole} from "../../api-functions/api";
 
 const Person = ({id, artistId}) => {
     const person = FetchPersonFromId(id);

@@ -1,26 +1,17 @@
-import React, {useState} from 'react';
-import {FetchArtistFromId} from "../../api-functions/artists-api";
+import React from 'react';
+import {FetchArtistFromId} from "../../api-functions/api";
 import firebase from "firebase";
 import imgUnavailable from "../../images/image_unavailable.png";
 import MembersByArtist from "../lists/MembersByArtist";
 import RecordsByArtist from "../lists/RecordsByArtist";
-import {TracksByArtistWithPlayer} from "../lists/TracksByArtist";
-import TrackPlayer from "../cards/TrackPlayer";
 import CopyrightInformation from "../microComponents/CopyrightInformation";
 import ArtistDescription from "../microComponents/Descriptions/ArtistDescription";
+import {fontRandomizer, colorRandomizer} from "../microComponents/microComponentsHelper";
+import TracksByArtistPaginated from "../lists/TracksByArtistPaginated";
 
 const ArtistPage = ({match}) => {
     const {params: {id}} = match;
     const artist = FetchArtistFromId(id);
-    const [currentTrack, setCurrentTrack] = useState(null);
-    const setCurrentTrackOnClick = (songId) => {
-        setCurrentTrack(songId);
-    }
-    const destroyCurrentTrack = () => {
-        setCurrentTrack(null);
-    }
-    let rand = Math.floor(Math.random() * 16) + 1;
-    let rand2 = Math.floor(Math.random() * 8) + 1;
 
     // Increment number of views
     const increment = firebase.firestore.FieldValue.increment(1);
@@ -37,7 +28,7 @@ const ArtistPage = ({match}) => {
         <div className="row">
             <div className="standard-secondary-column">
                 <div className="standard-box-wrapper__near-dark">
-                    <h1 className={`logo-font-family__${rand.toString()} text-uppercase text-color-variant__${rand2.toString()}`}>{artist.name}</h1>
+                    <h1 className={`logo-font-family__${fontRandomizer().toString()} text-uppercase text-color-variant__${colorRandomizer().toString()}`}>{artist.name}</h1>
                     <img className="w-100 mb-3 opacity-4" alt={`${artist.name}`} src={artist.imgUrl || imgUnavailable}/>
 
                     <ArtistDescription artist={artist}/>
@@ -51,8 +42,7 @@ const ArtistPage = ({match}) => {
                     <h2 className="section-header">Records</h2>
                     <RecordsByArtist artistId={id}/>
                     <h2 className="section-header">Tracks</h2>
-                    <TracksByArtistWithPlayer artistId={id} currentTrack={currentTrack} setCurrentTrackOnClick={setCurrentTrackOnClick}/>
-                    {currentTrack ? <TrackPlayer id={currentTrack} key={currentTrack} destroyCurrentTrack={destroyCurrentTrack}/> : false}
+                    <TracksByArtistPaginated artistId={id}/>
                 </div>
                 <CopyrightInformation className={"d-block d-lg-none mt-5"}/>
             </div>

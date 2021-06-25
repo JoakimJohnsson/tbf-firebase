@@ -1,20 +1,19 @@
 import React from "react";
 import LoadingStandard from "../microComponents/Loading/LoadingStandard";
-import {FetchRecordsByArtist} from "../../api-functions/records-api";
+import {FetchRecordsByArtist} from "../../api-functions/api";
 import RecordCard from "../cards/RecordCard";
 import * as COLUMNS from "../../constants/cols";
 import {ArtistLink} from "../apiComponents/ArtistComponents";
+import {colorRandomizer, fontRandomizer} from "../microComponents/microComponentsHelper";
 
 const RecordsByArtistGrouped = ({id}) => {
     const records = FetchRecordsByArtist(id);
-    let rand = Math.floor(Math.random() * 16) + 1;
-    let rand2 = Math.floor(Math.random() * 8) + 1;
 
     return records.length ?
         (<div className="row mb-4">
 
             <div className="col-12 w-100>">
-                <h2 className={`section-header logo-font-family__${rand.toString()} text-color-variant__${rand2.toString()}`}><ArtistLink id={id} className={"text-uppercase"}/></h2>
+                <h2 className={`section-header logo-font-family__${fontRandomizer().toString()} text-color-variant__${colorRandomizer().toString()}`}><ArtistLink id={id} className={"text-uppercase"}/></h2>
             </div>
 
             {records.map((record) =>

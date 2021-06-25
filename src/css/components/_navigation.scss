@@ -38,23 +38,25 @@
   @include media-breakpoint-up(xl) {
     justify-content: center;
   }
-  .nav-link {
-    min-width: 50px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 1rem .8rem;
-    font-size: 80%;
-    @include media-breakpoint-up(sm) {
-      min-width: 100px;
-      padding: .8rem 1rem;
-      font-size: 100%;
-      span {
-        font-size: 90%;
-      }
+}
+
+// FooterNavLink component
+.footer__nav-link-cmp {
+  width: 75px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem .8rem;
+  font-size: 80%;
+  @include media-breakpoint-up(sm) {
+    min-width: 85px;
+    padding: .8rem 1rem;
+    font-size: 100%;
+    span {
+      font-size: 90%;
     }
-    &.active {
-      color: $color-secondary;
-    }
+  }
+  &.active {
+    color: $color-secondary;
   }
 }

@@ -1,5 +1,5 @@
 import React from 'react';
-import FetchAllArtists from "../../api-functions/artists-api";
+import {FetchAllArtists} from "../../api-functions/api";
 import ArtistCard from "../cards/ArtistCard";
 import LoadingStandard from "../microComponents/Loading/LoadingStandard";
 

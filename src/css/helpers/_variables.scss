@@ -2,6 +2,7 @@
 $color-white: #fff;
 $color-black: #000;
 $color-black__trans-hard: rgba(0, 0, 0, .95);
+$color-black__trans-medium: rgba(0, 0, 0, .87);
 $color-black__trans-light: rgba(0, 0, 0, .8);
 $color-black__trans-super-light: rgba(0, 0, 0, .2);
 $color-dark-grey: #151515;
@@ -65,6 +66,8 @@ $font-family-base: $font-family-sans-serif;
 $spacer: 1rem;
 $primary: $color-primary;
 $secondary: $color-secondary;
+$info: $color-tertiary;
+$success: $color-tertiary;
 $link-hover-color: $color-primary__lighten;
 $link-color: $color-primary;
 $body-bg: $color-dark-grey;
@@ -133,6 +136,9 @@ $modal-header-padding:              $modal-header-padding-y $modal-header-paddin
 // List group
 $list-group-bg:                     transparent;
 $list-group-border-color:           $color-border;
+
+// Input group
+$input-group-addon-bg: $color-white;
 
 // Pagination
 $pagination-color:                  $color-tertiary;

@@ -3,7 +3,7 @@ pipeline {
     options { skipDefaultCheckout() }
 
     stages {
-        stage('Checkout') {
+        stage('Checkout git repository') {
             steps {
                 echo 'Checking out..'
                 git 'https://github.com/JoakimJohnsson/tbf-firebase'

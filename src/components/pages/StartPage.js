@@ -49,6 +49,7 @@ const StartPage = () => {
                             <h4 className="mb-1">Changelog</h4>
                             <small>v. {package_json.version}</small>
                         </div>
+
                         <ol className="small">
                             <li className="mb-1">Add option to minimize the audio player.</li>
                             <li className="mb-1">Show record cover in audio player.</li>

@@ -15,18 +15,18 @@ pipeline {
                 bat 'npm install'
             }
         }
-        stage('Test') {
-            steps {
-                echo 'Testing..'
-                bat 'npm test'
-            }
-        }
         stage('Build') {
             steps {
                 echo 'Building..'
                 bat 'npm run build-no-test'
             }
         }
+        stage('Test') {
+                    steps {
+                        echo 'Testing..'
+                        bat 'npm test'
+                    }
+                }
         stage('Deploy') {
             steps {
                 echo 'Deploying....'

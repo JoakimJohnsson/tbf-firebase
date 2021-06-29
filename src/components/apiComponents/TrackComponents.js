@@ -11,7 +11,6 @@ const Track = ({id}) => {
     return (
         <div className="mb-1">
             <span className="text-capitalize">{track.name}</span>
-
         </div>
     )
 };

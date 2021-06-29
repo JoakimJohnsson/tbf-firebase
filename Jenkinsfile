@@ -9,15 +9,15 @@ pipeline {
             }
         }
         stage('Install packages') {
-                    steps {
-                        echo 'Installing..'
-                        bat 'npm install'
-                    }
-                }
+            steps {
+                echo 'Installing..'
+                bat 'npm install'
+            }
+        }
         stage('Build') {
             steps {
                 echo 'Building..'
-                bat 'npm run build'
+                bat 'npm run build --passWithNoTests'
             }
         }
         stage('Test') {

@@ -6,9 +6,9 @@ import PropTypes from "prop-types";
  * A button used in paginated lists to load more items.
  */
 
-const LoadMoreButton = ({loadMore}) => (
-    <button className="button__load-more-cmp" onClick={loadMore}>
-        <FontAwesomeIcon icon={"chevron-down"} aria-label="Show more artists"/>
+const LoadMoreButton = ({loadMore, ariaLabel}) => (
+    <button className="button__load-more-cmp" onClick={loadMore} aria-label={ariaLabel}>
+        <FontAwesomeIcon icon={"chevron-down"}/>
     </button>
 );
 

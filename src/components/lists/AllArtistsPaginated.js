@@ -34,7 +34,7 @@ const AllArtistsPaginated = () => {
             {
                 hasMore && !loadingMore &&
                 <div className="w-100 text-center">
-                    <LoadMoreButton loadMore={loadMore}/>
+                    <LoadMoreButton loadMore={loadMore} ariaLabel={"Load more artists"}/>
                 </div>
             }
         </div>)

@@ -58,7 +58,7 @@ test('Font Randomizer - Generates a random number between 1 and 8', () => {
     expect(fontRandomizer()).toBeLessThanOrEqual(8, 1);
 });
 
-test('Prepare filter text - should replace å, ä, ö and -', () => {
+test('Prepare filter text - Should replace å, ä, ö and -', () => {
     // Arrange
     const numberOfTextsToTest = 3;
     const TEXTS = {

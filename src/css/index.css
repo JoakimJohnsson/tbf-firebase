@@ -12994,11 +12994,23 @@ img {
 .opacity-5 {
   opacity: 1 !important; }
 
-.border-radius-top-left {
-  border-radius: 15px 0 0 0; }
+.z-10 {
+  z-index: 10; }
 
-.border-radius-top-right {
-  border-radius: 0 15px 0 0; }
+.z-100 {
+  z-index: 100; }
+
+.z-1000 {
+  z-index: 1000; }
+
+.z-20 {
+  z-index: 10; }
+
+.z-200 {
+  z-index: 10; }
+
+.z-2000 {
+  z-index: 10; }
 
 footer {
   position: absolute;
@@ -13064,7 +13076,7 @@ footer {
 
 .track-card-dynamic {
   width: 100%;
-  background: rgba(0, 0, 0, 0.87);
+  background: rgba(0, 0, 0, 0.95);
   -webkit-backdrop-filter: blur(5px);
   backdrop-filter: blur(5px); }
   .track-card-dynamic audio {

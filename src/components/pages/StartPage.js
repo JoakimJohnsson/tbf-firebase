@@ -53,6 +53,7 @@ const StartPage = () => {
                         <ol className="small">
                             <li className="mb-1">Updated <strong>Cloud Firestore</strong> security.</li>
                             <li className="mb-1">Record cover in audio player now holds a link to the record.</li>
+                            <li className="mb-1">Lots of a11y fixes to improve ux.</li>
                             <li className="mb-1">Minor visual and ux improvements.</li>
                             <li className="mb-1">Fixed audio player bug in <strong>Chrome</strong>.</li>
                             <li className="mb-1">Improved test coverage with <strong>Jest</strong>.</li>

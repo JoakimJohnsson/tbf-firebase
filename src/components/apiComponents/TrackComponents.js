@@ -39,14 +39,14 @@ const TracksPlayerListItemWithImage = ({id}) => {
                 </div>
 
                 <div className="d-flex align-items-center justify-content-end p-2">
-                    <button className="tracks-player__button play mr-3"
+                    <button className="tracks-player__button play mr-3" aria-label={"Play " + track.name}
                             onClick={() => {
                                 updateState()
                             }}>
                         <span className="tracks-player__button-text">PLAY</span>
                         <FontAwesomeIcon icon={"play-circle"}/>
                     </button>
-                    <a className="tracks-player__button download" href={track.url} download={track.name}>
+                    <a className="tracks-player__button download" href={track.url} download={track.name} title={"Download " + track.name}>
                         <span className="tracks-player__button-text">Download</span>
                         <FontAwesomeIcon icon={"arrow-alt-circle-down"}/>
                     </a>

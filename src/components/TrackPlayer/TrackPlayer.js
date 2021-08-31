@@ -32,7 +32,7 @@ const TrackPlayer = () => {
                     <div className="p-3 text-center">
 
                         {!minimized ?
-                            <div class="col-12 col-sm-6 col-lg-4 p-0 ml-auto mr-auto">
+                            <div className="col-12 col-sm-6 col-lg-4 p-0 ml-auto mr-auto">
                                 <TracksPlayerImage track={track} className={"track-card-dynamic__image"}/>
                             </div>
                             :

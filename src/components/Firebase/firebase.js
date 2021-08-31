@@ -14,4 +14,14 @@ const firebaseConfig = {
 
 firebase.initializeApp(firebaseConfig);
 
+firebase.auth().signInAnonymously()
+    .then(() => {
+        console.log("Sign in confirmed");
+    })
+    .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        console.log(errorCode, + " : " + errorMessage);
+    });
+
 export default firebase;

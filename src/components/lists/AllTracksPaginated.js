@@ -27,13 +27,14 @@ const AllTracksPaginated = () => {
                     {items.map(item => (
                         <TracksPlayerListItemWithImage key={item.id} id={item.id} />
                     ))}
+
+                    </ul>
                     {
                         hasMore && !loadingMore &&
                         <div className="w-100 text-center">
                             <LoadMoreButton loadMore={loadMore} ariaLabel={"Load more tracks"}/>
                         </div>
                     }
-                    </ul>
                 </div>
             </div>
         )

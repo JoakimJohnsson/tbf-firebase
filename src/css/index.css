@@ -12560,8 +12560,7 @@ html {
 
 body {
   font-size: .8rem;
-  background: linear-gradient(45deg, #151515 25%, #222222 50%, #151515 75%);
-  background-color: #000; }
+  background: #151515; }
   @media (min-width: 576px) {
     body {
       font-size: .9rem; } }
@@ -12973,6 +12972,12 @@ label {
 .fs-lg {
   font-size: 120%; }
 
+.list-group-item-warning {
+  color: #403002; }
+
+.list-group-item-info {
+  color: #56562e; }
+
 img {
   border: 1px solid #000; }
 
@@ -13048,13 +13053,16 @@ footer {
     background: #000;
     color: #fff; }
     .artist-card__simple a span {
-      z-index: 2; }
+      z-index: 2;
+      padding: .5rem;
+      background: #000; }
     .artist-card__simple a:hover, .artist-card__simple a:focus, .artist-card__simple a:active {
       transition: all 0.45s ease-in-out;
       background: #0a0a0a;
       transform: scale(0.95);
       color: #fff; }
     .artist-card__simple a img {
+      z-index: 1;
       border-radius: 5px;
       position: absolute;
       top: 0;

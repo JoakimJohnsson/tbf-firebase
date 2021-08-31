@@ -184,3 +184,12 @@ $color-variants: $color-primary, $color-secondary, $color-tertiary, $color-quate
 .fs-lg {
   font-size: 120%;
 }
+
+// Bootstrap a11y fixes
+.list-group-item-warning {
+  color: darken(#856404, 14%);
+}
+
+.list-group-item-info {
+  color: darken(#858447, 14%);
+}

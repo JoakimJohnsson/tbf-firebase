@@ -39,6 +39,8 @@
 
     span {
       z-index: 2;
+      padding: .5rem;
+      background: $color-black;
     }
 
     &:hover,
@@ -51,6 +53,7 @@
     }
 
     img {
+      z-index: 1;
       border-radius: 5px;
       position: absolute;
       top: 0;

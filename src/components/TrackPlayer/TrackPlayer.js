@@ -35,42 +35,28 @@ const TrackPlayer = () => {
                                 <FontAwesomeIcon icon={!minimized ? "chevron-down" : "chevron-up"} size={"2x"}/>
                             </button>
                         </>
-
-
                         :
                         false
-
                     }
-
-
                     <div className="p-3 text-center">
-
                         {!minimized ?
                             <div className="col-12 col-sm-6 col-lg-4 p-0 ml-auto mr-auto">
                                 <TracksPlayerImage track={track} className={"track-card-dynamic__image"}/>
                             </div>
                             :
                             false}
-
-
                         <div className={!minimized ? "track-card-dynamic__info px-3 py-1" : "track-card-dynamic__info px-3 small"}>
                             <ArtistLinkAndTrackName id={track.artistId} trackName={track.name}/>
-
                             {minimized ?
-
                                 <button className="btn btn-fa__primary py-2 px-3 bg-dark" aria-label="Minimize song"
                                         onClick={() => {
                                             !minimized ? setMinimize(true) : setMinimize(false)
                                         }}>
                                     <FontAwesomeIcon icon={!minimized ? "chevron-down" : "chevron-up"}/>
                                 </button>
-
                             :
                                 false
                             }
-
-
-
                         </div>
                     </div>
                     <div className={!minimized ? "text-center" : "text-center minimized"}>

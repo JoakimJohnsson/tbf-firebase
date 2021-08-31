@@ -51,9 +51,11 @@ const StartPage = () => {
                         </div>
 
                         <ol className="small">
-                            <li className="mb-1">Update db security.</li>
+                            <li className="mb-1">Updated <strong>Cloud Firestore</strong> security.</li>
+                            <li className="mb-1">Record cover in audio player now holds a link to the record.</li>
                             <li className="mb-1">Minor visual and ux improvements.</li>
-                            <li className="mb-1">Fix track player bug in Google Chrome.</li>
+                            <li className="mb-1">Fixed audio player bug in <strong>Chrome</strong>.</li>
+                            <li className="mb-1">Improved test coverage with <strong>Jest</strong>.</li>
                         </ol>
                         <small>{lastUpdatedArtistDate.toLocaleDateString()}</small>
                     </div>
@@ -62,8 +64,8 @@ const StartPage = () => {
                             <h4 className="mb-1">Previous changes</h4>
                         </div>
                         <ol className="small">
-                            <li className="mb-1">Add option to minimize the audio player.</li>
-                            <li className="mb-1">Show record cover in audio player.</li>
+                            <li className="mb-1">Added option to minimize the audio player.</li>
+                            <li className="mb-1">Record cover is now visible in audio player.</li>
                             <li className="mb-1">Minor visual improvements.</li>
                             <li className="mb-1">Added global state for audio player. You are now able to listen to music while surfing the site.</li>
                             <li className="mb-1">This enabled me to solve a bug on the <strong>Tracks</strong> page where multiple tracks were playing

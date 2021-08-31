@@ -3,7 +3,7 @@ import CopyrightInformation from "../microComponents/CopyrightInformation";
 import AllArtistsWithFilter from "../lists/AllArtistsWithFilter";
 
 const ArtistsPage = () => (
-    <div className="row no-gutters">
+    <main className="row no-gutters">
         <div className="col-12">
             <h1 className="mb-3">Artists</h1>
         </div>
@@ -13,6 +13,6 @@ const ArtistsPage = () => (
         <div className="col-12">
             <CopyrightInformation/>
         </div>
-    </div>
+    </main>
 );
 export default ArtistsPage;

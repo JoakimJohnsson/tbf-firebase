@@ -108,8 +108,9 @@ const StartPage = () => {
                     <p className="small m-0">Total number of tracks: {counters.songCounter}</p>
                     <AllTracksPaginated/>
                     <IconLink className={"ml-3"} link={ROUTES.TRACKS} text={"See all tracks"} icon={"music"}/>
+                    <CopyrightInformation className={"d-block d-lg-none mt-5"}/>
                 </section>
-                <CopyrightInformation className={"d-block d-lg-none"}/>
+
             </div>
         </div>)
         :

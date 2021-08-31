@@ -12,7 +12,7 @@ const ArtistCard = ({id, route, imgUrl, name, fullWidth}) => {
     return (
         <div className={fullWidth ? CLASSNAMES_FULLWIDTH : CLASSNAMES_MAIN} key={id}>
             <Link className={`text-color-variant__${colorRandomizer().toString()}`} to={`/${route}/${id}`}>
-                {imgUrl ? <img alt={`${name}`} src={imgUrl}/> : false}
+                {imgUrl ? <img alt={'Hero image of ' + `${name}`} src={imgUrl}/> : false}
                 <span>{name}</span>
             </Link>
         </div>

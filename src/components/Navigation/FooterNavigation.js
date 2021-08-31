@@ -26,7 +26,7 @@ const FooterNavigation = () => {
     });
 
     return globalTrackList.length ? (
-            <Navbar className="navbar-footer p-0 d-flex flex-column" variant="dark" expand="true">
+            <Navbar className="navbar-footer p-0 d-flex flex-column" variant="dark" expand="true" aria-label="Main navigation">
                 {trackState.currentTrack ? <TrackPlayer id={trackState.currentTrack} key={trackState.currentTrack}/> : false}
                 <div className="d-flex flex-row w-100 justify-content-center bg-dark z-10">
                     <FooterNavLink link={ROUTES.START} text={"Start"} icon={"home"}/>

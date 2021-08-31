@@ -46,7 +46,7 @@ const TracksPlayerListItemWithImage = ({id}) => {
                         <span className="tracks-player__button-text">PLAY</span>
                         <FontAwesomeIcon icon={"play-circle"}/>
                     </button>
-                    <a className="tracks-player__button download" href={track.url} download={track.name} title={"Download " + track.name}>
+                    <a className="tracks-player__button download" href={track.url} download={track.name} aria-label={"Download the song " + track.name}>
                         <span className="tracks-player__button-text">Download</span>
                         <FontAwesomeIcon icon={"arrow-alt-circle-down"}/>
                     </a>

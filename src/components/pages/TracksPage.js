@@ -4,7 +4,7 @@ import AllTracksWithFilter from "../lists/AllTracksWithFilter";
 
 const TracksPage = () => {
     return (
-        <div className="row no-gutters">
+        <main className="row no-gutters">
             <div className="col-12">
                 <h1 className="mb-3">Tracks</h1>
             </div>
@@ -14,7 +14,7 @@ const TracksPage = () => {
             <div className="col-12">
                 <CopyrightInformation/>
             </div>
-        </div>
+        </main>
     );
 }
 

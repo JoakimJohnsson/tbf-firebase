@@ -8,9 +8,9 @@ const HeaderNavigation = () => {
     return (
     <header>
         <Navbar className="standard-container navbar-header justify-content-center" bg="dark" variant="dark"
-                expand="lg">
+                expand="lg" aria-label="Header navigation">
             <Navbar.Brand>
-                <Link to={ROUTES.START}><TbfLogo/></Link>
+                <Link to={ROUTES.START} title={"To start page"}><TbfLogo/></Link>
             </Navbar.Brand>
         </Navbar>
     </header>

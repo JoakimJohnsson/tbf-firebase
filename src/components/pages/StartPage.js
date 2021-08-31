@@ -27,13 +27,12 @@ const StartPage = () => {
 
     let counters = FetchCounters();
     let countersAreFetched;
-    counters.recordCounter && counters.songCounter ?
-        countersAreFetched = true : countersAreFetched = false;
+    countersAreFetched = !!(counters.recordCounter && counters.songCounter);
 
     return lastUpdatedArtistId.length && lastAddedRecordId.length && lastAddedRecordArtistId.length && countersAreFetched ?
         (<div className="row">
             <div className="start-page-secondary-column">
-                <div className="standard-box-wrapper__near-dark mb-5">
+                <main className="standard-box-wrapper__near-dark mb-5">
                     <h1>The Baseball Field & Friends</h1>
                     <p>The music scene in Nyk&ouml;ping has delivered great music since the early 90's. </p>
                     <p>This website, former home of band <b>The Baseball Field</b> and music labels <b>Vanishing Vanity Music</b> and <b>Strandad
@@ -51,9 +50,12 @@ const StartPage = () => {
                         </div>
 
                         <ol className="small">
-                            <li className="mb-1">Add option to minimize the audio player.</li>
-                            <li className="mb-1">Show record cover in audio player.</li>
-                            <li className="mb-1">Minor visual improvements.</li>
+                            <li className="mb-1">Updated <strong>Cloud Firestore</strong> security.</li>
+                            <li className="mb-1">Record cover in audio player now holds a link to the record.</li>
+                            <li className="mb-1">Lots of a11y fixes to improve ux.</li>
+                            <li className="mb-1">Minor visual and ux improvements.</li>
+                            <li className="mb-1">Fixed audio player bug in <strong>Chrome</strong>.</li>
+                            <li className="mb-1">Improved test coverage with <strong>Jest</strong>.</li>
                         </ol>
                         <small>{lastUpdatedArtistDate.toLocaleDateString()}</small>
                     </div>
@@ -62,30 +64,37 @@ const StartPage = () => {
                             <h4 className="mb-1">Previous changes</h4>
                         </div>
                         <ol className="small">
-                        <li className="mb-1">Added global state for audio player. You are now able to listen to music while surfing the site.</li>
-                        <li className="mb-1">This enabled me to solve a bug on the <strong>Tracks</strong> page where multiple tracks were playing at the same time when you chose a new track from another record.</li>
-                        <li className="mb-1">The audio player also got a visual upgrade.</li>
-                        <li className="mb-1">Implemented a <strong>Styleguidist</strong> styleguide for component documentation.</li>
-                        <li className="mb-1">Behind the scenes, testing for the site is now powered by <strong>Jest</strong>.</li>
-                        <li className="mb-1">Added filtering to <strong>Artists</strong>, <strong>Records</strong> and <strong>Tracks</strong> pages.</li>
+                            <li className="mb-1">Added option to minimize the audio player.</li>
+                            <li className="mb-1">Record cover is now visible in audio player.</li>
+                            <li className="mb-1">Minor visual improvements.</li>
+                            <li className="mb-1">Added global state for audio player. You are now able to listen to music while surfing the site.</li>
+                            <li className="mb-1">This enabled me to solve a bug on the <strong>Tracks</strong> page where multiple tracks were playing
+                                at the same time when you chose a new track from another record.
+                            </li>
+                            <li className="mb-1">The audio player also got a visual upgrade.</li>
+                            <li className="mb-1">Implemented a <strong>Styleguidist</strong> styleguide for component documentation.</li>
+                            <li className="mb-1">Behind the scenes, testing for the site is now powered by <strong>Jest</strong>.</li>
+                            <li className="mb-1">Added filtering
+                                to <strong>Artists</strong>, <strong>Records</strong> and <strong>Tracks</strong> pages.
+                            </li>
                         </ol>
                     </div>
                     <p><IconLink link={"https://thebaseballfield.se/styleguide/"} text={"TBF & Friends react styleguide"} icon={"book-dead"}/></p>
                     <CopyrightInformation className={"d-none d-lg-block"}/>
-                </div>
+                </main>
             </div>
             <div className="start-page-main-column">
-                <div className="standard-main-column__section">
-                    <h2 className="section-header">Popular artists</h2>
+                <section className="standard-main-column__section" aria-labelledby="section-header-artists">
+                    <h2 className="section-header" id="section-header-artists">Popular artists</h2>
                     <p className="small m-0">
                         Last updated artist: <ArtistLink id={lastUpdatedArtistId}
                                                          className={"text-uppercase"}/> ({lastUpdatedArtistDate.toLocaleDateString()}).
                     </p>
                     <AllArtistsPaginated/>
                     <IconLink className={"ml-3"} link={ROUTES.ARTISTS} text={"See all artists"} icon={"user-astronaut"}/>
-                </div>
-                <div className="standard-main-column__section">
-                    <h2 className="section-header">Popular records</h2>
+                </section>
+                <section className="standard-main-column__section" aria-labelledby="section-header-records">
+                    <h2 className="section-header" id="section-header-records">Popular records</h2>
                     <p className="small m-0">
                         Last added record: <RecordLink id={lastAddedRecordId}/> by <ArtistLink
                         id={lastAddedRecordArtistId} className={"text-uppercase"}/> ({lastAddedRecordDate.toLocaleDateString()}). Total number of
@@ -93,14 +102,15 @@ const StartPage = () => {
                     </p>
                     <AllRecordsPaginated/>
                     <IconLink className={"ml-3"} link={ROUTES.RECORDS} text={"See all records"} icon={"compact-disc"}/>
-                </div>
-                <div className="standard-main-column__section">
-                    <h2 className="section-header">Popular tracks</h2>
+                </section>
+                <section className="standard-main-column__section" aria-labelledby="section-header-tracks">
+                    <h2 className="section-header" id="section-header-tracks">Popular tracks</h2>
                     <p className="small m-0">Total number of tracks: {counters.songCounter}</p>
                     <AllTracksPaginated/>
                     <IconLink className={"ml-3"} link={ROUTES.TRACKS} text={"See all tracks"} icon={"music"}/>
-                </div>
-                <CopyrightInformation className={"d-block d-lg-none"}/>
+                    <CopyrightInformation className={"d-block d-lg-none mt-5"}/>
+                </section>
+
             </div>
         </div>)
         :

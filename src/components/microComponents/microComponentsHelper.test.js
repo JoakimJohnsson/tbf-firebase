@@ -1,4 +1,4 @@
-const { randomizer, colorRandomizer, fontRandomizer, formatInformationRenderIcon, formatInformationRenderText } = require("./microComponentsHelper");
+const { randomizer, colorRandomizer, fontRandomizer, formatInformationRenderIcon, formatInformationRenderText, prepareFilterText } = require("./microComponentsHelper");
 const {FORMAT} = require("../../constants/strings");
 const STRING_UNEXPECTED = 'Poo foo yoo';
 const STRING_UNEXPECTED_TEXT = 'Poo foo yoo /';
@@ -56,4 +56,32 @@ test('Color Randomizer - Generates a random number between 1 and 16', () => {
 
 test('Font Randomizer - Generates a random number between 1 and 8', () => {
     expect(fontRandomizer()).toBeLessThanOrEqual(8, 1);
+});
+
+test('Prepare filter text - Should replace å, ä, ö and -', () => {
+    // Arrange
+    const numberOfTextsToTest = 3;
+    const TEXTS = {
+        1: {
+            FILTER_TEXT: 'överkalix',
+            FILTER_TEXT_EXPECTED: 'overkalix'
+        },
+        2: {
+            FILTER_TEXT: 'the-baseball field',
+            FILTER_TEXT_EXPECTED: 'the baseball field'
+        },
+        3: {
+            FILTER_TEXT: 'räksmörgås',
+            FILTER_TEXT_EXPECTED: 'raksmorgas'
+        }
+    }
+
+    let counter = 1;
+    while (counter < numberOfTextsToTest) {
+        // Act
+        const result = prepareFilterText(TEXTS[counter].FILTER_TEXT);
+        // Assert
+        expect(result).toBe(TEXTS[counter].FILTER_TEXT_EXPECTED);
+        counter++;
+    }
 });

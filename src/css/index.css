@@ -4194,7 +4194,7 @@ input[type=button].btn-block {
   border-top-right-radius: 0.25rem;
 }
 .nav-tabs .nav-link:hover, .nav-tabs .nav-link:focus {
-  border-color: #e9ecef #e9ecef #444;
+  border-color: #151515 #151515 #444;
 }
 .nav-tabs .nav-link.disabled {
   color: #6c757d;
@@ -17083,6 +17083,34 @@ footer {
 }
 .footer__nav-link-cmp.active {
   color: #88ffcc;
+}
+
+.nav-tabs {
+  border-bottom: 0;
+}
+.nav-tabs a {
+  color: #000;
+}
+.nav-tabs .nav-item {
+  border-radius: 0;
+  border-color: #151515 #151515 #444;
+  width: 100%;
+  margin: 0;
+}
+.nav-tabs .nav-item.active {
+  color: #88ffcc;
+  background-color: #0a0a0a;
+}
+@media (min-width: 576px) {
+  .nav-tabs .nav-item {
+    width: auto;
+    margin-right: 0.5rem;
+  }
+}
+
+.tab-content {
+  border-top: 1px solid #0a0a0a;
+  padding-top: 1rem;
 }
 
 .todo-component {

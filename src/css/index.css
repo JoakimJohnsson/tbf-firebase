@@ -16560,6 +16560,10 @@ label {
   font-size: 120%;
 }
 
+.text-black {
+  color: #151515;
+}
+
 .list-group-item-warning {
   color: #403002;
 }

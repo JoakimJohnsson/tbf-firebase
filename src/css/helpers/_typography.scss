@@ -185,6 +185,10 @@ $color-variants: $color-primary, $color-secondary, $color-tertiary, $color-quate
   font-size: 120%;
 }
 
+.text-black {
+  color: $color-dark-grey;
+}
+
 // Bootstrap a11y fixes
 .list-group-item-warning {
   color: darken(#856404, 14%);

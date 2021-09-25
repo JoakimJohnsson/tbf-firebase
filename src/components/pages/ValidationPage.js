@@ -1,7 +1,7 @@
 import React, {useContext, useEffect} from 'react';
 import {NavigationContext} from "../NavigationStore/NavigationStore";
 
-const DevopsPage = () => {
+const ValidationPage = () => {
     const setHideNavs = useContext(NavigationContext)[1];
     useEffect(() =>
         setHideNavs(true)
@@ -12,7 +12,7 @@ const DevopsPage = () => {
             <div className="container-fluid standard-container bg-light text-black">
             <main className="row no-gutters">
                 <div className="col-12">
-                    <h1 className="mb-3">DevOps</h1>
+                    <h1 className="mb-3">Validation</h1>
                 </div>
             </main>
             </div>
@@ -20,4 +20,4 @@ const DevopsPage = () => {
     );
 }
 
-export default DevopsPage;
+export default ValidationPage;

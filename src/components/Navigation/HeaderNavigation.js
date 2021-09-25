@@ -18,9 +18,8 @@ const HeaderNavigation = () => {
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav" className="justify-content-end">
                     <Nav className="me-auto">
-                        <Link to={ROUTES.DEVOPS} className={"nav-link logo-font-family__5 py-2 py-md-0"}>DevOps</Link>
-                        <Link to={ROUTES.START} className={"nav-link logo-font-family__6 py-2 py-md-0"}>Start</Link>
-                        <Link to={ROUTES.ARTISTS} className={"nav-link logo-font-family__7 py-2 py-md-0"}>Artiskts</Link>
+                        <Link to={ROUTES.VALIDATION} className={"nav-link py-2 py-md-0"}>Code validation</Link>
+                        <Link to={ROUTES.CHEAT_SHEETS} className={"nav-link py-2 py-md-0"}>Cheat sheets</Link>
                     </Nav>
                 </Navbar.Collapse>
             </Navbar>

@@ -6,4 +6,6 @@ export const RECORD = '/record/:id';
 export const TRACKS = '/tracks';
 export const SEARCH = '/search';
 export const UPLOAD = '/upload';
-export const DEVOPS = '/devops';
+export const DEVOPS = '/dev-ops';
+export const VALIDATION = '/validation';
+export const CHEAT_SHEETS = '/cheat-sheets';

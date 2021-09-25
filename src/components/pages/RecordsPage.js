@@ -10,17 +10,19 @@ const RecordsPage = () => {
     )
 
     return (
-        <main className="row no-gutters">
-            <div className="col-12">
-                <h1 className="mb-3">Records</h1>
-            </div>
-            <div className="col-12 mb-4">
-                <AllRecordsWithFilter fullWidth/>
-            </div>
-            <div className="col-12">
-                <CopyrightInformation/>
-            </div>
-        </main>
+        <div className="container-fluid standard-container">
+            <main className="row no-gutters">
+                <div className="col-12">
+                    <h1 className="mb-3">Records</h1>
+                </div>
+                <div className="col-12 mb-4">
+                    <AllRecordsWithFilter fullWidth/>
+                </div>
+                <div className="col-12">
+                    <CopyrightInformation/>
+                </div>
+            </main>
+        </div>
     )
 };
 

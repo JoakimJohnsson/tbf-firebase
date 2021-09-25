@@ -9,11 +9,13 @@ const DevopsPage = () => {
 
     return (
         <>
+            <div className="container-fluid standard-container bg-light">
             <main className="row no-gutters">
                 <div className="col-12">
                     <h1 className="mb-3">DevOps</h1>
                 </div>
             </main>
+            </div>
         </>
     );
 }

@@ -27,6 +27,12 @@
       }
     }
   }
+  &.navbar-header__variant {
+    a {
+      color: $color-near-black;
+      text-decoration: none;
+    }
+  }
 }
 
 .navbar-footer {

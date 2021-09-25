@@ -66,16 +66,14 @@ const App = () => {
                 <GlobalTrackStore>
                     <Router>
                         <HeaderNavigation/>
-                        <div className="container-fluid standard-container">
-                            <Route exact path={ROUTES.START} component={StartPage}/>
-                            <Route path={ROUTES.ARTISTS} component={ArtistsPage}/>
-                            <Route path={ROUTES.ARTIST} component={ArtistPage}/>
-                            <Route path={ROUTES.RECORDS} component={RecordsPage}/>
-                            <Route path={ROUTES.RECORD} component={RecordPage}/>
-                            <Route path={ROUTES.TRACKS} component={TracksPage}/>
-                            <Route path={ROUTES.DEVOPS} component={DevopsPage}/>
-                            {showUpload ? <Route path={ROUTES.UPLOAD} component={UploadPage}/> : false}
-                        </div>
+                        <Route exact path={ROUTES.START} component={StartPage}/>
+                        <Route path={ROUTES.ARTISTS} component={ArtistsPage}/>
+                        <Route path={ROUTES.ARTIST} component={ArtistPage}/>
+                        <Route path={ROUTES.RECORDS} component={RecordsPage}/>
+                        <Route path={ROUTES.RECORD} component={RecordPage}/>
+                        <Route path={ROUTES.TRACKS} component={TracksPage}/>
+                        <Route path={ROUTES.DEVOPS} component={DevopsPage}/>
+                        {showUpload ? <Route path={ROUTES.UPLOAD} component={UploadPage}/> : false}
                         <Footer/>
                     </Router>
                 </GlobalTrackStore>

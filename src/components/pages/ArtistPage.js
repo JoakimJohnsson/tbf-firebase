@@ -31,26 +31,28 @@ const ArtistPage = ({match}) => {
         });
 
     return (
-        <div className="row">
-            <div className="standard-secondary-column">
-                <div className="standard-box-wrapper__near-dark">
-                    <h1 className={`logo-font-family__${fontRandomizer().toString()} text-uppercase text-color-variant__${colorRandomizer().toString()}`}>{artist.name}</h1>
-                    <img className="w-100 mb-3 opacity-4" alt={`${artist.name}`} src={artist.imgUrl || imgUnavailable}/>
+        <div className="container-fluid standard-container">
+            <div className="row">
+                <div className="standard-secondary-column">
+                    <div className="standard-box-wrapper__near-dark">
+                        <h1 className={`logo-font-family__${fontRandomizer().toString()} text-uppercase text-color-variant__${colorRandomizer().toString()}`}>{artist.name}</h1>
+                        <img className="w-100 mb-3 opacity-4" alt={`${artist.name}`} src={artist.imgUrl || imgUnavailable}/>
 
-                    <ArtistDescription artist={artist}/>
-                    <h2>Members</h2>
-                    <MembersByArtist artistId={id}/>
-                    <CopyrightInformation className={"d-none d-lg-block"}/>
+                        <ArtistDescription artist={artist}/>
+                        <h2>Members</h2>
+                        <MembersByArtist artistId={id}/>
+                        <CopyrightInformation className={"d-none d-lg-block"}/>
+                    </div>
                 </div>
-            </div>
-            <div className="standard-main-column">
-                <div className="standard-main-column__section">
-                    <h2 className="section-header">Records</h2>
-                    <RecordsByArtist artistId={id}/>
-                    <h2 className="section-header">Tracks</h2>
-                    <TracksByArtistPaginated artistId={id}/>
+                <div className="standard-main-column">
+                    <div className="standard-main-column__section">
+                        <h2 className="section-header">Records</h2>
+                        <RecordsByArtist artistId={id}/>
+                        <h2 className="section-header">Tracks</h2>
+                        <TracksByArtistPaginated artistId={id}/>
+                    </div>
+                    <CopyrightInformation className={"d-block d-lg-none mt-5"}/>
                 </div>
-                <CopyrightInformation className={"d-block d-lg-none mt-5"}/>
             </div>
         </div>
     );

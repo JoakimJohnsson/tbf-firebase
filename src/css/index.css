@@ -17039,6 +17039,10 @@ footer {
     padding-top: 0.5rem;
   }
 }
+.navbar-header.navbar-header__variant a {
+  color: #0a0a0a;
+  text-decoration: none;
+}
 
 .navbar-footer {
   justify-content: space-between;

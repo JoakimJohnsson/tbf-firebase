@@ -7,7 +7,7 @@ const Footer = () => {
     const hideNavs = useContext(NavigationContext)[0];
 
     return hideNavs ?
-        <p>annan footer</p>
+        false
         :
         (
             <footer className="container-fluid fixed-bottom">

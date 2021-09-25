@@ -8,7 +8,7 @@ import {GlobalTrackContext} from "../MusicStore/GlobalTrackStore";
 import {FetchAllTracks} from "../../api-functions/api";
 import LoadingStandard from "../microComponents/Loading/LoadingStandard";
 
-export const showUpload = false;
+export const    showUpload = false;
 
 const FooterNavigation = () => {
     const [trackState, setTrackState] = useContext(Context);

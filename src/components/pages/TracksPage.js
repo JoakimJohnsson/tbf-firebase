@@ -1,8 +1,13 @@
-import React from 'react';
+import React, {useContext, useEffect} from 'react';
 import CopyrightInformation from "../microComponents/CopyrightInformation";
 import AllTracksWithFilter from "../lists/AllTracksWithFilter";
+import {NavigationContext} from "../NavigationStore/NavigationStore";
 
 const TracksPage = () => {
+    const setHideNavs = useContext(NavigationContext)[1];
+    useEffect(() =>
+        setHideNavs(false)
+    )
     return (
         <main className="row no-gutters">
             <div className="col-12">

@@ -52,6 +52,8 @@ import UploadPage from "../pages/UploadPage";
 import MusicStore from "../MusicStore/MusicStore";
 import GlobalTrackStore from "../MusicStore/GlobalTrackStore";
 import {showUpload} from "../Navigation/FooterNavigation";
+import NavigationStore from "../NavigationStore/NavigationStore";
+import DevopsPage from "../pages/DevopsPage";
 
 library.add(faAirbnb, faSitemap, faBookDead, faStepForward, faTape, faRandom, faStepBackward, faFilter, faDownload, faGoogle, faFacebookF, faArrowAltCircleLeft, faArrowAltCircleDown, faArrowDown, faArrowUp, faArrowAltCircleUp, faCopyright, faWrench, faHome, faRecordVinyl,
     faMusic, faSearch, faUserAstronaut, faPlayCircle, faPlay, faPause, faPauseCircle, faPlus, faTimes, faTimesCircle, faPen, faMinus, faChevronLeft, faChevronRight, faChevronDown, faChevronUp, faSpinner, faSave,
@@ -59,23 +61,26 @@ library.add(faAirbnb, faSitemap, faBookDead, faStepForward, faTape, faRandom, fa
 
 const App = () => {
     return (
-        <MusicStore>
-            <GlobalTrackStore>
-                <Router>
-                    <HeaderNavigation/>
-                    <div className="container-fluid standard-container">
-                        <Route exact path={ROUTES.START} component={StartPage}/>
-                        <Route path={ROUTES.ARTISTS} component={ArtistsPage}/>
-                        <Route path={ROUTES.ARTIST} component={ArtistPage}/>
-                        <Route path={ROUTES.RECORDS} component={RecordsPage}/>
-                        <Route path={ROUTES.RECORD} component={RecordPage}/>
-                        <Route path={ROUTES.TRACKS} component={TracksPage}/>
-                        {showUpload ? <Route path={ROUTES.UPLOAD} component={UploadPage}/> : false}
-                    </div>
-                    <Footer/>
-                </Router>
-            </GlobalTrackStore>
-        </MusicStore>
+        <NavigationStore>
+            <MusicStore>
+                <GlobalTrackStore>
+                    <Router>
+                        <HeaderNavigation/>
+                        <div className="container-fluid standard-container">
+                            <Route exact path={ROUTES.START} component={StartPage}/>
+                            <Route path={ROUTES.ARTISTS} component={ArtistsPage}/>
+                            <Route path={ROUTES.ARTIST} component={ArtistPage}/>
+                            <Route path={ROUTES.RECORDS} component={RecordsPage}/>
+                            <Route path={ROUTES.RECORD} component={RecordPage}/>
+                            <Route path={ROUTES.TRACKS} component={TracksPage}/>
+                            <Route path={ROUTES.DEVOPS} component={DevopsPage}/>
+                            {showUpload ? <Route path={ROUTES.UPLOAD} component={UploadPage}/> : false}
+                        </div>
+                        <Footer/>
+                    </Router>
+                </GlobalTrackStore>
+            </MusicStore>
+        </NavigationStore>
     )
 };
 

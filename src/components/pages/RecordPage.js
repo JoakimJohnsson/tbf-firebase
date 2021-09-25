@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useContext, useEffect, useState} from 'react';
 import FormatInformation from "../microComponents/FormatInformation";
 import LoadingStandard from "../microComponents/Loading/LoadingStandard";
 import {FetchRecordFromId} from "../../api-functions/api";
@@ -9,8 +9,13 @@ import imgUnavailable from "../../images/image_unavailable.png";
 import TracksByRecordListSimple, {TracksByRecordWithPlayer} from "../lists/TracksByRecord";
 import CopyrightInformation from "../microComponents/CopyrightInformation";
 import RecordDescription from "../microComponents/Descriptions/RecordDescription";
+import {NavigationContext} from "../NavigationStore/NavigationStore";
 
 const RecordPage = ({match}) => {
+    const setHideNavs = useContext(NavigationContext)[1];
+    useEffect(() =>
+        setHideNavs(false)
+    )
     const {params: {id}} = match;
     const record = FetchRecordFromId(id);
     const [open, setOpen] = useState(false);

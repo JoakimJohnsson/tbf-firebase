@@ -1,10 +1,15 @@
-import React from 'react';
+import React, {useContext, useEffect} from 'react';
 import CopyrightInformation from "../microComponents/CopyrightInformation";
 import TrackUploadForm from "../formsAndInputs/TrackUploadForm"
 import RecordUploadForm from "../formsAndInputs/RecordUploadForm";
 import LastUpdatedArtistForm from "../formsAndInputs/LastUpdatedArtistForm";
+import {NavigationContext} from "../NavigationStore/NavigationStore";
 
 const UploadPage = () => {
+    const setHideNavs = useContext(NavigationContext)[1];
+    useEffect(() =>
+        setHideNavs(false)
+    )
 
     return (
         <div className="row">

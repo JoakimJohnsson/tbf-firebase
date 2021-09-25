@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useContext, useEffect} from 'react';
 import {FetchArtistFromId} from "../../api-functions/api";
 import firebase from "firebase";
 import imgUnavailable from "../../images/image_unavailable.png";
@@ -7,9 +7,15 @@ import RecordsByArtist from "../lists/RecordsByArtist";
 import CopyrightInformation from "../microComponents/CopyrightInformation";
 import ArtistDescription from "../microComponents/Descriptions/ArtistDescription";
 import {fontRandomizer, colorRandomizer} from "../microComponents/microComponentsHelper";
+
 import TracksByArtistPaginated from "../lists/TracksByArtistPaginated";
+import {NavigationContext} from "../NavigationStore/NavigationStore";
 
 const ArtistPage = ({match}) => {
+    const setHideNavs = useContext(NavigationContext)[1];
+    useEffect(() =>
+        setHideNavs(false)
+    )
     const {params: {id}} = match;
     const artist = FetchArtistFromId(id);
 

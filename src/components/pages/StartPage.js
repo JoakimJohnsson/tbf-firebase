@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useContext, useEffect} from 'react';
 import firebase from '../Firebase/firebase';
 import LoadingStandard from "../microComponents/Loading/LoadingStandard";
 import {
@@ -13,11 +13,15 @@ import {RecordLink} from "../cards/RecordCard";
 import AllRecordsPaginated from "../lists/AllRecordsPaginated";
 import AllTracksPaginated from "../lists/AllTracksPaginated";
 import CopyrightInformation from "../microComponents/CopyrightInformation";
+import {NavigationContext} from "../NavigationStore/NavigationStore";
 
 console.log("-- WE HAVE FIREBASE " + firebase.app.name + " --");
 
 const StartPage = () => {
-
+    const setHideNavs = useContext(NavigationContext)[1];
+    useEffect(() =>
+        setHideNavs(false)
+    )
     const lastUpdatedArtistId = FetchLastUpdatedArtistId();
     const lastUpdatedArtistDate = new Date(FetchLastUpdatedArtistTimestamp().seconds * 1000);
     const lastAddedRecordId = FetchLastAddedRecordId();

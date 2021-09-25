@@ -71,10 +71,11 @@
   a {
     color: $color-black;
   }
-  border-bottom: 0;
+  border: none;
   .nav-item {
     border-radius: 0;
-    border-color: $nav-tabs-link-hover-border-color;
+    border: none;
+    background-color: $color-vibrant-green;
     &.active {
       color: $color-vibrant-green;
       background-color: $color-near-black;

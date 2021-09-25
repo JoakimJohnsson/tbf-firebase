@@ -4,6 +4,7 @@ import {Link} from 'react-router-dom';
 import Navbar from 'react-bootstrap/Navbar';
 import TbfLogo from "../TbfLogo/TbfLogo";
 import {NavigationContext} from "../NavigationStore/NavigationStore";
+import IconLink from "../microComponents/Links/IconLink";
 
 const HeaderNavigation = () => {
     const hideNavs = useContext(NavigationContext)[0];
@@ -12,7 +13,8 @@ const HeaderNavigation = () => {
             <Navbar className="navbar-header navbar-header__variant justify-content-between align-items-center" bg="light" variant="light"
                     expand="md" aria-label="Header navigation">
                 <div className="container">
-                    <h1 className="m-0"><Link to={ROUTES.DEVOPS} title={"To devOps page"} className={"logo-font-family__4 h1"}>DevOps</Link></h1>
+                    <h1 className="m-0 logo-font-family__4"><IconLink link={ROUTES.DEVOPS} text={"DevOps"} icon={"journal-whills"}/></h1>
+                    <IconLink link={ROUTES.START} text={"Back to friends"} icon={"home"}/>
                 </div>
             </Navbar>
         </header>

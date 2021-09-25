@@ -17086,14 +17086,15 @@ footer {
 }
 
 .nav-tabs {
-  border-bottom: 0;
+  border: none;
 }
 .nav-tabs a {
   color: #000;
 }
 .nav-tabs .nav-item {
   border-radius: 0;
-  border-color: #151515 #151515 #444;
+  border: none;
+  background-color: #88ffcc;
   width: 100%;
   margin: 0;
 }

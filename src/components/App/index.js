@@ -1,46 +1,82 @@
 import React from 'react';
 import {BrowserRouter as Router, Route} from 'react-router-dom';
-import * as ROUTES from '../../constants/routes'
-import Navigation from '../Navigation';
-import StartPage from '../../pages/unauthorized/Start';
-import SignUpPage from '../SignUp';
-import DashBoardPage from '../../pages/authorized/DashBoard';
-import AccountPage from '../../pages/authorized/Account';
-import AdminPage from '../../pages/authorized/Admin';
-import withAuthentication from "../Session/withAuthentication";
-import { library } from '@fortawesome/fontawesome-svg-core'
-import { faAirbnb, faGoogle, faFacebookF } from '@fortawesome/free-brands-svg-icons'
-import { faArrowAltCircleLeft, faCopyright } from '@fortawesome/free-regular-svg-icons'
-import { faWrench, faHome, faRecordVinyl, faMusic, faSearch, faUserAstronaut, faPlayCircle, faPlus, faTimes, faPen,
-    faMinus, faChevronLeft, faChevronRight, faSpinner, faSave, faAngleDoubleDown } from '@fortawesome/free-solid-svg-icons'
-import Footer from "../Footer";
-import ArtistPage from "../../pages/unauthorized/Artists";
-import RecordsPage from "../../pages/unauthorized/Records";
-import SongsPage from "../../pages/unauthorized/Songs";
-import PlayPage from "../../pages/unauthorized/Play";
-import SearchPage from "../../pages/unauthorized/Search";
+import * as ROUTES from '../../constants/routes';
+import {library} from '@fortawesome/fontawesome-svg-core';
+import {faAirbnb, faGoogle, faFacebookF} from '@fortawesome/free-brands-svg-icons';
+import {faArrowAltCircleLeft, faCopyright} from '@fortawesome/free-regular-svg-icons';
+import {
+    faWrench,
+    faFilter,
+    faDownload,
+    faHome,
+    faArrowAltCircleDown,
+    faArrowDown,
+    faArrowUp,
+    faArrowAltCircleUp,
+    faRecordVinyl,
+    faMusic,
+    faSearch,
+    faTape,
+    faUserAstronaut,
+    faPlayCircle,
+    faPlus,
+    faTimes,
+    faPen,
+    faMinus,
+    faChevronLeft,
+    faChevronRight,
+    faChevronDown,
+    faChevronUp,
+    faSpinner,
+    faSave,
+    faAngleDoubleDown,
+    faCompactDisc,
+    faUsersSlash,
+    faRobot,
+    faVrCardboard,
+    faStepForward,
+    faStepBackward,
+    faPlay,
+    faRandom,
+    faPause, faPauseCircle, faTimesCircle, faBookDead, faSitemap
+} from '@fortawesome/free-solid-svg-icons';
+import HeaderNavigation from '../Navigation/HeaderNavigation';
+import Footer from "../Footer/Footer";
+import StartPage from '../pages/StartPage';
+import ArtistsPage from "../pages/ArtistsPage";
+import ArtistPage from "../pages/ArtistPage";
+import RecordsPage from "../pages/RecordsPage";
+import RecordPage from "../pages/RecordPage";
+import TracksPage from "../pages/TracksPage";
+import UploadPage from "../pages/UploadPage";
+import MusicStore from "../MusicStore/MusicStore";
+import GlobalTrackStore from "../MusicStore/GlobalTrackStore";
+import {showUpload} from "../Navigation/FooterNavigation";
 
-library.add(faAirbnb, faGoogle, faFacebookF, faArrowAltCircleLeft, faCopyright, faWrench, faHome, faRecordVinyl,
-    faMusic, faSearch, faUserAstronaut, faPlayCircle, faPlus, faTimes, faPen, faMinus, faChevronLeft, faChevronRight, faSpinner, faSave,
-    faAngleDoubleDown);
+library.add(faAirbnb, faSitemap, faBookDead, faStepForward, faTape, faRandom, faStepBackward, faFilter, faDownload, faGoogle, faFacebookF, faArrowAltCircleLeft, faArrowAltCircleDown, faArrowDown, faArrowUp, faArrowAltCircleUp, faCopyright, faWrench, faHome, faRecordVinyl,
+    faMusic, faSearch, faUserAstronaut, faPlayCircle, faPlay, faPause, faPauseCircle, faPlus, faTimes, faTimesCircle, faPen, faMinus, faChevronLeft, faChevronRight, faChevronDown, faChevronUp, faSpinner, faSave,
+    faAngleDoubleDown, faCompactDisc, faUsersSlash, faRobot, faVrCardboard);
 
-const App = () => (
-    <Router>
-        <Navigation/>
-        <div className="container-fluid standard-container">
-            <Route exact path={ROUTES.START} component={StartPage}/>
-            <Route path={ROUTES.SIGN_UP} component={SignUpPage}/>
-            <Route path={ROUTES.ARTISTS} component={ArtistPage}/>
-            <Route path={ROUTES.RECORDS} component={RecordsPage}/>
-            <Route path={ROUTES.SONGS} component={SongsPage}/>
-            <Route path={ROUTES.PLAY} component={PlayPage}/>
-            <Route path={ROUTES.SEARCH} component={SearchPage}/>
-            <Route path={ROUTES.DASHBOARD} component={DashBoardPage}/>
-            <Route path={ROUTES.ACCOUNT} component={AccountPage}/>
-            <Route path={ROUTES.ADMINISTRATION} component={AdminPage}/>
-        </div>
-        <Footer/>
-    </Router>
-);
+const App = () => {
+    return (
+        <MusicStore>
+            <GlobalTrackStore>
+                <Router>
+                    <HeaderNavigation/>
+                    <div className="container-fluid standard-container">
+                        <Route exact path={ROUTES.START} component={StartPage}/>
+                        <Route path={ROUTES.ARTISTS} component={ArtistsPage}/>
+                        <Route path={ROUTES.ARTIST} component={ArtistPage}/>
+                        <Route path={ROUTES.RECORDS} component={RecordsPage}/>
+                        <Route path={ROUTES.RECORD} component={RecordPage}/>
+                        <Route path={ROUTES.TRACKS} component={TracksPage}/>
+                        {showUpload ? <Route path={ROUTES.UPLOAD} component={UploadPage}/> : false}
+                    </div>
+                    <Footer/>
+                </Router>
+            </GlobalTrackStore>
+        </MusicStore>
+    )
+};
 
-export default withAuthentication(App);
+export default App;

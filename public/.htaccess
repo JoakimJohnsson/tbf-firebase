@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <IfModule mod_rewrite.c>
 
   RewriteEngine On
@@ -9,3 +10,15 @@
   RewriteRule . /index.html [L]
 
 </IfModule>
+=======
+RewriteEngine On
+RewriteBase /
+RewriteRule ^index\.html$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-l
+RewriteRule . /index.html [L]
+RewriteEngine On
+RewriteCond %{SERVER_PORT} 80
+RewriteRule ^(.*)$ https://www.thebaseballfield.se/$1 [R,L]
+>>>>>>> 94cb80671a7af7a2f9045c75c84baa83d9443004

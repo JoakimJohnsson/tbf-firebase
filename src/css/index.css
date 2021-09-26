@@ -16378,7 +16378,7 @@ label {
   font-size: 80% !important;
 }
 
-.logo-font-family__14 {
+.logo-font-family__14, .article a {
   font-family: "Itim", cursive, sans-serif;
 }
 
@@ -16572,6 +16572,17 @@ label {
   color: #56562e;
 }
 
+.article {
+  color: #151515;
+}
+.article a {
+  text-decoration: underline;
+  color: #222;
+}
+.article a:hover, .article a:active, .article a:focus {
+  color: #333;
+}
+
 img {
   border: 1px solid #000;
 }
@@ -16628,6 +16639,9 @@ footer {
   position: absolute;
   bottom: 0;
   width: 100%;
+}
+footer.article {
+  position: initial;
 }
 
 .card__dark {
@@ -17114,6 +17128,13 @@ footer {
   padding-top: 1rem;
 }
 
+.nav-tabs__secondary .nav-item {
+  font-size: 85%;
+}
+.nav-tabs__secondary .nav-link {
+  padding: 0.3rem 0.7rem;
+}
+
 .todo-component {
   border-radius: 0.25rem;
   border: 1px solid #fffe88;
@@ -17145,6 +17166,34 @@ footer {
   align-items: center;
   height: 100%;
   width: 100%;
+}
+
+.hero-image {
+  height: 150px;
+  background-size: cover;
+  background-position: center;
+}
+@media (min-width: 576px) {
+  .hero-image {
+    height: 300px;
+  }
+}
+@media (min-width: 992px) {
+  .hero-image {
+    height: 500px;
+  }
+}
+.hero-image.hero-image__1 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/developer.jpg");
+}
+.hero-image.hero-image__2 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/classroom.png");
+}
+.hero-image.hero-image__3 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/www.jpg");
+}
+.hero-image.hero-image__4 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/wcag.png");
 }
 
 .dashboard-list .list-group-item {

@@ -197,3 +197,15 @@ $color-variants: $color-primary, $color-secondary, $color-tertiary, $color-quate
 .list-group-item-info {
   color: darken(#858447, 14%);
 }
+
+.article {
+  color: $color-dark-grey;
+  a {
+    text-decoration: underline;
+    @extend .logo-font-family__14;
+    color: #222;
+    &:hover, &:active, &:focus {
+      color: #333;
+    }
+  }
+}

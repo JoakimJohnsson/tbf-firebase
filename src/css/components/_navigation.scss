@@ -92,3 +92,11 @@
   border-top: 1px solid $color-near-black;
   padding-top: 1rem;
 }
+.nav-tabs__secondary {
+  .nav-item {
+    font-size: 85%;
+  }
+  .nav-link {
+    padding: .3rem .7rem;
+  }
+}

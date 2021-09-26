@@ -7,8 +7,11 @@ import PropTypes from "prop-types";
  * A link paired with a fontawesome icon. Used as navigation link on page.
  */
 
-const IconLink = ({className, link, text, icon}) => (
-    <Link className={className} to={link}><FontAwesomeIcon icon={icon}/><span className="ml-2">{text}</span></Link>
+const IconLink = ({className, link, text, icon, external}) => (
+    external ?
+        <a className={className} href={link} target={"_blank"} rel="noreferrer"><FontAwesomeIcon icon={icon}/><span className="ml-2">{text}</span></a>
+        :
+        <Link className={className} to={link}><FontAwesomeIcon icon={icon}/><span className="ml-2">{text}</span></Link>
 );
 
 IconLink.defaultProps = {

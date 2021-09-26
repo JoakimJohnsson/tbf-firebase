@@ -41,7 +41,7 @@ const DevopsPage = () => {
                                         <Tab.Container id="tabs-html" defaultActiveKey="html" className="mb-3">
                                             <Nav className="nav-tabs nav-tabs__secondary">
                                                 <Nav.Link eventKey="html" className="nav-item nav-link"
-                                                          onClick={() => updateHeroImage(3)}>HTML</Nav.Link>
+                                                          onClick={() => updateHeroImage(1)}>HTML</Nav.Link>
                                                 <Nav.Link eventKey="accessibility" className="nav-item nav-link"
                                                           onClick={() => updateHeroImage(4)}>Accessibility</Nav.Link>
                                             </Nav>

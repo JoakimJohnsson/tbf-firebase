@@ -22,7 +22,7 @@ const CheatSheetsTabPane = () => {
                             <div className="col-12">
                                 <h2>Git</h2>
                             </div>
-                            <div className="col-12 col-lg-6 col-xl-4">
+                            <div className="tab-pane-card">
                                 <h3>Git by Github</h3>
                                 <p>Git is the free and open source distributed version control system that's responsible for
                                     everything GitHub related that happens locally on your computer. This cheat sheet features the most

@@ -112,6 +112,30 @@
 .tab-content {
   border-top: 1px solid $color-near-black;
   padding-top: 1rem;
+
+  .tab-pane-card {
+    margin-bottom: 1rem;
+    @include make-col-ready();
+    @include make-col(12);
+    @include media-breakpoint-up(lg) {
+      @include make-col(6);
+    }
+    @include media-breakpoint-up(xl) {
+      @include make-col(4);
+    }
+
+    p {
+      margin-bottom: .5rem;
+    }
+    a {
+      display: block;
+      width: 100%;
+      &:last-of-type {
+        padding-bottom: 1rem;
+        border-bottom: 1px solid $color-vibrant-green;
+      }
+    }
+  }
 }
 
 .nav-tabs__secondary {

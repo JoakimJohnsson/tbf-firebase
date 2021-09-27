@@ -203,13 +203,13 @@ $color-variants: $color-primary, $color-secondary, $color-tertiary, $color-quate
   color: $color-dark-grey;
 
   a {
-    text-decoration: underline;
+    text-decoration: none;
     @extend .logo-font-family__14;
     color: #222;
 
     &:hover, &:active, &:focus {
+      text-decoration: underline;
       color: #333;
-      background-color: $color-secondary__lighten;
     }
   }
 }

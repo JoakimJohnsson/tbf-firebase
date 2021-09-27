@@ -23,7 +23,7 @@ const ResourcesTabPane = () => {
                             <div className="col-12">
                                 <h2>Icons</h2>
                             </div>
-                            <div className="col-12 col-lg-6 col-xl-4">
+                            <div className="tab-pane-card">
                                 <h3>Fontawesome</h3>
                                 <p>An awesome and easy to use library for whenever you need icons for your project.</p>
                                 <IconLink link={"https://fontawesome.com"} text={"Fontawesome"}

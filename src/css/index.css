@@ -12984,11 +12984,11 @@ label {
 .article {
   color: #151515; }
   .article a {
-    text-decoration: underline;
+    text-decoration: none;
     color: #222; }
     .article a:hover, .article a:active, .article a:focus {
-      color: #333;
-      background-color: #b8ffe0; }
+      text-decoration: underline;
+      color: #333; }
 
 img {
   border: 1px solid #000; }
@@ -13409,6 +13409,30 @@ footer {
 .tab-content {
   border-top: 1px solid #0a0a0a;
   padding-top: 1rem; }
+  .tab-content .tab-pane-card {
+    margin-bottom: 1rem;
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    flex: 0 0 100%;
+    max-width: 100%; }
+    @media (min-width: 992px) {
+      .tab-content .tab-pane-card {
+        flex: 0 0 50%;
+        max-width: 50%; } }
+    @media (min-width: 1200px) {
+      .tab-content .tab-pane-card {
+        flex: 0 0 33.3333333333%;
+        max-width: 33.3333333333%; } }
+    .tab-content .tab-pane-card p {
+      margin-bottom: .5rem; }
+    .tab-content .tab-pane-card a {
+      display: block;
+      width: 100%; }
+      .tab-content .tab-pane-card a:last-of-type {
+        padding-bottom: 1rem;
+        border-bottom: 1px solid #88ffcc; }
 
 .nav-tabs__secondary .nav-item {
   font-size: 85%; }

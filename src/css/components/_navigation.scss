@@ -8,6 +8,7 @@
     font-size: 2rem;
   }
 }
+
 .navbar-brand {
   @include media-breakpoint-down(xs) {
     padding-bottom: 0;
@@ -27,6 +28,7 @@
       }
     }
   }
+
   &.navbar-header__variant {
     a {
       color: $color-near-black;
@@ -62,6 +64,7 @@
       font-size: 90%;
     }
   }
+
   &.active {
     color: $color-secondary;
   }
@@ -71,31 +74,51 @@
   a {
     color: $color-black;
   }
+
   border: none;
+
   .nav-item {
     border-radius: 0;
     border: none;
-    background-color: $color-vibrant-green;
+    background-color: transparent;
+
     &.active {
       color: $color-vibrant-green;
       background-color: $color-near-black;
+      pointer-events: none;
     }
+
+    &:hover {
+      background-color: #eee;
+
+    }
+
     width: 100%;
-    margin: 0;
-   @include media-breakpoint-up(sm) {
-     width: auto;
-     margin-right: .5rem;
-   }
+    margin-bottom: 2px;
+    margin-right: 0;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    @include media-breakpoint-up(sm) {
+      width: auto;
+      margin-right: 2px;
+      margin-bottom: 0;
+    }
   }
 }
+
 .tab-content {
   border-top: 1px solid $color-near-black;
   padding-top: 1rem;
 }
+
 .nav-tabs__secondary {
   .nav-item {
     font-size: 85%;
   }
+
   .nav-link {
     padding: .3rem .7rem;
   }

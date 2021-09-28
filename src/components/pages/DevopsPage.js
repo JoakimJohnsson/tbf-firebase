@@ -4,6 +4,7 @@ import {Nav, Tab} from "react-bootstrap";
 import CheatSheetsTabPane from "../devopsComponents/CheatSheetsTabPane";
 import ResourcesTabPane from "../devopsComponents/ResourcesTabPane";
 import AccessibilityTabPane from "../devopsComponents/AccessibilityTabPane";
+import UXTabPane from "../devopsComponents/UXTabPane";
 
 const DevopsPage = () => {
     const setHideNavs = useContext(NavigationContext)[1];
@@ -25,10 +26,10 @@ const DevopsPage = () => {
                         <div className="col-12">
                             <Tab.Container id="tabs-validation" defaultActiveKey="accessibility-main" className="mb-3">
                                 <Nav className="nav-tabs">
-                                    {/*<Nav.Link eventKey="validation-main" className="nav-item nav-link"*/}
-                                    {/*          onClick={() => updateHeroImage(1)}>Validation</Nav.Link>*/}
                                     <Nav.Link eventKey="accessibility-main" className="nav-item nav-link"
                                               onClick={() => updateHeroImage(4)}>Accessibility</Nav.Link>
+                                    <Nav.Link eventKey="ux-main" className="nav-item nav-link"
+                                              onClick={() => updateHeroImage(1)}>User experience</Nav.Link>
                                     <Nav.Link eventKey="cheat-sheets-main" className="nav-item nav-link"
                                               onClick={() => updateHeroImage(2)}>Cheat sheets</Nav.Link>
                                     <Nav.Link eventKey="resources-main" className="nav-item nav-link"
@@ -36,6 +37,7 @@ const DevopsPage = () => {
                                 </Nav>
                                 <Tab.Content>
                                     <AccessibilityTabPane/>
+                                    <UXTabPane/>
                                     <CheatSheetsTabPane/>
                                     <ResourcesTabPane/>
                                 </Tab.Content>

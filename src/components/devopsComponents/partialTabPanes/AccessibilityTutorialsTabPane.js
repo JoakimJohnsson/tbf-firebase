@@ -23,6 +23,15 @@ const AccessibilityTutorialsTabPane = () => {
                               text={"A11ycasts"}
                               icon={"external-link-alt"} external={true}/>
                 </div>
+                <div className="tab-pane-card">
+                    <h3>WAI-ARIA Basics</h3>
+                    <p>Solve accessibility problems by adding in further semantics that browsers and assistive
+                        technologies can recognize and use to let users know what is going on. Here we'll show how to use it at a basic level
+                        to improve accessibility.</p>
+                    <IconLink link={"https://developer.mozilla.org/en-US/docs/Learn/Accessibility/WAI-ARIA_basics"}
+                              text={"WAI_ARIA Basics"}
+                              icon={"external-link-alt"} external={true}/>
+                </div>
             </div>
         </Tab.Pane>
     );

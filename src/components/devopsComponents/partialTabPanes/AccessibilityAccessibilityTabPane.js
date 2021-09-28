@@ -33,6 +33,15 @@ const AccessibilityAccessibilityTabPane = () => {
                     <IconLink link={"https://chrome.google.com/webstore/detail/axe-devtools-web-accessib/lhdoppojpmngadmnindnejefpokejbdd"} text={"Axe - Chrome"}
                               icon={"external-link-alt"} external={true}/>
                 </div>
+                <div className="tab-pane-card">
+                    <h3>W3C HTML Validator</h3>
+                    <p>The World Wide Web Consortium (W3C) is an international community that develops open
+                        standards
+                        to ensure the long-term growth of the Web. It is the best resource for validating HTML
+                        markup.</p>
+                    <IconLink link={"https://validator.w3.org/"} text={"W3C Markup validation service"}
+                              icon={"external-link-alt"} external={true}/>
+                </div>
             </div>
         </Tab.Pane>
     );

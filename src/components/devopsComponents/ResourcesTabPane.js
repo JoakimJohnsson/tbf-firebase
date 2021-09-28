@@ -8,7 +8,9 @@ const ResourcesTabPane = () => {
             <div className="row article">
                 <div className="col-12 col-md-8">
                     <h2>Resources</h2>
-                    <p className="lead">TBA</p>
+                    <p className="lead mb-5">
+                        TBA
+                    </p>
                 </div>
             </div>
             <Tab.Container id="resources-main-tabs" defaultActiveKey="icons" className="mb-3">

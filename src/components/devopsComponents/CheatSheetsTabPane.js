@@ -8,8 +8,10 @@ const CheatSheetsTabPane = () => {
             <div className="row article">
                 <div className="col-12 col-md-8">
                     <h2>Cheat sheets</h2>
-                    <p className="lead">A cheat sheet is a concise set of notes used for quick reference. Cheat sheets were historically used by
-                        students without an instructor or teacher's knowledge to cheat on a test or exam.</p>
+                    <p className="lead mb-5">
+                        A cheat sheet is a concise set of notes used for quick reference. Cheat sheets were historically used by
+                        students without an instructor or teacher's knowledge to cheat on a test or exam.
+                    </p>
                 </div>
             </div>
             <Tab.Container id="tabs-git" defaultActiveKey="git" className="mb-3">

@@ -13491,6 +13491,26 @@ footer {
   .hero-image.hero-image__4 {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/wcag.png"); }
 
+.tri-icons__wrapper {
+  width: 100%;
+  margin-bottom: 1rem; }
+  .tri-icons__wrapper .tri-icons__content {
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    .tri-icons__wrapper .tri-icons__content .tri-icons__icon {
+      font-size: 2rem;
+      min-width: 80px;
+      min-height: 80px;
+      border: 1px solid;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center; }
+      @media (min-width: 576px) {
+        .tri-icons__wrapper .tri-icons__content .tri-icons__icon {
+          font-size: 2.5rem; } }
+
 .dashboard-list .list-group-item {
   line-height: 3; }
   .dashboard-list .list-group-item.flex-me {

@@ -1,6 +1,7 @@
 import React from 'react';
 import {Tab} from "react-bootstrap";
 import IconLink from "../../microComponents/Links/IconLink";
+import TriIcons from "../../microComponents/TriIcons";
 
 const AccessibilityTutorialsTabPane = () => {
     return (
@@ -10,6 +11,7 @@ const AccessibilityTutorialsTabPane = () => {
                     <h2>Documentation</h2>
                 </div>
                 <div className="tab-pane-card">
+                    <TriIcons icons={["low-vision"]} />
                     <h3>Web Content Accessibility Guidelines (WCAG)</h3>
                     <p>Web Content Accessibility Guidelines (WCAG) is developed through the W3C process in cooperation with
                         individuals and organizations around the world, with a goal of providing a single shared standard for web
@@ -18,6 +20,7 @@ const AccessibilityTutorialsTabPane = () => {
                               icon={"external-link-alt"} external={true}/>
                 </div>
                 <div className="tab-pane-card">
+                    <TriIcons icons={["sign-language"]} />
                     <h3>Accessible Rich Internet Applications (WAI-ARIA)</h3>
                     <p>Accessibility of web content requires semantic information about widgets, structures, and behaviors, in order
                         to allow assistive technologies to convey appropriate information to persons with disabilities. This

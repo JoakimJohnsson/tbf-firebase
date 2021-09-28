@@ -50,3 +50,26 @@
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/wcag.png");
   }
 }
+
+.tri-icons__wrapper {
+  width: 100%;
+  margin-bottom: 1rem;
+  .tri-icons__content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .tri-icons__icon {
+      font-size: 2rem;
+      min-width: 80px;
+      min-height: 80px;
+      border: 1px solid;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      @include media-breakpoint-up(sm) {
+        font-size: 2.5rem;
+      }
+    }
+  }
+}

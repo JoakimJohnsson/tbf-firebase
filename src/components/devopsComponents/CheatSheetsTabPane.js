@@ -1,6 +1,7 @@
 import React from 'react';
 import {Tab} from "react-bootstrap";
 import IconLink from "../microComponents/Links/IconLink";
+import TriIcons from "../microComponents/TriIcons";
 
 const CheatSheetsTabPane = () => {
     return (
@@ -14,6 +15,7 @@ const CheatSheetsTabPane = () => {
                     </p>
                 </div>
                 <div className="tab-pane-card">
+                    <TriIcons icons={["user-astronaut"]} />
                     <h3>Git by Github</h3>
                     <p>
                         Git is the free and open source distributed version control system that's responsible for
@@ -24,6 +26,7 @@ const CheatSheetsTabPane = () => {
                               icon={"external-link-alt"} external={true}/>
                 </div>
                 <div className="tab-pane-card">
+                    <TriIcons icons={["user-astronaut"]} />
                     <h3>Node package manager</h3>
                     <p>
                         npm is the default package manager for the JavaScript runtime environment Node.js. It consists of a command line

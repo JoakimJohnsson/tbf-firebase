@@ -32,10 +32,17 @@ import {
     faSpinner,
     faSave,
     faAngleDoubleDown,
+    faLowVision,
     faCompactDisc,
     faUsersSlash,
     faRobot,
+    faPalette,
+    faUniversalAccess,
+    faHatWizard,
     faVrCardboard,
+    faGraduationCap,
+    faSignLanguage,
+    faTv,
     faStepForward,
     faStepBackward,
     faPlay,
@@ -57,8 +64,8 @@ import {showUpload} from "../Navigation/FooterNavigation";
 import NavigationStore from "../NavigationStore/NavigationStore";
 import DevopsPage from "../pages/DevopsPage";
 
-library.add(faAirbnb, faSitemap, faBookDead, faJournalWhills, faStepForward, faTape, faExternalLinkAlt, faRandom, faStepBackward, faFilter, faDownload, faGoogle, faFacebookF, faArrowAltCircleLeft, faArrowAltCircleDown, faArrowDown, faArrowUp, faArrowAltCircleUp, faCopyright, faWrench, faHome, faRecordVinyl,
-    faMusic, faSearch, faUserAstronaut, faPlayCircle, faPlay, faPause, faPauseCircle, faPlus, faTimes, faTimesCircle, faPen, faMinus, faChevronLeft, faChevronRight, faChevronDown, faChevronUp, faSpinner, faSave,
+library.add(faAirbnb, faHatWizard, faSitemap, faPalette, faBookDead, faSignLanguage, faUniversalAccess, faLowVision, faJournalWhills, faStepForward, faTape, faExternalLinkAlt, faRandom, faStepBackward, faFilter, faDownload, faGoogle, faFacebookF, faArrowAltCircleLeft, faArrowAltCircleDown, faArrowDown, faArrowUp, faArrowAltCircleUp, faCopyright, faWrench, faHome, faRecordVinyl,
+    faMusic, faSearch, faTv, faGraduationCap, faUserAstronaut, faPlayCircle, faPlay, faPause, faPauseCircle, faPlus, faTimes, faTimesCircle, faPen, faMinus, faChevronLeft, faChevronRight, faChevronDown, faChevronUp, faSpinner, faSave,
     faAngleDoubleDown, faCompactDisc, faUsersSlash, faRobot, faVrCardboard);
 
 const App = () => {

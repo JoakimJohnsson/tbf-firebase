@@ -7,7 +7,7 @@ const AccessibilityAccessibilityTabPane = () => {
         <Tab.Pane eventKey="accessibility">
             <div className="row article">
                 <div className="col-12 mb-2">
-                    <h2>Accessibility testing</h2>
+                    <h2>Testing</h2>
                 </div>
                 <div className="tab-pane-card">
                     <h3>Access monitor</h3>

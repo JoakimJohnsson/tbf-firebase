@@ -19,9 +19,10 @@ const AccessibilityTabPane = () => {
             </div>
             <Tab.Container id="tabs-tutorials" defaultActiveKey="documentation" className="mb-3">
                 <Nav className="nav-tabs nav-tabs__secondary">
+                    <Nav.Link eventKey="disabled" className="nav-item nav-link disabled">Accessibility</Nav.Link>
                     <Nav.Link eventKey="documentation" className="nav-item nav-link">Documentation</Nav.Link>
                     <Nav.Link eventKey="tutorials" className="nav-item nav-link">Tutorials</Nav.Link>
-                    <Nav.Link eventKey="accessibility" className="nav-item nav-link">Accessibility testing</Nav.Link>
+                    <Nav.Link eventKey="accessibility" className="nav-item nav-link">Testing</Nav.Link>
                 </Nav>
                 <Tab.Content>
                     <AccessibilityTutorialsTabPane/>

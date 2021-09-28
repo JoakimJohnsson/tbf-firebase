@@ -82,6 +82,13 @@
     border: none;
     background-color: transparent;
 
+    &.disabled {
+      text-transform: uppercase;
+      font-weight: bold;
+      background-color: $color-secondary__lighten;
+      color: $color-near-black;
+    }
+
     &.active {
       color: $color-vibrant-green;
       background-color: $color-near-black;
@@ -90,7 +97,9 @@
 
     &:hover {
       background-color: #eee;
-
+    }
+    &:focus {
+      background-color: $color-near-black;
     }
 
     width: 100%;

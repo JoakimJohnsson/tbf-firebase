@@ -17,6 +17,7 @@ const UXTabPane = () => {
             </div>
             <Tab.Container id="tabs-tutorials" defaultActiveKey="color" className="mb-3">
                 <Nav className="nav-tabs nav-tabs__secondary">
+                    <Nav.Link eventKey="disabled" className="nav-item nav-link disabled">User experience</Nav.Link>
                     <Nav.Link eventKey="color" className="nav-item nav-link">Color</Nav.Link>
                 </Nav>
                 <Tab.Content>

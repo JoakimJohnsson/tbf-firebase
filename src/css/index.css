@@ -13392,12 +13392,19 @@ footer {
     width: 100%;
     margin-bottom: 2px;
     margin-right: 0; }
+    .nav-tabs .nav-item.disabled {
+      text-transform: uppercase;
+      font-weight: bold;
+      background-color: #b8ffe0;
+      color: #0a0a0a; }
     .nav-tabs .nav-item.active {
       color: #88ffcc;
       background-color: #0a0a0a;
       pointer-events: none; }
     .nav-tabs .nav-item:hover {
       background-color: #eee; }
+    .nav-tabs .nav-item:focus {
+      background-color: #0a0a0a; }
     .nav-tabs .nav-item:last-child {
       margin-bottom: 0; }
     @media (min-width: 576px) {

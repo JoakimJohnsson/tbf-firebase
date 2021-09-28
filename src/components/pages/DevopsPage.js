@@ -19,7 +19,7 @@ const DevopsPage = () => {
     return (
         <>
             <div className="bg-light text-black w-100">
-                <div className={`hero-image hero-image__${heroImage}`}></div>
+                <div className={`hero-image hero-image__${heroImage}`}> </div>
                 <div className="container py-5">
                     <main className="row no-gutters">
                         <div className="col-12">

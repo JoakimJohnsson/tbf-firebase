@@ -7,7 +7,7 @@ const AccessibilityHtmlTabPane = () => {
         <Tab.Pane eventKey="html">
             <div className="row article">
                 <div className="col-12 mb-2">
-                    <h2>HTML</h2>
+                    <h2>HTML validation</h2>
                 </div>
                 <div className="tab-pane-card">
                     <h3>W3C Validator</h3>

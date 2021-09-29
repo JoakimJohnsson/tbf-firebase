@@ -170,6 +170,17 @@ $color-variants: $color-primary, $color-secondary, $color-tertiary, $color-quate
   }
 }
 
+// Tri icons color and background color
+@for $i from 1 through length($color-variants) {
+  $c: nth($color-variants, $i);
+  .tri-icon-color-variant__#{$i} {
+    color: $c !important;
+    .tri-icons__icon {
+      background-color: darken($c, 60%);
+    }
+  }
+}
+
 .small {
   font-weight: 300;
   font-size: 85%;

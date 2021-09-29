@@ -11,7 +11,7 @@ const ResourcesImagesTabPane = () => {
                     <h2>Free image resources</h2>
                 </div>
                 <div className="tab-pane-card">
-                    <TriIcons icons={["user-astronaut"]} />
+                    <TriIcons icons={["photo-video"]} />
                     <h3>NASA Image library</h3>
                     <p>NASA's image library consolidates imagery and videos in one searchable locations. Users can download
                         content in multiple sizes and resolutions.</p>
@@ -19,7 +19,7 @@ const ResourcesImagesTabPane = () => {
                               icon={"external-link-alt"} external={true}/>
                 </div>
                 <div className="tab-pane-card">
-                    <TriIcons icons={["user-astronaut"]} />
+                    <TriIcons icons={["images"]} />
                     <h3>The Smithsonian Libraries</h3>
                     <p>The Smithsonian Libraries are a hidden national treasure, where experts come to test and expand knowledge and where
                         America and the world can turn for authentic answers.</p>

@@ -50,10 +50,10 @@ function randomizer(count, addOn) {
     return Math.floor(Math.random() * count) + addOn;
 }
 function colorRandomizer() {
-    return randomizer(16, 1);
+    return randomizer(8, 1);
 }
 function fontRandomizer() {
-    return randomizer(8, 1);
+    return randomizer(16, 1);
 }
 
 // Format time display

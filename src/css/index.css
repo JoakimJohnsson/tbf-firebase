@@ -12959,6 +12959,46 @@ label {
       color: #ff967f;
       text-decoration: none; }
 
+.tri-icon-color-variant__1 {
+  color: #ff88cc !important; }
+  .tri-icon-color-variant__1 .tri-icons__icon {
+    background-color: #550031; }
+
+.tri-icon-color-variant__2 {
+  color: #88ffcc !important; }
+  .tri-icon-color-variant__2 .tri-icons__icon {
+    background-color: #005531; }
+
+.tri-icon-color-variant__3 {
+  color: #fffe88 !important; }
+  .tri-icon-color-variant__3 .tri-icons__icon {
+    background-color: #555400; }
+
+.tri-icon-color-variant__4 {
+  color: #88a1ff !important; }
+  .tri-icon-color-variant__4 .tri-icons__icon {
+    background-color: #001255; }
+
+.tri-icon-color-variant__5 {
+  color: #ce88ff !important; }
+  .tri-icon-color-variant__5 .tri-icons__icon {
+    background-color: #320055; }
+
+.tri-icon-color-variant__6 {
+  color: #ffb588 !important; }
+  .tri-icon-color-variant__6 .tri-icons__icon {
+    background-color: #552000; }
+
+.tri-icon-color-variant__7 {
+  color: #acff88 !important; }
+  .tri-icon-color-variant__7 .tri-icons__icon {
+    background-color: #1a5500; }
+
+.tri-icon-color-variant__8 {
+  color: #ff6c4c !important; }
+  .tri-icon-color-variant__8 .tri-icons__icon {
+    background-color: #190400; }
+
 .small, .tracks-player__list .tracks-player_li .tracks-player__button-text {
   font-weight: 300;
   font-size: 85%; }
@@ -13500,16 +13540,17 @@ footer {
     justify-content: center; }
     .tri-icons__wrapper .tri-icons__content .tri-icons__icon {
       font-size: 2rem;
-      min-width: 80px;
-      min-height: 80px;
-      border: 1px solid;
+      min-width: 60px;
+      min-height: 60px;
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center; }
       @media (min-width: 576px) {
         .tri-icons__wrapper .tri-icons__content .tri-icons__icon {
-          font-size: 2.5rem; } }
+          font-size: 2.5rem;
+          min-width: 80px;
+          min-height: 80px; } }
 
 .dashboard-list .list-group-item {
   line-height: 3; }

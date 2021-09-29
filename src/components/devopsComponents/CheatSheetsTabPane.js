@@ -15,7 +15,7 @@ const CheatSheetsTabPane = () => {
                     </p>
                 </div>
                 <div className="tab-pane-card">
-                    <TriIcons icons={["user-astronaut"]} />
+                    <TriIcons icons={["code-branch"]} />
                     <h3>Git by Github</h3>
                     <p>
                         Git is the free and open source distributed version control system that's responsible for

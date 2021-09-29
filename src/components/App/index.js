@@ -23,6 +23,7 @@ import {
     faExternalLinkAlt,
     faPlus,
     faTimes,
+    faSwatchbook,
     faPen,
     faMinus,
     faChevronLeft,
@@ -39,11 +40,19 @@ import {
     faPalette,
     faUniversalAccess,
     faHatWizard,
+    faChalkboardTeacher,
     faVrCardboard,
     faGraduationCap,
+    faCodeBranch,
+    faIcons,
+    faFont,
+    faImages,
+    faPhotoVideo,
     faSignLanguage,
     faTv,
     faStepForward,
+    faDatabase,
+    faServer,
     faStepBackward,
     faPlay,
     faRandom,
@@ -64,7 +73,7 @@ import {showUpload} from "../Navigation/FooterNavigation";
 import NavigationStore from "../NavigationStore/NavigationStore";
 import DevopsPage from "../pages/DevopsPage";
 
-library.add(faAirbnb, faHatWizard, faSitemap, faPalette, faBookDead, faSignLanguage, faUniversalAccess, faLowVision, faJournalWhills, faStepForward, faTape, faExternalLinkAlt, faRandom, faStepBackward, faFilter, faDownload, faGoogle, faFacebookF, faArrowAltCircleLeft, faArrowAltCircleDown, faArrowDown, faArrowUp, faArrowAltCircleUp, faCopyright, faWrench, faHome, faRecordVinyl,
+library.add(faAirbnb, faImages, faPhotoVideo, faDatabase, faServer, faChalkboardTeacher, faIcons, faFont, faCodeBranch, faSwatchbook, faHatWizard, faSitemap, faPalette, faBookDead, faSignLanguage, faUniversalAccess, faLowVision, faJournalWhills, faStepForward, faTape, faExternalLinkAlt, faRandom, faStepBackward, faFilter, faDownload, faGoogle, faFacebookF, faArrowAltCircleLeft, faArrowAltCircleDown, faArrowDown, faArrowUp, faArrowAltCircleUp, faCopyright, faWrench, faHome, faRecordVinyl,
     faMusic, faSearch, faTv, faGraduationCap, faUserAstronaut, faPlayCircle, faPlay, faPause, faPauseCircle, faPlus, faTimes, faTimesCircle, faPen, faMinus, faChevronLeft, faChevronRight, faChevronDown, faChevronUp, faSpinner, faSave,
     faAngleDoubleDown, faCompactDisc, faUsersSlash, faRobot, faVrCardboard);
 

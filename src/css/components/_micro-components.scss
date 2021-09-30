@@ -56,15 +56,17 @@
   margin-bottom: 1rem;
   .tri-icons__content {
     display: flex;
+    transform: skew(-5deg);
     .tri-icons__icon {
       font-size: 1rem;
+      border-radius: 10px;
       min-width: 35px;
       min-height: 35px;
-      border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
       @include media-breakpoint-up(sm) {
+        border-radius: 15px;
         font-size: 1.5rem;
         min-width: 50px;
         min-height: 50px;

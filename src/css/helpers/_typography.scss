@@ -156,6 +156,7 @@ $color-variants: $color-primary, $color-secondary, $color-tertiary, $color-quate
   $c: nth($color-variants, $i);
   .text-color-variant__#{$i} {
     color: $c !important;
+
     a {
       color: $c !important;
 
@@ -165,6 +166,17 @@ $color-variants: $color-primary, $color-secondary, $color-tertiary, $color-quate
         color: lighten($c, 10%);
         text-decoration: none;
       }
+    }
+  }
+}
+
+// Tri icons color and background color
+@for $i from 1 through length($color-variants) {
+  $c: nth($color-variants, $i);
+  .tri-icon-color-variant__#{$i} {
+    color: $c !important;
+    .tri-icons__icon {
+      background-color: darken($c, 60%);
     }
   }
 }
@@ -185,6 +197,10 @@ $color-variants: $color-primary, $color-secondary, $color-tertiary, $color-quate
   font-size: 120%;
 }
 
+.text-black {
+  color: $color-dark-grey;
+}
+
 // Bootstrap a11y fixes
 .list-group-item-warning {
   color: darken(#856404, 14%);
@@ -192,4 +208,19 @@ $color-variants: $color-primary, $color-secondary, $color-tertiary, $color-quate
 
 .list-group-item-info {
   color: darken(#858447, 14%);
+}
+
+.article {
+  color: $color-dark-grey;
+
+  a {
+    text-decoration: none;
+    @extend .logo-font-family__14;
+    color: #222;
+
+    &:hover, &:active, &:focus {
+      text-decoration: underline;
+      color: #333;
+    }
+  }
 }

@@ -3364,7 +3364,7 @@ input[type="button"].btn-block {
     border-top-left-radius: 0.25rem;
     border-top-right-radius: 0.25rem; }
     .nav-tabs .nav-link:hover, .nav-tabs .nav-link:focus {
-      border-color: #e9ecef #e9ecef #444; }
+      border-color: #151515 #151515 #444; }
     .nav-tabs .nav-link.disabled {
       color: #6c757d;
       background-color: transparent;
@@ -12836,7 +12836,7 @@ label {
   font-family: "Bungee", cursive, sans-serif;
   font-size: 80% !important; }
 
-.logo-font-family__14 {
+.logo-font-family__14, .article a {
   font-family: "Itim", cursive, sans-serif; }
 
 .logo-font-family__15 {
@@ -12959,6 +12959,46 @@ label {
       color: #ff967f;
       text-decoration: none; }
 
+.tri-icon-color-variant__1 {
+  color: #ff88cc !important; }
+  .tri-icon-color-variant__1 .tri-icons__icon {
+    background-color: #550031; }
+
+.tri-icon-color-variant__2 {
+  color: #88ffcc !important; }
+  .tri-icon-color-variant__2 .tri-icons__icon {
+    background-color: #005531; }
+
+.tri-icon-color-variant__3 {
+  color: #fffe88 !important; }
+  .tri-icon-color-variant__3 .tri-icons__icon {
+    background-color: #555400; }
+
+.tri-icon-color-variant__4 {
+  color: #88a1ff !important; }
+  .tri-icon-color-variant__4 .tri-icons__icon {
+    background-color: #001255; }
+
+.tri-icon-color-variant__5 {
+  color: #ce88ff !important; }
+  .tri-icon-color-variant__5 .tri-icons__icon {
+    background-color: #320055; }
+
+.tri-icon-color-variant__6 {
+  color: #ffb588 !important; }
+  .tri-icon-color-variant__6 .tri-icons__icon {
+    background-color: #552000; }
+
+.tri-icon-color-variant__7 {
+  color: #acff88 !important; }
+  .tri-icon-color-variant__7 .tri-icons__icon {
+    background-color: #1a5500; }
+
+.tri-icon-color-variant__8 {
+  color: #ff6c4c !important; }
+  .tri-icon-color-variant__8 .tri-icons__icon {
+    background-color: #190400; }
+
 .small, .tracks-player__list .tracks-player_li .tracks-player__button-text {
   font-weight: 300;
   font-size: 85%; }
@@ -12972,11 +13012,23 @@ label {
 .fs-lg {
   font-size: 120%; }
 
+.text-black {
+  color: #151515; }
+
 .list-group-item-warning {
   color: #403002; }
 
 .list-group-item-info {
   color: #56562e; }
+
+.article {
+  color: #151515; }
+  .article a {
+    text-decoration: none;
+    color: #222; }
+    .article a:hover, .article a:active, .article a:focus {
+      text-decoration: underline;
+      color: #333; }
 
 img {
   border: 1px solid #000; }
@@ -13021,6 +13073,8 @@ footer {
   position: absolute;
   bottom: 0;
   width: 100%; }
+  footer.article {
+    position: initial; }
 
 .card__dark {
   box-shadow: 10px 10px 25px #111, -15px -15px 30px #111;
@@ -13336,6 +13390,9 @@ footer {
   @media (min-width: 992px) {
     .navbar-header .navbar-nav .nav-link:first-of-type {
       padding-top: .5rem; } }
+.navbar-header.navbar-header__variant a {
+  color: #0a0a0a;
+  text-decoration: none; }
 
 .navbar-footer {
   justify-content: space-between;
@@ -13364,6 +13421,71 @@ footer {
   .footer__nav-link-cmp.active {
     color: #88ffcc; }
 
+.nav-tabs {
+  border: none; }
+  .nav-tabs a {
+    color: #000; }
+  .nav-tabs .nav-item {
+    border-radius: 0;
+    border: none;
+    background-color: transparent;
+    width: 100%;
+    margin-bottom: 2px;
+    margin-right: 0; }
+    .nav-tabs .nav-item.disabled {
+      text-transform: uppercase;
+      font-weight: bold;
+      background-color: #b8ffe0;
+      color: #0a0a0a; }
+    .nav-tabs .nav-item.active {
+      color: #88ffcc;
+      background-color: #0a0a0a;
+      pointer-events: none; }
+    .nav-tabs .nav-item:hover {
+      background-color: #eee; }
+    .nav-tabs .nav-item:focus {
+      background-color: #0a0a0a; }
+    .nav-tabs .nav-item:last-child {
+      margin-bottom: 0; }
+    @media (min-width: 576px) {
+      .nav-tabs .nav-item {
+        width: auto;
+        margin-right: 2px;
+        margin-bottom: 0; } }
+
+.tab-content {
+  border-top: 1px solid #0a0a0a;
+  padding-top: 2rem; }
+  .tab-content .tab-pane-card {
+    margin-bottom: 1rem;
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    flex: 0 0 100%;
+    max-width: 100%; }
+    @media (min-width: 992px) {
+      .tab-content .tab-pane-card {
+        flex: 0 0 50%;
+        max-width: 50%; } }
+    @media (min-width: 1200px) {
+      .tab-content .tab-pane-card {
+        flex: 0 0 33.3333333333%;
+        max-width: 33.3333333333%; } }
+    .tab-content .tab-pane-card p {
+      margin-bottom: .5rem; }
+    .tab-content .tab-pane-card a {
+      display: block;
+      width: 100%; }
+      .tab-content .tab-pane-card a:last-of-type {
+        padding-bottom: 1rem;
+        border-bottom: 1px solid #88ffcc; }
+
+.nav-tabs__secondary .nav-item {
+  font-size: 85%; }
+.nav-tabs__secondary .nav-link {
+  padding: .3rem .7rem; }
+
 .todo-component {
   border-radius: .25rem;
   border: 1px solid #fffe88;
@@ -13389,6 +13511,46 @@ footer {
   align-items: center;
   height: 100%;
   width: 100%; }
+
+.hero-image {
+  height: 150px;
+  background-size: cover;
+  background-position: center; }
+  @media (min-width: 576px) {
+    .hero-image {
+      height: 300px; } }
+  @media (min-width: 992px) {
+    .hero-image {
+      height: 500px; } }
+  .hero-image.hero-image__1 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/developer.jpg"); }
+  .hero-image.hero-image__2 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/classroom.png"); }
+  .hero-image.hero-image__3 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/www.jpg"); }
+  .hero-image.hero-image__4 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/wcag.png"); }
+
+.tri-icons__wrapper {
+  width: 100%;
+  margin-bottom: 1rem; }
+  .tri-icons__wrapper .tri-icons__content {
+    display: flex;
+    transform: skew(-5deg); }
+    .tri-icons__wrapper .tri-icons__content .tri-icons__icon {
+      font-size: 1rem;
+      border-radius: 10px;
+      min-width: 35px;
+      min-height: 35px;
+      display: flex;
+      align-items: center;
+      justify-content: center; }
+      @media (min-width: 576px) {
+        .tri-icons__wrapper .tri-icons__content .tri-icons__icon {
+          border-radius: 15px;
+          font-size: 1.5rem;
+          min-width: 50px;
+          min-height: 50px; } }
 
 .dashboard-list .list-group-item {
   line-height: 3; }

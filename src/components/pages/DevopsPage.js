@@ -5,13 +5,14 @@ import CheatSheetsTabPane from "../devopsComponents/CheatSheetsTabPane";
 import ResourcesTabPane from "../devopsComponents/ResourcesTabPane";
 import AccessibilityTabPane from "../devopsComponents/AccessibilityTabPane";
 import UXTabPane from "../devopsComponents/UXTabPane";
+import {SetNewDocTitle} from "../microComponents/customHooks";
 
 const DevopsPage = () => {
     const setHideNavs = useContext(NavigationContext)[1];
     useEffect(() =>
         setHideNavs(true)
     )
-
+    SetNewDocTitle("DevOps");
     const [heroImage, setHeroImage] = useState(1);
     const updateHeroImage = (number) => {
         setHeroImage(number);

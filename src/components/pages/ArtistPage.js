@@ -10,6 +10,7 @@ import {fontRandomizer, colorRandomizer} from "../microComponents/microComponent
 
 import TracksByArtistPaginated from "../lists/TracksByArtistPaginated";
 import {NavigationContext} from "../NavigationStore/NavigationStore";
+import {SetNewDocTitle} from "../microComponents/customHooks";
 
 const ArtistPage = ({match}) => {
     const setHideNavs = useContext(NavigationContext)[1];
@@ -18,6 +19,7 @@ const ArtistPage = ({match}) => {
     )
     const {params: {id}} = match;
     const artist = FetchArtistFromId(id);
+    SetNewDocTitle("Artist");
 
     // Increment number of views
     const increment = firebase.firestore.FieldValue.increment(1);

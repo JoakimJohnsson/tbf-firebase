@@ -10,12 +10,14 @@ import TracksByRecordListSimple, {TracksByRecordWithPlayer} from "../lists/Track
 import CopyrightInformation from "../microComponents/CopyrightInformation";
 import RecordDescription from "../microComponents/Descriptions/RecordDescription";
 import {NavigationContext} from "../NavigationStore/NavigationStore";
+import {SetNewDocTitle} from "../microComponents/customHooks";
 
 const RecordPage = ({match}) => {
     const setHideNavs = useContext(NavigationContext)[1];
     useEffect(() =>
         setHideNavs(false)
     )
+    SetNewDocTitle("Record");
     const {params: {id}} = match;
     const record = FetchRecordFromId(id);
     const [open, setOpen] = useState(false);

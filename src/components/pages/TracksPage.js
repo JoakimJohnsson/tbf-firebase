@@ -2,12 +2,14 @@ import React, {useContext, useEffect} from 'react';
 import CopyrightInformation from "../microComponents/CopyrightInformation";
 import AllTracksWithFilter from "../lists/AllTracksWithFilter";
 import {NavigationContext} from "../NavigationStore/NavigationStore";
+import {SetNewDocTitle} from "../microComponents/customHooks";
 
 const TracksPage = () => {
     const setHideNavs = useContext(NavigationContext)[1];
     useEffect(() =>
         setHideNavs(false)
     )
+    SetNewDocTitle("All tracks");
     return (
         <div className="container-fluid standard-container">
             <main className="row no-gutters">

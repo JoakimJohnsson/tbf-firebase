@@ -44,7 +44,7 @@ const StartPage = () => {
                             Sj&ouml;buse Records</b>, now brings you that good old music in a modern way.</p>
                         <h2>Extra content</h2>
                         <h3>Links</h3>
-                        <p><IconLink link={"https://thebaseballfield.se/old/"} text={"The old TBF/VVM site"} icon={"sitemap"}/></p>
+                        <p><IconLink link={"https://thebaseballfield.se/old/"} text={"The old TBF/VVM site"} icon={"sitemap"} external={true}/></p>
                         <h3>Video</h3>
                         <p>T.B.A</p>
                         <h3>Documentation</h3>

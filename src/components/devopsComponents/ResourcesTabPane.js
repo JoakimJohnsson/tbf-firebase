@@ -3,6 +3,7 @@ import {Nav, Tab} from "react-bootstrap";
 import ResourcesIconsTabPane from "./partialTabPanes/ResourcesIconsTabPane";
 import ResourcesDatabasesTabPane from "./partialTabPanes/ResourcesDatabasesTabPane";
 import ResourcesImagesTabPane from "./partialTabPanes/ResourcesImagesTabPane";
+import ResourcesMiscTabPane from "./partialTabPanes/ResourcesMiscTabPane";
 
 const ResourcesTabPane = () => {
     return (
@@ -21,11 +22,13 @@ const ResourcesTabPane = () => {
                     <Nav.Link eventKey="icons" className="nav-item nav-link">Icons and fonts</Nav.Link>
                     <Nav.Link eventKey="images" className="nav-item nav-link">Free images</Nav.Link>
                     <Nav.Link eventKey="databases" className="nav-item nav-link">Databases</Nav.Link>
+                    <Nav.Link eventKey="misc" className="nav-item nav-link">Miscellaneous</Nav.Link>
                 </Nav>
                 <Tab.Content>
                     <ResourcesIconsTabPane/>
                     <ResourcesImagesTabPane/>
                     <ResourcesDatabasesTabPane/>
+                    <ResourcesMiscTabPane/>
                 </Tab.Content>
             </Tab.Container>
         </Tab.Pane>

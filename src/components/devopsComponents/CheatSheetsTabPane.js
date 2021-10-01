@@ -35,6 +35,15 @@ const CheatSheetsTabPane = () => {
                     <IconLink link={"https://devhints.io/npm"} text={"Node package manager"}
                               icon={"external-link-alt"} external={true}/>
                 </div>
+                <div className="tab-pane-card">
+                    <TriIcons icons={["file-code"]} />
+                    <h3>CSS</h3>
+                    <p>
+                        Great cheat sheet with links to MDN documentation.
+                    </p>
+                    <IconLink link={"https://adam-marsden.co.uk/css-cheat-sheet"} text={"CSS"}
+                              icon={"external-link-alt"} external={true}/>
+                </div>
             </div>
         </Tab.Pane>
     );

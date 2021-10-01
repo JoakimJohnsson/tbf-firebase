@@ -36,6 +36,17 @@ const AccessibilityTutorialsTabPane = () => {
                               text={"WAI_ARIA Basics"}
                               icon={"external-link-alt"} external={true}/>
                 </div>
+                <div className="tab-pane-card">
+                    <TriIcons icons={["graduation-cap"]} />
+                    <h3>Learn accessible web development</h3>
+                    <p>It's important to learn how to use web technologies responsibly so that all readers might use your creations on the web. To
+                        help you achieve this, this module will cover general best practices (which are demonstrated throughout the HTML, CSS, and
+                        JavaScript topics), cross browser testing, and some tips on enforcing accessibility from the start. We'll cover accessibility
+                        in special detail.</p>
+                    <IconLink link={"https://developer.mozilla.org/en-US/docs/Learn/Accessibility"}
+                              text={"Accessible web development"}
+                              icon={"external-link-alt"} external={true}/>
+                </div>
             </div>
         </Tab.Pane>
     );

@@ -16,7 +16,7 @@ const CodingTabPane = () => {
             <Tab.Container id="tabs-java" defaultActiveKey="coding-java" className="mb-3">
                 <Nav className="nav-tabs nav-tabs__secondary">
                     <Nav.Link eventKey="disabled" className="nav-item nav-link disabled">Programming & coding</Nav.Link>
-                    <Nav.Link eventKey="coding-java" className="nav-item nav-link">Java</Nav.Link>
+                    <Nav.Link eventKey="coding-java" className="nav-item nav-link">Java exercises</Nav.Link>
                 </Nav>
                 <Tab.Content>
                     <CodingJavaTabPane/>

@@ -201,6 +201,10 @@ $color-variants: $color-primary, $color-secondary, $color-tertiary, $color-quate
   color: $color-dark-grey;
 }
 
+.font-family-regular {
+  font-family: $tbf-font__regular;
+}
+
 // Bootstrap a11y fixes
 .list-group-item-warning {
   color: darken(#856404, 14%);

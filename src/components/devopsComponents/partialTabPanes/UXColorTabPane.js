@@ -28,14 +28,18 @@ const UXColorTabPane = () => {
                     <TriIcons icons={["chalkboard-teacher"]} />
                     <h3>Color theory - wikipedia</h3>
                     <p>Everything you need to know about color theory?</p>
-                    <IconLink link={"https://en.wikipedia.org/wiki/Color_theory"} text={"Color theory - wikipedia"}
+                    <IconLink link={"https://en.wikipedia.org/wiki/Color_theory"} text={"Color theory"}
+                              icon={"external-link-alt"} external={true}/>
+                    <IconLink link={"https://en.wikipedia.org/"} text={"Source: Wikipedia"}
                               icon={"external-link-alt"} external={true}/>
                 </div>
                 <div className="tab-pane-card">
                     <TriIcons icons={["chalkboard-teacher"]} />
                     <h3>Color theory - hubspot blog</h3>
                     <p>Everything you need to know about color theory?</p>
-                    <IconLink link={"https://blog.hubspot.com/marketing/color-theory-design"} text={"Color theory - hubspot blog"}
+                    <IconLink link={"https://blog.hubspot.com/marketing/color-theory-design"} text={"Color theory"}
+                              icon={"external-link-alt"} external={true}/>
+                    <IconLink link={"https://twitter.com/bhopecart"} text={"Source: Bethany Cartwright"}
                               icon={"external-link-alt"} external={true}/>
                 </div>
                 <div className="tab-pane-card">

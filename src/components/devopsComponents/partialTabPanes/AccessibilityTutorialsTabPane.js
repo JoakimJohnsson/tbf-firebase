@@ -17,6 +17,8 @@ const AccessibilityTutorialsTabPane = () => {
                         and that provides a better user experience for everyone.</p>
                     <IconLink link={"https://www.w3.org/WAI/tutorials/"} text={"W3C Tutorials"}
                               icon={"external-link-alt"} external={true}/>
+                    <IconLink link={"https://www.w3.org/"} text={"Source: W3C - The Word wide web consortium"}
+                              icon={"external-link-alt"} external={true}/>
                 </div>
                 <div className="tab-pane-card">
                     <TriIcons icons={["tv"]} />
@@ -35,6 +37,8 @@ const AccessibilityTutorialsTabPane = () => {
                     <IconLink link={"https://developer.mozilla.org/en-US/docs/Learn/Accessibility/WAI-ARIA_basics"}
                               text={"WAI_ARIA Basics"}
                               icon={"external-link-alt"} external={true}/>
+                    <IconLink link={"https://developer.mozilla.org/"} text={"Source: MDN Web Docs (Mozilla Developer Network)"}
+                              icon={"external-link-alt"} external={true}/>
                 </div>
                 <div className="tab-pane-card">
                     <TriIcons icons={["graduation-cap"]} />
@@ -45,6 +49,8 @@ const AccessibilityTutorialsTabPane = () => {
                         in special detail.</p>
                     <IconLink link={"https://developer.mozilla.org/en-US/docs/Learn/Accessibility"}
                               text={"Accessible web development"}
+                              icon={"external-link-alt"} external={true}/>
+                    <IconLink link={"https://developer.mozilla.org/"} text={"Source: MDN Web Docs (Mozilla Developer Network)"}
                               icon={"external-link-alt"} external={true}/>
                 </div>
             </div>

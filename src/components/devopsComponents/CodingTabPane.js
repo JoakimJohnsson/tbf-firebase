@@ -2,7 +2,7 @@ import React from 'react';
 import {Nav, Tab} from "react-bootstrap";
 import CodingJavaTabPane from "./partialTabPanes/CodingJavaTabPane";
 
-const CodingTabPan = () => {
+const CodingTabPane = () => {
     return (
         <Tab.Pane eventKey="coding-main">
             <div className="row article">
@@ -26,4 +26,4 @@ const CodingTabPan = () => {
     );
 }
 
-export default CodingTabPan;
+export default CodingTabPane;

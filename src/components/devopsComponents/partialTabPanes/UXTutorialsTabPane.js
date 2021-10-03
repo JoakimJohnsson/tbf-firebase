@@ -18,6 +18,8 @@ const AccessibilityTutorialsTabPane = () => {
                         separately but they ideally work best as a series of steps.</p>
                     <IconLink link={"https://developers.google.com/web/fundamentals/design-and-ux/ux-basics"} text={"Basics of UX"}
                               icon={"external-link-alt"} external={true}/>
+                    <IconLink link={"https://developers.google.com/"} text={"Source: Google developers"}
+                              icon={"external-link-alt"} external={true}/>
                 </div>
             </div>
         </Tab.Pane>

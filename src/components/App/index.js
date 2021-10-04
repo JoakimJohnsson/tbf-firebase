@@ -36,6 +36,7 @@ import {
     faLowVision,
     faCompactDisc,
     faUsersSlash,
+    faNetworkWired,
     faRobot,
     faPalette,
     faUniversalAccess,
@@ -78,7 +79,7 @@ import DevopsPage from "../pages/DevopsPage";
 
 library.add(faAirbnb, faImages, faPhotoVideo, faQuestion, faDatabase, faServer, faChalkboardTeacher, faIcons, faFont, faCodeBranch, faSwatchbook, faHatWizard, faSitemap, faPalette, faBookDead, faSignLanguage, faUniversalAccess, faLowVision, faJournalWhills, faStepForward, faTape, faExternalLinkAlt, faRandom, faStepBackward, faFilter, faDownload, faGoogle, faFacebookF, faArrowAltCircleLeft, faArrowAltCircleDown, faArrowDown, faArrowUp, faArrowAltCircleUp, faCopyright, faWrench, faHome, faRecordVinyl,
     faMusic, faSearch, faTv, faGraduationCap, faFileCode, faUserAstronaut, faPlayCircle, faPlay, faPause, faPauseCircle, faPlus, faTimes, faTimesCircle, faPen, faMinus, faChevronLeft, faChevronRight, faChevronDown, faChevronUp, faSpinner, faSave,
-    faAngleDoubleDown, faCompactDisc, faLaptopCode, faUsersSlash, faRobot, faVrCardboard);
+    faAngleDoubleDown, faCompactDisc, faLaptopCode, faNetworkWired, faUsersSlash, faRobot, faVrCardboard);
 
 const App = () => {
     return (

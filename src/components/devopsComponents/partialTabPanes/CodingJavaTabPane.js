@@ -57,7 +57,7 @@ const CodingJavaTabPane = () => {
                     <h2>Java exercises</h2>
                 </div>
                 <div className="tab-pane-card">
-                    <TriIcons icons={["graduation-cap"]} />
+                    <TriIcons icons={["laptop-code"]} />
                     <h3>01 - Introduction</h3>
                     <IconLink link={slJava01} text={"Slide 01"}
                               icon={"external-link-alt"} external={true}/>
@@ -65,7 +65,7 @@ const CodingJavaTabPane = () => {
                               icon={"external-link-alt"} external={true}/>
                 </div>
                 <div className="tab-pane-card">
-                    <TriIcons icons={["graduation-cap"]} />
+                    <TriIcons icons={["laptop-code"]} />
                     <h3>02 - IntelliJ</h3>
                     <IconLink link={slJava02} text={"Slide 02"}
                               icon={"external-link-alt"} external={true}/>
@@ -73,7 +73,7 @@ const CodingJavaTabPane = () => {
                               icon={"external-link-alt"} external={true}/>
                 </div>
                 <div className="tab-pane-card">
-                    <TriIcons icons={["graduation-cap"]} />
+                    <TriIcons icons={["laptop-code"]} />
                     <h3>03 - Our first application</h3>
                     <IconLink link={slJava03} text={"Slide 03"}
                               icon={"external-link-alt"} external={true}/>
@@ -81,7 +81,7 @@ const CodingJavaTabPane = () => {
                               icon={"external-link-alt"} external={true}/>
                 </div>
                 <div className="tab-pane-card">
-                    <TriIcons icons={["graduation-cap"]} />
+                    <TriIcons icons={["laptop-code"]} />
                     <h3>04 - Data types</h3>
                     <IconLink link={slJava04} text={"Slide 04"}
                               icon={"external-link-alt"} external={true}/>
@@ -89,7 +89,7 @@ const CodingJavaTabPane = () => {
                               icon={"external-link-alt"} external={true}/>
                 </div>
                 <div className="tab-pane-card">
-                    <TriIcons icons={["graduation-cap"]} />
+                    <TriIcons icons={["laptop-code"]} />
                     <h3>05 - Operators and flow control</h3>
                     <IconLink link={slJava05} text={"Slide 05"}
                               icon={"external-link-alt"} external={true}/>
@@ -97,7 +97,7 @@ const CodingJavaTabPane = () => {
                               icon={"external-link-alt"} external={true}/>
                 </div>
                 <div className="tab-pane-card">
-                    <TriIcons icons={["graduation-cap"]} />
+                    <TriIcons icons={["laptop-code"]} />
                     <h3>06 - Switch statement</h3>
                     <IconLink link={slJava06} text={"Slide 06"}
                               icon={"external-link-alt"} external={true}/>
@@ -105,7 +105,7 @@ const CodingJavaTabPane = () => {
                               icon={"external-link-alt"} external={true}/>
                 </div>
                 <div className="tab-pane-card">
-                    <TriIcons icons={["graduation-cap"]} />
+                    <TriIcons icons={["laptop-code"]} />
                     <h3>07 - Arrays and loops</h3>
                     <IconLink link={slJava07} text={"Slide 07"}
                               icon={"external-link-alt"} external={true}/>
@@ -113,7 +113,7 @@ const CodingJavaTabPane = () => {
                               icon={"external-link-alt"} external={true}/>
                 </div>
                 <div className="tab-pane-card">
-                    <TriIcons icons={["graduation-cap"]} />
+                    <TriIcons icons={["laptop-code"]} />
                     <h3>08 - Text and strings</h3>
                     <IconLink link={slJava08} text={"Slide 08"}
                               icon={"external-link-alt"} external={true}/>
@@ -121,7 +121,7 @@ const CodingJavaTabPane = () => {
                               icon={"external-link-alt"} external={true}/>
                 </div>
                 <div className="tab-pane-card">
-                    <TriIcons icons={["graduation-cap"]} />
+                    <TriIcons icons={["laptop-code"]} />
                     <h3>09 - DateTime</h3>
                     <IconLink link={slJava09} text={"Slide 09"}
                               icon={"external-link-alt"} external={true}/>
@@ -129,7 +129,7 @@ const CodingJavaTabPane = () => {
                               icon={"external-link-alt"} external={true}/>
                 </div>
                 <div className="tab-pane-card">
-                    <TriIcons icons={["graduation-cap"]} />
+                    <TriIcons icons={["laptop-code"]} />
                     <h3>10 - Classes</h3>
                     <IconLink link={slJava10} text={"Slide 10"}
                               icon={"external-link-alt"} external={true}/>
@@ -137,7 +137,7 @@ const CodingJavaTabPane = () => {
                               icon={"external-link-alt"} external={true}/>
                 </div>
                 <div className="tab-pane-card">
-                    <TriIcons icons={["graduation-cap"]} />
+                    <TriIcons icons={["laptop-code"]} />
                     <h3>11 - Packages</h3>
                     <IconLink link={slJava11} text={"Slide 11"}
                               icon={"external-link-alt"} external={true}/>
@@ -145,7 +145,7 @@ const CodingJavaTabPane = () => {
                               icon={"external-link-alt"} external={true}/>
                 </div>
                 <div className="tab-pane-card">
-                    <TriIcons icons={["graduation-cap"]} />
+                    <TriIcons icons={["laptop-code"]} />
                     <h3>12 - Object oriented programming</h3>
                     <IconLink link={slJava12} text={"Slide 12"}
                               icon={"external-link-alt"} external={true}/>
@@ -153,7 +153,7 @@ const CodingJavaTabPane = () => {
                               icon={"external-link-alt"} external={true}/>
                 </div>
                 <div className="tab-pane-card">
-                    <TriIcons icons={["graduation-cap"]} />
+                    <TriIcons icons={["laptop-code"]} />
                     <h3>13 - Constructors</h3>
                     <IconLink link={slJava13} text={"Slide 13"}
                               icon={"external-link-alt"} external={true}/>
@@ -161,7 +161,7 @@ const CodingJavaTabPane = () => {
                               icon={"external-link-alt"} external={true}/>
                 </div>
                 <div className="tab-pane-card">
-                    <TriIcons icons={["graduation-cap"]} />
+                    <TriIcons icons={["laptop-code"]} />
                     <h3>14 - Getters and setters</h3>
                     <IconLink link={slJava14} text={"Slide 14"}
                               icon={"external-link-alt"} external={true}/>
@@ -169,7 +169,7 @@ const CodingJavaTabPane = () => {
                               icon={"external-link-alt"} external={true}/>
                 </div>
                 <div className="tab-pane-card">
-                    <TriIcons icons={["graduation-cap"]} />
+                    <TriIcons icons={["laptop-code"]} />
                     <h3>15 - OO design</h3>
                     <IconLink link={slJava15} text={"Slide 15"}
                               icon={"external-link-alt"} external={true}/>
@@ -177,7 +177,7 @@ const CodingJavaTabPane = () => {
                               icon={"external-link-alt"} external={true}/>
                 </div>
                 <div className="tab-pane-card">
-                    <TriIcons icons={["graduation-cap"]} />
+                    <TriIcons icons={["laptop-code"]} />
                     <h3>16 - Generic lists</h3>
                     <IconLink link={slJava16} text={"Slide 16"}
                               icon={"external-link-alt"} external={true}/>
@@ -185,7 +185,7 @@ const CodingJavaTabPane = () => {
                               icon={"external-link-alt"} external={true}/>
                 </div>
                 <div className="tab-pane-card">
-                    <TriIcons icons={["graduation-cap"]} />
+                    <TriIcons icons={["laptop-code"]} />
                     <h3>17 - Inheritance</h3>
                     <IconLink link={slJava17} text={"Slide 17"}
                               icon={"external-link-alt"} external={true}/>
@@ -193,7 +193,7 @@ const CodingJavaTabPane = () => {
                               icon={"external-link-alt"} external={true}/>
                 </div>
                 <div className="tab-pane-card">
-                    <TriIcons icons={["graduation-cap"]} />
+                    <TriIcons icons={["laptop-code"]} />
                     <h3>18 - Polymorphism</h3>
                     <IconLink link={slJava18} text={"Slide 18"}
                               icon={"external-link-alt"} external={true}/>
@@ -201,7 +201,7 @@ const CodingJavaTabPane = () => {
                               icon={"external-link-alt"} external={true}/>
                 </div>
                 <div className="tab-pane-card">
-                    <TriIcons icons={["graduation-cap"]} />
+                    <TriIcons icons={["laptop-code"]} />
                     <h3>19 - Abstract classes</h3>
                     <IconLink link={slJava19} text={"Slide 19"}
                               icon={"external-link-alt"} external={true}/>
@@ -209,7 +209,7 @@ const CodingJavaTabPane = () => {
                               icon={"external-link-alt"} external={true}/>
                 </div>
                 <div className="tab-pane-card">
-                    <TriIcons icons={["graduation-cap"]} />
+                    <TriIcons icons={["laptop-code"]} />
                     <h3>20 - Interfaces</h3>
                     <IconLink link={slJava20} text={"Slide 20"}
                               icon={"external-link-alt"} external={true}/>
@@ -217,7 +217,7 @@ const CodingJavaTabPane = () => {
                               icon={"external-link-alt"} external={true}/>
                 </div>
                 <div className="tab-pane-card">
-                    <TriIcons icons={["graduation-cap"]} />
+                    <TriIcons icons={["laptop-code"]} />
                     <h3>21 - Enum</h3>
                     <IconLink link={slJava21} text={"Slide 21"}
                               icon={"external-link-alt"} external={true}/>
@@ -225,7 +225,7 @@ const CodingJavaTabPane = () => {
                               icon={"external-link-alt"} external={true}/>
                 </div>
                 <div className="tab-pane-card">
-                    <TriIcons icons={["graduation-cap"]} />
+                    <TriIcons icons={["laptop-code"]} />
                     <h3>22 - Generic collections</h3>
                     <IconLink link={slJava22} text={"Slide 22"}
                               icon={"external-link-alt"} external={true}/>
@@ -233,7 +233,7 @@ const CodingJavaTabPane = () => {
                               icon={"external-link-alt"} external={true}/>
                 </div>
                 <div className="tab-pane-card">
-                    <TriIcons icons={["graduation-cap"]} />
+                    <TriIcons icons={["laptop-code"]} />
                     <h3>23 - Type conversion</h3>
                     <IconLink link={slJava23} text={"Slide 23"}
                               icon={"external-link-alt"} external={true}/>

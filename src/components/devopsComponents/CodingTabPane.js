@@ -1,6 +1,7 @@
 import React from 'react';
 import {Nav, Tab} from "react-bootstrap";
 import CodingJavaTabPane from "./partialTabPanes/CodingJavaTabPane";
+import CodingWorkflowTabPane from "./partialTabPanes/CodingWorkflowTabPane";
 
 const CodingTabPane = () => {
     return (
@@ -17,9 +18,11 @@ const CodingTabPane = () => {
                 <Nav className="nav-tabs nav-tabs__secondary">
                     <Nav.Link eventKey="disabled" className="nav-item nav-link disabled">Programming & coding</Nav.Link>
                     <Nav.Link eventKey="coding-java" className="nav-item nav-link">Java exercises</Nav.Link>
+                    <Nav.Link eventKey="coding-workflow" className="nav-item nav-link">Workflow</Nav.Link>
                 </Nav>
                 <Tab.Content>
                     <CodingJavaTabPane/>
+                    <CodingWorkflowTabPane/>
                 </Tab.Content>
             </Tab.Container>
         </Tab.Pane>

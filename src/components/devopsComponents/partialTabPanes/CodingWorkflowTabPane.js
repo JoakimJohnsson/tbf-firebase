@@ -3,9 +3,9 @@ import {Tab} from "react-bootstrap";
 import IconLink from "../../microComponents/Links/IconLink";
 import TriIcons from "../../microComponents/TriIcons";
 
-const WorkflowGitTabPane = () => {
+const CodingWorkflowTabPane = () => {
     return (
-        <Tab.Pane eventKey="workflow-git">
+        <Tab.Pane eventKey="coding-workflow">
             <div className="row article">
                 <div className="col-12 mb-2">
                     <h2>Git</h2>
@@ -26,4 +26,4 @@ const WorkflowGitTabPane = () => {
     );
 }
 
-export default WorkflowGitTabPane;
+export default CodingWorkflowTabPane;

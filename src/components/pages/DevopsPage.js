@@ -7,7 +7,6 @@ import AccessibilityTabPane from "../devopsComponents/AccessibilityTabPane";
 import UXTabPane from "../devopsComponents/UXTabPane";
 import {SetNewDocTitle} from "../microComponents/customHooks";
 import CodingTabPane from "../devopsComponents/CodingTabPane";
-import WorkflowTabPane from "../devopsComponents/WorkflowTabPane";
 
 const DevopsPage = () => {
     const setHideNavs = useContext(NavigationContext)[1];
@@ -35,8 +34,6 @@ const DevopsPage = () => {
                                               onClick={() => updateHeroImage(1)}>User experience</Nav.Link>
                                     <Nav.Link eventKey="coding-main" className="nav-item nav-link"
                                               onClick={() => updateHeroImage(5)}>Programming & coding</Nav.Link>
-                                    <Nav.Link eventKey="workflow-main" className="nav-item nav-link"
-                                              onClick={() => updateHeroImage(6)}>Workflow</Nav.Link>
                                     <Nav.Link eventKey="cheat-sheets-main" className="nav-item nav-link"
                                               onClick={() => updateHeroImage(2)}>Cheat sheets</Nav.Link>
                                     <Nav.Link eventKey="resources-main" className="nav-item nav-link"
@@ -46,7 +43,6 @@ const DevopsPage = () => {
                                     <AccessibilityTabPane/>
                                     <UXTabPane/>
                                     <CodingTabPane/>
-                                    <WorkflowTabPane/>
                                     <CheatSheetsTabPane/>
                                     <ResourcesTabPane/>
                                 </Tab.Content>

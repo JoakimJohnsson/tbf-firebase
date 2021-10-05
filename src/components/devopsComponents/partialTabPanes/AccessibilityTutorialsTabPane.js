@@ -53,6 +53,16 @@ const AccessibilityTutorialsTabPane = () => {
                     <IconLink link={"https://developer.mozilla.org/"} text={"Source: MDN Web Docs (Mozilla Developer Network)"}
                               icon={"external-link-alt"} external={true}/>
                 </div>
+                <div className="tab-pane-card">
+                    <TriIcons icons={["graduation-cap"]} />
+                    <h3>Screen reader - VoiceOver keyboard shortcuts</h3>
+                    <p>cmd + f5 - stop / start</p>
+                    <p>ctrl + alt + shift + arrow right / left - navigate between sections</p>
+                    <p>ctrl + alt + shift + arrow down / up - move in / out of sections</p>
+                    <IconLink link={"https://dequeuniversity.com/screenreaders/voiceover-keyboard-shortcuts"}
+                              text={"VoiceOver keyboard shortcuts for MAC OS"}
+                              icon={"external-link-alt"} external={true}/>
+                </div>
             </div>
         </Tab.Pane>
     );

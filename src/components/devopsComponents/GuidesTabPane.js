@@ -50,6 +50,19 @@ const GuidesTabPane = () => {
                         <IconLink link={"https://css-tricks.com/"} text={"Source: CSS Tricks"}
                                   icon={"external-link-alt"} external={true}/>
                     </div>
+                    <div className="tab-pane-card">
+                        <TriIcons icons={["robot"]}/>
+                        <h3>Debugging CSS</h3>
+                        <p>
+                            Debugging in CSS means figuring out what might be the problem when you have unexpected layout results. We'll
+                            look at a few categories bugs often fit into, see how we can evaluate the situation, and explore techniques
+                            that help prevent these bugs.
+                        </p>
+                        <IconLink link={"https://www.smashingmagazine.com/2021/10/guide-debugging-css/"} text={"Snippets"}
+                                  icon={"external-link-alt"} external={true}/>
+                        <IconLink link={"https://www.smashingmagazine.com"} text={"Source: Smashing magazine"}
+                                  icon={"external-link-alt"} external={true}/>
+                    </div>
                 </div>
             </div>
         </Tab.Pane>

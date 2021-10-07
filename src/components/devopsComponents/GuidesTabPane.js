@@ -58,7 +58,7 @@ const GuidesTabPane = () => {
                             look at a few categories bugs often fit into, see how we can evaluate the situation, and explore techniques
                             that help prevent these bugs.
                         </p>
-                        <IconLink link={"https://www.smashingmagazine.com/2021/10/guide-debugging-css/"} text={"Snippets"}
+                        <IconLink link={"https://www.smashingmagazine.com/2021/10/guide-debugging-css/"} text={"Debugging CSS"}
                                   icon={"external-link-alt"} external={true}/>
                         <IconLink link={"https://www.smashingmagazine.com"} text={"Source: Smashing magazine"}
                                   icon={"external-link-alt"} external={true}/>

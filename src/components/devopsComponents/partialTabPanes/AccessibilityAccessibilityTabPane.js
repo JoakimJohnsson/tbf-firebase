@@ -47,6 +47,42 @@ const AccessibilityAccessibilityTabPane = () => {
                     <IconLink link={"https://validator.w3.org/"} text={"W3C Markup validation service"}
                               icon={"external-link-alt"} external={true}/>
                 </div>
+                <div className="tab-pane-card">
+                    <TriIcons icons={["sign-language"]}/>
+                    <h3>How to Meet WCAG (Quick Reference)</h3>
+                    <p>
+                        A customizable quick reference to Web Content Accessibility Guidelines (WCAG) 2 requirements (success criteria)
+                        and techniques.
+                    </p>
+                    <IconLink link={"https://www.w3.org/WAI/WCAG21/quickref/"} text={"How to Meet WCAG (Quick Reference)"}
+                              icon={"external-link-alt"} external={true}/>
+                    <IconLink link={"https://www.w3.org/"} text={"Source: W3C - The Word wide web consortium"}
+                              icon={"external-link-alt"} external={true}/>
+                </div>
+                <div className="tab-pane-card">
+                    <TriIcons icons={["sign-language"]}/>
+                    <h3>Accessibility Checklist for developers</h3>
+                    <p>
+                        Deque recommends using a combination of software tools and informed human analysis - using a checklist such as the one in
+                        this document to test web accessibility.
+                    </p>
+                    <IconLink link={"https://media.dequeuniversity.com/public/en/docs/deque_web_accessibility_checklist.pdf"} text={"Accessibility Checklist for developers"}
+                              icon={"external-link-alt"} external={true}/>
+                    <IconLink link={"https://dequeuniversity.com/"} text={"Source: Deque university"}
+                              icon={"external-link-alt"} external={true}/>
+                </div>
+                <div className="tab-pane-card">
+                    <TriIcons icons={["sign-language"]}/>
+                    <h3>Accessibility Checklist for designers</h3>
+                    <p>
+                        Deque recommends using a combination of software tools and informed human analysis - using a checklist such as the one in
+                        this document to test web accessibility.
+                    </p>
+                    <IconLink link={"https://dequeuniversity.com/assets/pdf/module-design/dq-designers-checklist.pdf"} text={"Accessibility Checklist for designers"}
+                              icon={"external-link-alt"} external={true}/>
+                    <IconLink link={"https://dequeuniversity.com/"} text={"Source: Deque university"}
+                              icon={"external-link-alt"} external={true}/>
+                </div>
             </div>
         </Tab.Pane>
     );

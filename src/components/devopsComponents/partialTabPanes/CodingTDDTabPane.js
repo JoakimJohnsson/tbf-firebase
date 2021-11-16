@@ -12,7 +12,7 @@ import slTDD03 from "../../../../src/assets/tdd/slides/03-Basic_unit_testing.pdf
 const CodingTDDTabPane = () => {
     return (
         <Tab.Pane eventKey="coding-tdd">
-            <div className="row article">nav-tabs
+            <div className="row article">
                 <div className="col-12 mb-2">
                     <h2>TDD (Test driven development) exercises</h2>
                 </div>

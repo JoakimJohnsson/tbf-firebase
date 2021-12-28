@@ -23,9 +23,9 @@ const KarolinaBirthdayTabPane = () => {
                     <div className="row justify-content-center">
                         <div className="col-12 col-xl-8 d-flex justify-content-center align-items-center flex-column">
 
-                            <img src={birthdayImage} className="birthday-image mb-3"/>
+                            <img src={birthdayImage} className="birthday-image mb-3" alt="birthday reveal"/>
 
-                            <button className="btn btn-secondary " onClick={toggleBirthdayImage}>Clickme</button>
+                            <button className="btn btn-secondary " onClick={toggleBirthdayImage}>Click me to reveal your gift!</button>
 
 
                         </div>

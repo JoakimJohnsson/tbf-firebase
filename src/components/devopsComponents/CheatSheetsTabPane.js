@@ -79,6 +79,17 @@ const CheatSheetsTabPane = () => {
                         <IconLink link={"https://github.com/alan2207"} text={"Source: Alan Alickovic"}
                                   icon={"external-link-alt"} external={true}/>
                     </div>
+                    <div className="tab-pane-card">
+                        <TriIcons icons={["file-code"]}/>
+                        <h3>JSX / React conditional rendering</h3>
+                        <p>
+                            Good advice on JSX conditionals.
+                        </p>
+                        <IconLink link={"https://thoughtspile.github.io/2022/01/17/jsx-conditionals/"} text={"JSX conditionals cheat sheet"}
+                                  icon={"external-link-alt"} external={true}/>
+                        <IconLink link={"https://thoughtspile.github.io/"} text={"Source: Vladimir Klepov"}
+                                  icon={"external-link-alt"} external={true}/>
+                    </div>
                 </div>
             </div>
         </Tab.Pane>

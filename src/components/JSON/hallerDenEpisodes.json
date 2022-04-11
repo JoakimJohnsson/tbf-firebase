@@ -103,27 +103,23 @@
     {
       "number": 5,
       "movieName": "Independence day",
-      "movieYear": "1987",
+      "movieYear": "1996",
       "opinions": [
         {
           "participant-id": 1,
           "opinion": true
         },
         {
-          "participant-id": 2,
-          "opinion": true
-        },
-        {
           "participant-id": 3,
-          "opinion": true
+          "opinion": false
         },
         {
           "participant-id": 4,
-          "opinion": true
+          "opinion": false
         },
         {
           "participant-id": 5,
-          "opinion": true
+          "opinion": false
         }
       ]
     },
@@ -147,17 +143,13 @@
         {
           "participant-id": 4,
           "opinion": true
-        },
-        {
-          "participant-id": 5,
-          "opinion": true
         }
       ]
     },
     {
       "number": 7,
       "movieName": "Analyze this",
-      "movieYear": "1987",
+      "movieYear": "1999",
       "opinions": [
         {
           "participant-id": 1,
@@ -173,7 +165,7 @@
         },
         {
           "participant-id": 4,
-          "opinion": true
+          "opinion": false
         },
         {
           "participant-id": 5,
@@ -184,7 +176,7 @@
     {
       "number": 8,
       "movieName": "På heder och samvete",
-      "movieYear": "1987",
+      "movieYear": "1992",
       "opinions": [
         {
           "participant-id": 1,
@@ -192,7 +184,7 @@
         },
         {
           "participant-id": 2,
-          "opinion": true
+          "opinion": false
         },
         {
           "participant-id": 3,
@@ -204,41 +196,41 @@
         },
         {
           "participant-id": 5,
-          "opinion": true
+          "opinion": false
         }
       ]
     },
     {
       "number": 9,
       "movieName": "Avatar",
-      "movieYear": "1987",
+      "movieYear": "2009",
       "opinions": [
         {
           "participant-id": 1,
-          "opinion": true
+          "opinion": false
         },
         {
           "participant-id": 2,
-          "opinion": true
+          "opinion": false
         },
         {
           "participant-id": 3,
-          "opinion": true
+          "opinion": false
         },
         {
           "participant-id": 4,
-          "opinion": true
+          "opinion": false
         },
         {
           "participant-id": 5,
-          "opinion": true
+          "opinion": false
         }
       ]
     },
     {
       "number": 10,
       "movieName": "True romance",
-      "movieYear": "1987",
+      "movieYear": "1993",
       "opinions": [
         {
           "participant-id": 1,
@@ -255,16 +247,12 @@
         {
           "participant-id": 4,
           "opinion": true
-        },
-        {
-          "participant-id": 5,
-          "opinion": true
         }
       ]
     },
     {
       "number": 11,
-      "movieName": "Basic instinct",
+      "movieName": "Basic instinct - behöver redigeras",
       "movieYear": "1987",
       "opinions": [
         {
@@ -292,7 +280,7 @@
     {
       "number": 12,
       "movieName": "Being John Malkovich",
-      "movieYear": "1987",
+      "movieYear": "1999",
       "opinions": [
         {
           "participant-id": 1,
@@ -319,7 +307,7 @@
     {
       "number": 13,
       "movieName": "Crocodile Dundee",
-      "movieYear": "1987",
+      "movieYear": "1986",
       "opinions": [
         {
           "participant-id": 1,
@@ -327,26 +315,22 @@
         },
         {
           "participant-id": 2,
-          "opinion": true
+          "opinion": false
         },
         {
           "participant-id": 3,
-          "opinion": true
+          "opinion": false
         },
         {
           "participant-id": 4,
-          "opinion": true
-        },
-        {
-          "participant-id": 5,
-          "opinion": true
+          "opinion": false
         }
       ]
     },
     {
       "number": 14,
       "movieName": "Top gun",
-      "movieYear": "1987",
+      "movieYear": "1986",
       "opinions": [
         {
           "participant-id": 1,
@@ -362,37 +346,29 @@
         },
         {
           "participant-id": 4,
-          "opinion": true
-        },
-        {
-          "participant-id": 5,
-          "opinion": true
+          "opinion": false
         }
       ]
     },
     {
       "number": 15,
       "movieName": "Outbreak - I farozonen",
-      "movieYear": "1987",
+      "movieYear": "1995",
       "opinions": [
         {
           "participant-id": 1,
-          "opinion": true
+          "opinion": false
         },
         {
           "participant-id": 2,
-          "opinion": true
+          "opinion": false
         },
         {
           "participant-id": 3,
-          "opinion": true
+          "opinion": false
         },
         {
           "participant-id": 4,
-          "opinion": true
-        },
-        {
-          "participant-id": 5,
           "opinion": true
         }
       ]
@@ -400,7 +376,7 @@
     {
       "number": 16,
       "movieName": "Den vilda jakten på stenen",
-      "movieYear": "1987",
+      "movieYear": "1984",
       "opinions": [
         {
           "participant-id": 1,
@@ -416,11 +392,7 @@
         },
         {
           "participant-id": 4,
-          "opinion": true
-        },
-        {
-          "participant-id": 5,
-          "opinion": true
+          "opinion": false
         }
       ]
     },
@@ -435,18 +407,18 @@
         },
         {
           "participant-id": 2,
-          "opinion": true
+          "opinion": false
         },
         {
           "participant-id": 3,
-          "opinion": true
+          "opinion": false
         },
         {
           "participant-id": 4,
           "opinion": true
         },
         {
-          "participant-id": 5,
+          "participant-id": 6,
           "opinion": true
         }
       ]
@@ -454,7 +426,7 @@
     {
       "number": 18,
       "movieName": "Thelma & Louise",
-      "movieYear": "1987",
+      "movieYear": "1991",
       "opinions": [
         {
           "participant-id": 1,
@@ -481,7 +453,7 @@
     {
       "number": 19,
       "movieName": "En fisk som heter Wanda",
-      "movieYear": "1987",
+      "movieYear": "1988",
       "opinions": [
         {
           "participant-id": 1,
@@ -489,7 +461,7 @@
         },
         {
           "participant-id": 2,
-          "opinion": true
+          "opinion": false
         },
         {
           "participant-id": 3,
@@ -497,10 +469,6 @@
         },
         {
           "participant-id": 4,
-          "opinion": true
-        },
-        {
-          "participant-id": 5,
           "opinion": true
         }
       ]
@@ -508,7 +476,7 @@
     {
       "number": 20,
       "movieName": "Lock, stock and two smoking barrels",
-      "movieYear": "1987",
+      "movieYear": "1998",
       "opinions": [
         {
           "participant-id": 1,
@@ -520,21 +488,13 @@
         },
         {
           "participant-id": 3,
-          "opinion": true
-        },
-        {
-          "participant-id": 4,
-          "opinion": true
-        },
-        {
-          "participant-id": 5,
-          "opinion": true
+          "opinion": false
         }
       ]
     },
     {
       "number": 21,
-      "movieName": "Jagad",
+      "movieName": "Jagad - todo",
       "movieYear": "1987",
       "opinions": [
         {
@@ -562,14 +522,10 @@
     {
       "number": 22,
       "movieName": "American gangster",
-      "movieYear": "1987",
+      "movieYear": "2007",
       "opinions": [
         {
           "participant-id": 1,
-          "opinion": true
-        },
-        {
-          "participant-id": 2,
           "opinion": true
         },
         {
@@ -578,10 +534,6 @@
         },
         {
           "participant-id": 4,
-          "opinion": true
-        },
-        {
-          "participant-id": 5,
           "opinion": true
         }
       ]
@@ -589,26 +541,18 @@
     {
       "number": 23,
       "movieName": "Den nakna pistolen",
-      "movieYear": "1987",
+      "movieYear": "1988",
       "opinions": [
         {
           "participant-id": 1,
           "opinion": true
         },
         {
-          "participant-id": 2,
-          "opinion": true
-        },
-        {
           "participant-id": 3,
-          "opinion": true
+          "opinion": false
         },
         {
           "participant-id": 4,
-          "opinion": true
-        },
-        {
-          "participant-id": 5,
           "opinion": true
         }
       ]
@@ -616,7 +560,7 @@
     {
       "number": 24,
       "movieName": "Fight Club",
-      "movieYear": "1987",
+      "movieYear": "1999",
       "opinions": [
         {
           "participant-id": 1,
@@ -633,16 +577,12 @@
         {
           "participant-id": 4,
           "opinion": true
-        },
-        {
-          "participant-id": 5,
-          "opinion": true
         }
       ]
     },
     {
       "number": 25,
-      "movieName": "Thank you for smoking",
+      "movieName": "Thank you for smoking - Här slutade jag TODO!!!!!",
       "movieYear": "1987",
       "opinions": [
         {

@@ -2,23 +2,33 @@
   "participants": [
     {
       "id": 1,
-      "firstName": "Erik"
+      "firstName": "Erik",
+      "lastName": "Broström"
     },
     {
       "id": 2,
-      "firstName": "Fanny"
+      "firstName": "Fanny",
+      "lastName": "Agazzi"
     },
     {
       "id": 3,
-      "firstName": "Martin"
+      "firstName": "Martin",
+      "lastName": "Soneby"
     },
     {
       "id": 4,
-      "firstName": "Ola"
+      "firstName": "Ola",
+      "lastName": "Aurell"
     },
     {
       "id": 5,
-      "firstName": "Jonas"
+      "firstName": "Jonas",
+      "lastName": "Strandberg"
+    },
+    {
+      "id": 6,
+      "firstName": "Jonas",
+      "lastName": "Pike - Detta måste kontrolleras"
     }
   ]
 }

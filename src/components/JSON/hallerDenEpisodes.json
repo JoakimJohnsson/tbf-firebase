@@ -1,0 +1,2237 @@
+{
+  "episodes": [
+    {
+      "number": 1,
+      "movieName": "Robocop",
+      "movieYear": "1987",
+      "opinions": [
+        {
+          "participant-id": 1,
+          "opinion": true
+        },
+        {
+          "participant-id": 2,
+          "opinion": true
+        },
+        {
+          "participant-id": 3,
+          "opinion": true
+        },
+        {
+          "participant-id": 4,
+          "opinion": true
+        },
+        {
+          "participant-id": 5,
+          "opinion": true
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "movieName": "Turner & Hooch",
+      "movieYear": "1989",
+      "opinions": [
+        {
+          "participant-id": 1,
+          "opinion": true
+        },
+        {
+          "participant-id": 2,
+          "opinion": false
+        },
+        {
+          "participant-id": 3,
+          "opinion": true
+        },
+        {
+          "participant-id": 5,
+          "opinion": true
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "movieName": "Terror på Elm Street",
+      "movieYear": "1984",
+      "opinions": [
+        {
+          "participant-id": 1,
+          "opinion": true
+        },
+        {
+          "participant-id": 2,
+          "opinion": false
+        },
+        {
+          "participant-id": 3,
+          "opinion": false
+        },
+        {
+          "participant-id": 4,
+          "opinion": true
+        },
+        {
+          "participant-id": 5,
+          "opinion": true
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "movieName": "Face/Off",
+      "movieYear": "1997",
+      "opinions": [
+        {
+          "participant-id": 1,
+          "opinion": true
+        },
+        {
+          "participant-id": 2,
+          "opinion": true
+        },
+        {
+          "participant-id": 3,
+          "opinion": false
+        },
+        {
+          "participant-id": 4,
+          "opinion": false
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "movieName": "Independence day",
+      "movieYear": "1987",
+      "opinions": [
+        {
+          "participant-id": 1,
+          "opinion": true
+        },
+        {
+          "participant-id": 2,
+          "opinion": true
+        },
+        {
+          "participant-id": 3,
+          "opinion": true
+        },
+        {
+          "participant-id": 4,
+          "opinion": true
+        },
+        {
+          "participant-id": 5,
+          "opinion": true
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "movieName": "24-timmarsjakten",
+      "movieYear": "1987",
+      "opinions": [
+        {
+          "participant-id": 1,
+          "opinion": true
+        },
+        {
+          "participant-id": 2,
+          "opinion": true
+        },
+        {
+          "participant-id": 3,
+          "opinion": true
+        },
+        {
+          "participant-id": 4,
+          "opinion": true
+        },
+        {
+          "participant-id": 5,
+          "opinion": true
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "movieName": "Analyze this",
+      "movieYear": "1987",
+      "opinions": [
+        {
+          "participant-id": 1,
+          "opinion": true
+        },
+        {
+          "participant-id": 2,
+          "opinion": true
+        },
+        {
+          "participant-id": 3,
+          "opinion": true
+        },
+        {
+          "participant-id": 4,
+          "opinion": true
+        },
+        {
+          "participant-id": 5,
+          "opinion": true
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "movieName": "På heder och samvete",
+      "movieYear": "1987",
+      "opinions": [
+        {
+          "participant-id": 1,
+          "opinion": true
+        },
+        {
+          "participant-id": 2,
+          "opinion": true
+        },
+        {
+          "participant-id": 3,
+          "opinion": true
+        },
+        {
+          "participant-id": 4,
+          "opinion": true
+        },
+        {
+          "participant-id": 5,
+          "opinion": true
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "movieName": "Avatar",
+      "movieYear": "1987",
+      "opinions": [
+        {
+          "participant-id": 1,
+          "opinion": true
+        },
+        {
+          "participant-id": 2,
+          "opinion": true
+        },
+        {
+          "participant-id": 3,
+          "opinion": true
+        },
+        {
+          "participant-id": 4,
+          "opinion": true
+        },
+        {
+          "participant-id": 5,
+          "opinion": true
+        }
+      ]
+    },
+    {
+      "number": 10,
+      "movieName": "True romance",
+      "movieYear": "1987",
+      "opinions": [
+        {
+          "participant-id": 1,
+          "opinion": true
+        },
+        {
+          "participant-id": 2,
+          "opinion": true
+        },
+        {
+          "participant-id": 3,
+          "opinion": true
+        },
+        {
+          "participant-id": 4,
+          "opinion": true
+        },
+        {
+          "participant-id": 5,
+          "opinion": true
+        }
+      ]
+    },
+    {
+      "number": 11,
+      "movieName": "Basic instinct",
+      "movieYear": "1987",
+      "opinions": [
+        {
+          "participant-id": 1,
+          "opinion": true
+        },
+        {
+          "participant-id": 2,
+          "opinion": true
+        },
+        {
+          "participant-id": 3,
+          "opinion": true
+        },
+        {
+          "participant-id": 4,
+          "opinion": true
+        },
+        {
+          "participant-id": 5,
+          "opinion": true
+        }
+      ]
+    },
+    {
+      "number": 12,
+      "movieName": "Being John Malkovich",
+      "movieYear": "1987",
+      "opinions": [
+        {
+          "participant-id": 1,
+          "opinion": true
+        },
+        {
+          "participant-id": 2,
+          "opinion": true
+        },
+        {
+          "participant-id": 3,
+          "opinion": true
+        },
+        {
+          "participant-id": 4,
+          "opinion": true
+        },
+        {
+          "participant-id": 5,
+          "opinion": true
+        }
+      ]
+    },
+    {
+      "number": 13,
+      "movieName": "Crocodile Dundee",
+      "movieYear": "1987",
+      "opinions": [
+        {
+          "participant-id": 1,
+          "opinion": true
+        },
+        {
+          "participant-id": 2,
+          "opinion": true
+        },
+        {
+          "participant-id": 3,
+          "opinion": true
+        },
+        {
+          "participant-id": 4,
+          "opinion": true
+        },
+        {
+          "participant-id": 5,
+          "opinion": true
+        }
+      ]
+    },
+    {
+      "number": 14,
+      "movieName": "Top gun",
+      "movieYear": "1987",
+      "opinions": [
+        {
+          "participant-id": 1,
+          "opinion": true
+        },
+        {
+          "participant-id": 2,
+          "opinion": true
+        },
+        {
+          "participant-id": 3,
+          "opinion": true
+        },
+        {
+          "participant-id": 4,
+          "opinion": true
+        },
+        {
+          "participant-id": 5,
+          "opinion": true
+        }
+      ]
+    },
+    {
+      "number": 15,
+      "movieName": "Outbreak - I farozonen",
+      "movieYear": "1987",
+      "opinions": [
+        {
+          "participant-id": 1,
+          "opinion": true
+        },
+        {
+          "participant-id": 2,
+          "opinion": true
+        },
+        {
+          "participant-id": 3,
+          "opinion": true
+        },
+        {
+          "participant-id": 4,
+          "opinion": true
+        },
+        {
+          "participant-id": 5,
+          "opinion": true
+        }
+      ]
+    },
+    {
+      "number": 16,
+      "movieName": "Den vilda jakten på stenen",
+      "movieYear": "1987",
+      "opinions": [
+        {
+          "participant-id": 1,
+          "opinion": true
+        },
+        {
+          "participant-id": 2,
+          "opinion": true
+        },
+        {
+          "participant-id": 3,
+          "opinion": true
+        },
+        {
+          "participant-id": 4,
+          "opinion": true
+        },
+        {
+          "participant-id": 5,
+          "opinion": true
+        }
+      ]
+    },
+    {
+      "number": 17,
+      "movieName": "Who framed Roger Rabbit?",
+      "movieYear": "1987",
+      "opinions": [
+        {
+          "participant-id": 1,
+          "opinion": true
+        },
+        {
+          "participant-id": 2,
+          "opinion": true
+        },
+        {
+          "participant-id": 3,
+          "opinion": true
+        },
+        {
+          "participant-id": 4,
+          "opinion": true
+        },
+        {
+          "participant-id": 5,
+          "opinion": true
+        }
+      ]
+    },
+    {
+      "number": 18,
+      "movieName": "Thelma & Louise",
+      "movieYear": "1987",
+      "opinions": [
+        {
+          "participant-id": 1,
+          "opinion": true
+        },
+        {
+          "participant-id": 2,
+          "opinion": true
+        },
+        {
+          "participant-id": 3,
+          "opinion": true
+        },
+        {
+          "participant-id": 4,
+          "opinion": true
+        },
+        {
+          "participant-id": 5,
+          "opinion": true
+        }
+      ]
+    },
+    {
+      "number": 19,
+      "movieName": "En fisk som heter Wanda",
+      "movieYear": "1987",
+      "opinions": [
+        {
+          "participant-id": 1,
+          "opinion": true
+        },
+        {
+          "participant-id": 2,
+          "opinion": true
+        },
+        {
+          "participant-id": 3,
+          "opinion": true
+        },
+        {
+          "participant-id": 4,
+          "opinion": true
+        },
+        {
+          "participant-id": 5,
+          "opinion": true
+        }
+      ]
+    },
+    {
+      "number": 20,
+      "movieName": "Lock, stock and two smoking barrels",
+      "movieYear": "1987",
+      "opinions": [
+        {
+          "participant-id": 1,
+          "opinion": true
+        },
+        {
+          "participant-id": 2,
+          "opinion": true
+        },
+        {
+          "participant-id": 3,
+          "opinion": true
+        },
+        {
+          "participant-id": 4,
+          "opinion": true
+        },
+        {
+          "participant-id": 5,
+          "opinion": true
+        }
+      ]
+    },
+    {
+      "number": 21,
+      "movieName": "Jagad",
+      "movieYear": "1987",
+      "opinions": [
+        {
+          "participant-id": 1,
+          "opinion": true
+        },
+        {
+          "participant-id": 2,
+          "opinion": true
+        },
+        {
+          "participant-id": 3,
+          "opinion": true
+        },
+        {
+          "participant-id": 4,
+          "opinion": true
+        },
+        {
+          "participant-id": 5,
+          "opinion": true
+        }
+      ]
+    },
+    {
+      "number": 22,
+      "movieName": "American gangster",
+      "movieYear": "1987",
+      "opinions": [
+        {
+          "participant-id": 1,
+          "opinion": true
+        },
+        {
+          "participant-id": 2,
+          "opinion": true
+        },
+        {
+          "participant-id": 3,
+          "opinion": true
+        },
+        {
+          "participant-id": 4,
+          "opinion": true
+        },
+        {
+          "participant-id": 5,
+          "opinion": true
+        }
+      ]
+    },
+    {
+      "number": 23,
+      "movieName": "Den nakna pistolen",
+      "movieYear": "1987",
+      "opinions": [
+        {
+          "participant-id": 1,
+          "opinion": true
+        },
+        {
+          "participant-id": 2,
+          "opinion": true
+        },
+        {
+          "participant-id": 3,
+          "opinion": true
+        },
+        {
+          "participant-id": 4,
+          "opinion": true
+        },
+        {
+          "participant-id": 5,
+          "opinion": true
+        }
+      ]
+    },
+    {
+      "number": 24,
+      "movieName": "Fight Club",
+      "movieYear": "1987",
+      "opinions": [
+        {
+          "participant-id": 1,
+          "opinion": true
+        },
+        {
+          "participant-id": 2,
+          "opinion": true
+        },
+        {
+          "participant-id": 3,
+          "opinion": true
+        },
+        {
+          "participant-id": 4,
+          "opinion": true
+        },
+        {
+          "participant-id": 5,
+          "opinion": true
+        }
+      ]
+    },
+    {
+      "number": 25,
+      "movieName": "Thank you for smoking",
+      "movieYear": "1987",
+      "opinions": [
+        {
+          "participant-id": 1,
+          "opinion": true
+        },
+        {
+          "participant-id": 2,
+          "opinion": true
+        },
+        {
+          "participant-id": 3,
+          "opinion": true
+        },
+        {
+          "participant-id": 4,
+          "opinion": true
+        },
+        {
+          "participant-id": 5,
+          "opinion": true
+        }
+      ]
+    },
+    {
+      "number": 26,
+      "movieName": "Wedding Crashers",
+      "movieYear": "1987",
+      "opinions": [
+        {
+          "participant-id": 1,
+          "opinion": true
+        },
+        {
+          "participant-id": 2,
+          "opinion": true
+        },
+        {
+          "participant-id": 3,
+          "opinion": true
+        },
+        {
+          "participant-id": 4,
+          "opinion": true
+        },
+        {
+          "participant-id": 5,
+          "opinion": true
+        }
+      ]
+    },
+    {
+      "number": 27,
+      "movieName": "Boogie Nights",
+      "movieYear": "1987",
+      "opinions": [
+        {
+          "participant-id": 1,
+          "opinion": true
+        },
+        {
+          "participant-id": 2,
+          "opinion": true
+        },
+        {
+          "participant-id": 3,
+          "opinion": true
+        },
+        {
+          "participant-id": 4,
+          "opinion": true
+        },
+        {
+          "participant-id": 5,
+          "opinion": true
+        }
+      ]
+    },
+    {
+      "number": 28,
+      "movieName": "Det Stora Blå",
+      "movieYear": "1987",
+      "opinions": [
+        {
+          "participant-id": 1,
+          "opinion": true
+        },
+        {
+          "participant-id": 2,
+          "opinion": true
+        },
+        {
+          "participant-id": 3,
+          "opinion": true
+        },
+        {
+          "participant-id": 4,
+          "opinion": true
+        },
+        {
+          "participant-id": 5,
+          "opinion": true
+        }
+      ]
+    },
+    {
+      "number": 29,
+      "movieName": "Citizen Kane",
+      "movieYear": "1987",
+      "opinions": [
+        {
+          "participant-id": 1,
+          "opinion": true
+        },
+        {
+          "participant-id": 2,
+          "opinion": true
+        },
+        {
+          "participant-id": 3,
+          "opinion": true
+        },
+        {
+          "participant-id": 4,
+          "opinion": true
+        },
+        {
+          "participant-id": 5,
+          "opinion": true
+        }
+      ]
+    },
+    {
+      "number": 30,
+      "movieName": "The Usual Suspects",
+      "movieYear": "1987",
+      "opinions": [
+        {
+          "participant-id": 1,
+          "opinion": true
+        },
+        {
+          "participant-id": 2,
+          "opinion": true
+        },
+        {
+          "participant-id": 3,
+          "opinion": true
+        },
+        {
+          "participant-id": 4,
+          "opinion": true
+        },
+        {
+          "participant-id": 5,
+          "opinion": true
+        }
+      ]
+    },
+    {
+      "number": 31,
+      "movieName": "Point Break",
+      "movieYear": "1987",
+      "opinions": [
+        {
+          "participant-id": 1,
+          "opinion": true
+        },
+        {
+          "participant-id": 2,
+          "opinion": true
+        },
+        {
+          "participant-id": 3,
+          "opinion": true
+        },
+        {
+          "participant-id": 4,
+          "opinion": true
+        },
+        {
+          "participant-id": 5,
+          "opinion": true
+        }
+      ]
+    },
+    {
+      "number": 32,
+      "movieName": "Lost in Translation",
+      "movieYear": "1987",
+      "opinions": [
+        {
+          "participant-id": 1,
+          "opinion": true
+        },
+        {
+          "participant-id": 2,
+          "opinion": true
+        },
+        {
+          "participant-id": 3,
+          "opinion": true
+        },
+        {
+          "participant-id": 4,
+          "opinion": true
+        },
+        {
+          "participant-id": 5,
+          "opinion": true
+        }
+      ]
+    },
+    {
+      "number": 33,
+      "movieName": "Seven",
+      "movieYear": "1987",
+      "opinions": [
+        {
+          "participant-id": 1,
+          "opinion": true
+        },
+        {
+          "participant-id": 2,
+          "opinion": true
+        },
+        {
+          "participant-id": 3,
+          "opinion": true
+        },
+        {
+          "participant-id": 4,
+          "opinion": true
+        },
+        {
+          "participant-id": 5,
+          "opinion": true
+        }
+      ]
+    },
+    {
+      "number": 34,
+      "movieName": "En Kvinnas Doft",
+      "movieYear": "1987",
+      "opinions": [
+        {
+          "participant-id": 1,
+          "opinion": true
+        },
+        {
+          "participant-id": 2,
+          "opinion": true
+        },
+        {
+          "participant-id": 3,
+          "opinion": true
+        },
+        {
+          "participant-id": 4,
+          "opinion": true
+        },
+        {
+          "participant-id": 5,
+          "opinion": true
+        }
+      ]
+    },
+    {
+      "number": 35,
+      "movieName": "South Park - Bigger, longer & uncut",
+      "movieYear": "1987",
+      "opinions": [
+        {
+          "participant-id": 1,
+          "opinion": true
+        },
+        {
+          "participant-id": 2,
+          "opinion": true
+        },
+        {
+          "participant-id": 3,
+          "opinion": true
+        },
+        {
+          "participant-id": 4,
+          "opinion": true
+        },
+        {
+          "participant-id": 5,
+          "opinion": true
+        }
+      ]
+    },
+    {
+      "number": 36,
+      "movieName": "Sällskapsresan 2 - Snowroller",
+      "movieYear": "1987",
+      "opinions": [
+        {
+          "participant-id": 1,
+          "opinion": true
+        },
+        {
+          "participant-id": 2,
+          "opinion": true
+        },
+        {
+          "participant-id": 3,
+          "opinion": true
+        },
+        {
+          "participant-id": 4,
+          "opinion": true
+        },
+        {
+          "participant-id": 5,
+          "opinion": true
+        }
+      ]
+    },
+    {
+      "number": 37,
+      "movieName": "Karate Kid",
+      "movieYear": "1987",
+      "opinions": [
+        {
+          "participant-id": 1,
+          "opinion": true
+        },
+        {
+          "participant-id": 2,
+          "opinion": true
+        },
+        {
+          "participant-id": 3,
+          "opinion": true
+        },
+        {
+          "participant-id": 4,
+          "opinion": true
+        },
+        {
+          "participant-id": 5,
+          "opinion": true
+        }
+      ]
+    },
+    {
+      "number": 38,
+      "movieName": "När Lammen Tystnar",
+      "movieYear": "1987",
+      "opinions": [
+        {
+          "participant-id": 1,
+          "opinion": true
+        },
+        {
+          "participant-id": 2,
+          "opinion": true
+        },
+        {
+          "participant-id": 3,
+          "opinion": true
+        },
+        {
+          "participant-id": 4,
+          "opinion": true
+        },
+        {
+          "participant-id": 5,
+          "opinion": true
+        }
+      ]
+    },
+    {
+      "number": 39,
+      "movieName": "Forest Gump",
+      "movieYear": "1987",
+      "opinions": [
+        {
+          "participant-id": 1,
+          "opinion": true
+        },
+        {
+          "participant-id": 2,
+          "opinion": true
+        },
+        {
+          "participant-id": 3,
+          "opinion": true
+        },
+        {
+          "participant-id": 4,
+          "opinion": true
+        },
+        {
+          "participant-id": 5,
+          "opinion": true
+        }
+      ]
+    },
+    {
+      "number": 40,
+      "movieName": "Jägarna",
+      "movieYear": "1987",
+      "opinions": [
+        {
+          "participant-id": 1,
+          "opinion": true
+        },
+        {
+          "participant-id": 2,
+          "opinion": true
+        },
+        {
+          "participant-id": 3,
+          "opinion": true
+        },
+        {
+          "participant-id": 4,
+          "opinion": true
+        },
+        {
+          "participant-id": 5,
+          "opinion": true
+        }
+      ]
+    },
+    {
+      "number": 41,
+      "movieName": "This is Spinal Tap",
+      "movieYear": "1987",
+      "opinions": [
+        {
+          "participant-id": 1,
+          "opinion": true
+        },
+        {
+          "participant-id": 2,
+          "opinion": true
+        },
+        {
+          "participant-id": 3,
+          "opinion": true
+        },
+        {
+          "participant-id": 4,
+          "opinion": true
+        },
+        {
+          "participant-id": 5,
+          "opinion": true
+        }
+      ]
+    },
+    {
+      "number": 42,
+      "movieName": "Dirty Dancing",
+      "movieYear": "1987",
+      "opinions": [
+        {
+          "participant-id": 1,
+          "opinion": true
+        },
+        {
+          "participant-id": 2,
+          "opinion": true
+        },
+        {
+          "participant-id": 3,
+          "opinion": true
+        },
+        {
+          "participant-id": 4,
+          "opinion": true
+        },
+        {
+          "participant-id": 5,
+          "opinion": true
+        }
+      ]
+    },
+    {
+      "number": 43,
+      "movieName": "The Matrix",
+      "movieYear": "1987",
+      "opinions": [
+        {
+          "participant-id": 1,
+          "opinion": true
+        },
+        {
+          "participant-id": 2,
+          "opinion": true
+        },
+        {
+          "participant-id": 3,
+          "opinion": true
+        },
+        {
+          "participant-id": 4,
+          "opinion": true
+        },
+        {
+          "participant-id": 5,
+          "opinion": true
+        }
+      ]
+    },
+    {
+      "number": 44,
+      "movieName": "Die Hard - With a vengeance",
+      "movieYear": "1987",
+      "opinions": [
+        {
+          "participant-id": 1,
+          "opinion": true
+        },
+        {
+          "participant-id": 2,
+          "opinion": true
+        },
+        {
+          "participant-id": 3,
+          "opinion": true
+        },
+        {
+          "participant-id": 4,
+          "opinion": true
+        },
+        {
+          "participant-id": 5,
+          "opinion": true
+        }
+      ]
+    },
+    {
+      "number": 45,
+      "movieName": "Gökboet",
+      "movieYear": "1987",
+      "opinions": [
+        {
+          "participant-id": 1,
+          "opinion": true
+        },
+        {
+          "participant-id": 2,
+          "opinion": true
+        },
+        {
+          "participant-id": 3,
+          "opinion": true
+        },
+        {
+          "participant-id": 4,
+          "opinion": true
+        },
+        {
+          "participant-id": 5,
+          "opinion": true
+        }
+      ]
+    },
+    {
+      "number": 46,
+      "movieName": "Elf",
+      "movieYear": "1987",
+      "opinions": [
+        {
+          "participant-id": 1,
+          "opinion": true
+        },
+        {
+          "participant-id": 2,
+          "opinion": true
+        },
+        {
+          "participant-id": 3,
+          "opinion": true
+        },
+        {
+          "participant-id": 4,
+          "opinion": true
+        },
+        {
+          "participant-id": 5,
+          "opinion": true
+        }
+      ]
+    },
+    {
+      "number": 47,
+      "movieName": "Ivanhoe",
+      "movieYear": "1987",
+      "opinions": [
+        {
+          "participant-id": 1,
+          "opinion": true
+        },
+        {
+          "participant-id": 2,
+          "opinion": true
+        },
+        {
+          "participant-id": 3,
+          "opinion": true
+        },
+        {
+          "participant-id": 4,
+          "opinion": true
+        },
+        {
+          "participant-id": 5,
+          "opinion": true
+        }
+      ]
+    },
+    {
+      "number": 48,
+      "movieName": "Tropic Thunder",
+      "movieYear": "1987",
+      "opinions": [
+        {
+          "participant-id": 1,
+          "opinion": true
+        },
+        {
+          "participant-id": 2,
+          "opinion": true
+        },
+        {
+          "participant-id": 3,
+          "opinion": true
+        },
+        {
+          "participant-id": 4,
+          "opinion": true
+        },
+        {
+          "participant-id": 5,
+          "opinion": true
+        }
+      ]
+    },
+    {
+      "number": 49,
+      "movieName": "Armageddon",
+      "movieYear": "1987",
+      "opinions": [
+        {
+          "participant-id": 1,
+          "opinion": true
+        },
+        {
+          "participant-id": 2,
+          "opinion": true
+        },
+        {
+          "participant-id": 3,
+          "opinion": true
+        },
+        {
+          "participant-id": 4,
+          "opinion": true
+        },
+        {
+          "participant-id": 5,
+          "opinion": true
+        }
+      ]
+    },
+    {
+      "number": 50,
+      "movieName": "Amelie från Montmartre",
+      "movieYear": "1987",
+      "opinions": [
+        {
+          "participant-id": 1,
+          "opinion": true
+        },
+        {
+          "participant-id": 2,
+          "opinion": true
+        },
+        {
+          "participant-id": 3,
+          "opinion": true
+        },
+        {
+          "participant-id": 4,
+          "opinion": true
+        },
+        {
+          "participant-id": 5,
+          "opinion": true
+        }
+      ]
+    },
+    {
+      "number": 51,
+      "movieName": "Flykten Från New York",
+      "movieYear": "1987",
+      "opinions": [
+        {
+          "participant-id": 1,
+          "opinion": true
+        },
+        {
+          "participant-id": 2,
+          "opinion": true
+        },
+        {
+          "participant-id": 3,
+          "opinion": true
+        },
+        {
+          "participant-id": 4,
+          "opinion": true
+        },
+        {
+          "participant-id": 5,
+          "opinion": true
+        }
+      ]
+    },
+    {
+      "number": 52,
+      "movieName": "Fyra Bröllop och en Begravning",
+      "movieYear": "1987",
+      "opinions": [
+        {
+          "participant-id": 1,
+          "opinion": true
+        },
+        {
+          "participant-id": 2,
+          "opinion": true
+        },
+        {
+          "participant-id": 3,
+          "opinion": true
+        },
+        {
+          "participant-id": 4,
+          "opinion": true
+        },
+        {
+          "participant-id": 5,
+          "opinion": true
+        }
+      ]
+    },
+    {
+      "number": 53,
+      "movieName": "The Others",
+      "movieYear": "1987",
+      "opinions": [
+        {
+          "participant-id": 1,
+          "opinion": true
+        },
+        {
+          "participant-id": 2,
+          "opinion": true
+        },
+        {
+          "participant-id": 3,
+          "opinion": true
+        },
+        {
+          "participant-id": 4,
+          "opinion": true
+        },
+        {
+          "participant-id": 5,
+          "opinion": true
+        }
+      ]
+    },
+    {
+      "number": 54,
+      "movieName": "Polisskolan",
+      "movieYear": "1987",
+      "opinions": [
+        {
+          "participant-id": 1,
+          "opinion": true
+        },
+        {
+          "participant-id": 2,
+          "opinion": true
+        },
+        {
+          "participant-id": 3,
+          "opinion": true
+        },
+        {
+          "participant-id": 4,
+          "opinion": true
+        },
+        {
+          "participant-id": 5,
+          "opinion": true
+        }
+      ]
+    },
+    {
+      "number": 55,
+      "movieName": "Dirty Harry",
+      "movieYear": "1987",
+      "opinions": [
+        {
+          "participant-id": 1,
+          "opinion": true
+        },
+        {
+          "participant-id": 2,
+          "opinion": true
+        },
+        {
+          "participant-id": 3,
+          "opinion": true
+        },
+        {
+          "participant-id": 4,
+          "opinion": true
+        },
+        {
+          "participant-id": 5,
+          "opinion": true
+        }
+      ]
+    },
+    {
+      "number": 56,
+      "movieName": "En Prins i New York",
+      "movieYear": "1987",
+      "opinions": [
+        {
+          "participant-id": 1,
+          "opinion": true
+        },
+        {
+          "participant-id": 2,
+          "opinion": true
+        },
+        {
+          "participant-id": 3,
+          "opinion": true
+        },
+        {
+          "participant-id": 4,
+          "opinion": true
+        },
+        {
+          "participant-id": 5,
+          "opinion": true
+        }
+      ]
+    },
+    {
+      "number": 57,
+      "movieName": "Änglagård",
+      "movieYear": "1987",
+      "opinions": [
+        {
+          "participant-id": 1,
+          "opinion": true
+        },
+        {
+          "participant-id": 2,
+          "opinion": true
+        },
+        {
+          "participant-id": 3,
+          "opinion": true
+        },
+        {
+          "participant-id": 4,
+          "opinion": true
+        },
+        {
+          "participant-id": 5,
+          "opinion": true
+        }
+      ]
+    },
+    {
+      "number": 58,
+      "movieName": "American Beauty",
+      "movieYear": "1987",
+      "opinions": [
+        {
+          "participant-id": 1,
+          "opinion": true
+        },
+        {
+          "participant-id": 2,
+          "opinion": true
+        },
+        {
+          "participant-id": 3,
+          "opinion": true
+        },
+        {
+          "participant-id": 4,
+          "opinion": true
+        },
+        {
+          "participant-id": 5,
+          "opinion": true
+        }
+      ]
+    },
+    {
+      "number": 59,
+      "movieName": "Amadeus",
+      "movieYear": "1987",
+      "opinions": [
+        {
+          "participant-id": 1,
+          "opinion": true
+        },
+        {
+          "participant-id": 2,
+          "opinion": true
+        },
+        {
+          "participant-id": 3,
+          "opinion": true
+        },
+        {
+          "participant-id": 4,
+          "opinion": true
+        },
+        {
+          "participant-id": 5,
+          "opinion": true
+        }
+      ]
+    },
+    {
+      "number": 60,
+      "movieName": "Det Våras För Sheriffen",
+      "movieYear": "1987",
+      "opinions": [
+        {
+          "participant-id": 1,
+          "opinion": true
+        },
+        {
+          "participant-id": 2,
+          "opinion": true
+        },
+        {
+          "participant-id": 3,
+          "opinion": true
+        },
+        {
+          "participant-id": 4,
+          "opinion": true
+        },
+        {
+          "participant-id": 5,
+          "opinion": true
+        }
+      ]
+    },
+    {
+      "number": 61,
+      "movieName": "Breakfast Club",
+      "movieYear": "1987",
+      "opinions": [
+        {
+          "participant-id": 1,
+          "opinion": true
+        },
+        {
+          "participant-id": 2,
+          "opinion": true
+        },
+        {
+          "participant-id": 3,
+          "opinion": true
+        },
+        {
+          "participant-id": 4,
+          "opinion": true
+        },
+        {
+          "participant-id": 5,
+          "opinion": true
+        }
+      ]
+    },
+    {
+      "number": 62,
+      "movieName": "The Rock",
+      "movieYear": "1987",
+      "opinions": [
+        {
+          "participant-id": 1,
+          "opinion": true
+        },
+        {
+          "participant-id": 2,
+          "opinion": true
+        },
+        {
+          "participant-id": 3,
+          "opinion": true
+        },
+        {
+          "participant-id": 4,
+          "opinion": true
+        },
+        {
+          "participant-id": 5,
+          "opinion": true
+        }
+      ]
+    },
+    {
+      "number": 63,
+      "movieName": "Fucking Åmål",
+      "movieYear": "1987",
+      "opinions": [
+        {
+          "participant-id": 1,
+          "opinion": true
+        },
+        {
+          "participant-id": 2,
+          "opinion": true
+        },
+        {
+          "participant-id": 3,
+          "opinion": true
+        },
+        {
+          "participant-id": 4,
+          "opinion": true
+        },
+        {
+          "participant-id": 5,
+          "opinion": true
+        }
+      ]
+    },
+    {
+      "number": 64,
+      "movieName": "Blåsningen",
+      "movieYear": "1987",
+      "opinions": [
+        {
+          "participant-id": 1,
+          "opinion": true
+        },
+        {
+          "participant-id": 2,
+          "opinion": true
+        },
+        {
+          "participant-id": 3,
+          "opinion": true
+        },
+        {
+          "participant-id": 4,
+          "opinion": true
+        },
+        {
+          "participant-id": 5,
+          "opinion": true
+        }
+      ]
+    },
+    {
+      "number": 65,
+      "movieName": "Requiem For a Dream",
+      "movieYear": "1987",
+      "opinions": [
+        {
+          "participant-id": 1,
+          "opinion": true
+        },
+        {
+          "participant-id": 2,
+          "opinion": true
+        },
+        {
+          "participant-id": 3,
+          "opinion": true
+        },
+        {
+          "participant-id": 4,
+          "opinion": true
+        },
+        {
+          "participant-id": 5,
+          "opinion": true
+        }
+      ]
+    },
+    {
+      "number": 66,
+      "movieName": "Snuten i Hollywood",
+      "movieYear": "1987",
+      "opinions": [
+        {
+          "participant-id": 1,
+          "opinion": true
+        },
+        {
+          "participant-id": 2,
+          "opinion": true
+        },
+        {
+          "participant-id": 3,
+          "opinion": true
+        },
+        {
+          "participant-id": 4,
+          "opinion": true
+        },
+        {
+          "participant-id": 5,
+          "opinion": true
+        }
+      ]
+    },
+    {
+      "number": 67,
+      "movieName": "Titanic",
+      "movieYear": "1987",
+      "opinions": [
+        {
+          "participant-id": 1,
+          "opinion": true
+        },
+        {
+          "participant-id": 2,
+          "opinion": true
+        },
+        {
+          "participant-id": 3,
+          "opinion": true
+        },
+        {
+          "participant-id": 4,
+          "opinion": true
+        },
+        {
+          "participant-id": 5,
+          "opinion": true
+        }
+      ]
+    },
+    {
+      "number": 68,
+      "movieName": "Starship Troopers",
+      "movieYear": "1987",
+      "opinions": [
+        {
+          "participant-id": 1,
+          "opinion": true
+        },
+        {
+          "participant-id": 2,
+          "opinion": true
+        },
+        {
+          "participant-id": 3,
+          "opinion": true
+        },
+        {
+          "participant-id": 4,
+          "opinion": true
+        },
+        {
+          "participant-id": 5,
+          "opinion": true
+        }
+      ]
+    },
+    {
+      "number": 69,
+      "movieName": "Trainspotting",
+      "movieYear": "1987",
+      "opinions": [
+        {
+          "participant-id": 1,
+          "opinion": true
+        },
+        {
+          "participant-id": 2,
+          "opinion": true
+        },
+        {
+          "participant-id": 3,
+          "opinion": true
+        },
+        {
+          "participant-id": 4,
+          "opinion": true
+        },
+        {
+          "participant-id": 5,
+          "opinion": true
+        }
+      ]
+    },
+    {
+      "number": 70,
+      "movieName": "Scream",
+      "movieYear": "1987",
+      "opinions": [
+        {
+          "participant-id": 1,
+          "opinion": true
+        },
+        {
+          "participant-id": 2,
+          "opinion": true
+        },
+        {
+          "participant-id": 3,
+          "opinion": true
+        },
+        {
+          "participant-id": 4,
+          "opinion": true
+        },
+        {
+          "participant-id": 5,
+          "opinion": true
+        }
+      ]
+    },
+    {
+      "number": 71,
+      "movieName": "The Big Lebowski",
+      "movieYear": "1987",
+      "opinions": [
+        {
+          "participant-id": 1,
+          "opinion": true
+        },
+        {
+          "participant-id": 2,
+          "opinion": true
+        },
+        {
+          "participant-id": 3,
+          "opinion": true
+        },
+        {
+          "participant-id": 4,
+          "opinion": true
+        },
+        {
+          "participant-id": 5,
+          "opinion": true
+        }
+      ]
+    },
+    {
+      "number": 72,
+      "movieName": "Pulp Fiction",
+      "movieYear": "1987",
+      "opinions": [
+        {
+          "participant-id": 1,
+          "opinion": true
+        },
+        {
+          "participant-id": 2,
+          "opinion": true
+        },
+        {
+          "participant-id": 3,
+          "opinion": true
+        },
+        {
+          "participant-id": 4,
+          "opinion": true
+        },
+        {
+          "participant-id": 5,
+          "opinion": true
+        }
+      ]
+    },
+    {
+      "number": 73,
+      "movieName": "Den Där Mary",
+      "movieYear": "1987",
+      "opinions": [
+        {
+          "participant-id": 1,
+          "opinion": true
+        },
+        {
+          "participant-id": 2,
+          "opinion": true
+        },
+        {
+          "participant-id": 3,
+          "opinion": true
+        },
+        {
+          "participant-id": 4,
+          "opinion": true
+        },
+        {
+          "participant-id": 5,
+          "opinion": true
+        }
+      ]
+    },
+    {
+      "number": 74,
+      "movieName": "Good Will Hunting",
+      "movieYear": "1987",
+      "opinions": [
+        {
+          "participant-id": 1,
+          "opinion": true
+        },
+        {
+          "participant-id": 2,
+          "opinion": true
+        },
+        {
+          "participant-id": 3,
+          "opinion": true
+        },
+        {
+          "participant-id": 4,
+          "opinion": true
+        },
+        {
+          "participant-id": 5,
+          "opinion": true
+        }
+      ]
+    },
+    {
+      "number": 75,
+      "movieName": "Braveheart",
+      "movieYear": "1987",
+      "opinions": [
+        {
+          "participant-id": 1,
+          "opinion": true
+        },
+        {
+          "participant-id": 2,
+          "opinion": true
+        },
+        {
+          "participant-id": 3,
+          "opinion": true
+        },
+        {
+          "participant-id": 4,
+          "opinion": true
+        },
+        {
+          "participant-id": 5,
+          "opinion": true
+        }
+      ]
+    },
+    {
+      "number": 76,
+      "movieName": "Pretty Woman",
+      "movieYear": "1987",
+      "opinions": [
+        {
+          "participant-id": 1,
+          "opinion": true
+        },
+        {
+          "participant-id": 2,
+          "opinion": true
+        },
+        {
+          "participant-id": 3,
+          "opinion": true
+        },
+        {
+          "participant-id": 4,
+          "opinion": true
+        },
+        {
+          "participant-id": 5,
+          "opinion": true
+        }
+      ]
+    },
+    {
+      "number": 77,
+      "movieName": "Det Femte Elementet",
+      "movieYear": "1987",
+      "opinions": [
+        {
+          "participant-id": 1,
+          "opinion": true
+        },
+        {
+          "participant-id": 2,
+          "opinion": true
+        },
+        {
+          "participant-id": 3,
+          "opinion": true
+        },
+        {
+          "participant-id": 4,
+          "opinion": true
+        },
+        {
+          "participant-id": 5,
+          "opinion": true
+        }
+      ]
+    },
+    {
+      "number": 78,
+      "movieName": "Tillbaka Till Framtiden",
+      "movieYear": "1987",
+      "opinions": [
+        {
+          "participant-id": 1,
+          "opinion": true
+        },
+        {
+          "participant-id": 2,
+          "opinion": true
+        },
+        {
+          "participant-id": 3,
+          "opinion": true
+        },
+        {
+          "participant-id": 4,
+          "opinion": true
+        },
+        {
+          "participant-id": 5,
+          "opinion": true
+        }
+      ]
+    },
+    {
+      "number": 79,
+      "movieName": "Batman",
+      "movieYear": "1987",
+      "opinions": [
+        {
+          "participant-id": 1,
+          "opinion": true
+        },
+        {
+          "participant-id": 2,
+          "opinion": true
+        },
+        {
+          "participant-id": 3,
+          "opinion": true
+        },
+        {
+          "participant-id": 4,
+          "opinion": true
+        },
+        {
+          "participant-id": 5,
+          "opinion": true
+        }
+      ]
+    },
+    {
+      "number": 80,
+      "movieName": "Big",
+      "movieYear": "1987",
+      "opinions": [
+        {
+          "participant-id": 1,
+          "opinion": true
+        },
+        {
+          "participant-id": 2,
+          "opinion": true
+        },
+        {
+          "participant-id": 3,
+          "opinion": true
+        },
+        {
+          "participant-id": 4,
+          "opinion": true
+        },
+        {
+          "participant-id": 5,
+          "opinion": true
+        }
+      ]
+    },
+    {
+      "number": 81,
+      "movieName": "Wargames",
+      "movieYear": "1987",
+      "opinions": [
+        {
+          "participant-id": 1,
+          "opinion": true
+        },
+        {
+          "participant-id": 2,
+          "opinion": true
+        },
+        {
+          "participant-id": 3,
+          "opinion": true
+        },
+        {
+          "participant-id": 4,
+          "opinion": true
+        },
+        {
+          "participant-id": 5,
+          "opinion": true
+        }
+      ]
+    },
+    {
+      "number": 81,
+      "movieName": "Mission Impossible",
+      "movieYear": "1987",
+      "opinions": [
+        {
+          "participant-id": 1,
+          "opinion": true
+        },
+        {
+          "participant-id": 2,
+          "opinion": true
+        },
+        {
+          "participant-id": 3,
+          "opinion": true
+        },
+        {
+          "participant-id": 4,
+          "opinion": true
+        },
+        {
+          "participant-id": 5,
+          "opinion": true
+        }
+      ]
+    },
+    {
+      "number": 81,
+      "movieName": "Clueless",
+      "movieYear": "1987",
+      "opinions": [
+        {
+          "participant-id": 1,
+          "opinion": true
+        },
+        {
+          "participant-id": 2,
+          "opinion": true
+        },
+        {
+          "participant-id": 3,
+          "opinion": true
+        },
+        {
+          "participant-id": 4,
+          "opinion": true
+        },
+        {
+          "participant-id": 5,
+          "opinion": true
+        }
+      ]
+    }
+  ]
+}

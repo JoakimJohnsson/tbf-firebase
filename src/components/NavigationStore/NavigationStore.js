@@ -1,15 +1,12 @@
 import React, { useState } from "react";
 
-const initialState = {
-    hideNavs: false
-}
-
 export const NavigationContext = React.createContext();
 
 const NavigationStore = ({ children }) => {
-    const [hideNavs, setHideNavs] = useState(initialState);
+    const [hideNavs, setHideNavs] = useState(false);
+    const [showHallerDenNav, setShowHallerDenNav] = useState(false);
     return (
-        <NavigationContext.Provider value={[hideNavs, setHideNavs]}>
+        <NavigationContext.Provider value={[hideNavs, setHideNavs, showHallerDenNav, setShowHallerDenNav]}>
             { children }
         </NavigationContext.Provider>
     )

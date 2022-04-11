@@ -6,17 +6,29 @@ import CopyrightInformation from "../microComponents/CopyrightInformation";
 const Footer = () => {
 
     const hideNavs = useContext(NavigationContext)[0];
+    const showHallerDenNav = useContext(NavigationContext)[2];
 
     return hideNavs ?
-        <footer className="article w-100 bg-light border-top pt-3 text-center">
-            <div className="container py-4">
-            <div className="row">
-                <div className="col-12">
-                    <CopyrightInformation/>
+        showHallerDenNav ?
+            <footer className="article w-100 bg-light border-top pt-3 text-center">
+                <div className="container py-4">
+                    <div className="row">
+                        <div className="col-12">
+                            <p>Håller den?</p>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            </div>
-        </footer>
+            </footer>
+            :
+            <footer className="article w-100 bg-light border-top pt-3 text-center">
+                <div className="container py-4">
+                    <div className="row">
+                        <div className="col-12">
+                            <CopyrightInformation/>
+                        </div>
+                    </div>
+                </div>
+            </footer>
         :
         (
             <footer className="container-fluid fixed-bottom">

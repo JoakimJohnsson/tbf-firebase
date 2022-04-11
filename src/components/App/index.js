@@ -76,6 +76,7 @@ import GlobalTrackStore from "../MusicStore/GlobalTrackStore";
 import {showUpload} from "../Navigation/FooterNavigation";
 import NavigationStore from "../NavigationStore/NavigationStore";
 import DevopsPage from "../pages/DevopsPage";
+import HallerDenPage from "../pages/HallerDenPage";
 
 library.add(faAirbnb, faImages, faPhotoVideo, faQuestion, faDatabase, faServer, faChalkboardTeacher, faIcons, faFont, faCodeBranch, faSwatchbook, faHatWizard, faSitemap, faPalette, faBookDead, faSignLanguage, faUniversalAccess, faLowVision, faJournalWhills, faStepForward, faTape, faExternalLinkAlt, faRandom, faStepBackward, faFilter, faDownload, faGoogle, faFacebookF, faArrowAltCircleLeft, faArrowAltCircleDown, faArrowDown, faArrowUp, faArrowAltCircleUp, faCopyright, faWrench, faHome, faRecordVinyl,
     faMusic, faSearch, faTv, faGraduationCap, faFileCode, faUserAstronaut, faPlayCircle, faPlay, faPause, faPauseCircle, faPlus, faTimes, faTimesCircle, faPen, faMinus, faChevronLeft, faChevronRight, faChevronDown, faChevronUp, faSpinner, faSave,
@@ -95,6 +96,7 @@ const App = () => {
                         <Route path={ROUTES.RECORD} component={RecordPage}/>
                         <Route path={ROUTES.TRACKS} component={TracksPage}/>
                         <Route path={ROUTES.DEVOPS} component={DevopsPage}/>
+                        <Route path={ROUTES.HALLER_DEN} component={HallerDenPage}/>
                         {showUpload ? <Route path={ROUTES.UPLOAD} component={UploadPage}/> : false}
                         <Footer/>
                     </Router>

@@ -29,6 +29,36 @@
       "id": 6,
       "firstName": "Jonas",
       "lastName": "Pike - Detta måste kontrolleras"
+    },
+    {
+      "id": 7,
+      "firstName": "Kim W",
+      "lastName": "Andersson"
+    },
+    {
+      "id": 8,
+      "firstName": "Ri",
+      "lastName": "Versteeg"
+    },
+    {
+      "id": 9,
+      "firstName": "Sebastian",
+      "lastName": "Järpehag"
+    },
+    {
+      "id": 10,
+      "firstName": "Adeel",
+      "lastName": "Faqih"
+    },
+    {
+      "id": 11,
+      "firstName": "My",
+      "lastName": "Gudmundsdotter"
+    },
+    {
+      "id": 12,
+      "firstName": "Tind",
+      "lastName": "Soneby"
     }
   ]
 }

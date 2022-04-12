@@ -582,13 +582,9 @@
     },
     {
       "number": 25,
-      "movieName": "Thank you for smoking - Här slutade jag TODO!!!!!",
-      "movieYear": "1987",
+      "movieName": "Thank you for smoking",
+      "movieYear": "2005",
       "opinions": [
-        {
-          "participant-id": 1,
-          "opinion": true
-        },
         {
           "participant-id": 2,
           "opinion": true
@@ -599,10 +595,6 @@
         },
         {
           "participant-id": 4,
-          "opinion": true
-        },
-        {
-          "participant-id": 5,
           "opinion": true
         }
       ]
@@ -610,34 +602,26 @@
     {
       "number": 26,
       "movieName": "Wedding Crashers",
-      "movieYear": "1987",
+      "movieYear": "2005",
       "opinions": [
-        {
-          "participant-id": 1,
-          "opinion": true
-        },
         {
           "participant-id": 2,
           "opinion": true
         },
         {
           "participant-id": 3,
-          "opinion": true
+          "opinion": false
         },
         {
           "participant-id": 4,
-          "opinion": true
-        },
-        {
-          "participant-id": 5,
-          "opinion": true
+          "opinion": false
         }
       ]
     },
     {
       "number": 27,
       "movieName": "Boogie Nights",
-      "movieYear": "1987",
+      "movieYear": "1997",
       "opinions": [
         {
           "participant-id": 1,
@@ -653,64 +637,48 @@
         },
         {
           "participant-id": 4,
-          "opinion": true
-        },
-        {
-          "participant-id": 5,
-          "opinion": true
+          "opinion": false
         }
       ]
     },
     {
       "number": 28,
       "movieName": "Det Stora Blå",
-      "movieYear": "1987",
+      "movieYear": "1988",
       "opinions": [
         {
           "participant-id": 1,
-          "opinion": true
+          "opinion": false
         },
         {
           "participant-id": 2,
-          "opinion": true
+          "opinion": false
         },
         {
           "participant-id": 3,
-          "opinion": true
+          "opinion": false
         },
         {
           "participant-id": 4,
-          "opinion": true
-        },
-        {
-          "participant-id": 5,
-          "opinion": true
+          "opinion": false
         }
       ]
     },
     {
       "number": 29,
       "movieName": "Citizen Kane",
-      "movieYear": "1987",
+      "movieYear": "1941",
       "opinions": [
         {
           "participant-id": 1,
           "opinion": true
         },
         {
-          "participant-id": 2,
-          "opinion": true
-        },
-        {
           "participant-id": 3,
-          "opinion": true
+          "opinion": false
         },
         {
           "participant-id": 4,
-          "opinion": true
-        },
-        {
-          "participant-id": 5,
           "opinion": true
         }
       ]
@@ -718,14 +686,10 @@
     {
       "number": 30,
       "movieName": "The Usual Suspects",
-      "movieYear": "1987",
+      "movieYear": "1995",
       "opinions": [
         {
           "participant-id": 1,
-          "opinion": true
-        },
-        {
-          "participant-id": 2,
           "opinion": true
         },
         {
@@ -734,10 +698,6 @@
         },
         {
           "participant-id": 4,
-          "opinion": true
-        },
-        {
-          "participant-id": 5,
           "opinion": true
         }
       ]
@@ -745,14 +705,10 @@
     {
       "number": 31,
       "movieName": "Point Break",
-      "movieYear": "1987",
+      "movieYear": "1991",
       "opinions": [
         {
           "participant-id": 1,
-          "opinion": true
-        },
-        {
-          "participant-id": 2,
           "opinion": true
         },
         {
@@ -761,10 +717,10 @@
         },
         {
           "participant-id": 4,
-          "opinion": true
+          "opinion": false
         },
         {
-          "participant-id": 5,
+          "participant-id": 7,
           "opinion": true
         }
       ]
@@ -772,34 +728,26 @@
     {
       "number": 32,
       "movieName": "Lost in Translation",
-      "movieYear": "1987",
+      "movieYear": "2003",
       "opinions": [
         {
           "participant-id": 1,
           "opinion": true
         },
         {
-          "participant-id": 2,
-          "opinion": true
-        },
-        {
           "participant-id": 3,
-          "opinion": true
+          "opinion": false
         },
         {
           "participant-id": 4,
-          "opinion": true
-        },
-        {
-          "participant-id": 5,
-          "opinion": true
+          "opinion": false
         }
       ]
     },
     {
       "number": 33,
       "movieName": "Seven",
-      "movieYear": "1987",
+      "movieYear": "1995",
       "opinions": [
         {
           "participant-id": 1,
@@ -818,7 +766,7 @@
           "opinion": true
         },
         {
-          "participant-id": 5,
+          "participant-id": 8,
           "opinion": true
         }
       ]
@@ -826,7 +774,7 @@
     {
       "number": 34,
       "movieName": "En Kvinnas Doft",
-      "movieYear": "1987",
+      "movieYear": "1992",
       "opinions": [
         {
           "participant-id": 1,
@@ -838,29 +786,25 @@
         },
         {
           "participant-id": 3,
-          "opinion": true
+          "opinion": false
         },
         {
           "participant-id": 4,
-          "opinion": true
+          "opinion": false
         },
         {
-          "participant-id": 5,
-          "opinion": true
+          "participant-id": 8,
+          "opinion": false
         }
       ]
     },
     {
       "number": 35,
       "movieName": "South Park - Bigger, longer & uncut",
-      "movieYear": "1987",
+      "movieYear": "1999",
       "opinions": [
         {
           "participant-id": 1,
-          "opinion": true
-        },
-        {
-          "participant-id": 2,
           "opinion": true
         },
         {
@@ -869,10 +813,6 @@
         },
         {
           "participant-id": 4,
-          "opinion": true
-        },
-        {
-          "participant-id": 5,
           "opinion": true
         }
       ]
@@ -880,7 +820,7 @@
     {
       "number": 36,
       "movieName": "Sällskapsresan 2 - Snowroller",
-      "movieYear": "1987",
+      "movieYear": "1985",
       "opinions": [
         {
           "participant-id": 1,
@@ -888,18 +828,18 @@
         },
         {
           "participant-id": 2,
-          "opinion": true
+          "opinion": false
         },
         {
           "participant-id": 3,
-          "opinion": true
+          "opinion": false
         },
         {
           "participant-id": 4,
-          "opinion": true
+          "opinion": false
         },
         {
-          "participant-id": 5,
+          "participant-id": 9,
           "opinion": true
         }
       ]
@@ -907,7 +847,7 @@
     {
       "number": 37,
       "movieName": "Karate Kid",
-      "movieYear": "1987",
+      "movieYear": "1984",
       "opinions": [
         {
           "participant-id": 1,
@@ -915,7 +855,7 @@
         },
         {
           "participant-id": 2,
-          "opinion": true
+          "opinion": false
         },
         {
           "participant-id": 3,
@@ -926,7 +866,7 @@
           "opinion": true
         },
         {
-          "participant-id": 5,
+          "participant-id": 10,
           "opinion": true
         }
       ]
@@ -934,7 +874,7 @@
     {
       "number": 38,
       "movieName": "När Lammen Tystnar",
-      "movieYear": "1987",
+      "movieYear": "1991",
       "opinions": [
         {
           "participant-id": 1,
@@ -950,18 +890,14 @@
         },
         {
           "participant-id": 4,
-          "opinion": true
-        },
-        {
-          "participant-id": 5,
           "opinion": true
         }
       ]
     },
     {
       "number": 39,
-      "movieName": "Forest Gump",
-      "movieYear": "1987",
+      "movieName": "Forrest Gump",
+      "movieYear": "1994",
       "opinions": [
         {
           "participant-id": 1,
@@ -969,7 +905,7 @@
         },
         {
           "participant-id": 2,
-          "opinion": true
+          "opinion": false
         },
         {
           "participant-id": 3,
@@ -977,10 +913,6 @@
         },
         {
           "participant-id": 4,
-          "opinion": true
-        },
-        {
-          "participant-id": 5,
           "opinion": true
         }
       ]
@@ -988,26 +920,18 @@
     {
       "number": 40,
       "movieName": "Jägarna",
-      "movieYear": "1987",
+      "movieYear": "1996",
       "opinions": [
         {
           "participant-id": 1,
           "opinion": true
         },
         {
-          "participant-id": 2,
-          "opinion": true
-        },
-        {
           "participant-id": 3,
-          "opinion": true
+          "opinion": false
         },
         {
           "participant-id": 4,
-          "opinion": true
-        },
-        {
-          "participant-id": 5,
           "opinion": true
         }
       ]
@@ -1015,7 +939,7 @@
     {
       "number": 41,
       "movieName": "This is Spinal Tap",
-      "movieYear": "1987",
+      "movieYear": "1984",
       "opinions": [
         {
           "participant-id": 1,
@@ -1030,11 +954,7 @@
           "opinion": true
         },
         {
-          "participant-id": 4,
-          "opinion": true
-        },
-        {
-          "participant-id": 5,
+          "participant-id": 9,
           "opinion": true
         }
       ]
@@ -1049,19 +969,11 @@
           "opinion": true
         },
         {
-          "participant-id": 2,
-          "opinion": true
-        },
-        {
           "participant-id": 3,
           "opinion": true
         },
         {
-          "participant-id": 4,
-          "opinion": true
-        },
-        {
-          "participant-id": 5,
+          "participant-id": 11,
           "opinion": true
         }
       ]
@@ -1069,7 +981,7 @@
     {
       "number": 43,
       "movieName": "The Matrix",
-      "movieYear": "1987",
+      "movieYear": "1999",
       "opinions": [
         {
           "participant-id": 1,
@@ -1077,18 +989,14 @@
         },
         {
           "participant-id": 2,
-          "opinion": true
+          "opinion": false
         },
         {
           "participant-id": 3,
-          "opinion": true
+          "opinion": false
         },
         {
           "participant-id": 4,
-          "opinion": true
-        },
-        {
-          "participant-id": 5,
           "opinion": true
         }
       ]
@@ -1096,34 +1004,30 @@
     {
       "number": 44,
       "movieName": "Die Hard - With a vengeance",
-      "movieYear": "1987",
+      "movieYear": "1995",
       "opinions": [
         {
           "participant-id": 1,
-          "opinion": true
+          "opinion": false
         },
         {
           "participant-id": 2,
-          "opinion": true
+          "opinion": false
         },
         {
           "participant-id": 3,
-          "opinion": true
+          "opinion": false
         },
         {
           "participant-id": 4,
-          "opinion": true
-        },
-        {
-          "participant-id": 5,
-          "opinion": true
+          "opinion": false
         }
       ]
     },
     {
       "number": 45,
       "movieName": "Gökboet",
-      "movieYear": "1987",
+      "movieYear": "1975",
       "opinions": [
         {
           "participant-id": 1,
@@ -1131,7 +1035,7 @@
         },
         {
           "participant-id": 2,
-          "opinion": true
+          "opinion": false
         },
         {
           "participant-id": 3,
@@ -1142,14 +1046,14 @@
           "opinion": true
         },
         {
-          "participant-id": 5,
+          "participant-id": 12,
           "opinion": true
         }
       ]
     },
     {
       "number": 46,
-      "movieName": "Elf",
+      "movieName": "Elf Stannade här - TODO!!!!!!!!",
       "movieYear": "1987",
       "opinions": [
         {

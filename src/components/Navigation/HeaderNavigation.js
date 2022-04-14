@@ -16,7 +16,7 @@ const HeaderNavigation = () => {
                         variant="light"
                         expand="md" aria-label="Header navigation">
                     <div className="container">
-                        <h1 className="m-0 logo-font-family__4"><IconLink link={ROUTES.HALLER_DEN} text={"Håller den?"} icon={"question-mark"}/></h1>
+                        <h1 className="m-0 logo-font-family__4"><IconLink link={ROUTES.HALLER_DEN} text={"Håller den?"} icon={"ticket-alt"}/></h1>
                         <IconLink link={ROUTES.START} text={"Back to friends"} icon={"home"}/>
                     </div>
                 </Navbar>

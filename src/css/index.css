@@ -12580,8 +12580,7 @@ body {
 
 #root {
   position: relative;
-  min-height: 100vh;
-  padding-bottom: 5rem; }
+  min-height: 100vh; }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace; }
@@ -12665,7 +12664,7 @@ input[type=range]::-ms-thumb {
   padding-right: 15px; }
 
 .standard-main-column {
-  padding-bottom: 3rem;
+  padding-bottom: 5rem;
   position: relative;
   width: 100%;
   padding-right: 15px;

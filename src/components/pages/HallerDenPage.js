@@ -7,14 +7,11 @@ const HallerDenPage = () => {
     const [episodes, setEpisodes] = useState([]);
     const [participants, setParticipants] = useState([]);
     const setHideNavs = useContext(NavigationContext)[1];
-    const setShowHallerDenNav = useContext(NavigationContext)[3];
+    const setShowHallerDenNavs = useContext(NavigationContext)[3];
 
     useEffect(() => {
         setHideNavs(true)
-    }, []);
-
-    useEffect(() => {
-        setShowHallerDenNav(true)
+        setShowHallerDenNavs(true)
     }, []);
 
     useEffect(() => {
@@ -26,13 +23,13 @@ const HallerDenPage = () => {
     }, []);
 
     return (
-        <div className="container-fluid standard-container">
+        <main className="container-fluid standard-container">
             <div className={"row"}>
-                {episodes.map( episode =>
+                {episodes.map(episode =>
                     <EpisodeCard key={episode.id} episode={episode}/>
                 )}
             </div>
-        </div>
+        </main>
     );
 };
 

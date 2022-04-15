@@ -11,7 +11,8 @@ const EpisodeCard = ({episode}) => {
                 <img src={movieImage} className="card-img-top" alt={`Movie ${episode.movieName}`}/>
                 <div className={"card-body"}>
                     <h1 className={"card-title mb-0"}>{episode.movieName}</h1>
-                    <p className={"card-sub-title"}>{getImageName(episode.movieYear)}</p>
+                    <p className={"card-sub-title mb-0"}>{episode.movieYear}</p>
+                    <p className={"card-sub-title text-lowercase"}>{getImageName(episode.movieName)}</p>
                 </div>
             </div>
         </div>

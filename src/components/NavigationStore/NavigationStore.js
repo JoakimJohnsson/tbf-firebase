@@ -4,9 +4,9 @@ export const NavigationContext = React.createContext();
 
 const NavigationStore = ({ children }) => {
     const [hideNavs, setHideNavs] = useState(false);
-    const [showHallerDenNav, setShowHallerDenNav] = useState(false);
+    const [showHallerDenNavs, setShowHallerDenNavs] = useState(false);
     return (
-        <NavigationContext.Provider value={[hideNavs, setHideNavs, showHallerDenNav, setShowHallerDenNav]}>
+        <NavigationContext.Provider value={[hideNavs, setHideNavs, showHallerDenNavs, setShowHallerDenNavs]}>
             { children }
         </NavigationContext.Provider>
     )

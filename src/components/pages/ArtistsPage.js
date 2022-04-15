@@ -12,7 +12,7 @@ const ArtistsPage = () => {
     SetNewDocTitle("All artists");
     return (
         <div className="container-fluid standard-container">
-            <main className="row no-gutters">
+            <main className="row no-gutters pb-5">
                 <div className="col-12">
                     <h1 className="mb-3">Artists</h1>
                 </div>

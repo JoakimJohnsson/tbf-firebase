@@ -12847,6 +12847,9 @@ label {
 .logo-font-family__16 {
   font-family: "Graduate", cursive, sans-serif; }
 
+.logo-font-family__17 {
+  font-family: "Secular one", cursive, sans-serif; }
+
 .bg-color-variant__1 {
   background-color: #ff88cc !important; }
 
@@ -13264,6 +13267,11 @@ footer {
   margin-bottom: 1.5rem; }
   .record-card-with-tracks:last-of-type {
     margin-bottom: 0; }
+
+.hd-episode-card-wrapper .card-title {
+  font-size: 1.8rem; }
+.hd-episode-card-wrapper .card-sub-title {
+  font-size: 100%; }
 
 .btn-fa, .btn-fa__primary, .btn-fa__secondary, .btn-fa__tertiary, .tracks-player__list .tracks-player_li .tracks-player__button {
   color: inherit;

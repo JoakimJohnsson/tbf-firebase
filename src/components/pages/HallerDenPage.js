@@ -1,6 +1,7 @@
 import React, {useContext, useEffect, useState} from 'react';
 import {NavigationContext} from "../NavigationStore/NavigationStore";
 import {getAllEpisodes, getAllParticipants} from "../../haller-den-data/serviceFunctions";
+import EpisodeCard from "../haller-den-components/EpisodeCard";
 
 const HallerDenPage = () => {
     const [episodes, setEpisodes] = useState([]);
@@ -26,10 +27,11 @@ const HallerDenPage = () => {
 
     return (
         <div className="container-fluid standard-container">
-            <p>Håller den?</p>
-            <p>{episodes.length}</p>
-            <p>{participants.length}</p>
-            <p>{episodes[0].movieName}</p>
+            <div className={"row"}>
+                {episodes.map( episode =>
+                    <EpisodeCard key={episode.id} episode={episode}/>
+                )}
+            </div>
         </div>
     );
 };

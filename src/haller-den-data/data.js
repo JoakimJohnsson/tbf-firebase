@@ -5,23 +5,23 @@ export const Episodes = [
         "movieYear": "1987",
         "opinions": [
             {
-                "participant-id": 1,
+                "participantId": 1,
                 "opinion": true
             },
             {
-                "participant-id": 2,
+                "participantId": 2,
                 "opinion": true
             },
             {
-                "participant-id": 3,
+                "participantId": 3,
                 "opinion": true
             },
             {
-                "participant-id": 4,
+                "participantId": 4,
                 "opinion": true
             },
             {
-                "participant-id": 5,
+                "participantId": 5,
                 "opinion": true
             }
         ]
@@ -32,19 +32,19 @@ export const Episodes = [
         "movieYear": "1989",
         "opinions": [
             {
-                "participant-id": 1,
+                "participantId": 1,
                 "opinion": true
             },
             {
-                "participant-id": 2,
+                "participantId": 2,
                 "opinion": false
             },
             {
-                "participant-id": 3,
+                "participantId": 3,
                 "opinion": true
             },
             {
-                "participant-id": 5,
+                "participantId": 5,
                 "opinion": true
             }
         ]
@@ -55,23 +55,23 @@ export const Episodes = [
         "movieYear": "1984",
         "opinions": [
             {
-                "participant-id": 1,
+                "participantId": 1,
                 "opinion": true
             },
             {
-                "participant-id": 2,
+                "participantId": 2,
                 "opinion": false
             },
             {
-                "participant-id": 3,
+                "participantId": 3,
                 "opinion": false
             },
             {
-                "participant-id": 4,
+                "participantId": 4,
                 "opinion": true
             },
             {
-                "participant-id": 5,
+                "participantId": 5,
                 "opinion": true
             }
         ]
@@ -82,19 +82,19 @@ export const Episodes = [
         "movieYear": "1997",
         "opinions": [
             {
-                "participant-id": 1,
+                "participantId": 1,
                 "opinion": true
             },
             {
-                "participant-id": 2,
+                "participantId": 2,
                 "opinion": true
             },
             {
-                "participant-id": 3,
+                "participantId": 3,
                 "opinion": false
             },
             {
-                "participant-id": 4,
+                "participantId": 4,
                 "opinion": false
             }
         ]
@@ -105,19 +105,19 @@ export const Episodes = [
         "movieYear": "1996",
         "opinions": [
             {
-                "participant-id": 1,
+                "participantId": 1,
                 "opinion": true
             },
             {
-                "participant-id": 3,
+                "participantId": 3,
                 "opinion": false
             },
             {
-                "participant-id": 4,
+                "participantId": 4,
                 "opinion": false
             },
             {
-                "participant-id": 5,
+                "participantId": 5,
                 "opinion": false
             }
         ]
@@ -128,19 +128,19 @@ export const Episodes = [
         "movieYear": "1987",
         "opinions": [
             {
-                "participant-id": 1,
+                "participantId": 1,
                 "opinion": true
             },
             {
-                "participant-id": 2,
+                "participantId": 2,
                 "opinion": true
             },
             {
-                "participant-id": 3,
+                "participantId": 3,
                 "opinion": true
             },
             {
-                "participant-id": 4,
+                "participantId": 4,
                 "opinion": true
             }
         ]
@@ -151,23 +151,23 @@ export const Episodes = [
         "movieYear": "1999",
         "opinions": [
             {
-                "participant-id": 1,
+                "participantId": 1,
                 "opinion": true
             },
             {
-                "participant-id": 2,
+                "participantId": 2,
                 "opinion": true
             },
             {
-                "participant-id": 3,
+                "participantId": 3,
                 "opinion": true
             },
             {
-                "participant-id": 4,
+                "participantId": 4,
                 "opinion": false
             },
             {
-                "participant-id": 5,
+                "participantId": 5,
                 "opinion": true
             }
         ]
@@ -178,23 +178,23 @@ export const Episodes = [
         "movieYear": "1992",
         "opinions": [
             {
-                "participant-id": 1,
+                "participantId": 1,
                 "opinion": true
             },
             {
-                "participant-id": 2,
+                "participantId": 2,
                 "opinion": false
             },
             {
-                "participant-id": 3,
+                "participantId": 3,
                 "opinion": true
             },
             {
-                "participant-id": 4,
+                "participantId": 4,
                 "opinion": true
             },
             {
-                "participant-id": 5,
+                "participantId": 5,
                 "opinion": false
             }
         ]
@@ -205,23 +205,23 @@ export const Episodes = [
         "movieYear": "2009",
         "opinions": [
             {
-                "participant-id": 1,
+                "participantId": 1,
                 "opinion": false
             },
             {
-                "participant-id": 2,
+                "participantId": 2,
                 "opinion": false
             },
             {
-                "participant-id": 3,
+                "participantId": 3,
                 "opinion": false
             },
             {
-                "participant-id": 4,
+                "participantId": 4,
                 "opinion": false
             },
             {
-                "participant-id": 5,
+                "participantId": 5,
                 "opinion": false
             }
         ]
@@ -232,19 +232,19 @@ export const Episodes = [
         "movieYear": "1993",
         "opinions": [
             {
-                "participant-id": 1,
+                "participantId": 1,
                 "opinion": true
             },
             {
-                "participant-id": 2,
+                "participantId": 2,
                 "opinion": true
             },
             {
-                "participant-id": 3,
+                "participantId": 3,
                 "opinion": true
             },
             {
-                "participant-id": 4,
+                "participantId": 4,
                 "opinion": true
             }
         ]
@@ -255,23 +255,23 @@ export const Episodes = [
         "movieYear": "1987",
         "opinions": [
             {
-                "participant-id": 1,
+                "participantId": 1,
                 "opinion": true
             },
             {
-                "participant-id": 2,
+                "participantId": 2,
                 "opinion": true
             },
             {
-                "participant-id": 3,
+                "participantId": 3,
                 "opinion": false
             },
             {
-                "participant-id": 4,
+                "participantId": 4,
                 "opinion": true
             },
             {
-                "participant-id": 5,
+                "participantId": 5,
                 "opinion": true
             }
         ]
@@ -282,23 +282,23 @@ export const Episodes = [
         "movieYear": "1999",
         "opinions": [
             {
-                "participant-id": 1,
+                "participantId": 1,
                 "opinion": true
             },
             {
-                "participant-id": 2,
+                "participantId": 2,
                 "opinion": true
             },
             {
-                "participant-id": 3,
+                "participantId": 3,
                 "opinion": true
             },
             {
-                "participant-id": 4,
+                "participantId": 4,
                 "opinion": true
             },
             {
-                "participant-id": 5,
+                "participantId": 5,
                 "opinion": true
             }
         ]
@@ -309,19 +309,19 @@ export const Episodes = [
         "movieYear": "1986",
         "opinions": [
             {
-                "participant-id": 1,
+                "participantId": 1,
                 "opinion": true
             },
             {
-                "participant-id": 2,
+                "participantId": 2,
                 "opinion": false
             },
             {
-                "participant-id": 3,
+                "participantId": 3,
                 "opinion": false
             },
             {
-                "participant-id": 4,
+                "participantId": 4,
                 "opinion": false
             }
         ]
@@ -332,19 +332,19 @@ export const Episodes = [
         "movieYear": "1986",
         "opinions": [
             {
-                "participant-id": 1,
+                "participantId": 1,
                 "opinion": true
             },
             {
-                "participant-id": 2,
+                "participantId": 2,
                 "opinion": true
             },
             {
-                "participant-id": 3,
+                "participantId": 3,
                 "opinion": true
             },
             {
-                "participant-id": 4,
+                "participantId": 4,
                 "opinion": false
             }
         ]
@@ -355,19 +355,19 @@ export const Episodes = [
         "movieYear": "1995",
         "opinions": [
             {
-                "participant-id": 1,
+                "participantId": 1,
                 "opinion": false
             },
             {
-                "participant-id": 2,
+                "participantId": 2,
                 "opinion": false
             },
             {
-                "participant-id": 3,
+                "participantId": 3,
                 "opinion": false
             },
             {
-                "participant-id": 4,
+                "participantId": 4,
                 "opinion": true
             }
         ]
@@ -378,19 +378,19 @@ export const Episodes = [
         "movieYear": "1984",
         "opinions": [
             {
-                "participant-id": 1,
+                "participantId": 1,
                 "opinion": true
             },
             {
-                "participant-id": 2,
+                "participantId": 2,
                 "opinion": true
             },
             {
-                "participant-id": 3,
+                "participantId": 3,
                 "opinion": true
             },
             {
-                "participant-id": 4,
+                "participantId": 4,
                 "opinion": false
             }
         ]
@@ -401,23 +401,23 @@ export const Episodes = [
         "movieYear": "1987",
         "opinions": [
             {
-                "participant-id": 1,
+                "participantId": 1,
                 "opinion": true
             },
             {
-                "participant-id": 2,
+                "participantId": 2,
                 "opinion": false
             },
             {
-                "participant-id": 3,
+                "participantId": 3,
                 "opinion": false
             },
             {
-                "participant-id": 4,
+                "participantId": 4,
                 "opinion": true
             },
             {
-                "participant-id": 6,
+                "participantId": 6,
                 "opinion": true
             }
         ]
@@ -428,23 +428,23 @@ export const Episodes = [
         "movieYear": "1991",
         "opinions": [
             {
-                "participant-id": 1,
+                "participantId": 1,
                 "opinion": true
             },
             {
-                "participant-id": 2,
+                "participantId": 2,
                 "opinion": true
             },
             {
-                "participant-id": 3,
+                "participantId": 3,
                 "opinion": true
             },
             {
-                "participant-id": 4,
+                "participantId": 4,
                 "opinion": true
             },
             {
-                "participant-id": 5,
+                "participantId": 5,
                 "opinion": true
             }
         ]
@@ -455,19 +455,19 @@ export const Episodes = [
         "movieYear": "1988",
         "opinions": [
             {
-                "participant-id": 1,
+                "participantId": 1,
                 "opinion": true
             },
             {
-                "participant-id": 2,
+                "participantId": 2,
                 "opinion": false
             },
             {
-                "participant-id": 3,
+                "participantId": 3,
                 "opinion": true
             },
             {
-                "participant-id": 4,
+                "participantId": 4,
                 "opinion": true
             }
         ]
@@ -478,15 +478,15 @@ export const Episodes = [
         "movieYear": "1998",
         "opinions": [
             {
-                "participant-id": 1,
+                "participantId": 1,
                 "opinion": true
             },
             {
-                "participant-id": 2,
+                "participantId": 2,
                 "opinion": true
             },
             {
-                "participant-id": 3,
+                "participantId": 3,
                 "opinion": false
             }
         ]
@@ -497,15 +497,15 @@ export const Episodes = [
         "movieYear": "2007",
         "opinions": [
             {
-                "participant-id": 1,
+                "participantId": 1,
                 "opinion": true
             },
             {
-                "participant-id": 3,
+                "participantId": 3,
                 "opinion": true
             },
             {
-                "participant-id": 4,
+                "participantId": 4,
                 "opinion": true
             }
         ]
@@ -516,15 +516,15 @@ export const Episodes = [
         "movieYear": "1988",
         "opinions": [
             {
-                "participant-id": 1,
+                "participantId": 1,
                 "opinion": true
             },
             {
-                "participant-id": 3,
+                "participantId": 3,
                 "opinion": false
             },
             {
-                "participant-id": 4,
+                "participantId": 4,
                 "opinion": true
             }
         ]
@@ -535,19 +535,19 @@ export const Episodes = [
         "movieYear": "1999",
         "opinions": [
             {
-                "participant-id": 1,
+                "participantId": 1,
                 "opinion": true
             },
             {
-                "participant-id": 2,
+                "participantId": 2,
                 "opinion": true
             },
             {
-                "participant-id": 3,
+                "participantId": 3,
                 "opinion": true
             },
             {
-                "participant-id": 4,
+                "participantId": 4,
                 "opinion": true
             }
         ]
@@ -558,15 +558,15 @@ export const Episodes = [
         "movieYear": "2005",
         "opinions": [
             {
-                "participant-id": 2,
+                "participantId": 2,
                 "opinion": true
             },
             {
-                "participant-id": 3,
+                "participantId": 3,
                 "opinion": true
             },
             {
-                "participant-id": 4,
+                "participantId": 4,
                 "opinion": true
             }
         ]
@@ -577,15 +577,15 @@ export const Episodes = [
         "movieYear": "2005",
         "opinions": [
             {
-                "participant-id": 2,
+                "participantId": 2,
                 "opinion": true
             },
             {
-                "participant-id": 3,
+                "participantId": 3,
                 "opinion": false
             },
             {
-                "participant-id": 4,
+                "participantId": 4,
                 "opinion": false
             }
         ]
@@ -596,19 +596,19 @@ export const Episodes = [
         "movieYear": "1997",
         "opinions": [
             {
-                "participant-id": 1,
+                "participantId": 1,
                 "opinion": true
             },
             {
-                "participant-id": 2,
+                "participantId": 2,
                 "opinion": true
             },
             {
-                "participant-id": 3,
+                "participantId": 3,
                 "opinion": true
             },
             {
-                "participant-id": 4,
+                "participantId": 4,
                 "opinion": false
             }
         ]
@@ -619,19 +619,19 @@ export const Episodes = [
         "movieYear": "1988",
         "opinions": [
             {
-                "participant-id": 1,
+                "participantId": 1,
                 "opinion": false
             },
             {
-                "participant-id": 2,
+                "participantId": 2,
                 "opinion": false
             },
             {
-                "participant-id": 3,
+                "participantId": 3,
                 "opinion": false
             },
             {
-                "participant-id": 4,
+                "participantId": 4,
                 "opinion": false
             }
         ]
@@ -642,15 +642,15 @@ export const Episodes = [
         "movieYear": "1941",
         "opinions": [
             {
-                "participant-id": 1,
+                "participantId": 1,
                 "opinion": true
             },
             {
-                "participant-id": 3,
+                "participantId": 3,
                 "opinion": false
             },
             {
-                "participant-id": 4,
+                "participantId": 4,
                 "opinion": true
             }
         ]
@@ -661,15 +661,15 @@ export const Episodes = [
         "movieYear": "1995",
         "opinions": [
             {
-                "participant-id": 1,
+                "participantId": 1,
                 "opinion": true
             },
             {
-                "participant-id": 3,
+                "participantId": 3,
                 "opinion": true
             },
             {
-                "participant-id": 4,
+                "participantId": 4,
                 "opinion": true
             }
         ]
@@ -680,19 +680,19 @@ export const Episodes = [
         "movieYear": "1991",
         "opinions": [
             {
-                "participant-id": 1,
+                "participantId": 1,
                 "opinion": true
             },
             {
-                "participant-id": 3,
+                "participantId": 3,
                 "opinion": true
             },
             {
-                "participant-id": 4,
+                "participantId": 4,
                 "opinion": false
             },
             {
-                "participant-id": 7,
+                "participantId": 7,
                 "opinion": true
             }
         ]
@@ -703,15 +703,15 @@ export const Episodes = [
         "movieYear": "2003",
         "opinions": [
             {
-                "participant-id": 1,
+                "participantId": 1,
                 "opinion": true
             },
             {
-                "participant-id": 3,
+                "participantId": 3,
                 "opinion": false
             },
             {
-                "participant-id": 4,
+                "participantId": 4,
                 "opinion": false
             }
         ]
@@ -722,23 +722,23 @@ export const Episodes = [
         "movieYear": "1995",
         "opinions": [
             {
-                "participant-id": 1,
+                "participantId": 1,
                 "opinion": true
             },
             {
-                "participant-id": 2,
+                "participantId": 2,
                 "opinion": true
             },
             {
-                "participant-id": 3,
+                "participantId": 3,
                 "opinion": true
             },
             {
-                "participant-id": 4,
+                "participantId": 4,
                 "opinion": true
             },
             {
-                "participant-id": 8,
+                "participantId": 8,
                 "opinion": true
             }
         ]
@@ -749,23 +749,23 @@ export const Episodes = [
         "movieYear": "1992",
         "opinions": [
             {
-                "participant-id": 1,
+                "participantId": 1,
                 "opinion": true
             },
             {
-                "participant-id": 2,
+                "participantId": 2,
                 "opinion": true
             },
             {
-                "participant-id": 3,
+                "participantId": 3,
                 "opinion": false
             },
             {
-                "participant-id": 4,
+                "participantId": 4,
                 "opinion": false
             },
             {
-                "participant-id": 8,
+                "participantId": 8,
                 "opinion": false
             }
         ]
@@ -776,15 +776,15 @@ export const Episodes = [
         "movieYear": "1999",
         "opinions": [
             {
-                "participant-id": 1,
+                "participantId": 1,
                 "opinion": true
             },
             {
-                "participant-id": 3,
+                "participantId": 3,
                 "opinion": true
             },
             {
-                "participant-id": 4,
+                "participantId": 4,
                 "opinion": true
             }
         ]
@@ -795,23 +795,23 @@ export const Episodes = [
         "movieYear": "1985",
         "opinions": [
             {
-                "participant-id": 1,
+                "participantId": 1,
                 "opinion": true
             },
             {
-                "participant-id": 2,
+                "participantId": 2,
                 "opinion": false
             },
             {
-                "participant-id": 3,
+                "participantId": 3,
                 "opinion": false
             },
             {
-                "participant-id": 4,
+                "participantId": 4,
                 "opinion": false
             },
             {
-                "participant-id": 9,
+                "participantId": 9,
                 "opinion": true
             }
         ]
@@ -822,23 +822,23 @@ export const Episodes = [
         "movieYear": "1984",
         "opinions": [
             {
-                "participant-id": 1,
+                "participantId": 1,
                 "opinion": true
             },
             {
-                "participant-id": 2,
+                "participantId": 2,
                 "opinion": false
             },
             {
-                "participant-id": 3,
+                "participantId": 3,
                 "opinion": true
             },
             {
-                "participant-id": 4,
+                "participantId": 4,
                 "opinion": true
             },
             {
-                "participant-id": 10,
+                "participantId": 10,
                 "opinion": true
             }
         ]
@@ -849,19 +849,19 @@ export const Episodes = [
         "movieYear": "1991",
         "opinions": [
             {
-                "participant-id": 1,
+                "participantId": 1,
                 "opinion": true
             },
             {
-                "participant-id": 2,
+                "participantId": 2,
                 "opinion": true
             },
             {
-                "participant-id": 3,
+                "participantId": 3,
                 "opinion": true
             },
             {
-                "participant-id": 4,
+                "participantId": 4,
                 "opinion": true
             }
         ]
@@ -872,19 +872,19 @@ export const Episodes = [
         "movieYear": "1994",
         "opinions": [
             {
-                "participant-id": 1,
+                "participantId": 1,
                 "opinion": true
             },
             {
-                "participant-id": 2,
+                "participantId": 2,
                 "opinion": false
             },
             {
-                "participant-id": 3,
+                "participantId": 3,
                 "opinion": true
             },
             {
-                "participant-id": 4,
+                "participantId": 4,
                 "opinion": true
             }
         ]
@@ -895,15 +895,15 @@ export const Episodes = [
         "movieYear": "1996",
         "opinions": [
             {
-                "participant-id": 1,
+                "participantId": 1,
                 "opinion": true
             },
             {
-                "participant-id": 3,
+                "participantId": 3,
                 "opinion": false
             },
             {
-                "participant-id": 4,
+                "participantId": 4,
                 "opinion": true
             }
         ]
@@ -914,19 +914,19 @@ export const Episodes = [
         "movieYear": "1984",
         "opinions": [
             {
-                "participant-id": 1,
+                "participantId": 1,
                 "opinion": true
             },
             {
-                "participant-id": 2,
+                "participantId": 2,
                 "opinion": true
             },
             {
-                "participant-id": 3,
+                "participantId": 3,
                 "opinion": true
             },
             {
-                "participant-id": 9,
+                "participantId": 9,
                 "opinion": true
             }
         ]
@@ -937,15 +937,15 @@ export const Episodes = [
         "movieYear": "1987",
         "opinions": [
             {
-                "participant-id": 1,
+                "participantId": 1,
                 "opinion": true
             },
             {
-                "participant-id": 3,
+                "participantId": 3,
                 "opinion": true
             },
             {
-                "participant-id": 11,
+                "participantId": 11,
                 "opinion": true
             }
         ]
@@ -956,19 +956,19 @@ export const Episodes = [
         "movieYear": "1999",
         "opinions": [
             {
-                "participant-id": 1,
+                "participantId": 1,
                 "opinion": true
             },
             {
-                "participant-id": 2,
+                "participantId": 2,
                 "opinion": false
             },
             {
-                "participant-id": 3,
+                "participantId": 3,
                 "opinion": false
             },
             {
-                "participant-id": 4,
+                "participantId": 4,
                 "opinion": true
             }
         ]
@@ -979,19 +979,19 @@ export const Episodes = [
         "movieYear": "1995",
         "opinions": [
             {
-                "participant-id": 1,
+                "participantId": 1,
                 "opinion": false
             },
             {
-                "participant-id": 2,
+                "participantId": 2,
                 "opinion": false
             },
             {
-                "participant-id": 3,
+                "participantId": 3,
                 "opinion": false
             },
             {
-                "participant-id": 4,
+                "participantId": 4,
                 "opinion": false
             }
         ]
@@ -1002,23 +1002,23 @@ export const Episodes = [
         "movieYear": "1975",
         "opinions": [
             {
-                "participant-id": 1,
+                "participantId": 1,
                 "opinion": true
             },
             {
-                "participant-id": 2,
+                "participantId": 2,
                 "opinion": false
             },
             {
-                "participant-id": 3,
+                "participantId": 3,
                 "opinion": true
             },
             {
-                "participant-id": 4,
+                "participantId": 4,
                 "opinion": true
             },
             {
-                "participant-id": 12,
+                "participantId": 12,
                 "opinion": true
             }
         ]
@@ -1029,23 +1029,23 @@ export const Episodes = [
         "movieYear": "2003",
         "opinions": [
             {
-                "participant-id": 1,
+                "participantId": 1,
                 "opinion": true
             },
             {
-                "participant-id": 2,
+                "participantId": 2,
                 "opinion": true
             },
             {
-                "participant-id": 3,
+                "participantId": 3,
                 "opinion": false
             },
             {
-                "participant-id": 4,
+                "participantId": 4,
                 "opinion": false
             },
             {
-                "participant-id": 8,
+                "participantId": 8,
                 "opinion": true
             }
         ]
@@ -1056,15 +1056,15 @@ export const Episodes = [
         "movieYear": "1982",
         "opinions": [
             {
-                "participant-id": 1,
+                "participantId": 1,
                 "opinion": true
             },
             {
-                "participant-id": 4,
+                "participantId": 4,
                 "opinion": true
             },
             {
-                "participant-id": 12,
+                "participantId": 12,
                 "opinion": false
             }
         ]
@@ -1075,19 +1075,19 @@ export const Episodes = [
         "movieYear": "2008",
         "opinions": [
             {
-                "participant-id": 1,
+                "participantId": 1,
                 "opinion": true
             },
             {
-                "participant-id": 3,
+                "participantId": 3,
                 "opinion": true
             },
             {
-                "participant-id": 4,
+                "participantId": 4,
                 "opinion": true
             },
             {
-                "participant-id": 12,
+                "participantId": 12,
                 "opinion": true
             }
         ]
@@ -1098,19 +1098,19 @@ export const Episodes = [
         "movieYear": "1998",
         "opinions": [
             {
-                "participant-id": 1,
+                "participantId": 1,
                 "opinion": true
             },
             {
-                "participant-id": 2,
+                "participantId": 2,
                 "opinion": false
             },
             {
-                "participant-id": 3,
+                "participantId": 3,
                 "opinion": false
             },
             {
-                "participant-id": 4,
+                "participantId": 4,
                 "opinion": false
             }
         ]
@@ -1121,19 +1121,19 @@ export const Episodes = [
         "movieYear": "2001",
         "opinions": [
             {
-                "participant-id": 1,
+                "participantId": 1,
                 "opinion": false
             },
             {
-                "participant-id": 2,
+                "participantId": 2,
                 "opinion": false
             },
             {
-                "participant-id": 3,
+                "participantId": 3,
                 "opinion": true
             },
             {
-                "participant-id": 4,
+                "participantId": 4,
                 "opinion": true
             }
         ]
@@ -1144,19 +1144,19 @@ export const Episodes = [
         "movieYear": "1981",
         "opinions": [
             {
-                "participant-id": 1,
+                "participantId": 1,
                 "opinion": true
             },
             {
-                "participant-id": 2,
+                "participantId": 2,
                 "opinion": true
             },
             {
-                "participant-id": 3,
+                "participantId": 3,
                 "opinion": true
             },
             {
-                "participant-id": 4,
+                "participantId": 4,
                 "opinion": true
             }
         ]
@@ -1167,23 +1167,23 @@ export const Episodes = [
         "movieYear": "1994",
         "opinions": [
             {
-                "participant-id": 1,
+                "participantId": 1,
                 "opinion": true
             },
             {
-                "participant-id": 2,
+                "participantId": 2,
                 "opinion": true
             },
             {
-                "participant-id": 3,
+                "participantId": 3,
                 "opinion": true
             },
             {
-                "participant-id": 4,
+                "participantId": 4,
                 "opinion": true
             },
             {
-                "participant-id": 12,
+                "participantId": 12,
                 "opinion": true
             }
         ]
@@ -1194,23 +1194,23 @@ export const Episodes = [
         "movieYear": "2001",
         "opinions": [
             {
-                "participant-id": 1,
+                "participantId": 1,
                 "opinion": false
             },
             {
-                "participant-id": 2,
+                "participantId": 2,
                 "opinion": true
             },
             {
-                "participant-id": 3,
+                "participantId": 3,
                 "opinion": true
             },
             {
-                "participant-id": 4,
+                "participantId": 4,
                 "opinion": true
             },
             {
-                "participant-id": 12,
+                "participantId": 12,
                 "opinion": true
             }
         ]
@@ -1221,23 +1221,23 @@ export const Episodes = [
         "movieYear": "1984",
         "opinions": [
             {
-                "participant-id": 1,
+                "participantId": 1,
                 "opinion": true
             },
             {
-                "participant-id": 2,
+                "participantId": 2,
                 "opinion": false
             },
             {
-                "participant-id": 3,
+                "participantId": 3,
                 "opinion": false
             },
             {
-                "participant-id": 4,
+                "participantId": 4,
                 "opinion": false
             },
             {
-                "participant-id": 12,
+                "participantId": 12,
                 "opinion": true
             }
         ]
@@ -1248,19 +1248,19 @@ export const Episodes = [
         "movieYear": "1971",
         "opinions": [
             {
-                "participant-id": 1,
+                "participantId": 1,
                 "opinion": true
             },
             {
-                "participant-id": 3,
+                "participantId": 3,
                 "opinion": false
             },
             {
-                "participant-id": 4,
+                "participantId": 4,
                 "opinion": true
             },
             {
-                "participant-id": 12,
+                "participantId": 12,
                 "opinion": false
             }
         ]
@@ -1271,19 +1271,19 @@ export const Episodes = [
         "movieYear": "1988",
         "opinions": [
             {
-                "participant-id": 1,
+                "participantId": 1,
                 "opinion": true
             },
             {
-                "participant-id": 2,
+                "participantId": 2,
                 "opinion": true
             },
             {
-                "participant-id": 3,
+                "participantId": 3,
                 "opinion": false
             },
             {
-                "participant-id": 4,
+                "participantId": 4,
                 "opinion": false
             }
         ]
@@ -1294,19 +1294,19 @@ export const Episodes = [
         "movieYear": "1992",
         "opinions": [
             {
-                "participant-id": 1,
+                "participantId": 1,
                 "opinion": true
             },
             {
-                "participant-id": 2,
+                "participantId": 2,
                 "opinion": true
             },
             {
-                "participant-id": 3,
+                "participantId": 3,
                 "opinion": false
             },
             {
-                "participant-id": 4,
+                "participantId": 4,
                 "opinion": false
             }
         ]
@@ -1317,23 +1317,23 @@ export const Episodes = [
         "movieYear": "1999",
         "opinions": [
             {
-                "participant-id": 1,
+                "participantId": 1,
                 "opinion": true
             },
             {
-                "participant-id": 2,
+                "participantId": 2,
                 "opinion": false
             },
             {
-                "participant-id": 3,
+                "participantId": 3,
                 "opinion": true
             },
             {
-                "participant-id": 4,
+                "participantId": 4,
                 "opinion": false
             },
             {
-                "participant-id": 12,
+                "participantId": 12,
                 "opinion": true
             }
         ]
@@ -1344,19 +1344,19 @@ export const Episodes = [
         "movieYear": "1984",
         "opinions": [
             {
-                "participant-id": 1,
+                "participantId": 1,
                 "opinion": true
             },
             {
-                "participant-id": 2,
+                "participantId": 2,
                 "opinion": true
             },
             {
-                "participant-id": 3,
+                "participantId": 3,
                 "opinion": true
             },
             {
-                "participant-id": 4,
+                "participantId": 4,
                 "opinion": true
             }
         ]
@@ -1367,19 +1367,19 @@ export const Episodes = [
         "movieYear": "1974",
         "opinions": [
             {
-                "participant-id": 1,
+                "participantId": 1,
                 "opinion": true
             },
             {
-                "participant-id": 2,
+                "participantId": 2,
                 "opinion": true
             },
             {
-                "participant-id": 3,
+                "participantId": 3,
                 "opinion": true
             },
             {
-                "participant-id": 4,
+                "participantId": 4,
                 "opinion": false
             }
         ]
@@ -1390,15 +1390,15 @@ export const Episodes = [
         "movieYear": "1985",
         "opinions": [
             {
-                "participant-id": 1,
+                "participantId": 1,
                 "opinion": false
             },
             {
-                "participant-id": 3,
+                "participantId": 3,
                 "opinion": false
             },
             {
-                "participant-id": 4,
+                "participantId": 4,
                 "opinion": false
             }
         ]
@@ -1409,19 +1409,19 @@ export const Episodes = [
         "movieYear": "1996",
         "opinions": [
             {
-                "participant-id": 1,
+                "participantId": 1,
                 "opinion": true
             },
             {
-                "participant-id": 2,
+                "participantId": 2,
                 "opinion": true
             },
             {
-                "participant-id": 3,
+                "participantId": 3,
                 "opinion": true
             },
             {
-                "participant-id": 4,
+                "participantId": 4,
                 "opinion": false
             }
         ]
@@ -1432,27 +1432,27 @@ export const Episodes = [
         "movieYear": "1998",
         "opinions": [
             {
-                "participant-id": 1,
+                "participantId": 1,
                 "opinion": true
             },
             {
-                "participant-id": 2,
+                "participantId": 2,
                 "opinion": true
             },
             {
-                "participant-id": 3,
+                "participantId": 3,
                 "opinion": true
             },
             {
-                "participant-id": 4,
+                "participantId": 4,
                 "opinion": true
             },
             {
-                "participant-id": 12,
+                "participantId": 12,
                 "opinion": true
             },
             {
-                "participant-id": 13,
+                "participantId": 13,
                 "opinion": true
             }
         ]
@@ -1463,23 +1463,23 @@ export const Episodes = [
         "movieYear": "1973",
         "opinions": [
             {
-                "participant-id": 1,
+                "participantId": 1,
                 "opinion": true
             },
             {
-                "participant-id": 2,
+                "participantId": 2,
                 "opinion": true
             },
             {
-                "participant-id": 3,
+                "participantId": 3,
                 "opinion": true
             },
             {
-                "participant-id": 4,
+                "participantId": 4,
                 "opinion": true
             },
             {
-                "participant-id": 14,
+                "participantId": 14,
                 "opinion": true
             }
         ]
@@ -1490,19 +1490,19 @@ export const Episodes = [
         "movieYear": "2000",
         "opinions": [
             {
-                "participant-id": 1,
+                "participantId": 1,
                 "opinion": false
             },
             {
-                "participant-id": 2,
+                "participantId": 2,
                 "opinion": false
             },
             {
-                "participant-id": 3,
+                "participantId": 3,
                 "opinion": true
             },
             {
-                "participant-id": 4,
+                "participantId": 4,
                 "opinion": false
             }
         ]
@@ -1513,19 +1513,19 @@ export const Episodes = [
         "movieYear": "1984",
         "opinions": [
             {
-                "participant-id": 1,
+                "participantId": 1,
                 "opinion": true
             },
             {
-                "participant-id": 2,
+                "participantId": 2,
                 "opinion": true
             },
             {
-                "participant-id": 3,
+                "participantId": 3,
                 "opinion": true
             },
             {
-                "participant-id": 4,
+                "participantId": 4,
                 "opinion": true
             }
         ]
@@ -1536,19 +1536,19 @@ export const Episodes = [
         "movieYear": "1997",
         "opinions": [
             {
-                "participant-id": 1,
+                "participantId": 1,
                 "opinion": true
             },
             {
-                "participant-id": 2,
+                "participantId": 2,
                 "opinion": true
             },
             {
-                "participant-id": 3,
+                "participantId": 3,
                 "opinion": false
             },
             {
-                "participant-id": 4,
+                "participantId": 4,
                 "opinion": false
             }
         ]
@@ -1559,19 +1559,19 @@ export const Episodes = [
         "movieYear": "1997",
         "opinions": [
             {
-                "participant-id": 1,
+                "participantId": 1,
                 "opinion": true
             },
             {
-                "participant-id": 2,
+                "participantId": 2,
                 "opinion": false
             },
             {
-                "participant-id": 3,
+                "participantId": 3,
                 "opinion": false
             },
             {
-                "participant-id": 4,
+                "participantId": 4,
                 "opinion": true
             }
         ]
@@ -1582,23 +1582,23 @@ export const Episodes = [
         "movieYear": "1996",
         "opinions": [
             {
-                "participant-id": 1,
+                "participantId": 1,
                 "opinion": true
             },
             {
-                "participant-id": 2,
+                "participantId": 2,
                 "opinion": true
             },
             {
-                "participant-id": 3,
+                "participantId": 3,
                 "opinion": true
             },
             {
-                "participant-id": 4,
+                "participantId": 4,
                 "opinion": false
             },
             {
-                "participant-id": 11,
+                "participantId": 11,
                 "opinion": true
             }
         ]
@@ -1609,19 +1609,19 @@ export const Episodes = [
         "movieYear": "1996",
         "opinions": [
             {
-                "participant-id": 1,
+                "participantId": 1,
                 "opinion": true
             },
             {
-                "participant-id": 2,
+                "participantId": 2,
                 "opinion": false
             },
             {
-                "participant-id": 3,
+                "participantId": 3,
                 "opinion": true
             },
             {
-                "participant-id": 4,
+                "participantId": 4,
                 "opinion": true
             }
         ]
@@ -1632,19 +1632,19 @@ export const Episodes = [
         "movieYear": "1998",
         "opinions": [
             {
-                "participant-id": 1,
+                "participantId": 1,
                 "opinion": true
             },
             {
-                "participant-id": 2,
+                "participantId": 2,
                 "opinion": false
             },
             {
-                "participant-id": 3,
+                "participantId": 3,
                 "opinion": true
             },
             {
-                "participant-id": 4,
+                "participantId": 4,
                 "opinion": true
             }
         ]
@@ -1655,19 +1655,19 @@ export const Episodes = [
         "movieYear": "1987",
         "opinions": [
             {
-                "participant-id": 1,
+                "participantId": 1,
                 "opinion": true
             },
             {
-                "participant-id": 3,
+                "participantId": 3,
                 "opinion": true
             },
             {
-                "participant-id": 4,
+                "participantId": 4,
                 "opinion": true
             },
             {
-                "participant-id": 15,
+                "participantId": 15,
                 "opinion": true
             }
         ]
@@ -1678,19 +1678,19 @@ export const Episodes = [
         "movieYear": "1998",
         "opinions": [
             {
-                "participant-id": 1,
+                "participantId": 1,
                 "opinion": true
             },
             {
-                "participant-id": 2,
+                "participantId": 2,
                 "opinion": false
             },
             {
-                "participant-id": 3,
+                "participantId": 3,
                 "opinion": true
             },
             {
-                "participant-id": 4,
+                "participantId": 4,
                 "opinion": false
             }
         ]
@@ -1701,15 +1701,15 @@ export const Episodes = [
         "movieYear": "1997",
         "opinions": [
             {
-                "participant-id": 1,
+                "participantId": 1,
                 "opinion": true
             },
             {
-                "participant-id": 3,
+                "participantId": 3,
                 "opinion": true
             },
             {
-                "participant-id": 4,
+                "participantId": 4,
                 "opinion": false
             }
         ]
@@ -1720,19 +1720,19 @@ export const Episodes = [
         "movieYear": "1995",
         "opinions": [
             {
-                "participant-id": 1,
+                "participantId": 1,
                 "opinion": true
             },
             {
-                "participant-id": 2,
+                "participantId": 2,
                 "opinion": false
             },
             {
-                "participant-id": 3,
+                "participantId": 3,
                 "opinion": false
             },
             {
-                "participant-id": 4,
+                "participantId": 4,
                 "opinion": true
             }
         ]
@@ -1743,19 +1743,19 @@ export const Episodes = [
         "movieYear": "1990",
         "opinions": [
             {
-                "participant-id": 1,
+                "participantId": 1,
                 "opinion": true
             },
             {
-                "participant-id": 2,
+                "participantId": 2,
                 "opinion": true
             },
             {
-                "participant-id": 3,
+                "participantId": 3,
                 "opinion": true
             },
             {
-                "participant-id": 4,
+                "participantId": 4,
                 "opinion": true
             }
         ]
@@ -1766,19 +1766,19 @@ export const Episodes = [
         "movieYear": "1997",
         "opinions": [
             {
-                "participant-id": 1,
+                "participantId": 1,
                 "opinion": false
             },
             {
-                "participant-id": 2,
+                "participantId": 2,
                 "opinion": false
             },
             {
-                "participant-id": 3,
+                "participantId": 3,
                 "opinion": false
             },
             {
-                "participant-id": 4,
+                "participantId": 4,
                 "opinion": false
             }
         ]
@@ -1789,19 +1789,19 @@ export const Episodes = [
         "movieYear": "1985",
         "opinions": [
             {
-                "participant-id": 1,
+                "participantId": 1,
                 "opinion": true
             },
             {
-                "participant-id": 2,
+                "participantId": 2,
                 "opinion": true
             },
             {
-                "participant-id": 3,
+                "participantId": 3,
                 "opinion": true
             },
             {
-                "participant-id": 4,
+                "participantId": 4,
                 "opinion": true
             }
         ]
@@ -1812,19 +1812,19 @@ export const Episodes = [
         "movieYear": "1989",
         "opinions": [
             {
-                "participant-id": 1,
+                "participantId": 1,
                 "opinion": true
             },
             {
-                "participant-id": 2,
+                "participantId": 2,
                 "opinion": false
             },
             {
-                "participant-id": 3,
+                "participantId": 3,
                 "opinion": false
             },
             {
-                "participant-id": 4,
+                "participantId": 4,
                 "opinion": false
             }
         ]
@@ -1835,19 +1835,19 @@ export const Episodes = [
         "movieYear": "1988",
         "opinions": [
             {
-                "participant-id": 1,
+                "participantId": 1,
                 "opinion": true
             },
             {
-                "participant-id": 2,
+                "participantId": 2,
                 "opinion": false
             },
             {
-                "participant-id": 3,
+                "participantId": 3,
                 "opinion": true
             },
             {
-                "participant-id": 4,
+                "participantId": 4,
                 "opinion": true
             }
         ]
@@ -1858,15 +1858,15 @@ export const Episodes = [
         "movieYear": "1983",
         "opinions": [
             {
-                "participant-id": 1,
+                "participantId": 1,
                 "opinion": true
             },
             {
-                "participant-id": 3,
+                "participantId": 3,
                 "opinion": true
             },
             {
-                "participant-id": 4,
+                "participantId": 4,
                 "opinion": false
             }
         ]
@@ -1877,19 +1877,19 @@ export const Episodes = [
         "movieYear": "1996",
         "opinions": [
             {
-                "participant-id": 1,
+                "participantId": 1,
                 "opinion": true
             },
             {
-                "participant-id": 2,
+                "participantId": 2,
                 "opinion": true
             },
             {
-                "participant-id": 3,
+                "participantId": 3,
                 "opinion": false
             },
             {
-                "participant-id": 4,
+                "participantId": 4,
                 "opinion": true
             }
         ]
@@ -1900,19 +1900,19 @@ export const Episodes = [
         "movieYear": "1996",
         "opinions": [
             {
-                "participant-id": 1,
+                "participantId": 1,
                 "opinion": true
             },
             {
-                "participant-id": 2,
+                "participantId": 2,
                 "opinion": true
             },
             {
-                "participant-id": 3,
+                "participantId": 3,
                 "opinion": false
             },
             {
-                "participant-id": 4,
+                "participantId": 4,
                 "opinion": true
             }
         ]

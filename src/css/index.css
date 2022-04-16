@@ -13271,6 +13271,15 @@ footer {
   font-size: 1.8rem; }
 .hd-episode-card-wrapper .card-sub-title {
   font-size: 100%; }
+.hd-episode-card-wrapper .hd-episode-image-info {
+  position: absolute;
+  bottom: 0;
+  right: 10px;
+  padding: 1rem; }
+  .hd-episode-card-wrapper .hd-episode-image-info.haller {
+    background-color: green; }
+  .hd-episode-card-wrapper .hd-episode-image-info.haller-inte {
+    background-color: red; }
 
 .btn-fa, .btn-fa__primary, .btn-fa__secondary, .btn-fa__tertiary, .tracks-player__list .tracks-player_li .tracks-player__button {
   color: inherit;

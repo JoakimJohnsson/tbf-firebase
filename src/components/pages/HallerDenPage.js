@@ -1,11 +1,10 @@
 import React, {useContext, useEffect, useState} from 'react';
 import {NavigationContext} from "../NavigationStore/NavigationStore";
-import {getAllEpisodes, getAllParticipants} from "../../haller-den-data/serviceFunctions";
+import {getAllEpisodes} from "../../haller-den-data/serviceFunctions";
 import EpisodeCard from "../haller-den-components/EpisodeCard";
 
 const HallerDenPage = () => {
     const [episodes, setEpisodes] = useState([]);
-    const [participants, setParticipants] = useState([]);
     const setHideNavs = useContext(NavigationContext)[1];
     const setShowHallerDenNavs = useContext(NavigationContext)[3];
 
@@ -16,10 +15,6 @@ const HallerDenPage = () => {
 
     useEffect(() => {
         setEpisodes(getAllEpisodes)
-    }, []);
-
-    useEffect(() => {
-        setParticipants(getAllParticipants)
     }, []);
 
     return (

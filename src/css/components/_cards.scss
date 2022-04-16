@@ -259,4 +259,17 @@
   .card-sub-title {
     font-size: 100%;
   }
+  .hd-episode-image-info {
+    position: absolute;
+    bottom: 0;
+    right: 10px;
+    padding: 1rem;
+
+    &.haller {
+      background-color: green;
+    }
+    &.haller-inte {
+      background-color: red;
+    }
+  }
 }

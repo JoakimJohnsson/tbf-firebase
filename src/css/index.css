@@ -13267,6 +13267,8 @@ footer {
   .record-card-with-tracks:last-of-type {
     margin-bottom: 0; }
 
+.hd-episode-card-wrapper img {
+  border: none; }
 .hd-episode-card-wrapper .card-title {
   font-size: 1.8rem; }
 .hd-episode-card-wrapper .card-sub-title {
@@ -13274,12 +13276,14 @@ footer {
 .hd-episode-card-wrapper .hd-episode-image-info {
   position: absolute;
   bottom: 0;
-  right: 10px;
+  right: 15px;
   padding: 1rem; }
   .hd-episode-card-wrapper .hd-episode-image-info.haller {
-    background-color: green; }
+    background-color: darkgreen; }
   .hd-episode-card-wrapper .hd-episode-image-info.haller-inte {
-    background-color: red; }
+    background-color: darkred; }
+  .hd-episode-card-wrapper .hd-episode-image-info.haller-lika {
+    background-color: orangered; }
 
 .btn-fa, .btn-fa__primary, .btn-fa__secondary, .btn-fa__tertiary, .tracks-player__list .tracks-player_li .tracks-player__button {
   color: inherit;

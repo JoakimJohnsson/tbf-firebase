@@ -1,16 +1,30 @@
 import React, {useEffect, useState} from 'react';
 import {hallerDenImages} from '../../haller-den-data/images';
-import {getImageName} from "../../haller-den-data/serviceFunctions";
+import {getImageName, hallerDenStatus} from "../../haller-den-data/serviceFunctions";
 import EpisodeCardOpinions from "./EpisodeCardOpinions";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
 const EpisodeCard = ({episode}) => {
     const trimmedMovieName = getImageName(episode.movieName);
     const movieImage = hallerDenImages[trimmedMovieName];
-    const [imageInfoClass, setImageInfoClass] = useState("haller-inte");
+    const [imageInfoClass, setImageInfoClass] = useState("");
+    const [imageInfoMessage, setImageInfoMessage] = useState("");
+    const [imageInfoIcon, setImageInfoIcon] = useState("");
 
     useEffect(() => {
-        if (episode.movieYear === "1987") {
-            setImageInfoClass("haller")
+        const status = hallerDenStatus(episode);
+        if (status === 0) {
+            setImageInfoClass("haller-lika");
+            setImageInfoMessage("Lika");
+            setImageInfoIcon("meh");
+        } else if (status > 0) {
+            setImageInfoClass("haller");
+            setImageInfoMessage("Håller");
+            setImageInfoIcon("grin-hearts");
+        } else {
+            setImageInfoClass("haller-inte");
+            setImageInfoMessage("Håller inte");
+            setImageInfoIcon("frown");
         }
     }, []);
 
@@ -20,7 +34,9 @@ const EpisodeCard = ({episode}) => {
                 <div className={"card h-100"}>
                     <div className={"hd-episode-image-wrapper position-relative"}>
                         <img src={movieImage} className="card-img-top" alt={`Movie ${episode.movieName}`}/>
-                        <div className={`hd-episode-image-info ${imageInfoClass}`}>hej</div>
+                        <div className={`hd-episode-image-info font-weight-bold ${imageInfoClass}`}>
+                            <FontAwesomeIcon icon={imageInfoIcon} size="2x" aria-label={imageInfoMessage}/>
+                        </div>
                     </div>
                     <div className={"card-body"}>
                         <h1 className={"card-title mb-0"}>{episode.movieName}</h1>

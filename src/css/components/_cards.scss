@@ -253,6 +253,9 @@
 }
 
 .hd-episode-card-wrapper {
+  img {
+    border: none;
+  }
   .card-title {
     font-size: 1.8rem;
   }
@@ -262,14 +265,17 @@
   .hd-episode-image-info {
     position: absolute;
     bottom: 0;
-    right: 10px;
+    right: 15px;
     padding: 1rem;
 
     &.haller {
-      background-color: green;
+      background-color: darkgreen;
     }
     &.haller-inte {
-      background-color: red;
+      background-color: darkred;
+    }
+    &.haller-lika {
+      background-color: orangered;
     }
   }
 }

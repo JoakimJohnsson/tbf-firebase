@@ -15,3 +15,22 @@ export const getImageName = (movieName) => {
     let imageName = movieName.replace('å', 'a').replace('ä', 'a').replace('ö', 'o').replace('Å', 'a').replace('Ä', 'a').replace('Ö', 'o');
     return imageName.toLowerCase().replace(/[^a-z]+/g, "");
 }
+
+export const hallerDenStatus = (episode) => {
+    let trueCount = 0;
+    let falseCount = 0;
+    episode.opinions.map(opinion => {
+        if (opinion.opinion) {
+            trueCount++
+        } else {
+            falseCount++
+        }
+    })
+    if (trueCount === falseCount) {
+        return 0;
+    } else if (trueCount > falseCount) {
+        return 1;
+    } else {
+        return -1;
+    }
+}

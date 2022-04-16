@@ -16,7 +16,7 @@ import braveheart from "./haller-den-images/braveheart.jpg";
 import citizenkane from "./haller-den-images/citizenkane.jpg";
 import clueless from "./haller-den-images/clueless.jpg";
 import crocodiledundee from "./haller-den-images/crocodiledundee.jpg";
-import dendarmary from "./haller-den-images/dendarmary.jpg";
+import dendarmary from "./haller-den-images/dendarmary.jpeg";
 import dennaknapistolen from "./haller-den-images/dennaknapistolen.jpg";
 import denvildajaktenpastenen from "./haller-den-images/denvildajaktenpastenen.jpg";
 import detfemteelementet from "./haller-den-images/detfemteelementet.jpg";
@@ -27,7 +27,7 @@ import dirtydancing from "./haller-den-images/dirtydancing.jpeg";
 import dirtyharry from "./haller-den-images/dirtyharry.jpg";
 import elf from "./haller-den-images/elf.jpg";
 import enfisksomheterwanda from "./haller-den-images/enfisksomheterwanda.jpg";
-import enkvinnasdoft from "./haller-den-images/enkvinnasdoft.jpg";
+import enkvinnasdoft from "./haller-den-images/enkvinnasdoft.jpeg";
 import enprinsinewyork from "./haller-den-images/enprinsinewyork.jpg";
 import faceoff from "./haller-den-images/faceoff.jpg";
 import fightclub from "./haller-den-images/fightclub.jpg";
@@ -52,6 +52,7 @@ import pointbreak from "./haller-den-images/pointbreak.jpg";
 import polisskolan from "./haller-den-images/polisskolan.jpg";
 import prettywoman from "./haller-den-images/prettywoman.jpg";
 import pulpfiction from "./haller-den-images/pulpfiction.jpg";
+import requiemforadream from "./haller-den-images/requiemforadream.jpg";
 import robocop from "./haller-den-images/robocop.jpg";
 import sallskapsresansnowroller from "./haller-den-images/sallskapsresansnowroller.jpg";
 import scream from "./haller-den-images/scream.jpeg";
@@ -62,7 +63,7 @@ import starshiptroopers from "./haller-den-images/starshiptroopers.jpg";
 import terrorpaelmstreet from "./haller-den-images/terrorpaelmstreet.jpg";
 import thankyouforsmoking from "./haller-den-images/thankyouforsmoking.jpg";
 import thebiglebowski from "./haller-den-images/thebiglebowski.jpeg";
-import thebreakfastclub from "./haller-den-images/thebreakfastclub.jpg";
+import breakfastclub from "./haller-den-images/breakfastclub.jpg";
 import thelmalouise from "./haller-den-images/thelmalouise.jpg";
 import thematrix from "./haller-den-images/thematrix.jpg";
 import theothers from "./haller-den-images/theothers.jpg";
@@ -136,6 +137,7 @@ export const hallerDenImages = {
     "polisskolan": polisskolan,
     "prettywoman": prettywoman,
     "pulpfiction": pulpfiction,
+    "requiemforadream": requiemforadream,
     "robocop": robocop,
     "sallskapsresansnowroller": sallskapsresansnowroller,
     "scream": scream,
@@ -146,7 +148,7 @@ export const hallerDenImages = {
     "terrorpaelmstreet": terrorpaelmstreet,
     "thankyouforsmoking": thankyouforsmoking,
     "thebiglebowski": thebiglebowski,
-    "thebreakfastclub": thebreakfastclub,
+    "breakfastclub": breakfastclub,
     "thelmalouise": thelmalouise,
     "thematrix": thematrix,
     "theothers": theothers,

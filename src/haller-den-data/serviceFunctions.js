@@ -9,6 +9,6 @@ export const getAllParticipants = () => {
 }
 
 export const getImageName = (movieName) => {
-    let imageName = movieName.replace('å', 'a').replace('ä', 'a').replace('ö', 'o');
+    let imageName = movieName.replace('å', 'a').replace('ä', 'a').replace('ö', 'o').replace('Å', 'a').replace('Ä', 'a').replace('Ö', 'o');
     return imageName.toLowerCase().replace(/[^a-z]+/g, "");
 }

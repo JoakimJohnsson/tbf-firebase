@@ -251,7 +251,7 @@ export const Episodes = [
     },
     {
         "id": 11,
-        "movieName": "Basic instinct - behöver redigeras",
+        "movieName": "Basic instinct",
         "movieYear": "1987",
         "opinions": [
             {
@@ -264,7 +264,7 @@ export const Episodes = [
             },
             {
                 "participant-id": 3,
-                "opinion": true
+                "opinion": false
             },
             {
                 "participant-id": 4,
@@ -488,33 +488,6 @@ export const Episodes = [
             {
                 "participant-id": 3,
                 "opinion": false
-            }
-        ]
-    },
-    {
-        "id": 21,
-        "movieName": "Jagad - todo",
-        "movieYear": "1987",
-        "opinions": [
-            {
-                "participant-id": 1,
-                "opinion": true
-            },
-            {
-                "participant-id": 2,
-                "opinion": true
-            },
-            {
-                "participant-id": 3,
-                "opinion": true
-            },
-            {
-                "participant-id": 4,
-                "opinion": true
-            },
-            {
-                "participant-id": 5,
-                "opinion": true
             }
         ]
     },
@@ -1975,7 +1948,7 @@ export const Participants = [
     {
         "id": 6,
         "firstName": "Jonas",
-        "lastName": "Pike - Detta måste kontrolleras"
+        "lastName": "Pike"
     },
     {
         "id": 7,
@@ -2010,16 +1983,16 @@ export const Participants = [
     {
         "id": 13,
         "firstName": "Robin",
-        "lastName": "Vilken Robin???"
+        "lastName": "Larsson Asp"
     },
     {
         "id": 14,
         "firstName": "Roland",
-        "lastName": "Ulvseuss??????"
+        "lastName": "Ulvselius"
     },
     {
         "id": 15,
         "firstName": "Julia",
-        "lastName": "Frej??????"
+        "lastName": "Finnsiö"
     }
 ]

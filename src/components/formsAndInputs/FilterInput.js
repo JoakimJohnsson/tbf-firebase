@@ -16,7 +16,7 @@ const FilterInput = ({filter, setFilter, placeHolder}) => {
                 <input id="filter"
                        name="filter"
                        type="text"
-                       className="form-control small"
+                       className="form-control"
                        placeholder={placeHolder}
                        value={filter}
                        onChange={event => setFilter(event.target.value)}

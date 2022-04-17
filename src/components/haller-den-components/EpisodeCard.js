@@ -41,9 +41,9 @@ const EpisodeCard = ({episode}) => {
                     <div className={"card-body"}>
                         <h1 className={"card-title mb-0"}>{episode.movieName}</h1>
                         <p className={"card-sub-title mb-0"}>{episode.movieYear}</p>
-                        {episode.opinions.map(opinion =>
+                    {/*    {episode.opinions.map(opinion =>
                             <EpisodeCardOpinions opinion={opinion}/>
-                        )}
+                        )}*/}
                     </div>
                 </div>
             </div>

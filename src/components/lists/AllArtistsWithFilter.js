@@ -12,15 +12,17 @@ const AllArtistsWithFilter = () => {
             <>
                 <FilterInput filter={filter} setFilter={setFilter} placeHolder={"Filter by artist"}/>
                 <div className="row">
-                    {artists.filter(artist => artist.name.toLowerCase().includes(filter.toLowerCase()) || filter === '')
-                        .map(artist =>
-                        <ArtistCard route="artist"
-                                    id={artist.id}
-                                    key={artist.id}
-                                    imgUrl={artist.imgUrl}
-                                    name={artist.name}
-                                    fullWidth={true}/>
-                    )}
+                    {artists
+                        .filter(artist => artist.name.toLowerCase()
+                            .includes(filter.toLowerCase()) || filter === '')
+                            .map(artist =>
+                            <ArtistCard route="artist"
+                                        id={artist.id}
+                                        key={artist.id}
+                                        imgUrl={artist.imgUrl}
+                                        name={artist.name}
+                                        fullWidth={true}/>
+                        )}
                 </div>
             </>
         )

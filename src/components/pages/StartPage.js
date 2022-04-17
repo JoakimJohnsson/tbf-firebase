@@ -89,6 +89,7 @@ const StartPage = () => {
                         </div>
                         <p><IconLink link={"https://thebaseballfield.se/styleguide/"} text={"TBF & Friends react styleguide"} icon={"book-dead"} external={true}/></p>
                         <p><IconLink link={ROUTES.DEVOPS} text={"DevOps"} icon={"journal-whills"}/></p>
+                        <p><IconLink link={ROUTES.HALLER_DEN} text={"Håller den?"} icon={"ticket-alt"}/></p>
                         <CopyrightInformation className={"d-none d-lg-block"}/>
                     </main>
                 </div>

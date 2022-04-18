@@ -6,7 +6,7 @@ const EpisodeCardOpinions = ({opinion}) => {
 
     useEffect(() => {
         setParticipant(getParticipantById(opinion.participantId))
-    }, []);
+    }, [opinion.participantId]);
 
     return (
         <p className="mb-0">

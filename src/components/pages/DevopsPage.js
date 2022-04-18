@@ -14,11 +14,9 @@ const DevopsPage = () => {
     const setHideNavs = useContext(NavigationContext)[1];
     const setShowHallerDenNavs = useContext(NavigationContext)[3];
     useEffect(() => {
-
         setHideNavs(true);
         setShowHallerDenNavs(false);
-
-    }, []);
+    });
 
     SetNewDocTitle("DevOps");
     const [heroImage, setHeroImage] = useState(1);
@@ -29,7 +27,7 @@ const DevopsPage = () => {
     return (
         <>
             <div className="bg-light text-black w-100">
-                <div className={`hero-image hero-image__${heroImage}`}></div>
+                <div className={`hero-image hero-image__${heroImage}`}> </div>
                 <div className="container py-5">
                     <main className="row no-gutters">
                         <div className="col-12">

@@ -9,7 +9,7 @@ const EpisodeCard = ({episode}) => {
     const movieImage = hallerDenImages[trimmedMovieName];
     const [imageInfoClass, setImageInfoClass] = useState("");
     const [imageInfoMessage, setImageInfoMessage] = useState("");
-    const [imageInfoIcon, setImageInfoIcon] = useState("");
+    const [imageInfoIcon, setImageInfoIcon] = useState("meh");
 
     useEffect(() => {
         const status = hallerDenStatus(episode);
@@ -26,7 +26,7 @@ const EpisodeCard = ({episode}) => {
             setImageInfoMessage("Håller inte");
             setImageInfoIcon("frown");
         }
-    }, []);
+    }, [episode]);
 
     return (
         <div className="hd-episode-card-wrapper col-12 col-md-6 col-xl-4 mb-2 mb-sm-4">
@@ -41,9 +41,9 @@ const EpisodeCard = ({episode}) => {
                     <div className={"card-body"}>
                         <h1 className={"card-title mb-0"}>{episode.movieName}</h1>
                         <p className={"card-sub-title mb-0"}>{episode.movieYear}</p>
-                    {/*    {episode.opinions.map(opinion =>
-                            <EpisodeCardOpinions opinion={opinion}/>
-                        )}*/}
+                      {episode.opinions.map(opinion =>
+                            <EpisodeCardOpinions key={opinion.participantId} opinion={opinion}/>
+                        )}
                     </div>
                 </div>
             </div>

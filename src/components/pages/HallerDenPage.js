@@ -13,7 +13,7 @@ const HallerDenPage = () => {
     useEffect(() => {
         setHideNavs(true)
         setShowHallerDenNavs(true)
-    }, []);
+    }, [setHideNavs, setShowHallerDenNavs]);
 
     useEffect(() => {
         setEpisodes(getAllEpisodes)

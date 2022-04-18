@@ -283,18 +283,23 @@ export {FetchAllRecords, FetchRecordsByArtist, FetchRecordFromId};
 function FetchAllTracks() {
     const [tracks, setTracks] = useState([]);
     useEffect(() => {
+        // Use effect cleanup
+        let isSubscribed = true;
         firebase
             .firestore()
             .collection('songs')
             .orderBy('recordId', 'asc')
             .orderBy('index', 'asc')
             .onSnapshot((snapshot) => {
-                const newTracks = snapshot.docs.map((doc) => ({
-                    id: doc.id,
-                    ...doc.data()
-                }));
-                setTracks(newTracks)
+                if (isSubscribed) {
+                    const newTracks = snapshot.docs.map((doc) => ({
+                        id: doc.id,
+                        ...doc.data()
+                    }));
+                    setTracks(newTracks)
+                }
             })
+        return () => (isSubscribed = false)
     }, []);
     return tracks;
 }

@@ -28,26 +28,31 @@ const EpisodeCard = ({episode}) => {
         }
     }, [episode]);
 
-    return (
-        <div className="hd-episode-card-wrapper col-12 col-md-6 col-xl-4 mb-2 mb-sm-4">
-            <div className={"col-12 h-100"}>
-                <div className={"card h-100"}>
-                    <div className={"hd-episode-image-wrapper position-relative"}>
-                        <img src={movieImage} className="card-img-top" alt={`Movie ${episode.movieName}`}/>
-                        <div className={`hd-episode-image-info font-weight-bold ${imageInfoClass}`}>
-                            <FontAwesomeIcon icon={imageInfoIcon} size="2x" aria-label={imageInfoMessage}/>
+    return episode ?
+        (
+            <div className="hd-episode-card-wrapper col-12 col-md-6 col-xl-4 mb-2 mb-sm-4">
+                <div className={"col-12 h-100"}>
+                    <div className={"card h-100"}>
+                        <div className={"hd-episode-image-wrapper position-relative"}>
+                            <img src={movieImage} className="card-img-top" alt={`Movie ${episode.movieName}`}/>
+                            <div className={`hd-episode-image-info font-weight-bold ${imageInfoClass}`}>
+                                <FontAwesomeIcon icon={imageInfoIcon} size="2x" aria-label={imageInfoMessage}/>
+                            </div>
                         </div>
-                    </div>
-                    <div className={"card-body"}>
-                        <h1 className={"card-title mb-0"}>{episode.movieName}</h1>
-                        <p className={"card-sub-title mb-0"}>{episode.movieYear}</p>
-                      {episode.opinions.map(opinion =>
-                            <EpisodeCardOpinions key={opinion.participantId} opinion={opinion}/>
-                        )}
+                        <div className={"card-body"}>
+                            <h1 className={"card-title mb-0"}>{episode.movieName}</h1>
+                            <p className={"card-sub-title mb-0"}>{episode.movieYear}</p>
+                            {episode.opinions.map(opinion =>
+                                <EpisodeCardOpinions key={opinion.participantId} opinion={opinion}/>
+                            )}
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    );
+        )
+        :
+        (
+            <p>Loading...</p>
+        );
 };
 export default EpisodeCard;

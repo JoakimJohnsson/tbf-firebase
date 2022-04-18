@@ -19,13 +19,7 @@ export const getImageName = (movieName) => {
 export const hallerDenStatus = (episode) => {
     let trueCount = 0;
     let falseCount = 0;
-    episode.opinions.map(opinion => {
-        if (opinion.opinion) {
-            trueCount++
-        } else {
-            falseCount++
-        }
-    })
+    episode.opinions.map(opinion => opinion.opinion ? trueCount++ : falseCount++)
     if (trueCount === falseCount) {
         return 0;
     } else if (trueCount > falseCount) {

@@ -287,4 +287,17 @@
       background-color: orangered;
     }
   }
+  .card {
+    opacity: .8;
+  }
+  a {
+    color: $color-white;
+    &:hover {
+      text-decoration: none;
+    }
+    .card:hover {
+      opacity: 1;
+      transition: $transition-base;
+    }
+  }
 }

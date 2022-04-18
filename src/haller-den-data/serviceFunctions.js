@@ -4,11 +4,15 @@ export const getAllEpisodes = () => {
     return Episodes;
 }
 
+export const getEpisodeById = (id) => {
+    return Episodes.find(e => e.id === parseInt(id));
+}
+
 export const getAllParticipants = () => {
     return Participants;
 }
 export const getParticipantById = (id) => {
-    return Participants.find(p => p.id === id);
+    return Participants.find(p => p.id === parseInt(id));
 }
 
 export const getImageName = (movieName) => {

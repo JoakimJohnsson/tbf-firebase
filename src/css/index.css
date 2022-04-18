@@ -13293,6 +13293,15 @@ footer {
     background-color: darkred; }
   .hd-episode-card-wrapper .hd-episode-image-info.haller-lika {
     background-color: orangered; }
+.hd-episode-card-wrapper .card {
+  opacity: .8; }
+.hd-episode-card-wrapper a {
+  color: #fff; }
+  .hd-episode-card-wrapper a:hover {
+    text-decoration: none; }
+  .hd-episode-card-wrapper a .card:hover {
+    opacity: 1;
+    transition: all 0.45s ease-in-out; }
 
 .btn-fa, .btn-fa__primary, .btn-fa__secondary, .btn-fa__tertiary, .tracks-player__list .tracks-player_li .tracks-player__button {
   color: inherit;

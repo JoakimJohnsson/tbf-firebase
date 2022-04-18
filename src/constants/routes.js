@@ -8,3 +8,4 @@ export const SEARCH = '/search';
 export const UPLOAD = '/upload';
 export const DEVOPS = '/dev-ops';
 export const HALLER_DEN = '/haller-den';
+export const HALLER_DEN_MOVIE = '/haller-den/:id';

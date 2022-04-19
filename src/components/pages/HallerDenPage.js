@@ -1,14 +1,15 @@
 import React, {useContext, useEffect, useState} from 'react';
 import {NavigationContext} from "../NavigationStore/NavigationStore";
-import {getAllEpisodes} from "../../haller-den-data/serviceFunctions";
 import EpisodeCard from "../haller-den-components/EpisodeCard";
 import FilterInput from "../formsAndInputs/FilterInput";
+import {Episodes} from "../../haller-den-data/data";
 
 const HallerDenPage = () => {
     const [episodes, setEpisodes] = useState([]);
     const setHideNavs = useContext(NavigationContext)[1];
     const setShowHallerDenNavs = useContext(NavigationContext)[3];
     const [filter, setFilter] = useState('');
+    const [sortType, setSortType] = useState(0);
 
     useEffect(() => {
         setHideNavs(true)
@@ -16,25 +17,44 @@ const HallerDenPage = () => {
     }, [setHideNavs, setShowHallerDenNavs]);
 
     useEffect(() => {
-        setEpisodes(getAllEpisodes)
-    }, []);
+        const sortArray = type => {
+            const types = {
+                movieName: 'movieName',
+                movieYear: 'movieYear'
+            };
+            const sortProperty = types[type];
+            let sorted;
 
-    return (
+            if (sortProperty === "movieName") {
+                sorted = [...Episodes].sort((a, b) => a[sortProperty] > b[sortProperty]);
+            } else {
+                sorted = [...Episodes].sort((a, b) => b[sortProperty] - a[sortProperty]);
+            }
+            setEpisodes(sorted);
+        };
+        sortArray(sortType);
+    }, [sortType]);
+
+    return episodes && (
         <main className="container-fluid standard-container bg-light">
             <div className={"row"}>
                 <div className={"col-12 mb-5"}>
                     <FilterInput filter={filter} setFilter={setFilter} placeHolder={"Filtrera på namn eller årtal"}/>
+                    <select onChange={(e) => setSortType(e.target.value)}>
+                        <option value="movieName">Name</option>
+                        <option value="movieYear">Year</option>
+                    </select>
                 </div>
 
                 {episodes
                     .filter(episode => episode.movieName.toLowerCase()
-                        .includes(filter.toLowerCase()) ||
+                            .includes(filter.toLowerCase()) ||
                         episode.movieYear.toLowerCase()
                             .includes(filter.toLowerCase()) ||
                         filter === '')
                     .map(episode =>
-                    <EpisodeCard key={episode.id} episode={episode}/>
-                )}
+                        <EpisodeCard key={episode.id} episode={episode}/>
+                    )}
             </div>
         </main>
     );

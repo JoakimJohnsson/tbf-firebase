@@ -9,7 +9,7 @@ const HallerDenPage = () => {
     const setHideNavs = useContext(NavigationContext)[1];
     const setShowHallerDenNavs = useContext(NavigationContext)[3];
     const [filter, setFilter] = useState('');
-    const [sortType, setSortType] = useState(0);
+    const [sortType, setSortType] = useState("movieName");
 
     useEffect(() => {
         setHideNavs(true)

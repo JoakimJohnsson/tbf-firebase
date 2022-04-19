@@ -19,7 +19,7 @@ const HeaderNavigation = () => {
                         <div className="container-fluid">
                             <h1 className="m-0 logo-font-family__17"><IconLink link={ROUTES.HALLER_DEN} text={"Håller den?"} icon={"ticket-alt"}/>
                             </h1>
-                            <IconLink link={ROUTES.START} text={"Back to friends"} icon={"home"}/>
+                            <IconLink link={ROUTES.HALLER_DEN} text={"Startsida"} icon={"home"}/>
                         </div>
                     </Navbar>
                 </header>

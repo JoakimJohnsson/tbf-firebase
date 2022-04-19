@@ -32,3 +32,7 @@ export const hallerDenStatus = (episode) => {
         return -1;
     }
 }
+
+export const clearInput = (setFilter) => {
+    setFilter('')
+}

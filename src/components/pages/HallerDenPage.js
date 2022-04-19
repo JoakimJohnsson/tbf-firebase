@@ -2,7 +2,7 @@ import React, {useContext, useEffect, useState} from 'react';
 import {NavigationContext} from "../NavigationStore/NavigationStore";
 import EpisodeCard from "../haller-den-components/EpisodeCard";
 import {Episodes} from "../../haller-den-data/data";
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import FilterForm from "../haller-den-components/FilterForm";
 
 const HallerDenPage = () => {
     const [episodes, setEpisodes] = useState([]);
@@ -27,9 +27,9 @@ const HallerDenPage = () => {
             let sorted;
             if (sortProperty === "movieName") {
                 sorted = reverse ?
-                    [...Episodes].sort((a, b) => a[sortProperty] > b[sortProperty])
+                    [...Episodes].sort((a, b) => a[sortProperty] < b[sortProperty])
                     :
-                    [...Episodes].sort((a, b) => a[sortProperty] < b[sortProperty]);
+                    [...Episodes].sort((a, b) => a[sortProperty] > b[sortProperty]);
             } else {
                 sorted = reverse ?
                     [...Episodes].sort((a, b) => b[sortProperty] - a[sortProperty])
@@ -41,44 +41,11 @@ const HallerDenPage = () => {
         sortArray(sortType);
     }, [sortType, reverse]);
 
-    const clearInput = () => {
-        setFilter('')
-    }
-
     return episodes && (
         <main className="container-fluid standard-container bg-light">
             <div className={"row"}>
                 <div className={"col-12 mb-5"}>
-                    <div className={"form-group"}>
-                        <div className="input-group col-12 col-md-8 col-xl-6 mb-2">
-                            <div className="input-group-prepend">
-                                <span className="input-group-text"><FontAwesomeIcon icon={"filter"}/></span>
-                            </div>
-                            <input id="filter"
-                                   name="filter"
-                                   type="text"
-                                   className="form-control"
-                                   placeholder={"Filtrera på namn eller årtal"}
-                                   value={filter}
-                                   onChange={event => setFilter(event.target.value)}
-                            />
-                            {filter !== '' ?
-                                <div className="input-group-append">
-                                    <button className="input-group-text" onClick={clearInput}><FontAwesomeIcon icon={"times"}/></button>
-                                </div>
-                                :
-                                ''
-                            }
-                        </div>
-
-                        <div className="input-group col-12 col-sm-8 col-lg-4">
-                            <select className={"form-control mr-2"} onChange={(e) => setSortType(e.target.value)} aria-label="Default select example">
-                                <option value="movieName">Namn</option>
-                                <option value="movieYear">Årtal</option>
-                            </select>
-                            <button className={"btn btn-primary"} onClick={() => setReverse(!reverse)}>Omvänd ordning</button>
-                        </div>
-                    </div>
+                    <FilterForm filter={filter} setFilter={setFilter} setSortType={setSortType} reverse={reverse} setReverse={setReverse}/>
                 </div>
 
                 {episodes
@@ -92,7 +59,8 @@ const HallerDenPage = () => {
                     )}
             </div>
         </main>
-    );
+    )
+        ;
 };
 
 export default HallerDenPage;

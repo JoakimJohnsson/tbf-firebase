@@ -1,11 +1,10 @@
 import React, {useEffect, useState} from 'react';
 import {hallerDenImages} from '../../haller-den-data/images';
-import {getImageName, hallerDenStatus} from "../../haller-den-data/serviceFunctions";
+import {getImageName, hallerDenStatus, setImageInfo} from "../../haller-den-data/serviceFunctions";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {Link} from "react-router-dom";
 import {HOLL_DEN} from "../../constants/routes";
 import EpisodeCardOpinions from "./EpisodeCardOpinions";
-import EpisodePageOpinions from "./EpisodePageOpinions";
 
 const EpisodeCard = ({episode}) => {
     const trimmedMovieName = getImageName(episode.movieName);
@@ -15,20 +14,7 @@ const EpisodeCard = ({episode}) => {
     const [imageInfoIcon, setImageInfoIcon] = useState("meh");
 
     useEffect(() => {
-        const status = hallerDenStatus(episode);
-        if (status === 0) {
-            setImageInfoClass("haller-lika");
-            setImageInfoMessage("Lika");
-            setImageInfoIcon("meh");
-        } else if (status > 0) {
-            setImageInfoClass("haller");
-            setImageInfoMessage("Håller");
-            setImageInfoIcon("grin-hearts");
-        } else {
-            setImageInfoClass("haller-inte");
-            setImageInfoMessage("Håller inte");
-            setImageInfoIcon("frown");
-        }
+        setImageInfo(setImageInfoClass, setImageInfoMessage, setImageInfoIcon, episode)
     }, [episode]);
 
     return episode ?
@@ -52,7 +38,7 @@ const EpisodeCard = ({episode}) => {
                                     <div className={"d-inline p-2 border-top border-light"}>
                                         {
                                             episode.opinions &&
-                                            episode.opinions.map(opinion => <EpisodeCardOpinions key={opinion.participantId} opinion={opinion}/>)
+                                            [...episode.opinions].sort((a, b) => a["opinion"] < b["opinion"]).map(opinion => <EpisodeCardOpinions key={opinion.participantId} opinion={opinion}/>)
                                         }
                                     </div>
                                 </div>

@@ -48,6 +48,7 @@ import missionimpossible from "./haller-den-images/missionimpossible.jpg";
 import narlammentystnar from "./haller-den-images/narlammentystnar.jpg";
 import outbreakifarozonen from "./haller-den-images/outbreakifarozonen.jpg";
 import pahederochsamvete from "./haller-den-images/pahederochsamvete.jpg";
+import placeholder from "./haller-den-images/placeholder.jpg";
 import pointbreak from "./haller-den-images/pointbreak.jpg";
 import polisskolan from "./haller-den-images/polisskolan.jpg";
 import prettywoman from "./haller-den-images/prettywoman.jpg";
@@ -135,6 +136,7 @@ export const hallerDenImages = {
     "pahederochsamvete": pahederochsamvete,
     "pointbreak": pointbreak,
     "polisskolan": polisskolan,
+    "placeholder": placeholder,
     "prettywoman": prettywoman,
     "pulpfiction": pulpfiction,
     "requiemforadream": requiemforadream,

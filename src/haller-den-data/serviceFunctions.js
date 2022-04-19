@@ -36,3 +36,20 @@ export const hallerDenStatus = (episode) => {
 export const clearInput = (setFilter) => {
     setFilter('')
 }
+
+export const setImageInfo = (setImageInfoClass, setImageInfoMessage, setImageInfoIcon, episode) => {
+    const status = hallerDenStatus(episode);
+    if (status === 0) {
+        setImageInfoClass("haller-lika");
+        setImageInfoMessage("Lika");
+        setImageInfoIcon("meh");
+    } else if (status > 0) {
+        setImageInfoClass("haller");
+        setImageInfoMessage("Håller");
+        setImageInfoIcon("grin-hearts");
+    } else {
+        setImageInfoClass("haller-inte");
+        setImageInfoMessage("Håller inte");
+        setImageInfoIcon("frown");
+    }
+}

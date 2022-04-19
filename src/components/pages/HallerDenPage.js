@@ -9,6 +9,7 @@ const HallerDenPage = () => {
     const setHideNavs = useContext(NavigationContext)[1];
     const setShowHallerDenNavs = useContext(NavigationContext)[3];
     const [filter, setFilter] = useState('');
+    const [reverse, setReverse] = useState(false);
     const [sortType, setSortType] = useState("movieName");
 
     useEffect(() => {
@@ -24,16 +25,21 @@ const HallerDenPage = () => {
             };
             const sortProperty = types[type];
             let sorted;
-
             if (sortProperty === "movieName") {
-                sorted = [...Episodes].sort((a, b) => a[sortProperty] > b[sortProperty]);
+                sorted = reverse ?
+                    [...Episodes].sort((a, b) => a[sortProperty] > b[sortProperty])
+                    :
+                    [...Episodes].sort((a, b) => a[sortProperty] < b[sortProperty]);
             } else {
-                sorted = [...Episodes].sort((a, b) => b[sortProperty] - a[sortProperty]);
+                sorted = reverse ?
+                    [...Episodes].sort((a, b) => b[sortProperty] - a[sortProperty])
+                    :
+                    [...Episodes].sort((a, b) => a[sortProperty] - b[sortProperty]);
             }
             setEpisodes(sorted);
         };
         sortArray(sortType);
-    }, [sortType]);
+    }, [sortType, reverse]);
 
     return episodes && (
         <main className="container-fluid standard-container bg-light">
@@ -44,6 +50,7 @@ const HallerDenPage = () => {
                         <option value="movieName">Name</option>
                         <option value="movieYear">Year</option>
                     </select>
+                    <button onClick={() => setReverse(!reverse)}>Omvänd ordning</button>
                 </div>
 
                 {episodes

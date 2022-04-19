@@ -1,17 +1,13 @@
-import React, {useEffect, useState} from 'react';
-import {getParticipantById} from "../../haller-den-data/serviceFunctions";
+import React from 'react';
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
 const EpisodeCardOpinions = ({opinion}) => {
-    const [participant, setParticipant] = useState({});
-
-    useEffect(() => {
-        setParticipant(getParticipantById(opinion.participantId))
-    }, [opinion.participantId]);
 
     return (
-        <p className="mb-0">
-            {participant.id} {participant.firstName} {participant.lastName} {opinion.opinion ? "Håller" : "Håller inte"}
-        </p>
+        opinion.opinion ?
+            <FontAwesomeIcon className={"mx-1 green-icon"} icon={"grin-hearts"} size="1x" aria-label={"Håller"}/>
+            :
+            <FontAwesomeIcon className={"mx-1 red-icon"} icon={"frown"} size="1x" aria-label={"Håller inte"}/>
     );
 };
 export default EpisodeCardOpinions;

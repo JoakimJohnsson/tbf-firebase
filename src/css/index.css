@@ -13293,6 +13293,10 @@ footer {
     background-color: darkred; }
   .hd-episode-card-wrapper .hd-episode-image-info.haller-lika {
     background-color: orangered; }
+.hd-episode-card-wrapper .green-icon {
+  color: darkgreen; }
+.hd-episode-card-wrapper .red-icon {
+  color: darkred; }
 .hd-episode-card-wrapper .card {
   opacity: .8; }
 .hd-episode-card-wrapper a {

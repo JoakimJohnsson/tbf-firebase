@@ -1,8 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import {getEpisodeById} from "../../haller-den-data/serviceFunctions";
-import EpisodePageOpinions from "../haller-den-components/EpisodeCardOpinions";
+import EpisodePageOpinions from "../haller-den-components/EpisodePageOpinions";
 import * as ROUTES from "../../constants/routes";
-import IconLink from "../microComponents/Links/IconLink";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {Link} from "react-router-dom";
 

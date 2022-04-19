@@ -4,6 +4,8 @@ import {getImageName, hallerDenStatus} from "../../haller-den-data/serviceFuncti
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {Link} from "react-router-dom";
 import {HOLL_DEN} from "../../constants/routes";
+import EpisodeCardOpinions from "./EpisodeCardOpinions";
+import EpisodePageOpinions from "./EpisodePageOpinions";
 
 const EpisodeCard = ({episode}) => {
     const trimmedMovieName = getImageName(episode.movieName);
@@ -34,19 +36,29 @@ const EpisodeCard = ({episode}) => {
             <div className="hd-episode-card-wrapper col-12 col-md-6 col-xl-4 mb-2 mb-sm-4">
                 <div className={"col-12 h-100"}>
                     <Link className={""} to={`${HOLL_DEN}/${episode.id}`}>
-                    <div className={"card h-100"}>
-                        <div className={"hd-episode-image-wrapper position-relative"}>
-                            <img src={movieImage} className="card-img-top" alt={`Movie ${episode.movieName}`}/>
-                            <div className={`hd-episode-image-info font-weight-bold ${imageInfoClass}`}>
-                                <FontAwesomeIcon icon={imageInfoIcon} size="2x" aria-label={imageInfoMessage}/>
+                        <div className={"card h-100"}>
+                            <div className={"hd-episode-image-wrapper position-relative"}>
+                                <img src={movieImage} className="card-img-top" alt={`Movie ${episode.movieName}`}/>
+                                <div className={`hd-episode-image-info font-weight-bold ${imageInfoClass}`}>
+                                    <FontAwesomeIcon icon={imageInfoIcon} size="2x" aria-label={imageInfoMessage}/>
+                                </div>
+                            </div>
+                            <div className={"card-body d-flex flex-column justify-content-between"}>
+                                <div>
+                                    <h1 className={"card-title mb-0"}>{episode.movieName}</h1>
+                                    <p className={"card-sub-title"}>{episode.movieYear}</p>
+                                </div>
+                                <div className={"text-center"}>
+                                    <div className={"d-inline p-2 border-top border-light"}>
+                                        {
+                                            episode.opinions &&
+                                            episode.opinions.map(opinion => <EpisodeCardOpinions key={opinion.participantId} opinion={opinion}/>)
+                                        }
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div className={"card-body"}>
-                            <h1 className={"card-title mb-0"}>{episode.movieName}</h1>
-                            <p className={"card-sub-title mb-0"}>{episode.movieYear}</p>
-                        </div>
-                    </div>
-                        </Link>
+                    </Link>
                 </div>
             </div>
         )

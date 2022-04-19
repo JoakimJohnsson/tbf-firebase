@@ -45,7 +45,7 @@ const HallerDenPage = () => {
         <main className="container-fluid standard-container bg-light">
             <div className={"row"}>
                 <div className={"col-12 mb-5"}>
-                    <FilterForm filter={filter} setFilter={setFilter} setSortType={setSortType} reverse={reverse} setReverse={setReverse}/>
+                    <FilterForm filter={filter} setFilter={setFilter} setSortType={setSortType} sortType={sortType} reverse={reverse} setReverse={setReverse}/>
                 </div>
 
                 {episodes

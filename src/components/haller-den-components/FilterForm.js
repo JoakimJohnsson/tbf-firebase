@@ -3,7 +3,7 @@ import {clearInput} from "../../haller-den-data/serviceFunctions";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
 
-const FilterForm = ({filter, setFilter, setSortType, reverse, setReverse}) => {
+const FilterForm = ({filter, setFilter, setSortType, sortType, reverse, setReverse}) => {
 
 
     return (
@@ -36,7 +36,6 @@ const FilterForm = ({filter, setFilter, setSortType, reverse, setReverse}) => {
                 </div>
             </div>
 
-
             <div className="col-12 col-sm-8 col-lg-4">
                 <label className={"text-black"} htmlFor="filter-sort-select">Välj sortering</label>
                 <div className="input-group">
@@ -47,7 +46,7 @@ const FilterForm = ({filter, setFilter, setSortType, reverse, setReverse}) => {
                     </select>
                     <div className={"input-group-append"}>
                         <button
-                            className={reverse ? "btn btn-primary text-black" : "btn btn-outline-primary text-black"}
+                            className={"btn btn-primary "}
                             onClick={() => setReverse(!reverse)}
                             aria-label={"Omvänd ordning"}>
                             {
@@ -56,14 +55,17 @@ const FilterForm = ({filter, setFilter, setSortType, reverse, setReverse}) => {
                                     :
                                     <FontAwesomeIcon icon={"arrow-up"} className={"mr-2"}/>
                             }
-                            Omvänd ordning
+                            {
+                                sortType === "movieName" ?
+                                    <span>{reverse ? "A-Z" : "Z-A"}</span>
+                                    :
+                                    <span>{reverse ? "0-9" : "9-0"}</span>
+                            }
                         </button>
                     </div>
                 </div>
             </div>
         </div>
-
     )
-
 };
 export default FilterForm;

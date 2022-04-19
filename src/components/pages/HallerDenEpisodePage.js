@@ -19,7 +19,7 @@ const HallerDenEpisodePage = ({match}) => {
         <main className="container-fluid standard-container bg-light text-black">
             <div className={"row"}>
                 <div className={"col-12"}>
-                    <Link className={"btn btn-primary mb-3"} to={ROUTES.HALLER_DEN}><FontAwesomeIcon icon={"chevron-left"} className={"mr-2"}/>Tillbaka</Link>
+                    <Link className={"btn btn-primary mb-3"} to={ROUTES.HOLL_DEN}><FontAwesomeIcon icon={"chevron-left"} className={"mr-2"}/>Tillbaka</Link>
                     <h1>{episode.movieName} </h1>
                     {
                         episode.opinions &&

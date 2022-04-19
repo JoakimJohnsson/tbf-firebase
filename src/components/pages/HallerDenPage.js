@@ -45,6 +45,10 @@ const HallerDenPage = () => {
         <main className="container-fluid standard-container bg-light">
             <div className={"row"}>
                 <div className={"col-12 mb-5"}>
+                <div className={"col-12 col-sm-8 col-xl-6"}>
+                    <h1 className={"text-black"}>Höll den, eller...?</h1>
+                    <p className={"lead text-black"}>Håller den? är podden där roliga personer tittar på en film de gillade förut, och bestämmer sig för om den fortfarande håller. Här kan du se hur det gick.</p>
+                </div>
                     <FilterForm filter={filter} setFilter={setFilter} setSortType={setSortType} sortType={sortType} reverse={reverse} setReverse={setReverse}/>
                 </div>
 

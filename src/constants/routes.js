@@ -7,5 +7,5 @@ export const TRACKS = '/tracks';
 export const SEARCH = '/search';
 export const UPLOAD = '/upload';
 export const DEVOPS = '/dev-ops';
-export const HALLER_DEN = '/haller-den';
-export const HALLER_DEN_MOVIE = '/haller-den/:id';
+export const HOLL_DEN = '/holl-den';
+export const HOLL_DEN_MOVIE = '/holl-den/:id';

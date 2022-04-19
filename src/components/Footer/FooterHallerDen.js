@@ -1,4 +1,5 @@
 import React from 'react';
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
 const FooterHallerDen = () => {
     return (
@@ -6,7 +7,7 @@ const FooterHallerDen = () => {
             <div className="container py-4">
                 <div className="row">
                     <div className="col-12">
-                        <p>Håller den?</p>
+                        <p><FontAwesomeIcon icon={['far', 'copyright']}/> 2022 Höll den?</p>
                     </div>
                 </div>
             </div>

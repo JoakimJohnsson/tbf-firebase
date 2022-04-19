@@ -177,8 +177,8 @@ const App = () => {
                         <Route path={ROUTES.RECORD} component={RecordPage}/>
                         <Route path={ROUTES.TRACKS} component={TracksPage}/>
                         <Route path={ROUTES.DEVOPS} component={DevopsPage}/>
-                        <Route exact path={ROUTES.HALLER_DEN} component={HallerDenPage}/>
-                        <Route path={ROUTES.HALLER_DEN_MOVIE} component={HallerDenEpisodePage}/>
+                        <Route exact path={ROUTES.HOLL_DEN} component={HallerDenPage}/>
+                        <Route path={ROUTES.HOLL_DEN_MOVIE} component={HallerDenEpisodePage}/>
                         {showUpload ? <Route path={ROUTES.UPLOAD} component={UploadPage}/> : false}
                         <Footer/>
                     </Router>

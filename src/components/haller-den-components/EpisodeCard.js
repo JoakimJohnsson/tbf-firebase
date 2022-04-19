@@ -3,6 +3,7 @@ import {hallerDenImages} from '../../haller-den-data/images';
 import {getImageName, hallerDenStatus} from "../../haller-den-data/serviceFunctions";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {Link} from "react-router-dom";
+import {HOLL_DEN} from "../../constants/routes";
 
 const EpisodeCard = ({episode}) => {
     const trimmedMovieName = getImageName(episode.movieName);
@@ -32,7 +33,7 @@ const EpisodeCard = ({episode}) => {
         (
             <div className="hd-episode-card-wrapper col-12 col-md-6 col-xl-4 mb-2 mb-sm-4">
                 <div className={"col-12 h-100"}>
-                    <Link className={""} to={`/haller-den/${episode.id}`}>
+                    <Link className={""} to={`${HOLL_DEN}/${episode.id}`}>
                     <div className={"card h-100"}>
                         <div className={"hd-episode-image-wrapper position-relative"}>
                             <img src={movieImage} className="card-img-top" alt={`Movie ${episode.movieName}`}/>

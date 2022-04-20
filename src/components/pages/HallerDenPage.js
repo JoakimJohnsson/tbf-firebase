@@ -15,6 +15,7 @@ const HallerDenPage = () => {
     useEffect(() => {
         setHideNavs(true)
         setShowHallerDenNavs(true)
+        document.title = 'Höll den?';
     }, [setHideNavs, setShowHallerDenNavs]);
 
     useEffect(() => {

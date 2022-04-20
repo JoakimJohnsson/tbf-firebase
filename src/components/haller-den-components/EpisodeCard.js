@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import {hallerDenImages} from '../../haller-den-data/images';
-import {getImageName, hallerDenStatus, setImageInfo} from "../../haller-den-data/serviceFunctions";
+import {getImageName, setImageInfo} from "../../haller-den-data/serviceFunctions";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {Link} from "react-router-dom";
 import {HOLL_DEN} from "../../constants/routes";

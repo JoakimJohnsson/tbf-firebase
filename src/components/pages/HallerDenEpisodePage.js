@@ -14,12 +14,15 @@ const HallerDenEpisodePage = ({match}) => {
     const [episode, setEpisode] = useState([]);
     const {params: {id}} = match;
 
+
+
     useEffect(() => {
         setEpisode(getEpisodeById(id))
         if (episode.movieName) {
             const name = getImageName(episode.movieName);
             setTrimmedMovieName(name);
             setImageInfo(setImageInfoClass, setImageInfoMessage, setImageInfoIcon, episode);
+            document.title = 'Höll den? | ' + episode.movieName;
         }
     }, [id, episode]);
 
@@ -29,7 +32,7 @@ const HallerDenEpisodePage = ({match}) => {
                     <div className={"col-12 col-md-8 offset-md-2"}>
                         <Link className={"btn btn-primary mb-3"} to={ROUTES.HOLL_DEN}><FontAwesomeIcon icon={"chevron-left"} className={"mr-2"}/>Tillbaka</Link>
                         <div className={"hd-episode-card-wrapper text-white"}>
-                            <div className={"card"}>
+                            <div className={"card opacity-5"}>
                                 <div className={"hd-episode-image-wrapper position-relative"}>
                                     <img src={hallerDenImages[trimmedMovieName]} className="card-img-top" alt={`Movie ${episode.movieName}`}/>
                                     <div className={`hd-episode-image-info font-weight-bold ${imageInfoClass}`}>

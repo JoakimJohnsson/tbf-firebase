@@ -14,8 +14,6 @@ const HallerDenEpisodePage = ({match}) => {
     const [episode, setEpisode] = useState([]);
     const {params: {id}} = match;
 
-
-
     useEffect(() => {
         setEpisode(getEpisodeById(id))
         if (episode.movieName) {
@@ -29,7 +27,7 @@ const HallerDenEpisodePage = ({match}) => {
     return episode ? (
             <main className="container-fluid standard-container bg-light text-black">
                 <div className={"row"}>
-                    <div className={"col-12 col-md-8 offset-md-2"}>
+                    <div className={"col-12 col-sm-8 offset-sm-2"}>
                         <Link className={"btn btn-primary mb-3"} to={ROUTES.HOLL_DEN}><FontAwesomeIcon icon={"chevron-left"} className={"mr-2"}/>Tillbaka</Link>
                         <div className={"hd-episode-card-wrapper text-white"}>
                             <div className={"card opacity-5"}>
@@ -40,7 +38,7 @@ const HallerDenEpisodePage = ({match}) => {
                                     </div>
                                 </div>
                                 <div className={"card-body"}>
-                                    <h1 className={"card-title mb-0 "}>{episode.movieName} </h1>
+                                    <h2 className={"card-title mb-0 "}>{episode.movieName} </h2>
                                     <p className={"card-sub-title"}>{episode.movieYear}</p>
                                     {
                                         episode.opinions &&

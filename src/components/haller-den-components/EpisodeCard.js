@@ -19,7 +19,7 @@ const EpisodeCard = ({episode}) => {
 
     return episode ?
         (
-            <div className="hd-episode-card-wrapper col-12 col-md-6 col-xl-4 mb-2 mb-sm-4">
+            <div className="hd-episode-card-wrapper col-12 col-md-6 col-xl-4 mb-4 mb-sm-5">
                 <div className={"col-12 h-100"}>
                     <Link className={""} to={`${HOLL_DEN}/${episode.id}`}>
                         <div className={"card h-100"}>

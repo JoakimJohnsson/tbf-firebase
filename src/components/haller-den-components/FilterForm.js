@@ -59,7 +59,8 @@ const FilterForm = ({filter, setFilter, setSortType, sortType, reverse, setRever
                                 sortType === "movieName" ?
                                     <span>{reverse ? "A-Z" : "Z-A"}</span>
                                     :
-                                    <span>{reverse ? "0-9" : "9-0"}</span>
+                                    <span>{reverse ? "0000-9999" : "9999-0000"}</span>
+
                             }
                         </button>
                     </div>

@@ -88,8 +88,8 @@ const StartPage = () => {
                             </ol>
                         </div>
                         <p><IconLink link={"https://thebaseballfield.se/styleguide/"} text={"TBF & Friends react styleguide"} icon={"book-dead"} external={true}/></p>
-                        <p><IconLink link={ROUTES.DEVOPS} text={"DevOps"} icon={"journal-whills"}/></p>
-                        <p><IconLink link={ROUTES.HOLL_DEN} text={"Höll den?"} icon={"ticket-alt"}/></p>
+                        <p><IconLink link={"http://www.dev-ops.thebaseballfield.se"} text={"DevOps"} icon={"journal-whills"} external/></p>
+                        <p><IconLink link={"http://www.holl-den.thebaseballfield.se"} text={"Höll den?"} icon={"ticket-alt"}/></p>
                         <CopyrightInformation className={"d-none d-lg-block"}/>
                     </main>
                 </div>

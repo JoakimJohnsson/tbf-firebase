@@ -85,9 +85,6 @@ import MusicStore from "../MusicStore/MusicStore";
 import GlobalTrackStore from "../MusicStore/GlobalTrackStore";
 import {showUpload} from "../Navigation/FooterNavigation";
 import NavigationStore from "../NavigationStore/NavigationStore";
-import DevopsPage from "../pages/DevopsPage";
-import HallerDenPage from "../pages/HallerDenPage";
-import HallerDenEpisodePage from "../pages/HallerDenEpisodePage";
 
 library.add(
     faAirbnb,
@@ -176,9 +173,6 @@ const App = () => {
                         <Route path={ROUTES.RECORDS} component={RecordsPage}/>
                         <Route path={ROUTES.RECORD} component={RecordPage}/>
                         <Route path={ROUTES.TRACKS} component={TracksPage}/>
-                        <Route path={ROUTES.DEVOPS} component={DevopsPage}/>
-                        <Route exact path={ROUTES.HOLL_DEN} component={HallerDenPage}/>
-                        <Route path={ROUTES.HOLL_DEN_MOVIE} component={HallerDenEpisodePage}/>
                         {showUpload ? <Route path={ROUTES.UPLOAD} component={UploadPage}/> : false}
                         <Footer/>
                     </Router>
